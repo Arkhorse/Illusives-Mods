@@ -1,0 +1,1189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6C14C041-810D-427D-A626-84231626968E}" SchemaVersion="85">
+	<AudioObjects>
+		<WorkUnit Name="AW Work Unit" ID="{6C14C041-810D-427D-A626-84231626968E}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="Wrath of the gods" ID="{E49827C4-5940-4EE8-9D6E-702FF3E8CF36}" ShortID="840981229">
+					<PropertyList>
+						<Property Name="EnablePositioning" Type="bool" Value="False"/>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ATT_weapons_600m_pc" ID="{F5F841B7-AB14-4CB0-B423-F01D30E84D85}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="Gun Sounds" ID="{FD43EB5B-058E-45F2-86D1-7BD46E2595E8}" ShortID="682311605">
+							<PropertyList>
+								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{167E9869-BC84-47DB-B382-9971C76AD0F6}" ShortID="1037380719">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="RTPC_ext_menu_volume_effects" ID="{7FC45ED1-AC20-488C-ADF2-2FC071CC89DB}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{ADE982A0-1D1A-4CD7-A948-2EE7E31EE47F}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+										<RTPC Name="" ID="{9996F6F3-F3DF-4A7D-AFA0-EEF7686F91AB}" ShortID="797833648">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="RTPC_ext_menu_volume_master" ID="{65457B04-8212-4658-93FB-B97BCE4E8608}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{16DEFAC6-FBAD-4DE8-8ECE-028189DCAFE0}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<ActorMixer Name="wpn_automatic_NPC" ID="{0AEBDA4A-E34D-4BE0-B52B-0BF4C91D346B}" ShortID="26267041">
+									<PropertyList>
+										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_weapons_600m_npc" ID="{0CB36698-89E7-4341-AE96-3F9C2FD78FA8}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="wpn_20mm_close_loop_300_01" ID="{7B9F7952-2F53-4537-890E-05AC360CC108}" ShortID="865498524">
+											<PropertyList>
+												<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+												<Property Name="IsNonCachable" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLantency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ATT_weapons_600m_npc" ID="{0CB36698-89E7-4341-AE96-3F9C2FD78FA8}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="wpn_20mm_close_loop_300_01" ID="{B42DBB82-5441-4651-B59E-709A61C997EB}" ShortID="721919784">
+													<Language>SFX</Language>
+													<AudioFile>wpn_20mm_close_loop_300_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="wpn_20mm_close_loop_300_01" ID="{B42DBB82-5441-4651-B59E-709A61C997EB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
+								<ActorMixer Name="wpn_automatic_PC" ID="{D362F702-4832-4650-AC81-07B3BD8D6340}" ShortID="57196493">
+									<PropertyList>
+										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_weapons_600m_pc" ID="{F5F841B7-AB14-4CB0-B423-F01D30E84D85}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="wpn_20mm_int_loop_300_01" ID="{75A1CEC1-A1A7-4FCF-9843-18E4C9F426EC}" ShortID="574297754">
+											<PropertyList>
+												<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+												<Property Name="IsNonCachable" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLantency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ATT_weapons_600m_pc" ID="{F5F841B7-AB14-4CB0-B423-F01D30E84D85}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="wpn_20mm_int_loop_300_01" ID="{0686117E-D950-4735-BFAD-6321607C7D07}" ShortID="870463833">
+													<Language>SFX</Language>
+													<AudioFile>wpn_20mm_int_loop_300_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="wpn_20mm_int_loop_300_01" ID="{0686117E-D950-4735-BFAD-6321607C7D07}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
+								<ActorMixer Name="wpn_huge_NPC" ID="{5AFD1CC6-AF61-48AA-8636-BCAEDA87951E}" ShortID="134467977">
+									<PropertyList>
+										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+											<RTPCList>
+												<RTPC Name="" ID="{B5B0DD54-95F3-4669-84EB-0572394596E3}" ShortID="601195860">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="RTPC_ext_control_reflections_priority" ID="{51856374-AE09-4A62-BA36-995C814A0866}" WorkUnitID="{BD60330E-FABB-4F43-B5E5-04FD5F61CD3C}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{E1819BBC-12C0-400E-975E-DC665105A844}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>600</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_weapons_600m_npc" ID="{0CB36698-89E7-4341-AE96-3F9C2FD78FA8}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="wpn_156_mm_ext_01" ID="{6170D748-ADB6-4A11-A71E-B755B43DB03C}" ShortID="394650146">
+											<PropertyList>
+												<Property Name="IsNonCachable" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLantency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="wpn_156_mm_ext_01" ID="{66EAA926-BEFE-4646-B2A3-9423230EE407}" ShortID="379462903">
+													<Language>SFX</Language>
+													<AudioFile>wpn_156_mm_ext_01.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="979571429"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="wpn_156_mm_ext_01" ID="{66EAA926-BEFE-4646-B2A3-9423230EE407}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
+								<ActorMixer Name="wpn_huge_PC" ID="{93720082-FBBC-4B99-8371-7157701A766F}" ShortID="144327517">
+									<PropertyList>
+										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_weapons_600m_pc" ID="{F5F841B7-AB14-4CB0-B423-F01D30E84D85}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="wpn_huge_PC_ext" ID="{8A5D7097-FFB0-4517-83D4-66D5071CEC8A}" ShortID="415986627">
+											<PropertyList>
+												<Property Name="IsNonCachable" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLantency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ATT_weapons_600m_pc" ID="{F5F841B7-AB14-4CB0-B423-F01D30E84D85}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="043_imp_ext_PC" ID="{5D6E98AD-B540-4A07-8063-D17F2A8AF5CB}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="wpn_156_mm_ext_01" ID="{427AE6AF-7EA3-4A65-96F3-2E62134731BD}" ShortID="979571429">
+													<Language>SFX</Language>
+													<AudioFile>wpn_156_mm_ext_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="wpn_156_mm_ext_01" ID="{427AE6AF-7EA3-4A65-96F3-2E62134731BD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="wpn_huge_PC_int" ID="{47F26A47-A7F2-41C6-AA59-89BFA72CF481}" ShortID="848447021">
+											<PropertyList>
+												<Property Name="IsNonCachable" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLantency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
+												<Property Name="PositioningType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="043_imp_int_PC" ID="{BB854870-473E-4EAC-860C-C6A2F74327C9}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="wpn_155mm_int_fire_03" ID="{99699599-3970-44BB-B2D3-D5D54A585955}" ShortID="66534435">
+													<Language>SFX</Language>
+													<AudioFile>wpn_155mm_int_fire_03.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="wpn_155mm_int_fire_03" ID="{99699599-3970-44BB-B2D3-D5D54A585955}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="wpn_huge_auto_duck_50ms" ID="{86B1189D-6E23-4771-8CD6-D0FCD9B3CE22}" ShortID="252142377">
+											<PropertyList>
+												<Property Name="IsNonCachable" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLantency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverrideOutput" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ATT_weapons_600m_pc" ID="{F5F841B7-AB14-4CB0-B423-F01D30E84D85}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="auto_duck_wpn_50ms" ID="{A217BB14-A006-457F-9371-3CDE8BD1931A}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="wpn_156_mm_ext_01" ID="{DA3B3E5A-EDB2-4194-81EF-8BAB0E106228}" ShortID="115894469">
+													<Language>SFX</Language>
+													<AudioFile>wpn_156_mm_ext_01.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="979571429"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="wpn_156_mm_ext_01" ID="{DA3B3E5A-EDB2-4194-81EF-8BAB0E106228}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
+								<ActorMixer Name="wpn_large_NPC" ID="{C6973B80-8624-4C07-AD20-4DABAA0ABC78}" ShortID="750958120">
+									<PropertyList>
+										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+											<RTPCList>
+												<RTPC Name="" ID="{2519A2CA-7DEC-40A9-B223-C7135B1ED64C}" ShortID="840050316">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="RTPC_ext_control_reflections_priority" ID="{51856374-AE09-4A62-BA36-995C814A0866}" WorkUnitID="{BD60330E-FABB-4F43-B5E5-04FD5F61CD3C}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{0CA622A1-0673-4E7F-9F96-28AB8C28D7CC}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>600</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_weapons_600m_npc" ID="{0CB36698-89E7-4341-AE96-3F9C2FD78FA8}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="wpn_140_mm_ext_01" ID="{9403EA30-B79D-433E-AA25-E2717EAA7E65}" ShortID="237077807">
+											<PropertyList>
+												<Property Name="IsNonCachable" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLantency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="wpn_140_mm_ext_01" ID="{9DA59B4C-3F3E-43C7-8503-E2DFF811CDE2}" ShortID="839843322">
+													<Language>SFX</Language>
+													<AudioFile>wpn_140_mm_ext_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="wpn_140_mm_ext_01" ID="{9DA59B4C-3F3E-43C7-8503-E2DFF811CDE2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
+								<ActorMixer Name="wpn_large_PC" ID="{4BB44697-B0D7-426B-A286-6F5C7E80C61C}" ShortID="863343073">
+									<PropertyList>
+										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_weapons_600m_pc" ID="{F5F841B7-AB14-4CB0-B423-F01D30E84D85}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="wpn_125mm_int_fire_01" ID="{6F3D89C1-6166-47BE-AE8A-DB6E055AB945}" ShortID="658157255">
+											<PropertyList>
+												<Property Name="IsNonCachable" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLantency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="wpn_125mm_int_fire_01" ID="{579D32A9-46B2-461C-979B-D2021E1EBD86}" ShortID="816650160">
+													<Language>SFX</Language>
+													<AudioFile>wpn_125mm_int_fire_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="wpn_125mm_int_fire_01" ID="{579D32A9-46B2-461C-979B-D2021E1EBD86}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="wpn_140_mm_ext_01" ID="{3A093FFA-5687-4D8D-88E0-A071DCF92BD3}" ShortID="596680411">
+											<PropertyList>
+												<Property Name="IsNonCachable" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLantency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="wpn_140_mm_ext_01" ID="{6AE086D8-1768-4EEF-8E26-7D043056EA44}" ShortID="391395259">
+													<Language>SFX</Language>
+													<AudioFile>wpn_140_mm_ext_01.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="839843322"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="wpn_140_mm_ext_01" ID="{6AE086D8-1768-4EEF-8E26-7D043056EA44}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
+								<ActorMixer Name="wpn_main_NPC" ID="{1EFAFF8D-1876-495F-95E3-7193B49F5BC8}" ShortID="505711325">
+									<PropertyList>
+										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+											<RTPCList>
+												<RTPC Name="" ID="{57F088F8-63CF-4B8F-B650-813FD64D0A3A}" ShortID="442642756">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="RTPC_ext_control_reflections_priority" ID="{51856374-AE09-4A62-BA36-995C814A0866}" WorkUnitID="{BD60330E-FABB-4F43-B5E5-04FD5F61CD3C}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{ADC87B86-AC66-4071-BF7A-D444AA33E77C}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>600</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_weapons_600m_npc" ID="{0CB36698-89E7-4341-AE96-3F9C2FD78FA8}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="wpn_105_mm_ext_01" ID="{0A9F7F81-1877-48C1-BB18-10BDEEE924CD}" ShortID="396259423">
+											<PropertyList>
+												<Property Name="IsNonCachable" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLantency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="wpn_105_mm_ext_01" ID="{3A9936FE-D1AE-4832-85D0-ADBB875CF0DB}" ShortID="217539087">
+													<Language>SFX</Language>
+													<AudioFile>wpn_105_mm_ext_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="wpn_105_mm_ext_01" ID="{3A9936FE-D1AE-4832-85D0-ADBB875CF0DB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
+								<ActorMixer Name="wpn_main_PC" ID="{77B1CF4B-0718-4368-AAB8-94FE61AE2B56}" ShortID="351827719">
+									<PropertyList>
+										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_weapons_600m_pc" ID="{F5F841B7-AB14-4CB0-B423-F01D30E84D85}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="wpn_105mm_int_fire_03" ID="{7D2F96ED-2CB5-4C28-85E1-ADA0DF426FE6}" ShortID="135085769">
+											<PropertyList>
+												<Property Name="IsNonCachable" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLantency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="wpn_105mm_int_fire_03" ID="{76A76933-0FE2-4309-A5A6-51E49FF0ED52}" ShortID="828844149">
+													<Language>SFX</Language>
+													<AudioFile>wpn_105mm_int_fire_03.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="wpn_105mm_int_fire_03" ID="{76A76933-0FE2-4309-A5A6-51E49FF0ED52}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="wpn_105_mm_ext_01" ID="{0FACBA1E-9DEA-44A5-A21E-BB553D4E5110}" ShortID="226659115">
+											<PropertyList>
+												<Property Name="IsNonCachable" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLantency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="wpn_105_mm_ext_01" ID="{64AE920B-BA5B-49C2-B7C8-5B9CA8150780}" ShortID="473590259">
+													<Language>SFX</Language>
+													<AudioFile>wpn_105_mm_ext_01.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="217539087"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="wpn_105_mm_ext_01" ID="{64AE920B-BA5B-49C2-B7C8-5B9CA8150780}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
+								<ActorMixer Name="wpn_meduim_NPC" ID="{2D1B3A27-7748-490F-BAE9-9F30BD692351}" ShortID="511952278">
+									<PropertyList>
+										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+											<RTPCList>
+												<RTPC Name="" ID="{66C23A22-91A1-41ED-8D2C-D7758A4CD282}" ShortID="1020992628">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="RTPC_ext_control_reflections_priority" ID="{51856374-AE09-4A62-BA36-995C814A0866}" WorkUnitID="{BD60330E-FABB-4F43-B5E5-04FD5F61CD3C}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{233FEC5A-C259-4C5A-B047-2FCC20F51819}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>600</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_weapons_600m_npc" ID="{0CB36698-89E7-4341-AE96-3F9C2FD78FA8}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="wpn_20mm_ext_rel_02" ID="{5100F8AC-C30D-4A4F-BF1B-EB806F1EA4F6}" ShortID="417235160">
+											<PropertyList>
+												<Property Name="IsNonCachable" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLantency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="wpn_20mm_ext_rel_02" ID="{C9FA65D3-4477-4A22-9B6E-F42650838159}" ShortID="867138945">
+													<Language>SFX</Language>
+													<AudioFile>wpn_20mm_ext_rel_02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="wpn_20mm_ext_rel_02" ID="{C9FA65D3-4477-4A22-9B6E-F42650838159}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
+								<ActorMixer Name="wpn_meduim_PC" ID="{A0DBA421-DC74-4FE8-AAE1-74029E8BBED6}" ShortID="64917652">
+									<PropertyList>
+										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="PositioningType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_weapons_600m_pc" ID="{F5F841B7-AB14-4CB0-B423-F01D30E84D85}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="wpn_20mm_ext_rel_02" ID="{1F6BF17D-476D-43B2-A750-DCA372B3A29F}" ShortID="194882123">
+											<PropertyList>
+												<Property Name="IsNonCachable" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLantency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="wpn_20mm_ext_rel_02" ID="{0CA0D14C-C9B3-4915-90DA-3C8A586CCB70}" ShortID="110942340">
+													<Language>SFX</Language>
+													<AudioFile>wpn_20mm_ext_rel_02.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="867138945"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="wpn_20mm_ext_rel_02" ID="{0CA0D14C-C9B3-4915-90DA-3C8A586CCB70}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="wpn_20mm_int_fire_03" ID="{2FE5ED6F-FE7B-43A2-9813-B7CBB35BCBAA}" ShortID="346041520">
+											<PropertyList>
+												<Property Name="IsNonCachable" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsZeroLantency" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="wpn_20mm_int_fire_03" ID="{E241CCD9-EA5B-4732-86A4-6C48A071F2CD}" ShortID="438063762">
+													<Language>SFX</Language>
+													<AudioFile>wpn_20mm_int_fire_03.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="wpn_20mm_int_fire_03" ID="{E241CCD9-EA5B-4732-86A4-6C48A071F2CD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="Reload" ID="{B416950D-4DE2-4239-9388-3070B25B4D8B}" ShortID="744131932">
+							<PropertyList>
+								<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>30</Value>
+									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{842A391D-C8C2-4F04-9CBE-40B7045E0FFB}" ShortID="2397398">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="RTPC_ext_menu_volume_master" ID="{65457B04-8212-4658-93FB-B97BCE4E8608}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{C074B658-3DF7-4A4D-950A-842125257356}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+										<RTPC Name="" ID="{C6919666-57B8-4C40-8A1E-2166553628B0}" ShortID="690948675">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="RTPC_ext_menu_volume_effects" ID="{7FC45ED1-AC20-488C-ADF2-2FC071CC89DB}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{D561D822-B608-4AAA-9B04-718ED7FFA172}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="060_reload" ID="{237ADD9E-23E9-4F92-AB8E-AE80861F6318}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="reload_20mm_01" ID="{1AB72A85-D970-43BA-B8F0-368BA3A900EA}" ShortID="789152151">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="reload_20mm_01" ID="{7AC62198-147C-471D-A18A-79918A68AFD7}" ShortID="1042302843">
+											<Language>SFX</Language>
+											<AudioFile>reload_20mm_01.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="reload_20mm_01" ID="{7AC62198-147C-471D-A18A-79918A68AFD7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="reload_artillery_shotReady" ID="{B93E90AE-2504-4E11-93A2-6810684EC2E4}" ShortID="684954036">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{F9A5B423-AB53-4F6A-90A7-236981940E88}" ShortID="724566535">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="RTPC_int_reloading_oneshell_sc" ID="{1E846E6D-C727-4192-81EB-704063248606}" WorkUnitID="{37A94ED0-8F69-4048-AAC1-097D1FA64423}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{1BD50C68-24F9-4513-AA5E-8D6A128E7156}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>-48</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="075_imp_surface" ID="{CF40B353-DCCA-4582-AA86-DBE3A3AD12B2}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="reload_artillery_shotReady" ID="{3332A149-251A-46BA-9F0C-FAC45B7125AD}" ShortID="693020159">
+											<Language>SFX</Language>
+											<AudioFile>reload_artillery_shotReady.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="reload_artillery_shotReady" ID="{3332A149-251A-46BA-9F0C-FAC45B7125AD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="reload_largecaliber" ID="{8AA4C2AE-234D-4184-8921-48575EC9C7E9}" ShortID="211160031">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="reload_largecaliber" ID="{8B5FFE9E-2E3E-4897-8299-AC9759BDABD1}" ShortID="966148093">
+											<Language>SFX</Language>
+											<AudioFile>reload_largecaliber.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="reload_largecaliber" ID="{8B5FFE9E-2E3E-4897-8299-AC9759BDABD1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="reload_largecaliber_auto" ID="{48787169-5180-4848-A8DB-6CB1AD17CE05}" ShortID="699427960">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="reload_largecaliber_auto" ID="{A5E65659-8C9F-4461-9834-94E77D10BD5D}" ShortID="536283022">
+											<Language>SFX</Language>
+											<AudioFile>reload_largecaliber_auto.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="reload_largecaliber_auto" ID="{A5E65659-8C9F-4461-9834-94E77D10BD5D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="reload_mediumcaliber" ID="{A6C54148-67EF-41BF-A67E-2991DC8A8789}" ShortID="813201314">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="reload_mediumcaliber" ID="{0733076F-4773-4DFB-B693-EA4D97CB94DE}" ShortID="635796568">
+											<Language>SFX</Language>
+											<AudioFile>reload_mediumcaliber.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="reload_mediumcaliber" ID="{0733076F-4773-4DFB-B693-EA4D97CB94DE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="tank_reload_01" ID="{73C217AE-8BE5-4947-A1CF-F618A8F5891E}" ShortID="365187870">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="tank_reload_01" ID="{2675C95B-E7BD-4047-91E6-E80ECD66889C}" ShortID="1032205419">
+											<Language>SFX</Language>
+											<AudioFile>tank_reload_01.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="tank_reload_01" ID="{2675C95B-E7BD-4047-91E6-E80ECD66889C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="out_of_ammo" ID="{80550B28-5500-4787-9553-BF9FA973C594}" ShortID="157895518">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="out_of_ammo" ID="{A16E8CFE-5681-4BE5-8B0A-55CA61E37CB3}" ShortID="226879251">
+											<Language>SFX</Language>
+											<AudioFile>out_of_ammo.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="out_of_ammo" ID="{A16E8CFE-5681-4BE5-8B0A-55CA61E37CB3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ATGM_reload_01" ID="{D8C27D66-1F7B-488C-A547-61BBF43C2D62}" ShortID="588584434">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ATGM_reload_01" ID="{FD9B26DC-3EAA-411F-A502-05817C3773DE}" ShortID="672496117">
+											<Language>SFX</Language>
+											<AudioFile>ATGM_reload_01.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ATGM_reload_01" ID="{FD9B26DC-3EAA-411F-A502-05817C3773DE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

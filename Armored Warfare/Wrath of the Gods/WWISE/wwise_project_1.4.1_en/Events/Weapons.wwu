@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E811023D-8930-4266-8283-3B46EAFCF06B}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Weapons" ID="{E811023D-8930-4266-8283-3B46EAFCF06B}" PersistMode="Standalone">
+			<Comment>Shots fired</Comment>
+			<ChildrenList>
+				<Event Name="wpn_meduim_PC" ID="{82A24B75-9272-4478-9FFC-2BCEEC62A07D}">
+					<Comment>Medium caliber (50–75 mm) PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{9546894E-9B38-4F89-A189-1237093DF8E0}" ShortID="142009339">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_20mm_int_fire_03" ID="{2FE5ED6F-FE7B-43A2-9813-B7CBB35BCBAA}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{21D032B4-2380-4C3D-941A-18B34C5BEA19}" ShortID="153330305">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_20mm_ext_rel_02" ID="{1F6BF17D-476D-43B2-A750-DCA372B3A29F}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wpn_automatic_NPC" ID="{2CF34E44-E937-4234-B906-F7B4F1F8C0F7}">
+					<Comment>Automaticl caliber (12–25 mm) NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{1BE67237-2B3A-40D3-BCCD-A2F1C9A1E167}" ShortID="693464027">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_20mm_close_loop_300_01" ID="{7B9F7952-2F53-4537-890E-05AC360CC108}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FBAD7340-5E7E-41E4-A132-A5B72F388E81}" ShortID="1022114638">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_20mm_close_loop_300_01" ID="{7B9F7952-2F53-4537-890E-05AC360CC108}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wpn_large_PC" ID="{2702412F-E4F1-4579-97AE-739FF3FC427F}">
+					<Comment>Large caliber (115–139 mm) PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{DA8730F0-7D4F-47F4-9EFC-494074FC94DA}" ShortID="11774386">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_125mm_int_fire_01" ID="{6F3D89C1-6166-47BE-AE8A-DB6E055AB945}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0FFD1FA4-DD53-4E41-B621-1F97E1BE40BD}" ShortID="675937457">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_140_mm_ext_01" ID="{3A093FFA-5687-4D8D-88E0-A071DCF92BD3}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wpn_main_PC" ID="{D9E960DF-A5D2-4339-82BD-2362EAE49C2D}">
+					<Comment>Main caliber (85–114 mm) PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{24FD0CA7-5950-4C50-830B-95D61C62FEFD}" ShortID="283525008">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_105mm_int_fire_03" ID="{7D2F96ED-2CB5-4C28-85E1-ADA0DF426FE6}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8F27221B-1197-4D86-B9A2-76933CA9FC69}" ShortID="560201691">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_105_mm_ext_01" ID="{0FACBA1E-9DEA-44A5-A21E-BB553D4E5110}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wpn_meduim_NPC" ID="{E4EC0D72-BB76-4536-99B5-D1B4957F90EF}">
+					<Comment>Medium caliber (50–75 mm) NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{8CF8EE81-2A13-407B-BFDC-0C030B1604BF}" ShortID="1042712328">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_20mm_ext_rel_02" ID="{5100F8AC-C30D-4A4F-BF1B-EB806F1EA4F6}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F7D4B64D-C2EA-4652-A4D9-EF12D2A38120}" ShortID="140165698">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+								<Property Name="FadeTime" Type="Real64" Value="4.5"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="600"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_ext_control_reflections_priority" ID="{51856374-AE09-4A62-BA36-995C814A0866}" WorkUnitID="{BD60330E-FABB-4F43-B5E5-04FD5F61CD3C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wpn_large_NPC" ID="{5517230D-232A-46DE-B0E5-7305DEC6743A}">
+					<Comment>Large caliber (115–139 mm) NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{4C02CFC4-CEB6-4259-9A03-4FD49863981D}" ShortID="727569135">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_140_mm_ext_01" ID="{9403EA30-B79D-433E-AA25-E2717EAA7E65}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B900E333-6BAE-459C-8E51-0B8938E90649}" ShortID="214884639">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+								<Property Name="FadeTime" Type="Real64" Value="9"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="600"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_ext_control_reflections_priority" ID="{51856374-AE09-4A62-BA36-995C814A0866}" WorkUnitID="{BD60330E-FABB-4F43-B5E5-04FD5F61CD3C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wpn_main_NPC" ID="{34F0B5E6-4275-4346-9784-40D4568C4DC1}">
+					<Comment>Main caliber (85–114 mm) NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{B6CAB130-4063-4BEB-93E8-B2B1C5072BA8}" ShortID="366226874">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_105_mm_ext_01" ID="{0A9F7F81-1877-48C1-BB18-10BDEEE924CD}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C0C06009-A6CA-42F4-8827-CF5C5CADA000}" ShortID="910454495">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+								<Property Name="FadeTime" Type="Real64" Value="6.7"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="600"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_ext_control_reflections_priority" ID="{51856374-AE09-4A62-BA36-995C814A0866}" WorkUnitID="{BD60330E-FABB-4F43-B5E5-04FD5F61CD3C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wpn_small_NPC" ID="{F6F4DC18-2492-4A1E-B7B9-61C9F85B74BA}">
+					<Comment>Small caliber (20–45 mm) NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{F5779BD7-6215-4719-BC33-6470BEF9ED98}" ShortID="90183684">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_20mm_ext_rel_02" ID="{5100F8AC-C30D-4A4F-BF1B-EB806F1EA4F6}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A42801A8-17F4-4836-BDAD-109379946F17}" ShortID="616444243">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+								<Property Name="FadeTime" Type="Real64" Value="4.2"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="600"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_ext_control_reflections_priority" ID="{51856374-AE09-4A62-BA36-995C814A0866}" WorkUnitID="{BD60330E-FABB-4F43-B5E5-04FD5F61CD3C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wpn_huge_PC" ID="{366FE8CB-4DDF-4F35-B9EB-DFE85C23AA1F}">
+					<Comment>Huge caliber (140–170 mm) PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{D3997EB6-719D-46E8-B81D-7B34FC953AE4}" ShortID="973551071">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_huge_PC_int" ID="{47F26A47-A7F2-41C6-AA59-89BFA72CF481}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4F32F3E2-98B2-45C8-BF54-5181B32ACEB1}" ShortID="891054518">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_huge_PC_ext" ID="{8A5D7097-FFB0-4517-83D4-66D5071CEC8A}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B39AD088-BA37-4A3B-B191-60F5A6FF0D0D}" ShortID="368792228">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_huge_auto_duck_50ms" ID="{86B1189D-6E23-4771-8CD6-D0FCD9B3CE22}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wpn_small_PC" ID="{080EB964-60E4-44D6-8111-FF2C685485FE}">
+					<Comment>Small caliber (20–45 mm) PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{17B6DBD8-B603-499C-BCBB-BDBD592772D3}" ShortID="226279221">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_20mm_ext_rel_02" ID="{1F6BF17D-476D-43B2-A750-DCA372B3A29F}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0F33465A-0C05-4178-8B68-516492011DC5}" ShortID="247359811">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_20mm_int_fire_03" ID="{2FE5ED6F-FE7B-43A2-9813-B7CBB35BCBAA}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wpn_huge_NPC" ID="{81539F8A-C35A-444A-B57D-9F168A43EBD7}">
+					<Comment>Huge caliber (140–170 mm) NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{1C0A0C8F-E00B-4987-887A-368078549D97}" ShortID="7212305">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_156_mm_ext_01" ID="{6170D748-ADB6-4A11-A71E-B755B43DB03C}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{720A26AC-968E-4C96-A9D2-85E2AC616A9B}" ShortID="342053734">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="4.6"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_156_mm_ext_01" ID="{6170D748-ADB6-4A11-A71E-B755B43DB03C}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{07BA527D-262E-4D65-9742-21CBCBDAD57D}" ShortID="519150608">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+								<Property Name="FadeTime" Type="Real64" Value="9"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="600"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_ext_control_reflections_priority" ID="{51856374-AE09-4A62-BA36-995C814A0866}" WorkUnitID="{BD60330E-FABB-4F43-B5E5-04FD5F61CD3C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wpn_automatic_PC" ID="{CA4EF258-E160-4FA3-A3DC-1EE47006DCBA}">
+					<Comment>Automatic caliber (12–25 mm) PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{7A4FCE62-F1CA-4B8F-A493-12A2858430E5}" ShortID="766681890">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_20mm_int_loop_300_01" ID="{75A1CEC1-A1A7-4FCF-9843-18E4C9F426EC}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{87CB70F0-A108-440D-9A9D-4977B194EA86}" ShortID="125262007">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_20mm_int_loop_300_01" ID="{75A1CEC1-A1A7-4FCF-9843-18E4C9F426EC}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wpn_large_extra_PC" ID="{64C6B0AE-44EA-46C2-BDFC-E452410BBFA7}">
+					<Comment>Large caliber (115–139 mm) PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{A67078EA-898C-4554-9AC2-44861A5B2FA3}" ShortID="1010792189">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_huge_PC_int" ID="{47F26A47-A7F2-41C6-AA59-89BFA72CF481}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B54033A8-316D-4626-967F-AE48B175A9A9}" ShortID="249584919">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_huge_PC_ext" ID="{8A5D7097-FFB0-4517-83D4-66D5071CEC8A}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wpn_main_extra_PC" ID="{BD901E3E-1B0C-483E-B531-7573E1CA2696}">
+					<Comment>Main caliber (85–114 mm) PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{5FDF32F8-E696-4104-A07A-913CAD6B6238}" ShortID="678835382">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_105_mm_ext_01" ID="{0FACBA1E-9DEA-44A5-A21E-BB553D4E5110}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9649CEAE-4ECA-4396-88C7-80A0D632F700}" ShortID="682250616">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_105mm_int_fire_03" ID="{7D2F96ED-2CB5-4C28-85E1-ADA0DF426FE6}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wpn_large_extra_NPC" ID="{A0F658F0-7858-41DE-BAD2-EA7E3FE1E322}">
+					<Comment>Large caliber (115–139 mm) NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{81920546-398E-41E5-820B-B3D8E6B5EFCB}" ShortID="909320366">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_156_mm_ext_01" ID="{6170D748-ADB6-4A11-A71E-B755B43DB03C}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{26A77F51-86C6-4A55-A75A-BDE2D059C42B}" ShortID="60845857">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+								<Property Name="FadeTime" Type="Real64" Value="9"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="600"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_ext_control_reflections_priority" ID="{51856374-AE09-4A62-BA36-995C814A0866}" WorkUnitID="{BD60330E-FABB-4F43-B5E5-04FD5F61CD3C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="wpn_main_extra_NPC" ID="{F29581B2-0A16-4E83-B299-AC47CDF1DB61}">
+					<Comment>Main caliber (85–114 mm) NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{6E8CBF41-8C3C-4371-AF58-275C98AFCF09}" ShortID="798388019">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wpn_105_mm_ext_01" ID="{0A9F7F81-1877-48C1-BB18-10BDEEE924CD}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{26B86289-B4C4-4E47-AF35-27EA199562C3}" ShortID="412097137">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+								<Property Name="FadeTime" Type="Real64" Value="6.7"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="600"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_ext_control_reflections_priority" ID="{51856374-AE09-4A62-BA36-995C814A0866}" WorkUnitID="{BD60330E-FABB-4F43-B5E5-04FD5F61CD3C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

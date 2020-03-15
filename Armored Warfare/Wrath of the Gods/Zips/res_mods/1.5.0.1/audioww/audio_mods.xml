@@ -1,0 +1,8 @@
+<audio_mods.xml>
+<loadBanks>
+	<bank> AW_Guns.bnk </bank>
+	<bank> AW_Guns.pck </bank>
+</loadBanks>
+<events>				
+</events>
+</audio_mods.xml>

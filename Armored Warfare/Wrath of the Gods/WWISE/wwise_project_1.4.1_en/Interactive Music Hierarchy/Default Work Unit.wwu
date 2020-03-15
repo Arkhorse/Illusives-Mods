@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{77382AE8-B20F-404E-8A28-D468F83A8234}" SchemaVersion="85">
+	<InteractiveMusic>
+		<WorkUnit Name="Default Work Unit" ID="{77382AE8-B20F-404E-8A28-D468F83A8234}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="StarTrekMusic" ID="{D593B3EF-7532-4729-A326-8E17AE13482D}" ShortID="200724162">
+					<ChildrenList>
+						<MusicSwitchContainer Name="New Music Switch Container" ID="{3045012B-441D-4F6F-B787-9947A48C0A16}" ShortID="537929306">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicPlaylistContainer Name="New Music Playlist Container" ID="{6B44946E-791A-4880-949A-FF7084DC08BE}" ShortID="556166563">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicSegment Name="star_trek_music_compilation" ID="{0F550CCA-E28A-4EB0-984D-E0B5161538BF}" ShortID="122953137">
+											<PropertyList>
+												<Property Name="EndPosition" Type="Real64" Value="1981648.97959184"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="star_trek_music_compilation" ID="{61841462-DC66-44DF-BD9D-4D4F4B103C9D}" ShortID="508570353">
+													<PropertyList>
+														<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+														<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+														<Property Name="MaxSoundPerInstance" Type="int16">
+															<ValueList>
+																<Value>1</Value>
+															</ValueList>
+														</Property>
+														<Property Name="UseMaxSoundPerInstance" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<RTPCList>
+																<RTPC Name="" ID="{A0DE96DB-9D8B-4B1A-A387-6FB6BFAF1A85}" ShortID="1023685944">
+																	<ReferenceList>
+																		<Reference Name="ControlInput">
+																			<ObjectRef Name="RTPC_ext_menu_volume_music_hangar" ID="{35BDABC0-70C8-4A8F-9FE2-6706D7E262C5}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<Curve Name="" ID="{608E7A95-3F1D-4E88-8BF1-2DAE985E64DA}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</RTPC>
+															</RTPCList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="star_trek_music_compilation" ID="{EB7CAD3B-DA13-4E8B-9F50-C9B7DA58EC77}" ShortID="400286481">
+															<Language>SFX</Language>
+															<AudioFile>star_trek_music_compilation.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<StateInfo>
+														<StateGroupList>
+															<StateGroupInfo>
+																<StateGroupRef Name="STATE_hangar_place" ID="{F4715A4A-9FB0-48CB-878A-9E4FD19471B3}"/>
+															</StateGroupInfo>
+														</StateGroupList>
+														<CustomStateList>
+															<CustomState>
+																<StateRef Name="STATE_hangar_place_shop" ID="{68AFA601-9290-4075-A068-46CEC525C970}"/>
+																<State Name="" ID="{A00EAF57-CD3E-43B8-9A2E-9DB21B6B5F84}" ShortID="876128843"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="STATE_hangar_place_researches_preview" ID="{1F47C73E-84DE-41B3-96CE-92BE934B0B17}"/>
+																<State Name="" ID="{7F4533A7-5261-4059-830D-D1D902416C23}" ShortID="490677219"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="STATE_hangar_place_customization" ID="{17A1E408-1E5F-4585-BBD4-71D33F5EE345}"/>
+																<State Name="" ID="{CF934A39-2C92-4C9D-9B26-9AD88DFA924D}" ShortID="721630127"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="STATE_hangar_place_fortarea" ID="{CF70A315-BC23-4590-99B5-F98A8A8F940B}"/>
+																<State Name="" ID="{C34A2EF8-CA2E-4E16-99F9-6C2C532FD438}" ShortID="884854018"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="STATE_hangar_place_research" ID="{6DB32473-41BC-4659-893A-B5308EB06C85}"/>
+																<State Name="" ID="{9A13ACC5-555F-482A-922D-0E3341168B4D}" ShortID="871627517"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="STATE_hangar_place_garage" ID="{D25049B4-2C90-473A-BAAC-D5C3CBE62033}"/>
+																<State Name="" ID="{D7DCB1A4-573F-4B32-BB0C-8CC9FBFE99DD}" ShortID="116084164"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="STATE_hangar_place_achievements" ID="{69A8A595-A314-4800-9527-B3A3BC8EA2D4}"/>
+																<State Name="" ID="{4748A61A-5998-44F5-9553-F1878CAF14C7}" ShortID="965489036"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="STATE_hangar_place_noobieCenter" ID="{1962C9F9-149A-4921-BA84-624CC6529C57}"/>
+																<State Name="" ID="{CB451D54-7B99-4AE7-9806-68DF7FBF067F}" ShortID="870462396"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="STATE_hangar_place_personalMissions" ID="{C6BE04DE-E635-4984-A09D-FEE4DA74DDD0}"/>
+																<State Name="" ID="{7F3212BD-5E10-4CC3-AF2D-A987795428A2}" ShortID="927479076"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="STATE_hangar_place_shop_preview" ID="{986B5D59-1176-4D90-8C9A-1E5BF3DEE150}"/>
+																<State Name="" ID="{46E56C44-B480-4192-A891-80BDE970E378}" ShortID="614187783"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="STATE_hangar_place_tasks" ID="{59CAC0FE-A5DB-4DDD-9833-FFD91617B2A5}"/>
+																<State Name="" ID="{4156D448-1475-4EC9-9E71-418810D2130C}" ShortID="312586818"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="STATE_hangar_place_warehouse" ID="{3C6E3EEF-2A9F-4DF0-992B-1DB6ACB1CDD5}"/>
+																<State Name="" ID="{C822C015-A794-4A55-8584-9F3123826BF1}" ShortID="454444298"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="STATE_hangar_place_barracks" ID="{B17ADA94-E2DB-4E0F-AD44-3BD718336256}"/>
+																<State Name="" ID="{A0A4FC0B-3073-4B06-815D-7F20CD8D6915}" ShortID="812679278"/>
+															</CustomState>
+															<CustomState>
+																<StateRef Name="STATE_hangar_place_browser" ID="{94079D08-501B-4EA5-A9B3-496C7AE06141}"/>
+																<State Name="" ID="{A8C71F4F-95CA-47D7-A3B4-FE5ECB88E811}" ShortID="952871334"/>
+															</CustomState>
+														</CustomStateList>
+													</StateInfo>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{9BCF656A-C920-4A3E-B256-C95C5EEBC987}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<SequenceList>
+														<MusicTrackSequence Name="" ID="{98D7A1C4-8219-4461-A32E-1E4BB5E176A4}">
+															<ClipList>
+																<MusicClip Name="star_trek_music_compilation" ID="{CF1C57B1-6141-426D-ACC1-76D52BB86FA7}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="1981648.97959184"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="star_trek_music_compilation" ID="{EB7CAD3B-DA13-4E8B-9F50-C9B7DA58EC77}"/>
+																</MusicClip>
+															</ClipList>
+														</MusicTrackSequence>
+													</SequenceList>
+												</MusicTrack>
+											</ChildrenList>
+											<CueList>
+												<MusicCue Name="Entry Cue" ID="{92EA326B-E9C0-4CC1-8063-999A7C3DB8AA}"/>
+												<MusicCue Name="Exit Cue" ID="{58C5F2B3-7BB1-4D3D-B95F-700BBAAA2B40}">
+													<PropertyList>
+														<Property Name="CueType" Type="int16" Value="1"/>
+														<Property Name="TimeMs" Type="Real64" Value="1981648.97959184"/>
+													</PropertyList>
+												</MusicCue>
+											</CueList>
+										</MusicSegment>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{47C9B500-F00A-4711-87B7-1FB31E9A87F4}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{78EC2764-B10C-4F6B-9154-0FEC85D61AC4}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<Playlist>
+										<MusicPlaylistItem Name="" ID="{FEA7FF11-3FBC-4F22-85BE-5FA2EEBF64DA}" ShortID="868166622"/>
+									</Playlist>
+								</MusicPlaylistContainer>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{DB76003F-B35A-499D-B8E3-0F2C7B92535F}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{EB6659FC-9A70-4BB7-BD6C-C73ECBE7AA3E}">
+											<PropertyList>
+												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo>
+												<SourceFadeOut>
+													<MusicFade Name="Source Fade-out" ID="{A81CA4CC-4257-4CB2-94D6-F5B5CF739DE2}">
+														<PropertyList>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</SourceFadeOut>
+												<DestinationFadeIn>
+													<MusicFade Name="Destination Fade-in" ID="{AA6B78D5-D4C8-48F2-888F-CC2EC77FA498}"/>
+												</DestinationFadeIn>
+											</TransitionInfo>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+						</MusicSwitchContainer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>

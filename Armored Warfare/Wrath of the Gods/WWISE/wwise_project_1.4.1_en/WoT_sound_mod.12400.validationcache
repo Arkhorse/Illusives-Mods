@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationCache Version="1" SchemaVersion="85">
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Actor-Mixer Hierarchy\AW Work Unit.wwu" DateLow="1561737259" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1561579645" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Ambient.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Bongfish\Bongfish.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Collision.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Combat_atmosphere.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Damage.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Default Work Unit.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Explosions.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Explosive_objects.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\GUI.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Hangar.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Impacts.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Impacts_Alternative.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Objects.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Pass_By.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Plane.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Roughness.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Turret.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Vehicles.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Weapons.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Audio Devices\Default Work Unit.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Control Surface Sessions\Default Work Unit.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Conversion Settings\Default Work Unit.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1549898290" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Default Work Unit.wwu" DateLow="1552414272" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Explosive_objects.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory Altiverb - Outdoor and More.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory Auro Headphone.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory Convolution Reverb Effects.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory Effects.wwu" DateLow="1552414272" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory iZotope Box Modeler.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory iZotope Delay.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory iZotope Dynamics.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory iZotope Filters.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory McDSP Effects.wwu" DateLow="1552414272" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Hangar.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Impacts.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Main Mix.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Maps_Zone_Effects.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Plane.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Vehicles.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Weapons.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Ambient.wwu" DateLow="1552845000" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Bongfish\Bongfish.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Combat_atmosphere.wwu" DateLow="1552845000" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Damage.wwu" DateLow="1552845000" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Default Work Unit.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Engine.wwu" DateLow="1552845000" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Explosions.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Explosive_objects.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Fortified_Area.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\GUI.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\GUI_hangar.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\GUI_Lootboxes.wwu" DateLow="1552414154" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Gun Reload.wwu" DateLow="1561579645" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Impacts.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Interactive_music.wwu" DateLow="1558375196" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Loginscreen.wwu" DateLow="1552414154" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Mechanisms.wwu" DateLow="1552414154" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Modules.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Objects.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Pass_By.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Personal_missions.wwu" DateLow="1552414154" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Physical_Collision.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Plane.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Ranked_battles\Ranked_battles.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Researches.wwu" DateLow="1552414154" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Treads.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Turret.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Utilite_events.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Voiceover_Frontline.wwu" DateLow="1552414154" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Voiceover_old.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Weapons.wwu" DateLow="1561694625" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Wheel_vehicle.wwu" DateLow="1552414154" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Ambient.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Common.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Damage.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Default Work Unit.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Effects.wwu" DateLow="1549898282" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Explosions.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Fortifierd_Area.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\GUI.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Gun_Reload.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Impacts.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Interactive_music.wwu" DateLow="1549898282" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Multichanel.wwu" DateLow="1549898282" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Music.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Objects.wwu" DateLow="1549898290" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Pass_By.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Personal_missions.wwu" DateLow="1549898282" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Physical_Collision.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Plane.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Settings.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Turret.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Vehicles.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Weapons.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1558375196" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Mixing Sessions\Default Work Unit.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Mixing Sessions\Main Mix.wwu" DateLow="1552414272" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Mixing Sessions\Weapons.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\ambient.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Damage.wwu" DateLow="1549898214" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Default Work Unit.wwu" DateLow="1549898214" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Explosive_objects_burn.wwu" DateLow="1549898214" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\GUI_hangar.wwu" DateLow="1549898214" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Hangar.wwu" DateLow="1549898226" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Impacts.wwu" DateLow="1549898212" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Objects.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Personal_missions.wwu" DateLow="1549898226" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Physical_Collision.wwu" DateLow="1549898226" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Plane.wwu" DateLow="1549898214" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Vehicles.wwu" DateLow="1549898214" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Weapons.wwu" DateLow="1549898214" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Presets\Default Work Unit.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Queries\Build_queries.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Queries\Default Work Unit.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Queries\Factory Queries.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\SoundBanks\Default Work Unit.wwu" DateLow="1557900595" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\SoundBanks\Mod.wwu" DateLow="1561580616" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1561737259" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\States\Bongfish\Bongfish.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\States\Common.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\States\Default Work Unit.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\States\GUI_Lootboxes.wwu" DateLow="1549898294" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\States\Interactive_music.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Combat_atmosphere.wwu" DateLow="1549898210" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Common.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Damage.wwu" DateLow="1549898220" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Default Work Unit.wwu" DateLow="1549898220" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Gun_Reload.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Impacts.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Objects.wwu" DateLow="1549898206" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Pass_By.wwu" DateLow="1552845006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Roughness.wwu" DateLow="1552845006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Turret.wwu" DateLow="1552845006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Vehicles.wwu" DateLow="1552845006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Voiceovers.wwu" DateLow="1549898206" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Weapons.wwu" DateLow="1549898206" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Triggers\Default Work Unit.wwu" DateLow="1552845006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Virtual Acoustics\Default Work Unit.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\WoT_sound_mod.12400.wsettings" DateLow="1561737260" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\WoT_sound_mod.wproj" DateLow="1557900595" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Actor-Mixer Hierarchy\AW Work Unit.wwu" DateLow="1561696521" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1561579645" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Ambient.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Bongfish\Bongfish.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Collision.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Combat_atmosphere.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Damage.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Default Work Unit.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Explosions.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Explosive_objects.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\GUI.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Hangar.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Impacts.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Impacts_Alternative.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Objects.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Pass_By.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Plane.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Roughness.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Turret.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Vehicles.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Attenuations\Weapons.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Audio Devices\Default Work Unit.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Control Surface Sessions\Default Work Unit.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Conversion Settings\Default Work Unit.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1549898290" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Default Work Unit.wwu" DateLow="1552414272" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Explosive_objects.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory Altiverb - Outdoor and More.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory Auro Headphone.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory Convolution Reverb Effects.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory Effects.wwu" DateLow="1552414272" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory iZotope Box Modeler.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory iZotope Delay.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory iZotope Dynamics.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory iZotope Filters.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Factory McDSP Effects.wwu" DateLow="1552414272" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Hangar.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Impacts.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Main Mix.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Maps_Zone_Effects.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Plane.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Vehicles.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Effects\Weapons.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Ambient.wwu" DateLow="1552845000" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Bongfish\Bongfish.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Combat_atmosphere.wwu" DateLow="1552845000" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Damage.wwu" DateLow="1552845000" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Default Work Unit.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Engine.wwu" DateLow="1552845000" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Explosions.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Explosive_objects.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Fortified_Area.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\GUI.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\GUI_hangar.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\GUI_Lootboxes.wwu" DateLow="1552414154" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Gun Reload.wwu" DateLow="1561579645" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Impacts.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Interactive_music.wwu" DateLow="1558375196" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Loginscreen.wwu" DateLow="1552414154" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Mechanisms.wwu" DateLow="1552414154" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Modules.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Objects.wwu" DateLow="1552845002" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Pass_By.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Personal_missions.wwu" DateLow="1552414154" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Physical_Collision.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Plane.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Ranked_battles\Ranked_battles.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Researches.wwu" DateLow="1552414154" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Treads.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Turret.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Utilite_events.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Voiceover_Frontline.wwu" DateLow="1552414154" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Voiceover_old.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Weapons.wwu" DateLow="1561694625" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Events\Wheel_vehicle.wwu" DateLow="1552414154" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Ambient.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Common.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Damage.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Default Work Unit.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Effects.wwu" DateLow="1549898282" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Explosions.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Fortifierd_Area.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\GUI.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Gun_Reload.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Impacts.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Interactive_music.wwu" DateLow="1549898282" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Multichanel.wwu" DateLow="1549898282" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Music.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Objects.wwu" DateLow="1549898290" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Pass_By.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Personal_missions.wwu" DateLow="1549898282" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Physical_Collision.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Plane.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Settings.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Turret.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Vehicles.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Game Parameters\Weapons.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1558375196" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Mixing Sessions\Default Work Unit.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Mixing Sessions\Main Mix.wwu" DateLow="1552414272" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Mixing Sessions\Weapons.wwu" DateLow="1549897006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\ambient.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Damage.wwu" DateLow="1549898214" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Default Work Unit.wwu" DateLow="1549898214" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Explosive_objects_burn.wwu" DateLow="1549898214" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\GUI_hangar.wwu" DateLow="1549898214" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Hangar.wwu" DateLow="1549898226" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Impacts.wwu" DateLow="1549898212" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Objects.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Personal_missions.wwu" DateLow="1549898226" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Physical_Collision.wwu" DateLow="1549898226" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Plane.wwu" DateLow="1549898214" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Vehicles.wwu" DateLow="1549898214" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Modulators\Weapons.wwu" DateLow="1549898214" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Presets\Default Work Unit.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Queries\Build_queries.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Queries\Default Work Unit.wwu" DateLow="1549898302" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Queries\Factory Queries.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\SoundBanks\Default Work Unit.wwu" DateLow="1557900595" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\SoundBanks\Mod.wwu" DateLow="1561580616" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1561682929" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\States\Bongfish\Bongfish.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\States\Common.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\States\Default Work Unit.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\States\GUI_Lootboxes.wwu" DateLow="1549898294" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\States\Interactive_music.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Combat_atmosphere.wwu" DateLow="1549898210" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Common.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Damage.wwu" DateLow="1549898220" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Default Work Unit.wwu" DateLow="1549898220" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Gun_Reload.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Impacts.wwu" DateLow="1552845004" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Objects.wwu" DateLow="1549898206" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Pass_By.wwu" DateLow="1552845006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Roughness.wwu" DateLow="1552845006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Turret.wwu" DateLow="1552845006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Vehicles.wwu" DateLow="1552845006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Voiceovers.wwu" DateLow="1549898206" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Switches\Weapons.wwu" DateLow="1549898206" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Triggers\Default Work Unit.wwu" DateLow="1552845006" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\Virtual Acoustics\Default Work Unit.wwu" DateLow="1549898300" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\WoT_sound_mod.12400.wsettings" DateLow="1561696698" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\WoT_sound_mod.wproj" DateLow="1557900595" DateHigh="0"/>
+</ValidationCache>

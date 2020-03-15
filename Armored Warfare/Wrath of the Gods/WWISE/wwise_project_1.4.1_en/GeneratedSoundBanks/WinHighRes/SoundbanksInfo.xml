@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows_HighRes" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="128">
+	<RootPaths>
+		<ProjectRoot>F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\</ProjectRoot>
+		<SourceFilesRoot>F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\.cache\Windows_HighRes\</SourceFilesRoot>
+		<SoundBanksRoot>F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\GeneratedSoundBanks\WinHighRes\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>F:\Mods\AW Mod\Gun Sounds\WWISE\wwise_project_1.4.1_en\GeneratedSoundBanks\Windows_HighRes</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank>
+		<File Id="32993886" Language="SFX">
+			<ShortName>IR_50-75mm_tank_interior.wav</ShortName>
+			<Path>Plugins\Wwise Convolution Reverb\IR_50-75mm_tank_interior_6027C8E8.wem</Path>
+		</File>
+		<File Id="554205954" Language="SFX">
+			<ShortName>Map_Zone\Deep forest.WAV</ShortName>
+			<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Deep forest_FF6FA842.wem</Path>
+		</File>
+		<File Id="684936451" Language="SFX">
+			<ShortName>Map_Zone\Canyons.wav</ShortName>
+			<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Canyons_92818435.wem</Path>
+		</File>
+		<File Id="823230670" Language="SFX">
+			<ShortName>IR_85-107mm_tank_interior.wav</ShortName>
+			<Path>Plugins\Wwise Convolution Reverb\IR_85-107mm_tank_interior_9E63035A.wem</Path>
+		</File>
+	</MediaFilesNotInAnyBank>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<ExcludedMemoryFiles>
+				<File Id="32993886" Language="SFX">
+					<ShortName>IR_50-75mm_tank_interior.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\IR_50-75mm_tank_interior_6027C8E8.wem</Path>
+				</File>
+				<File Id="554205954" Language="SFX">
+					<ShortName>Map_Zone\Deep forest.WAV</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Deep forest_FF6FA842.wem</Path>
+				</File>
+				<File Id="684936451" Language="SFX">
+					<ShortName>Map_Zone\Canyons.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Canyons_92818435.wem</Path>
+				</File>
+				<File Id="823230670" Language="SFX">
+					<ShortName>IR_85-107mm_tank_interior.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\IR_85-107mm_tank_interior_9E63035A.wem</Path>
+				</File>
+			</ExcludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="2651380218" Language="SFX">
+			<ObjectPath>\SoundBanks\Mod\AW_Gun_Reload</ObjectPath>
+			<ShortName>AW_Gun_Reload</ShortName>
+			<Path>AW_Gun_Reload.bnk</Path>
+			<IncludedEvents>
+				<Event Id="60441043" Name="gun_rld_115_152mm" ObjectPath="\Events\Gun Reload\gun_rld_115_152mm" DurationType="OneShot" DurationMin="4.873271" DurationMax="4.873271"/>
+				<Event Id="3806517378" Name="gun_rld_12_25mm" ObjectPath="\Events\Gun Reload\gun_rld_12_25mm" DurationType="OneShot" DurationMin="2.869958" DurationMax="2.869958"/>
+				<Event Id="3102076351" Name="gun_rld_155_170mm" ObjectPath="\Events\Gun Reload\gun_rld_155_170mm" DurationType="OneShot" DurationMin="4.873271" DurationMax="4.873271"/>
+				<Event Id="1017014401" Name="gun_rld_20_45mm" ObjectPath="\Events\Gun Reload\gun_rld_20_45mm" DurationType="OneShot" DurationMin="3.490458" DurationMax="3.490458"/>
+				<Event Id="3520652267" Name="gun_rld_50_75mm" ObjectPath="\Events\Gun Reload\gun_rld_50_75mm" DurationType="OneShot" DurationMin="3.490458" DurationMax="3.490458"/>
+				<Event Id="16852625" Name="gun_rld_85_107mm" ObjectPath="\Events\Gun Reload\gun_rld_85_107mm" DurationType="OneShot" DurationMin="3.490458" DurationMax="3.490458"/>
+				<Event Id="563704526" Name="gun_rld_autoloader_full_almost_complete" ObjectPath="\Events\Gun Reload\Autoloader\gun_rld_autoloader_full_almost_complete" DurationType="OneShot" DurationMin="2.197146" DurationMax="2.197146"/>
+				<Event Id="3406877815" Name="gun_rld_autoloader_full_complete" ObjectPath="\Events\Gun Reload\Autoloader\gun_rld_autoloader_full_complete" DurationType="OneShot" DurationMin="0.898042" DurationMax="0.898042"/>
+				<Event Id="3170023343" Name="gun_rld_autoloader_long_oneshell" ObjectPath="\Events\Gun Reload\Autoloader\gun_rld_autoloader_long_oneshell" DurationType="OneShot" DurationMin="0.898042" DurationMax="0.898042"/>
+				<Event Id="3055559195" Name="gun_rld_autoloader_long_start" ObjectPath="\Events\Gun Reload\Autoloader\gun_rld_autoloader_long_start" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1134228518" Name="gun_rld_autoloader_no_enough_shells" ObjectPath="\Events\Gun Reload\Autoloader\gun_rld_autoloader_no_enough_shells" DurationType="OneShot" DurationMin="0.813016" DurationMax="0.813016"/>
+				<Event Id="174656729" Name="gun_rld_autoloader_short_lastshell" ObjectPath="\Events\Gun Reload\Autoloader\gun_rld_autoloader_short_lastshell" DurationType="OneShot" DurationMin="0.898042" DurationMax="0.898042"/>
+				<Event Id="2386530347" Name="gun_rld_autoloader_short_oneshell" ObjectPath="\Events\Gun Reload\Autoloader\gun_rld_autoloader_short_oneshell" DurationType="OneShot" DurationMin="0.898042" DurationMax="0.898042"/>
+				<Event Id="681810231" Name="gun_rld_autoloader_shot_fail" ObjectPath="\Events\Gun Reload\Autoloader\gun_rld_autoloader_shot_fail" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1941417671" Name="gun_rld_automat_no_enough_shells" ObjectPath="\Events\Gun Reload\Cylinder\gun_rld_automat_no_enough_shells" DurationType="OneShot" DurationMin="0.813016" DurationMax="0.813016"/>
+				<Event Id="2884719612" Name="gun_rld_automat_reloading_long_loop" ObjectPath="\Events\Gun Reload\Cylinder\gun_rld_automat_reloading_long_loop" DurationType="OneShot" DurationMin="2.197146" DurationMax="2.197146"/>
+				<Event Id="2003390859" Name="gun_rld_automat_reloading_long_loop_stop" ObjectPath="\Events\Gun Reload\Cylinder\gun_rld_automat_reloading_long_loop_stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3078728648" Name="gun_rld_automat_reloading_long_oneshell" ObjectPath="\Events\Gun Reload\Cylinder\gun_rld_automat_reloading_long_oneshell" DurationType="OneShot" DurationMin="0.898042" DurationMax="0.898042"/>
+				<Event Id="447683427" Name="gun_rld_automat_reloading_long_oneshell_last" ObjectPath="\Events\Gun Reload\Cylinder\gun_rld_automat_reloading_long_oneshell_last" DurationType="OneShot" DurationMin="0.898042" DurationMax="0.898042"/>
+				<Event Id="411018410" Name="gun_rld_automat_reloading_long_start" ObjectPath="\Events\Gun Reload\Cylinder\gun_rld_automat_reloading_long_start" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="720758714" Name="gun_rld_automat_reloading_short_lastshell" ObjectPath="\Events\Gun Reload\Cylinder\gun_rld_automat_reloading_short_lastshell" DurationType="OneShot" DurationMin="0.898042" DurationMax="0.898042"/>
+				<Event Id="2051839702" Name="gun_rld_automat_reloading_short_oneshell" ObjectPath="\Events\Gun Reload\Cylinder\gun_rld_automat_reloading_short_oneshell" DurationType="OneShot" DurationMin="0.898042" DurationMax="0.898042"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="226879251" Language="SFX">
+					<ShortName>out_of_ammo.wav</ShortName>
+					<Path>SFX\out_of_ammo_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="536283022" Language="SFX">
+					<ShortName>reload_largecaliber_auto.wav</ShortName>
+					<Path>SFX\reload_largecaliber_auto_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="635796568" Language="SFX">
+					<ShortName>reload_mediumcaliber.wav</ShortName>
+					<Path>SFX\reload_mediumcaliber_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="672496117" Language="SFX">
+					<ShortName>ATGM_reload_01.wav</ShortName>
+					<Path>SFX\ATGM_reload_01_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="693020159" Language="SFX">
+					<ShortName>reload_artillery_shotReady.wav</ShortName>
+					<Path>SFX\reload_artillery_shotReady_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="966148093" Language="SFX">
+					<ShortName>reload_largecaliber.wav</ShortName>
+					<Path>SFX\reload_largecaliber_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="1032205419" Language="SFX">
+					<ShortName>tank_reload_01.wav</ShortName>
+					<Path>SFX\tank_reload_01_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="1042302843" Language="SFX">
+					<ShortName>reload_20mm_01.wav</ShortName>
+					<Path>SFX\reload_20mm_01_C5DCCAFA.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="3091020191" Language="SFX">
+			<ObjectPath>\SoundBanks\Mod\AW_Weapons</ObjectPath>
+			<ShortName>AW_Weapons</ShortName>
+			<Path>AW_Weapons.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3810854594" Name="wpn_automatic_NPC" ObjectPath="\Events\Weapons\wpn_automatic_NPC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="3.399958" DurationMax="3.399958"/>
+				<Event Id="3393838454" Name="wpn_automatic_PC" ObjectPath="\Events\Weapons\wpn_automatic_PC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="2.999979" DurationMax="2.999979"/>
+				<Event Id="2900886352" Name="wpn_huge_NPC" ObjectPath="\Events\Weapons\wpn_huge_NPC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="10.723979" DurationMax="10.723979"/>
+				<Event Id="3714550572" Name="wpn_huge_PC" ObjectPath="\Events\Weapons\wpn_huge_PC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="10.723979" DurationMax="10.723979"/>
+				<Event Id="147748593" Name="wpn_large_extra_NPC" ObjectPath="\Events\Weapons\wpn_large_extra_NPC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="10.723979" DurationMax="10.723979"/>
+				<Event Id="2709031111" Name="wpn_large_extra_PC" ObjectPath="\Events\Weapons\wpn_large_extra_PC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="10.723979" DurationMax="10.723979"/>
+				<Event Id="838979778" Name="wpn_large_NPC" ObjectPath="\Events\Weapons\wpn_large_NPC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="6.749979" DurationMax="6.749979"/>
+				<Event Id="1201679222" Name="wpn_large_PC" ObjectPath="\Events\Weapons\wpn_large_PC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="6.749979" DurationMax="6.749979"/>
+				<Event Id="3181429045" Name="wpn_main_extra_NPC" ObjectPath="\Events\Weapons\wpn_main_extra_NPC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="8.000271" DurationMax="8.000271"/>
+				<Event Id="337105211" Name="wpn_main_extra_PC" ObjectPath="\Events\Weapons\wpn_main_extra_PC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="8.000271" DurationMax="8.000271"/>
+				<Event Id="4253673230" Name="wpn_main_NPC" ObjectPath="\Events\Weapons\wpn_main_NPC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="8.000271" DurationMax="8.000271"/>
+				<Event Id="2976121522" Name="wpn_main_PC" ObjectPath="\Events\Weapons\wpn_main_PC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="8.000271" DurationMax="8.000271"/>
+				<Event Id="2544375808" Name="wpn_meduim_NPC" ObjectPath="\Events\Weapons\wpn_meduim_NPC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="2.596521" DurationMax="2.596521"/>
+				<Event Id="3197430972" Name="wpn_meduim_PC" ObjectPath="\Events\Weapons\wpn_meduim_PC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="2.596521" DurationMax="2.596521"/>
+				<Event Id="3271552702" Name="wpn_small_NPC" ObjectPath="\Events\Weapons\wpn_small_NPC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="2.596521" DurationMax="2.596521"/>
+				<Event Id="1913943554" Name="wpn_small_PC" ObjectPath="\Events\Weapons\wpn_small_PC" MaxAttenuation="600.000000" DurationType="OneShot" DurationMin="2.596521" DurationMax="2.596521"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="66534435" Language="SFX">
+					<ShortName>wpn_155mm_int_fire_03.wav</ShortName>
+					<Path>SFX\wpn_155mm_int_fire_03_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="217539087" Language="SFX">
+					<ShortName>wpn_105_mm_ext_01.wav</ShortName>
+					<Path>SFX\wpn_105_mm_ext_01_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="438063762" Language="SFX">
+					<ShortName>wpn_20mm_int_fire_03.wav</ShortName>
+					<Path>SFX\wpn_20mm_int_fire_03_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="721919784" Language="SFX">
+					<ShortName>wpn_20mm_close_loop_300_01.wav</ShortName>
+					<Path>SFX\wpn_20mm_close_loop_300_01_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="816650160" Language="SFX">
+					<ShortName>wpn_125mm_int_fire_01.wav</ShortName>
+					<Path>SFX\wpn_125mm_int_fire_01_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="828844149" Language="SFX">
+					<ShortName>wpn_105mm_int_fire_03.wav</ShortName>
+					<Path>SFX\wpn_105mm_int_fire_03_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="839843322" Language="SFX">
+					<ShortName>wpn_140_mm_ext_01.wav</ShortName>
+					<Path>SFX\wpn_140_mm_ext_01_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="867138945" Language="SFX">
+					<ShortName>wpn_20mm_ext_rel_02.wav</ShortName>
+					<Path>SFX\wpn_20mm_ext_rel_02_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="870463833" Language="SFX">
+					<ShortName>wpn_20mm_int_loop_300_01.wav</ShortName>
+					<Path>SFX\wpn_20mm_int_loop_300_01_C5DCCAFA.wem</Path>
+				</File>
+				<File Id="979571429" Language="SFX">
+					<ShortName>wpn_156_mm_ext_01.wav</ShortName>
+					<Path>SFX\wpn_156_mm_ext_01_C5DCCAFA.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

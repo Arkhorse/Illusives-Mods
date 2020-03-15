@@ -1,0 +1,16 @@
+<audio_mods.xml>
+  <loadBanks>
+    <bank>AW_Weapons.bnk</bank>
+  </loadBanks>
+  <events>
+  </events>
+  <!-- Switches -->
+  <switches>
+  </switches>
+  <!-- RTPC -->
+  <RTPCs>
+  </RTPCs>
+  <!-- STATES -->
+  <states>
+  </states>
+</audio_mods.xml>

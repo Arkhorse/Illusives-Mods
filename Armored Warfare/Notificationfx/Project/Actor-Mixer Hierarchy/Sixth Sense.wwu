@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5E59F148-46C1-4D02-8C9E-2004A738E738}" SchemaVersion="85">
+	<AudioObjects>
+		<WorkUnit Name="Sixth Sense" ID="{5E59F148-46C1-4D02-8C9E-2004A738E738}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="dukes of hazzard - general lee's dixie horn" ID="{1654E340-906A-4DB7-835E-A2216AC4909B}" ShortID="534399151">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B5EFB14B-A840-4B3E-9C23-270361C5C997}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="dukes of hazzard - general lee's dixie horn" ID="{48F5B0B6-5B2C-455B-A7A2-2ECF4BE89EBB}" ShortID="887348207">
+							<Language>SFX</Language>
+							<AudioFile>dukes of hazzard - general lee's dixie horn.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="dukes of hazzard - general lee's dixie horn" ID="{48F5B0B6-5B2C-455B-A7A2-2ECF4BE89EBB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

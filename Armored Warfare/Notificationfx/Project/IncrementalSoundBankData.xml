@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IncrementalBankBuild Version="6" Flags="3568642100">
+	<Platform GUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EC}">
+		<Banks>
+			<Language ID="393239870">
+				<File Name="AW_Binocs" Hash="3057044134" Timestamp="1566677755"/>
+				<File Name="AW_Camo_Net" Hash="2422236859" Timestamp="1561604948"/>
+				<File Name="AW_GUI_Sounds" Hash="3932101895" Timestamp="1559177394"/>
+				<File Name="AW_Modules" Hash="2255439826" Timestamp="1561604599"/>
+				<File Name="AW_battle_equipment" Hash="59233665" Timestamp="1559247841"/>
+				<File Name="AW_enemy_spotted" Hash="2045106820" Timestamp="1559591423"/>
+				<File Name="AW_timer" Hash="3459458893" Timestamp="1567374901"/>
+				<File Name="General_Lee" Hash="1343136492" Timestamp="1567571427"/>
+				<File Name="Init" Hash="1980333596" Timestamp="1559177394"/>
+			</Language>
+		</Banks>
+		<XMLInfo>
+			<Language ID="-1">
+				<File Name="" Hash="3289491881" Timestamp="1567571427"/>
+			</Language>
+		</XMLInfo>
+	</Platform>
+</IncrementalBankBuild>

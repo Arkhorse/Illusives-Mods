@@ -1,0 +1,20 @@
+<audio_mods.xml>
+  <loadBanks>
+    <bank>AW_enemy_spotted.bnk</bank>
+  </loadBanks>
+  <events>
+	<event>
+		<name>enemy_sighted_for_team</name>
+		<mod>AW_enemy_sighted</mod>
+	<event>
+  </events>
+  <!-- Switches -->
+  <switches>
+  </switches>
+  <!-- RTPC -->
+  <RTPCs>
+  </RTPCs>
+  <!-- STATES -->
+  <states>
+  </states>
+</audio_mods.xml>

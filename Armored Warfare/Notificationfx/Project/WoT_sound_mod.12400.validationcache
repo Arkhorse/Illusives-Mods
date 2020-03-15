@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationCache Version="1" SchemaVersion="85">
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1554116378" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Ambient.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Bongfish\Bongfish.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Collision.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Combat_atmosphere.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Damage.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Default Work Unit.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Explosions.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Explosive_objects.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\GUI.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Hangar.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Impacts.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Impacts_Alternative.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Objects.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Pass_By.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Plane.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Roughness.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Turret.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Vehicles.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Attenuations\Weapons.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Audio Devices\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Control Surface Sessions\Default Work Unit.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Conversion Settings\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Default Work Unit.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Explosive_objects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Factory Altiverb - Outdoor and More.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Factory Auro Headphone.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Factory Convolution Reverb Effects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Factory Effects.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Factory iZotope Box Modeler.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Factory iZotope Delay.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Factory iZotope Dynamics.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Factory iZotope Filters.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Factory McDSP Effects.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Hangar.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Impacts.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Main Mix.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Maps_Zone_Effects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Plane.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Vehicles.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Effects\Weapons.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Ambient.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Bongfish\Bongfish.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Combat_atmosphere.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Damage.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Engine.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Explosions.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Explosive_objects.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Fortified_Area.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\GUI.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\GUI_hangar.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\GUI_Lootboxes.wwu" DateLow="1556110568" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Gun Reload.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Impacts.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Interactive_music.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Loginscreen.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Mechanisms.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Modules.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Objects.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Pass_By.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Personal_missions.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Physical_Collision.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Plane.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Researches.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Treads.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Turret.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Utilite_events.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Voiceover_Frontline.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Voiceover_old.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Weapons.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Events\Wheel_vehicle.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Ambient.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Common.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Damage.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Effects.wwu" DateLow="1554116479" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Explosions.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Fortifierd_Area.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\GUI.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Gun_Reload.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Impacts.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Interactive_music.wwu" DateLow="1554116477" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Multichanel.wwu" DateLow="1554116477" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Music.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Objects.wwu" DateLow="1554116479" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Pass_By.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Personal_missions.wwu" DateLow="1554116477" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Physical_Collision.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Plane.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Settings.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Turret.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Vehicles.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Game Parameters\Weapons.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Mixing Sessions\Default Work Unit.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Mixing Sessions\Main Mix.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Mixing Sessions\Weapons.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Modulators\ambient.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Modulators\Damage.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Modulators\Default Work Unit.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Modulators\Explosive_objects_burn.wwu" DateLow="1554116378" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Modulators\GUI_hangar.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Modulators\Hangar.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Modulators\Impacts.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Modulators\Objects.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Modulators\Personal_missions.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Modulators\Physical_Collision.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Modulators\Plane.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Modulators\Vehicles.wwu" DateLow="1554116378" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Modulators\Weapons.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Presets\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Queries\Build_queries.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Queries\Default Work Unit.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Queries\Factory Queries.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\SoundBanks\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1556113830" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\States\Bongfish\Bongfish.wwu" DateLow="1554116479" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\States\Common.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\States\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\States\GUI_Lootboxes.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\States\Interactive_music.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Switches\Combat_atmosphere.wwu" DateLow="1554116376" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Switches\Common.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Switches\Damage.wwu" DateLow="1554116376" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Switches\Default Work Unit.wwu" DateLow="1554116376" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Switches\Gun_Reload.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Switches\Impacts.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Switches\Objects.wwu" DateLow="1554116366" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Switches\Pass_By.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Switches\Roughness.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Switches\Turret.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Switches\Vehicles.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Switches\Voiceovers.wwu" DateLow="1556463806" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Switches\Weapons.wwu" DateLow="1554116366" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Triggers\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\Virtual Acoustics\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Crew\Wwise\WoT_sound_mod.wproj" DateLow="1556111591" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1559166450" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Ambient.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Bongfish\Bongfish.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Collision.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Combat_atmosphere.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Damage.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Default Work Unit.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Explosions.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Explosive_objects.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\GUI.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Hangar.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Impacts.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Impacts_Alternative.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Objects.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Pass_By.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Plane.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Roughness.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Turret.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Vehicles.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Attenuations\Weapons.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Audio Devices\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Control Surface Sessions\Default Work Unit.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Conversion Settings\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Default Work Unit.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Explosive_objects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Factory Altiverb - Outdoor and More.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Factory Auro Headphone.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Factory Convolution Reverb Effects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Factory Effects.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Factory iZotope Box Modeler.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Factory iZotope Delay.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Factory iZotope Dynamics.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Factory iZotope Filters.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Factory McDSP Effects.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Hangar.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Impacts.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Main Mix.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Maps_Zone_Effects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Plane.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Vehicles.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Effects\Weapons.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Ambient.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Bongfish\Bongfish.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Combat_atmosphere.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Damage.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Engine.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Explosions.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Explosive_objects.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Fortified_Area.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\GUI.wwu" DateLow="1559177331" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\GUI_hangar.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\GUI_Lootboxes.wwu" DateLow="1556110568" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Gun Reload.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Impacts.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Interactive_music.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Loginscreen.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Mechanisms.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Modules.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Objects.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Pass_By.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Personal_missions.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Physical_Collision.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Plane.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Researches.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Treads.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Turret.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Utilite_events.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Voiceover_Frontline.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Voiceover_old.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Weapons.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Events\Wheel_vehicle.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Ambient.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Common.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Damage.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Effects.wwu" DateLow="1554116479" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Explosions.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Fortifierd_Area.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\GUI.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Gun_Reload.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Impacts.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Interactive_music.wwu" DateLow="1554116477" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Multichanel.wwu" DateLow="1554116477" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Music.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Objects.wwu" DateLow="1554116479" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Pass_By.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Personal_missions.wwu" DateLow="1554116477" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Physical_Collision.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Plane.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Settings.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Turret.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Vehicles.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Game Parameters\Weapons.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Mixing Sessions\Default Work Unit.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Mixing Sessions\Main Mix.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Mixing Sessions\Weapons.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Modulators\ambient.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Modulators\Damage.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Modulators\Default Work Unit.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Modulators\Explosive_objects_burn.wwu" DateLow="1554116378" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Modulators\GUI_hangar.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Modulators\Hangar.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Modulators\Impacts.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Modulators\Objects.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Modulators\Personal_missions.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Modulators\Physical_Collision.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Modulators\Plane.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Modulators\Vehicles.wwu" DateLow="1554116378" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Modulators\Weapons.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Presets\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1561265310" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Ambient.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Bongfish\Bongfish.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Collision.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Combat_atmosphere.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Damage.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Default Work Unit.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Explosions.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Explosive_objects.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\GUI.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Hangar.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Impacts.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Impacts_Alternative.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Objects.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Pass_By.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Plane.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Roughness.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Turret.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Vehicles.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Attenuations\Weapons.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Audio Devices\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Control Surface Sessions\Default Work Unit.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Conversion Settings\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Default Work Unit.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Explosive_objects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Factory Altiverb - Outdoor and More.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Factory Auro Headphone.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Factory Convolution Reverb Effects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Factory Effects.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Factory iZotope Box Modeler.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Factory iZotope Delay.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Factory iZotope Dynamics.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Factory iZotope Filters.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Factory McDSP Effects.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Hangar.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Impacts.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Main Mix.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Maps_Zone_Effects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Plane.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Vehicles.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Effects\Weapons.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Ambient.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Bongfish\Bongfish.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Combat_atmosphere.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Damage.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Engine.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Explosions.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Explosive_objects.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Fortified_Area.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\GUI.wwu" DateLow="1561264944" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\GUI_hangar.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\GUI_Lootboxes.wwu" DateLow="1556110568" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Gun Reload.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Impacts.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Interactive_music.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Loginscreen.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Mechanisms.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Modules.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Objects.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Pass_By.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Personal_missions.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Physical_Collision.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Plane.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Researches.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Treads.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Turret.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Utilite_events.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Voiceover_Frontline.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Voiceover_old.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Weapons.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Events\Wheel_vehicle.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Ambient.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Common.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Damage.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Effects.wwu" DateLow="1554116479" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Explosions.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Fortifierd_Area.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\GUI.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Gun_Reload.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Impacts.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Interactive_music.wwu" DateLow="1554116477" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Multichanel.wwu" DateLow="1554116477" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Music.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Objects.wwu" DateLow="1554116479" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Pass_By.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Personal_missions.wwu" DateLow="1554116477" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Physical_Collision.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Plane.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Settings.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Turret.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Vehicles.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Game Parameters\Weapons.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Mixing Sessions\Default Work Unit.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Mixing Sessions\Main Mix.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Mixing Sessions\Weapons.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Modulators\ambient.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Modulators\Damage.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Modulators\Default Work Unit.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Modulators\Explosive_objects_burn.wwu" DateLow="1554116378" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Modulators\GUI_hangar.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Modulators\Hangar.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Modulators\Impacts.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Modulators\Objects.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Modulators\Personal_missions.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Modulators\Physical_Collision.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Modulators\Plane.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Modulators\Vehicles.wwu" DateLow="1554116378" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Modulators\Weapons.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Presets\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Queries\Build_queries.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Queries\Default Work Unit.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Queries\Factory Queries.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\SoundBanks\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\SoundBanks\Mods.wwu" DateLow="1561264944" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1559166450" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\States\Bongfish\Bongfish.wwu" DateLow="1554116479" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\States\Common.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\States\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\States\GUI_Lootboxes.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\States\Interactive_music.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Switches\Combat_atmosphere.wwu" DateLow="1554116376" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Switches\Common.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Switches\Damage.wwu" DateLow="1554116376" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Switches\Default Work Unit.wwu" DateLow="1554116376" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Switches\Gun_Reload.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Switches\Impacts.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Switches\Objects.wwu" DateLow="1554116366" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Switches\Pass_By.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Switches\Roughness.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Switches\Turret.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Switches\Vehicles.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Switches\Voiceovers.wwu" DateLow="1559166450" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Switches\Weapons.wwu" DateLow="1554116366" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Triggers\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\Virtual Acoustics\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\WoT_sound_mod.12400.wsettings" DateLow="1561265312" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Project\WoT_sound_mod.wproj" DateLow="1556111591" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Queries\Build_queries.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Queries\Default Work Unit.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Queries\Factory Queries.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\SoundBanks\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\SoundBanks\Mods.wwu" DateLow="1559177358" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1559166450" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\States\Bongfish\Bongfish.wwu" DateLow="1554116479" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\States\Common.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\States\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\States\GUI_Lootboxes.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\States\Interactive_music.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Switches\Combat_atmosphere.wwu" DateLow="1554116376" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Switches\Common.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Switches\Damage.wwu" DateLow="1554116376" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Switches\Default Work Unit.wwu" DateLow="1554116376" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Switches\Gun_Reload.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Switches\Impacts.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Switches\Objects.wwu" DateLow="1554116366" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Switches\Pass_By.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Switches\Roughness.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Switches\Turret.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Switches\Vehicles.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Switches\Voiceovers.wwu" DateLow="1559166450" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Switches\Weapons.wwu" DateLow="1554116366" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Triggers\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\Virtual Acoustics\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\WoT_sound_mod.12400.wsettings" DateLow="1559177400" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\AW Mod\Notificationfx\WoT_sound_mod.wproj" DateLow="1556111591" DateHigh="0"/>
+</ValidationCache>

@@ -1,0 +1,10 @@
+<root>
+	<!-- Techical MOD ID -->
+	<id>Theillusion_PlayersPanel_Transparent</id>
+	<!-- Package version -->
+	<version>1.0</version>
+	<!-- Human readable name -->
+	<name>Transparent Button Background</name>
+	<!-- Human readable description -->
+	<description>Makes the background for the players panel switches less noticable</description>
+</root>

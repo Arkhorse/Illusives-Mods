@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6451563F-CABC-4121-83A6-0536B4D3587B}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Treads" ID="{6451563F-CABC-4121-83A6-0536B4D3587B}" PersistMode="Standalone">
+			<Comment>Tracks and roughness</Comment>
+			<ChildrenList>
+				<Event Name="trds_chf_npc" ID="{08B4C05E-B0B4-4B13-809E-04B16F0D44A0}">
+					<Comment>Event - Nations : Germany, U.S.A., France, Great Britain, Czechoslovakia, Japan NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{11965F1A-EAEA-430F-86D5-39CC62E26BD8}" ShortID="358813753">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="trds_chaffee_NPC" ID="{719044E9-C7C6-418A-9907-CEB1DCE2B073}" WorkUnitID="{D6CB1BC9-C80B-4835-BE32-89DFCEAEDA87}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="trds_med_npc" ID="{9EBA0992-C8F5-48CC-9370-D117785CC35D}">
+					<Comment>Event - Nations : U.S.S.R., China NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{988787B6-B776-4AA3-B031-41A5E4EB48DB}" ShortID="971699662">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="trds_med_NPC" ID="{6C9CA018-6D15-4A4C-9FB8-B625F16E2F01}" WorkUnitID="{D6CB1BC9-C80B-4835-BE32-89DFCEAEDA87}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="trds_t34_pc" ID="{F570713C-7A3E-470C-B050-10447D255C3C}">
+					<Comment>Event - Only for the T-34 U.S.S.R.</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{4B093B6F-C005-44D6-AE2C-D34F54F3EEDD}" ShortID="41617589">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="trds_med_T34" ID="{DC4D4E1D-EDB5-4115-8FE2-47D1F0FAC77A}" WorkUnitID="{D6CB1BC9-C80B-4835-BE32-89DFCEAEDA87}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B0904340-F3DC-44DA-A731-88D182E65830}" ShortID="1052504244">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="transmission_PC" ID="{E777F11A-AD01-4BD5-996A-9D87414985FA}" WorkUnitID="{0F0B694D-F961-4C7B-A27A-2865BF126538}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0A4D4FD7-376A-40EB-BDD2-CB1781D7C3AB}" ShortID="509845925">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="roughness_external_trigger" ID="{83B61E71-1326-40D5-928E-65ACE9FBA30F}" WorkUnitID="{CDE0CEF1-6260-4C6C-A093-6D91FF9B22C9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{83F2A6E3-4FF8-4515-BD0B-1F974C9DA4DE}" ShortID="782175549">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="roughness_internal_trigger" ID="{90EF003F-2CE9-445F-8ABC-A028781D51C5}" WorkUnitID="{CDE0CEF1-6260-4C6C-A093-6D91FF9B22C9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8B3E4560-0283-4E91-94F9-FEB02BCC51BE}" ShortID="598732152">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="surfaces_PC" ID="{F9F6F631-2213-43B7-B68B-E85086529768}" WorkUnitID="{D6CB1BC9-C80B-4835-BE32-89DFCEAEDA87}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{22355B75-E2EB-488E-BD66-CE525E91A43E}" ShortID="201439093">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ambient_wind_blown" ID="{D16C9EEB-91BD-4C6E-A9C4-3FC28BBAD683}" WorkUnitID="{6451563F-CABC-4121-83A6-0536B4D3587B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ambient_wind_blown" ID="{D16C9EEB-91BD-4C6E-A9C4-3FC28BBAD683}">
+					<Comment>Event - Wind blowing when a vehicle is moving fast</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{3E015354-DC70-4D72-80B1-659DC18464D2}" ShortID="351621069">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wind_blown_01" ID="{3A10186A-6186-448D-A520-DB60C64A59B1}" WorkUnitID="{D6CB1BC9-C80B-4835-BE32-89DFCEAEDA87}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{91D67684-96F0-4296-B614-B6DEAD821866}" ShortID="682652596">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeCurve" Type="int16" Value="8"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="wind_blown_02" ID="{F74F0A52-7386-41C1-AA65-8CD2A7DB06D0}" WorkUnitID="{D6CB1BC9-C80B-4835-BE32-89DFCEAEDA87}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6C44D83B-3D6D-43C2-8E28-988C7A75E9D6}" ShortID="585449399">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="STATE_eye_of_sauron_off" ID="{CD859688-7532-4740-9B0B-2C930A23C502}" WorkUnitID="{734CCAF5-C5CE-41BD-BA30-6B5F8109EE7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="treads_type_pc" ID="{E7EC5C18-162B-4C9A-9A09-BA6255FC888D}">
+					<ChildrenList>
+						<Action Name="" ID="{74D94865-CE55-4EAD-951B-A7EC8E66F7DF}" ShortID="352867012">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="trds_type_pc" ID="{A2178544-EE8C-4904-85BD-C42D9326CAF4}" WorkUnitID="{D6CB1BC9-C80B-4835-BE32-89DFCEAEDA87}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{39408FD6-6F26-45EF-B632-31C5ADF55FA7}" ShortID="1066860967">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="transmission_PC" ID="{E777F11A-AD01-4BD5-996A-9D87414985FA}" WorkUnitID="{0F0B694D-F961-4C7B-A27A-2865BF126538}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7D1D3323-0DD1-4FE2-93DF-F8B20E436A47}" ShortID="695009172">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="roughness_external_trigger" ID="{83B61E71-1326-40D5-928E-65ACE9FBA30F}" WorkUnitID="{CDE0CEF1-6260-4C6C-A093-6D91FF9B22C9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{43252D4C-1C1A-40CA-909A-019FE879ADCB}" ShortID="596845744">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="roughness_internal_trigger" ID="{90EF003F-2CE9-445F-8ABC-A028781D51C5}" WorkUnitID="{CDE0CEF1-6260-4C6C-A093-6D91FF9B22C9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EE69751B-000C-4A95-B984-E5B2EDC90420}" ShortID="337847179">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="surfaces_PC" ID="{F9F6F631-2213-43B7-B68B-E85086529768}" WorkUnitID="{D6CB1BC9-C80B-4835-BE32-89DFCEAEDA87}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{574C0D0C-43B0-4662-BC0A-0B1E4B9A5ADF}" ShortID="558494907">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ambient_wind_blown" ID="{D16C9EEB-91BD-4C6E-A9C4-3FC28BBAD683}" WorkUnitID="{6451563F-CABC-4121-83A6-0536B4D3587B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

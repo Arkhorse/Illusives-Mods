@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{DD20A8C7-3C20-409F-9EAB-75201A0F56EE}" SchemaVersion="97">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{DD20A8C7-3C20-409F-9EAB-75201A0F56EE}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Voiceovers" ID="{71B061DF-27AB-4D7E-B47A-0C4897863468}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

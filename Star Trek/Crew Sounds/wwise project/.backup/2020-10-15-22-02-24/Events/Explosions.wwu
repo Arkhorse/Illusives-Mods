@@ -1,0 +1,1444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4ECDFA07-9562-424F-9FA7-83146961FF6E}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Explosions" ID="{4ECDFA07-9562-424F-9FA7-83146961FF6E}" PersistMode="Standalone">
+			<Comment>Explosions</Comment>
+			<ChildrenList>
+				<Event Name="expl_fuel_NPC" ID="{3A7512BF-0055-4B38-A13F-2641220687F4}">
+					<Comment>Event - Vehicle destroyed upon fuel explosion NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{7546AE46-2788-4D3B-9F53-F8F80E0015C4}" ShortID="266350610">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_fuel_NPC" ID="{60D67A75-10A7-4358-9DD1-0C3374D8269C}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2007D8F6-32D2-4226-BDBC-3B4711E5CF5D}" ShortID="149284626">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="breakdown_treads_new" ID="{1A8C8B35-8ADF-4AEB-A7D8-77ADE11BF492}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{44BF44AF-8AE5-4E88-A723-68C28B94DE26}" ShortID="831472832">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_large_sub_multichanel_01" ID="{4291D180-EAF3-4E36-B8D1-1A154C4A5348}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{05B12A2B-1B05-40C2-8128-8C5E4B116057}" ShortID="811038113">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_stinger" ID="{FA160C85-64FD-406A-8A60-DD990F410A19}" WorkUnitID="{9136FD01-D55C-43D0-B0D2-9CD1A7C5E6B2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="expl_ammo_PC" ID="{A70335BF-9799-471F-91DA-F969F82884F7}">
+					<Comment>Event - Vehicle destroyed PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{C8CB7D30-9E1D-4D80-8CA7-907B558C6767}" ShortID="160631858">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_ammo_PC" ID="{075B6FCC-B7D3-4C5B-B140-0C7198102188}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E61FC69C-160E-41FF-A783-D203D925B869}" ShortID="782539853">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_fuel_PC" ID="{48BCD495-BCB9-4877-B705-A9C081B7CE92}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B290F477-89D1-45EB-A885-9BD9C003F3C2}" ShortID="529160980">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_tank_sine_02" ID="{48E64594-EF20-4F65-8A55-29CB678AFDBF}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{48EE8090-9395-4213-B1EE-8263A548D001}" ShortID="145014513">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_expl_LP_filter" ID="{C4E368AC-DB78-43D4-8BA3-9D1F8F403AD7}" WorkUnitID="{080CB6CE-6D01-43BC-8288-8BEC35E84725}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7862DE7F-7805-44F8-82EC-53CE2A43BBAE}" ShortID="638212580">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_expl_LP_filter" ID="{C4E368AC-DB78-43D4-8BA3-9D1F8F403AD7}" WorkUnitID="{080CB6CE-6D01-43BC-8288-8BEC35E84725}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{73CA08AE-023E-44E3-9712-113DC14637AA}" ShortID="88830500">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="0.3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="07_sub" ID="{958A1AA1-AD36-4CCD-A9F4-D116FA182632}" WorkUnitID="{B1CFF9C4-59BB-45CC-8EFF-FABBA3727C03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CA26B4FA-9B18-481E-A8CB-7E499B3F8718}" ShortID="950975301">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_large_sub_multichanel_01" ID="{4291D180-EAF3-4E36-B8D1-1A154C4A5348}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5EFA3655-AFCE-4AAE-BE4F-ECCA31DAD42C}" ShortID="215915994">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_large_sub_multichanel_02" ID="{9C39988E-B44B-41FC-9DBD-C08570824E76}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="expl_burnup_ammo_NPC" ID="{75997EC1-D2D6-4A22-9C61-1CF6AA7E3E88}">
+					<Comment>Event - Vehicle destroyed upon ammo rack explosion NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{C527D8FC-9688-4893-B28F-BB0719894765}" ShortID="660288370">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="burnoff_start_expl" ID="{3E5D6A3D-17E1-4856-8A3C-9ADF8F2DE9CC}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5981FE8C-DA99-4CF0-BE53-7BB085A5D54D}" ShortID="894846681">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="flame" ID="{D2F83D65-2297-45A1-8211-C790CF1A5570}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A7DC96A2-571D-4EC9-9236-1ED634F0AF23}" ShortID="13082301">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="flame_distortion" ID="{9AAB9F69-BF67-41FF-B078-BA8280BDACDE}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BBFA42E1-E71D-4934-8A3F-AB5B9A3607B7}" ShortID="300627439">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FEF49BE7-B83E-4725-A3AE-873E1B08DB0E}" ShortID="448000459">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D9117D07-385B-4B84-9DCA-8AB52BF5426F}" ShortID="696312580">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C8104860-C215-48FA-9585-BCF28EABA73E}" ShortID="742016143">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D33DD985-B5FF-4750-8AEF-746E788CDBFC}" ShortID="874516311">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D7951F8D-620C-478B-B094-4005EEB57FF2}" ShortID="976309959">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F57ABAF2-013C-45D4-80D9-D33BB29E3D81}" ShortID="295975158">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7F90A6A0-6773-48F4-AD6A-0D7FE00069D0}" ShortID="436472182">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3A52C3CF-88B6-4256-A57F-48A78CB48D7F}" ShortID="488865916">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{186143D3-B765-4DC7-B22D-DC60AEE5719F}" ShortID="39461062">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{ED7ABC00-F14F-4E30-B856-1C0DE304C5D6}" ShortID="956994018">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{991F5E71-BF6B-4A7A-9BFF-8B1FF3C13789}" ShortID="249499395">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{005D1DB5-6210-4E85-8FC1-612C5FD20C01}" ShortID="721190614">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{29022A51-0CC7-4D24-AB8C-489E657A30AF}" ShortID="757066199">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DB20371C-FA32-47AB-81E8-09B0C11862E1}" ShortID="504983343">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5B90AA43-167C-498B-AF32-7A276AB548AD}" ShortID="715936777">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D6E20E90-F050-4D95-891B-EA38AD13A659}" ShortID="819244849">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3C9D2334-0C9A-4D3C-8270-57D488DD22C3}" ShortID="316194364">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2281835A-0B41-45D5-9E4C-08239B582139}" ShortID="77835795">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AE951E75-FAAC-4A6F-A7B2-DF0FCB76B443}" ShortID="394490661">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0668ECD4-2AC7-4D1A-9E56-1D357C06009E}" ShortID="38214639">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6D406613-7DCD-4BD3-9289-31F9A0C1144E}" ShortID="813466287">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{34028C54-6A12-4009-8C27-BDA317BBE4A6}" ShortID="357671684">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1116EBD2-C17D-4557-8C9B-F85555FD78B1}" ShortID="1051402785">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E6CC4F0F-7F15-482D-88CC-8A560209501A}" ShortID="353159458">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8842F5DC-05DF-4CD4-B096-5F17828C97F8}" ShortID="175623295">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_small_sub_multichanel" ID="{31CA7E3A-B6AC-4AF7-B573-9B983E7BBDD1}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BEB9DA5B-92C9-41C8-B2FD-6DA841031BC5}" ShortID="233987013">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_sub_slow_attack_5500ms_02" ID="{0D563670-9044-4A40-8C6F-1F023EF0EACE}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="expl_submersion_death" ID="{84A0B1F4-6ABF-4A51-9F1A-97A310DFFC20}">
+					<Comment>Event - Vehicle destroyed upon drowning PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{387188EA-2737-4507-934F-EE7B1320C53D}" ShortID="605981594">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="STATE_underwater_off" ID="{91121861-3203-4FD1-8E3F-56E917823703}" WorkUnitID="{2919E36D-D7A0-482C-9D63-0D8F398C9469}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E53952DA-667E-4DEC-9A07-9EC3DE12C52F}" ShortID="626123519">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_submersion_death" ID="{EEECCA6F-34D5-4849-B8AF-DBAC67A08807}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{574510AF-FF00-4080-AE1A-517858DF494F}" ShortID="506791625">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.6"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_sub_slow_attack_5500ms_02" ID="{0D563670-9044-4A40-8C6F-1F023EF0EACE}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="expl_ram_death_NPC" ID="{9B4F7EE5-18DD-4DD2-8AE3-309CC30A5141}">
+					<Comment>Event - Vehicle destroyed by ramming NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{E89110A2-D0F9-4B89-9151-1EBD07D86978}" ShortID="36916863">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_ram_death_NPC" ID="{AEDB434D-A637-4634-BCC0-55FA2FC48EA3}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{81118E9A-0995-45C0-B0A7-47B144AE6887}" ShortID="574662564">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="breakdown_treads_new" ID="{1A8C8B35-8ADF-4AEB-A7D8-77ADE11BF492}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E32BB6BB-F8EC-44C2-9566-8DEBD50F03E4}" ShortID="647787082">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_large_sub_multichanel_02" ID="{9C39988E-B44B-41FC-9DBD-C08570824E76}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="expl_crew_death_l_PC" ID="{7C06ABD8-CB36-4878-BB47-F2FAAF74AA6D}">
+					<Comment>Event - Vehicle crew injured PC large</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{8B0CAFE9-AF9A-4699-95E8-5AB3586EE5F3}" ShortID="390855544">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_crew_death_l_NPC" ID="{CC883F2D-BCD3-4261-B419-28016916609D}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E9EB1652-4ED2-449C-9919-443C9D6072B4}" ShortID="650452165">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_fuel_PC" ID="{48BCD495-BCB9-4877-B705-A9C081B7CE92}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3AAFD62D-1929-4BD6-8160-B66AEAFAD3BD}" ShortID="489066436">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_tank_sine_02" ID="{48E64594-EF20-4F65-8A55-29CB678AFDBF}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5FB8EC2B-9B1F-4BEB-81C8-65AFAD77B7DB}" ShortID="968076794">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_expl_LP_filter" ID="{C4E368AC-DB78-43D4-8BA3-9D1F8F403AD7}" WorkUnitID="{080CB6CE-6D01-43BC-8288-8BEC35E84725}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{22F01BCC-4A51-4046-BE19-DB89DE00B939}" ShortID="342797614">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_expl_LP_filter" ID="{C4E368AC-DB78-43D4-8BA3-9D1F8F403AD7}" WorkUnitID="{080CB6CE-6D01-43BC-8288-8BEC35E84725}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1F1B2E02-A76D-48C3-810D-DDF91919F0E2}" ShortID="914434224">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_large_sub_multichanel_01" ID="{4291D180-EAF3-4E36-B8D1-1A154C4A5348}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="expl_crew_death_m_PC" ID="{B47FE19B-F595-4D3A-A620-7A18C75E7A86}">
+					<Comment>Event - Vehicle crew injured PC medium</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{FE946210-0FA3-449A-9F05-64E68DD67347}" ShortID="415324636">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_crew_death_m_NPC" ID="{E4387A12-F57B-4F34-A977-9B211868354D}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{52F7C7F4-C37D-4DD4-B40D-0A5679FA1F8C}" ShortID="704585228">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_fuel_PC" ID="{48BCD495-BCB9-4877-B705-A9C081B7CE92}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F16D2B21-2E39-43F8-8FDD-A8F1528BABEF}" ShortID="250925430">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_tank_sine_02" ID="{48E64594-EF20-4F65-8A55-29CB678AFDBF}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A89ACA12-0961-4BD1-92A6-01627F12E84B}" ShortID="338678372">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_expl_LP_filter" ID="{C4E368AC-DB78-43D4-8BA3-9D1F8F403AD7}" WorkUnitID="{080CB6CE-6D01-43BC-8288-8BEC35E84725}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{02268E60-797A-47C6-BFE8-90A78AA095EB}" ShortID="867618811">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_expl_LP_filter" ID="{C4E368AC-DB78-43D4-8BA3-9D1F8F403AD7}" WorkUnitID="{080CB6CE-6D01-43BC-8288-8BEC35E84725}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0EA30A73-7621-4DC4-8EDB-3D4C249C2368}" ShortID="309169236">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.05"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_medium_sub_multichanel" ID="{D95871E5-D57A-4572-8D26-D4BFAC48D9E2}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="expl_crew_death_s_NPC" ID="{AAE37128-90BD-448F-BC26-D5E6A260BA5A}">
+					<Comment>Event - Vehicle crew injured  NPC small</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{FC50A533-D962-4D7F-9AF3-5CC6F90261E5}" ShortID="183262461">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_crew_death_s_NPC" ID="{219A877C-3DE1-4979-BAD3-B52C52E4D321}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{18B6A144-B340-49D6-880C-89DF837202D5}" ShortID="243609042">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.15"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_medium_sub_multichanel" ID="{D95871E5-D57A-4572-8D26-D4BFAC48D9E2}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="expl_fuel_PC" ID="{97D76E0A-87BA-4B72-833B-6C66A59250A8}">
+					<Comment>Event - Vehicle destroyed upon fuel explosion PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{0D2763C9-BEF5-4881-BE14-277CEEEC31EE}" ShortID="794281874">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_fuel_NPC" ID="{60D67A75-10A7-4358-9DD1-0C3374D8269C}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8CBC68BE-CAAC-4408-A82B-8BE109298E7C}" ShortID="172498365">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_fuel_PC" ID="{48BCD495-BCB9-4877-B705-A9C081B7CE92}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FA90B185-0686-45A4-87C8-44D4BC039E44}" ShortID="516596177">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_tank_sine_02" ID="{48E64594-EF20-4F65-8A55-29CB678AFDBF}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3E5E297E-3045-43BE-846C-3C55FA20DA0A}" ShortID="1033338544">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_expl_LP_filter" ID="{C4E368AC-DB78-43D4-8BA3-9D1F8F403AD7}" WorkUnitID="{080CB6CE-6D01-43BC-8288-8BEC35E84725}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5BD69675-D0A5-4BBA-8C84-CA96DA7ADB84}" ShortID="214765544">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_expl_LP_filter" ID="{C4E368AC-DB78-43D4-8BA3-9D1F8F403AD7}" WorkUnitID="{080CB6CE-6D01-43BC-8288-8BEC35E84725}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8AB08AC4-F6BC-468A-88A3-DC36C5155A31}" ShortID="886856245">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="0.3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="07_sub" ID="{958A1AA1-AD36-4CCD-A9F4-D116FA182632}" WorkUnitID="{B1CFF9C4-59BB-45CC-8EFF-FABBA3727C03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{771A5FB0-C742-40B4-A9B4-D9C922C878E2}" ShortID="376846119">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_large_sub_multichanel_01" ID="{4291D180-EAF3-4E36-B8D1-1A154C4A5348}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="expl_ammo_NPC" ID="{0A9DAE05-6BD2-4278-BFAF-D7A28C856521}">
+					<Comment>Event - Vehicle destroyed NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{6FB329F1-5BBC-4A15-9925-C609B252D159}" ShortID="150411350">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_ammo_NPC" ID="{CE0B5372-C65C-49B6-95F4-F7D7B52ADA32}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{91CE2D09-F0B9-4C49-9FAC-46534BD69A32}" ShortID="447142092">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="breakdown_treads_new" ID="{1A8C8B35-8ADF-4AEB-A7D8-77ADE11BF492}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5A044CDD-690E-44D8-BF16-229D8608EF8A}" ShortID="344827476">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_large_sub_multichanel_01" ID="{4291D180-EAF3-4E36-B8D1-1A154C4A5348}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5B3159A8-1CB4-43F5-AABF-E460816D2F80}" ShortID="752425623">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_large_sub_multichanel_02" ID="{9C39988E-B44B-41FC-9DBD-C08570824E76}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="expl_burnup_ammo_PC" ID="{B2EE5D21-CE4F-463C-A521-5E1B5412DF34}">
+					<Comment>Event - Vehicle destroyed upon ammo rack explosion PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{38B38D17-178C-48D1-A30D-B803D52A091C}" ShortID="534909541">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_crew_death_l_NPC" ID="{CC883F2D-BCD3-4261-B419-28016916609D}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{490754E0-9573-4196-A856-205929DC6568}" ShortID="746586211">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="flame" ID="{D2F83D65-2297-45A1-8211-C790CF1A5570}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9D6969A1-1C9F-404A-BF07-C61B4729E149}" ShortID="1013766821">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="flame_distortion" ID="{9AAB9F69-BF67-41FF-B078-BA8280BDACDE}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8311BFC9-7CCE-4CB9-9DFD-3FE01F838E7F}" ShortID="888877070">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{142E1357-1A71-441B-A1D0-22C2AAF14ABE}" ShortID="524836321">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7F2928B2-15E9-4E26-BEF9-458719727660}" ShortID="434204988">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{03C2DF0B-9E22-407B-9736-009D89B051E0}" ShortID="565851036">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2647BAF9-9ADE-44E9-9D5A-CC9A13B7525E}" ShortID="461843294">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C739C322-AF94-4CA5-81F6-30AB6C33C347}" ShortID="93241500">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D523486B-C82A-4160-92B3-A2BB1FC87783}" ShortID="474448362">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{89419910-FB81-4AA0-9273-6AD52B72B379}" ShortID="232916917">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{61B21D6A-CA9B-4C52-AFD3-20D903C71493}" ShortID="179884860">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AE7CE1BF-19D0-4F14-A03C-FC687EDB8F80}" ShortID="981097706">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5D1273F2-0CA8-4239-A665-7899FCF7C017}" ShortID="407018282">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3EC6242C-D106-49ED-A659-2698139EB3C9}" ShortID="429133100">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FA1941EF-37C7-48F9-9087-0BA394C1E008}" ShortID="463793622">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F7E07167-3CDF-488C-A219-E11C2A0C1916}" ShortID="542838462">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{94403522-E37F-4C5F-B650-61DC4F6D56A4}" ShortID="77306930">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ricochet" ID="{CA303DA1-D841-4B39-A2BB-0E9EDBA82939}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BFED00E6-1C5D-4C25-AEED-5FB2B0FD85E6}" ShortID="54053207">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A33CFE71-684A-4CC7-877C-266F125BEB43}" ShortID="862700045">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9DE064F0-E780-40BD-AC54-F6A7CDE5C5B0}" ShortID="621406272">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4A158648-4624-47EF-BE87-81F7A36C65A7}" ShortID="500359088">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EB4F48E1-CEAE-479E-9DA0-E0314BB14BCB}" ShortID="372248154">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6DBCA220-C9AF-44F1-B305-BC7226F32090}" ShortID="657382107">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8583154A-FDA5-4738-AD32-F54D21D66B2E}" ShortID="7777018">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BE07459A-AFFA-4DCA-B660-A3D52B288789}" ShortID="170308708">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D8849470-2735-4D95-8C5C-44EE358C23BB}" ShortID="337587453">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9D142CDF-AB61-4B29-9000-D7B259326533}" ShortID="1069781635">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Probability" Type="Real64" Value="80"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="int_expl" ID="{CD520896-B639-4024-B8A6-AC1DA54831CD}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2C132E37-EA82-483D-BED8-ACA84BD030B4}" ShortID="947351892">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_fuel_PC" ID="{48BCD495-BCB9-4877-B705-A9C081B7CE92}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{89EC059A-3A74-41FB-88A7-1017A5655018}" ShortID="999015951">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_tank_sine_02" ID="{48E64594-EF20-4F65-8A55-29CB678AFDBF}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{15BC8913-ECA3-4904-A719-DB031E82DA28}" ShortID="727708134">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_expl_LP_filter" ID="{C4E368AC-DB78-43D4-8BA3-9D1F8F403AD7}" WorkUnitID="{080CB6CE-6D01-43BC-8288-8BEC35E84725}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7A0AFE85-3D48-47DC-A7B4-6758229F1F6F}" ShortID="344627499">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_expl_LP_filter" ID="{C4E368AC-DB78-43D4-8BA3-9D1F8F403AD7}" WorkUnitID="{080CB6CE-6D01-43BC-8288-8BEC35E84725}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5295FB09-6FD2-4B81-8A6B-9985A31FA61B}" ShortID="565218521">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="0.3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="07_sub" ID="{958A1AA1-AD36-4CCD-A9F4-D116FA182632}" WorkUnitID="{B1CFF9C4-59BB-45CC-8EFF-FABBA3727C03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DAD89564-5868-4424-B940-66DD115E10EF}" ShortID="892662238">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_sub_slow_attack_5500ms" ID="{E347125C-AD71-4F70-AD6C-FBE00C743F8C}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C14ABB12-1025-4455-8654-53B852AF6BC4}" ShortID="907035128">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.25"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_small_sub_multichanel" ID="{31CA7E3A-B6AC-4AF7-B573-9B983E7BBDD1}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="expl_crew_death_s_PC" ID="{7B4B543E-08CB-44DE-90F2-EE82908565C8}">
+					<Comment>Event - Vehicle crew injured PC small</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{9931003F-523A-4EA9-BB9F-0FEEA3AAFD74}" ShortID="239832572">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_crew_death_s_NPC" ID="{219A877C-3DE1-4979-BAD3-B52C52E4D321}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{160F86C6-18B7-4F29-A117-B1DB1F3703D9}" ShortID="345742330">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_fuel_PC" ID="{48BCD495-BCB9-4877-B705-A9C081B7CE92}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9C3EDCC9-198C-4B3A-907E-09ED73732067}" ShortID="272181551">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_tank_sine_02" ID="{48E64594-EF20-4F65-8A55-29CB678AFDBF}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4D97885F-5F78-4005-85A3-523767B590B7}" ShortID="617576387">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_expl_LP_filter" ID="{C4E368AC-DB78-43D4-8BA3-9D1F8F403AD7}" WorkUnitID="{080CB6CE-6D01-43BC-8288-8BEC35E84725}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FE3018A9-97AC-4A70-A530-5C5D67DB50C7}" ShortID="1042142650">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_expl_LP_filter" ID="{C4E368AC-DB78-43D4-8BA3-9D1F8F403AD7}" WorkUnitID="{080CB6CE-6D01-43BC-8288-8BEC35E84725}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C3785D94-A64D-4633-AC71-22F1BBC7E12A}" ShortID="661920234">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.15"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_medium_sub_multichanel" ID="{D95871E5-D57A-4572-8D26-D4BFAC48D9E2}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="expl_ram_death_PC" ID="{40457ACB-45D2-4CDE-8A1C-02A08FC68A9D}">
+					<Comment>Event - Vehicle destroyed by ramming PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{EFE6BB9C-AC21-4585-82B1-C4DA90763512}" ShortID="743595700">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_ram_death_NPC" ID="{AEDB434D-A637-4634-BCC0-55FA2FC48EA3}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B349A51D-E8EB-4685-A9DC-B1CAE189A5E7}" ShortID="890653194">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_fuel_PC" ID="{48BCD495-BCB9-4877-B705-A9C081B7CE92}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9533000F-988D-4111-87C3-A12C7837CACF}" ShortID="305607915">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_tank_sine_02" ID="{48E64594-EF20-4F65-8A55-29CB678AFDBF}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E07B8F87-DA53-431B-9FE9-E97474EAF9AB}" ShortID="703902601">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_expl_LP_filter" ID="{C4E368AC-DB78-43D4-8BA3-9D1F8F403AD7}" WorkUnitID="{080CB6CE-6D01-43BC-8288-8BEC35E84725}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C17D9AE2-257C-46FB-908C-63CD1C9AD524}" ShortID="113259008">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_expl_LP_filter" ID="{C4E368AC-DB78-43D4-8BA3-9D1F8F403AD7}" WorkUnitID="{080CB6CE-6D01-43BC-8288-8BEC35E84725}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{429A6E33-C9A1-4587-B015-853891D9F8F5}" ShortID="588809175">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="0.3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="07_sub" ID="{958A1AA1-AD36-4CCD-A9F4-D116FA182632}" WorkUnitID="{B1CFF9C4-59BB-45CC-8EFF-FABBA3727C03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DAB69A2C-F31A-44D2-BEAA-A31078E3A1E7}" ShortID="143736231">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_large_sub_multichanel_02" ID="{9C39988E-B44B-41FC-9DBD-C08570824E76}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="expl_crew_death_m_NPC" ID="{2C223700-65D9-4DB2-BB14-BD3226769BF7}">
+					<Comment>Event - Vehicle crew injured NPC medium</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{E0011577-BFAC-4E4B-9029-790BD6BDC4EB}" ShortID="308589314">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_crew_death_m_NPC" ID="{E4387A12-F57B-4F34-A977-9B211868354D}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{55F103ED-C982-4D19-BFED-6D7552465134}" ShortID="194716014">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.05"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_medium_sub_multichanel" ID="{D95871E5-D57A-4572-8D26-D4BFAC48D9E2}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="expl_crew_death_l_NPC" ID="{56B9EE51-1ACA-4166-BDB1-39301A64E2B5}">
+					<Comment>Event - Vehicle crew injured NPC large</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{B81DF1D6-A0BC-446D-AAA5-E9B7FE2CB10B}" ShortID="910211707">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_crew_death_l_NPC" ID="{CC883F2D-BCD3-4261-B419-28016916609D}" WorkUnitID="{E65BAE69-4C63-4A0C-9844-48088D5A770F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{04BB504D-7946-4099-BB36-5F8852B09FF1}" ShortID="414542732">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="expl_large_sub_multichanel_02" ID="{9C39988E-B44B-41FC-9DBD-C08570824E76}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

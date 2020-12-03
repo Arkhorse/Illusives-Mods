@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A4AC5395-D8B4-42C5-BFD6-8AE495007A44}" SchemaVersion="85">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{A4AC5395-D8B4-42C5-BFD6-8AE495007A44}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Star_Trek_Crew" ID="{AC1D3B3C-B023-49E1-A5B2-390D00BF52CC}">
+					<ObjectInclusionList>
+						<ObjectRef Name="notifications_vo" ID="{B4FDB1D7-B7D5-499B-B968-B80FE6D9FA6F}" WorkUnitID="{A621821A-2B71-4903-850A-45B30A19E4F8}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="notifications_dp" ID="{A90C6339-0CDE-4BC4-8F25-912C3F4CF282}" WorkUnitID="{A621821A-2B71-4903-850A-45B30A19E4F8}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="damaged_modules" ID="{1DAF45E8-344B-48BE-8B09-8B963F282F94}">
+					<ObjectInclusionList>
+						<ObjectRef Name="damaged_modules" ID="{5D6C477C-A973-4763-B2CC-EEC8B9C69936}" WorkUnitID="{A621821A-2B71-4903-850A-45B30A19E4F8}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="SM_sixthSense" ID="{C7DB3FDC-99CD-4DB6-B3FE-E65FD1876CAB}">
+					<ObjectInclusionList>
+						<ObjectRef Name="SM_sixthSenseVoice" ID="{BB9B46DB-088B-414F-8AE2-244D61766467}" WorkUnitID="{A621821A-2B71-4903-850A-45B30A19E4F8}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="SM_sixthSense" ID="{200250B5-8BF4-4ED0-9780-B78F4E9339C7}" WorkUnitID="{A621821A-2B71-4903-850A-45B30A19E4F8}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="emptyEvent" ID="{BA3FA25F-CF7A-4F77-89FD-E11CC9F90309}" WorkUnitID="{A621821A-2B71-4903-850A-45B30A19E4F8}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

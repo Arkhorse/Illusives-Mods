@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A584D01B-B079-48C1-9A52-5206FA314BC5}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Fortified_Area" ID="{A584D01B-B079-48C1-9A52-5206FA314BC5}" PersistMode="Standalone">
+			<Comment>Strongholds</Comment>
+			<ChildrenList>
+				<Folder Name="ambient" ID="{443DEEA7-4AEA-484A-9D0E-79F74FE33F7F}" ShortID="776664443">
+					<ChildrenList>
+						<Event Name="fa_amb_dynamic_ambient_main" ID="{47E3DE9F-8B72-43FC-821E-2E79FF37381F}">
+							<Comment>Event - Ambience in the Battles for Stronghold mode</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{F09DB340-5FE7-4FCD-961B-F141D1BF486E}" ShortID="616120796">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_amb_dynamic_ambient_main" ID="{7CD5F5BB-AEF5-44BB-A6F6-5CC77CE93D07}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C6F4084C-F7ED-400D-AAA8-171ADFD1AC7E}" ShortID="682837236">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="STATE_fortified_area_on" ID="{3C08466B-6C9C-48D8-BA06-39758FCB3C5B}" WorkUnitID="{12D179B7-3DA1-4BF9-A8BE-21C81844A2FB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_music_global_unmute" ID="{223A1273-A50A-4F99-8667-803F7D9B11BC}">
+							<ChildrenList>
+								<Action Name="" ID="{B15E422C-3818-4C03-9DEC-40545735F1CB}" ShortID="163872441">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="STATE_fortified_area_off" ID="{62D70F5C-8456-4E56-B63A-BA55B584889A}" WorkUnitID="{12D179B7-3DA1-4BF9-A8BE-21C81844A2FB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="gui" ID="{11F62AF7-BA94-409A-8A6F-9CFC9457DD92}" ShortID="127727054">
+					<ChildrenList>
+						<Event Name="fa_gui_dp_enable" ID="{344D5B19-C9D2-4428-A579-80460624B9CF}">
+							<Comment>Event - Activating defense period</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{2104333F-9F78-4F08-8383-353A24911D49}" ShortID="533333556">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_dp_enable" ID="{86541DA2-C934-4627-9B0D-6EE089FD07C5}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_dp_enemy_dir" ID="{3AA1243F-DB6D-48F8-ACBF-ED57639AF21C}">
+							<Comment>Event - Selecting a zone for attack</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{E42F681A-FE55-4F05-914A-20171AB9C09E}" ShortID="458612876">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_dp_enemy_dir" ID="{AA59EEE0-BFF9-46EB-88EF-8A4FB52F2489}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_dp_confirm_attack" ID="{2A233769-29FD-4216-9E9E-4B18A9456E24}">
+							<Comment>Event - Confirming attack</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{039820EF-9416-4C61-8796-03DBDF70F05E}" ShortID="386679315">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_dp_confirm_attack" ID="{753C293C-29EE-424D-B1DB-996A0C46CC09}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_fort_fixed_in_building" ID="{6542A88D-0311-422B-92C2-CF6FDDF2E2EC}">
+							<Comment>Event - Selecting a structure</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{8D1D15A9-0613-4002-B221-81C7E3DCB62E}" ShortID="383166321">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_fort_fixed_in_building" ID="{D5E19928-20F0-4EAD-B92A-AA0EF1D110AA}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_dp_disable" ID="{4243F9E7-1623-44BA-9186-424A4A741669}">
+							<Comment>Event - Deactivating Defense Period</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{AC4D784B-7618-4383-8792-C8F56DA990C9}" ShortID="827503956">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_dp_disable" ID="{92B27747-5F7B-4FA7-88BD-7F2E74C74EB0}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_fort_create" ID="{72EAA3E2-7AF9-4CA6-B2C9-0EE95E0F1190}">
+							<Comment>Event - Create a Stronghold</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{08D91526-0CD9-45D5-8869-133B6138E11E}" ShortID="926208634">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_fort_create" ID="{42E4F725-BF60-4AF4-9464-F9D4094A4035}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_building_click" ID="{8BF3FFF7-42BE-4A2A-B013-E33CD2F9ADA1}">
+							<Comment>Event - Clicking on a structure</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{8148E8C6-55D8-4BA7-A011-B527BEACB4FB}" ShortID="842389655">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_building_click" ID="{0733FDC1-D616-4018-A9CB-29A9BAFD41EC}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_bulding_end_general" ID="{30F4EA9B-4617-4243-93B2-61579218EDC8}">
+							<Comment>Event - Completing construction</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{729A2B0F-6E85-4DE2-B0CF-247C8421F722}" ShortID="401468779">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_bulding_end_general" ID="{A0585DE4-563F-4C0C-AB9F-2E581EE7A4F0}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_direction_close" ID="{B4AE1148-3ED2-437B-8DDE-28906601A36F}">
+							<Comment>Event - Closing a zone</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{71DC657E-8920-4A85-BE81-D83EDA772217}" ShortID="745684988">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_direction_close" ID="{F5AAD82E-1823-4763-B33D-ACD14E6A2BB0}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_direction_create" ID="{9C065053-80B8-4DFF-ACDC-A37C3B46D656}">
+							<Comment>Event - Opening a zone</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{58977559-6683-43E6-B137-E35F157E7C21}" ShortID="662490971">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_direction_create" ID="{4D73CAB1-697E-4BE5-AAF4-38DF4FBB76D5}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_dp_docking_dir" ID="{B03AD6C2-43EC-42AE-9DFA-A4ACF7403110}">
+							<Comment>Event - Selecting a zone convergence</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{8E59BF93-DE9A-483D-9499-0B115150E203}" ShortID="123118073">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_dp_docking_dir" ID="{BA8FA9A6-AEAE-4D57-AF28-C0604C9392EF}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_fort_order_in_progress" ID="{E3C06199-8A95-4506-91BF-32F031C87F27}">
+							<Comment>Event - Consumable - Cooldown (same for all types)</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{E0000D0A-8580-4825-97CE-98321F4FDE80}" ShortID="480119917">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_fort_order_in_progress" ID="{3DE67EFD-C910-4F23-B3DA-1F3AEB0DFF63}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_fort_order_is_ready" ID="{1B32BE32-0F7E-4B59-BA13-EA94D8DB0BE7}">
+							<Comment>Event - Consumable - Ready (same for all types)</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{0CAFD129-0024-4248-A6D1-4C5602B9CC88}" ShortID="619605767">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_fort_order_is_ready" ID="{15F85CE4-A8B1-4C8E-B7E0-FA87F3603632}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_fort_upgrade_building" ID="{E10CBE56-0612-4DC9-B2D7-18C42CB19037}">
+							<Comment>Event - Structure level increased (same for all structure types)</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{AF6B9507-964D-4F74-A13F-1EFBC0DE3489}" ShortID="606957598">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_fort_upgrade_building" ID="{B74922AD-5415-4F12-82CA-BD783DB69A57}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_transport_exit" ID="{FDE2A0DE-A691-446E-BFCC-4E8235224054}">
+							<Comment>Event - exiting the Transportation Mode</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{48C36C30-6A20-4DDF-A13B-D7DB1E4171B5}" ShortID="926909389">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_transport_exit" ID="{73446F1F-BEF7-4DA2-B219-0087EE20CE8C}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_transport_first_step" ID="{BD97E9EA-43A9-4398-A871-AD2BC49EB3BF}">
+							<Comment>Event - Selecting a source structure in the Transportation Mode</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{CF5A47EE-2DE5-4641-A17E-2A599CDB3A3A}" ShortID="700944921">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_transport_first_step" ID="{E87749F0-3F03-4681-AC0B-A47255622E22}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_transport_approve" ID="{5F453AF0-4BFC-42C4-B556-C959A1E2F91E}">
+							<Comment>Event - Clicking the "Transport" button</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{DD719579-98D0-4246-B2A5-E2F21E557F07}" ShortID="753135392">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_transport_approve" ID="{80D0300B-337B-4C87-BF50-0E18B70A6F48}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_transport_enter" ID="{FC8E0548-4C33-4152-9407-281E8AC58E15}">
+							<Comment>Event - Entering the Transportation Mode</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{6065676B-1D95-4280-8EC7-8FF0839FE7E0}" ShortID="76250091">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_transport_enter" ID="{12C19A80-DAB4-4D65-B3A2-EFADF9D518A5}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_transport_constrain" ID="{FD5AFF6F-00D3-4FB9-9789-0F964039C0EF}">
+							<Comment>Event - Sound of reaching the limit in the Transportation confirmation window</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{4AEA4A9F-CC1B-400C-975A-94ADFCE9F3F7}" ShortID="428673635">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_transport_constrain" ID="{7D10341E-9C3E-41A5-AB28-AA3CFE89B3C2}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_transport_next_step" ID="{8E051890-42FA-4D28-B895-290E51D58B7B}">
+							<Comment>Event - Selecting a recipient structure in the Transportation mode</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{F2566F2B-EB3A-4ACF-A86A-713E83EB8C4C}" ShortID="825311190">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_transport_next_step" ID="{FE72DBC8-80DF-43B7-9BD2-82B00E423CB6}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_dp_battle_timer" ID="{D0C23F82-E69D-4C6B-9592-826B870B7A95}">
+							<Comment>Event - Timer countdown sound</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{7A551798-1140-4663-98C0-6E77CE6BD491}" ShortID="534572118">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_dp_battle_timer" ID="{FA7FDD44-20D3-4860-9A1D-7FA768F6EC13}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_fort_entered_foundation_state" ID="{C5960425-5A7C-46B1-9E79-AC213DA14221}">
+							<Comment>Event - Laying the foundation (same for all structure types)</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{287E9CB4-8A18-40F9-AE1D-8B0224556478}" ShortID="733835020">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_fort_entered_foundation_state" ID="{7A21718C-FFA6-413C-8F25-D146465606DC}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_fort_demount_building" ID="{BCF8C3EB-4A52-4F6D-9E57-275F4CB28F25}">
+							<Comment>Event - Structure Demolition</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{61315829-AD9B-4669-A97A-3338FEBED0DC}" ShortID="870664302">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_fort_demount_building" ID="{D6CE887D-F331-463C-9DD9-9964601F9109}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_activate_battlePayments" ID="{2B84A699-D8B4-4F36-804B-75D8C329ABFF}">
+							<Comment>Event - activating the Battle Payments reserve
+             Activating the Tactical Training reserve</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{D9774873-47D7-4C7A-9ACB-B4640B380DE3}" ShortID="247004072">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_activate_battlePayments" ID="{67DD6621-D556-44E6-960C-A07695EB25BE}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_silence" ID="{EB8D18C7-ED2F-4A60-9DFE-1F6605CD21F7}">
+							<Comment>Event - Silence</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{5C3A7A7B-804B-4BD2-8F30-911DBCA05B71}" ShortID="555174059">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_silence" ID="{6D956E59-147E-4AEE-A5F4-E38332437087}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_battle_win" ID="{973E4280-3A29-4D99-BBEC-4B78F1C0EFDB}">
+							<ChildrenList>
+								<Action Name="" ID="{7FD8FF65-FD7E-4815-ABC2-AB4FCEA9571E}" ShortID="621119949">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_battle_win" ID="{C76AADA5-2DC6-4B1F-8654-48C3DCD03E30}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_battle_counter_win" ID="{FDC012A6-4BA9-4A3F-8FDC-E0A5CFCF0367}">
+							<ChildrenList>
+								<Action Name="" ID="{F6622478-812B-4A5C-A3B9-64ECCCC0BD9C}" ShortID="80162555">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_battle_counter_win" ID="{591C02C5-51AD-4D79-8FCE-36E9D41F83F7}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_battle_loose_enemy_citadel" ID="{3AF8D0C3-166F-47CD-B442-2717533ABF65}">
+							<ChildrenList>
+								<Action Name="" ID="{4F3A071B-1678-4FEA-9F82-070C3C7FEB31}" ShortID="975431233">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_battle_loose_enemy_citadel" ID="{8C0949CC-D4AC-422E-A23E-ED0C073F6805}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_battle_win_our_citadel" ID="{23E488BD-5D36-4203-BEA0-AA3973B7FEB7}">
+							<ChildrenList>
+								<Action Name="" ID="{81027420-7A1C-46F1-9BF7-C78962E5FC90}" ShortID="451878076">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_battle_win_our_citadel" ID="{6B8EE1DD-2345-44FA-B5D6-9469F6ED9D2C}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_battle_counter_loose" ID="{DD210ABC-6A77-4856-905C-F8DB55A7541C}">
+							<ChildrenList>
+								<Action Name="" ID="{D3E9A544-CD31-42A4-A00A-250277F9560A}" ShortID="353442993">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_battle_counter_loose" ID="{F392F184-4926-467F-9FB1-AB538F7B83E4}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_gui_battle_loose" ID="{3B8ABE0A-9887-49DD-8361-9C84894DE453}">
+							<ChildrenList>
+								<Action Name="" ID="{191D3009-A5B0-40DA-9013-7EB27E1771B6}" ShortID="3078635">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_gui_battle_loose" ID="{630F0E4D-8608-41E3-8B7F-C91DECB47C9F}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="music" ID="{3C80E2C1-F1CD-4D59-B163-3BC90A81412D}" ShortID="469730994">
+					<ChildrenList>
+						<Event Name="fa_music_defeat" ID="{6F8A84ED-BAAD-4C87-B290-021FBE3836BD}">
+							<Comment>Event - Background music</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{A3EB4681-8885-4C69-80B7-210D03076136}" ShortID="1038622155">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_music_defeat" ID="{ECEABF8A-16E9-47FD-B786-052E884EB3BA}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_music_win" ID="{78A8B136-4B70-4445-BB4E-E9CB9C6831E7}">
+							<Comment>Event - Victory music</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{C6C15D57-1E79-42F8-8126-939BCFAC66E2}" ShortID="243436374">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_music_win" ID="{BAC30F5A-36F3-41BB-A9D3-A16F072B30BB}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fa_music_draw" ID="{08787351-5E7C-4045-8AF7-4F6233D58732}">
+							<Comment>Event - Draw music</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{E612B2B6-6835-4E63-9388-BAE8B0F226C6}" ShortID="628745335">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fa_music_draw" ID="{BEB236B6-99FD-453D-979E-BF9BF9187B3B}" WorkUnitID="{11E70C13-42F0-4714-BEA4-BD42FEBB54C2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

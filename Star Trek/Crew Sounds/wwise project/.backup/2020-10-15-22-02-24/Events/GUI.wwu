@@ -1,0 +1,1578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{DFF2755B-9A8F-4FB9-A356-F3AC81BDD167}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="GUI" ID="{DFF2755B-9A8F-4FB9-A356-F3AC81BDD167}" PersistMode="Standalone">
+			<Comment>Interface sounds</Comment>
+			<ChildrenList>
+				<Folder Name="notificationFX" ID="{B03216A3-106B-4D34-AB62-6E4606FDEF94}" ShortID="716932367">
+					<Comment>Notification sounds</Comment>
+					<ChildrenList>
+						<Event Name="base_capture_1" ID="{A319E64E-BB3C-4C13-AF16-B21B3355AE15}">
+							<Comment>Event - Base capture sound</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{861B8694-9004-4E29-9209-20B577824BC2}" ShortID="637078819">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="base_capture_1" ID="{80D12FCB-2C21-4C77-A48F-61372FC4B58B}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="base_capture_2" ID="{26C0DF46-F525-4A55-B2A4-4F345700610D}">
+							<Comment>Event - Silence</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{03ACA1AB-1323-465E-B8C6-A3E0B5B8619D}" ShortID="229506784">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="base_capture_2" ID="{481AED5F-5F19-4108-B580-19ECD86D6D39}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="enemy_sighted_for_team" ID="{EA161AFE-D188-4AAF-A0D9-155A0F1B709D}">
+							<Comment>Event - Sound of spotting a player</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{240CC462-D35F-4FBE-8C16-19A656E1AE8D}" ShortID="312372586">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="enemy_sighted_for_team" ID="{AC80AE2B-4AA9-40C7-A29D-6FB591B74893}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_intuition" ID="{DA5E2E3E-E943-46C0-84A8-CF87C8D69288}">
+							<Comment>Event - Sound of activating the Intuition perk</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{40DB89A1-E6A9-4E7D-A139-7722E60BC80B}" ShortID="944817889">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_intuition" ID="{3AC2408A-934F-44AA-B66F-C9C00C37FEFB}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_reloaded" ID="{80E53EC9-D356-4FBC-A040-A957B6E1C108}">
+							<Comment>Event - NOT APPLIED</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{FB53012C-6802-42B2-8B9C-CF7EFA5DE4C5}" ShortID="124086821">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_reloaded" ID="{A4EE31C2-214C-4F6B-8F8D-95CB3EE8F7C1}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="minimap_attention" ID="{7EF45CE7-BCE6-46ED-926A-934694379ABE}">
+							<Comment>Event - Sound of coordinates on the minimap</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{6626D728-BD2B-49B5-9D3D-A6AEE2DE7393}" ShortID="606942940">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="minimap_attention" ID="{A4B2D785-6EBE-483D-9946-24DE7D7A16A5}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="sight_convergence" ID="{726DC679-0688-4B06-A020-2AEE5764DA43}">
+							<Comment>Event - Sound played when a gun is fully aimed</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{98E4B5A4-3DCF-4AEC-B23C-6623D3627341}" ShortID="944948427">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sight_convergence_switch_weight" ID="{D6B7DA9E-D0E2-4D47-BEAC-C4CC5ACAA414}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="task_complete" ID="{D00386B2-CE82-4E45-B426-30F8A1FD4ADB}">
+							<Comment>Event - Sound of completing a mission of the Battle Training</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{1F52258B-32B6-4C78-8360-2C3732459B76}" ShortID="629561614">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="task_complete" ID="{38FE9183-B11F-461C-B70F-5F0178A2FB5A}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="task_new" ID="{BF953F39-3574-420F-B539-5A8B66F4CC8C}">
+							<Comment>Event - Sound of receiving a new mission of the Battle Training</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{B05F19FC-3373-480A-8CAF-FDF4A02037CD}" ShortID="113427592">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="task_new" ID="{1606F898-68A3-44DA-88C0-3FEF8903EBE9}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="task_part_complete" ID="{CB4F3792-B1AF-4E93-BCC6-06885CBF2D67}">
+							<Comment>Event - Sound of Partial mission completion of the Battle Training</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{04D38287-09AA-4981-BAC7-6EFEF06DE9F4}" ShortID="802797508">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="task_part_complete" ID="{242ABDCE-6E7B-4BBA-B115-87E2B848B288}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="timer" ID="{920B742E-AC9B-4967-AE08-41B7EEE1365B}">
+							<Comment>Event - Timer countdown sound</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{72155222-0D79-4373-A900-EB4768163721}" ShortID="326594490">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="timer" ID="{21C9CC9E-8C88-4A57-BD3F-FEF56A88539F}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="cybersport_timer" ID="{DAE2BC57-421D-445F-8EAD-E47320A23EA0}">
+							<Comment>Event - Timer</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{65958565-CB33-461F-9CB7-CA76D55137BF}" ShortID="989283837">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cybersport_timer" ID="{96514ADD-2FB4-4EF3-8D3C-03C9E0D177A3}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="cybersport_auto_search" ID="{24DF7CCE-EA64-4ED5-BE8C-F3323FFC39D6}">
+							<Comment>Event - Sound of searching for a battle in eSports</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{05378E64-C6B0-4BCD-BCB8-7F4446A27FDF}" ShortID="139890507">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cybersport_auto_search" ID="{09AAF54B-3F3A-423E-96D4-370B86AB7559}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="league_up" ID="{DD64E31A-B687-411D-A951-B2B45CF88783}">
+							<Comment>Event - ?</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{40E3836F-A9F0-4012-83CB-89452B9CA2DA}" ShortID="417967001">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="league_up" ID="{377719B2-21EB-41BD-B5B1-00F5F5BC5BF6}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="league_down" ID="{5A5D5F80-2A2D-4383-956D-A1290F979068}">
+							<Comment>Event - ?</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{6B1EAD26-82CE-4761-B721-CDD4D10B241E}" ShortID="988624180">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="league_down" ID="{E5577660-DB14-4521-A7D5-019C291F32AD}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="division_up" ID="{86DBD317-B9FD-4BAC-8958-B099A2053FF4}">
+							<Comment>Event - Sound of rating increase in eSports</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{31596351-4D27-4540-BD9F-2A45C9AD08B2}" ShortID="393216273">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="division_up" ID="{1A3D0A72-4752-4FF7-9A65-360870C8615F}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="division_down" ID="{F6D18CF7-6889-491F-B031-4BBC1006D824}">
+							<Comment>Event - Sound of rating decrease in eSports</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{1F02C744-594B-4678-BA6D-B083AD27C29A}" ShortID="695906287">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="division_down" ID="{7F975B1E-AD68-42B9-A79C-EAFE97EF19E5}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="lbe_appear" ID="{A759A229-F06D-4EFE-A473-8C5E9718EB17}">
+							<Comment>Event - Opening sound "battle performance badges"</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{C36BB581-9066-449A-B51B-2AC7AC442708}" ShortID="902370875">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="lbe_appear" ID="{90CB783C-221D-4DBE-9F2D-2B079A20C6AF}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="lbe_counter" ID="{B9D0DE6E-43A9-4E0F-9A05-63CF2D17C97C}">
+							<Comment>Event - Countdown sound "battle performance badges"</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{A4A60CC6-8545-4F3E-9FC1-6C437E471866}" ShortID="648909825">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="lbe_counter" ID="{17D87D26-4DAB-468A-B31C-F11DD80B1728}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="lbe_disappear" ID="{E53A54C6-90C3-4C06-A136-205C4A3780BA}">
+							<Comment>Event - Closing sound "battle performance badges"</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{0662927A-2FDE-404F-9434-E08011FC8DF4}" ShortID="244442537">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="lbe_disappear" ID="{C7229647-BA70-4BD8-9C4C-03DD8A0AAA58}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="timer_stop" ID="{F1E58D3E-BC3C-4012-877F-50D4CCE8B517}">
+							<Comment>Event - countwodn timer stop</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{B85664BB-2B10-471F-A217-9EF54C0D9BAC}" ShortID="766573957">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="timer" ID="{21C9CC9E-8C88-4A57-BD3F-FEF56A88539F}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fallout_gaz_alarm" ID="{02D0705D-46B8-49CC-8CE3-2C77A4CF8541}">
+							<Comment>Event - warning sound played before the rocket strike</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{B1B937ED-0F93-4517-9B67-6B2F36B8FF0C}" ShortID="185799065">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fallout_gaz_alarm" ID="{A9D4DD2D-90DC-40B6-8E9D-72A1E0B04E66}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fallout_gaz_sphere_timer" ID="{B15BC24D-161A-4A4B-9E8C-22B7BC306B0E}">
+							<Comment>Event - Sound of staying in a dangerous area</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{070C6372-41B1-4F0C-A31D-98EEA3EB35FF}" ShortID="1013798631">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="buzzer" ID="{001795A6-804F-42A9-9C7D-E591C13EAF82}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="fallout_gaz_sphere_warning" ID="{9DD956B4-96B2-48BB-B14D-E02811B3AF4D}">
+							<Comment>Event - Sound notifying about approaching to a dangerous area</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{5D4036E6-648D-4FEA-82BE-2B44CE09B6CE}" ShortID="870691647">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="buzzer_burn_sphere_warning" ID="{93AC4CA1-3030-4440-85C1-0F3045076185}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="time_buzzer_01" ID="{45418D79-4984-49A7-8D49-452E25E0CC98}">
+							<ChildrenList>
+								<Action Name="" ID="{CEBFBB33-B4EA-4D39-AD5D-5CBEE4503EF9}" ShortID="198545230">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="time_buzzer_01" ID="{0428D8A9-6E41-4F88-B0D4-AB2271546E57}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="time_buzzer_02" ID="{15EC2625-E9C0-4A8E-8CFC-285AEC50E833}">
+							<ChildrenList>
+								<Action Name="" ID="{9ECC4772-5504-4493-B06F-963241A0CF32}" ShortID="725564149">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="time_buzzer_02" ID="{412976D1-C981-422E-8116-16CF2D7AEBA0}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="time_countdown" ID="{6A5F90AB-AA54-4888-8750-BF7F58813171}">
+							<ChildrenList>
+								<Action Name="" ID="{78F484E7-6C7C-4A60-AFE0-C714518EF47F}" ShortID="599433108">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="countdown" ID="{F3F23AAC-42CA-4870-ADFE-C4F5F66CBC6C}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D3F2BF91-7589-4ED1-891A-B9C1896EFF5D}" ShortID="905663179">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_timer_endbattle" ID="{88693835-4CFA-4296-8142-4B4CE3417066}" WorkUnitID="{B9FDBA73-A83D-4FC1-9553-94BF4AE67F8D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7C83D556-B75A-4A12-9728-3087928C6900}" ShortID="544176646">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.01"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="60"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_timer_endbattle" ID="{88693835-4CFA-4296-8142-4B4CE3417066}" WorkUnitID="{B9FDBA73-A83D-4FC1-9553-94BF4AE67F8D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="time_countdown_stop" ID="{DBE143F0-989C-49D1-A818-1777C2E73D60}">
+							<ChildrenList>
+								<Action Name="" ID="{EB5D7247-A3C8-4D06-9F2C-31363BB12322}" ShortID="275158691">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="countdown" ID="{F3F23AAC-42CA-4870-ADFE-C4F5F66CBC6C}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Folder Name="siege_mode" ID="{9B85A806-6E6A-46DC-AF5C-EEB3C6A25694}" ShortID="474173221">
+							<ChildrenList>
+								<Event Name="start_to_siege_mode_PC" ID="{4C23F91B-77B7-4DF1-957F-69B812219398}">
+									<ChildrenList>
+										<Action Name="" ID="{921277B3-3E58-4221-BFFE-DB05138E79E6}" ShortID="1053322894">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="start_to_base_mode_ui" ID="{BABCF3C1-E3AF-47E8-A1D3-9F45325A503E}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{033C1839-FDC2-445B-AF51-3F77CF54197E}" ShortID="115069082">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+												<Property Name="Delay" Type="Real64" Value="0.2"/>
+												<Property Name="FadeCurve" Type="int16" Value="1"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="siege_mode_loop_start_ui" ID="{AA52FE4E-567E-4D2F-8333-146856240429}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{A3500D64-5EED-404E-B2B5-4DA1BD08C06A}" ShortID="517396449">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+												<Property Name="Delay" Type="Real64" Value="0.1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="siege_mode_treds_coupling_01" ID="{46425B7B-7D7E-4895-AFF5-CE346B30B8FA}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="start_to_base_mode_PC" ID="{8A92F96F-D86E-422F-85F5-A431E979873F}">
+									<ChildrenList>
+										<Action Name="" ID="{7E6DCABB-EF50-40E1-AE6D-B5C264248453}" ShortID="862192487">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+												<Property Name="FadeCurve" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="start_to_siege_mode_ui" ID="{E11CB1DE-B34E-4813-80C3-541577CA4990}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{6CF5A69A-7691-4030-9CEB-C49F204CF3EE}" ShortID="751725229">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+												<Property Name="Delay" Type="Real64" Value="0.2"/>
+												<Property Name="FadeCurve" Type="int16" Value="5"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.6"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="base_mode_loop_start_ui" ID="{29C03D6E-7690-427E-AE1E-22E1DAC71B66}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{F68D010B-3759-484E-984A-6E1D51DDC189}" ShortID="652681699">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+												<Property Name="Delay" Type="Real64" Value="0.1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="siege_mode_treds_coupling_02" ID="{7C68E53B-B9D4-4352-BC37-41E5B1F93D05}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="siege_mode_transition_timer" ID="{96318CF4-C4EE-4846-A3A5-2FDF4C864E3D}">
+									<ChildrenList>
+										<Action Name="" ID="{433C6D0C-ED37-4C8E-9C09-1B03A42A9C12}" ShortID="320758594">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="siege_mode_transition_timer" ID="{B635098B-BEC7-4C59-8112-E058E687C714}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="strv_siege_mode_movement_limited_on" ID="{3B330E7D-D211-4704-A05D-C0C6A03C8D2C}">
+									<ChildrenList>
+										<Action Name="" ID="{C7646A67-DBA8-4224-B923-6ABFDB6A6CD6}" ShortID="474212598">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="strv_siege_mode_movement_limited_alarm" ID="{141808AB-65C3-462E-8166-CC6004DDA71B}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="strv_siege_mode_movement_limited_off" ID="{332ADD09-FE7F-493E-A83B-9F6007C8FB97}">
+									<ChildrenList>
+										<Action Name="" ID="{C4FBA8E1-5378-4C4A-AA0D-674C4EFFE2AB}" ShortID="809890839">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="strv_siege_mode_movement_limited_alarm" ID="{141808AB-65C3-462E-8166-CC6004DDA71B}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="end_battle_notification" ID="{B193162B-58B9-489F-B191-897C5C46D890}" ShortID="753549973">
+							<ChildrenList>
+								<Event Name="end_battle_last_kill" ID="{79A8BD7B-7CCB-447F-93C3-C5BBF0F6931E}">
+									<ChildrenList>
+										<Action Name="" ID="{67704C15-652E-456E-8CDF-917303E29ADE}" ShortID="987072647">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+												<Property Name="Delay" Type="Real64" Value="1"/>
+												<Property Name="FadeTime" Type="Real64" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="end_battle_last_kill" ID="{899C3591-3432-4F1D-9516-4E2BE56B9A06}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{96E85031-21C9-493D-BB63-E71DAA9A7824}" ShortID="677022456">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="3"/>
+												<Property Name="Delay" Type="Real64" Value="1"/>
+												<Property Name="FadeCurve" Type="int16" Value="5"/>
+												<Property Name="FadeTime" Type="Real64" Value="7"/>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList/>
+											<ChildrenList>
+												<EventActionException Name="" ID="{ACBA0880-1B12-4940-965B-6A5B4F4F6A9B}"/>
+											</ChildrenList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="end_battle_capture_base" ID="{BCCEC19F-5CC5-4513-8816-44505D403D34}">
+									<ChildrenList>
+										<Action Name="" ID="{C58AF96C-9BD7-4D7C-8AA7-901473186347}" ShortID="773112139">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+												<Property Name="Delay" Type="Real64" Value="1"/>
+												<Property Name="FadeTime" Type="Real64" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="end_battle_capture_base" ID="{9C5D4010-F6A1-467F-BF8F-9771CFF23008}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{706D2E1D-AC17-41CA-950C-3197A5DEB635}" ShortID="676668686">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="3"/>
+												<Property Name="Delay" Type="Real64" Value="1"/>
+												<Property Name="FadeCurve" Type="int16" Value="5"/>
+												<Property Name="FadeTime" Type="Real64" Value="7"/>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList/>
+											<ChildrenList>
+												<EventActionException Name="" ID="{7D0502F8-C38B-4EC3-9591-94EB66BA738B}"/>
+											</ChildrenList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="time_over" ID="{9DC2A01F-F538-4B9B-BFD8-8ECC78CD3105}">
+									<ChildrenList>
+										<Action Name="" ID="{12639736-DE77-42DC-BFA4-6126739B6688}" ShortID="1007013347">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+												<Property Name="FadeCurve" Type="int16" Value="8"/>
+												<Property Name="FadeTime" Type="Real64" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="end_battle_time_over" ID="{5A9D1868-9232-474A-9337-7088A8265A6D}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{2AA2DABF-52F7-49AE-BAF0-EE35CA725CBC}" ShortID="318928371">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeCurve" Type="int16" Value="1"/>
+												<Property Name="FadeTime" Type="Real64" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="countdown" ID="{F3F23AAC-42CA-4870-ADFE-C4F5F66CBC6C}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{87624E04-13DC-47A1-8922-8EFF97D1B29F}" ShortID="823852159">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="3"/>
+												<Property Name="FadeCurve" Type="int16" Value="5"/>
+												<Property Name="FadeTime" Type="Real64" Value="4"/>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList/>
+											<ChildrenList>
+												<EventActionException Name="" ID="{6403FFB4-BC60-45D5-A9E2-0871F0EDCDC4}"/>
+											</ChildrenList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Event Name="result_screen_achievements" ID="{EE2A3A81-CC5C-44AE-995E-F09F825B4E1A}">
+							<ChildrenList>
+								<Action Name="" ID="{B4017581-CAF6-46EA-AF76-462DAAFDC78B}" ShortID="964384681">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="result_screen_achivments" ID="{D3791DA6-3388-4979-B1CF-87753063FBFE}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="result_screen_bonus" ID="{74509A28-C02D-468A-B620-B065E3B455D1}">
+							<ChildrenList>
+								<Action Name="" ID="{61580531-5069-4FB4-8A58-0A447D7D243F}" ShortID="561359561">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="result_screen_achivments_bonus" ID="{EFC72761-5BB7-415D-BA8E-1DE2523214E4}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="buttons" ID="{45BB4894-E1CD-42C6-8F0A-846090B570A8}" ShortID="691214648">
+					<Comment>Buttons</Comment>
+					<ChildrenList>
+						<Event Name="play" ID="{BDC5CBB1-EA10-4588-8D7A-50EA755043F1}">
+							<Comment>Event - Selection confirmation sound. 
+_________________________________________________________
+
+ Sound of clicking the "Battle!" button and "GARAGE", "STORE", "ACHIEVEMENTS", "RESEARCH", "BARACKS", "STRONGHOLD", "Accept" "Close"
+_________________________________________________________
+
+Sound of selecting "Combat Reserves", "Modules", "Ammunition", "Vehicle modifications"</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{C9C200B9-9E1F-45D2-9ADE-D8264CE4AF69}" ShortID="451311284">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="play" ID="{2EBDAA7E-5D2B-46AD-91B7-8D74E6BC1A9B}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{80765704-6209-4857-9516-703559921A14}" ShortID="481526723">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="music_spheretank_end" ID="{A6BF8D7A-0E88-44B5-8CFF-3666EECFC974}" WorkUnitID="{DC2ED30D-6313-482C-90F8-37207F5C53BE}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A75DBFAC-4401-4421-BC77-F86993516A05}" ShortID="93539115">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="shop_click" ID="{E44FB0CA-6CC8-4544-A9B7-1C3E5F619A52}" WorkUnitID="{C5FA61C6-8906-4DFA-A6A9-A6412B6A59B9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="grey_butt" ID="{2E9215AA-9159-407C-AF14-A49863FEDBC3}">
+							<ChildrenList>
+								<Action Name="" ID="{20BF0576-1E60-4097-98F0-3FFF0BF1E063}" ShortID="688461411">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="grey_butt" ID="{01D1EB7A-740F-4040-9661-24ED72DAF8A5}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="highlight" ID="{DB5BD8E9-6ABE-4814-A0DB-22E0B29D3365}">
+							<Comment>Event - Sound of hovering the cursor over all buttons and fields</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{A5AA6DF1-B20B-439E-8D4F-93FD71E559A4}" ShortID="44221748">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="highlight" ID="{0454799C-4833-4559-8E4F-F3C7E04C2A2B}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="arrow" ID="{B0C2BD6B-58CA-492F-9422-95EBC9F28192}">
+							<ChildrenList>
+								<Action Name="" ID="{A2367371-E527-41CB-B45C-0A039A69CB31}" ShortID="66966174">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="arrow" ID="{B941BC6C-897E-4418-BB9E-5557002D9AA9}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tabs" ID="{A020D76C-4615-4E01-A7C4-81CFA1C9B264}">
+							<ChildrenList>
+								<Action Name="" ID="{515A03CB-AF17-4A3B-9EE2-C194A8364FEF}" ShortID="620210587">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tabs" ID="{363F6265-CC9C-46D6-A790-CC5C7BBC035B}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="coins" ID="{1A4BAD78-74A0-4411-AA5A-AA95F729A6D6}">
+							<Comment>Event - Purchase and sale sound</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{96210958-3CF8-46B9-A520-0746251D3CD5}" ShortID="506648623">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="coins" ID="{5F823358-BF5B-4E5F-9F0A-307F757D3120}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7F666E61-7AA6-498A-829E-BAFDD4B34339}" ShortID="451997084">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="shop_buy" ID="{B180DBF7-18C1-494C-9825-E7525DFCB979}" WorkUnitID="{C5FA61C6-8906-4DFA-A6A9-A6412B6A59B9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="yes" ID="{E15AC5E3-55B7-40AB-9A68-33629C859524}">
+							<ChildrenList>
+								<Action Name="" ID="{5FF15AE0-D5C4-42A6-A695-C6DC7D818A24}" ShortID="673632102">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yes" ID="{A2B6863D-3F17-476E-A93D-58DA6C7C0BF4}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F508A9C2-D20F-48B6-B3A4-39C84F5D147A}" ShortID="746264462">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="shop_button" ID="{A60CC880-A6BA-4B7C-9917-3A578632197D}" WorkUnitID="{C5FA61C6-8906-4DFA-A6A9-A6412B6A59B9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="no" ID="{247F8C03-3ADE-4F97-9C42-37D3552530CF}">
+							<ChildrenList>
+								<Action Name="" ID="{BE767ACC-76E0-4E86-9650-D8DD7A16F892}" ShortID="241472956">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="no" ID="{DD9480C7-4915-47A9-AEAC-7B4A18CEE49F}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="highlight_red_butt" ID="{471AADB9-7745-433C-BE7B-D4D02FC66D25}">
+							<ChildrenList>
+								<Action Name="" ID="{5E01827C-D4F2-47C1-9127-7D7F47A0C6D1}" ShortID="702654590">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="highlight_red_butt" ID="{BAA4EDBC-0D80-449B-B7F5-D499F9DBAB11}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="cancelcloseno" ID="{044022B7-6DB2-4384-B85D-CE87104BAAD7}">
+							<Comment>Event - Sound of clicking the cross button upon closing windows. For example "Service", "Exterior"</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{2C268B83-2393-418C-8315-4068CCE1CB04}" ShortID="379376118">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cancelcloseno" ID="{3434C077-ACEE-4115-AAC6-57A91ADC0BED}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{94EB54B8-43F1-44B5-BC3D-6FDACABCBE54}" ShortID="744423019">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="music_spheretank_end" ID="{A6BF8D7A-0E88-44B5-8CFF-3666EECFC974}" WorkUnitID="{DC2ED30D-6313-482C-90F8-37207F5C53BE}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="yes1" ID="{C7173714-D443-4753-A134-5A1B04083D04}">
+							<Comment>Event - Sound of clicking all buttons appearing in the Garage. For example, "Service", "Exterior"</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{136496FE-D7A9-4D97-818B-FB9874698D58}" ShortID="450308680">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yes1" ID="{B52DC2D9-BCAF-4B53-B463-0FF978CD2AFD}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="minimize" ID="{3511BDFB-A773-4715-A798-00A38810437F}">
+							<Comment>Event - sound of collapsing windows. Symbol "_" .
+ 
+Example of mounting different vehicle modules 
+
+Example of collapsing the chat window "_"</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{6D6DD9DE-98BB-42B4-8147-2421C97B08E4}" ShortID="281986168">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="minimize" ID="{2FC6D04D-9E16-47A1-BE77-DC1CDDF168B7}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="highlightx" ID="{44925634-985A-46CB-BADC-C5C3D00AC4A0}">
+							<Comment>Event - Sound of scrolling vehicles in the vehicle panel</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{1BA62DD9-8909-4041-852D-F802EE3FFE7D}" ShortID="502163715">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="highlightx" ID="{262E6229-2B96-44AE-B365-A068749F66FF}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tabb" ID="{AA80D267-C933-44CE-9717-BF710DA23ECE}">
+							<Comment>Event - Sound of switching tabs. 
+
+Example "Service Record", "Tutorial", "Skills and perks", "Personal Data"'
+
+Example The "Campaign" tab in the Personal Missions window, "Missions and Specials", "Recruit Training"</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{31284FE6-5008-4C28-97D3-AE04EAC88347}" ShortID="717558013">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tabb" ID="{EF90C800-35D0-4474-AD5E-4579E35FC940}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="carousel" ID="{27994629-594F-4D8B-B801-3BAD8BC63043}">
+							<Comment>Event - Sound of hovering the cursor over vehicles in the vehicle panel</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{8F70ABCB-5206-41B6-9668-2AC934F5ABA3}" ShortID="281072202">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="carousel" ID="{78584532-5686-4B22-81DE-50DAE365727A}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="carouselButton" ID="{9CB027E0-6AD9-45CF-847B-AD33B548D366}">
+							<ChildrenList>
+								<Action Name="" ID="{0596AE6F-EDC8-401A-95D3-51173B901DC9}" ShortID="11838368">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="carouselButton" ID="{4AC6890B-E5D6-4E09-A5F7-EE393E3391D6}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tank_selection" ID="{46E3CC5C-944D-437D-A614-87C7BD6C8F0C}">
+							<Comment>Event - Selecting a vehicle</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{FCFFCC74-6A37-4D22-8DE1-1B14AE61A9A9}" ShortID="460101014">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tank_selection" ID="{2F6D7B40-EF95-4DF5-8910-104F0F31C75A}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="rudy" ID="{B48D7DA6-7B40-4F10-B441-4499709D1A02}">
+							<Comment>Event - Dog sound in the crew</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{D1D27E33-24A9-4270-89AC-2DDBDD30C378}" ShortID="947472152">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rudy" ID="{2C7822CD-4091-44C0-89A0-0E808341AB30}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="modes" ID="{F35B34FE-46E8-442B-9498-5ECAC3D46E8A}" ShortID="194037276">
+					<Comment>Modes</Comment>
+					<ChildrenList>
+						<Folder Name="fallout" ID="{37E728F5-801C-45ED-835F-AC88249E428B}" ShortID="434550381">
+							<ChildrenList>
+								<Event Name="capture_flag" ID="{BE70F22F-477C-438D-A398-DA14872BEAB8}">
+									<Comment>Event - Sound of grabbing a flag</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{A884D60B-BFB7-43EB-A5B4-C672AE8D7A54}" ShortID="648596922">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="capture_flag" ID="{A1EF8FFC-86E8-4853-9231-138820BD6EA8}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="delivery_flag" ID="{B445912F-6A45-46F4-8FC8-6795B9B03A01}">
+									<Comment>Event - Sound of delivering a flag</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{ED8F5729-965B-4727-AC83-6CECFCCE01B5}" ShortID="691368979">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="delivery flag" ID="{89127DCF-129E-4BA8-B345-805795D07CAA}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="point_repair" ID="{4175DA20-110E-454B-8239-124DF1902797}">
+									<Comment>Even - Vehicle repair sound</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{DE995F12-845C-4C91-8758-FDF448D423C9}" ShortID="975477520">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="point_repair" ID="{22BA2E6F-7A45-4FC8-8B82-578690F6D486}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="dynamic_platoon" ID="{1B619740-4113-4800-AB5C-39CC28579989}" ShortID="871482665">
+							<ChildrenList>
+								<Event Name="starting_dynamic_platoon" ID="{A5F8CF3F-19F5-47FF-BE6A-5D9F4217D76C}">
+									<Comment>Event - Sound of invitation to a Dynamic Platoon</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{A9469811-A02C-418C-A368-3DD4A5877BB7}" ShortID="818817217">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="starting_dynamic_platoon" ID="{8CB008A2-547F-4614-851C-813C3141DABC}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="lightbulb" ID="{3988EB0D-4FD2-4AE4-AA3E-91C9AB5881E6}" ShortID="582566105">
+							<ChildrenList>
+								<Event Name="lightbulb" ID="{511FE419-73B9-4C40-B67B-7AE942E805FD}">
+									<Comment>Event - Sound of the Sixth Sense perk</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{56683A78-3E4E-4808-A2FE-76DF1ED186F6}" ShortID="240992719">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="lightbulb" ID="{447BBC4C-EDF4-42D0-99AC-C4F5EDD4611B}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="sixthSense" ID="{88652502-B881-42D3-AD43-2FF36ADCB712}">
+									<ChildrenList>
+										<Action Name="" ID="{98B06496-7735-4EE8-8B53-818870A32237}" ShortID="179731596">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="sixthSense_external" ID="{FCA5B86F-529B-4045-A7B6-8B809A0047BF}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="lightbulb_02" ID="{C5236D3F-FCF5-4DBC-B3BF-58B0963119C5}">
+									<ChildrenList>
+										<Action Name="" ID="{7EDB3270-499D-4195-9B53-11DAF87E8761}" ShortID="412633447">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="lightbulb_02" ID="{11644F46-864C-4B28-B53A-805EDAFBBF92}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="battle_equipment" ID="{1072060C-FB60-4CD7-B352-5F7ADFC67BB1}" ShortID="85388149">
+					<Comment>Consumables</Comment>
+					<ChildrenList>
+						<Event Name="battle_equipment_507" ID="{64612248-02BC-4A16-B865-FABDAD98F910}">
+							<Comment>Event - Using an Automatic Fire Extinguisher</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{8AB3A672-3E1C-4A6E-A627-46B301E2D92F}" ShortID="966647779">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fire_extinguisher_251_01" ID="{0D487AAF-6348-467C-B624-DE5B5B00ACE9}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="battle_equipment_251" ID="{F2A44636-A5F0-4C4F-9A18-0179EC0B223B}">
+							<Comment>Event - Using a Manual Fire Extinguisher</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{2C90C732-5C82-4930-89AB-A91F3AEAF858}" ShortID="808099288">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fire_extinguisher_hand_507_01" ID="{6A3097B9-934C-4AAB-AD0E-1B062334F36A}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="battle_equipment_1019" ID="{0F806B25-548F-4B79-9540-2BFB3E53C1ED}">
+							<Comment>Event - Using a Large Health Kit</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{715A4C9F-A003-4B27-8A6E-68D647BBBABB}" ShortID="487543212">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="medicine_chest_big_763_01" ID="{DC3FAFA0-246B-470D-BA93-D13A9997D6B2}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="battle_equipment_763" ID="{4CFB4118-91EF-4209-B04C-89E8103CC0E1}">
+							<Comment>Event - Using a Small Health Kit</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{B0235F7B-57A4-4943-89D2-FB206D8E6CDC}" ShortID="458836607">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="medicine_chest_small_1019_01" ID="{7481597F-3260-4597-A027-B24EEF3CF53C}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="battle_equipment_1275" ID="{8F685585-1453-46DF-9F60-7E100ABE98C5}">
+							<Comment>Event - Using a Small Repair Kit</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{869B05C6-FE66-437F-B4F5-ED035761FDDD}" ShortID="887727487">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tank_equipment_small_1531_01" ID="{C4C34C96-0C51-45F1-80EF-4E6194EBF32B}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="battle_equipment_1531" ID="{B27B9767-4861-4506-80AB-4A4C1F8E993C}">
+							<Comment>Event - Using a Large Repar Kit</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{AAC2E678-C76E-40D6-ABAF-28E4FA38C552}" ShortID="352653915">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tank_equipment_big_1275_01" ID="{368A9B66-4C8B-48C3-A6B6-1C1ABE4A64DD}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="battle_notification" ID="{3144B477-2E46-4AF3-AF7C-3309D579E3D7}" ShortID="388343960">
+					<ChildrenList>
+						<Event Name="expl_ally_NPC" ID="{8B7477A7-6498-41F6-8E2A-0ED27AE15EF9}">
+							<ChildrenList>
+								<Action Name="" ID="{AA8BC94F-D595-437C-83A6-5B8AF2AC21B2}" ShortID="121107699">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="expl_ally_NPC" ID="{23507AAA-9FA7-4282-B34A-BF96D2897C40}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ui_target_locked" ID="{B8040BF6-9BD0-4B77-947B-A5589CEF9D2B}">
+							<ChildrenList>
+								<Action Name="" ID="{4F844F2E-70AB-4718-BC99-644F6DBF8773}" ShortID="341411426">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gui_target_locked" ID="{C7931399-A4B1-4DBB-8B04-0F1929E865F2}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E3C3E2FA-8836-4B94-B8A5-798EE95F0C6C}" ShortID="610877660">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.01"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gui_target_locked" ID="{C7931399-A4B1-4DBB-8B04-0F1929E865F2}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ui_target_unlocked" ID="{5F3A37A7-D932-4B18-A4A0-D3DB4E5459C3}">
+							<ChildrenList>
+								<Action Name="" ID="{923C3716-4866-4604-B0D0-CAF68C9D1D06}" ShortID="311536688">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gui_target_locked" ID="{C7931399-A4B1-4DBB-8B04-0F1929E865F2}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{36F9EFB9-B271-41A1-ADBC-F664504F6A28}" ShortID="436063275">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gui_target_unlocked" ID="{F8509FA5-AE88-4986-BF1F-748593B0F377}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ui_target_lost" ID="{3E53D58C-2FFE-4052-897F-59E0CA80301D}">
+							<ChildrenList>
+								<Action Name="" ID="{4E269FC5-EDAF-46F6-B459-6270A231705B}" ShortID="500360766">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gui_target_locked" ID="{C7931399-A4B1-4DBB-8B04-0F1929E865F2}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F4734842-042C-475C-BFB3-565516FB89EA}" ShortID="90847183">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gui_target_lost" ID="{C68516E1-5C40-4B2F-A5AB-0509E00CF6DD}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="PRMP_alerts" ID="{8CB59A03-C8E3-49A2-85DB-860166CDD370}" ShortID="745723596">
+					<ChildrenList>
+						<Event Name="prmp_alert_07" ID="{7BAE9B56-38AB-4C54-9F26-157B1A22A1ED}">
+							<ChildrenList>
+								<Action Name="" ID="{E0701879-3A9A-4A6F-A252-7C237B1FC0D1}" ShortID="382713147">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="prmp_alert_07" ID="{0C9E2256-17A7-472F-86A0-184BB2A313DD}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="prmp_alert_03" ID="{A9E1C8DB-9D09-4A58-AF1E-B68B1F76B284}">
+							<ChildrenList>
+								<Action Name="" ID="{E305A72B-3D30-44BA-9D8A-563F4D044BF9}" ShortID="965610531">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="prmp_alert_03" ID="{569125AB-8E32-4EB2-8C13-8E7EE02BD98F}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="prmp_alert_05" ID="{D380E945-F2B8-4024-9791-63DC5C8A28D8}">
+							<ChildrenList>
+								<Action Name="" ID="{F9EC0F3E-998A-4607-BF6C-D64C093A2BC4}" ShortID="797960181">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="prmp_alert_05" ID="{BDF82045-F096-4476-B21B-809E1D467C73}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="multichanel_test" ID="{4E062ACC-462B-4B0E-B292-14CBF9C47A43}" ShortID="1062952102">
+					<ChildrenList>
+						<Event Name="multichanel_test_L" ID="{2117C990-B7ED-40EB-B588-CA7370E79491}">
+							<ChildrenList>
+								<Action Name="" ID="{931396E4-FBA0-4C4E-A5DC-536A70A76014}" ShortID="586129138">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="multichanel_test_L" ID="{0A511EFB-3C3E-4C1C-846C-886937FDC34C}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="multichanel_test_R" ID="{ECA38DEF-9B50-4A65-BBC5-BC25A3D6DBD1}">
+							<ChildrenList>
+								<Action Name="" ID="{C2877F5D-1FAB-41DD-BB8C-DFB83E38FE4E}" ShortID="126849061">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="multichanel_test_R" ID="{91FB6BE1-FA4A-49BB-B072-52E132F6791D}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="multichanel_test_C" ID="{BFBE7E33-B5BF-478A-8375-58B99D09B78B}">
+							<ChildrenList>
+								<Action Name="" ID="{063BB2A6-0216-48E8-962F-3AADDE933F3B}" ShortID="828741377">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="multichanel_test_C" ID="{B3673B2F-8456-4D07-8AF5-4483DC1B2AA3}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="multichanel_test_SL" ID="{AF925B7E-9A0D-4DFA-8237-7B2C762B0640}">
+							<ChildrenList>
+								<Action Name="" ID="{D79AFBA8-32DD-48C0-B934-FAA524C0DD83}" ShortID="1055327568">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="multichanel_test_SL" ID="{EFF435FC-C94C-4AD5-A5DB-545464749708}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="multichanel_test_SR" ID="{0DACF27E-42E7-4976-8C72-E6AB2D60F9CD}">
+							<ChildrenList>
+								<Action Name="" ID="{5DAD72B6-24EE-4255-9EF6-C19D9E9FAFE9}" ShortID="598670233">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="multichanel_test_SR" ID="{C6A2E980-DDAA-4D6A-B136-74E0BFD68597}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="multichanel_test_BL" ID="{09FD16DB-09EE-459B-B510-CCEAEC454D8B}">
+							<ChildrenList>
+								<Action Name="" ID="{96179D1D-6696-4EAD-A28F-E20460D73502}" ShortID="891573042">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="multichanel_test_BL" ID="{4CF50DA1-BE11-45C2-B1A4-FBB1D2B22553}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="multichanel_test_BR" ID="{CAB17A43-B682-48E4-AFC9-EE72CEB1570C}">
+							<ChildrenList>
+								<Action Name="" ID="{AB00B1FF-5E9F-449B-9581-460066C68721}" ShortID="201021237">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="multichanel_test_BR" ID="{BC809F34-90EF-490E-B164-84BF8DB2466A}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="multichanel_test_LFE" ID="{A5AF7DFF-F96A-4304-B560-AF187BD7530F}">
+							<ChildrenList>
+								<Action Name="" ID="{2F339274-A7B2-417B-BAB2-B2D878269BAC}" ShortID="467074077">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sub_multichanel_test" ID="{6EFC2638-77D5-40AE-AAEB-9C64F6C8AF65}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="promoscreens" ID="{7A4F995F-7451-4D9D-AC9E-83E05D626F62}" ShortID="1059583809">
+					<ChildrenList>
+						<Event Name="promoscreen_offer_timer" ID="{F6B1331A-6AD6-499A-B35A-5BEC5217F5ED}">
+							<ChildrenList>
+								<Action Name="" ID="{C0645EC9-9B25-4DC0-B30B-BDAA17FC7E5E}" ShortID="970901833">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="promoscreen_offer_timer" ID="{A6B86ACB-7379-4665-89C5-8FBB54E3F5B6}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="promoscreen_info_incoming" ID="{BF582A66-00FF-4B8E-BF57-DA4AB72C7970}">
+							<ChildrenList>
+								<Action Name="" ID="{880D091C-88EB-453A-9879-68FDE7C6079E}" ShortID="949869144">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="promoscreen_info_incoming" ID="{58E06DCC-AE45-4859-ACBF-8442ED418BAB}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="promoscreen_offers_incoming" ID="{BC1E7E6A-87BB-4B05-B46E-54ED59A1BB40}">
+							<ChildrenList>
+								<Action Name="" ID="{FF1B821A-EE8C-4965-A4D7-54E8542C2DD2}" ShortID="775484131">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="promoscreen_offers_incoming" ID="{6E25232D-B290-487E-9F6A-81A761293374}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

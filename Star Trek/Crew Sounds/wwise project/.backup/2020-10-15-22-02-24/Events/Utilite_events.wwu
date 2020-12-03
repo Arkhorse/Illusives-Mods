@@ -1,0 +1,1856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6E76A620-F9B5-47F4-8C0B-13AA1956131B}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Utilite_events" ID="{6E76A620-F9B5-47F4-8C0B-13AA1956131B}" PersistMode="Standalone">
+			<Comment>Managing events</Comment>
+			<ChildrenList>
+				<Event Name="ue_music_volume_fade_30db" ID="{C3A5316D-DF95-4362-AF80-EDECFEB0D222}">
+					<Comment>Event - Decreasing the music volume by -30 dB</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{CDD1B130-C91C-43E6-94F7-99B22CAA6B80}" ShortID="713079069">
+							<PropertyList>
+								<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+								<Property Name="ActionType" Type="int16" Value="11"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64" Value="-30">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1A0CF318-00A2-41CA-8386-5B8EF218AA46}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUSIC" ID="{15E120EE-AF77-4F3C-A34F-1FB0E32445C8}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ue_music_volume_reset" ID="{12AAC932-A498-4A31-BD6D-533182C35F95}">
+					<Comment>Event - Restore music volume</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{4425D3C6-16F4-4C90-AD38-722440CA6886}" ShortID="886993050">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="14"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUSIC" ID="{15E120EE-AF77-4F3C-A34F-1FB0E32445C8}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ue_stop_all_voices_except_combat_music" ID="{0E90EB16-CF19-42AB-9C26-75E72ECB2D5F}">
+					<Comment>Event - Stop all events but for combat music</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{179969ED-ADF8-4C1E-A518-A87A23CDF112}" ShortID="300701996">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+							<ChildrenList>
+								<EventActionException Name="" ID="{714A702F-0021-439F-85F3-DCF9A0635214}"/>
+								<EventActionException Name="" ID="{418801E6-7CC8-4D55-98F0-071AD5C5B535}"/>
+							</ChildrenList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ue_events_arena_stop_except_music" ID="{B523F6A3-A9F4-493B-ADD0-F4B7C76265C0}">
+					<Comment>Event - Stop all arena efects but for music</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{DEACE401-AE04-403B-ABA1-9CEFD544E5A7}" ShortID="137880462">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+							<ChildrenList>
+								<EventActionException Name="" ID="{C3F23042-001C-472B-9868-32D711FD46BF}"/>
+								<EventActionException Name="" ID="{DC8CAE9D-9CEE-4718-A93D-4F5C4E09075E}"/>
+								<EventActionException Name="" ID="{404B556A-37B3-4C76-806F-97AE86A849BE}"/>
+								<EventActionException Name="" ID="{B4F917C6-E453-4A90-8748-4A11FE99A48D}"/>
+								<EventActionException Name="" ID="{9027D186-F6C6-491B-BBF2-F6EC83177115}"/>
+							</ChildrenList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ue_stop_loadscreen_music" ID="{DAC148FC-C924-432C-A2BF-BB76DD699D5D}">
+					<Comment>Event - Stop the load screen music</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{40BC4213-9B38-4496-A0EC-C8E9E7A2B891}" ShortID="992533799">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="america" ID="{18FA226F-A5B3-4582-A97F-3E922060C8BA}" WorkUnitID="{88D893ED-5526-4098-B3EE-DCBA88F28EE8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{72199C55-10A3-4840-967F-565112C94618}" ShortID="508123913">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="desert" ID="{FD406723-C746-47A9-8B61-356015159236}" WorkUnitID="{88D893ED-5526-4098-B3EE-DCBA88F28EE8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B838F289-96A9-4BDB-8CFB-38A9C871F38F}" ShortID="464721468">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="euro_city" ID="{DC6A98E0-00C1-4AD7-BF45-CAAFDA5FB918}" WorkUnitID="{88D893ED-5526-4098-B3EE-DCBA88F28EE8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{42F6D6E7-5867-4FCC-95AA-5001A3FECA55}" ShortID="790062018">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="euro_vilage" ID="{51C6E604-666D-4EAE-99AE-D5A491951F1B}" WorkUnitID="{88D893ED-5526-4098-B3EE-DCBA88F28EE8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7D5D8002-2EE9-4041-9E5C-C4B0821C5885}" ShortID="930319034">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="himmelsdorf" ID="{50E2C085-998D-4693-90DE-88E7823AA466}" WorkUnitID="{88D893ED-5526-4098-B3EE-DCBA88F28EE8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CAEE51FF-D9AD-44E7-B8A4-D405744BFCCF}" ShortID="373649881">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="japan" ID="{03BBEF49-E42A-497F-9C91-B6A4D467E073}" WorkUnitID="{88D893ED-5526-4098-B3EE-DCBA88F28EE8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{553785BC-05D4-4A6D-9133-09293EACC189}" ShortID="348957192">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="kavkaz" ID="{109A29BB-FACA-4F70-AFB6-1C59BD06DFDA}" WorkUnitID="{88D893ED-5526-4098-B3EE-DCBA88F28EE8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A44BA63B-2F63-4508-A89F-779FF574AC2D}" ShortID="730402545">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="kharkov" ID="{EA2D675C-C8E9-422B-932E-F99096E961A6}" WorkUnitID="{88D893ED-5526-4098-B3EE-DCBA88F28EE8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CB76FD1F-F475-4C73-B682-17A04691765C}" ShortID="11081722">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="main_menu" ID="{6C4C42F7-E993-4C3D-ABC6-CC230FCA787A}" WorkUnitID="{88D893ED-5526-4098-B3EE-DCBA88F28EE8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FE0AFDD9-7D8D-4B06-914A-CA357AE3B686}" ShortID="541587927">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="malinovka" ID="{2823E3BF-894F-4EB5-9681-BB6EFB23D610}" WorkUnitID="{88D893ED-5526-4098-B3EE-DCBA88F28EE8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{54B6E82E-EF13-4577-9030-612F4C9C3C4B}" ShortID="578450339">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="rus_city" ID="{674053B7-B994-4842-9846-B9362E254767}" WorkUnitID="{88D893ED-5526-4098-B3EE-DCBA88F28EE8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4A0D3264-1998-43A6-B1CB-F185D453DA8C}" ShortID="245308804">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="rus_vilage" ID="{37076083-668F-4DDF-BF95-CDBD59763662}" WorkUnitID="{88D893ED-5526-4098-B3EE-DCBA88F28EE8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{54716535-2011-4FDA-BA64-3E819D909A92}" ShortID="537379425">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="stalingrad" ID="{E7A149D2-F20F-4352-A04F-7AF6E5916B38}" WorkUnitID="{88D893ED-5526-4098-B3EE-DCBA88F28EE8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0D27E4B8-C456-4198-89E4-41EC5C9867A3}" ShortID="466833030">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_loading" ID="{A6EB6290-3AF2-4D41-B56F-CF8CD4423F97}" WorkUnitID="{DC2ED30D-6313-482C-90F8-37207F5C53BE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8731DE14-74F4-41C7-9FB7-C7303D4EE7DD}" ShortID="669212760">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_loading_screen" ID="{039BFE90-F535-47FB-A7A1-562AEDCAA908}" WorkUnitID="{13EA1F42-D66D-4995-BC93-00FC7EE4ED4D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ue_events_hangar_stop_afterBattleMusic" ID="{757742B2-C752-4A9B-8FEB-79EF95409917}">
+					<Comment>Delete action no. 4 after hangar_premium_v3 release</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{C37F3038-42EA-4CC7-B27D-351A73986C45}" ShortID="312940382">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="allied defeat_01" ID="{EF5566F0-9D8A-47B8-A726-1A77919DD646}" WorkUnitID="{9DE2D267-4F1F-482D-863B-151843FBB371}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AAF40974-C797-4EF5-908C-17CAE9C5833B}" ShortID="1003936537">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="allied_victory" ID="{C7BE033B-032D-4932-9D64-731A26309CFD}" WorkUnitID="{9DE2D267-4F1F-482D-863B-151843FBB371}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4E4E55EF-6712-4BBA-A9C1-F30B401243AD}" ShortID="311646654">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="defeat_crow_01" ID="{F6EBA656-E121-4D18-8E92-5F14EE9BBEA0}" WorkUnitID="{9DE2D267-4F1F-482D-863B-151843FBB371}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ue_init_outside_arena_universal" ID="{DE1234A3-6353-4837-A0A7-D8CAAA796D9B}">
+					<ChildrenList>
+						<Action Name="" ID="{D5DD0886-DB87-4C0A-939F-77DF5253BA44}" ShortID="919165585">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="24"/>
+								<Property Name="BypassEffect" Type="bool" Value="False"/>
+								<Property Name="BypassEffect2" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="HDR_dbc" ID="{09E35B51-150F-4364-B17D-85E3A5C5DB25}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{27D6B554-7154-479C-BA5A-744AE7AAB53D}" ShortID="988688331">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="24"/>
+								<Property Name="BypassEffect" Type="bool" Value="False"/>
+								<Property Name="BypassEffect1" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="130_eng_trds_PC" ID="{3A7734E5-B36A-48A2-BD1D-C64945A4FA18}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E7DB4DB2-C214-4A58-93F9-DB82F5C76E3F}" ShortID="587627598">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="24"/>
+								<Property Name="BypassEffect" Type="bool" Value="False"/>
+								<Property Name="BypassEffect0" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="110_col_PC" ID="{C0551C3B-8D49-4604-A0E8-9050517C4E7B}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{94879E04-1E78-47DC-96D4-B406D70C2404}" ShortID="910296809">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="05_wind_blown" ID="{80F5F1C2-C6C5-4CD2-9E91-7846D11D0CEC}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7C5BC672-D7FA-41D5-A6DB-E7E886F847D2}" ShortID="418178426">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gun_rld" ID="{E29DFDFA-0CAC-438A-9260-81C37CD5AB7F}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EE83219E-3225-433C-B5A4-92A37C9AF25E}" ShortID="507420899">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="delivery flag" ID="{89127DCF-129E-4BA8-B345-805795D07CAA}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{05783BAB-D080-48A6-A017-2FA19AF557B8}" ShortID="739771381">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="24"/>
+								<Property Name="BypassEffect" Type="bool" Value="False"/>
+								<Property Name="BypassEffect1" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="010_vo_com" ID="{106612E1-E487-48BC-8F88-FF87A546A606}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{542F379A-1275-44C0-B2C7-B29782FBE691}" ShortID="58939979">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="24"/>
+								<Property Name="BypassEffect" Type="bool" Value="False"/>
+								<Property Name="BypassEffect0" Type="bool" Value="True"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_spheretank_battle" ID="{70CA079A-4893-41E5-805E-A071D3CB7738}" WorkUnitID="{DC2ED30D-6313-482C-90F8-37207F5C53BE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E920B81D-D80B-49B2-A80E-2EEB4545FBE3}" ShortID="927567235">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sight_convergence" ID="{28B11214-8B47-407D-A98A-4BDAACCCC7FF}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C4C137D2-1FB1-4218-884C-9E5DE3F7BE2B}" ShortID="251846174">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="24"/>
+								<Property Name="BypassEffect" Type="bool" Value="False"/>
+								<Property Name="BypassEffect0" Type="bool" Value="True"/>
+								<Property Name="BypassEffect1" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="050_psb" ID="{592077DC-E57B-47F3-A7AD-FD5CFF280B2A}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{575C2C29-1979-41CC-AAA1-E326BD52D3A3}" ShortID="351013635">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_HDR_threshold" ID="{89306D8C-E761-45F6-B4FD-93E7B1D8BB0C}" WorkUnitID="{99AED538-0B7F-42D5-942E-04185D409E05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ue_init_inside_arena_1stapril" ID="{58C443E3-751A-4401-B0D5-F315EFD92258}">
+					<ChildrenList>
+						<Action Name="" ID="{255C1EE1-2D0B-4AD7-A2E3-957289978866}" ShortID="658863611">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="25"/>
+								<Property Name="BypassEffect" Type="bool" Value="False"/>
+								<Property Name="BypassEffect2" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="HDR_dbc" ID="{09E35B51-150F-4364-B17D-85E3A5C5DB25}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{64455B64-966E-4596-AB11-DB14F3F6A341}" ShortID="781749232">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="25"/>
+								<Property Name="BypassEffect" Type="bool" Value="False"/>
+								<Property Name="BypassEffect1" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="130_eng_trds_PC" ID="{3A7734E5-B36A-48A2-BD1D-C64945A4FA18}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{44777473-182B-4A26-B300-94604E15BB1F}" ShortID="789340151">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="25"/>
+								<Property Name="BypassEffect" Type="bool" Value="False"/>
+								<Property Name="BypassEffect0" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="110_col_PC" ID="{C0551C3B-8D49-4604-A0E8-9050517C4E7B}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F884AF7F-93D7-490A-A2BB-812CA4FF5A8A}" ShortID="464226731">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="05_wind_blown" ID="{80F5F1C2-C6C5-4CD2-9E91-7846D11D0CEC}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D79F3182-A15F-4A6A-B596-E7EBBB0C9264}" ShortID="91422879">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gun_rld" ID="{E29DFDFA-0CAC-438A-9260-81C37CD5AB7F}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D1A587D3-1091-4536-8712-0C3EDDE8DD39}" ShortID="904476154">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="delivery flag" ID="{89127DCF-129E-4BA8-B345-805795D07CAA}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6B92E70A-4853-499C-8A51-EA5BB6D4502D}" ShortID="1035492521">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="25"/>
+								<Property Name="BypassEffect" Type="bool" Value="False"/>
+								<Property Name="BypassEffect1" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="010_vo_com" ID="{106612E1-E487-48BC-8F88-FF87A546A606}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2C31725E-2DEE-4860-AEC7-922B0A512452}" ShortID="195511269">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="25"/>
+								<Property Name="BypassEffect" Type="bool" Value="False"/>
+								<Property Name="BypassEffect0" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_spheretank_battle" ID="{70CA079A-4893-41E5-805E-A071D3CB7738}" WorkUnitID="{DC2ED30D-6313-482C-90F8-37207F5C53BE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{366B09FD-1704-4CB0-AEFB-A1B1126CE8D8}" ShortID="863611264">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="allied defeat_01" ID="{EF5566F0-9D8A-47B8-A726-1A77919DD646}" WorkUnitID="{9DE2D267-4F1F-482D-863B-151843FBB371}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{87C943AF-621F-4855-9F5B-60ED51890A95}" ShortID="516471909">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="allied_victory" ID="{C7BE033B-032D-4932-9D64-731A26309CFD}" WorkUnitID="{9DE2D267-4F1F-482D-863B-151843FBB371}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{29129E97-523F-4432-943E-D5643ABF6CB1}" ShortID="984979704">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="defeat_crow_01" ID="{F6EBA656-E121-4D18-8E92-5F14EE9BBEA0}" WorkUnitID="{9DE2D267-4F1F-482D-863B-151843FBB371}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{03BAB3FC-73BD-4953-B0BD-B5438342CB92}" ShortID="1056599229">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sight_convergence" ID="{28B11214-8B47-407D-A98A-4BDAACCCC7FF}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CCC70C64-BE27-4FF9-917A-5A695EA52B44}" ShortID="1051923550">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="25"/>
+								<Property Name="BypassEffect" Type="bool" Value="False"/>
+								<Property Name="BypassEffect0" Type="bool" Value="True"/>
+								<Property Name="BypassEffect1" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="050_psb" ID="{592077DC-E57B-47F3-A7AD-FD5CFF280B2A}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B8A37E0A-B7B0-4628-A45C-F9ECBC399CCA}" ShortID="201278528">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="4"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_HDR_threshold" ID="{89306D8C-E761-45F6-B4FD-93E7B1D8BB0C}" WorkUnitID="{99AED538-0B7F-42D5-942E-04185D409E05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{55765394-1487-45FE-9C70-BA3154ECAF43}" ShortID="834377539">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_ext_menu_volume_ambient" ID="{F483385C-572E-42C4-81CC-ABEF11A49016}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D1CB16D0-6C6F-4697-9E18-4CB6DCD760AE}" ShortID="784353887">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_ext_menu_volume_effects" ID="{7FC45ED1-AC20-488C-ADF2-2FC071CC89DB}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0D841752-699F-40E2-A1BA-20F7D70BD86F}" ShortID="139158658">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_ext_menu_volume_music" ID="{6EF988B5-5E01-42AB-BEB8-049B61D5E61E}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FA338015-E028-4B12-A0EE-227DE89CBCDA}" ShortID="847878612">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_ext_menu_volume_vehicles" ID="{6C50A548-92B3-4C7B-87FF-6B55DA8669FF}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B874E892-5E95-4865-8988-815970B364F6}" ShortID="257587114">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_ext_menu_volume_voice_gui" ID="{42650DFF-E5CE-4258-92E6-06D1B4858B24}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F461C960-CEB4-45BC-B523-53D3B9D913F7}" ShortID="1055167333">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="16"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_spheretank_end" ID="{A6BF8D7A-0E88-44B5-8CFF-3666EECFC974}" WorkUnitID="{DC2ED30D-6313-482C-90F8-37207F5C53BE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6E843CD0-BE13-404E-B476-527B18462FFD}" ShortID="1001426068">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="music_spheretank_end" ID="{A6BF8D7A-0E88-44B5-8CFF-3666EECFC974}" WorkUnitID="{DC2ED30D-6313-482C-90F8-37207F5C53BE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="sound_presets" ID="{ED6413BF-D1C7-490C-B755-03D430C02550}" ShortID="36775402">
+					<ChildrenList>
+						<Event Name="ue_set_preset_acoustic_device_laptop" ID="{D5E85479-2F78-4A8F-8A23-9A770FE5C2B4}">
+							<ChildrenList>
+								<Action Name="" ID="{F770ED2D-DA06-46AE-BFB7-174D7C62C814}" ShortID="727987301">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_device_laptop_lowcut_trigger" ID="{5DD07E0A-4473-4D25-9E3D-EDCCF2E87BC9}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E43BB9C6-023D-41F0-9F8C-CA00CBB252CD}" ShortID="637070498">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_bass_boost_band_frequency_device_id" ID="{BC19B641-1810-4FBB-8ADE-9275F0BD57E5}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1DCD2632-A533-42CB-8242-60BDEE3D9F40}" ShortID="1015403107">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_bass_boost_band_gain_device_id" ID="{7A1317CF-2C77-46D9-BBDB-F3E4D66ABFED}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_set_preset_acoustic_device_reset" ID="{13336981-A84E-4C42-AE0C-25A63BC73BAC}">
+							<ChildrenList>
+								<Action Name="" ID="{B78D6238-B377-4554-8F56-94480E439698}" ShortID="877520319">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_device_laptop_lowcut_trigger" ID="{5DD07E0A-4473-4D25-9E3D-EDCCF2E87BC9}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8C3594DB-D72C-4D5C-821E-0695549B0525}" ShortID="989704277">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_bass_boost_band_frequency_device_id" ID="{BC19B641-1810-4FBB-8ADE-9275F0BD57E5}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1D66CCF8-6E40-4BED-993F-6766409B3EA5}" ShortID="819360424">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_bass_boost_band_gain_device_id" ID="{7A1317CF-2C77-46D9-BBDB-F3E4D66ABFED}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_set_preset_bassboost_off" ID="{A33AE419-F3E7-47C1-A6C5-9C61FDD15DB1}">
+							<ChildrenList>
+								<Action Name="" ID="{28EBF031-B20A-41C1-957E-2A27A376129F}" ShortID="540836039">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_bass_boost_trigger" ID="{22352301-8B07-4510-B9EF-AD1CC6746F04}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BBAD3348-2C84-459E-AE3D-F96C7DFC27DC}" ShortID="1015802914">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_bass_boost_gain_compensation" ID="{79EAD8B9-1F38-48E0-BD08-9697EDF2E9C0}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_set_preset_bassboost_on" ID="{A97473C0-9CE2-4C9F-ADE9-751A9292345B}">
+							<ChildrenList>
+								<Action Name="" ID="{422CE576-EA9A-469C-8AAA-C1673DE2E9FA}" ShortID="1070968523">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_bass_boost_trigger" ID="{22352301-8B07-4510-B9EF-AD1CC6746F04}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2F1E2E86-B289-4660-96B0-2B5C3444A499}" ShortID="508051374">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_bass_boost_gain_compensation" ID="{79EAD8B9-1F38-48E0-BD08-9697EDF2E9C0}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_set_preset_high_dynamic_range" ID="{3B3C454D-4273-4A06-874D-796A6801BF23}">
+							<Comment>Event - Setting the wide dynamic range preset</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{72370181-5B53-49FB-9B4D-C01167548389}" ShortID="597631582">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="24"/>
+										<Property Name="BypassEffect" Type="bool" Value="False"/>
+										<Property Name="BypassEffect1" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F0B92F57-A055-4B8D-A562-FA6768A4029B}" ShortID="542599861">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="14"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="139_transmission_ext" ID="{4D02BD17-EF2D-45D7-BF5C-41A09056219E}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EEFFE3B8-2EF7-4805-ABA1-2FA028746A49}" ShortID="317911580">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="14"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="138_transmission_int" ID="{CE922C31-D5C6-4C7D-BA56-556BF72618A1}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DA59B55E-7F4C-44B3-8C1B-04454C831971}" ShortID="823375653">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_dynamic_range" ID="{005907E1-02CE-4341-9A18-A4FE66F8D78D}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_set_preset_low_dynamic_range" ID="{2D6B0158-F103-416A-8D10-F26EF276FABE}">
+							<Comment>Event - Setting the narrow dynamic range preset</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{AD1B93F2-2AFA-402C-9EF7-FFEA59CB0C4B}" ShortID="863370234">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="25"/>
+										<Property Name="BypassEffect" Type="bool" Value="False"/>
+										<Property Name="BypassEffect1" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DA008014-FCFB-4EC6-AD29-8ECBFCDD658E}" ShortID="161693996">
+									<PropertyList>
+										<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="11"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64" Value="-6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="139_transmission_ext" ID="{4D02BD17-EF2D-45D7-BF5C-41A09056219E}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5AE7241F-C61B-40CB-AC47-00D61885184C}" ShortID="783009732">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="11"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64" Value="-6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="138_transmission_int" ID="{CE922C31-D5C6-4C7D-BA56-556BF72618A1}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{116A9A89-2F12-456C-9846-A2D7F7FF7FB9}" ShortID="539651480">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_dynamic_range" ID="{005907E1-02CE-4341-9A18-A4FE66F8D78D}" WorkUnitID="{AB476AAA-6033-49AB-999C-C9F0407E711B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="session_key_events" ID="{7ED2F5E8-6C17-4BBD-9D52-4303FF6F2792}" ShortID="322220722">
+					<ChildrenList>
+						<Event Name="ue_01_loginscreen_enter" ID="{E5868A02-B966-49B9-9302-CAEB72E00E01}">
+							<ChildrenList>
+								<Action Name="" ID="{0B52CC45-BD50-4D97-B7FB-9E620A41B710}" ShortID="274042641">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_01_loginscreen_exit" ID="{1F698242-E915-4C9E-A516-7C3CD6B2AB6C}">
+							<ChildrenList>
+								<Action Name="" ID="{7FC65042-CC3D-4DD9-B380-CC63F518B4CC}" ShortID="965802721">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="login_screen_ambient" ID="{FE8FDA89-F5D2-4B9E-B64F-CCDF9620D35F}" WorkUnitID="{2E8EEFC5-7129-41D9-9FB4-4549B8BCDBC1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A1265588-DC19-48BB-BE6E-A1B12A4092C3}" ShortID="960415514">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="loginscreen_music" ID="{0A56C410-C4A6-4531-912D-78A134B65D33}" WorkUnitID="{2E8EEFC5-7129-41D9-9FB4-4549B8BCDBC1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_02_hangar_enter" ID="{87E96D38-4AB6-4B02-9D8C-849859DF1EB5}">
+							<ChildrenList>
+								<Action Name="" ID="{97391941-6556-44EB-B565-FA5121AF9DAA}" ShortID="249112423">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_eng_damage" ID="{3BD982D3-39FE-431B-8EC4-286A348BDFD1}" WorkUnitID="{D2EF0A16-0466-4B9B-9FA8-B5DADE67576F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{FF61B847-AD4B-45BE-9CFB-27771879B299}" ShortID="876736672">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="24"/>
+										<Property Name="BypassEffect" Type="bool" Value="False"/>
+										<Property Name="BypassEffect0" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_eng_broken" ID="{A8C02DFF-4484-4887-A221-E0DA334D931A}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7F0AE2B5-B6DB-41B4-A08A-693C5E44237B}" ShortID="827917057">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="STATE_gameplace_hangar" ID="{0A75F168-9864-4E69-8856-619A6B552E21}" WorkUnitID="{2919E36D-D7A0-482C-9D63-0D8F398C9469}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AB1A89EC-BF62-4ED4-8EA4-CCE94EA266A7}" ShortID="135655732">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeCurve" Type="int16" Value="6"/>
+										<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MUSIC_BATTLE" ID="{C0B90A5B-1EC0-4E68-8661-5D4AF37A6963}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7F278596-87E1-4AE6-94A9-5FA6BDF53273}" ShortID="710708321">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="hangar_v3_music" ID="{5F7997B5-0A10-4E7A-8E48-50D58C3AC1D4}" WorkUnitID="{9136FD01-D55C-43D0-B0D2-9CD1A7C5E6B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_02_hangar_exit" ID="{5F761042-00F7-4A71-952C-894A31D726F7}">
+							<ChildrenList>
+								<Action Name="" ID="{0887F6CD-6BFD-4BC2-B4B9-7C94A1E25715}" ShortID="237081302">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="hanger_v3_music" ID="{3FF40D5E-B19D-4321-B76F-78AD73FC69D3}" WorkUnitID="{77382AE8-B20F-404E-8A28-D468F83A8234}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_03_lobby_enter" ID="{3335275C-28EA-4CAC-A040-61DFB2B8572C}">
+							<ChildrenList>
+								<Action Name="" ID="{831E61BE-A6E9-4A0D-9B48-EBBE47FB26A1}" ShortID="481703400">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="STATE_gamplace_lobby" ID="{E862B8FC-D499-4953-A046-8965DD9787E5}" WorkUnitID="{2919E36D-D7A0-482C-9D63-0D8F398C9469}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CB85183F-4EC2-405D-B3FF-65982EFEFCA8}" ShortID="373178387">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="STATE_hangar_filtered_off" ID="{B928BD72-334D-4B26-8910-F6B321F0A514}" WorkUnitID="{12D179B7-3DA1-4BF9-A8BE-21C81844A2FB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C87FBA89-EFD7-4229-8100-3FFF67720314}" ShortID="986025213">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="hangar_v3_music" ID="{5F7997B5-0A10-4E7A-8E48-50D58C3AC1D4}" WorkUnitID="{9136FD01-D55C-43D0-B0D2-9CD1A7C5E6B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_03_lobby_exit" ID="{35C96385-D315-4E0A-B7DE-C128F84CFB1C}">
+							<ChildrenList>
+								<Action Name="" ID="{8559034F-0E6A-42FB-94DD-94AFB0D3A96A}" ShortID="493689586">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="hanger_v3_music" ID="{3FF40D5E-B19D-4321-B76F-78AD73FC69D3}" WorkUnitID="{77382AE8-B20F-404E-8A28-D468F83A8234}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_04_loadingscreen_enter" ID="{50B22078-8F58-4C78-8B32-80E836FAA2E1}">
+							<Comment>2 - Stunning a battle drone (bypass sound)</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{DBCCBE83-E927-4E58-8D0D-775BD600CC26}" ShortID="981596116">
+									<PropertyList>
+										<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+										<Property Name="ActionType" Type="int16" Value="11"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MUSIC_BATTLE" ID="{C0B90A5B-1EC0-4E68-8661-5D4AF37A6963}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0289798A-B0E9-41E6-A5C7-FBA1BFCE523F}" ShortID="238047291">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="STATE_gamplace_loading" ID="{B8743AE8-CB93-4F98-AF47-DA926B5A5B4F}" WorkUnitID="{2919E36D-D7A0-482C-9D63-0D8F398C9469}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3A63778E-C31B-422A-958B-9945090AD68B}" ShortID="844156209">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="3"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+									<ChildrenList>
+										<EventActionException Name="" ID="{AA0DB638-3305-4FEF-AE74-188E2388FA8E}">
+											<ReferenceList/>
+										</EventActionException>
+									</ChildrenList>
+								</Action>
+								<Action Name="" ID="{055D10F5-1702-4250-98CA-C1FE9F0EB214}" ShortID="172554783">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="6"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_music_drone_enable_eq_lowshelf" ID="{7AE88284-3DAD-40C5-B374-A46F0E987366}" WorkUnitID="{4077DA64-BB20-412A-BBAC-B8E4E8321E7F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_04_loadingscreen_exit" ID="{EF08E066-485C-4575-8333-43AEF16651F4}">
+							<ChildrenList>
+								<Action Name="" ID="{643F7D0B-7F3D-4364-BDF2-C1B8CA3A98B2}" ShortID="624598887">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="14"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="10"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MUSIC_BATTLE" ID="{C0B90A5B-1EC0-4E68-8661-5D4AF37A6963}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_05_arena_enter" ID="{B1C98C61-B5E3-4E29-A9E5-2BA4BA093FF8}">
+							<ChildrenList>
+								<Action Name="" ID="{7B5B8B83-51E4-4AC7-9536-208340B6BBDA}" ShortID="362192891">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="STATE_gameplace_arena" ID="{CFD647DE-5366-44B2-9033-A31B10F4D1D8}" WorkUnitID="{2919E36D-D7A0-482C-9D63-0D8F398C9469}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_05_arena_exit" ID="{08647C9E-78EA-4933-A326-7E383E575BF1}">
+							<ChildrenList>
+								<Action Name="" ID="{E356C67D-4E5E-48F2-BFA1-81BE9BCD4723}" ShortID="254359791">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_eng_damage" ID="{3BD982D3-39FE-431B-8EC4-286A348BDFD1}" WorkUnitID="{D2EF0A16-0466-4B9B-9FA8-B5DADE67576F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2B99788D-C9C1-4267-BB13-9903D5E42B22}" ShortID="106481872">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="24"/>
+										<Property Name="BypassEffect" Type="bool" Value="False"/>
+										<Property Name="BypassEffect0" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_eng_broken" ID="{A8C02DFF-4484-4887-A221-E0DA334D931A}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{30573AC4-08CA-42CE-B3C9-4DB6912DBC8F}" ShortID="81949068">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+									<ChildrenList>
+										<EventActionException Name="" ID="{54A50F4C-B32E-4314-B98A-72D339303B6C}">
+											<ReferenceList/>
+										</EventActionException>
+										<EventActionException Name="" ID="{B7A4DAD9-899E-45BE-8128-719F5D5B9F2E}">
+											<ReferenceList/>
+										</EventActionException>
+										<EventActionException Name="" ID="{BDE1E45B-F8F6-4667-ADA0-05BA01766157}">
+											<ReferenceList/>
+										</EventActionException>
+										<EventActionException Name="" ID="{0DCF5D1E-686A-4758-AC8F-57356ACF70FF}">
+											<ReferenceList/>
+										</EventActionException>
+										<EventActionException Name="" ID="{1536FD53-E052-4EAC-991A-0C7743D78A4E}">
+											<ReferenceList/>
+										</EventActionException>
+										<EventActionException Name="" ID="{760159EC-387C-4655-8513-CE0EA024F4ED}">
+											<ReferenceList/>
+										</EventActionException>
+										<EventActionException Name="" ID="{62DC6890-FDFF-4981-864B-1380DC856B30}">
+											<ReferenceList/>
+										</EventActionException>
+									</ChildrenList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_06_result_enter" ID="{2986F7CF-D460-438D-BFC7-D78FBC2C3F5D}">
+							<ChildrenList>
+								<Action Name="" ID="{803D601F-D5C0-46FD-87E6-E6618A3B0B6B}" ShortID="411431159">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="24"/>
+										<Property Name="BypassEffect" Type="bool" Value="False"/>
+										<Property Name="BypassEffect0" Type="bool" Value="True"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MUSIC_BATTLE" ID="{C0B90A5B-1EC0-4E68-8661-5D4AF37A6963}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EF89D4E5-D352-4866-B024-82D519E3C480}" ShortID="758868832">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_music_hangar_effect_on" ID="{1F17103A-72DB-43B5-A462-76E9BD32B11A}" WorkUnitID="{85CC563A-5FB6-4799-9162-64349AF7E0DC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{58BA84EC-7834-4AD2-9A36-EB6B11EF4106}" ShortID="953198745">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="STATE_gameplace_result" ID="{BA577818-50F7-4AD0-A59F-78FF0B8328AB}" WorkUnitID="{2919E36D-D7A0-482C-9D63-0D8F398C9469}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D8CEE757-7A3F-4BC0-909F-6F719A5A99BE}" ShortID="843345646">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_hangar_resultmusic_go_3D" ID="{03A9A0CA-C54C-4CF3-8714-1C1B41D0AA10}" WorkUnitID="{4077DA64-BB20-412A-BBAC-B8E4E8321E7F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_06_result_exit" ID="{E6F56E53-1B9C-44CD-97A5-1CD9B59FC2A6}">
+							<Comment>ENABLE 1 and 2 to enable 'close battleresults window' effect</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{75034E5A-F016-4715-892C-8349DFDBAE45}" ShortID="456633087">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="6"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_music_hangar_effect_on" ID="{1F17103A-72DB-43B5-A462-76E9BD32B11A}" WorkUnitID="{85CC563A-5FB6-4799-9162-64349AF7E0DC}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D524CBB6-A44D-4639-B19F-9A0038DD3F6C}" ShortID="852012372">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_hangar_resultmusic_go_3D" ID="{03A9A0CA-C54C-4CF3-8714-1C1B41D0AA10}" WorkUnitID="{4077DA64-BB20-412A-BBAC-B8E4E8321E7F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="actions_with_keys" ID="{30819053-AC7B-4ABE-8165-558AE81C986B}" ShortID="1071359366">
+					<ChildrenList>
+						<Event Name="ue_key_forward_pressed" ID="{2C039F38-E96F-40AB-9971-35B4D99651CD}">
+							<ChildrenList>
+								<Action Name="" ID="{337E4414-1091-49AD-AD75-5F4618B5C843}" ShortID="184847611">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_key_forward" ID="{A3B3D672-930C-4044-A037-C826D35FC94E}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_key_backward_pressed" ID="{2DB5B6DD-F317-4C15-8AA5-8317DD6810E1}">
+							<ChildrenList>
+								<Action Name="" ID="{71C51759-668D-419D-A98B-4CEB597295A0}" ShortID="205589160">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_key_backward" ID="{08F8A473-BE3D-43FD-BBF4-614020530DC3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_key_left_pressed" ID="{8CADAAA1-A8CB-4D6E-AC48-3CDB86226C8E}">
+							<ChildrenList>
+								<Action Name="" ID="{838D98A8-2A73-4535-892F-50CA5412D65E}" ShortID="514487461">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_key_left" ID="{C18362E2-2739-4679-BFDF-C643CC2B3933}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_key_right_pressed" ID="{4BACFFE4-253F-42B5-BDCF-76F56DA6F7CD}">
+							<ChildrenList>
+								<Action Name="" ID="{49AE0097-94D8-45A1-8E6D-5F1C02962840}" ShortID="988968953">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_key_right" ID="{325EDE9F-0187-4C65-9D41-69855CF89079}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_key_stop_pressed" ID="{83660FE9-96DE-4427-8BF1-B07F81FA774E}">
+							<ChildrenList>
+								<Action Name="" ID="{B939C2B6-4BB4-4971-8634-121195BBFFD3}" ShortID="17227494">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_key_stop" ID="{49A68DAA-3138-4694-8E4C-653FFBFA1055}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_key_forward_released" ID="{D7380814-E206-43A6-B54C-6F7FEBD2FA30}">
+							<ChildrenList>
+								<Action Name="" ID="{BE1C6362-A393-4D5E-AB2A-9C65294ACC7F}" ShortID="780880005">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_key_forward" ID="{A3B3D672-930C-4044-A037-C826D35FC94E}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_key_backward_released" ID="{015A4AF0-13EE-4819-A3CE-F370B73344E4}">
+							<ChildrenList>
+								<Action Name="" ID="{677F28B7-F481-4A51-93A1-47CA05A1A4FC}" ShortID="108024639">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_key_backward" ID="{08F8A473-BE3D-43FD-BBF4-614020530DC3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_key_left_released" ID="{93DD4C30-A75F-488B-99A2-EA652A3DEB10}">
+							<ChildrenList>
+								<Action Name="" ID="{B5D31BB6-87FA-40F7-86FE-A7FAB931A2E4}" ShortID="701362853">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_key_left" ID="{C18362E2-2739-4679-BFDF-C643CC2B3933}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_key_right_released" ID="{FA409E5D-C5C6-4D84-84C5-E2FB3080899C}">
+							<ChildrenList>
+								<Action Name="" ID="{211D8666-26EC-4D0F-8927-1CE8D06FD000}" ShortID="824985949">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_key_right" ID="{325EDE9F-0187-4C65-9D41-69855CF89079}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_key_stop_released" ID="{0A410802-0204-4EF0-A9D1-BBCC95305A37}">
+							<ChildrenList>
+								<Action Name="" ID="{D7530DC4-FCA8-4A92-8AAA-7E1677693FBF}" ShortID="447497981">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_key_stop" ID="{49A68DAA-3138-4694-8E4C-653FFBFA1055}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="multichanel" ID="{67DA8C46-6105-453F-BF56-EACD9BA4A2EA}" ShortID="504548794">
+					<ChildrenList>
+						<Event Name="ue_ext_multichanel_off" ID="{53D4E53C-E107-4962-87CF-2E6E4758D462}">
+							<ChildrenList>
+								<Action Name="" ID="{FE7D55D2-9668-408C-98C0-43C455E30153}" ShortID="944834014">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_multichanel" ID="{8DCB3F31-B96D-450B-809F-A3B56FCD3B92}" WorkUnitID="{B5A67743-BE24-41E4-BE9F-3890AD3CDD9C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{FE0C1B8D-8AF3-468D-94F3-A9C84F592FC6}" ShortID="630846871">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.01"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_multichanel" ID="{8DCB3F31-B96D-450B-809F-A3B56FCD3B92}" WorkUnitID="{B5A67743-BE24-41E4-BE9F-3890AD3CDD9C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{191185A5-CC23-41F4-AD54-47BED3A5B425}" ShortID="318363110">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="12"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64" Value="-96"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="multichanel_sub" ID="{6FB529A3-E27A-4A29-9927-DC61050E9D51}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{75330EDA-6E90-425A-80E1-154458D3EF26}" ShortID="295978075">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="16"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="multichanel_sub" ID="{6FB529A3-E27A-4A29-9927-DC61050E9D51}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_set_preset_audiosystem51" ID="{A156DA17-BE72-4426-971F-1567B136E73C}">
+							<ChildrenList>
+								<Action Name="" ID="{8FAF2F49-7317-4A17-B702-B8964D98B678}" ShortID="829273035">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_multichanel" ID="{8DCB3F31-B96D-450B-809F-A3B56FCD3B92}" WorkUnitID="{B5A67743-BE24-41E4-BE9F-3890AD3CDD9C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{179BBE4A-4B06-4D1F-AB80-1F2BDA4548AA}" ShortID="373627909">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.01"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_multichanel" ID="{8DCB3F31-B96D-450B-809F-A3B56FCD3B92}" WorkUnitID="{B5A67743-BE24-41E4-BE9F-3890AD3CDD9C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{31E04BED-3DDA-4492-BD99-78DC3C6B918E}" ShortID="337171052">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="12"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="multichanel_sub" ID="{6FB529A3-E27A-4A29-9927-DC61050E9D51}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_set_preset_audiosystem71" ID="{9B4C4962-F626-4890-89D7-17A99646E298}">
+							<ChildrenList>
+								<Action Name="" ID="{707DDBEF-052A-484B-96BB-DA152EC0A0FE}" ShortID="884641098">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_multichanel" ID="{8DCB3F31-B96D-450B-809F-A3B56FCD3B92}" WorkUnitID="{B5A67743-BE24-41E4-BE9F-3890AD3CDD9C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1AC4D8F2-C131-47B0-BDCA-949EF769BDE4}" ShortID="221912366">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.01"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_multichanel" ID="{8DCB3F31-B96D-450B-809F-A3B56FCD3B92}" WorkUnitID="{B5A67743-BE24-41E4-BE9F-3890AD3CDD9C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BCBA86DB-BF58-4A56-8286-E1BB8FCFF56D}" ShortID="540008861">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="12"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="multichanel_sub" ID="{6FB529A3-E27A-4A29-9927-DC61050E9D51}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_set_preset_audiosystem20" ID="{6C8EBA91-267F-479C-A524-A0B931A34967}">
+							<Comment>Event is not assigned! Task:WOTD-72150</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{60372256-287B-4679-B396-75A566184AA2}" ShortID="141487757">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_multichanel" ID="{8DCB3F31-B96D-450B-809F-A3B56FCD3B92}" WorkUnitID="{B5A67743-BE24-41E4-BE9F-3890AD3CDD9C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9A9F3A3F-CF20-4D00-AAB5-6FDEBCD24AA9}" ShortID="42084145">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.01"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_multichanel" ID="{8DCB3F31-B96D-450B-809F-A3B56FCD3B92}" WorkUnitID="{B5A67743-BE24-41E4-BE9F-3890AD3CDD9C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EF2E3AE5-BC8B-4671-8C13-447E672B17AA}" ShortID="228519419">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="12"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+										<Property Name="Volume" Type="Real64" Value="-96"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="multichanel_sub" ID="{6FB529A3-E27A-4A29-9927-DC61050E9D51}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_ext_multichanel_on" ID="{2FB8643B-8272-419A-947F-19EF79DC9D0A}">
+							<ChildrenList>
+								<Action Name="" ID="{F664EDBB-DF14-4924-96D3-8344A5273001}" ShortID="353057739">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_multichanel" ID="{8DCB3F31-B96D-450B-809F-A3B56FCD3B92}" WorkUnitID="{B5A67743-BE24-41E4-BE9F-3890AD3CDD9C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{32E5FEB2-829B-4DA9-AB27-1EA104436CB5}" ShortID="134833945">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.01"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_multichanel" ID="{8DCB3F31-B96D-450B-809F-A3B56FCD3B92}" WorkUnitID="{B5A67743-BE24-41E4-BE9F-3890AD3CDD9C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{58994C5C-E55A-4521-81A8-E4CCC47D23B5}" ShortID="512748142">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="12"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="multichanel_sub" ID="{6FB529A3-E27A-4A29-9927-DC61050E9D51}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="ue_master_mute" ID="{742BD470-CB46-480F-B191-2A7FFC4CCB50}">
+					<ChildrenList>
+						<Action Name="" ID="{7C9D8957-F4CC-4D6E-9A7B-2B3521FAF02A}" ShortID="29479356">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ue_master_unmute" ID="{711FF6C2-FBEA-4594-818A-C14310EAFF3C}">
+					<ChildrenList>
+						<Action Name="" ID="{33247287-985D-4CAE-975A-D97737FDF757}" ShortID="62604065">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+								<Property Name="FadeCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="hangar_common_events" ID="{072E6728-1B03-45F0-B996-4DBF50E22890}" ShortID="658830703">
+					<ChildrenList>
+						<Event Name="ue_hangar_generic_camera_fly_forward" ID="{D65C1C20-0DE8-46EE-B1E2-EA95BCE8959F}">
+							<ChildrenList>
+								<Action Name="" ID="{8433521E-C5EA-4B9F-B4F6-91405BE64670}" ShortID="503445639">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="camera_fly_forward" ID="{128C61B0-109F-433A-8881-D2A0922B09F2}" WorkUnitID="{707D93A9-8C63-4EBB-A535-4894449276FA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B9085FEC-4689-4B04-8F38-8E14D642244B}" ShortID="171555258">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="1.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sub_camera_fly_forward" ID="{013740FA-E2AD-461D-BAA7-C96CD858BA2D}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ue_hangar_generic_camera_fly_backward" ID="{CEC01DDF-B9A0-4DC2-AA8B-4AE585CD333E}">
+							<ChildrenList>
+								<Action Name="" ID="{A5498340-814D-4CD3-9D81-E671FF6225B7}" ShortID="318712103">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="camera_fly_backward" ID="{4B7EAF87-858A-4238-A841-B9C589DB082B}" WorkUnitID="{707D93A9-8C63-4EBB-A535-4894449276FA}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{FF448DED-732F-4C9E-B72B-2F95DA8CF299}" ShortID="161742767">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sub_camera_fly_backward" ID="{3987ECA3-1458-4D79-87E2-9A14DBAF02AF}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

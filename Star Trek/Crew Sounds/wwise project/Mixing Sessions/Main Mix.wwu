@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D027AE09-B077-4EB1-BD21-F03F0DED8F4A}" SchemaVersion="97">
+	<MixingSessions>
+		<WorkUnit Name="Main Mix" ID="{D027AE09-B077-4EB1-BD21-F03F0DED8F4A}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="eng" ID="{BD8D7DD1-0449-4CD4-A34B-024C0D8B13C9}">
+					<ObjectList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+					</ObjectList>
+				</MixingSession>
+				<MixingSession Name="trds" ID="{D6DCD7DC-0E38-47B4-BAD1-F7E82AA56454}">
+					<ObjectList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+					</ObjectList>
+				</MixingSession>
+				<MixingSession Name="wpn" ID="{4D076D70-4D4C-4427-8A20-21D6D220E01D}">
+					<ObjectList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+					</ObjectList>
+				</MixingSession>
+				<MixingSession Name="imp" ID="{F44CFF93-1864-40CB-B47E-4E5D2FD0F2EF}">
+					<ObjectList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+					</ObjectList>
+				</MixingSession>
+				<MixingSession Name="expl" ID="{D818E206-43AA-4B8F-85F3-C95E49FAC21D}">
+					<ObjectList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+					</ObjectList>
+				</MixingSession>
+				<MixingSession Name="Buses" ID="{4C4D95F7-909F-48C9-B75E-807C0B98A5C8}">
+					<ObjectList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+					</ObjectList>
+				</MixingSession>
+				<MixingSession Name="Hangar" ID="{69293321-5D5D-4293-9163-6BF6B68828F3}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</MixingSessions>
+</WwiseDocument>

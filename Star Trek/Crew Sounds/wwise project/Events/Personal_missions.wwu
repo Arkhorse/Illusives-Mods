@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{71C008EC-9644-4740-B426-E64F923A644B}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Personal_missions" ID="{71C008EC-9644-4740-B426-E64F923A644B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="pm_ambient" ID="{70735690-2FDD-4316-AE09-8A23AA94E5EE}">
+					<ChildrenList>
+						<Action Name="" ID="{FC825AB4-1E39-4D39-876D-B68AD22DFFEB}" ShortID="782439027">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pm_ambient" ID="{0286CB03-B56E-466B-9269-5E9AA841C0B6}" WorkUnitID="{72AA1678-FE8A-456A-A9A9-A9D487E20966}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F01EE532-921D-4150-B91A-02F153CD5F57}" ShortID="1046562696">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pm_ambient_room" ID="{B828218E-BDDD-46C0-A721-357113B5EB23}" WorkUnitID="{72AA1678-FE8A-456A-A9A9-A9D487E20966}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{878C8CD5-7313-49BE-B121-19D0CA96CFBC}" ShortID="871007095">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pm_ambient_overlay" ID="{D0D0D08F-7617-44B4-8FB4-A79EDF90BE84}" WorkUnitID="{72AA1678-FE8A-456A-A9A9-A9D487E20966}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pm_music" ID="{5CD1A1D2-FC74-4129-BC68-CAE6A9F43DEE}">
+					<ChildrenList>
+						<Action Name="" ID="{6A3E05CD-F277-4D6F-8D77-00A52A9BD411}" ShortID="1029971077">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="personal_missions" ID="{B887AC9A-649F-4072-985F-63A19A6AE485}" WorkUnitID="{B174607E-C53F-42D9-8646-9A9EC27B8DF3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pm_tank_select_animation" ID="{80975C87-C8B2-47B2-A373-54D43D6FF3F8}">
+					<ChildrenList>
+						<Action Name="" ID="{630E5501-B248-4330-B4A1-60ED2916979A}" ShortID="566445294">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="tank_select_animation" ID="{648DF929-D12C-4E2F-9A4C-7194D25B016C}" WorkUnitID="{72AA1678-FE8A-456A-A9A9-A9D487E20966}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pm_type_select_animation" ID="{0A127283-D3F1-4271-9AEC-AD95415730CD}">
+					<ChildrenList>
+						<Action Name="" ID="{E9D26242-724F-4DB1-91CB-E68AB01EBBC9}" ShortID="334733869">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="type_select_animation" ID="{D8F7090B-21AA-44B1-B437-D208C70FD0A1}" WorkUnitID="{72AA1678-FE8A-456A-A9A9-A9D487E20966}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{05AE8D8B-CEAE-41F7-8D18-34C5D71B5992}" ShortID="1013210237">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="type_select_animation_projector_layer" ID="{BAE935F1-1BEF-4CA3-832F-7BE719B26709}" WorkUnitID="{72AA1678-FE8A-456A-A9A9-A9D487E20966}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pm_reward_list_spend" ID="{7C2B7D9D-8DF0-45B7-838A-E5EE204FCF1B}">
+					<ChildrenList>
+						<Action Name="" ID="{B81556EE-595D-493D-B470-A257780DBDA2}" ShortID="243595777">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="reward_list_spend" ID="{0A04DC70-E09E-4A63-B46F-5DF8E325DEF3}" WorkUnitID="{72AA1678-FE8A-456A-A9A9-A9D487E20966}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pm_appearance_of_reward" ID="{D0BFA9F4-FE34-475C-B190-85CAB7C3A531}">
+					<ChildrenList>
+						<Action Name="" ID="{B21695A0-B9DF-4B1E-B1FB-9A02A596CBAA}" ShortID="337417415">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="appearance_of_reward" ID="{45B5B8A0-13C9-45FD-9AD0-149826659D6C}" WorkUnitID="{72AA1678-FE8A-456A-A9A9-A9D487E20966}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pm_standard_greeting" ID="{77F04075-DC25-4A1B-A7C7-32386C87F0EC}">
+					<ChildrenList>
+						<Action Name="" ID="{56882270-1D67-4408-8294-9E07B39A99CE}" ShortID="474327974">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="standard_greeting" ID="{4721AB5D-4773-4F4F-8442-B3D57E04EC11}" WorkUnitID="{72AA1678-FE8A-456A-A9A9-A9D487E20966}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pm_special_greeting_woman" ID="{51D92760-DC10-4A5D-A40F-2E8D140CA71A}">
+					<ChildrenList>
+						<Action Name="" ID="{15F1DCB8-4076-4908-A3D9-79902F9B3ECE}" ShortID="63865423">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="greeting_special" ID="{B813D17E-A713-4073-AB41-68194A3AC3A1}" WorkUnitID="{72AA1678-FE8A-456A-A9A9-A9D487E20966}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pm_special_greeting_tank" ID="{A261A4A4-BAF8-4503-83DC-80AE7EDC2107}">
+					<ChildrenList>
+						<Action Name="" ID="{90FAAE8A-95D8-4899-97C3-0CC9F9E1D394}" ShortID="855630136">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="greeting_special_tank" ID="{E94EDA05-D7B6-41B6-AF66-5A60655295CF}" WorkUnitID="{72AA1678-FE8A-456A-A9A9-A9D487E20966}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pm_conversion_order_form_confirm" ID="{8B104343-CB2F-4E31-95F7-807532D98D7C}">
+					<ChildrenList>
+						<Action Name="" ID="{BE75D451-2047-44E6-8A17-D136C1C8EF08}" ShortID="742717294">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pm_conversion_order_form_confirm" ID="{8A0B8F20-E8C1-45FD-93DA-6646D8E832B0}" WorkUnitID="{72AA1678-FE8A-456A-A9A9-A9D487E20966}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pm_conversion_order_form" ID="{A047B185-E68E-48AD-B69F-E37FA686D42C}">
+					<ChildrenList>
+						<Action Name="" ID="{7C9F68DA-C737-439A-BDB4-B9194912552D}" ShortID="172438022">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pm_conversion_order_form" ID="{839EEAA7-2082-42E0-9421-EE74F333D959}" WorkUnitID="{72AA1678-FE8A-456A-A9A9-A9D487E20966}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pm_greeting_order_form_confirm" ID="{5ABEF868-5B0A-4AA4-8960-8760E4C3B37E}">
+					<ChildrenList>
+						<Action Name="" ID="{4021A5EB-96C5-4DFA-8506-3549BF1118A9}" ShortID="91905044">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pm_greeting_order_form_confirm" ID="{55CEADC1-F905-4244-BF23-768C663A797C}" WorkUnitID="{72AA1678-FE8A-456A-A9A9-A9D487E20966}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pm_greeting_order_form" ID="{FA91F6F0-D6B0-49B8-940A-E556C1E4E8AD}">
+					<ChildrenList>
+						<Action Name="" ID="{CA88366F-9CCA-40DE-AADF-525F88B3E510}" ShortID="26392516">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pm_greeting_order_form" ID="{11A6DCE9-BDF8-4C0C-9405-91EE0B8CFADC}" WorkUnitID="{72AA1678-FE8A-456A-A9A9-A9D487E20966}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

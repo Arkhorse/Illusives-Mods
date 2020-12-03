@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E44AA8E0-0104-42AD-A2CB-DAF85C6ED70A}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Modules" ID="{E44AA8E0-0104-42AD-A2CB-DAF85C6ED70A}" PersistMode="Standalone">
+			<Comment>Modules mounted on a vehicle</Comment>
+			<ChildrenList>
+				<Event Name="ammo_bay_damaged" ID="{C45E17E8-DFAF-4DBF-91DE-C19BFE89F9B2}">
+					<Comment>Event - Ammo Rack damaged</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{07CD2B7D-8FEA-4084-87F5-53EA3E36AA96}" ShortID="343183468">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ammo_bay_damaged" ID="{3554456C-C782-421A-84E9-D7800B2C636A}" WorkUnitID="{BD7482ED-654E-4FB5-89B9-A50C409E6FA0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="surveying_devices_destroyed" ID="{BEF34718-0987-4CDA-8BAA-5EBD8D24E23D}">
+					<Comment>Event - Observation device damaged</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{212A6C77-6DBE-4FC6-88D3-986A58DC8562}" ShortID="248340414">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="surveying_devices_destroyed" ID="{4685F38A-3865-4C4D-860A-8197E655F027}" WorkUnitID="{BD7482ED-654E-4FB5-89B9-A50C409E6FA0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="radio_damaged" ID="{4FC6DB76-5B69-4EAC-A9B7-152396902971}">
+					<Comment>Event - Radio damaged</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{796280F7-924B-45CB-B559-C25AF7991E6C}" ShortID="127599715">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="radio_damaged" ID="{62118565-DD7E-4373-A753-2D62DCF16148}" WorkUnitID="{BD7482ED-654E-4FB5-89B9-A50C409E6FA0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="fuel_tank_damaged" ID="{8660AC4E-7552-4751-8CBF-503425344A6F}">
+					<Comment>Event - Fuel Tanks hit</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{8230B004-93FF-46C6-AF79-2DC91667F8F6}" ShortID="758054786">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fuel_tank_damaged" ID="{60E3D679-3BB4-4541-8FA3-0766AE19ACE9}" WorkUnitID="{BD7482ED-654E-4FB5-89B9-A50C409E6FA0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="camo_net_start_01" ID="{14DD238B-A1F4-482A-9FB7-D021C5C9003A}">
+					<Comment>Event - Camouflage Net activation sound</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{F4B9A840-D725-41BB-8F7F-203179445F40}" ShortID="354359114">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="camo_net_start" ID="{37105BD4-F4B3-482C-8853-D14F7D60E9B4}" WorkUnitID="{47FEE6D6-CBAB-427C-A250-2BADF4F2CA45}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{68499F4C-094C-4377-BFE9-3CB1A6C0B20B}" ShortID="983283472">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="STATE_int_camoNet_stereoTrumpet_on" ID="{F580CB22-B615-4947-940E-4537402642EE}" WorkUnitID="{2919E36D-D7A0-482C-9D63-0D8F398C9469}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stereo_trumpet_start" ID="{BA4450B0-1698-40CE-BC6D-D496DCCF101D}">
+					<Comment>Event - Binocular Telescope activation sound</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{07A07E66-2CCC-4DD3-A193-CE0E4E5DD732}" ShortID="535668376">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="stereo_trumpet" ID="{0FEB9338-322E-4C53-9EAE-8EFB6F486AFA}" WorkUnitID="{BD7482ED-654E-4FB5-89B9-A50C409E6FA0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F43D9BB5-BE12-4011-BE11-FF9945C9C67B}" ShortID="157717848">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="STATE_int_camoNet_stereoTrumpet_on" ID="{F580CB22-B615-4947-940E-4537402642EE}" WorkUnitID="{2919E36D-D7A0-482C-9D63-0D8F398C9469}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="camo_net_stop_01" ID="{1F135B66-01F3-46F1-BDDC-C499826EB1E9}">
+					<Comment>Event - Camouflage Net </Comment>
+					<ChildrenList>
+						<Action Name="" ID="{FF0067D9-4115-4E3E-802A-481057AA6D64}" ShortID="253387304">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="camo_net_stop" ID="{3FF61D79-F6CA-49E1-A4AF-1420805E1BD3}" WorkUnitID="{47FEE6D6-CBAB-427C-A250-2BADF4F2CA45}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CE4B425E-91D7-48CD-8779-22CD6604668E}" ShortID="628354902">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="STATE_int_camoNet_stereoTrumpet_off" ID="{385BF16C-0196-4B7D-9191-0DFD87506708}" WorkUnitID="{2919E36D-D7A0-482C-9D63-0D8F398C9469}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stereo_trumpet_stop" ID="{E5A27455-7948-40B5-8EDB-8A22C3F587C3}">
+					<Comment>Event - Binocular Telescope deactivation sound</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{D567F112-17F2-462E-8693-FEDFE65C4926}" ShortID="97209945">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="stereo_trumpet" ID="{0FEB9338-322E-4C53-9EAE-8EFB6F486AFA}" WorkUnitID="{BD7482ED-654E-4FB5-89B9-A50C409E6FA0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{02255152-32D9-4B64-A496-065DFA8C4C5E}" ShortID="413492121">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="STATE_int_camoNet_stereoTrumpet_off" ID="{385BF16C-0196-4B7D-9191-0DFD87506708}" WorkUnitID="{2919E36D-D7A0-482C-9D63-0D8F398C9469}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="gun_damaged" ID="{16385815-4F0D-4ED3-A905-4BB04C46E2D5}">
+					<ChildrenList>
+						<Action Name="" ID="{913CC317-83E8-4306-A1C6-AAA5B3451609}" ShortID="349269288">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gun_damaged" ID="{B5E405CA-B7E0-4F2D-A896-CA9ADAF59EB6}" WorkUnitID="{BD7482ED-654E-4FB5-89B9-A50C409E6FA0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="crew_member_contusion" ID="{75A5A228-3CCE-4010-8EBA-A6B22BAC4DE9}">
+					<ChildrenList>
+						<Action Name="" ID="{7DC2E584-6FB5-46A6-B72A-27001877D923}" ShortID="33207768">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="06_critical" ID="{87EE44B3-FCD6-4B9C-BFC9-9B2C91ED05A3}" WorkUnitID="{B1CFF9C4-59BB-45CC-8EFF-FABBA3727C03}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

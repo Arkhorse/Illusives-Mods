@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FD2495C0-0D73-4E0D-98C9-DEE9C62822A2}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Loginscreen" ID="{FD2495C0-0D73-4E0D-98C9-DEE9C62822A2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Loginscreen" ID="{8AE7808A-2004-41B1-8DBA-FC387D01CD4A}" ShortID="128475641">
+					<ChildrenList>
+						<Event Name="loginscreen_music_start" ID="{662732CA-6574-4B1E-872B-D378DC303B36}">
+							<ChildrenList>
+								<Action Name="" ID="{3E66761A-578B-4742-931A-A97C4ED62969}" ShortID="358533374">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="loginscreen_music" ID="{0A56C410-C4A6-4531-912D-78A134B65D33}" WorkUnitID="{2E8EEFC5-7129-41D9-9FB4-4549B8BCDBC1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="loginscreen_mute" ID="{39054800-30C4-4DD3-8D95-7C8FA6E712D8}">
+							<ChildrenList>
+								<Action Name="" ID="{F7F71039-3D54-4D7A-B9DB-B23F17BC022E}" ShortID="679361810">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="loginscreen_music" ID="{0A56C410-C4A6-4531-912D-78A134B65D33}" WorkUnitID="{2E8EEFC5-7129-41D9-9FB4-4549B8BCDBC1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1AE9A528-C3A8-4AA8-B29A-2026B0E94A1C}" ShortID="1062645300">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="login_screen_ambient" ID="{FE8FDA89-F5D2-4B9E-B64F-CCDF9620D35F}" WorkUnitID="{2E8EEFC5-7129-41D9-9FB4-4549B8BCDBC1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="loginscreen_unmute" ID="{20C025B9-CADA-454C-B3CA-00CC5898649D}">
+							<ChildrenList>
+								<Action Name="" ID="{D66A3677-4D5B-4AFB-91EA-2FCA46C018DA}" ShortID="290737485">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="loginscreen_music" ID="{0A56C410-C4A6-4531-912D-78A134B65D33}" WorkUnitID="{2E8EEFC5-7129-41D9-9FB4-4549B8BCDBC1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{964AA90C-0DE2-4F24-9005-317F28722688}" ShortID="592226248">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="login_screen_ambient" ID="{FE8FDA89-F5D2-4B9E-B64F-CCDF9620D35F}" WorkUnitID="{2E8EEFC5-7129-41D9-9FB4-4549B8BCDBC1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="loginscreen_ambient_start" ID="{DCA68B0B-40B9-4CBB-B188-CC7F57FF0CBB}">
+							<ChildrenList>
+								<Action Name="" ID="{6AC723FB-87F2-4881-872C-561628DB464C}" ShortID="599155473">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="login_screen_ambient" ID="{FE8FDA89-F5D2-4B9E-B64F-CCDF9620D35F}" WorkUnitID="{2E8EEFC5-7129-41D9-9FB4-4549B8BCDBC1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="loginscreen_ambient_stop" ID="{E339DF54-75C5-4EEF-A869-0485D2448A6C}">
+							<ChildrenList>
+								<Action Name="" ID="{84179B5F-C5EC-44CE-B40C-4CCDEABD1048}" ShortID="217339199">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="login_screen_ambient" ID="{FE8FDA89-F5D2-4B9E-B64F-CCDF9620D35F}" WorkUnitID="{2E8EEFC5-7129-41D9-9FB4-4549B8BCDBC1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="loginscreen_music_pause" ID="{DB63054C-21CE-4447-9AD9-8BC5E678DD25}">
+							<ChildrenList>
+								<Action Name="" ID="{0164ABE8-A299-4712-8A48-717EBD8ACA07}" ShortID="676846632">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="loginscreen_music" ID="{0A56C410-C4A6-4531-912D-78A134B65D33}" WorkUnitID="{2E8EEFC5-7129-41D9-9FB4-4549B8BCDBC1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="loginscreen_music_resume" ID="{D3137202-65F3-4699-9D5F-B0984C043CEF}">
+							<ChildrenList>
+								<Action Name="" ID="{2C622DC5-1036-4AC3-A978-42E8E651C458}" ShortID="806321548">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="9"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+										<Property Name="MasterResume" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="loginscreen_music" ID="{0A56C410-C4A6-4531-912D-78A134B65D33}" WorkUnitID="{2E8EEFC5-7129-41D9-9FB4-4549B8BCDBC1}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

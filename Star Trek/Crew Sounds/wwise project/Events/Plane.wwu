@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{80DBB3A5-37DF-47BE-8808-944426EF58ED}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Plane" ID="{80DBB3A5-37DF-47BE-8808-944426EF58ED}" PersistMode="Standalone">
+			<Comment>Planes and air defense guns on maps</Comment>
+			<ChildrenList>
+				<Folder Name="bombardment" ID="{5F7D829A-BDEA-43E4-AD3A-3995638E504E}" ShortID="627798592">
+					<ChildrenList>
+						<Folder Name="expl_bomb_close" ID="{00265559-4FE0-45C3-9BB8-52502FD74BC9}" ShortID="474901701">
+							<ChildrenList>
+								<Event Name="plane_expl_bomb_close_tail" ID="{2CB43C4A-6757-432B-B0CA-B27422DCAB5C}">
+									<ChildrenList>
+										<Action Name="" ID="{EC43A00E-5E83-469E-948C-6A452CE25AAA}" ShortID="474288509">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="expl_bomb_close_tail_01" ID="{79314FE4-03F1-450E-8411-1ED22C4570EA}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="plane_expl_bomb_close" ID="{83A6DE2B-10D2-45E3-A46D-6DE8ADEA193A}">
+									<ChildrenList>
+										<Action Name="" ID="{6D87E90A-1948-488B-AB93-1DF673CB3B70}" ShortID="798292126">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="expl_bomb_close" ID="{71985452-3D73-402C-B172-1E6D05AF1B4D}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Event Name="plane_bomber_02" ID="{827A9B1E-A826-4DB2-BDC6-CF39A716EB27}">
+							<ChildrenList>
+								<Action Name="" ID="{F5516305-DBBE-48E9-A9C6-D4D4173E1CB7}" ShortID="115551941">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bomber_02" ID="{7B221123-C118-4F8B-8299-FA56FB3710B1}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="plane_bomber_03" ID="{58819FD9-83B1-4953-A9E3-AE28D2433695}">
+							<ChildrenList>
+								<Action Name="" ID="{2374D98D-5B79-460C-8DF5-4C6B71355678}" ShortID="376499642">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bomber_03" ID="{6DB470BF-F69C-4779-AAEA-889A5060245F}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="plane_bomber_04" ID="{7A2BB536-4EB0-4D6A-9E3A-EBC070CE92D3}">
+							<ChildrenList>
+								<Action Name="" ID="{29F3A6C5-1F86-4D5F-BCA3-2CA1B7A4AD2B}" ShortID="948692512">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bomber_04" ID="{0FF7FEEE-EF7D-46C9-8046-79A47D6D7548}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="plane_bomber_01" ID="{553EB283-47F3-425A-981B-4F8AF6223E61}">
+							<ChildrenList>
+								<Action Name="" ID="{10FD73E6-8DED-4804-ABE4-F3A6FEFC9D3C}" ShortID="450903694">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bomber_01" ID="{C3D328A3-6F5C-4B69-9996-90A2AFEF2D11}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Folder Name="expl_bomb_far" ID="{EC336CF2-B0D0-4838-A321-1590B8BE18BF}" ShortID="49547077">
+							<ChildrenList>
+								<Event Name="plane_expl_bomb_far" ID="{98756D48-AA41-4F57-83A1-C4B3C378786A}">
+									<ChildrenList>
+										<Action Name="" ID="{DF2A47E5-CB77-4118-A561-43D06CE89E1A}" ShortID="544553329">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="expl_bomb_far" ID="{084177A8-A5D6-4D9C-A306-5BA1BA065FC7}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="plane_expl_bomb_tail" ID="{32927E4A-F2AF-48D7-B28A-AB065C83A933}">
+									<ChildrenList>
+										<Action Name="" ID="{24D5ABB7-4DEF-40A1-BC38-5E934961EEDE}" ShortID="43451185">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="expl_bomb_tail" ID="{6D159D50-D48F-4A29-B5E7-8E8C7614A343}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="crashes" ID="{F247EEE6-5ED7-4DFE-BFB8-C04633AB3C8D}" ShortID="4043856">
+					<ChildrenList>
+						<Event Name="plane_crash" ID="{9C6ECF2A-CB95-49BB-8215-243BF3FC5180}">
+							<ChildrenList>
+								<Action Name="" ID="{A93D1F5F-86EB-4BD3-A09D-3DE596213ED3}" ShortID="471331869">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="10"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="crash_loop_01" ID="{8A8CC39A-D0E8-4C1E-A8CD-363C1F1B516A}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="DDay" ID="{5C7960B5-6231-4342-95B7-58B4C83A0FD5}" ShortID="288638448">
+					<ChildrenList>
+						<Folder Name="plane" ID="{6E6FB740-E8E0-469F-9B5A-46043C7B411F}" ShortID="534436568">
+							<ChildrenList>
+								<Event Name="plane_DDay_bomber_01" ID="{2AD62BF0-4919-49BB-95BE-61B33E258107}">
+									<ChildrenList>
+										<Action Name="" ID="{BB34372F-3373-4627-8867-2BA4358DC4C5}" ShortID="511341882">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="bomber_01" ID="{E367626D-1CE4-41BF-8EE5-9EAF3BDDAA8C}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="plane_DDAY_anti_aicraft_gun" ID="{6D26A39B-DE20-4046-B8CA-0CB08D6234A0}">
+									<ChildrenList>
+										<Action Name="" ID="{C0B1AC0E-A837-4BEC-A860-A46B0C723E8B}" ShortID="884015770">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="anti_aicraft_gun_DDay" ID="{2C8E9742-4CC2-49E7-996C-ED9F0BE4A16C}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="other_actions" ID="{9DF169FC-BA56-423D-9A32-626549FFE2F9}" ShortID="497142746">
+					<ChildrenList>
+						<Event Name="plane_silence" ID="{9FB7849B-621E-458C-B031-C599E65057EA}">
+							<ChildrenList>
+								<Action Name="" ID="{789DD80C-CBBE-4649-9A2C-1A6FCF2DF242}" ShortID="875205685">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="silence" ID="{CE61DCD9-EBB3-4536-AE7D-03FE8D2257ED}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="planes" ID="{AAF8EDBF-92E0-4B42-AA48-13FC8FB0B114}" ShortID="142800393">
+					<ChildrenList>
+						<Event Name="plane_not_gun_yak_3_02" ID="{FDD65F09-4D89-4BF7-A4CB-4D544825DF36}">
+							<ChildrenList>
+								<Action Name="" ID="{9C0A995E-2CD8-47F1-812E-DFB9D34298E1}" ShortID="294857354">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yak-3_02" ID="{7D79E94D-B2DD-48E5-A436-21ED59784457}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="plane_not_gun_mustang_01" ID="{0F589120-1419-4BCC-92E1-6C4F37A6C4AA}">
+							<ChildrenList>
+								<Action Name="" ID="{4B93740C-45DA-4E2E-8446-FCBC6C2DFE98}" ShortID="941864072">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="mustang_01" ID="{8A68A326-4AFE-4302-8F80-62BA0A7833F3}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="plane_not_gun_bomber_02" ID="{B3CD74FE-38F6-45BB-B7E0-0053C285FB08}">
+							<ChildrenList>
+								<Action Name="" ID="{6CADE55C-FAA4-4AF4-BADC-FAF28E8B34BA}" ShortID="463565873">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bomber_02" ID="{BFDD46B2-ED47-4A31-A818-F52A57D0AC4B}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="plane_not_gun_bomber_01" ID="{919EB052-22EA-4AC1-9F8B-5E24B642A8CE}">
+							<ChildrenList>
+								<Action Name="" ID="{5031E4AF-55B0-4271-8636-58247BF3EFD3}" ShortID="208958784">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bomber_01" ID="{A87DE5D1-6D3F-450D-B0DF-3AE5E8B4285C}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="plane_not_gun_yak_3_01" ID="{F0B685EF-64E8-4AF1-AB8E-2033CB9F96FD}">
+							<ChildrenList>
+								<Action Name="" ID="{78BA7F66-DD84-4C05-BD8B-A7878E80F998}" ShortID="220608052">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yak-3_01" ID="{3857940B-DD1C-4792-9A4B-94165F20A3DE}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="plane_not_gun_mustang_02" ID="{B61BA15D-2CDE-400B-AE6C-BFE9177FC2BD}">
+							<ChildrenList>
+								<Action Name="" ID="{075522BF-1B8A-4BEF-A657-965308E49338}" ShortID="190133412">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="mustang_02" ID="{6707AD41-CDF5-4808-B98C-969A9C34D42E}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="planes_with_automatic_weapons" ID="{48E3C90F-5525-41F4-880B-8DDF1EA82F4B}" ShortID="187863069">
+					<ChildrenList>
+						<Event Name="plane_with_gun_bomber_02" ID="{D2DE9356-4E04-4AEB-BCEB-16DFF0AB848D}">
+							<ChildrenList>
+								<Action Name="" ID="{07A6ABA7-3D87-4099-A549-51DB44E0CEDB}" ShortID="628361040">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bomber_02" ID="{2782768F-C186-41C2-B301-BA34DC0FFEEB}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="plane_with_gun_mustang_02" ID="{579FC4DF-EE46-4C7F-970A-955CFCE29E20}">
+							<ChildrenList>
+								<Action Name="" ID="{412F142A-0666-4F00-82B4-A1C99141014B}" ShortID="414086758">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="mustang_02" ID="{3FA0AB78-A48F-4237-A4F7-D05E68F795AC}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="plane_with_gun_yak_3_02" ID="{7836EF9F-5F89-46C3-96BE-DE198D79769D}">
+							<ChildrenList>
+								<Action Name="" ID="{272F147D-D0FE-46B6-A1C7-4538A325D3E0}" ShortID="526157349">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yak-3_02" ID="{F05D33C3-5402-49F5-B69F-230647BA1901}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="stalingrad" ID="{5B2D2DA4-AC1A-4514-8B46-5046B2B8C62D}" ShortID="895090469">
+					<ChildrenList>
+						<Folder Name="planes_with_automatic_weapons" ID="{14DB549A-39D5-4100-9BBF-9940502DCE4A}" ShortID="398901916">
+							<ChildrenList>
+								<Event Name="plane_stalingrad_yak_3_01" ID="{F35DF774-3251-4EA8-B11E-4B2D74B82B0C}">
+									<ChildrenList>
+										<Action Name="" ID="{EA0F063A-A974-48D4-8560-78C0A8D66954}" ShortID="308777572">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="yak-3_01" ID="{B71EDE51-F31F-4483-88D9-BE7BA3393A8A}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="plane_stalingrad_mustang_02" ID="{C3028A8E-F81E-44D2-BF56-3DF10C5693D3}">
+									<ChildrenList>
+										<Action Name="" ID="{DF22D027-4D40-485C-8D5D-6F00BDC82120}" ShortID="645330751">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="mustang_01" ID="{80510D80-D664-4FF3-85DF-D623BEA5569A}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="plane" ID="{31F2B18F-3DA4-400D-A372-2F4957C18306}" ShortID="802736862">
+							<ChildrenList>
+								<Event Name="plane_stalingrad_bomber_02" ID="{094FC251-F4EC-4D36-833A-A19A46BEAEBC}">
+									<ChildrenList>
+										<Action Name="" ID="{132E76DC-B764-4C5E-9247-65BC1DE74CEF}" ShortID="418144694">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="bomber_02" ID="{9A20B7C2-07A0-4F2F-B4D4-47A98C6C4D33}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="aircraft" ID="{82FB08BE-A42B-4414-AEB4-AE3AF5BB7E51}" ShortID="451684878">
+					<ChildrenList>
+						<Event Name="aircraft_loop_01" ID="{C1A5EF80-87B9-428F-AFF8-87EF62F8464B}">
+							<ChildrenList>
+								<Action Name="" ID="{3ADB469B-2D42-4D85-A0E6-E171F8AB09F6}" ShortID="40786249">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="aircraft" ID="{374AE0DD-CE62-4406-A02A-637FAB966171}" WorkUnitID="{24C6E729-1554-4BF9-91FF-48A48D34F8B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

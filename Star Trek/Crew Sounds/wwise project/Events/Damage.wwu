@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8C42368A-32EA-4542-B03D-5AC155479859}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Damage" ID="{8C42368A-32EA-4542-B03D-5AC155479859}" PersistMode="Standalone">
+			<Comment>Damage</Comment>
+			<ChildrenList>
+				<Folder Name="treads" ID="{F10A4DF3-A82E-4B27-BC24-4240E2C07100}" ShortID="190760921">
+					<ChildrenList>
+						<Event Name="repair_treads" ID="{F468E9DB-CFE5-4A28-A6D6-C1CFAF233577}">
+							<Comment>Event - Track repair</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{91C1CAB4-16B0-4C2A-89F5-D74CDC34510A}" ShortID="467520136">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="repair_treads_new" ID="{27B015F6-9720-4735-A6A5-7B619B2B09A2}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="brakedown_treads" ID="{C0A1A7F6-29BA-43EE-A41F-007A3E5FCADF}">
+							<Comment>Event - Track destroyed</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{378B7DB8-D937-4EC0-ABD8-06F8E62AB23E}" ShortID="569285093">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="breakdown_treads_new" ID="{1A8C8B35-8ADF-4AEB-A7D8-77ADE11BF492}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="burning_tank" ID="{CB0FFFF3-B817-4FDD-A667-215DBE1EBA8E}" ShortID="558744932">
+					<ChildrenList>
+						<Event Name="burning_tank_medium" ID="{D5FB5C9A-7831-4985-927A-0C4A47CB5CAE}">
+							<Comment>Event - Vehicle on fire MEDIUM</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{F322F78C-D741-4F78-9A9E-652B3F0731E3}" ShortID="226114104">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burning_tank_medium" ID="{A94AE883-B3C1-49E5-BC82-AF50C9EA4CEC}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{823B8F4C-2B4F-41F9-9B3A-DCE5161119AD}" ShortID="827367958">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="40"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="3"/>
+										<Property Name="FadeTime" Type="Real64" Value="10"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burning_tank_medium" ID="{A94AE883-B3C1-49E5-BC82-AF50C9EA4CEC}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="burning_tank_large" ID="{D418D341-6D67-4B16-9509-C5B9C4340A01}">
+							<Comment>Event - Vehicle on fire LARGE</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{2F0EDAA5-E891-4A9E-835A-C86438C104AE}" ShortID="290526197">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burning_tank_large" ID="{849FF0FE-BDE7-4A7E-8A23-C4B70B1CA927}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{FEE77767-075F-4461-8E87-749157F55C4B}" ShortID="956719354">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="40"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="3"/>
+										<Property Name="FadeTime" Type="Real64" Value="10"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burning_tank_large" ID="{849FF0FE-BDE7-4A7E-8A23-C4B70B1CA927}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="burning_tank_small" ID="{739F3225-BCB1-4F07-A618-1D3FDA857FB9}">
+							<Comment>Event - Vehicle on fire SMALL</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{11F2E54D-F597-43F5-8F4E-EBE9DCC35925}" ShortID="14133434">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burning_tank_small" ID="{5A3560D6-0267-4C0A-964D-53E355CA9B9E}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1847DD3D-6CDE-4A3F-ACFB-4B1C21E93F6E}" ShortID="423047368">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="40"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="3"/>
+										<Property Name="FadeTime" Type="Real64" Value="10"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burning_tank_small" ID="{5A3560D6-0267-4C0A-964D-53E355CA9B9E}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="burning_tank_domination_large" ID="{F05675CB-B608-40F7-9590-069DA8B8DE6C}">
+							<Comment>Event Vehicle on fire in the Domination mode</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{1F3BB920-6EF5-4237-8E7E-7CA44BC671B9}" ShortID="1068178517">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burning_tank_domination_large" ID="{951BA91D-965A-4356-9CCA-F92337BCBF77}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="turret_drop" ID="{F2DE32E5-1A32-462A-9415-4852F062A274}" ShortID="3055908">
+					<ChildrenList>
+						<Event Name="turret_drop_soft" ID="{D3F3E26D-D017-4BF2-A6AC-57AA9872D207}">
+							<Comment>Event - Turret falling on a soft terrain</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{E9CCDB44-A555-4385-A29E-79C6B7F46229}" ShortID="912672744">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="turret_drop_soft" ID="{F8390D06-9226-4E4A-894B-D42E65C5EDC1}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="turret_drop_solid" ID="{CBB17178-B141-4E05-9A57-3893A35E4100}">
+							<Comment>Event - Turret falling on a hard terrain</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{F487B4C4-A6DC-4A41-8C3C-5D89630CCBC0}" ShortID="763007329">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="turret_drop_solid" ID="{14A4A324-97EB-4118-8A4C-1270457AB935}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="turret_whoosh" ID="{BA0A40D4-0DA8-4C65-B759-746143BD03F6}">
+							<Comment>Even - Sound of turrent flying</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{F8A9203C-F578-4797-83A6-4C3E3157E9B1}" ShortID="831272999">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="turret_whoosh" ID="{FE3EF3FC-0491-453F-AF97-1EE46F3724E5}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="turret_sparks" ID="{CA9531A1-BB25-4095-B8F7-B79896FCA0A2}">
+							<Comment>Event - Sound of turret crackling upon fire</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{2B7123C2-344F-4B2B-8729-3A4F8F49D9F6}" ShortID="175610082">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="turret_sparks" ID="{C8E1CEAF-8FEE-421C-9254-EB41A82CE8F4}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="flaming_engine" ID="{FC74E842-08C0-4B81-930A-56F39B303DFC}" ShortID="534799657">
+					<ChildrenList>
+						<Event Name="flaming_engine_medium_pc" ID="{23DB2B25-A030-4564-9761-94019D9506B9}">
+							<Comment>Event - PC Engine on fire MEDIUM</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{64332AA4-1159-4321-8DBC-736C9D08C642}" ShortID="368052994">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="damage_flame_pc" ID="{153249A3-D97C-4C25-8C96-9C38C2181F1D}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A6D6FD5A-D392-4A0E-A204-7596E5E0EFBB}" ShortID="1046165528">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="damage_flame_alarm_pc" ID="{7CA11D20-B9D2-4239-9F08-10B3602FDC91}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="flaming_engine_large_pc" ID="{22B2A775-909D-404D-8A6B-F7D47184E28C}">
+							<Comment>Event - PC Engine on fire LARGE</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{049F0326-071B-484E-9E74-54DD070CFC73}" ShortID="842066970">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="damage_flame_pc" ID="{1A16D64A-167C-48C3-9F6D-0C83C697E72C}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{26D985FF-8106-4BFA-8A8D-D9539C07F944}" ShortID="1025467947">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="damage_flame_alarm_pc" ID="{7CA11D20-B9D2-4239-9F08-10B3602FDC91}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="flaming_engine_small_pc" ID="{5EEF66A2-0E47-4CA6-88CC-2AF0B62BD5BF}">
+							<Comment>Event - PC Engine on fire SMALL</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{2E73E8C4-8900-45C9-B5E2-17EF68656455}" ShortID="659114252">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="damage_flame_pc" ID="{EA36FBE5-CFA3-4BBE-AC61-7F5D03191421}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{459AC890-ADDD-450F-9CD0-9069DEDEEF27}" ShortID="32411817">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="damage_flame_alarm_pc" ID="{7CA11D20-B9D2-4239-9F08-10B3602FDC91}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="flaming_engine_large_npc" ID="{88744476-7498-499A-8646-0272B72184FA}">
+							<Comment>Event - NPC Engine on fire LARGE</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{0828289C-01CF-45CE-87E8-22D191ABCDC7}" ShortID="373288630">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="flaming_engine_large_npc" ID="{86B7858F-629E-41C2-A0B6-3B0976AC2476}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="flaming_engine_medium_npc" ID="{DEDF660B-0484-4369-8896-30E661742BFC}">
+							<Comment>Event - NPC Engine on fire MEDIUM</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{6F0D1184-0C0D-40E4-9D0C-E07496633BD1}" ShortID="574012219">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="flaming_engine_medium_npc" ID="{F6B90830-CCC6-4D6D-BA34-2F29A0091D94}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="flaming_engine_small_npc" ID="{6AB1E988-9C43-40BC-AB9A-E8312EDE684C}">
+							<Comment>Event - NPC Engine on fire SMALL</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{B57FF653-ED54-4794-B2AA-3EAEE4BA3C45}" ShortID="280721288">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="flaming_engine_small_npc" ID="{100760EE-1762-4DE3-8707-8F0FBB2E6F98}" WorkUnitID="{7C6A45E7-DF98-449F-943B-3EC51F6E1209}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

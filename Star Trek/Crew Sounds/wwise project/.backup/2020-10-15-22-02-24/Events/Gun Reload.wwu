@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{258FCDEE-B4FE-42C2-8FEE-6A41D76BDD47}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Gun Reload" ID="{258FCDEE-B4FE-42C2-8FEE-6A41D76BDD47}" PersistMode="Standalone">
+			<Comment>Gun reloading</Comment>
+			<ChildrenList>
+				<Event Name="gun_rld_85_107mm" ID="{9FAC5AD6-4AB2-49E2-BB08-A5BDD345FFD9}">
+					<Comment>Event - Reload sound of a Main caliber gun</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{21607047-97A8-4521-BE0B-3041B7B6C818}" ShortID="675455404">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gun_rld_85_107mm" ID="{4C1D08F4-CCE3-400F-B6AC-28562DDE54A6}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="gun_rld_50_75mm" ID="{4AFE9AEF-74C8-4727-B3BC-FF7B91C8C7E0}">
+					<Comment>Event - Reload sound of a Medium caliber gun </Comment>
+					<ChildrenList>
+						<Action Name="" ID="{AE50FA6F-B0C5-4EAA-B102-A3B3734713F5}" ShortID="881055852">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gun_rld_50_75mm" ID="{11D3A0FA-85B9-4A9C-A13C-0167D3D6D314}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="gun_rld_20_45mm" ID="{BEF34523-CEC9-4344-BFB8-CDB8FEA4EDFF}">
+					<Comment>Event - Reload sound of a Small caliber gun</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{BDF6D73E-E92E-4721-B0FE-A86FB3D4BA99}" ShortID="1055041081">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gun_rld_20_45mm" ID="{5CC6CFA4-5B12-4960-9E24-7C2A5295FA69}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="gun_rld_12_25mm" ID="{68CC51DF-8DE5-41C7-B79C-FBB39A5047AE}">
+					<Comment>Event - Reload sound of an Automatic caliber gun</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{77CBB3AC-E31F-450E-A733-5AAF31261722}" ShortID="273277329">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gun_rld_50_75mm" ID="{11D3A0FA-85B9-4A9C-A13C-0167D3D6D314}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="gun_rld_115_152mm" ID="{A3B2BE6A-B444-4785-9FD5-4C51192E1D70}">
+					<Comment>Event - Reload sound of a Large caliber gun</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{D3CF7B50-6224-4388-A822-EC57340F4FB2}" ShortID="592759576">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gun_rld_115_152mm" ID="{BB2F4CE1-9D5E-4CC4-915E-9939B9C39FBA}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="gun_rld_155_170mm" ID="{406BFD83-445E-4C23-9E5F-78ABE57776DF}">
+					<Comment>Event - Reload sound of a Huge caliber gun</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{D1F2831B-8C72-419E-A9C1-6271D96D98A7}" ShortID="1067425811">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gun_rld_155_170mm" ID="{87C869DD-0FA9-4F0D-A438-725148247AC8}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="Autoloader" ID="{EF8DCB27-BA7A-4ED7-8D9D-0276B89715BF}" ShortID="160595806">
+					<ChildrenList>
+						<Event Name="gun_rld_autoloader_full_almost_complete" ID="{755C0B89-1D99-4149-88D6-07F8707B5467}">
+							<ChildrenList>
+								<Action Name="" ID="{5ED6CF50-328F-4998-9098-FF676B07FB60}" ShortID="757688478">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_autoloader_reloading_long_loop" ID="{64B5D7C8-5B86-47FA-8C04-2420C2C4FF01}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_rld_autoloader_long_oneshell" ID="{277AA6BC-9225-4047-B2B3-2C687A9E26B5}">
+							<ChildrenList>
+								<Action Name="" ID="{451634F4-4D9C-406B-88C4-4B8774F81E43}" ShortID="84556027">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_autoloader_reloading_long_oneshell" ID="{963ABC9E-2C60-45B4-A542-8101747147C9}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_rld_autoloader_full_complete" ID="{E14E3261-AF86-4F7B-9420-AC27AC0C2746}">
+							<ChildrenList>
+								<Action Name="" ID="{43BA84AC-8A21-4A69-9354-891B4C80072E}" ShortID="585817694">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_autoloader_reloading_long_loop" ID="{64B5D7C8-5B86-47FA-8C04-2420C2C4FF01}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9D00A079-FC54-4225-AB5B-6854B4BB5716}" ShortID="15637552">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_autoloader_reloading_long_complete" ID="{0E71B881-2C1A-4517-A7F3-780532E2F49A}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_rld_autoloader_short_oneshell" ID="{D24B92DA-BDA1-4FCC-971C-B309A050FAAB}">
+							<ChildrenList>
+								<Action Name="" ID="{03E523D9-A630-4088-BAE6-FEEB395D4997}" ShortID="1041584184">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_autoloader_reloading_long_loop" ID="{64B5D7C8-5B86-47FA-8C04-2420C2C4FF01}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C3D2A029-DAD7-416E-9062-6AA5F2E12A13}" ShortID="374143989">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_autoloader_reloading_short_oneshell" ID="{5EC12B4C-4C3D-41E2-9133-CC088FEA6F3E}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_rld_autoloader_short_lastshell" ID="{4048E429-7034-426B-BDDB-F0A3D6FB493E}">
+							<ChildrenList>
+								<Action Name="" ID="{8135109E-5130-4AE4-9AE5-7AAC74C357D6}" ShortID="379658987">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_autoloader_reloading_short_lastshell" ID="{8F6CCA44-2744-4AB3-9B68-F6909220EEA9}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_rld_autoloader_long_start" ID="{C2A9E6AB-8EFF-463E-857C-DF820BC503C8}">
+							<ChildrenList>
+								<Action Name="" ID="{444C5513-AF96-4D3C-B9CA-DE58C6853A80}" ShortID="756719560">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_autoloader_reloading_long_start" ID="{B3AFA93A-7F5C-411C-81A5-EDCC6608C9C4}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_rld_autoloader_no_enough_shells" ID="{73C82FD0-B0F6-43C1-B141-B3424ACF52FB}">
+							<ChildrenList>
+								<Action Name="" ID="{FC41CF3A-B231-4F23-8AEC-B54C2C02F55E}" ShortID="115712623">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_autoloader_no_enough_shells" ID="{161EBF9C-26D6-4123-BB5E-711A625A26D7}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_rld_autoloader_shot_fail" ID="{480E5868-E4B3-4629-BD69-78B1E4A57CD6}">
+							<ChildrenList>
+								<Action Name="" ID="{050DE987-1AE3-48F4-8729-9EF9286B5856}" ShortID="656586431">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_autoloader_shot_fail" ID="{BC2F15D3-590F-42DB-AE48-D5CADBE83D10}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Cylinder" ID="{9D3CBA53-3236-41D6-A0EE-BEBD10995D4A}" ShortID="999250217">
+					<ChildrenList>
+						<Event Name="gun_rld_automat_reloading_long_loop" ID="{837B2E2D-55EB-4CD7-9CA7-9EA576F7B9B4}">
+							<ChildrenList>
+								<Action Name="" ID="{6B753E0F-B597-4246-9881-31943D57005C}" ShortID="344540161">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_automat_reloading_long_loop" ID="{05EDB952-EA9B-4EED-82F7-33601721496A}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_rld_automat_reloading_long_oneshell" ID="{66FF07D2-137E-406D-B159-DE81DC7824D8}">
+							<ChildrenList>
+								<Action Name="" ID="{4643DA0E-1940-4983-8E7A-61C1740F5716}" ShortID="144609561">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_automat_reloading_long_oneshell" ID="{F679E6A4-D32C-4D23-BFA6-7A7230B7CDEA}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_rld_automat_reloading_long_loop_stop" ID="{FEA2E9C6-8A11-4B04-851B-3CB6D6232D2D}">
+							<ChildrenList>
+								<Action Name="" ID="{A31269EE-13D8-4221-810E-06D9CBAB66C1}" ShortID="339008413">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_automat_reloading_long_loop" ID="{05EDB952-EA9B-4EED-82F7-33601721496A}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_rld_automat_reloading_short_oneshell" ID="{12D6E92A-E633-4623-9C7B-10F135C75F68}">
+							<ChildrenList>
+								<Action Name="" ID="{20D7A167-952B-42AE-97EB-F5BF5CCAF3BB}" ShortID="892186669">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_automat_reloading_long_loop" ID="{05EDB952-EA9B-4EED-82F7-33601721496A}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{29B01F14-1662-45E5-B46F-30311ECAC335}" ShortID="106952519">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_automat_reloading_short_oneshell" ID="{E46D967B-77EF-4669-88A3-3AABF8676EB1}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_rld_automat_reloading_short_lastshell" ID="{7F691246-EB2F-43CD-B7C0-5470495A3CE7}">
+							<ChildrenList>
+								<Action Name="" ID="{8C948E3E-73BD-40E4-96AC-50D1A9EBA00A}" ShortID="422653045">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_automat_reloading_short_lastshell" ID="{5B9D2DAF-4CAB-4DD4-AE20-8A445138A9D0}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7034E88B-1CEA-4CCC-9FE4-00F164BF9D14}" ShortID="620642496">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_automat_reloading_short_oneshell" ID="{E46D967B-77EF-4669-88A3-3AABF8676EB1}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_rld_automat_reloading_long_start" ID="{A3126E0F-7CA1-4C12-9C9C-5F092929CC88}">
+							<ChildrenList>
+								<Action Name="" ID="{B071DD92-ACC8-49BC-89A0-A70FA4524B76}" ShortID="979699037">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_automat_reloading_long_start" ID="{D521A3EF-E0F3-4AEF-8294-70C1FB29FC29}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_rld_automat_no_enough_shells" ID="{93BA7F1D-3F3D-4A4A-8FF8-3FA88AAEBBB8}">
+							<ChildrenList>
+								<Action Name="" ID="{CF1675DF-C42E-460B-8A6C-DEA6E8D4DF4C}" ShortID="145870606">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_automat_no_enough_shells" ID="{98F3E52D-1A06-41E6-A589-587B5F00D790}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gun_rld_automat_reloading_long_oneshell_last" ID="{D0EA33A7-A10F-46D0-9B95-EE4B28381A83}">
+							<ChildrenList>
+								<Action Name="" ID="{F5B9F642-B2AE-4212-AF35-0609AEE011AD}" ShortID="222790180">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="gun_rld_automat_reloading_long_oneshell_last" ID="{4ECCA9C0-684B-4BFA-AEE8-B5730BF73EDB}" WorkUnitID="{78E578AA-5E16-4B95-A9C2-5EB015AE0C49}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,1840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B8424251-D94B-4427-BF66-A85D3ACABAE7}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Voiceover_old" ID="{B8424251-D94B-4427-BF66-A85D3ACABAE7}" PersistMode="Standalone">
+			<Comment>Voice notifications</Comment>
+			<ChildrenList>
+				<Folder Name="notifications_vo_old" ID="{D03DDD48-FF7F-4C74-A4B3-176E3DD04E58}" ShortID="850003353">
+					<Comment>Voice notifications</Comment>
+					<ChildrenList>
+						<Event Name="vo_ally_killed_by_player_01" ID="{6969568C-4664-4460-9478-55B0CA64655E}">
+							<Comment>Event - You have destroyed an allied vehicle</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{322E1010-F2EC-425F-993E-A77616B17687}" ShortID="542399624">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_ally_killed_by_player" ID="{48624432-38C8-4310-A7B9-1F93269001E7}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DAF1A5F8-E745-442E-8F4C-738E2625AC3A}" ShortID="900155350">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_ally_killed_by_player" ID="{70E147BB-A633-4283-8D2D-38189A6B980A}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_ammo_bay_damaged_01" ID="{45421B23-FB27-4193-BDA9-DBB516006D11}">
+							<Comment>Event - Ammo Rack is damaged</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{8A69CC4B-95A6-4676-9B9A-1C64E35455D2}" ShortID="549302200">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_ammo_bay_damaged" ID="{6FEC4733-22C8-4641-B9EA-9FB9940F201F}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4419A817-6B85-44A7-BFA1-798ACF089D8A}" ShortID="764693665">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ammo_bay_damaged" ID="{C45E17E8-DFAF-4DBF-91DE-C19BFE89F9B2}" WorkUnitID="{E44AA8E0-0104-42AD-A2CB-DAF85C6ED70A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9DCA1E87-3F21-4017-BFD0-5B31B32FB909}" ShortID="1066157080">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_ammo_bay_damaged" ID="{DA00F6B3-E950-48B8-B350-1E13A0777B6A}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_armor_not_pierced_by_player" ID="{74CD5F4A-1675-4AE6-A466-BF781CCA45FF}">
+							<Comment>Event - We didn't penetrate the armor</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{AC79D729-017E-4074-81A3-4F2514813048}" ShortID="1068808720">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_armor_not_pierced_by_player" ID="{B41C4701-2B3A-4E0A-97AB-939F259EA073}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{FBDC13FC-A71B-4C1F-8AAF-008CE7E08689}" ShortID="566372136">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_armor_not_pierced_by_player" ID="{FE9B1ECE-4793-4D5F-8A54-A72D8AF1ABCB}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_armor_ricochet_by_player_01" ID="{E85489E1-329C-4DEC-BEB6-B679457F6871}">
+							<Comment>Event - Ricochet</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{80750743-4BAD-41F2-858E-C911D0FD6795}" ShortID="135489990">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_armor_ricochet_by_player" ID="{19128DBC-6F1C-4FBB-9F5A-FE163AC28DBA}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{33DCD91B-818A-436E-90B8-62E47A7151D7}" ShortID="730598061">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_armor_ricochet_by_player" ID="{8C702A4C-63E5-40EB-85B4-BB5C52F81586}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_commander_killed_01" ID="{92B48457-C218-4AC1-A306-C27EE29BA70E}">
+							<Comment>Event - The Commander is down</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{0E9D9653-3A06-4646-987D-FDB07936B74C}" ShortID="884423167">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_commander_killed" ID="{013FE144-C0BC-45F3-BCD3-73024A892BD2}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F92AF86E-64E0-4303-80DA-FE226D61248D}" ShortID="236741152">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_commander_killed" ID="{2FECA05E-0B04-41B4-B61B-5C268A175114}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_driver_killed_01" ID="{F7884A83-E61C-41CB-BB37-26CEEAF10EDB}">
+							<Comment>Event - The Driver is injured</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{78EAB3A3-63A2-416E-864E-E83BB5D69273}" ShortID="442259046">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_driver_killed" ID="{D1FE2519-6327-48A7-8FE9-945C401C8CD6}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9294067E-DC3D-4987-859E-929E666B0F9A}" ShortID="16641827">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_driver_killed" ID="{CCE36FEA-5632-4EC0-AD76-752B6B88F3EF}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_enemy_fire_started_by_player_01" ID="{FAC94916-0D4F-4459-8EE0-D0BCEBBEB693}">
+							<Comment>Event - The enemy is on fire</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{057119E0-CB50-4B5D-B7DC-06AA3824E587}" ShortID="743998260">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_fire_started_by_player" ID="{7A44A1C7-4748-4C25-920F-60F4EEE04C2D}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2978F733-E5F3-4056-99CE-5BE4D3477134}" ShortID="980658830">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_fire_started_by_player" ID="{E1A0AC76-5E6D-45C8-A5FC-81F0089EFC75}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_enemy_hp_damaged_by_explosion_at_direct_hit_by_player_01" ID="{9324DA8F-C617-4A80-8B59-8B12ED2358B7}">
+							<Comment>Event - Critical hit</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{E94CF6A3-3902-4A64-A51A-F8E984AA28B0}" ShortID="613173927">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_hp_damaged_by_explosion_at_direct_hit_by_player" ID="{80BF6D00-4BA6-4DC0-A262-7672EFC33CF1}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8A347C0F-FB80-437C-A730-FF3FCADDBB2F}" ShortID="322114197">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_hp_damaged_by_explosion_at_direct_hit_by_player" ID="{07B8EAEB-470F-4005-84E9-512537B56EE2}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_enemy_hp_damaged_by_projectile_and_chassis_damaged_by_player_01" ID="{1BEB357A-F112-492A-A546-916A091F314D}">
+							<Comment>Event - Penetration</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{262DC6B6-01B9-4F97-BEB4-845891AD531F}" ShortID="637151091">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_hp_damaged_by_projectile_and_chassis_damaged_by_player" ID="{9A229068-03D3-4A8F-A283-0EE58A67125A}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BD81C03F-E75F-4681-8CDD-6525888F9CEC}" ShortID="799005122">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_hp_damaged_by_projectile_and_chassis_damaged_by_player" ID="{6C7CA963-9203-4C51-8003-7D7DE2F7237B}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_engine_functional_01" ID="{A9390B25-8813-47B2-8C62-20566F6D55D1}">
+							<Comment>Event - We've repaired the engine, but we can't go very fast</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{D5EDF687-92F0-4C28-90EE-E85CD409C895}" ShortID="1051850335">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_engine_functional" ID="{6B6B2547-A552-4575-9856-BD1239C5BC63}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2E152899-2B01-43DB-B14D-BFB51857C330}" ShortID="18999265">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_engine_functional" ID="{09D6F6B2-C95F-4518-97EC-14B4E32D3C35}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_start_battle_01" ID="{E1E3167C-453C-463C-ABA4-B8EE1F7EEFB1}">
+							<Comment>Event - Move out (Let's get this show on the road)</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{074D4683-530E-4F7C-AF83-AF43D3C479F4}" ShortID="147545535">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_start_battle" ID="{4D294834-C100-4E66-AB3D-7F88BA8625CF}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7B9D80CB-4B82-4BD3-BEC6-29C70BAA0C5F}" ShortID="649194950">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_start_battle" ID="{17039595-E462-4DE4-AA07-AC939D3F12DF}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_engine_damaged_01" ID="{392F9886-1EE8-4598-A787-65F463A6EB25}">
+							<Comment>Event - The engine is damaged</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{16E60F70-1926-41DD-8D7A-18F8BCD7DB04}" ShortID="581277574">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_engine_damaged" ID="{66097483-A57C-4C2B-809D-6177CF226EA9}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0B6C9444-EC4A-4ECE-ADFD-5AC58DC176B3}" ShortID="598591985">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_engine_damaged" ID="{F747918E-18C3-45C7-B9DC-A491410C3F03}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_radio_damaged_01" ID="{247A7B94-B03F-43FC-9059-98867C37D1BC}">
+							<Comment>Event - The radio was hit</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{0271C522-FF84-44B3-B987-6563C01B9A5D}" ShortID="694891937">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_radio_damaged" ID="{76993A78-2162-45F5-A959-3EB234F10EA1}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C9C402E1-C0BD-4644-8781-91580F1C6976}" ShortID="150280367">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="radio_damaged" ID="{4FC6DB76-5B69-4EAC-A9B7-152396902971}" WorkUnitID="{E44AA8E0-0104-42AD-A2CB-DAF85C6ED70A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5742BDDE-56AB-4E88-960F-7EF53B162BE2}" ShortID="273486716">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_radio_damaged" ID="{BAA51AE4-3EF2-40FB-8710-0BA01D9D2F6A}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_enemy_no_hp_damage_at_no_attempt_and_chassis_damaged_by_player_01" ID="{8A467B58-E732-4B43-9BE4-DDD304836F43}">
+							<Comment>Event - Critical hit</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{07B75EB4-7AD4-411D-8A28-A949E37D19A5}" ShortID="456295837">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_no_hp_damage_at_no_attempt_and_chassis_damaged_by_player" ID="{089627AB-C28B-40B6-8E6E-7EED9F77AD55}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F9AD675B-71E6-4788-AEB9-84C44AD0240B}" ShortID="897926866">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_no_hp_damage_at_no_attempt_and_chassis_damaged_by_player" ID="{74B16D2A-1374-4943-9838-E8F406BC2AA3}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_enemy_killed_by_player_01" ID="{DF8C4EDC-A299-4EB6-A7CB-E7DDFB156B09}">
+							<Comment>Event - The enemy is destroyed</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{FFC95290-C124-452D-8FBD-805FEB46A0C7}" ShortID="122737691">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_killed_by_player" ID="{E8EA241E-44E6-4270-B321-1013379B1149}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{83532988-92F9-47C4-BA38-34F2C9B03977}" ShortID="749164014">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_killed_by_player" ID="{FB630034-847B-4045-BBF7-0B0DBD85BBB1}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_track_functional_can_move_01" ID="{7D2472A2-20A0-4393-8FC6-6C73D618B3C1}">
+							<Comment>Event - We fixed the track! Get going!</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{F46067ED-5386-4292-8100-5B4313A2621D}" ShortID="236278794">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.15"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_track_functional_can_move" ID="{E3FF5A09-34D6-4F4E-8395-E4595378ED87}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5C0B0E53-1024-4C75-9756-D61D54D69B24}" ShortID="637161772">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_track_functional_can_move" ID="{9B4387CA-D3B2-41B7-BCDD-FDF37DF2E2AE}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_vehicle_destroyed_01" ID="{483C19A0-16AC-4C48-A37E-66E5D7645E3A}">
+							<Comment>Event - The vehicle is destroyed</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{EC2CBB89-807A-43A4-9FA2-B7DB7EA7E5CF}" ShortID="454435993">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_vehicle_destroyed" ID="{C3C334C2-ABD1-47B2-8794-235B2C336C78}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E653ECF6-F531-4E4D-AAB5-AE43BDDF73B6}" ShortID="50932907">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_vehicle_destroyed" ID="{5CE00FD6-7EAF-42EF-8B12-F6EDFCA39408}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_gun_damaged_01" ID="{FF55E4EB-B78A-44F3-86A2-50ABC9FA6177}">
+							<Comment>Event - Our main gun is damaged</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{A7C88F93-A13D-45B3-A41F-CF196E49B228}" ShortID="616704670">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_gun_damaged" ID="{E005E90F-91FC-4898-96FB-F8FA32BA5500}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4D1DC60B-F3C6-4CBB-8B63-E592F19D1CB7}" ShortID="691692124">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_gun_damaged" ID="{3AC44179-8A41-49BE-B33B-6BD06FB1F17C}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_track_functional_01" ID="{84F2C281-8B03-49BC-8168-6C0DDF7A4D60}">
+							<Comment>Event - We fixed the track</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{0A34F5B7-76DC-4A64-8602-96BE8509C7CB}" ShortID="935802961">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_track_functional" ID="{A0AB4460-0D7E-486A-B62F-18637F2FC7F5}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F5ACFD82-2052-4918-AC65-A1A8236762DF}" ShortID="237174278">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_track_functional" ID="{45DD4591-4B7F-43A5-81D2-47A4BC9469F4}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_surveying_devices_functional_01" ID="{FCDC1E9B-2633-4C33-8A27-543D4D11DF64}">
+							<Comment>Event - Optics repaired</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{B8C0C21B-6813-4CB4-83C7-F69B22BB5FED}" ShortID="463926593">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_surveying_devices_functional" ID="{905C927D-6602-4771-B947-EE2D55A6B9BC}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9B140D91-A7BC-4F54-85A8-E6100C8991BD}" ShortID="557647714">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_surveying_devices_functional" ID="{5EDD4D7B-3A15-49EE-956F-F3B09466A55E}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_enemy_no_hp_damage_at_attempt_and_gun_damaged_by_player_01" ID="{D6F0580A-95D6-4215-8E20-66FD148766F5}">
+							<Comment>Event - We didn't penetrate the armor</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{B19DCD0F-BA0C-4F82-B24A-F73E13626174}" ShortID="871204145">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_no_hp_damage_at_attempt_and_gun_damaged_by_player" ID="{3857B44F-80DD-442D-A1DB-52C05F9F7A20}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E5A1CEA3-235A-42BE-9B5F-A2359E45A213}" ShortID="1060979167">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_no_hp_damage_at_attempt_and_gun_damaged_by_player" ID="{7F53ABD0-33E6-4AB4-8781-8299FF91C7AB}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_turret_rotator_destroyed_01" ID="{F0ECC000-ACD0-49F1-9A01-3A925B1BB1A4}">
+							<Comment>Event - The turret controls are busted, we cant turn it</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{BB3CA7B0-9BBA-42E1-AB49-6DCFDDDC962D}" ShortID="462856754">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_turret_rotator_destroyed" ID="{19B8371B-5F68-4601-B497-C548F067A349}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B68856EB-15FD-4C54-BAE0-E880135E1D18}" ShortID="252604809">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_turret_rotator_destroyed" ID="{312268FC-3E98-4CBA-A912-3443E6C3E6FF}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_fire_started_01" ID="{34F32E00-1343-41D2-9EFE-7B0441844CE0}">
+							<Comment>Event - We're on fire</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{4824D6B6-2347-47BF-9F69-3C7E04C46BCC}" ShortID="851931199">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_fire_started" ID="{1EB11FFB-FF6D-4C21-9430-93BD00DF63A8}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4E32F250-3D42-4565-B49C-B57013CFF3DC}" ShortID="751549121">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_fire_started" ID="{6F02B2AD-07ED-4032-8B03-0BE94D7829CE}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_gun_functional_01" ID="{E6274837-6550-4540-A9BF-2E3C6961B9B0}">
+							<Comment>Event - We've fixed the main gun, but it is still not very accurate</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{6DD2B98C-DBFA-466F-9199-A20772FE700A}" ShortID="289268485">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_gun_functional" ID="{F2549748-FE2A-44F5-94C2-B00F10DE5E0E}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{797F5C49-CEE2-468D-8622-8200618D5379}" ShortID="80421571">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_gun_functional" ID="{B6B61AD2-8AB5-4DFB-AC01-5129D28D110D}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_track_damaged_01" ID="{99664736-87F4-4001-AC37-D168301F7D36}">
+							<Comment>Event - Track hit</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{BA2EF0E1-C9C1-4F64-B07C-6849D9019114}" ShortID="407235536">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_track_damaged" ID="{7A5CABDF-2EC8-4571-B339-54F97E9EA21A}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4FBABF58-12F0-44CB-AB32-EDB96E9F0EF1}" ShortID="251659859">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_track_damaged" ID="{2013ADB9-A9F4-4B02-A763-7FD40748799F}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_radioman_killed_01" ID="{31DDDA5F-D79D-4204-9056-8C184480A675}">
+							<Comment>Event - The Radio man is bleeding</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{490008ED-9671-4C88-BA47-6E422AA0115F}" ShortID="874981875">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_radioman_killed" ID="{EC3F96A5-FDFE-44B8-A9B0-C07D35E87F9D}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0A8B9799-06BD-4403-94CD-9BDB4649F216}" ShortID="168257657">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_radioman_killed" ID="{FC7E1860-5008-4B93-8CF7-598EAF4A6176}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_target_lost_01" ID="{2917D537-3E2A-45F3-9918-0D19DB5E318C}">
+							<Comment>Event - We can't see the target</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{BBE1CDE1-E85D-4985-B8A3-0D5C3549550B}" ShortID="664743445">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_target_lost" ID="{603A440E-4F99-4AD8-A36F-4E7B4F7E8350}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4E19A208-7218-4E13-86C1-E531E601D78E}" ShortID="931102399">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_target_lost" ID="{51DD64F0-DB11-4608-8442-47FD3BEC2368}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_enemy_no_hp_damage_at_no_attempt_and_gun_damaged_by_player_01" ID="{45F823E6-0D4F-455F-929F-7746EE08E9F3}">
+							<Comment>Event - Critical hit</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{73AC8B47-496E-4273-BB3A-A1D01A4B65FD}" ShortID="52421025">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_no_hp_damage_at_no_attempt_and_gun_damaged_by_player" ID="{D2CAAF6D-FF99-4B37-A55E-8BE5E97B0EC7}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{260C1BAC-E931-48A3-AB3C-B2E777E99C5A}" ShortID="982541273">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_no_hp_damage_at_no_attempt_and_gun_damaged_by_player" ID="{B49C409E-5C2E-4193-A2B1-18AE25E001D7}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_enemy_hp_damaged_by_projectile_by_player_01" ID="{32C39CDF-393A-4006-98C4-7923D6CC2308}">
+							<Comment>Event - Penetration</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{3F22B51B-7BE6-40C1-AAC6-99A2A2F7F24E}" ShortID="939545472">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_hp_damaged_by_projectile_by_player" ID="{E39BF7E8-DF51-4ABC-9FF2-23836B58A9D7}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E77DC409-0EC8-4034-ACD9-7E1A7939F29A}" ShortID="270095822">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_hp_damaged_by_projectile_by_player" ID="{1B9F4B01-610F-4FDC-A041-053AF02DF7F6}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_enemy_no_hp_damage_at_attempt_and_chassis_damaged_by_player_01" ID="{806081D9-E986-4A5F-B92D-871ED01DC947}">
+							<Comment>Event - We didn't penetrate the armor</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{DD696B52-CF6C-4FAA-AE45-90B2744A1388}" ShortID="610997600">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_no_hp_damage_at_attempt_and_chassis_damaged_by_player" ID="{B3B0F634-B82D-4D86-8772-328B179AD61D}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{67E1F7DC-04D5-4AC0-BC60-C7D2C27041F4}" ShortID="1012400995">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_no_hp_damage_at_attempt_and_chassis_damaged_by_player" ID="{092C491A-4527-4D16-9A3B-07CABE44C9BD}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_target_captured_01" ID="{59EF87E7-A7CC-4358-A0A9-A70A53A0CC68}">
+							<Comment>Event - We locked on the target</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{17274F3F-57F2-4D6D-BF56-4A70DB687FA3}" ShortID="593345973">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_target_captured" ID="{AEF78605-DD2D-47B4-9C4F-C9293522E988}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1201678A-B084-4E02-B2B2-B0437066257F}" ShortID="1027003166">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_target_captured" ID="{C9D0B6AE-CC1B-42A5-A07E-624575E8B7F0}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_fuel_tank_damaged_01" ID="{312EB5FE-E7F5-4A27-AA45-402C7F1FF16D}">
+							<Comment>Event - Our fuel is hit</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{4D8AAE9E-839C-46AD-97AD-782868A3F60D}" ShortID="9195955">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_fuel_tank_damaged" ID="{4E3CAA89-79AB-4348-9431-6718283F4785}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{56BDB75C-F1E7-4489-8E51-5E6BC1B4567A}" ShortID="614128935">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fuel_tank_damaged" ID="{8660AC4E-7552-4751-8CBF-503425344A6F}" WorkUnitID="{E44AA8E0-0104-42AD-A2CB-DAF85C6ED70A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6935FBCA-1A6F-4975-BB6B-DC2914AB13D5}" ShortID="798986983">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_fuel_tank_damaged" ID="{BFE80234-AE9C-486F-9B52-3F3B2632BE30}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_enemy_killed_01" ID="{E4504866-DE43-4FCA-B431-D3437538006E}">
+							<Comment>Event - Enemy vehicle destroyed</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{EF290953-FC76-47B5-A110-320CF4C46D75}" ShortID="406934883">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_killed" ID="{FCD2FDE6-8419-4E67-BF3F-D6FA99457666}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BD25A1A7-BFB0-4E92-BF51-B98CE52E1581}" ShortID="459146401">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_killed" ID="{4F133E85-CA58-4A05-B2AB-026A56638D2D}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_surveying_devices_crit_damaged_01" ID="{BA0CFCDC-4BC1-41A4-9333-9348ACBEE557}">
+							<Comment>Event - The periscope is damaged</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{BF6A8D44-93CE-43BF-96F4-C9D1608780F4}" ShortID="164112738">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_surveying_devices_crit_damaged" ID="{62C181DF-06AF-4CA9-9F41-19A35A6B1F55}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{137DC3D5-207E-40BC-954A-A0CD55EA69E8}" ShortID="7023471">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surveying_devices_destroyed" ID="{BEF34718-0987-4CDA-8BAA-5EBD8D24E23D}" WorkUnitID="{E44AA8E0-0104-42AD-A2CB-DAF85C6ED70A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D8E162F1-511C-4A34-BE62-C88AC6C04D9C}" ShortID="913730467">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_surveying_devices_crit_damaged" ID="{1EBA4254-7A3A-458A-999B-CD523A41E216}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_turret_rotator_damaged_01" ID="{142F27C2-AE29-4055-A4E7-B390CAD824C2}">
+							<Comment>Event - The turret ring is damaged, we can barely turn it</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{EA6FF9A8-43CD-4C26-B22D-1D16AD5940D5}" ShortID="941851877">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_turret_rotator_damaged" ID="{9D67DC8C-4294-434D-A239-07938E024924}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{498DCE62-5688-498A-A844-D642967D2188}" ShortID="656483944">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_turret_rotator_damaged" ID="{D3755286-4FF6-4D59-9B52-6653C00C4B6A}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_gun_destroyed_01" ID="{F44ED66E-9BA8-4595-A2E5-B3535B39D471}">
+							<Comment>Event - The main gun is knocked out</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{D11EEB9E-2883-439F-93CD-F80349D51AC9}" ShortID="961112396">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_gun_destroyed" ID="{E8BD17CD-1F7B-48CD-90D9-20BDDC6ECE58}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{279E1EEB-E722-4E1D-91D6-35AFF2AADA89}" ShortID="476599359">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_gun_destroyed" ID="{21E8AC16-17AE-43CE-B1CB-92A41CE87E37}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_damage_by_near_explosion_by_player_01" ID="{941D5AD3-5776-44EB-BE57-04202A85DA4A}">
+							<Comment>Event - That was close</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{42E7D9DA-30B9-4245-841C-FB7BBB421E11}" ShortID="91529967">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_damage_by_near_explosion_by_player" ID="{D226060E-C656-4CDB-950D-6F7A6F3A8B3C}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{03EDC76C-9910-4AF3-B69E-2FFB17E2614E}" ShortID="57286001">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_damage_by_near_explosion_by_player" ID="{F118B74E-1A3F-4EDD-9B67-50D84A86967E}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_damage_by_near_explosion_by_enemy_01" ID="{6FE380B1-775B-4A39-A230-DE71C8D3D43A}">
+							<Comment>Event - That was close</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{5C6D77E0-7CE6-436B-A654-F064DFA39665}" ShortID="651439662">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_damage_by_near_explosion_by_enemy" ID="{7852CB6C-57BF-4881-9F2D-3BF8312F70AC}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{98FCAFE9-9FB1-4390-8F26-9CE55C863F94}" ShortID="339682090">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_damage_by_near_explosion_by_enemy" ID="{90B57B1C-B69E-43F3-AD2B-3C5AC500BB3F}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_crew_deactivated_01" ID="{D4503D28-FF33-4A4F-AA22-F06E4D5315F9}">
+							<Comment>Event - Crew members are killed</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{EA316AE9-1628-4619-959D-4EFE929DEDCD}" ShortID="176146097">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_crew_deactivated" ID="{46688771-4CE5-4F78-8F9D-71BD1512BB5F}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{58F466CD-DF3B-475A-9E89-A83BE4A122DD}" ShortID="776012114">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_crew_deactivated" ID="{6DB63D35-F9B9-4F46-8636-4AC1DD7A7EA4}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_track_destroyed_01" ID="{1F92C455-59F6-4178-A703-B6271F93FC6D}">
+							<Comment>Event - We're immobilized</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{584F1B48-1F46-47CB-8917-FBB9FD774A9E}" ShortID="457993897">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_track_destroyed" ID="{2D90BA19-E06F-447F-B0D8-0C60DD999CCD}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A413E688-AF92-4C44-BB5B-25D7A238B83C}" ShortID="225616308">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_track_destroyed" ID="{C653F64D-3CEF-463D-9888-279D87BAE5CE}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_gunner_killed_01" ID="{0DE3301B-97E9-42C7-A870-945062C4EE2B}">
+							<Comment>Event - The Gunner is dead</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{B636AD66-F5CF-48B0-86B6-501F476BAF90}" ShortID="711367304">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_gunner_killed" ID="{A6EDFD05-C55D-413A-A25C-93B8EDE75743}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BAF2950A-6904-48D7-AAFC-4A8236367C22}" ShortID="675005020">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_gunner_killed" ID="{D29CEDF1-2036-46DB-BAE9-C7F843E627AF}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_enemy_no_hp_damage_at_no_attempt_by_player_01" ID="{E5559116-EB43-4260-8D2E-72D72FDBA1AF}">
+							<Comment>Event - Critical hit</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{8C11E8D8-B630-4A30-AC3B-A5151C202144}" ShortID="875486107">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_no_hp_damage_at_no_attempt_by_player" ID="{76F62B81-48A6-466F-A25A-5A01568D1FC4}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{942B49E8-A210-463D-840E-7E3A24AA60DA}" ShortID="1063370237">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_no_hp_damage_at_no_attempt_by_player" ID="{1A8EA7EE-803F-4BD4-966B-145C56A37394}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_engine_destroyed_01" ID="{39136F27-582A-445E-B6DD-D4B1D41CC812}">
+							<Comment>Event - Critical engine damage - we're stuck here</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{4B1D9472-8876-4351-AA91-87A6BE44FA43}" ShortID="18536043">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_engine_destroyed" ID="{71D61EB6-EB88-48CF-BC95-1098C82C3C7E}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{049BBACF-1693-47AC-A6D6-875E344BF105}" ShortID="81785845">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_engine_destroyed" ID="{6F77E636-C0C7-420A-B60F-9A4121FD3A78}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_loader_killed_01" ID="{67D7E451-978D-4ACE-85D3-0B4D84F50B8B}">
+							<Comment>Event - The Loader bought the harm</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{658D4339-E4B7-412A-BF7C-30C30C843310}" ShortID="746938153">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_loader_killed" ID="{4EE27ED6-4DB9-4769-A446-BE045C1B668E}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{81B0A3AB-B3C3-42A3-804D-EF1027381904}" ShortID="572684901">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_loader_killed" ID="{28AFB3FE-6101-426C-9F4F-F14762E48E40}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_surveying_devices_destroyed_01" ID="{BAB43F07-929D-4C19-A75F-546CCFF5C2A8}">
+							<Comment>Event - We can barely see through the scope</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{603BD94C-2738-4E9F-B62F-E7B25C020812}" ShortID="631317985">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_surveying_devices_destroyed" ID="{BEDF2115-711F-403A-9950-F8857578DDF2}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{83A458C1-CD07-4A5A-9FFC-1FEB602F4F89}" ShortID="577559114">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surveying_devices_destroyed" ID="{BEF34718-0987-4CDA-8BAA-5EBD8D24E23D}" WorkUnitID="{E44AA8E0-0104-42AD-A2CB-DAF85C6ED70A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BF2C932E-4A40-4766-A52F-77C8D44F068C}" ShortID="879491731">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_surveying_devices_destroyed" ID="{85C48A04-BBBD-45A0-BBB8-21AB7AE840F6}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_enemy_hp_damaged_by_projectile_and_gun_damaged_by_player_01" ID="{904558E8-5BDD-4E8A-930D-BD5961E3374E}">
+							<Comment>Event - Penetration</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{FB81B898-9FD4-45DB-B5E4-82D4F2C4A694}" ShortID="925835719">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_hp_damaged_by_projectile_and_gun_damaged_by_player" ID="{F24ACA1F-2F7E-41E3-BE93-E74554CA13D9}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{75786A3F-CAC6-4410-BC15-902F198D098F}" ShortID="794020228">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_enemy_hp_damaged_by_projectile_and_gun_damaged_by_player" ID="{700DF87C-645E-40C2-AF12-161D6E3447A6}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_target_unlocked_01" ID="{A17DFF0B-6A19-4A9E-806D-25A35F24C458}">
+							<Comment>Event - Dismiss</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{87AED815-B699-47FE-B53E-B510D3EDB78F}" ShortID="1050105054">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_target_unlocked" ID="{497FBF31-4F46-4AB9-ADD5-8AEE14AC492C}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B109E8DF-6EE7-49E3-AB7C-A24B015FFED4}" ShortID="83794652">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_target_unlocked" ID="{02B0261A-0531-4DE7-83C7-3069DA3402AE}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_turret_rotator_functional_01" ID="{A311DEFC-B572-4D53-8DFA-1D4C5E03A2E6}">
+							<Comment>Event - We've fixed the turret, but it still not turning very fast</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{477D049A-2751-4D43-AF33-91888AD83EE1}" ShortID="933792087">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_turret_rotator_functional" ID="{38FB2206-53E0-4C2D-AAEA-B4003ECC76A2}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{96DC56DC-6B1D-49B8-B566-EB968EA743A4}" ShortID="877288463">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_turret_rotator_functional" ID="{115114C3-448F-42F8-8746-7BC8A0B6A395}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_surveying_devices_damaged_01" ID="{98BBB618-1A1D-42ED-A8D3-1EB8C274DD63}">
+							<Comment>Event - The periscope is damaged</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{2F05B705-4DDA-40AA-9970-53016638A909}" ShortID="153756387">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_surveying_devices_damaged" ID="{D911D963-A166-472C-9B96-8D8B7B2A6C34}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D3E1B8DE-E810-4354-B8D6-F56700E19F9F}" ShortID="604583712">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surveying_devices_destroyed" ID="{BEF34718-0987-4CDA-8BAA-5EBD8D24E23D}" WorkUnitID="{E44AA8E0-0104-42AD-A2CB-DAF85C6ED70A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DC28B4F7-7FB7-42E3-8C7C-A0B1F487486D}" ShortID="180166227">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_surveying_devices_damaged" ID="{FD772493-FD83-4ECB-AF01-96791E992405}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_fire_stopped_01" ID="{4E27AF1E-0EC4-4344-A91F-AA45FFECF774}">
+							<Comment>Event - The fire is out</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{89C76FA0-17C0-4173-809A-858EF700AFC0}" ShortID="672436724">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_fire_stopped" ID="{D23B0E6F-7B68-43D0-A4D5-771E3ECE8F5B}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8A41D624-94CD-4D59-AFF5-7A7990737813}" ShortID="91884238">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_fire_stopped" ID="{2092F399-0863-4E2F-B484-AB9388246C1E}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="notifications_dp" ID="{781D4B0D-189F-49FF-A4B5-C48EFDA284E5}" ShortID="27156003">
+					<Comment>Dynamic platoon</Comment>
+					<ChildrenList>
+						<Event Name="vo_dp_player_joined_platoon_01" ID="{7524AB0D-43A1-4EA6-A687-4B7E16D895FD}">
+							<Comment>Event - Player has joined a platoon</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{F141EE4A-AB9C-48DF-B729-D1B1CAC895D6}" ShortID="21438987">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_dp_player_joined_platoon" ID="{F0DFDE5F-4B28-47AA-B1BC-6310E9B7F23E}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_dp_platoon_created_01" ID="{02F3BB4F-008E-430C-9B91-9B56744D5AB4}">
+							<Comment>Event - Platoon has been created</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{3499AB1D-4C96-4C95-A6A4-1F53605D1DEA}" ShortID="891155834">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_dp_platoon_created" ID="{C287698B-BD5A-4318-8057-6B202E4EA367}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_dp_platoon_dismissed_01" ID="{69A03FB9-ADF8-40A2-8DD0-225F3D16E774}">
+							<Comment>Event - Detachment dismissed</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{28ADE912-0895-4353-82D2-7BE3190070AF}" ShortID="960475293">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_dp_platoon_dismissed" ID="{8CE0AD6E-8422-460C-A16B-4D2DBAF657A3}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_dp_platoon_joined_01" ID="{145609ED-4BB9-4847-B70C-4A05212540EB}">
+							<Comment>Event - You have joined a platoon</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{BE30A332-1FBC-4CFE-BE2A-1614C1CEDE2C}" ShortID="461689738">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_dp_platoon_joined" ID="{F9C84833-6346-4146-9536-8FBF46D291AB}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_dp_been_excluded_platoon_01" ID="{9E42A613-0451-4FFE-80DD-DB7D3A9E2CA4}">
+							<Comment>Event - You were excluded by the Commander</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{9EA533A4-1671-4499-BDAB-AFFB3586F0F3}" ShortID="162639582">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_dp_been_excluded_platoon" ID="{49994675-E19F-43F2-BE3B-2A7EA9807C6A}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_dp_assistance_been_requested_01" ID="{0DE5BDEE-07C8-498A-AB3F-90C55621364F}">
+							<Comment>Event - You are invited to join Platoon</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{2ED1628C-4610-4094-817C-5A0C543B8B6A}" ShortID="1008222990">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.65"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_dp_assistance_been_requested" ID="{EBF8E9F8-C14C-4B6E-AEE5-7F0857D1C85A}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_dp_left_platoon_01" ID="{95D7A859-8ED2-4CF5-8CED-4DB664B2C216}">
+							<Comment>Event - You have left the Platoon</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{F4167943-45F5-4A0E-8DA8-CB15DF4BCB26}" ShortID="156242159">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_dp_left_platoon" ID="{A69E7F45-C9AE-4FCF-9148-B44F84B0F840}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="notifications_flt" ID="{40F79E4C-7562-428D-ACDB-513DF49906C4}" ShortID="337338854">
+					<Comment>Rampage</Comment>
+					<ChildrenList>
+						<Event Name="old_vo_flt_repair" ID="{7B8E992C-F299-435C-A378-26320C692EE2}">
+							<Comment>Event - Repairs complete</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{D03E212B-AE77-4F81-AE75-141FEE06D3C6}" ShortID="1010093100">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_flt_repair" ID="{DD98C2F2-DDA9-4680-BF7B-B9A1D0A845EE}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_flt_take_flag" ID="{F5ED82A7-1FE3-4047-ACC7-DC50868A86ED}">
+							<Comment>Event - We've got the flag</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{7C5A243B-22B1-4579-9BE6-A0E65DA9438D}" ShortID="702664196">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_flt_take_flag" ID="{AD9B1047-372C-424B-9419-7AFB21E5A333}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_flt_deliver_flag" ID="{6B2E6785-922E-44A6-8AA5-F5A1D9884E23}">
+							<Comment>Event - Flag delivered</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{FBDC044F-B3F8-4D17-83F7-7D5DEAE27008}" ShortID="418946463">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_flt_deliver_flag" ID="{5EB15A97-3BD4-46B4-B0CB-DFEA82455BED}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_flt_enemy_take_flag" ID="{F7313A06-82D0-4EA3-9DC0-344E64B15F59}">
+							<Comment>Event - Enemy captured the flag</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{741333A2-7E6F-4843-B136-0D364F042BEC}" ShortID="815027451">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_flt_enemy_take_flag" ID="{3176E00C-FEAA-412F-B6BE-E83463B89065}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_flt_ally_flag" ID="{FED7E78A-7046-4DF6-B8BF-4B161DD403E7}">
+							<Comment>Event - Flag captured, cover me</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{A33FC931-ECC7-4963-A8A4-1FF7DA63DDBC}" ShortID="40856569">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_flt_ally_flag" ID="{2E9E1C27-CE11-4C38-B91F-30303A8D2FA7}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_flt_drop_flag" ID="{65030392-4A3A-484A-865A-4DA54714992B}">
+							<Comment>Event - We lost the flag</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{0BA2D28E-DF6E-460B-8B0D-DB5E5BDB5639}" ShortID="998349511">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_flt_drop_flag" ID="{DFE21453-AA26-4845-A0A8-308FF6F74F3D}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_flt_ally_captured" ID="{4C7782A1-6BAC-4414-8579-42C6695AA347}">
+							<Comment>Event - Flag delivered</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{EE40901B-56CB-4B4E-841C-0C4623BEE6CB}" ShortID="101628179">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_flt_ally_captured" ID="{AEE3EE28-F605-4555-91EF-470365073948}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="vo_flt_combat_reserve" ID="{63322562-3CB9-4BBE-A351-4E90B9025CC2}">
+							<Comment>Event - Combat Reserve received</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{59BD5672-F69B-4B54-B43A-4CD7A6202890}" ShortID="726323962">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_flt_combat_reserve" ID="{AD27E548-618C-4328-8277-8F609E008413}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="old_vo_flt_ready_for_action" ID="{A300CDA7-EC3E-4D6B-AA63-0255810CFFDE}">
+							<Comment>Event - Prepared</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{601CF22B-42FD-4BD4-8F19-2FE377E6E121}" ShortID="366685164">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="vo_flt_ready_for_action" ID="{A09CC522-115A-4C72-BED9-6589E39220AA}" WorkUnitID="{B8EA71B8-7255-4B42-BCFF-3DD3B3F46B6B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

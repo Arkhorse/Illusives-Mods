@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{07647DD8-2A57-456D-9D48-5DA0F17A1424}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Pass_By" ID="{07647DD8-2A57-456D-9D48-5DA0F17A1424}" PersistMode="Standalone">
+			<Comment>Tracers</Comment>
+			<ChildrenList>
+				<Event Name="psb_auto_NPC" ID="{5DAD8486-CBB9-4BCB-B001-151732FAE814}">
+					<Comment>Event - Tracer auto NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{C69D67FA-1854-4086-A1E3-BA35E1145F48}" ShortID="495360242">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="psb_auto_npc" ID="{FB626A4B-4962-4BE0-B015-FACA746D647F}" WorkUnitID="{D77221E6-E8F5-4910-B01E-286B743DB35F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BC0F23CE-F4C5-4946-8855-31FF7F2EE233}" ShortID="428275980">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="psb_auto_npc" ID="{FB626A4B-4962-4BE0-B015-FACA746D647F}" WorkUnitID="{D77221E6-E8F5-4910-B01E-286B743DB35F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="psb_main_NPC" ID="{FEE296E2-AB67-4A62-9AB1-9B232E6DE59C}">
+					<Comment>Event - Tracer main NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{5AF7A0A8-BA74-4E7D-96DF-6E780024E11E}" ShortID="454244515">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="psb_main_npc" ID="{88A70B94-AEA6-4B4C-84B6-9BBC0607BB7A}" WorkUnitID="{D77221E6-E8F5-4910-B01E-286B743DB35F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{133781F2-8E29-40D9-A1B3-DE7456A27391}" ShortID="723222068">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Delay" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="psb_small_NPC" ID="{A71B44A2-78D8-4696-994E-D00955A0DD8C}">
+					<Comment>Event - Tracer small NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{5F31D0E9-C815-401A-B6F8-10826F51080B}" ShortID="857468301">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="psb_small_npc" ID="{DEBC1325-0AAF-42F0-99AA-70904B06DB6D}" WorkUnitID="{D77221E6-E8F5-4910-B01E-286B743DB35F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7A2FEB22-9EF0-495E-9910-4C3ECD18994F}" ShortID="549699326">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Delay" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="psb_large_NPC" ID="{E5D224AB-02D4-48A2-8370-01922C0A05BE}">
+					<Comment>Event - Tracer large NPC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{E90AC129-4EB0-40B7-A818-AB83BCFD07A8}" ShortID="234370717">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="psb_large_npc" ID="{D617F287-549C-4A91-89C4-B1164DCC23D8}" WorkUnitID="{D77221E6-E8F5-4910-B01E-286B743DB35F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5A4E8161-7CC5-4A63-97F0-DBFFC16DA78D}" ShortID="461807436">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Delay" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="psb_main_PC" ID="{5C674321-7DF2-4291-83E2-156C318DBB5D}">
+					<Comment>Event - Tracer main PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{6845C2FB-CC0A-4BD9-BE84-93A83C811342}" ShortID="256808981">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="psb_main_pc" ID="{F94B8944-85AC-43EA-B6FC-FCB170CF218C}" WorkUnitID="{D77221E6-E8F5-4910-B01E-286B743DB35F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5827825C-683D-4775-8425-5E2706CE211C}" ShortID="955618362">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Delay" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="psb_small_PC" ID="{64456C04-433A-4392-B5BA-9D6D7CD69E90}">
+					<Comment>Event - Tracer small PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{B2548691-A783-4DA4-B441-36D763801DA0}" ShortID="972150742">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="psb_small_pc" ID="{79E09313-B4AE-4FC4-B001-9A7C5E5BAC3F}" WorkUnitID="{D77221E6-E8F5-4910-B01E-286B743DB35F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{54EF53D8-3A5F-4CAD-B0BB-1EA4FFC4BC66}" ShortID="155229299">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Delay" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="psb_large_PC" ID="{24CBB04A-7BA5-49C2-BD96-BBBFEF68894C}">
+					<Comment>Event - Tracer large PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{A1169604-F618-449B-8964-F2D7347670F7}" ShortID="276867751">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="psb_large_pc" ID="{90408E55-824D-47A8-84CF-619311857097}" WorkUnitID="{D77221E6-E8F5-4910-B01E-286B743DB35F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FB058837-BB26-490A-8BF6-3AB3F9067C7D}" ShortID="97979675">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Delay" Type="Real64" Value="4"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="psb_auto_PC" ID="{EDC74A3E-7DC9-4FEA-9923-3EDB5590A875}">
+					<Comment>Event - Tracer auto PC</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{D42F0786-F545-4B5C-ACC9-7FB51DDF6D43}" ShortID="636234005">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="psb_auto_pc" ID="{455015CB-636B-435B-92FF-813783ADF651}" WorkUnitID="{D77221E6-E8F5-4910-B01E-286B743DB35F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4149D0F9-05F2-451E-8B26-EDFB3D695D2E}" ShortID="180397175">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="psb_auto_pc" ID="{455015CB-636B-435B-92FF-813783ADF651}" WorkUnitID="{D77221E6-E8F5-4910-B01E-286B743DB35F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="psb_npc_stop" ID="{B92A6155-F101-4B51-A0AA-7D48810D6184}">
+					<ChildrenList>
+						<Action Name="" ID="{EA8425C0-23AC-4EE9-9039-A3459D03A358}" ShortID="868089828">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="8"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="psb_large_npc" ID="{D617F287-549C-4A91-89C4-B1164DCC23D8}" WorkUnitID="{D77221E6-E8F5-4910-B01E-286B743DB35F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3D846BF0-2F18-478E-AA6E-4DF43A774F94}" ShortID="96814867">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="8"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="psb_main_npc" ID="{88A70B94-AEA6-4B4C-84B6-9BBC0607BB7A}" WorkUnitID="{D77221E6-E8F5-4910-B01E-286B743DB35F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{868F7356-933A-4E23-8BD7-95046A56A256}" ShortID="533507453">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeCurve" Type="int16" Value="8"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="psb_small_npc" ID="{DEBC1325-0AAF-42F0-99AA-70904B06DB6D}" WorkUnitID="{D77221E6-E8F5-4910-B01E-286B743DB35F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

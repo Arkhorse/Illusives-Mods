@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2738D18A-A9C5-40AE-80AF-6CDFCCC04720}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Mechanisms" ID="{2738D18A-A9C5-40AE-80AF-6CDFCCC04720}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="tangage_strv_PC" ID="{7C890609-3821-4468-A0F5-07531D54704E}" ShortID="929444129">
+					<ChildrenList>
+						<Event Name="tangage_gidro_high_angle_down_start_PC" ID="{76F58445-3F50-4357-B37F-A4A1AAF599BD}">
+							<ChildrenList>
+								<Action Name="" ID="{228024E8-DC6C-4954-96F9-8320C16E2749}" ShortID="309421420">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeInCurve" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_high_angle_down_loop" ID="{19B6CD6F-6BB8-453C-9396-3686062D646E}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tangage_gidro_high_angle_up_start_PC" ID="{9B30D360-7106-4AE5-961F-3BA355A69B06}">
+							<ChildrenList>
+								<Action Name="" ID="{33DC29A5-6AE8-4889-B3A3-92C65C8E8EA6}" ShortID="942360219">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeInCurve" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_high_angle_up_loop" ID="{6DCD0410-A8FB-491D-A8E6-C13D9406764F}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tangage_gidro_high_angle_down_stop_PC" ID="{1C0980DA-9938-4244-B35F-A2365D7A3886}">
+							<ChildrenList>
+								<Action Name="" ID="{4FE2EB6F-6850-4102-B937-5F5FAA45117B}" ShortID="50036428">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_stop_oneshort" ID="{0C8B6620-36A1-407C-8C40-53598AA405F6}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B36E98D2-6F69-41ED-BA2A-9AA39B52D345}" ShortID="998155673">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_high_angle_down_loop" ID="{19B6CD6F-6BB8-453C-9396-3686062D646E}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tangage_gidro_high_angle_up_stop_PC" ID="{4FFCDF2A-A799-412E-AB0D-8B874488D089}">
+							<ChildrenList>
+								<Action Name="" ID="{813328AF-CED5-47C6-A0CA-8175CFE6B197}" ShortID="721542743">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_stop_oneshort" ID="{0C8B6620-36A1-407C-8C40-53598AA405F6}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0081D1B9-308A-4267-B64B-2CD14DC0384B}" ShortID="905553485">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_high_angle_up_loop" ID="{6DCD0410-A8FB-491D-A8E6-C13D9406764F}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tangage_gidro_small_angle_down_start_PC" ID="{F16F2142-B999-4A9D-84A0-5556C8C45ADF}">
+							<ChildrenList>
+								<Action Name="" ID="{4D24A089-EB71-437C-A214-CC736E1D7425}" ShortID="406946313">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_small_angle_down_loop" ID="{9EE378B9-54C0-450F-8F64-DF40F66A4795}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tangage_gidro_small_angle_down_stop_PC" ID="{68D0D323-F96F-4CC4-9217-61B9AA697B32}">
+							<ChildrenList>
+								<Action Name="" ID="{5C54FCEB-B89C-481F-86EC-BCBB4BFE00EA}" ShortID="849324864">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="0"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_small_angle_down_loop" ID="{9EE378B9-54C0-450F-8F64-DF40F66A4795}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tangage_gidro_small_angle_up_start_PC" ID="{46B081F2-8CC4-431F-88EF-B81FEE20D7CC}">
+							<ChildrenList>
+								<Action Name="" ID="{B11010CF-07F1-447E-8695-A0A1DB58215B}" ShortID="3692451">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_small_angle_up_loop" ID="{EC440C18-E518-4C69-9D30-EEB46432C733}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tangage_gidro_small_angle_up_stop_PC" ID="{37D34544-63D2-4CED-887E-6B260E1BEEF5}">
+							<ChildrenList>
+								<Action Name="" ID="{E614E1F8-B485-43EC-8208-1C30E06415A1}" ShortID="247383158">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="0"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_small_angle_up_loop" ID="{EC440C18-E518-4C69-9D30-EEB46432C733}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Shell_extract_PC" ID="{047FEC55-97C0-454E-B08F-216C5390E851}" ShortID="323753720">
+					<ChildrenList>
+						<Event Name="shell_extract_external_PC" ID="{8469E679-7D0F-4E88-B0FC-A94B0895AFAF}">
+							<ChildrenList>
+								<Action Name="" ID="{FBA1E2ED-DF6D-4D42-BFF6-AD62434EAF96}" ShortID="873382302">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cap_extract_PC" ID="{0D2695C6-1DDC-4AFE-B63E-F8E5E3B0CBCF}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{269A4CF6-BF0A-431E-A731-006F74AB3E8E}" ShortID="609956423">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+										<Property Name="FadeInCurve" Type="int16" Value="6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="shell_extract_PC" ID="{A9A228C6-6BD3-4F55-B191-12BA8773C4EC}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="tangage_strv_NPC" ID="{380472D6-03E4-4967-BEE9-4D184759837E}" ShortID="644616739">
+					<ChildrenList>
+						<Event Name="tangage_gidro_high_angle_down_start_NPC" ID="{983ABEFC-E309-4CF1-846B-93FA5BECA328}">
+							<ChildrenList>
+								<Action Name="" ID="{F687AF23-7511-450D-A713-E5E0FE3B0885}" ShortID="374195624">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeInCurve" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_high_angle_down_loop" ID="{303F3072-BF2C-4B0F-853B-0C12363B4AAB}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tangage_gidro_high_angle_up_start_NPC" ID="{15C40317-65BE-4E73-BB81-2E3344EA3CC1}">
+							<ChildrenList>
+								<Action Name="" ID="{A0250F4B-3F72-46A3-AC77-3F4DC932337C}" ShortID="652544890">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeInCurve" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_high_angle_up_loop" ID="{8DDFEA7C-D67D-45A4-9A90-AF29E8BE19D2}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tangage_gidro_high_angle_down_stop_NPC" ID="{955615FB-CE64-493D-82D6-353516508F16}">
+							<ChildrenList>
+								<Action Name="" ID="{31784AC5-F0F4-4C98-B032-FB835BB8978D}" ShortID="925328201">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_stop_oneshort" ID="{C58FABBE-1F5C-4E6D-A6EA-6FBBD34ADA26}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{33D67097-4C97-4ACD-9961-9FA693B31CA7}" ShortID="529718230">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_high_angle_down_loop" ID="{303F3072-BF2C-4B0F-853B-0C12363B4AAB}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tangage_gidro_high_angle_up_stop_NPC" ID="{454B3353-AAD3-4931-B927-D5F2AF3661D3}">
+							<ChildrenList>
+								<Action Name="" ID="{F6C48F4D-6797-4C08-96BE-DF604309CB1B}" ShortID="22590999">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_stop_oneshort" ID="{C58FABBE-1F5C-4E6D-A6EA-6FBBD34ADA26}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F5D2F7D8-0A4A-4869-8D23-BF7DD9DFD3BD}" ShortID="516062937">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_high_angle_up_loop" ID="{8DDFEA7C-D67D-45A4-9A90-AF29E8BE19D2}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tangage_gidro_small_angle_down_start_NPC" ID="{9CC1D7AA-749F-4388-B5BA-E2EC347D1012}">
+							<ChildrenList>
+								<Action Name="" ID="{2562CFC7-C3D6-4950-BDB0-2B64E60BE961}" ShortID="345078717">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_small_angle_down_loop" ID="{367805E6-9008-46A9-A930-953436BEB188}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tangage_gidro_small_angle_down_stop_NPC" ID="{479F73B2-B104-4E57-80B7-446D39155C8C}">
+							<ChildrenList>
+								<Action Name="" ID="{F74AA94C-E1D9-4DC5-B748-99F29412D4B5}" ShortID="93319511">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="0"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_small_angle_down_loop" ID="{367805E6-9008-46A9-A930-953436BEB188}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tangage_gidro_small_angle_up_start_NPC" ID="{2930C01D-1B60-44A1-A067-ED9B4ACDB533}">
+							<ChildrenList>
+								<Action Name="" ID="{EEFAB8BE-47D7-4EC4-8048-AB220BA7DDF2}" ShortID="278335010">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_small_angle_up_loop" ID="{138D5A38-936B-40D8-9F29-E61F5E492E81}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tangage_gidro_small_angle_up_stop_NPC" ID="{5F021262-8789-4FC1-81E5-613346C16F97}">
+							<ChildrenList>
+								<Action Name="" ID="{F98840B0-F790-42FE-AA7B-018EB06EDC7D}" ShortID="929925731">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="0"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tangage_gidro_small_angle_up_loop" ID="{138D5A38-936B-40D8-9F29-E61F5E492E81}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Shell_extract_NPC" ID="{EA25C2AE-F206-44CD-8DA5-5C9C5C5817E7}" ShortID="455656972">
+					<ChildrenList>
+						<Event Name="shell_extract_external_NPC" ID="{0F3C68B1-7EE2-460A-8126-9B5C31D432E7}">
+							<ChildrenList>
+								<Action Name="" ID="{267BD57A-B7B3-4044-9EA2-9ACD0B5AFB27}" ShortID="772055602">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cap_extract_NPC" ID="{6894FC42-A01A-49C6-9537-BE11B3E9868B}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0B6D1C2B-7E7A-434A-8F11-985AB78595DD}" ShortID="442656912">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+										<Property Name="FadeInCurve" Type="int16" Value="6"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="shell_extract_NPC" ID="{957182C8-E8AE-4E1D-9C80-8C3C9BC46056}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="hydraulics_strv_PC" ID="{C3FF3259-BD4F-433D-82C0-C042822D69A8}" ShortID="460750169">
+					<ChildrenList>
+						<Event Name="strv_siege_mode_on_PC" ID="{B3BCF9F3-55FC-4FD7-9C2E-F3D7298CCFBA}">
+							<ChildrenList>
+								<Action Name="" ID="{EDE3EAF6-40A2-40CC-B3AE-A00445F3D78D}" ShortID="365723552">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="electric_motors" ID="{D6E29969-799A-41F9-AE56-79C4A8842742}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9EF64300-2456-4ED8-88B6-31B88B5D5EB7}" ShortID="554876830">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="electric_motors_start" ID="{0B25C8FC-B782-4C66-B32B-9A4117D37588}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4533B91F-F486-454C-B0FD-7D74A7962B74}" ShortID="441008523">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="siege_mode_loop_start_ui" ID="{AA52FE4E-567E-4D2F-8333-146856240429}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="strv_siege_mode_off_PC" ID="{B106D67A-ED92-4551-A55D-7F15AA052FF1}">
+							<ChildrenList>
+								<Action Name="" ID="{A3697CBC-771D-451D-B593-434AC6D7E424}" ShortID="918473061">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="electric_motors_stop" ID="{CB8BA2E8-15D2-4D5C-A82B-42A2683BF2F6}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C256FD36-2288-41DE-A9AF-B380AB7A0E99}" ShortID="436252253">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="electric_motors_loop" ID="{4559F085-2747-47C5-8459-024553F3EE7D}" WorkUnitID="{D45BD39F-B8D6-4299-A85C-69C48F5088AB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{41A4EA2F-6787-4A6B-90C0-BB2DA5C6D004}" ShortID="90266145">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="base_mode_oneshot_start_ui" ID="{5A938253-3D1A-4AE4-8901-3A0CA9CC5BA7}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2CBB36DC-6F1A-411F-B967-75A9689B6A6B}" ShortID="69677827">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="base_mode_loop_start_ui" ID="{29C03D6E-7690-427E-AE1E-22E1DAC71B66}" WorkUnitID="{9A24A5B9-3DD8-4A44-949D-727613A18541}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

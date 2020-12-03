@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D2B6A51D-2F3A-41D8-AB7A-452D83834C18}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Engine" ID="{D2B6A51D-2F3A-41D8-AB7A-452D83834C18}" PersistMode="Standalone">
+			<Comment>Engines</Comment>
+			<ChildrenList>
+				<Event Name="eng_v55_npc" ID="{8F28640E-1415-48D7-B3A6-78B72CBA3684}">
+					<Comment>Event - Diesel engine of small power. NPC
+             RPM 300-800 - 1200-3200</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{2FC1D956-57E9-481F-9C56-31D9AFB984A9}" ShortID="636895752">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_V-55_NPC" ID="{418E5879-49EB-4804-B6FE-EAFD12CD59A0}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0B8CFE4F-1CB0-41DE-BB9A-40B3C2E63C6E}" ShortID="288215693">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{87A13C67-02D9-4F88-814D-F6F1F5471C98}" ShortID="40286856">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="eng_Ford_GAA_npc" ID="{443AFF2B-0904-4946-BD3B-E9A22C2E9418}">
+					<Comment>Event - Gasoline engine of medium power and higher. NPC
+             RPM 700-1300 - 1450-3200</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{7BE6FB91-F4E7-4827-B54C-000A27CE7B28}" ShortID="483284973">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_Ford-GAA_NPC" ID="{C3BE8CAB-1A0E-4008-9752-820F4EAD7DB3}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{990CDDEA-8AFD-4F89-BF28-A396DEEC01FF}" ShortID="567832158">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E0A46D78-BE14-4B96-A9DF-88732C22B659}" ShortID="546551885">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="eng_ContinentalR_npc" ID="{F7F6C19C-AD6F-4B40-8889-9AC55B2C1CE2}">
+					<Comment>Event - Gasoline engine of high power. NPC
+             RPM 400-1300 - 1800-3000</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{62408CC4-0C4C-41BC-9961-B698211D1254}" ShortID="195807982">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_ContinentalR_NPC" ID="{C61E749D-3622-4EC0-A022-D778CDD492DE}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1B39E61F-D503-41BA-A82F-63DECBF261AA}" ShortID="943598494">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{ECD7F183-7470-48FF-ACCD-CD78A302A5AF}" ShortID="285732070">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="eng_gaz_aa_npc" ID="{992A27E1-7C0E-4221-9B20-198EA915613F}">
+					<Comment>Event - Gasoline engine of small power. NPC
+             RPM 800(500)-1100 - 1400-3400</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{A1EA753B-049D-409B-B9EC-412DEA74C313}" ShortID="649399805">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_Gaz_aa_NPC" ID="{064984B6-4963-4C44-938A-21729FF4DAEE}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{12DF5D4B-0879-49BF-9A7B-833CBF6D94E5}" ShortID="194499898">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{76EE052D-9060-49F0-848B-42C0E5562B3D}" ShortID="889025364">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="eng_Continental_R975_npc" ID="{5D5A1C14-275E-4F3F-9D1B-2D47561AD307}">
+					<Comment>Event - Gasoline engine of low-to-medium power. NPC
+             RPM 400-1200  -  1450-3400</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{A7DB8126-9D32-41CA-AEA5-244C3F9F6935}" ShortID="109033426">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_Continental_R975_NPC" ID="{0A76765B-84A8-4EA8-BAC0-6A0E23CFC4E4}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BB6E5D1E-72E1-4ECF-8AE9-799549C1A8D8}" ShortID="524972352">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{154B2E04-0C53-45DA-AF1C-763E9F40A05B}" ShortID="139788084">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="eng_Continental_R975_pc" ID="{3461C18D-A41D-4933-97FF-9FC39D1A1793}">
+					<Comment>Event - Gasoline engine of low-to-medium power. PC
+             RPM 400-1200  -  1450-3400</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{5C108E9E-96C2-431B-A2AB-BC864F851180}" ShortID="374135215">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_Continental_R975_ext" ID="{3ABA602D-11E3-42EC-B609-1A7CA62FB67E}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E2781077-091B-49AD-8C03-694080A96FB7}" ShortID="550736723">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_Continental_R975_int" ID="{6BE8C740-8410-4123-8647-4EE202A238D4}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E4DE1CE5-EA20-4844-A532-FA6EDF949E00}" ShortID="358240129">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DA11139D-1A36-46C7-BD71-1273E596664E}" ShortID="598184092">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8D364EA8-B902-4CA8-956B-BB945C272690}" ShortID="569602299">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_treads_type" ID="{C0F1E835-0B0E-44B7-BBC3-C2EB9B7CD6E5}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E572E266-F278-438C-BADB-E9E4A610B7D3}" ShortID="43005270">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_treads_type" ID="{C0F1E835-0B0E-44B7-BBC3-C2EB9B7CD6E5}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FAFFFD3F-893D-4DB9-B92D-D946F7CEA5E4}" ShortID="40534324">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_gearShift" ID="{CDDE1DB7-5926-4284-8199-753ACE4775DD}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{64B0AA1C-44FC-42E7-B69C-3EA7258CA9F2}" ShortID="654062687">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="engine_gasoline_damage" ID="{2C80BDBD-7069-4576-AFF7-B9A362D0CB78}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="eng_ContinentalR_pc" ID="{D6029F57-9EEC-4F93-AC8C-5BE99F35C1BF}">
+					<Comment>Event - Gasoline engine of high power. PC
+             RPM 400-1300 - 1800-3000</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{1D3B3A14-5687-4B78-B72C-20C39422142C}" ShortID="588922621">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_ContinentalR_ext" ID="{3D42741B-46B7-490A-8281-B52759FB2EFF}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F5E3A916-643A-468D-A64C-DB3FE69FEECB}" ShortID="990704993">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_ContinentalR_int" ID="{890B412F-79FD-4118-B655-D39B72D61C95}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{15AC13AE-2643-443E-8334-3ECB8957E64D}" ShortID="645268232">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EE32DCA0-CB54-4958-871F-BCF63996E2AF}" ShortID="240448233">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A620AF9E-0662-4DE8-8120-63816F9A5D7C}" ShortID="369700176">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_treads_type" ID="{C0F1E835-0B0E-44B7-BBC3-C2EB9B7CD6E5}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{02EB77E8-3AA7-4DC1-9CD0-ADA55DF95CD8}" ShortID="314966563">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_treads_type" ID="{C0F1E835-0B0E-44B7-BBC3-C2EB9B7CD6E5}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C5E48BF9-0D56-4A40-BE3A-DC7B09E6393A}" ShortID="905856436">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_gearShift" ID="{CDDE1DB7-5926-4284-8199-753ACE4775DD}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{92712EA1-5D94-4BC7-8BCF-D68755C5F28D}" ShortID="804316604">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="engine_gasoline_damage" ID="{2C80BDBD-7069-4576-AFF7-B9A362D0CB78}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="eng_Ford_GAA_pc" ID="{3E08E100-C49F-4774-86B8-29EDF8A43039}">
+					<Comment>Event - Gasoline engine of medium and higher power. PC
+             RPM 700-1300 - 1450-3200</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{D50EDD0D-24FA-4991-AC91-D44659D8A05D}" ShortID="605487967">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_Ford-GAA_ext" ID="{099C6D62-F04A-43FC-97AC-CF1F40FD3B88}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{82391C75-9498-484F-ADDA-76E0094C7E6E}" ShortID="445502048">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_Ford-GAA_int" ID="{B8EAF147-E362-46DE-9C3F-0F9EE95F1170}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5D224047-A35E-49EE-B9F8-AAE1A85ABFD9}" ShortID="631670893">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F76BA6E5-6598-461F-ABAD-D23C35804A70}" ShortID="924429843">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{871BD616-AE96-46C5-A7AA-DDA7EEABA0D5}" ShortID="155381566">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_treads_type" ID="{C0F1E835-0B0E-44B7-BBC3-C2EB9B7CD6E5}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F2284083-A721-4845-A6F4-53A404FE5880}" ShortID="963979446">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_treads_type" ID="{C0F1E835-0B0E-44B7-BBC3-C2EB9B7CD6E5}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{399CA5CC-12A7-495B-93A5-36E0B6BD5894}" ShortID="322604395">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_gearShift" ID="{CDDE1DB7-5926-4284-8199-753ACE4775DD}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9095AD79-2133-4937-90BB-B5B202E39398}" ShortID="302341312">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="engine_gasoline_damage" ID="{2C80BDBD-7069-4576-AFF7-B9A362D0CB78}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="eng_gaz_aa_pc" ID="{7DD898FE-424F-45DE-B0A9-33C991750C5C}">
+					<Comment>Event - Gasoline engine of small power. PC
+             RPM 800(500)-1100 - 1400-3400</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{1970263C-D4F4-42B7-B8E2-B1094FA42609}" ShortID="888860548">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_Gaz_aa_ext" ID="{BCC57D16-C976-45FF-82F1-3ADBDAC909AB}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{067F3ED0-C65F-4CF6-8413-3DC715F0B833}" ShortID="714949727">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_Gaz_aa_int" ID="{6E1D6951-02B9-4A20-B055-140B78DAD175}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E4702F69-F3A0-417E-8D25-583034A2D6BF}" ShortID="192774424">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DFF71F6B-D70B-445D-91D5-F234FC202DC2}" ShortID="306393654">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CC6DADDA-7B4F-4ED2-AB6F-A6C9AA3DC84A}" ShortID="979149129">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_treads_type" ID="{C0F1E835-0B0E-44B7-BBC3-C2EB9B7CD6E5}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C00CF85D-F6A1-4D12-ADF3-952803F3774B}" ShortID="791048735">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_treads_type" ID="{C0F1E835-0B0E-44B7-BBC3-C2EB9B7CD6E5}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9401AB34-4B7B-436A-BA6B-A453DED7D5E1}" ShortID="168292639">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_gearShift" ID="{CDDE1DB7-5926-4284-8199-753ACE4775DD}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B5A6EBF0-A238-40A5-BFB3-D4BB15CD130D}" ShortID="559309819">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="engine_gasoline_damage" ID="{2C80BDBD-7069-4576-AFF7-B9A362D0CB78}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="eng_v55_pc" ID="{7B50CC59-1E6C-4CD4-B268-835702D259AD}">
+					<Comment>Event - Diesel engine of small power. PC
+             RPM 300-800 - 1200-3200</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{994563CA-47E1-4835-A533-E7A18F4F8948}" ShortID="932728583">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_V-55_ext" ID="{42842D5E-8E82-4F42-BC72-2761984A601E}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4FE15F9C-CFCE-4214-AD7E-0E614487DD02}" ShortID="561302414">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_V-55_int" ID="{E2730E39-477A-4583-A70D-29F305F0ABE3}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7656676D-2E9A-4DFC-99CB-6D152E1A833E}" ShortID="963069599">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BD615AB0-C6AE-42C8-A14F-02F395B19010}" ShortID="817218132">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EC851C5E-E7F3-41D0-9EF1-D8C5064A007C}" ShortID="848682467">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_treads_type" ID="{C0F1E835-0B0E-44B7-BBC3-C2EB9B7CD6E5}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2849A537-50EE-43D5-B727-092C06C1F1FE}" ShortID="1057374585">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_treads_type" ID="{C0F1E835-0B0E-44B7-BBC3-C2EB9B7CD6E5}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C5395D12-0C34-4966-A5D8-0516123E7B1F}" ShortID="632486292">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_gearShift" ID="{CDDE1DB7-5926-4284-8199-753ACE4775DD}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{38BBF9C7-5BE1-4B2D-A670-3B3ED3E717E1}" ShortID="116133233">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="engine_diesel_damage" ID="{2E83EAA9-81EC-48FC-B5D8-A46EB4E6C88E}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="eng_Hetzer_pc" ID="{570F480D-BC08-4059-B632-9FEC68F16639}">
+					<Comment>Event - Diesel engine of high power. PC
+             RPM 400-600 (800; 1100) - 1800-2200 (2600; 3200)</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{97C7918D-5C6B-48F8-93F6-0F6BFB0A944F}" ShortID="599799899">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_Hetzer_ext" ID="{C478E094-CB62-41CF-BA1D-4F1855A90FB5}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{81FD754E-F53B-4763-8BE4-51480C4AA478}" ShortID="640143053">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_Hetzer_int" ID="{A13C5BA5-DEFA-4B84-AD53-24BEE224F8F0}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E4277232-16E3-4CBC-9150-760EC337A54B}" ShortID="747232008">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DC905DFF-2B97-4AB6-B1FA-CC4BFBA7B2AF}" ShortID="148074622">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{38D41682-E5CF-41F1-AEBA-090210BF4D82}" ShortID="935758889">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_treads_type" ID="{C0F1E835-0B0E-44B7-BBC3-C2EB9B7CD6E5}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CB781B54-DE73-4211-9024-2582D141E7AC}" ShortID="479234796">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_treads_type" ID="{C0F1E835-0B0E-44B7-BBC3-C2EB9B7CD6E5}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DC182B9B-14D1-427E-A05E-66DE62E20A34}" ShortID="544751697">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_gearShift" ID="{CDDE1DB7-5926-4284-8199-753ACE4775DD}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6BB8BE37-058B-4198-A252-9CBE9B79CFA4}" ShortID="862339068">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="engine_diesel_damage" ID="{2E83EAA9-81EC-48FC-B5D8-A46EB4E6C88E}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="eng_Hetzer_npc" ID="{87E955AA-07AF-4E89-833B-C7252A19919F}">
+					<Comment>Event - Diesel engine of high power. NPC
+             RPM 400-600 (800; 1100) - 1800-2200 (2600; 3200)</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{B99018AB-A7B1-49C1-BC8E-25A0ACEF8166}" ShortID="431766803">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_Hetzer_NPC" ID="{5EA86A3C-2B0A-419B-A1DF-211C16A890B9}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{61E902BE-68A3-4D56-A0F3-A599315B7528}" ShortID="240152912">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9EE95D8A-CD72-431F-BB0E-0C89D6A73D6B}" ShortID="609367665">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="eng_damage" ID="{4A9042E2-3755-4496-9415-A24C88906326}" ShortID="624680662">
+					<ChildrenList>
+						<Event Name="eng_broken" ID="{281CB3F4-668B-4E95-9408-E12F56559797}">
+							<ChildrenList>
+								<Action Name="" ID="{5221EE0F-9FE4-4ABF-996E-DAE9F68C1B6D}" ShortID="983190527">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_eng_damage" ID="{3BD982D3-39FE-431B-8EC4-286A348BDFD1}" WorkUnitID="{D2EF0A16-0466-4B9B-9FA8-B5DADE67576F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{08922C0F-6C7B-44D7-8BE8-614A664633A8}" ShortID="466202800">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="25"/>
+										<Property Name="BypassEffect" Type="bool" Value="False"/>
+										<Property Name="BypassEffect0" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_eng_broken" ID="{A8C02DFF-4484-4887-A221-E0DA334D931A}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E71271BF-D23A-4E1E-AE3A-C6D37235F235}" ShortID="258605640">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="engine_broken_in_transition_state_02" ID="{E4D78346-8912-436C-A10E-19A2511B003C}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="eng_still_broken" ID="{DDEC1785-6A2D-48AC-99DF-FCE18BFC7341}">
+							<ChildrenList>
+								<Action Name="" ID="{FB5928E9-EF4B-4D77-8353-E728779185E7}" ShortID="386295583">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_eng_damage" ID="{3BD982D3-39FE-431B-8EC4-286A348BDFD1}" WorkUnitID="{D2EF0A16-0466-4B9B-9FA8-B5DADE67576F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1D28138B-95BD-4CBF-96C9-1C63C65DDB05}" ShortID="248918583">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="25"/>
+										<Property Name="BypassEffect" Type="bool" Value="False"/>
+										<Property Name="BypassEffect0" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_eng_broken" ID="{A8C02DFF-4484-4887-A221-E0DA334D931A}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{60B671E1-22CC-4325-B5F7-4912715E5B89}" ShortID="357295578">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="engine_broken_in_transition_state_02" ID="{E4D78346-8912-436C-A10E-19A2511B003C}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="eng_restoring" ID="{B217AD65-1AD5-402B-8D2F-B690C287D00C}">
+							<Comment>Event - Repairing an engine upon receiving critical damage</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{AAAB3C4E-F317-47DB-A3BC-59FFB17323B9}" ShortID="746239982">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4D79095B-AA89-40C1-BD26-CDCC01850682}" ShortID="963077900">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.01"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{17A7540B-8B41-4755-989F-D335545669E1}" ShortID="105420961">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_start_stop" ID="{90A4789E-2B00-4A5B-8B47-FCDBB960CF8D}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4BE24751-616A-492D-9CA0-7D3C55BBD43C}" ShortID="563667742">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.01"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_start_stop" ID="{90A4789E-2B00-4A5B-8B47-FCDBB960CF8D}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D088D9E7-3949-46C9-B449-6E46481BE027}" ShortID="316904370">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_start_mute" ID="{73744AA3-1800-46F8-BE9C-FC323B56D938}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="eng_stopping" ID="{5719C60C-066C-4C71-AC72-AF9B9CE6B9A3}">
+							<Comment>Event - Engine stop upon receiving critical damage</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{A3DAB2AB-D44C-4DCE-95C8-B64AA7F6FBA1}" ShortID="282163372">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="39"/>
+										<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_start_stop" ID="{90A4789E-2B00-4A5B-8B47-FCDBB960CF8D}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5F6A2F57-CEEB-455D-8E14-8105B35A7FCC}" ShortID="840155939">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Delay" Type="Real64" Value="0.01"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_start_stop" ID="{90A4789E-2B00-4A5B-8B47-FCDBB960CF8D}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AC7DDEDE-F2DE-4DFD-B1EA-9839C28BF300}" ShortID="424462738">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="24"/>
+										<Property Name="BypassEffect" Type="bool" Value="False"/>
+										<Property Name="BypassEffect0" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_eng_broken" ID="{A8C02DFF-4484-4887-A221-E0DA334D931A}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DF9F55A2-1638-490E-AC5D-172CCEDC9D1B}" ShortID="655068559">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_start_mute" ID="{73744AA3-1800-46F8-BE9C-FC323B56D938}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="eng_repairing_broken" ID="{98C7F890-CDE7-4AF4-8A2B-87BFBDDB9CE1}">
+							<ChildrenList>
+								<Action Name="" ID="{15374E77-5BA2-4925-A08A-5B3F73CA5EEB}" ShortID="236524450">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RTPC_int_eng_damage" ID="{3BD982D3-39FE-431B-8EC4-286A348BDFD1}" WorkUnitID="{D2EF0A16-0466-4B9B-9FA8-B5DADE67576F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{15CBBB97-2C8F-4BBA-AB83-5D010746961C}" ShortID="514301204">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="24"/>
+										<Property Name="BypassEffect" Type="bool" Value="False"/>
+										<Property Name="BypassEffect0" Type="bool" Value="True"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_eng_broken" ID="{A8C02DFF-4484-4887-A221-E0DA334D931A}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="eng_ContinentalR_STRV_pc" ID="{D06065C0-6E1D-47A4-BFF9-A91A49662D7D}">
+					<Comment>Event - Gasoline engine of high power. PC
+             RPM 400-1300 - 1800-3000</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{D02D47D3-60B0-4A0A-9BA7-AC77E65E7EE1}" ShortID="870174153">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_ContinentalR_ext" ID="{3D42741B-46B7-490A-8281-B52759FB2EFF}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F5197465-D3E7-4E3E-A6F1-0EC0946F6675}" ShortID="420795866">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_ContinentalR_int" ID="{890B412F-79FD-4118-B655-D39B72D61C95}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0D7627C9-A79B-4923-A250-667996D37D3B}" ShortID="201579800">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3683BB3C-73A6-4809-9E52-275216D118F8}" ShortID="964693250">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{21FF8B81-D738-46A1-9C90-E14275545C6B}" ShortID="67078388">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_treads_type" ID="{C0F1E835-0B0E-44B7-BBC3-C2EB9B7CD6E5}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CE0AB202-3F29-4E1F-B5ED-6DEA950EF75A}" ShortID="435778225">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_treads_type" ID="{C0F1E835-0B0E-44B7-BBC3-C2EB9B7CD6E5}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{81F79BB5-3A27-4D5D-BFD2-C877A867B36A}" ShortID="312119538">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_gearShift" ID="{CDDE1DB7-5926-4284-8199-753ACE4775DD}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6A2712A8-49D4-4F51-99BD-4D7B559CEAFE}" ShortID="908886277">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="engine_gasoline_damage" ID="{2C80BDBD-7069-4576-AFF7-B9A362D0CB78}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{04221A00-F121-4F85-8AD1-E24E2A40C089}" ShortID="31189019">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="turbine_strv_01_pc" ID="{F6F8E27E-8BE4-4BF2-9EFA-1AD9592A977D}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="eng_ContinentalR_STRV_npc" ID="{42412421-FB2A-453C-8FE5-2F7EE3C6F3ED}">
+					<Comment>Event - Gasoline engine of high power. NPC
+             RPM 400-1300 - 1800-3000</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{D7A19038-3C03-4C23-A357-6779150F2D31}" ShortID="862936260">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="eng_ContinentalR_NPC" ID="{C61E749D-3622-4EC0-A022-D778CDD492DE}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8E50E4AD-9F20-4649-B329-B627D895B9C5}" ShortID="390893073">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="39"/>
+								<Property Name="BypassGameParameterInternalTransition" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{326AB6D6-ADF0-4477-B398-0EE8CAB8F4CE}" ShortID="676165174">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Delay" Type="Real64" Value="0.01"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RTPC_int_velocity" ID="{A1D3ECA1-94DB-4F0C-9361-E28C7A8D59F3}" WorkUnitID="{87FF0202-7DD4-4D0F-A267-00520CCB358C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AF6A5A29-6EAC-4E58-B17E-54FF1135443E}" ShortID="147078624">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="turbine_strv_01_npc" ID="{A05C8128-F503-4BDB-B18A-AE5BB772024B}" WorkUnitID="{5FB64EEC-0BD6-4FED-A796-B4C17219392D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

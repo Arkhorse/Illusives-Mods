@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8C56D420-4D2A-4342-87B4-43E4C5E905B5}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Turret" ID="{8C56D420-4D2A-4342-87B4-43E4C5E905B5}" PersistMode="Standalone">
+			<Comment>Turret rotation</Comment>
+			<ChildrenList>
+				<Folder Name="tur_02" ID="{A079DA69-5078-4D94-8A53-23928537A11E}" ShortID="250434540">
+					<ChildrenList>
+						<Event Name="tur_man_trav_07" ID="{8C17CB88-C664-4101-A1EE-3122FB4B8E15}">
+							<Comment>Event - Manual rotation</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{3F8FCE71-E538-4F84-A454-DE573B68740B}" ShortID="1019372802">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tur_man_trav_07" ID="{8CA6568C-3500-4A16-8C93-83611C0E2718}" WorkUnitID="{BE739FD0-F284-46E2-B08D-3CFD946AFCF9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tur_man_trav_05" ID="{63809AB5-A983-47AF-A58B-7AED38CCA9B4}">
+							<Comment>Event - Manual rotation</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{2139F17B-B480-4922-8A44-03EF51D01295}" ShortID="806170931">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tur_man_trav_05" ID="{BB0B48DB-D4B5-4774-9CEE-4DF510BCADCC}" WorkUnitID="{BE739FD0-F284-46E2-B08D-3CFD946AFCF9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tur_man_trav_06" ID="{E89D9E8C-FCCD-41D9-A443-1258D88C23E1}">
+							<Comment>Event - Manual rotation</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{A1BCB0E2-15CB-43D4-980D-5BEF38063841}" ShortID="892426921">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tur_man_trav_06" ID="{35C58B48-7632-4113-9470-941E9A0F826F}" WorkUnitID="{BE739FD0-F284-46E2-B08D-3CFD946AFCF9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tur_mech_trav" ID="{AE50E172-BFF9-47F0-AEB8-81EF39802C38}">
+							<Comment>Event - Hydraulic rotation (depends on a turret weight)</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{D8748B69-606E-49F7-AD4C-90C7DDBEA70C}" ShortID="821517505">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tur_mech_trigger_move" ID="{00CACB43-5CDC-4902-8C4F-30EC660C4A2E}" WorkUnitID="{BE739FD0-F284-46E2-B08D-3CFD946AFCF9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tur_man_trav_02" ID="{D5BD9F93-5AF5-4DC4-BBD9-55226F1D5FA5}">
+							<Comment>Event - Manual rotation</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{C0577D9D-8A07-41BA-9CD9-082387E95ED6}" ShortID="141774886">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tur_man_trav_02" ID="{1DCE6B6A-30D1-4C6D-BE02-CE7391938889}" WorkUnitID="{BE739FD0-F284-46E2-B08D-3CFD946AFCF9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tur_man_trav_03" ID="{4D9B445F-2D13-417A-A874-8A500E733CD5}">
+							<Comment>Event - Manual rotation</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{CC57694B-5082-443A-B92A-B3B44AEEB60A}" ShortID="726535671">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tur_man_trav_03" ID="{03898098-2340-4454-8868-0EBBDCAEDF4C}" WorkUnitID="{BE739FD0-F284-46E2-B08D-3CFD946AFCF9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tur_man_trav_01" ID="{F51CF228-545F-4012-A4CE-BCC1E98E938D}">
+							<Comment>Event - Manual rotation</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{99718B95-43CD-423C-8AA6-28909486E64D}" ShortID="362331740">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tur_man_trav_01" ID="{0BE6063E-88CC-49F9-A217-4D8503A7364E}" WorkUnitID="{BE739FD0-F284-46E2-B08D-3CFD946AFCF9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tur_man_trav_04" ID="{B547D22D-EC1D-4E6D-8578-312EBAE13A3B}">
+							<Comment>Event - Manual rotation</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{C76AACBF-BA17-44E3-97D2-2F1EF681C3FE}" ShortID="578157920">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tur_man_trav_04" ID="{8D653BBA-2DD2-475B-8582-A39ED49D86C2}" WorkUnitID="{BE739FD0-F284-46E2-B08D-3CFD946AFCF9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

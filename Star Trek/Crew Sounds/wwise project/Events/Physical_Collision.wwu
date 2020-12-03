@@ -1,0 +1,1226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{14E124CE-CD20-43C1-A9C6-B7B662EE2E29}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Physical_Collision" ID="{14E124CE-CD20-43C1-A9C6-B7B662EE2E29}" PersistMode="Standalone">
+			<Comment>Vehicles colliding with other vehicles and objects</Comment>
+			<ChildrenList>
+				<Folder Name="tank_collision" ID="{D376C610-2AD4-4BD2-99C8-03F53281EEC7}" ShortID="131199884">
+					<Comment>A vehicle colliding with another vehicle</Comment>
+					<ChildrenList>
+						<Folder Name="PC" ID="{A5C7756D-EAF0-49E6-BCC2-47C3F74D76FE}" ShortID="350312026">
+							<ChildrenList>
+								<Event Name="phys_coll_heavy_pc" ID="{AF186165-F5B3-433E-8127-7585F3149684}">
+									<Comment>Event - Hard collision with a vehicle</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{48A7E9E2-E748-4F37-88CA-3A2CC5B9389B}" ShortID="814057777">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="collision_heavy" ID="{8E5337EB-365B-44D4-BA86-116E6D9C6D23}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="phys_coll_med_pc" ID="{20439EA5-DCAD-4F83-9687-925C43B8FA5B}">
+									<Comment>Event - Medium collision with a vehicle</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{26C6DF6D-E9DE-4DDE-982B-110E2293B5C1}" ShortID="757914824">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="collision_medium" ID="{91AC73FE-8592-4B1D-9C98-D616AD4E6645}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="phys_coll_light_pc" ID="{79761B1A-8383-44B8-819C-B0875C0435D4}">
+									<Comment>Event - Soft collision with a vehicle</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{3FE7528C-9988-48D1-A604-B95944DDE65F}" ShortID="1016536286">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="collision_light" ID="{137A5C1D-4F40-4492-B0D9-88681E7B13E2}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="phys_friction_pc" ID="{FDD78582-4858-4931-A628-26F0682127EE}">
+									<Comment>Event - Vehicles rubbing against each other</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{F0D3C5FE-F1EC-451E-98B5-F4E088CCB7B5}" ShortID="644028181">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="friction" ID="{3B8EBCD1-D93E-4EF1-84C7-68D89A61EC50}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="phys_friction_after_coll_pc" ID="{82D88585-6072-448E-A9A6-B00507C31AA7}">
+									<Comment>Event - Vehicles rubbing against each other after collision</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{C88BF050-D1DB-4C28-B3AD-D926A472BCF4}" ShortID="539160253">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="friction_after_collision" ID="{924BC60C-44A5-4BB5-B1FE-B9DA63092DA0}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="collision_tank_friction_pc" ID="{7E45C29A-14C1-4299-AE9B-5624C8FD22F9}">
+									<ChildrenList>
+										<Action Name="" ID="{C4CC8B53-321B-486B-BC56-C506ACA9225C}" ShortID="873375057">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="friction_tank_pc" ID="{A6A5BA82-4120-49E5-AC58-033F91593720}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="collision_tank_pc" ID="{A5D609A3-3B58-4144-8B52-CC6A4259C3BD}">
+									<ChildrenList>
+										<Action Name="" ID="{2595E883-4C25-43C5-B4C7-016DDE68987D}" ShortID="457726935">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="collision_tank_pc" ID="{EA97C277-57C0-425E-B3C0-1B21EC15DA9E}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="collision_tank_silence_pc" ID="{DECE6069-9174-4D99-9E1E-DF02CC23CC83}">
+									<ChildrenList>
+										<Action Name="" ID="{E532DF7D-AA5B-4F67-951B-1D319A899A85}" ShortID="744502315">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="silence" ID="{61871EB6-B09A-4DA2-975C-2ADDD718A055}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="collision_tank_damage" ID="{8DF829B1-204A-4AB8-9794-DD629E4F4455}">
+									<ChildrenList>
+										<Action Name="" ID="{1681A101-E325-445E-8942-0B09CE83052B}" ShortID="669613291">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="07_sub" ID="{D2A835CA-18C3-4E78-905B-53A7ACCFB0DB}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{C3155E1A-ED92-4191-A009-0E1F59DE969D}" ShortID="403793335">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="collision_tank_damage_sub_multichanel" ID="{4C99D8E7-C107-4F9E-BE27-33A3A742A9EE}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="NPC" ID="{23679E83-9870-462D-848A-78D04CD4CE85}" ShortID="570987636">
+							<ChildrenList>
+								<Event Name="phys_coll_heavy_npc" ID="{2245BA47-B0EF-4483-B76F-1A291AFD5F8A}">
+									<Comment>Event - Hard collision with a vehicle</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{63EB309F-3E83-4E32-9515-C52AFAE94065}" ShortID="711540598">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="collision_heavy" ID="{5220408E-87F2-49B0-8B11-A1EA3B3E26D7}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="phys_friction_npc" ID="{4F0BB6E8-FFDE-4295-9CAF-44BF75724527}">
+									<Comment>Event - Vehicles rubbing against each other</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{7920DAB6-2AC2-46A8-B1B6-DE6EB33C369C}" ShortID="839900023">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="friction" ID="{FF1D97FD-671F-4CA3-A190-D5DD2763391A}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="phys_friction_after_coll_npc" ID="{DFAA7662-E1B6-4C3C-A4EF-ADCE2FAFEF5B}">
+									<Comment>Event - Vehicles rubbing against each other after collision</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{FB68B568-A03A-4715-9B62-9CE13C6BB38D}" ShortID="429125385">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="friction_after_collision" ID="{FE03AB6B-38DA-4E54-B0E3-909885262F0D}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="phys_coll_med_npc" ID="{B9CEED75-4E0B-46FC-A7A0-2024D61689C0}">
+									<Comment>Event - Medium collision with a vehicle</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{3434BCC8-96A4-4170-8632-F59A3CE5A324}" ShortID="82516432">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="collision_medium" ID="{53322E5F-31E6-4500-B6BB-B38BA7E78FD9}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="phys_coll_light_npc" ID="{878659E8-4220-44D4-B125-69C46E0A1475}">
+									<Comment>Event - Soft collision with a vehicle</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{08A497A4-8D82-4704-8B18-3213F437231E}" ShortID="919628522">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="collision_light" ID="{71ACF348-DEA4-4E3F-B4F9-60EE6AC03E74}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Event Name="phys_coll_ramming_light" ID="{199829EC-8C37-4CDC-98FC-F8B9AF460580}">
+							<Comment>Event - Soft ramming</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{90F1AB23-60C0-4086-84C1-B04BD9F5B2AE}" ShortID="206284654">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ramming_light" ID="{F9EFBBBD-4BA9-442F-A8FC-0FE3D41E47CB}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="phys_coll_ramming_heavy" ID="{909A760C-C9B2-454C-85C9-583A33ED14CF}">
+							<Comment>Event - Hard ramming</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{624D3ADF-F256-414C-8204-165DC52ECF27}" ShortID="508786947">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ramming_heavy" ID="{98985F73-4E47-4179-88AF-0DB770F15F1B}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="surface_collision" ID="{B4F9109B-44B6-48F1-9496-4A73C6968CEC}" ShortID="1071670475">
+					<Comment>A vehicle colliding with objects</Comment>
+					<ChildrenList>
+						<Event Name="water_coll_heavy" ID="{0FE03A6A-060E-4756-B125-10875D145E46}">
+							<Comment>Event - Hard collision with water</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{AC5A2816-FE1D-41EB-828F-02C9B93A1445}" ShortID="652579549">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="water_collision_heavy" ID="{33D848F0-2F14-414E-A03C-729F174E1B46}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="water_coll_light" ID="{BB8BF959-1A1E-468D-A472-5E2A6A5665AF}">
+							<Comment>Event - Soft collision with water</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{9F961550-A8D6-4EAB-8F83-58A4672D26DE}" ShortID="539893553">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="water_collision_light" ID="{7C136DD5-4C40-4448-93B8-5ACBBCF9A11F}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="physical_surface_collision" ID="{3452953E-87E5-495E-B4DD-C82843E58229}" ShortID="647130546">
+					<ChildrenList>
+						<Event Name="collision_static_object_suspension_ground" ID="{A7F07A1C-46E2-479F-91F1-C04578F48F53}">
+							<ChildrenList>
+								<Action Name="" ID="{B5D5FA83-5E8B-417B-A5AC-CF1435D55164}" ShortID="685956545">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack" ID="{E74A190C-800F-4584-87A7-7E4B7F4B46C6}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F6F53C20-5D1F-4139-986B-AF094107F869}" ShortID="975544986">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack_sniperMode" ID="{43741C31-92B7-4A6C-BA2E-F113180D3B62}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DC033286-D744-4F51-9446-4479E3114840}" ShortID="179189524">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_suspension" ID="{EE053B90-7580-4752-88CA-C1F64799139B}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{27056A02-C145-4952-8AD8-93AFE1AB9968}" ShortID="304589582">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resonance_suspension" ID="{AF35D3CA-420C-4E4F-AE2F-E96A13BE00DD}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9F78B501-9928-40CF-9DCF-0691A32E5324}" ShortID="991023203">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surface_ground" ID="{E61387F0-9A1F-4EE3-BD52-8FA9324F8186}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3B182EE9-ECB8-4FEB-9932-E78953EFF38F}" ShortID="1002293302">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="treads" ID="{9B33666B-6AC0-409F-9170-20292B3980D9}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="collision_static_object_hull_ground" ID="{CD84BE1C-099C-4778-A955-6AD31DCDF69D}">
+							<ChildrenList>
+								<Action Name="" ID="{58328C0E-8A97-402E-A2BA-FBDB61C4EFF4}" ShortID="515383303">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack" ID="{E74A190C-800F-4584-87A7-7E4B7F4B46C6}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7805C007-CA3B-479D-9BD4-E4E453E89575}" ShortID="614148989">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack_sniperMode" ID="{43741C31-92B7-4A6C-BA2E-F113180D3B62}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BA3FC18F-2913-4C2A-864C-5488036C8BC2}" ShortID="297702973">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_hull" ID="{8EF78C1E-D6A2-4FE2-A94C-833240B80D57}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{801B99FE-BD26-4468-9432-526E7CF02122}" ShortID="40914591">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_hull_sniperMode" ID="{A94998B4-8621-40FB-BA0F-F89A84AC46A9}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{30350E36-7D6D-4700-B663-EF94695DA489}" ShortID="341056589">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resonance_hull" ID="{E63F0502-54E5-41E6-BB21-63C7CA26C421}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A81370F6-2338-4233-8410-EEBA4782BB21}" ShortID="592135769">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surface_ground" ID="{E61387F0-9A1F-4EE3-BD52-8FA9324F8186}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="collision_static_object_suspension_snow" ID="{28059E3C-F283-49F8-B4C7-8D61C23432D8}">
+							<ChildrenList>
+								<Action Name="" ID="{39C8145D-CA77-4F1D-86B5-5926A15621CF}" ShortID="1069701007">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack" ID="{E74A190C-800F-4584-87A7-7E4B7F4B46C6}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1CE48A9A-758A-4A44-86A4-1459696DF4D2}" ShortID="763479093">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack_sniperMode" ID="{43741C31-92B7-4A6C-BA2E-F113180D3B62}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{FAF7CF53-675F-4F96-AEDB-A18387A85A83}" ShortID="407096621">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_suspension" ID="{EE053B90-7580-4752-88CA-C1F64799139B}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DE010492-5F14-4C23-98DA-796C2DD94CED}" ShortID="470975457">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resonance_suspension" ID="{AF35D3CA-420C-4E4F-AE2F-E96A13BE00DD}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{747C4EED-8A6C-47EC-9FCA-02481DACEFA5}" ShortID="172305824">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surface_snow" ID="{38B3552D-889F-48ED-A5C0-BF81F5FF937A}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{89466763-1948-43A4-8BC2-50F11266719F}" ShortID="677155785">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="treads" ID="{9B33666B-6AC0-409F-9170-20292B3980D9}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="collision_static_object_hull_snow" ID="{9B1DC39C-E174-4F3A-A105-4BCAE5DCF484}">
+							<ChildrenList>
+								<Action Name="" ID="{8EE6794B-68A1-401A-9FEF-13228C01FEDA}" ShortID="42573717">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack" ID="{E74A190C-800F-4584-87A7-7E4B7F4B46C6}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A0F1E79B-4029-49AF-A3FA-2DB295AFBE9B}" ShortID="60436131">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack_sniperMode" ID="{43741C31-92B7-4A6C-BA2E-F113180D3B62}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B24A1412-E485-4D0B-9918-9D80D01EA608}" ShortID="579336039">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_hull" ID="{8EF78C1E-D6A2-4FE2-A94C-833240B80D57}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7F5B5A5F-4F9E-4D10-86D3-0059675E2F35}" ShortID="363015101">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_hull_sniperMode" ID="{A94998B4-8621-40FB-BA0F-F89A84AC46A9}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2E565885-49FF-4F01-8067-8FE1E715981F}" ShortID="292723503">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resonance_hull" ID="{E63F0502-54E5-41E6-BB21-63C7CA26C421}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B216499A-111C-4011-9D98-EF296A4A4A7E}" ShortID="1070075427">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surface_snow" ID="{38B3552D-889F-48ED-A5C0-BF81F5FF937A}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="collision_static_object_suspension_sand" ID="{CE7BBF2F-26D2-452E-B42C-1CED0075F07E}">
+							<ChildrenList>
+								<Action Name="" ID="{CAA8811C-4E06-461A-8E2A-993B72CC3509}" ShortID="293461356">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack" ID="{E74A190C-800F-4584-87A7-7E4B7F4B46C6}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{52A5E143-A988-46BA-ADC7-52C235A10E01}" ShortID="40820258">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack_sniperMode" ID="{43741C31-92B7-4A6C-BA2E-F113180D3B62}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B2F47689-A863-4BE0-9BEA-87C8620942AE}" ShortID="857733276">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_suspension" ID="{EE053B90-7580-4752-88CA-C1F64799139B}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1FFBA7C6-51EF-4057-83AE-C22F0D5EE670}" ShortID="474239695">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resonance_suspension" ID="{AF35D3CA-420C-4E4F-AE2F-E96A13BE00DD}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3A76CBF6-9D4C-45FA-B125-380256365E91}" ShortID="449204088">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surface_sand" ID="{5E80F705-E321-4138-895D-6E5C1AE9AA1E}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F63759F3-46D0-4FD5-824B-BD884D16A1DA}" ShortID="783204906">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="treads" ID="{9B33666B-6AC0-409F-9170-20292B3980D9}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="collision_static_object_hull_sand" ID="{92A6B39E-F2A1-4A29-83B1-F0FC7326D231}">
+							<ChildrenList>
+								<Action Name="" ID="{8472742F-7004-4E53-9A7A-E6D4DDD6ECD3}" ShortID="804052501">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack" ID="{E74A190C-800F-4584-87A7-7E4B7F4B46C6}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6F44F881-B3E8-430D-B7E1-8F7D4D2EFC15}" ShortID="744911697">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack_sniperMode" ID="{43741C31-92B7-4A6C-BA2E-F113180D3B62}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D74E3A55-9CFC-4B6F-8C12-3A73F26D2892}" ShortID="310894432">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_hull" ID="{8EF78C1E-D6A2-4FE2-A94C-833240B80D57}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D94E9745-3C80-4A44-A8DF-5050337C5C64}" ShortID="218763265">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_hull_sniperMode" ID="{A94998B4-8621-40FB-BA0F-F89A84AC46A9}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AD42ACB3-750C-40F1-B6DF-0F1E6EA2E8AA}" ShortID="368807409">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resonance_hull" ID="{E63F0502-54E5-41E6-BB21-63C7CA26C421}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8D61DD8A-BDA9-4CDE-8437-AFCDF4199A2B}" ShortID="132962055">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surface_sand" ID="{5E80F705-E321-4138-895D-6E5C1AE9AA1E}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="collision_static_object_suspension_wood" ID="{478CA136-CA83-4F80-B5BB-D1EEF69B1C0C}">
+							<ChildrenList>
+								<Action Name="" ID="{DCCEA8E9-2CB4-4B10-B3DA-0F4932999DCC}" ShortID="996274584">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack" ID="{E74A190C-800F-4584-87A7-7E4B7F4B46C6}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8489C441-FD1D-460A-8315-A619C42F2F97}" ShortID="647829388">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack_sniperMode" ID="{43741C31-92B7-4A6C-BA2E-F113180D3B62}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EA412193-BC7B-44D4-BD02-E0D09D5E4C4F}" ShortID="325457940">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_suspension" ID="{EE053B90-7580-4752-88CA-C1F64799139B}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B7AD18A7-8914-47D1-8EA4-DBAEE6DB40D9}" ShortID="537916191">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resonance_suspension" ID="{AF35D3CA-420C-4E4F-AE2F-E96A13BE00DD}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8CA06345-4512-4C2D-8A06-3C4BB5C70A86}" ShortID="967476710">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surface_wood" ID="{2DAA0976-917D-4E3F-8C16-484B0CBF996A}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{830F8C92-1632-4AD8-B14A-47A55FA40A92}" ShortID="499089406">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="treads" ID="{9B33666B-6AC0-409F-9170-20292B3980D9}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="collision_static_object_hull_wood" ID="{932AC0C0-A6DF-4C30-94A9-8D78EF5CED8C}">
+							<ChildrenList>
+								<Action Name="" ID="{F853F1A2-7998-4758-AE35-851565B856CF}" ShortID="1029410015">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack" ID="{E74A190C-800F-4584-87A7-7E4B7F4B46C6}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A028C5EC-BD22-48A2-BA99-62BD20D49C3B}" ShortID="818343213">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack_sniperMode" ID="{43741C31-92B7-4A6C-BA2E-F113180D3B62}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0160622B-353A-4B5C-AE74-848464E0E06E}" ShortID="27820718">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_hull" ID="{8EF78C1E-D6A2-4FE2-A94C-833240B80D57}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C79D1B33-65A0-4758-BBB7-006EEB1BDF4A}" ShortID="1071228591">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_hull_sniperMode" ID="{A94998B4-8621-40FB-BA0F-F89A84AC46A9}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{87441C40-3304-43F1-AF85-A8F160C1DF68}" ShortID="384912132">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resonance_hull" ID="{E63F0502-54E5-41E6-BB21-63C7CA26C421}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6BA148A6-6626-4BE0-99CF-B37FE57D0FBD}" ShortID="999570333">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surface_wood" ID="{2DAA0976-917D-4E3F-8C16-484B0CBF996A}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="collision_static_object_suspension_water" ID="{ACF4D5D1-1396-47B4-A203-598B024C511A}"/>
+						<Event Name="collision_static_object_hull_water" ID="{955BB60D-DB56-4355-8468-081839BAEA07}"/>
+						<Event Name="collision_static_object_suspension_stone" ID="{4725770B-77FE-498C-A022-21167D70C83B}">
+							<ChildrenList>
+								<Action Name="" ID="{E3ADB07F-270F-49DA-A2F3-B36858758BA7}" ShortID="880994664">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack" ID="{E74A190C-800F-4584-87A7-7E4B7F4B46C6}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7E4FDD40-B035-405C-8423-9B003B7DB768}" ShortID="396061298">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack_sniperMode" ID="{43741C31-92B7-4A6C-BA2E-F113180D3B62}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7FED5192-2829-48E2-9DE1-87FC297D29F6}" ShortID="5256676">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_suspension" ID="{EE053B90-7580-4752-88CA-C1F64799139B}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8A1F913C-1877-42F9-ACAF-9B9014450933}" ShortID="114620122">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resonance_suspension" ID="{AF35D3CA-420C-4E4F-AE2F-E96A13BE00DD}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E9AA0E97-0DD8-44B2-9558-F4063AB89F82}" ShortID="600964074">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surface_stone" ID="{1CE39E0A-97FF-4437-ACC7-3AEF85D19912}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A2E3B4B5-3BA5-46D6-A7C4-C273028F62CF}" ShortID="983531540">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="treads" ID="{9B33666B-6AC0-409F-9170-20292B3980D9}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="collision_static_object_hull_stone" ID="{BA23DAF5-CE1B-4993-997C-3EF4D90F9EFD}">
+							<ChildrenList>
+								<Action Name="" ID="{6372D21C-42D4-4D0D-8D58-33059CB7426E}" ShortID="688450186">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack" ID="{E74A190C-800F-4584-87A7-7E4B7F4B46C6}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B2F75EE8-FE55-40DE-815F-642E36AFAF53}" ShortID="520492148">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack_sniperMode" ID="{43741C31-92B7-4A6C-BA2E-F113180D3B62}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{33E47291-31B8-4E8C-9DC7-0D0107E9CDC7}" ShortID="853190301">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_hull" ID="{8EF78C1E-D6A2-4FE2-A94C-833240B80D57}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AB34A32F-75DA-453A-A66A-152B8B6778BC}" ShortID="537690332">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_hull_sniperMode" ID="{A94998B4-8621-40FB-BA0F-F89A84AC46A9}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A68AF980-925B-4FD9-8D26-653AFAEDACD0}" ShortID="389391232">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resonance_hull" ID="{E63F0502-54E5-41E6-BB21-63C7CA26C421}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{170C5C96-BBEF-4C64-8899-673F1D42F693}" ShortID="728748334">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surface_stone" ID="{1CE39E0A-97FF-4437-ACC7-3AEF85D19912}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="collision_static_object_suspension_metal" ID="{578B9B42-2B51-41F8-AC0F-B7EFA8D12325}">
+							<ChildrenList>
+								<Action Name="" ID="{1AAA59A6-7B75-40F6-91F2-AB25457B6CF1}" ShortID="36417607">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack" ID="{E74A190C-800F-4584-87A7-7E4B7F4B46C6}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8DAFB529-B90F-45E1-BED6-332C89C4C609}" ShortID="990810738">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack_sniperMode" ID="{43741C31-92B7-4A6C-BA2E-F113180D3B62}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{650969DC-BF9E-4F9C-B62F-F2F057477C3A}" ShortID="401128924">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_suspension" ID="{EE053B90-7580-4752-88CA-C1F64799139B}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9F4AF980-FD2C-4FF5-9933-BD13C00DF1B4}" ShortID="1013570727">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resonance_suspension" ID="{AF35D3CA-420C-4E4F-AE2F-E96A13BE00DD}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{738D534D-45ED-4BCF-863E-70EBA56E6E77}" ShortID="25305869">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surface_metal" ID="{27B00A30-B8E3-4E57-A355-9E5F8C8E3097}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{51C7437F-DA16-437C-BC83-F197ECBB81EA}" ShortID="239609942">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="treads" ID="{9B33666B-6AC0-409F-9170-20292B3980D9}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="collision_static_object_hull_metal" ID="{19CC7CE5-C098-4436-BC6B-84ECC3F62603}">
+							<ChildrenList>
+								<Action Name="" ID="{ED689831-4B37-440C-A72B-90C302197EA0}" ShortID="38818323">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack" ID="{E74A190C-800F-4584-87A7-7E4B7F4B46C6}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2018C7BD-B88C-4D99-9F3B-298B869471C0}" ShortID="16083904">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack_sniperMode" ID="{43741C31-92B7-4A6C-BA2E-F113180D3B62}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C3DF5689-94AD-4519-8903-E5F9247CEB58}" ShortID="323805752">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_hull" ID="{8EF78C1E-D6A2-4FE2-A94C-833240B80D57}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{04189694-9D8F-4591-8175-5FCFC751C24B}" ShortID="597459689">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_hull_sniperMode" ID="{A94998B4-8621-40FB-BA0F-F89A84AC46A9}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CD0AD7D8-5A74-46A1-9817-3C6737C099CE}" ShortID="558576904">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resonance_hull" ID="{E63F0502-54E5-41E6-BB21-63C7CA26C421}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{ECCF4E9C-747D-419C-893D-6BA16DBAADAE}" ShortID="371783290">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surface_metal" ID="{27B00A30-B8E3-4E57-A355-9E5F8C8E3097}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="collision_static_object_damage" ID="{FED957D4-5625-42F3-889B-67A266F1A5A8}">
+							<Comment>Event that is called upon causing damage when a vehicle collides with a surface. The event is called over the main collision event.</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{F5CD0BFE-AB37-480C-8835-C162284014F2}" ShortID="852772419">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="07_sub" ID="{A58863F9-82CA-43BB-ABC9-6DBC33A8734D}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CDC89C5E-771E-4644-B310-30386E9E6209}" ShortID="538768741">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="surface_collision_sub_multichanel" ID="{440E48DC-9372-4FF7-B81D-B1E0975AFC2D}" WorkUnitID="{D58F09E6-0180-4E89-8C19-F6C9AA194BDE}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Folder Name="NPC" ID="{6C0C1C34-E3F9-42F0-828B-E8096881DCBF}" ShortID="848238696">
+							<ChildrenList>
+								<Event Name="collision_static_object_hull_NPC" ID="{68A5147D-9A85-4534-BFAF-0ECCE90E0BA4}">
+									<ChildrenList>
+										<Action Name="" ID="{B502A261-5240-4617-A579-E8AFF04B5AC0}" ShortID="144326811">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="attack" ID="{743200F6-588A-4E30-AEE2-CBA5A05783CC}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{0754D155-6CCD-46A9-81AE-C208ACAD6267}" ShortID="476887587">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="body_hull" ID="{23AC4267-7B6F-4535-8D8E-3B895932D14B}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="collision_static_object_suspension_NPC" ID="{DB453781-9686-4F5D-9820-801EA72B989A}">
+									<ChildrenList>
+										<Action Name="" ID="{9AF19DC0-CEC3-4750-B8F5-4FE67438798E}" ShortID="816995518">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="attack" ID="{743200F6-588A-4E30-AEE2-CBA5A05783CC}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{839B9418-7789-40DA-B179-8D5FED95299D}" ShortID="137861818">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="body_suspension" ID="{D583A006-5A99-4497-96CF-99B5410D7534}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{97B2D3DD-7325-44EE-8685-EB2283278D49}" ShortID="437518120">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="treads" ID="{C9F2D2DE-C199-457B-8FC5-8DBEE625D7B1}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="physical_distr_objects_collision" ID="{A33031B0-FEA4-4128-95EE-9A5BE47C7EE6}" ShortID="978246337">
+					<ChildrenList>
+						<Event Name="collision_distr_object_pc" ID="{6B611D1B-8EFC-491F-987D-BA66593B1C3C}">
+							<ChildrenList>
+								<Action Name="" ID="{660C913B-1C23-4C15-BA78-A0E1929D7034}" ShortID="1049970775">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack" ID="{573049A2-358D-405E-BCBF-2C72B23B8F07}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0848D971-6981-48E5-A4AA-6997B1EAAB4C}" ShortID="426278926">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="attack_sniperMode" ID="{EB88AC1B-355C-4E5C-887A-2F7B60402644}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{1EA6140F-A9F1-4A0E-8E2C-AFD49E6A9DD3}" ShortID="1027048736">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_hull" ID="{40F07CA9-A5BC-4666-B84A-CE1CF5771A8D}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7B07CD31-4D45-44C0-9619-CC44ECF3C565}" ShortID="691751334">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="body_hull_sniperMode" ID="{3649B769-FA80-4022-A799-AB609396F5AA}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{50C50D9A-B6A0-44D8-99FC-6E99983C5ADE}" ShortID="816027263">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="resonance_hull" ID="{21EA2F1E-1CAB-4F67-9316-99E7FF9FB85B}" WorkUnitID="{94179C42-AA4B-4852-90E0-A425BAB3FE9F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="collision_distr_object_npc" ID="{A6E98916-D63A-4538-9FA3-8C285CD80753}">
+							<Comment>Event - placeholder</Comment>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

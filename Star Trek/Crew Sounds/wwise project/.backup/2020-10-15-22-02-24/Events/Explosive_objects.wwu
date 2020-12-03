@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{69FEFA84-0A7D-4B6B-A2F4-857E89E14287}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Explosive_objects" ID="{69FEFA84-0A7D-4B6B-A2F4-857E89E14287}" PersistMode="Standalone">
+			<Comment>Explosive objects</Comment>
+			<ChildrenList>
+				<Folder Name="fuel_small" ID="{47D42322-B62A-4AB9-A98E-60810579575C}" ShortID="392325432">
+					<ChildrenList>
+						<Event Name="inf_fuel_env418_OldGMercedes2" ID="{C6B29380-6570-41C7-B4A7-7AA2510A4571}">
+							<Comment>Event - Explosion of object *OldGMercedes2*</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{832B2333-5DE1-4E5B-A69B-0E24CC6208B6}" ShortID="298958264">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fuel_small" ID="{40C429A4-22AD-4A2A-82DC-BBCCAD72D0CB}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{55B0B639-E1C9-4401-9E76-863FA82B820E}" ShortID="206239120">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="auto_crash" ID="{811CA532-351F-43ED-8388-0E6615F55F67}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F6A9CF0A-8954-4DE7-840B-F78E515994AF}" ShortID="515223649">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_mid_10sec" ID="{C32D720B-1B5C-4407-BCA2-642D66BA5817}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="inf_fuel_env608_Sovbus" ID="{83108B6D-2BF0-400A-93FD-B85933589805}">
+							<Comment>Event - Explosion of object *Sovbus*</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{E9D477BC-D23C-47D6-B1D0-1FF2833F04C1}" ShortID="957450685">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fuel_small" ID="{40C429A4-22AD-4A2A-82DC-BBCCAD72D0CB}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2D98FD88-132E-49F0-BCC6-FE1FCD298E64}" ShortID="883449751">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="auto_crash_big" ID="{20F00908-8A55-4719-A061-9904A5DDDB77}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F9BFDDB2-1B16-4826-A00F-6D49B42FDB86}" ShortID="640592968">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_mid_12sec" ID="{681E05B6-951A-46BC-9F6F-FD76954D7F85}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="inf_fuel_envAM_011_Truck" ID="{FA6CCB61-C99F-44CF-9AB3-0C9C8CD2D4A5}">
+							<Comment>Event - Explosion of object *011_Truck*</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{E9DF4CF0-76BA-4867-BFFD-7A382DA1109C}" ShortID="998317830">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fuel_small" ID="{40C429A4-22AD-4A2A-82DC-BBCCAD72D0CB}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{63C46ED7-9E35-4952-A41C-4316A22B39FA}" ShortID="1031585048">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="auto_crash" ID="{811CA532-351F-43ED-8388-0E6615F55F67}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{52ACB663-86B2-4546-8997-831DFF3C6982}" ShortID="597174927">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_mid_12sec" ID="{681E05B6-951A-46BC-9F6F-FD76954D7F85}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="inf_fuel_mle008_Canisters1" ID="{94D6F6AC-718C-4125-94C5-731A02EE7BE7}">
+							<Comment>Event - Explosion of object *Canisters1*</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{EEBF2213-8E61-450D-8CBA-219B67A3948E}" ShortID="695094512">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fuel_small" ID="{40C429A4-22AD-4A2A-82DC-BBCCAD72D0CB}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{300EEDAA-E736-4EA4-862E-5196C549DADA}" ShortID="216594349">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="can_debris" ID="{AF058474-8970-4DA9-9001-E946300A9D85}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2506AD76-E951-4730-A5F2-BA36DD91684C}" ShortID="94928637">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="can_hit" ID="{08D3B1C2-E922-4888-AE4C-3EBB1E4608FD}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{13F37B25-E72C-4CED-A456-84F705C335AF}" ShortID="318886024">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_small_10sec" ID="{7116AD71-C3F1-47C6-9658-5391873CC862}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="inf_fuel_mle008_Canisters2" ID="{24D080C3-9C9F-4F6B-AE51-01C319CEBBF5}">
+							<Comment>Event - Explosion of object *Canisters2*</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{8E9F1BB5-3F1B-47A8-96FA-D7467402D82A}" ShortID="10971757">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fuel_small" ID="{40C429A4-22AD-4A2A-82DC-BBCCAD72D0CB}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{ABBF6BBA-5AEC-475E-A4F6-E344040C244F}" ShortID="560732395">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="can_hit" ID="{08D3B1C2-E922-4888-AE4C-3EBB1E4608FD}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8DE0B3A7-0BD4-4077-BC58-3BD3F75C69A2}" ShortID="8265004">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="can_debris" ID="{AF058474-8970-4DA9-9001-E946300A9D85}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8C64C0B2-124B-41AC-B183-DFCF3978A79E}" ShortID="981324322">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_mid_12sec" ID="{681E05B6-951A-46BC-9F6F-FD76954D7F85}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="fuel_unique" ID="{1B9936D2-E6D2-4203-BBF5-BDE4EED5899F}" ShortID="894878079">
+					<ChildrenList>
+						<Event Name="inf_fuel_envAF_006_BarellFuel2" ID="{25065F15-C2CF-44EA-8B3C-048BC1F43481}">
+							<Comment>Event - Explosion of object *006_BarellFuel2*</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{53360F65-785F-4779-9729-3FDFE034A330}" ShortID="634429661">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fuel_unique_barrels" ID="{2A51E4EE-A0DB-4281-BF19-BE2E1CC12AA6}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8E0FEE16-0F1A-48DC-B5EB-AD6576692DD0}" ShortID="131645961">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cans_big" ID="{821AA831-BD53-4C90-A0F4-50F0D735C674}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0ED05878-DB13-45CC-B914-8FD55C37F48C}" ShortID="105847892">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_mid_14sec" ID="{A2B09F68-5943-4DBB-804E-6B8B5ACAF691}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="fuel_mid" ID="{88749328-831C-4C1F-8D3F-718A3FF61B62}" ShortID="252860096">
+					<ChildrenList>
+						<Event Name="inf_fuel_mleAF_003_WestlandLysander" ID="{8F046894-645D-450C-B1BC-B69F8C4CC76A}">
+							<Comment>Event - Explosion of object *WestlandLysander*</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{85FE7951-5E30-4EDD-8CA1-7B34645F5C27}" ShortID="191684519">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fuel_mid" ID="{540D30A1-EDA2-4761-9EFA-6BCBEF2FC7CD}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D014D08C-BE31-4A58-8173-13092457A644}" ShortID="443999197">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="auto_crash_big" ID="{20F00908-8A55-4719-A061-9904A5DDDB77}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B87E2DB6-A2B0-4C36-B32B-64B9EEF3BA7A}" ShortID="654953438">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_mid_12sec" ID="{681E05B6-951A-46BC-9F6F-FD76954D7F85}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="inf_fuel_envAF_007_AircraftRefueller" ID="{60F89D58-3510-4B90-A687-AAB58EEFF318}">
+							<Comment>Event - Explosion of object *AircraftRefueller*</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{D7EE4A8D-40C4-4875-AE73-3AC2ABBA6B1D}" ShortID="473927501">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fuel_mid" ID="{540D30A1-EDA2-4761-9EFA-6BCBEF2FC7CD}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DFC73D15-E86B-4955-9F58-22A140DF7AF7}" ShortID="287427264">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="auto_crash_big" ID="{20F00908-8A55-4719-A061-9904A5DDDB77}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{13B287C7-4E31-4B21-A441-602E90DABFA6}" ShortID="643420568">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_mid_AircraftRefueller" ID="{E8137C17-BF92-4A8D-BACA-A13D3DB74BB8}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="inf_env801_TrackBoomTank01" ID="{0E947718-8F97-4AC4-8F9B-50EFC1FE6804}">
+							<Comment>Event - Explosion of object *TrackBoomTank01*</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{9442A0CD-67F3-4985-88FD-0F58C0BE39A4}" ShortID="394322172">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fuel_mid" ID="{540D30A1-EDA2-4761-9EFA-6BCBEF2FC7CD}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5EFE8AB7-A971-4E29-A353-1C796030DB0A}" ShortID="989105725">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="auto_crash_big" ID="{20F00908-8A55-4719-A061-9904A5DDDB77}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CEC3A1B2-B50A-4737-B811-B49EAD3E8449}" ShortID="443781640">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_mid_10sec" ID="{C32D720B-1B5C-4407-BCA2-642D66BA5817}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="fuel_big" ID="{B13F8DB8-E61D-40BB-8A1D-FB19A86FF4C5}" ShortID="701727766">
+					<ChildrenList>
+						<Event Name="inf_env801_TrackBoomTank02" ID="{46B62B0C-36BE-470D-9C2F-BDA1447DE894}">
+							<Comment>Event - Explosion of object *TrackBoomTank02*</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{566E99BE-1772-4D3F-B52F-46C0C0484FFF}" ShortID="278224975">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fuel_huge" ID="{F5C39AB7-8C7B-4448-BF21-6B238E28F429}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D81DC5E9-FB7C-4623-B3A5-D816DDF37D29}" ShortID="106407220">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ccistern_layer1" ID="{138274FF-9E1C-4F54-9772-D41B83D32264}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C5594FF3-B6A6-41A2-97FD-18448F955E92}" ShortID="799467074">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ccistern_layer2" ID="{FE5DCB2F-5CF2-4AF0-917B-A43BDD61E00E}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8C4A29A9-CFD0-4619-AECF-5BE41F08036C}" ShortID="890605968">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_huge_40sec" ID="{061FD137-1703-4703-B74D-E4C931456ACE}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="inf_fuel_rw004_carriage3" ID="{E6C1CD92-68B9-4E0E-8522-33C4748484C4}">
+							<Comment>Event - Explosion of object *Сarriage3*</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{5E885314-7265-48A1-85F4-4A2611CEB562}" ShortID="479010545">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="fuel_huge" ID="{F5C39AB7-8C7B-4448-BF21-6B238E28F429}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9545E94B-C08D-44E7-8E3E-1451281E11B8}" ShortID="859432939">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ccistern_layer1" ID="{138274FF-9E1C-4F54-9772-D41B83D32264}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B1670130-33E7-4436-BD51-1F64017A188A}" ShortID="391423282">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ccistern_layer2" ID="{FE5DCB2F-5CF2-4AF0-917B-A43BDD61E00E}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{12F95576-5D3D-4667-AD56-1DD910073F99}" ShortID="641624806">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_big_12sec" ID="{D6AE3AC7-0315-4135-8722-25CCD015E90C}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="ammo_small_mid" ID="{F71CD6AE-8D2D-4D2C-9D96-695C49876093}" ShortID="76350373">
+					<ChildrenList>
+						<Event Name="inf_shells_detonation_medium" ID="{2FB9F0F7-6B5B-4898-9DA5-D47BEE9C2920}">
+							<Comment>Event - Explosion from a shell on maps (medium)</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{0B55573E-775A-495B-BC76-ADA4F5AE05D7}" ShortID="821646062">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ammo_expls_mid_small" ID="{FEC9673A-7A51-429D-ACBB-5E0993F157A6}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0DF3559E-0FEA-4931-A3F8-FFFA3B241A5D}" ShortID="586404298">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ammo_expls_pass_by" ID="{6D805FAC-7234-44D0-8F70-CF7C273E0410}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{212D6877-75F4-4846-B3CF-3225FEE3FB64}" ShortID="294928141">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_small_13sec" ID="{6F520DF8-E0D8-4FF3-B8FD-AEDB738F72BE}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="inf_shells_detonation_small" ID="{53C890DD-1076-438E-8FFB-80EF31EFFA14}">
+							<Comment>Event - Explosion from a shell on maps (small)</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{011D29FC-B810-4DCF-B3DA-EB5EAD128947}" ShortID="889505813">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ammo_expls_mid_small" ID="{FEC9673A-7A51-429D-ACBB-5E0993F157A6}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{503AC836-270C-45DB-9F87-05D768DF32F5}" ShortID="631395078">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ammo_expls_pass_by" ID="{6D805FAC-7234-44D0-8F70-CF7C273E0410}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{496E654D-C987-4D09-A134-AD99517998DD}" ShortID="793785738">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_small_13sec" ID="{6F520DF8-E0D8-4FF3-B8FD-AEDB738F72BE}" WorkUnitID="{EDE8BC7D-3F19-46D7-8808-B4797C8163E6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

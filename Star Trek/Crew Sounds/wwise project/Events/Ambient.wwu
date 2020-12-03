@@ -1,0 +1,1790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8EC00CD4-5767-4023-A222-F966184A3709}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Ambient" ID="{8EC00CD4-5767-4023-A222-F966184A3709}" PersistMode="Standalone">
+			<Comment>Environment</Comment>
+			<ChildrenList>
+				<Folder Name="static_objects" ID="{28BD87D6-68A1-45E3-9796-E5239B036287}" ShortID="236977963">
+					<ChildrenList>
+						<Event Name="ambient_static_objects_air_defense" ID="{31226421-BB6E-41A6-99E1-2E5A91B10396}">
+							<Comment>Event - Air defense</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{5F1DD762-026D-4C8A-A3E3-09A3C157E78F}" ShortID="690798368">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="air_defense" ID="{D57B84B6-BBAD-4620-AB4C-B99EE56C320F}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_static_objects_impeller" ID="{D3313C47-7C72-4650-9404-E2A059CC5B77}">
+							<Comment>Event - Old wind mill</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{EEF36D52-E7E2-4D2F-B9AF-0E1DD31772D7}" ShortID="798397721">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="impeller" ID="{49194FAD-4EF9-44AD-A907-5A3A845E388D}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_static_objects_mill" ID="{B1B80739-25E4-439D-9A46-2A872C8FDBDC}">
+							<Comment>Event - Mill</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{1D95E7B3-FDEA-4D72-98FC-6A69DE2329E9}" ShortID="976031176">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="mill" ID="{7996C37A-0161-4227-9203-A340B7DFB0D6}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_static_objects_propeller" ID="{BDEE5326-7873-4219-B09D-EDF8A25DE521}">
+							<Comment>Event - Propeller</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{A888DBD4-311E-4341-AD47-8FFA4209A85A}" ShortID="944340857">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="propeller" ID="{52A9DF9E-0B41-4726-814B-02DD28550B66}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_static_objects_water_mill" ID="{AFFE2490-D651-435B-AA97-1902BFC2EEFF}">
+							<Comment>Event - Water mill</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{38641E4E-96B7-44EC-A944-93114C8B5FE8}" ShortID="781420676">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="water_mill" ID="{A7CC431A-88AA-4E15-AEEE-6000F4DA34BD}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_static_objects_water_tower" ID="{2864394A-E020-4F09-B02D-FFA853F2E3B5}">
+							<Comment>Event - Water tower</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{A276C0F2-722B-4CCF-942E-23071F3E328B}" ShortID="170080704">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="water_tower" ID="{0FF25A31-C974-40F2-A382-D2444FE0536B}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_static_objects_flag_flapping" ID="{591DA617-F19E-4C75-BAB6-2FB11E963BFE}">
+							<Comment>Event - Flag (waving in the wind)</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{24BA9569-3AD6-40CA-9FFE-46B38039B062}" ShortID="314195507">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="flag_flapping" ID="{B5FCBF97-C1BA-4E3B-B472-6A3A47A6B679}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="trees" ID="{1C5D079A-CD5A-4311-B444-A9C81E3A8152}" ShortID="1039538507">
+					<ChildrenList>
+						<Event Name="ambient_trees_coniferous_comb_big_01" ID="{092D7524-D3A0-4B15-BB93-8E57D83F539F}">
+							<Comment>Event - Conifers</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{164D0019-831D-4C7B-B3C2-219E803CE511}" ShortID="591674446">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="coniferous_close_big_01" ID="{B8C7B22A-2879-42BE-A5AA-65F2952E9981}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D856CEEC-CFDD-4C3C-992B-9EBB803A2363}" ShortID="171592475">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="coniferous_far_big" ID="{DD37F5DB-B127-46DB-BA93-F06E25E87486}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_green_comb_big_01" ID="{D6981331-4645-4C7B-B7ED-74A3AC972D24}">
+							<Comment>Event - Tall green trees</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{AE070FB3-601C-4D5C-AABE-653348A3AA16}" ShortID="554228932">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="green_close_big_01" ID="{30CAA402-09E9-41D2-BA35-976036AD3C5A}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2BCE5C07-BFD3-4904-A6DA-625745E9D22D}" ShortID="688081710">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="green_far_big_01" ID="{7BE12B3E-0B82-4BCB-99FA-1FBF07B7EB9A}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_green_comb_big_02" ID="{4A45FC24-E9AB-4CA9-ACA5-021DE0C6A258}">
+							<Comment>Event - Tall green trees</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{56F8B819-5A79-4C0A-ADBF-01A5D3E2991E}" ShortID="224209541">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="green_close_big_02" ID="{0ED43727-6822-4E04-AC91-D380AA3DA995}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{78000A76-A3F3-4A84-85A8-12B3C28317B3}" ShortID="301276682">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="green_far_big_01" ID="{7BE12B3E-0B82-4BCB-99FA-1FBF07B7EB9A}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_green_comb_mid_01" ID="{BA24FF55-0D62-49AA-80AD-322A3E539A0E}">
+							<Comment>Event - Medium green trees</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{BD55822F-A55A-462C-8F35-10D96A3E53A4}" ShortID="506766842">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="green_close_mid_01" ID="{634AF9C0-06F1-48FD-AC39-BD7154F3A9C2}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{89C959BA-9FAE-4689-A917-3A239457D396}" ShortID="463652143">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="green_far_mid_01" ID="{76CBC5C2-0AD7-4778-8740-8ED207DF9822}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_green_comb_mid_02" ID="{51458E26-0ED0-4185-9C48-CB8347458072}">
+							<Comment>Event - Medium green trees</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{9568096D-79E2-4EE7-B5B0-3D0E42FB5FB4}" ShortID="7149836">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="green_close_mid_02" ID="{1EE2432B-9A8B-48FE-96A7-DA226E2A1F22}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{01307C8E-F4A9-46CA-A298-BF458E98FB3E}" ShortID="929017468">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="green_far_mid_01" ID="{76CBC5C2-0AD7-4778-8740-8ED207DF9822}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_green_comb_small_01" ID="{F6D06294-0B4D-4EF3-A587-4EDEBDA86EE5}">
+							<Comment>Event - Small green trees</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{D83B1923-D40D-48F2-800F-A4CD32BDCDEC}" ShortID="355944364">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="green_close_small_01" ID="{D79E0CAF-200F-4B83-9F4D-1F68DFA93C1F}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{553571F3-9761-4762-9F6C-31A383A87112}" ShortID="477163205">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="green_far_small_01" ID="{A4E8197F-F507-42C2-9586-0F9B45F4C25B}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_large_leaves_comb_mid_01" ID="{CD85EB85-C991-41BC-9717-0D39F425DD81}">
+							<Comment>Event - Tall broadleaved trees</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{27B3F053-EFAB-46ED-AC5A-AB576C5AD240}" ShortID="183525640">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="large_leaves_close_mid_01" ID="{B7235D1F-158B-47BF-B6D7-DBAE72B8E078}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7CDD1926-838D-42B4-91A4-2EC2900C39EB}" ShortID="644996073">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="green_far_mid_01" ID="{76CBC5C2-0AD7-4778-8740-8ED207DF9822}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_large_leaves_comb_small_01" ID="{7E5B28F9-FAE1-45DB-A405-C6D8353AE417}">
+							<Comment>Event - Medium broadleaved trees</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{9EFEE812-930F-446C-96FF-49F0D19B2706}" ShortID="258582523">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="large_leaves_close_small_01" ID="{E0AB7A60-6114-4DB6-8DBB-5DDC698C36BF}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CFA55E45-8A71-429F-8CB9-F42B28361948}" ShortID="449253245">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="green_far_small_01" ID="{A4E8197F-F507-42C2-9586-0F9B45F4C25B}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_without_foliage_bush_big_01" ID="{10464211-7CCC-41BB-A358-3503F976A7EE}">
+							<Comment>Event - Large bushes without leaves</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{1AC786C4-AB73-4547-B3F4-7CD464ED8A6C}" ShortID="511046450">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="without_foliage_bush_close_big_01" ID="{3A762734-59CE-49E8-BB32-4DBA484C47BA}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_without_foliage_tree_big_01" ID="{262C897D-74FA-462E-B105-B7B8A483E16D}">
+							<Comment>Event - Tall trees without leaves</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{9A88263E-C139-493A-A7CE-8587717B66A9}" ShortID="632087599">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="without_foliage_tree_close_big_01" ID="{5E38A495-0DEA-4912-9E95-F16C20303B69}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_dry_comb_big_01" ID="{C59325A1-0096-4D6B-BF02-081FEE8A16C1}">
+							<Comment>Event - Tall dry conifers</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{0AD9179A-C5A7-4BC1-B5EE-140EF3452364}" ShortID="914583560">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="dry_close_big_01" ID="{9358B82A-FE56-46D8-96ED-CA58A00F950C}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F53084D8-EF99-4872-99BD-F2909837CBC3}" ShortID="132263574">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_far_big_01" ID="{DF182B81-99D8-4F76-897A-3344E44640C1}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_dry_comb_mid_01" ID="{3D0DF045-CE81-49A7-A346-CF137FB7EA15}">
+							<Comment>Event - Medium dry conifers</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{2FF01269-5E19-42D9-829A-48EC698D9E18}" ShortID="356509272">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="dry_close_mid_01" ID="{7D4137DC-AB0F-46BA-8533-DA816053EF28}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{64E75404-9D34-4C8D-84CF-53B82F8A45C7}" ShortID="880347573">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_far_mid_01" ID="{293FD4C1-F201-432D-BADE-D82BCA7BB3E4}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_dry_comb_mid_02" ID="{8AA0BC4E-C208-48FA-8867-8240CE790C73}">
+							<Comment>Event - Medium dry conifers</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{F08D373A-6C0C-4C81-B104-43754A571852}" ShortID="320658313">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="dry_close_mid_02" ID="{EFB0B5A5-FF2B-451A-8E55-F9930C24CFBC}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{16EF9F23-F074-4418-88A8-DA2A262CEDF2}" ShortID="113705141">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_far_mid_01" ID="{293FD4C1-F201-432D-BADE-D82BCA7BB3E4}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_yellow_dry_comb_big_01" ID="{6B9D0168-9854-42D6-98F6-86F97E0E4995}">
+							<Comment>Event - Tall dry autumn trees</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{CFE04D6A-E080-4DCD-8364-741C03D540D8}" ShortID="234277371">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_dry_close_big_01" ID="{438D71BB-E544-48EE-AB56-5D595E0F7B0C}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8B60044C-2758-4344-87B2-CD6725890F1C}" ShortID="832204158">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_far_big_01" ID="{DF182B81-99D8-4F76-897A-3344E44640C1}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_yellow_dry_comb_big_02" ID="{A9F0A6C4-286C-4BF1-BE3B-8D6901D9C5C3}">
+							<Comment>Event - Medium dry autumn trees</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{1FFB911B-8693-40CB-80F2-8CF89CD07DD3}" ShortID="738465484">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_dry_close_big_02" ID="{CD498FA2-0EB2-4DE5-9B09-C084B320CB48}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{571838B5-7876-408B-BCE1-F5C1790DBAE8}" ShortID="519966536">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_far_big_01" ID="{DF182B81-99D8-4F76-897A-3344E44640C1}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_yellow_dry_comb_small_01" ID="{047280F8-0EF0-4CE7-8CB1-802A83D94804}">
+							<Comment>Event - Small dry audumn trees</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{743D7840-3529-4CBD-AE27-68F2DFC9D3B4}" ShortID="462604275">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_dry_close_small_01" ID="{8D8A3747-E7A1-43EA-9C48-332CBB58A44B}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B7A92416-F28C-46B1-8EB3-EFA008903FA0}" ShortID="998363645">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_far_small_01" ID="{B5518786-3C88-454A-A401-4D5A5619CC71}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_yellow_soft_comb_big_01" ID="{B7E3EC79-1BA5-4B4C-9056-EF7FF223986E}">
+							<Comment>Event - Tall audumn trees</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{8E16D1BF-F891-4B6D-8A39-23E507A76ADC}" ShortID="906789600">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_soft_close_big_01" ID="{840A4985-D362-463C-9EBB-27B0409BB30F}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{745848E4-DA5C-46F5-B9AC-9B577866CD16}" ShortID="181413118">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_far_big_01" ID="{DF182B81-99D8-4F76-897A-3344E44640C1}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_yellow_soft_comb_mid_01" ID="{FE2BF15D-170B-4DD8-981E-A5EBF71A8615}">
+							<Comment>Event - Medium autumn trees</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{4A8EAFF4-828F-48A7-A48A-131B09E8AD62}" ShortID="810313702">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_soft_close_mid_01" ID="{69AD1EA5-F400-4BA9-B8BA-B4D4F286B206}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A9C01D56-06CD-43F0-8DE5-F9BAE509EDEF}" ShortID="836505808">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_far_mid_01" ID="{293FD4C1-F201-432D-BADE-D82BCA7BB3E4}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_yellow_soft_comb_small_01" ID="{85F801AF-EC37-4A51-A032-D3DFC4EDACB2}">
+							<Comment>Event - Small autumn trees</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{807CBA7C-A22D-4AD6-ACFD-5DA592F361C5}" ShortID="6677927">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_soft_close_small_01" ID="{E4F894C1-DE03-428D-BDB3-48947E5F6D73}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C995B879-DA1B-484B-A0D5-AE053228E2B6}" ShortID="928792279">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_far_small_01" ID="{B5518786-3C88-454A-A401-4D5A5619CC71}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_green_bush_few_foliage_01" ID="{092A999D-909B-46F2-987F-211C64D70CDB}">
+							<Comment>Even - Green bushes and trees</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{3B3BC477-D122-4223-9CD5-C53993C9AB9F}" ShortID="762506123">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="green_close_small_01" ID="{D79E0CAF-200F-4B83-9F4D-1F68DFA93C1F}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{359A72A8-01FD-488F-A451-02271E7C02F2}" ShortID="735679072">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="without_foliage_bush_close_big_01" ID="{3A762734-59CE-49E8-BB32-4DBA484C47BA}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_coniferous_01" ID="{0AD61031-8222-421E-85E7-E737B12C0AB3}">
+							<Comment>Event - Conifers</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{5E3551E6-B7F0-4462-B13F-FEBE33EA0157}" ShortID="462063392">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="coniferous_close_big_01" ID="{B8C7B22A-2879-42BE-A5AA-65F2952E9981}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_yellow_tree_few_foliage_01" ID="{FF360C3F-C7A8-4A77-B8BA-5843A710031D}">
+							<Comment>Event - Autumn trees with a small amount of leaves</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{8F3A5871-3731-4885-A544-E1126CE359A2}" ShortID="714537153">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_dry_close_small_01" ID="{8D8A3747-E7A1-43EA-9C48-332CBB58A44B}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{46E11D46-3EFD-4D1C-B321-BF35CB6D7152}" ShortID="1048354294">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="without_foliage_bush_close_big_01" ID="{3A762734-59CE-49E8-BB32-4DBA484C47BA}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_palm_green_big" ID="{2301F9F5-68CB-4619-9835-00EDA4F082DF}">
+							<ChildrenList>
+								<Action Name="" ID="{02A8E1D6-9177-4B6E-9064-1AE401FC3694}" ShortID="830488764">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="palm_close_big" ID="{8DAFCD2D-3BFD-4020-BF33-585809BDE80B}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8E5043BA-0643-49EC-BB65-9FB7486632FA}" ShortID="468140698">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="palm_far_big" ID="{DF38D449-4404-43C7-A017-BEE728BFA4C0}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_palm_green_mid" ID="{22FF39EC-3101-40E9-88D0-4060C5431AF9}">
+							<ChildrenList>
+								<Action Name="" ID="{58A339A1-C7E9-45CD-9A3B-9F0376318BE8}" ShortID="468200492">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="palm_close_mid" ID="{8D044459-F6B0-4B87-89AE-D4C01F8907A1}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{580021B8-36C3-49D0-9CEA-8C303F107788}" ShortID="156665833">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="palm_far_mid" ID="{853F8560-C908-4038-900B-BC0075E317B6}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_without_foliage_tree_big_02" ID="{FAE41A6F-C7C4-471C-955B-019EC9A33C8D}">
+							<Comment>Event - Large trees withou leaves</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{CC1486C3-B690-4E94-A6F0-FCA23E33E806}" ShortID="404276492">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="without_foliage_tree_close_big_02" ID="{6FA16D5E-B25C-4513-AA07-82E2878EE9B9}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_bush_yellow_dry_small_01" ID="{02756DD3-CBB4-42DA-B97C-C1FA643DE1B0}">
+							<Comment>Event - Small dry trees in autumn</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{3FB2ECA3-D1F8-4633-9C67-B24B757246C7}" ShortID="903753062">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_bush_dry_close_small" ID="{2DBE32A7-8034-46C3-B68B-A889D38058DE}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_bush_yellow_dry_big_01" ID="{C61D26BC-9021-4AD2-B4E2-6C313F7B79D3}">
+							<Comment>Event - Large dry trees in autumn</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{CD137CBE-38B2-4AF4-ADF5-EDBEC350C897}" ShortID="445093571">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="yellow_bush_dry_close_big" ID="{BA507FF4-0BC7-498E-8073-461D89A389E7}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_trees_crack" ID="{F6532CCC-C85D-4261-878B-338918302550}">
+							<ChildrenList>
+								<Action Name="" ID="{CD18B430-9967-404C-99BF-B6165B9DCD5F}" ShortID="438555401">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="trees_crack" ID="{6C57FAC1-FED6-4977-97E0-762FD5B88B69}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="burn" ID="{109D50FA-8FB6-4F5D-8CE9-8A49260131F0}" ShortID="694193812">
+					<ChildrenList>
+						<Event Name="ambient_burn_static_mid" ID="{4AC04A71-CF3F-40A7-ACA5-9A04794B6AE8}">
+							<Comment>Event - Medium fire on a map</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{AD65B279-8EA1-48F9-B66F-3095F02BB637}" ShortID="249780752">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_static_mid" ID="{BC606E39-BBB6-4BAD-A92E-B8D7343C6581}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_burn_static_big" ID="{7AF17C2A-476B-4D85-93E4-7B9C5F49E5C1}">
+							<Comment>Event - Large fire on a map</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{6ACA6E60-B67E-4AB4-8516-CBB8FB279A41}" ShortID="926698844">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_static_big" ID="{E9AA890F-2519-47AE-98A3-9BC21854158C}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_burn_static_small" ID="{553C4978-0DB9-4961-9312-F7419E29EA80}">
+							<Comment>Event - Small fire on a map</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{4A83FD4A-791F-4A9F-8C63-2E532C0648E6}" ShortID="95991137">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="burn_static_small" ID="{17383777-EA5E-44AD-B82E-72EB7230E4BA}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="wind" ID="{F55BDA97-7C95-4347-B3B0-F9DC5300442F}" ShortID="991467229">
+					<ChildrenList>
+						<Event Name="ambient_wind_autumn_01" ID="{27E63781-7FD2-4CF4-BCD6-758481F2A61A}">
+							<Comment>Event - Autumn wind</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{F69ADE86-9EA4-4239-A92F-FD897507BC76}" ShortID="724869411">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="wind_autumn_01" ID="{BB1CFE17-12B7-49F7-9B9A-A85373798DC4}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0F448288-1D7A-4308-9498-6FE8E2F99BA8}" ShortID="930535913">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_reverb_hangar_dark_gui" ID="{57CE6E51-4B80-4AAC-8A32-B599F8F24495}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C1153CEA-8302-4C72-BBEB-4E6B8BD5D138}" ShortID="203846106">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_reverb_hangar_light_gui" ID="{9EF2D2BD-36E2-431C-B504-F4455B0EC949}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_wind_winter_01" ID="{F8B0A6BE-2DB7-4AE7-B1FD-C33340DC5552}">
+							<Comment>Event - Winter wind</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{DBD861FD-0A84-49D5-9EB4-995499B048BF}" ShortID="185399796">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="wind_winter_01" ID="{29A40212-E897-4303-97FC-33B8F1D381DC}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{5D7AF3A1-99A0-4BB8-A053-B1F302E498AC}" ShortID="29040780">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_reverb_hangar_dark_gui" ID="{57CE6E51-4B80-4AAC-8A32-B599F8F24495}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{38D5B1C2-A303-42DE-81E3-D534CD1E1CCA}" ShortID="689265116">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_reverb_hangar_light_gui" ID="{9EF2D2BD-36E2-431C-B504-F4455B0EC949}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_wind_summer_01" ID="{BD85B8F0-0899-43F0-AA6C-66ECA9299375}">
+							<Comment>Event - Summer wind</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{1B8EB937-7D85-4EC8-9195-F42C9A3DF2AB}" ShortID="981250476">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="wind_summer_01" ID="{611F7F40-4D6B-4BED-8067-B0BEC8178881}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{8F7707F9-D7DF-49E8-A7F8-5F269A9A1CAB}" ShortID="13097359">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_reverb_hangar_dark_gui" ID="{57CE6E51-4B80-4AAC-8A32-B599F8F24495}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D1A8372F-669F-4DDA-82A0-62F62F9303FE}" ShortID="956025959">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_reverb_hangar_light_gui" ID="{9EF2D2BD-36E2-431C-B504-F4455B0EC949}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_wind_spring_01" ID="{539ADE99-2566-4167-920B-D9EF7E2CF2F0}">
+							<Comment>Event - Spring wind</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{1A79F64D-D029-4F2F-BD1D-510941CD058D}" ShortID="901663103">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="wind_spring_01" ID="{11DD7BCB-675D-4ACA-925E-8CDAC12837D7}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9AF545C2-6A47-40C4-9BA2-A72F135EBC9F}" ShortID="507371599">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_reverb_hangar_dark_gui" ID="{57CE6E51-4B80-4AAC-8A32-B599F8F24495}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{22D83029-EE16-4947-9CF8-527DE1201EA7}" ShortID="283099785">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_reverb_hangar_light_gui" ID="{9EF2D2BD-36E2-431C-B504-F4455B0EC949}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_wind_desert_01" ID="{686E2A46-6EE9-4300-BD27-6F5F0FEED8A5}">
+							<Comment>Event - Desert wind</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{2AF07B7F-B73D-41F5-83D3-3B85D4D056AD}" ShortID="767071523">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="wind_desert_01" ID="{CEF23735-BEA4-44EE-AA45-F252549A3C09}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{62D9D286-D583-46F5-9DE8-4BA44FB1DD60}" ShortID="678468364">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_reverb_hangar_dark_gui" ID="{57CE6E51-4B80-4AAC-8A32-B599F8F24495}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B2570A64-C1A9-4C14-A340-2079FF72312E}" ShortID="283116639">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="4"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AUX_reverb_hangar_light_gui" ID="{9EF2D2BD-36E2-431C-B504-F4455B0EC949}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="nature" ID="{88FDE6E6-D226-4303-8D35-36B7DD792D3B}" ShortID="158856680">
+					<ChildrenList>
+						<Event Name="ambient_nature_swamp" ID="{F2C055B0-3542-4C5D-8A16-FF696F448684}">
+							<Comment>Event - Swamp sounds</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{6673CF0D-E13A-411C-AB63-7E0DC4659D48}" ShortID="253755950">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{2BF113F7-33B5-4CF3-94FD-48FD30AA9F22}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="swamp" ID="{45EEF990-6FFF-4794-9834-50A9551F0FD5}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_birds_crows" ID="{A9FF7307-210D-4AD6-A607-0EEF073B5EF8}">
+							<Comment>Event - Crows</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{32988573-1BCB-4FBB-A642-D29556667230}" ShortID="202920859">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="crows" ID="{4357252A-853A-4372-AFC4-7ACAB9708128}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_birds_seagulls" ID="{F633B1D4-65F7-4CC6-B6B6-5778F5CC6283}">
+							<Comment>Event - Seagulls</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{C10D1522-304A-438F-9401-EE3C2FA878B2}" ShortID="266832299">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="seagulls" ID="{D6E95015-100D-49E5-85C7-F5C5D2112534}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_birds_forestBirds" ID="{311EFAE7-100A-4273-AF1E-D03134FA86DD}">
+							<Comment>Event - Forest birds</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{794317CC-FC5E-4B8B-9A0A-5F1ABD9E9904}" ShortID="971810930">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="forest_birds" ID="{B31558FA-CDC5-44ED-98AC-EB35E2CD3DB2}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_birds_eagle" ID="{D0CADEAE-05B2-448C-A56B-E0E85AE45AD0}">
+							<Comment>Event - Eagle</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{F7A06B8B-F0A7-4096-8315-4CD36A0857E3}" ShortID="291417258">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="eagle" ID="{19C94479-26E9-4ADD-9CC9-926E89A71A3E}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_birds_woodpecker" ID="{2A782F66-4A03-4656-B1A7-8A06585E436E}">
+							<Comment>Event - Woodpecker</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{09B03E4E-E915-48EC-A986-8850408CB6DC}" ShortID="155506008">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="woodpecker" ID="{1A741B25-B103-444A-8664-FC9330DD2526}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_birds_cuty_autumn_birds" ID="{6C16FE81-9710-44BC-A2F8-89334C81ED1E}">
+							<Comment>Event - Autumn birds</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{E44EF3A5-A97D-487D-9C63-2715F8376973}" ShortID="704960566">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cuty_autumn_birds" ID="{0081B261-3F18-4D03-877F-CC1ECA82F9B3}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_birds_forest_autumn_birds" ID="{FFD7A591-D3FC-4492-8CE3-79C413594E2E}">
+							<Comment>Event - Forest birds</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{18650379-CF02-427F-AA61-13338D1779B1}" ShortID="695437003">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="forest_autumn_birds" ID="{3FB0AD99-6903-4793-BCBC-B0A6017A43E2}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_birds_sparrow" ID="{C0B2DB7F-6E71-4DA3-862E-82E84D23EE92}">
+							<Comment>Event - Sparrow</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{59A2C7FB-1125-4E72-8446-777F52A3E3F8}" ShortID="552180911">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sparrow" ID="{470282B3-84AF-482B-A32C-F27AF7A531DE}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_birds_winter_birds" ID="{7BE0856F-33A0-4BD9-995E-993D10BF0C1F}">
+							<Comment>Event - Winter birds</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{FAD2C8EC-8EBE-4BF1-AEC3-0D1A1AB83BB0}" ShortID="994669416">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="winter_birds" ID="{D2137530-89C8-4C1F-9A80-D9EE56C82D3D}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_birds_winter_crow" ID="{444B394B-BE52-44FC-A44C-3718ABC0BF91}">
+							<Comment>Event - Winter crows</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{63D56C3B-7BD7-4C09-AC6F-2A6AB4D7E99A}" ShortID="774933666">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="winter_crow" ID="{A5248090-50D1-4F39-9C9E-18A5F9681D42}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_village" ID="{943CB574-27A1-410E-B70A-941F76116462}">
+							<Comment>Event - Vilage sounds</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{260779D3-E888-4EF7-83C8-00CA47628339}" ShortID="786907481">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_village" ID="{735D78A4-2082-400D-B474-55FF5D0F9B31}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_village_without_birds" ID="{96864527-F46A-4902-BB09-C61962E8D796}">
+							<Comment>Event - Vilage sounds without birds</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{8C30AAC7-3AD5-49D2-802D-3972566E2A0B}" ShortID="459712941">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_village_without_birds" ID="{22CE0FD2-0D46-407E-AF87-8969F9C58E63}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_animals_cat" ID="{170BF18F-6AF1-467F-96B7-1410A2EC5C57}">
+							<Comment>Event - Cat</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{A22E8A55-99D5-4AC4-B414-875AF74F0B12}" ShortID="703141606">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="cat" ID="{EF93C631-F76E-482D-9076-558421573479}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_animals_crickets_01" ID="{5DCFEABB-37FE-4DCC-8054-0FD38887E2C8}">
+							<Comment>Event - Crickets (loop)</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{773D91D4-D8C9-4371-B3F4-8CD151BC6E30}" ShortID="82063715">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="crickets_01" ID="{7541505C-5C14-471A-9701-C474793373D3}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_animals_crickets_02" ID="{1A9F7F4E-877B-4EF4-A9FA-0B330C9D2DD0}">
+							<Comment>Event - Crickets (loop)</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{D96F96EC-9AB6-4590-A831-0F38858EF1AF}" ShortID="866478709">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="crickets_02" ID="{892793FF-EDD2-4853-A5A2-007DFEA22D8F}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_animals_crickets_oneshot" ID="{324D6FCD-159C-48C9-A7CB-E60AE4BBACD3}">
+							<Comment>Event - Crickets (oneshot)</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{424DC892-E9BA-4E8B-98B9-6916493FD8DD}" ShortID="641367024">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="crickets_oneshot" ID="{EA8CF00B-6C9B-4DD1-8F12-03F7EA4FB8FF}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_animals_duck" ID="{D410FC25-4DF5-4845-92C1-DC43573AC233}">
+							<Comment>Event - Duck</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{5DA5E4C9-5FCE-4B02-9691-7A0B53DB49BE}" ShortID="168126550">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="duck" ID="{BA8684DB-681B-43A6-ACB3-53B75E2A3292}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_animals_duck_water" ID="{48DF985E-85AD-42DE-A4FF-FB8FA3AC50D0}">
+							<Comment>Event - Duck in the water</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{AD9380FA-73B7-456E-ADF0-CB9FD49B8C59}" ShortID="468696025">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="duck_water" ID="{88F33584-F6C5-4372-BA77-A2FA367744C3}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_animals_snake" ID="{3B7AB6F3-BDDD-43D9-BB4D-24088900CCE5}">
+							<Comment>Event - Snake</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{037FD1F0-FF62-43B4-9688-0529FF9ADFAC}" ShortID="74439655">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="snake" ID="{4114B0C0-CCF0-4AE0-986F-955F39645421}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_birds_flock_of_pigeons" ID="{013ECA9E-E349-4213-A7C6-D9FFB83A2B5F}">
+							<ChildrenList>
+								<Action Name="" ID="{67974FE8-466E-4D0A-9298-82EFB5021689}" ShortID="1007659428">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_nature_birds_flock_of_pigeons" ID="{6AF6018E-506A-4D3D-9674-5E0B4DB24A5D}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_birds_doweTakeoff" ID="{28B8D5AD-BE4D-4723-A866-823C59188205}">
+							<ChildrenList>
+								<Action Name="" ID="{5C8BBBC2-1890-4532-AED3-8302ABACDE85}" ShortID="1066046796">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_nature_birds_doweTakeoff" ID="{805EA6BD-7D6C-47D7-AA93-D76E403E8ACF}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_birds_dowe_light" ID="{A65DEF39-4D79-43A1-89AD-E0750BC5B7AD}">
+							<ChildrenList>
+								<Action Name="" ID="{1A582A05-1FD8-4EE6-B6EF-6D95B3258F06}" ShortID="342774997">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_nature_birds_dowe_light" ID="{5F811436-FC21-4C3D-B4C6-613FD8B4FA28}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_nature_trigger_soaring_birds" ID="{1B3F9F7F-8520-4B19-9E2A-F65321604F67}">
+							<ChildrenList>
+								<Action Name="" ID="{BA207FF2-B83E-42CE-8BE0-F3EC22E406F6}" ShortID="594383698">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="trigger_poultry" ID="{87AD0AA3-A2EC-4269-8B5D-5B549CF3173F}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="water" ID="{9C3F9DEF-2D9F-4838-BEE1-F54A3A00F305}" ShortID="1062998465">
+					<ChildrenList>
+						<Event Name="ambient_water_flow" ID="{8333FE48-DE1F-42A6-BAA4-00DEEAE16ED1}">
+							<Comment>Event - River flow</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{02182F02-83CF-4636-A75A-A040401AC1E3}" ShortID="820616767">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_flow" ID="{C9C9D104-45E7-4BA4-97FA-9E47CE5B74E2}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_water_small_01" ID="{78B0D096-DFBB-4201-A9A6-49C851B76A91}">
+							<Comment>Event - Still water</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{827571CE-AB90-47CB-83CB-12D3315B40EA}" ShortID="105638256">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_small_01" ID="{715A269A-3E6E-4F47-A492-0DC53A40FACF}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_water_small_02" ID="{DBCB2B00-1F38-43C3-8064-952A64839E0A}">
+							<Comment>Event - Still water</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{112EAA05-C11C-47A1-B2F9-1B804F815C1A}" ShortID="745604852">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_small_02" ID="{FFBFBD96-9D5B-4FF3-8368-4F7724EA33B8}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_water_waterfall_big" ID="{FD0BA5B8-EE3B-422C-9362-64B36DB63B00}">
+							<Comment>Event - Large waterfall</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{389949CC-BCF8-4371-8753-DF764C87CEE7}" ShortID="859086319">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_waterfall_big" ID="{547F7326-42C4-437F-BDB2-AF63CE277157}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_water_waterfall_med" ID="{FD94E97E-5935-4B6B-A3A7-EE485362AE75}">
+							<Comment>Event - Medium waterfall</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{4A13B237-A3BD-4EE4-A90F-C6D83953320C}" ShortID="195157575">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_waterfall_med" ID="{0F67916C-6916-4EF7-A0D0-AD9E09BB45AA}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_water_waterfall_small" ID="{20AEE6F3-FC5B-4F9C-A9B8-5B9D306F5C73}">
+							<Comment>Event - Small waterfall</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{4BEF9085-CCB6-44CE-9623-E238B37AF99B}" ShortID="683359521">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_waterfall_small" ID="{29AC0643-DBF0-4033-AB0A-4156D32165CA}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_water_seaside" ID="{9E1E27B5-BB86-4A36-97B3-633CE06F2E9D}">
+							<Comment>Event - Sea water</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{6AABDA52-01C2-42F0-BC18-5FDBFA64C757}" ShortID="477422772">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_seaside" ID="{07B9D2B2-3E81-4308-B737-27E1BD27A5BC}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_water_coastal_line_big" ID="{E2A319F8-0E5F-4835-BE0A-166FAAD06C83}">
+							<Comment>Event - Water at the seashore</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{389B081F-AF17-409C-8AA4-4C40DEF22166}" ShortID="142094187">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_coastal_line" ID="{1A96FBBC-B62D-44AA-891B-DC9ED3CCF6CE}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_water_lapping_boats" ID="{F83F737C-14F0-484E-A065-9FA81880EE77}">
+							<Comment>Event - Water near boats</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{39583C60-A4CD-4201-8473-A91ED62BDF48}" ShortID="651755649">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_lapping_boats" ID="{C005A9CE-913E-43BD-A553-C2DC386B6231}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_water_coastal_line_little_01" ID="{114A4BCF-7534-426C-AF23-334EEE992C10}">
+							<Comment>Event - Water at the seashore</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{123BF583-AB07-4022-8BA8-A11E5DDD9A66}" ShortID="907078840">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_coastal_line_little_01" ID="{87443FFB-B05E-4E62-8C58-9ABD66D06662}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_water_coastal_line_little_02" ID="{7CB0413F-899B-43D5-A182-D6505A3D50EE}">
+							<Comment>Event - Water at the seashore</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{26885CB9-3DD6-44D8-87A6-03E411EECC88}" ShortID="57094366">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_coastal_line_little_02" ID="{CF06E49B-D520-4150-B52B-81573DB9E9CE}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_water_calm_01" ID="{BD104FD5-36E0-4EA6-A83B-0D4D09CDE37D}">
+							<Comment>Event - Still water</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{853D3AFC-528D-441D-A594-2A211D159D8D}" ShortID="594026539">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_calm_01" ID="{38A20B55-1B27-4BC3-A690-9FFC6E28E51D}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_water_calm_02" ID="{EA0FAC15-C447-4772-95C9-237263652652}">
+							<Comment>Event - Still water</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{3D2FB994-31D2-49EC-AFC0-A1EAE6D69A57}" ShortID="310631612">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_calm_02" ID="{E5EA380B-FFC1-4529-ACEA-FCC0FB132FE1}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_water_water_pier_01" ID="{31455449-DA1B-4DF9-93BD-16924B5978FF}">
+							<Comment>Event - Water at the pier</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{9DFF06A8-BBFF-4B60-9866-513F8DF65C99}" ShortID="593064778">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_water_pier_01" ID="{7C147EEF-EA67-409F-9DFA-8752CD271BAE}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_water_water_pier_02" ID="{307A6E6A-2493-421C-B09F-B367C245549C}">
+							<Comment>Event - Water at the pier</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{684599BF-3100-4569-A831-FDDE2B31BC08}" ShortID="713022817">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_water_pier_02" ID="{E4EA4E62-C75A-4AA6-87BF-FCC82D09DD59}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_water_seaside_02" ID="{D1B0F5E1-EF99-4657-89A8-D8E41DA447E6}">
+							<Comment>Event - Water near the sea</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{9D16BA4F-5202-46DA-87F8-0521DBF965BF}" ShortID="544249811">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ambient_water_seaside_02" ID="{C4C7CF7E-2CA7-45EA-97DE-3394AFB503C6}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="objects" ID="{AD0693FF-CB8F-4902-A1DF-3B05DDDAF5FB}" ShortID="1059832545">
+					<ChildrenList>
+						<Event Name="ambient_objects_church_bell" ID="{EE5F1F38-B6ED-467E-AC88-DBB88CF38780}">
+							<Comment>Event - Bell</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{C86ACC0F-409A-47AF-B225-D110C178DDE0}" ShortID="936618909">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="church_bell" ID="{79821623-EC54-4880-B771-CF9D7A725E70}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_objects_tower_clock" ID="{4668A22D-9834-4BBE-9BC3-EA169AA4E006}">
+							<Comment>Event - Tower clock</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{F083DD96-4909-4629-96E5-F0F2F5058C04}" ShortID="256802888">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tower_clock" ID="{CD240915-B318-4FA3-9555-4FCB4E4AFE15}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_objects_tower_clock_fo" ID="{911C3C46-3B61-4DB9-A3FA-A3DE07F44357}">
+							<Comment>Event - Tower clock</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{27FE5C45-BB53-44EF-9748-DE4E5915DFB8}" ShortID="458833495">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tower_clock_fo" ID="{5EBAFF44-F884-4596-99C1-850B476645A8}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_objects_elevator" ID="{F64C0124-300E-475E-B167-EBE9D0305D98}">
+							<Comment>Event - Elevator</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{FE8B5628-11BC-429C-971E-D84FF72EC76F}" ShortID="121479519">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="elevator" ID="{85E9B80E-2C3F-4240-9A7E-A4AE360DF92F}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_objects_train" ID="{0B50CD47-26EF-47EF-A0C5-B8DF7341DC62}">
+							<Comment>Event - Train</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{B2462999-7FF2-41E6-A3CF-1D66759AB913}" ShortID="349481367">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="train" ID="{A6083616-A947-4CC8-B0C4-1EE09C2F0EF0}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_objects_factory" ID="{08DF1DCD-55E2-4B56-921C-C589A16BFCC9}">
+							<Comment>Event - Plant</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{77112DE3-3CFA-444F-BB8F-00EEA7CF0834}" ShortID="746740652">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="factory" ID="{E78F086F-0415-41E5-8603-2F0475DF7228}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_objects_steamboat_whistle" ID="{E6DC10C8-0CAB-422E-BBEC-6893FACC3BA8}">
+							<Comment>Event - Ship’s whistle</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{78445552-B021-421A-8F90-935F007E7CEE}" ShortID="372837532">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="steamboat_whistle" ID="{7AF35AB7-8FDA-4AE8-93C1-EB2626388EDE}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ambient_objects_rockslide" ID="{5E9D13CB-6FCF-4E7E-9285-DF0C8CD53009}">
+							<Comment>Event - Coarse creep</Comment>
+							<ChildrenList>
+								<Action Name="" ID="{6FB09A88-8166-4CFF-840F-EF8921CE6518}" ShortID="1065643886">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="rockslide" ID="{B6377477-F42C-43C2-89ED-15436B061BB9}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="weather" ID="{8F99E083-C308-4247-8547-8ABD3AB604F2}" ShortID="875151955">
+					<ChildrenList>
+						<Folder Name="tunderstorm" ID="{ECEC32AE-A522-4975-B03C-5E6D81AB75C1}" ShortID="709788754">
+							<ChildrenList>
+								<Event Name="ambient_static_objects_inf_lightning" ID="{0595F562-9F2F-48BE-9100-C2C577D6E1C8}">
+									<Comment>Event - Lightning</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{3B1DB882-1E14-4CD4-84E5-D2D7FCD337E4}" ShortID="112786346">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="lightning_01" ID="{A00AD9C6-7152-4B40-ACE4-BAAA8637D5C0}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="ambient_static_objects_inf_lightning_clouds" ID="{A7952738-724C-47A7-A293-32D6908233CE}">
+									<Comment>Event - Thunder</Comment>
+									<ChildrenList>
+										<Action Name="" ID="{AD77E8B9-6F12-408B-9A5E-FC234FAAF64D}" ShortID="332848822">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="thunder" ID="{F3DF5006-7E41-4DFE-81B6-6383C6064910}" WorkUnitID="{51ECFDD7-9A55-40C7-BE3D-8A1A9E0F1836}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,3441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{47FEE6D6-CBAB-427C-A250-2BADF4F2CA45}" SchemaVersion="80">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{47FEE6D6-CBAB-427C-A250-2BADF4F2CA45}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="voice" ID="{1BB13A15-FAF8-4E34-887B-6167D468DD76}" ShortID="609692383">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{FA7D0051-F865-47A1-8832-1241EE6F399D}" ShortID="1055976992">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="RTPC_ext_menu_volume_master" ID="{076FF243-CAA2-4423-AD8E-C732725F8A32}" WorkUnitID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{47EED079-076E-4A16-9741-0124E20C9BCC}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+								<RTPC Name="" ID="{B1E83F63-7ED9-4539-8DF2-3C9864FE8261}" ShortID="852059071">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="RTPC_ext_menu_volume_voice" ID="{CBE06477-B4E7-448E-B6EB-A7F887D0FDE7}" WorkUnitID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{E77A61C8-4BB3-486C-85ED-4E23B8CF30F1}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Folder Name="voiceover" ID="{31807670-DF07-477B-8D26-55DBD84FA660}" ShortID="872719749">
+							<ChildrenList>
+								<Folder Name="notifications_dp" ID="{B93E6BFB-2775-4DB4-A04E-6A6C9B79D53F}" ShortID="437403500">
+									<ChildrenList>
+										<RandomSequenceContainer Name="vo_dp_assistance_been_requested" ID="{CFEF4358-4B4A-4242-83DC-725EA1B25B59}" ShortID="73782843">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="vo_dp_been_excluded_platoon" ID="{7F6D38CC-A9B1-4A19-915C-2D3DE6B1B59F}" ShortID="53183899">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="vo_dp_left_platoon" ID="{DFB2EEB8-9089-4C6E-B40A-84099FDEEE67}" ShortID="34063451">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="vo_dp_platoon_created" ID="{D98A7C72-10D2-41B8-BF12-73F053FD21D7}" ShortID="390977707">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="vo_dp_platoon_dismissed" ID="{A612A736-F496-40EA-A36C-DB4A971DF079}" ShortID="546736222">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="vo_dp_platoon_joined" ID="{B73A66A7-DD5C-40C1-B1E3-AAE8BBDCF460}" ShortID="686930073">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="vo_dp_player_joined_platoon" ID="{570329A9-AC1C-4E05-9900-4FA3EF91EBF6}" ShortID="570622598">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="notifications_vo" ID="{E3DC244F-850E-4B84-829B-960A3ECC8D16}" ShortID="471789475">
+									<ChildrenList>
+										<SwitchContainer Name="vo_armor_ricochet_by_player" ID="{BF8EA66A-21C4-4E17-B745-841A93DDD2A7}" ShortID="484291528">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{8B2595EA-238B-47C7-B23E-23AFB95437D6}" ShortID="6495293">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{EFAA8DF1-F88E-4E86-8E6A-D251E568278D}" ShortID="643023039">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{8B2595EA-238B-47C7-B23E-23AFB95437D6}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{EFAA8DF1-F88E-4E86-8E6A-D251E568278D}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{8B2595EA-238B-47C7-B23E-23AFB95437D6}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{EFAA8DF1-F88E-4E86-8E6A-D251E568278D}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_damage_by_near_explosion_by_enemy" ID="{42131552-D111-489A-88B8-CB9BEEA4FEFF}" ShortID="299495233">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{5A59E735-F553-4023-81D2-EDFC354C9E96}" ShortID="497063195">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{57F51529-D489-4869-B696-CC857EEB63F6}" ShortID="308954744">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{57F51529-D489-4869-B696-CC857EEB63F6}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{5A59E735-F553-4023-81D2-EDFC354C9E96}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{5A59E735-F553-4023-81D2-EDFC354C9E96}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{57F51529-D489-4869-B696-CC857EEB63F6}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_crew_deactivated" ID="{ACBAD305-FA1B-455A-888F-5BCC3E12D1B8}" ShortID="37806846">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{D9885E1F-94B2-4DEA-8481-BD109E1B5392}" ShortID="230706782">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{3BC5CF82-8BAF-410E-8098-FA0899AF4E7C}" ShortID="380102198">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{D9885E1F-94B2-4DEA-8481-BD109E1B5392}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{3BC5CF82-8BAF-410E-8098-FA0899AF4E7C}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{D9885E1F-94B2-4DEA-8481-BD109E1B5392}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{3BC5CF82-8BAF-410E-8098-FA0899AF4E7C}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_damage_by_near_explosion_by_player" ID="{C6714EEC-04B5-4417-A496-98F6E09D234B}" ShortID="107444366">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{CCF3475C-E45B-49C0-8F14-8176718E056B}" ShortID="210237158">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{6E6F3758-6C85-489A-A54F-2792F4B232DF}" ShortID="382359824">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{6E6F3758-6C85-489A-A54F-2792F4B232DF}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{CCF3475C-E45B-49C0-8F14-8176718E056B}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{CCF3475C-E45B-49C0-8F14-8176718E056B}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{6E6F3758-6C85-489A-A54F-2792F4B232DF}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_driver_killed" ID="{DBCD8EEF-6BF9-418C-80A8-EDA1783E8C08}" ShortID="511303274">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{6F7A0062-48E6-4AB5-8507-56A01845303A}" ShortID="673116305">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{48D24EAF-BF2B-4C14-BC3B-E68133A39A71}" ShortID="245424372">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{6F7A0062-48E6-4AB5-8507-56A01845303A}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{48D24EAF-BF2B-4C14-BC3B-E68133A39A71}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{6F7A0062-48E6-4AB5-8507-56A01845303A}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{48D24EAF-BF2B-4C14-BC3B-E68133A39A71}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_commander_killed" ID="{A37D6599-EF67-4CAF-AFD4-8D7169E93759}" ShortID="584623377">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{47018D4C-4437-4D9A-BE16-7B06FE3EB306}" ShortID="971882461">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{8F851A55-829F-41B0-83EF-247B414B21FA}" ShortID="303619623">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{47018D4C-4437-4D9A-BE16-7B06FE3EB306}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{8F851A55-829F-41B0-83EF-247B414B21FA}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{47018D4C-4437-4D9A-BE16-7B06FE3EB306}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{8F851A55-829F-41B0-83EF-247B414B21FA}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_enemy_fire_started_by_player" ID="{4A879452-E716-4212-A200-568A02D3AE81}" ShortID="352478985">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{E4A17E4D-D39D-4B77-93BC-4D4BCD5CB394}" ShortID="988635394">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{F248F1E0-3384-4D80-9CA5-3B6EB4CCD2E8}" ShortID="660681535">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{E4A17E4D-D39D-4B77-93BC-4D4BCD5CB394}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{F248F1E0-3384-4D80-9CA5-3B6EB4CCD2E8}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{E4A17E4D-D39D-4B77-93BC-4D4BCD5CB394}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{F248F1E0-3384-4D80-9CA5-3B6EB4CCD2E8}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_enemy_hp_damaged_by_explosion_at_direct_hit_by_player" ID="{FB38F312-5689-4715-8EEE-69960795430A}" ShortID="846090681">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{8729F1C2-4D4E-468C-B897-EEB901A7180A}" ShortID="856781048">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{4EFEB228-4A96-406E-A5ED-BB5FBF70F9C7}" ShortID="870274905">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{4EFEB228-4A96-406E-A5ED-BB5FBF70F9C7}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{8729F1C2-4D4E-468C-B897-EEB901A7180A}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{8729F1C2-4D4E-468C-B897-EEB901A7180A}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{4EFEB228-4A96-406E-A5ED-BB5FBF70F9C7}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_enemy_hp_damaged_by_projectile_and_chassis_damaged_by_player" ID="{C7193F06-A60C-4BFF-B84D-2693FA569F55}" ShortID="816059506">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{8FAA6ED7-05D5-49A6-9270-504436E079B8}" ShortID="504701566">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{580640BA-4B4D-4350-BA8D-B61EA4C1D774}" ShortID="859757596">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{580640BA-4B4D-4350-BA8D-B61EA4C1D774}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{8FAA6ED7-05D5-49A6-9270-504436E079B8}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{8FAA6ED7-05D5-49A6-9270-504436E079B8}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{580640BA-4B4D-4350-BA8D-B61EA4C1D774}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_enemy_hp_damaged_by_projectile_by_player" ID="{C7AB9CE9-5651-4123-9A42-46BA79348988}" ShortID="56766691">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{DC207F9B-5C7C-4D54-9833-27B28447710F}" ShortID="957858369">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{369250EA-19C0-4340-9237-CAB84EFAA67F}" ShortID="566857150">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{DC207F9B-5C7C-4D54-9833-27B28447710F}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{369250EA-19C0-4340-9237-CAB84EFAA67F}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{DC207F9B-5C7C-4D54-9833-27B28447710F}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{369250EA-19C0-4340-9237-CAB84EFAA67F}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_ammo_bay_damaged" ID="{D0B07974-9875-467E-B11B-6B55D54EE423}" ShortID="213685480">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{8B028556-A82B-4A50-96F3-90D3179675DE}" ShortID="692506055">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{2F61B130-7DA1-4B8C-8457-41ABB294FEF5}" ShortID="998082672">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{2F61B130-7DA1-4B8C-8457-41ABB294FEF5}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{8B028556-A82B-4A50-96F3-90D3179675DE}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{8B028556-A82B-4A50-96F3-90D3179675DE}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{2F61B130-7DA1-4B8C-8457-41ABB294FEF5}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_enemy_hp_damaged_by_projectile_and_gun_damaged_by_player" ID="{FAE4319E-CFB2-4041-B6D1-B90D94832C04}" ShortID="930416117">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{665A0309-114B-4F4D-8C5C-B6C1E375D373}" ShortID="104933489">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{0D1705BB-D743-4786-A834-2AC3F6394163}" ShortID="197634601">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{665A0309-114B-4F4D-8C5C-B6C1E375D373}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{0D1705BB-D743-4786-A834-2AC3F6394163}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{665A0309-114B-4F4D-8C5C-B6C1E375D373}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{0D1705BB-D743-4786-A834-2AC3F6394163}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_ally_killed_by_player" ID="{AA5820A4-3470-4587-8D8B-20DE60FDAE14}" ShortID="744425121">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{F789DA55-2D8D-4775-A88E-AB5C536B9B2F}" ShortID="215560111">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{D5934472-562F-4F3C-A00B-4F237EB55D49}" ShortID="122366828">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{F789DA55-2D8D-4775-A88E-AB5C536B9B2F}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{D5934472-562F-4F3C-A00B-4F237EB55D49}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{F789DA55-2D8D-4775-A88E-AB5C536B9B2F}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{D5934472-562F-4F3C-A00B-4F237EB55D49}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_armor_not_pierced_by_player" ID="{AB753255-CA7B-416C-9C5A-FCAFA4FC0803}" ShortID="141597640">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{91A2CFDB-09B6-49E5-A423-2300EFA41E78}" ShortID="295085682">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{9FC76C49-B2F7-4E0E-9B3B-2A54134990E1}" ShortID="378196104">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{9FC76C49-B2F7-4E0E-9B3B-2A54134990E1}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{91A2CFDB-09B6-49E5-A423-2300EFA41E78}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{91A2CFDB-09B6-49E5-A423-2300EFA41E78}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{9FC76C49-B2F7-4E0E-9B3B-2A54134990E1}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_enemy_no_hp_damage_at_attempt_and_chassis_damaged_by_player" ID="{55E6CE20-3A4C-4198-B23D-04DFE89520AB}" ShortID="257504124">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{851789FC-A5DA-4BCF-A5A9-4B8576AA179D}" ShortID="603552210">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{856F8C65-A0E9-445A-ACE2-994E49BBCDF6}" ShortID="74828235">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{856F8C65-A0E9-445A-ACE2-994E49BBCDF6}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{851789FC-A5DA-4BCF-A5A9-4B8576AA179D}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{851789FC-A5DA-4BCF-A5A9-4B8576AA179D}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{856F8C65-A0E9-445A-ACE2-994E49BBCDF6}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_enemy_killed" ID="{A9A98844-5F5A-4D56-B8E0-27F784012934}" ShortID="556538817">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{BA5398F4-0E52-4174-9FF7-4E4E6AF7EFA4}" ShortID="128709316">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{C37910E9-F7A3-43C6-9C85-A363493C9E15}" ShortID="771020062">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{C37910E9-F7A3-43C6-9C85-A363493C9E15}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{BA5398F4-0E52-4174-9FF7-4E4E6AF7EFA4}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{BA5398F4-0E52-4174-9FF7-4E4E6AF7EFA4}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{C37910E9-F7A3-43C6-9C85-A363493C9E15}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_enemy_killed_by_player" ID="{87F1FFFD-932E-4A28-BCA4-06B8EADAE4A5}" ShortID="166243042">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{866E9A8A-BFD0-43B8-9312-37BAFBC8A271}" ShortID="863172071">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{E33B382B-6950-48F1-82FF-8C366D97F7AB}" ShortID="253188788">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{E33B382B-6950-48F1-82FF-8C366D97F7AB}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{866E9A8A-BFD0-43B8-9312-37BAFBC8A271}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{866E9A8A-BFD0-43B8-9312-37BAFBC8A271}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{E33B382B-6950-48F1-82FF-8C366D97F7AB}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_enemy_no_hp_damage_at_no_attempt_by_player" ID="{77481B40-3D1A-4382-BF51-F450CEC8C09A}" ShortID="151440448">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{B36AA130-6052-453E-B963-F0F724220876}" ShortID="343424758">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{E35DCA62-1E52-4DB8-A053-11A5F116E02E}" ShortID="545940909">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{B36AA130-6052-453E-B963-F0F724220876}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{E35DCA62-1E52-4DB8-A053-11A5F116E02E}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{B36AA130-6052-453E-B963-F0F724220876}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{E35DCA62-1E52-4DB8-A053-11A5F116E02E}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_fire_stopped" ID="{DF603B05-4F3A-4DE2-88F2-0F4924090B32}" ShortID="238691629">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{7C557CAC-5AAB-4987-9131-DAE04A7448E9}" ShortID="1073335856">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{9BD673D2-361A-4F65-96AF-95767D6E7314}" ShortID="710827102">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{7C557CAC-5AAB-4987-9131-DAE04A7448E9}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{9BD673D2-361A-4F65-96AF-95767D6E7314}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{7C557CAC-5AAB-4987-9131-DAE04A7448E9}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{9BD673D2-361A-4F65-96AF-95767D6E7314}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_loader_killed" ID="{94A22C0C-26BC-4216-A7D7-A33E6AF0908A}" ShortID="459716474">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{4C82850B-CA5A-43F3-8D7D-4E255A49BF75}" ShortID="657579774">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{86EE3A2E-AD67-47C0-BF33-A294E430E168}" ShortID="14083412">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{4C82850B-CA5A-43F3-8D7D-4E255A49BF75}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{86EE3A2E-AD67-47C0-BF33-A294E430E168}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{4C82850B-CA5A-43F3-8D7D-4E255A49BF75}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{86EE3A2E-AD67-47C0-BF33-A294E430E168}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_fuel_tank_damaged" ID="{CD4DA97C-E570-45EB-9557-04B55FB5592A}" ShortID="694790439">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{D63B1309-0144-4EA6-9659-FDBB65D1A019}" ShortID="1071860663">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{31E6FA98-CDD4-4BAF-927F-FE6A6C46CBB6}" ShortID="986060333">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{D63B1309-0144-4EA6-9659-FDBB65D1A019}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{31E6FA98-CDD4-4BAF-927F-FE6A6C46CBB6}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{D63B1309-0144-4EA6-9659-FDBB65D1A019}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{31E6FA98-CDD4-4BAF-927F-FE6A6C46CBB6}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_engine_damaged" ID="{4E735EB6-B70C-4B55-9E4A-682E90A634DF}" ShortID="445627438">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{4CB210AA-BBFE-4398-8A9B-69D1638DED31}" ShortID="900913363">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{B83E457B-1ACB-44E8-BAB1-D98D3BFE9A52}" ShortID="846407319">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{B83E457B-1ACB-44E8-BAB1-D98D3BFE9A52}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{4CB210AA-BBFE-4398-8A9B-69D1638DED31}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{4CB210AA-BBFE-4398-8A9B-69D1638DED31}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{B83E457B-1ACB-44E8-BAB1-D98D3BFE9A52}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_gun_destroyed" ID="{9BDAA1DF-486F-4F99-92B2-7EC60AB4D4AF}" ShortID="315834299">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{35556B53-AAE0-47D7-A09B-DDBF7D119A82}" ShortID="714368248">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{26F11E09-C837-4058-9616-B9621C18C5D5}" ShortID="539483499">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{26F11E09-C837-4058-9616-B9621C18C5D5}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{35556B53-AAE0-47D7-A09B-DDBF7D119A82}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{35556B53-AAE0-47D7-A09B-DDBF7D119A82}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{26F11E09-C837-4058-9616-B9621C18C5D5}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_radio_damaged" ID="{4FEB04F0-4C54-44DC-AF4F-BC4CD7A99D34}" ShortID="338259227">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{2762AEBE-3AF9-4861-AD43-21BD3406ECC9}" ShortID="84500546">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{6185B526-7776-4A7A-8223-DAE8758B5A31}" ShortID="231985363">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{6185B526-7776-4A7A-8223-DAE8758B5A31}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{2762AEBE-3AF9-4861-AD43-21BD3406ECC9}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{2762AEBE-3AF9-4861-AD43-21BD3406ECC9}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{6185B526-7776-4A7A-8223-DAE8758B5A31}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_gun_functional" ID="{6C7A1823-9D9A-44A7-BD48-BE32B0AC63AF}" ShortID="290870899">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{50602338-A944-4E63-ACBC-FE1FC932C93D}" ShortID="889591381">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{2BC149F5-6A0F-4721-8D40-5D4758D6E6E4}" ShortID="128270547">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{50602338-A944-4E63-ACBC-FE1FC932C93D}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{2BC149F5-6A0F-4721-8D40-5D4758D6E6E4}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{50602338-A944-4E63-ACBC-FE1FC932C93D}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{2BC149F5-6A0F-4721-8D40-5D4758D6E6E4}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_radioman_killed" ID="{95C49139-7E34-4BE3-BBBC-E9FC545C7BD6}" ShortID="792616168">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{310265AA-C45D-4D5A-8F8E-1D4B04A740AB}" ShortID="56018347">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{CE4D0D64-644E-4A70-A345-36FAA357757C}" ShortID="322295785">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{CE4D0D64-644E-4A70-A345-36FAA357757C}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{310265AA-C45D-4D5A-8F8E-1D4B04A740AB}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{310265AA-C45D-4D5A-8F8E-1D4B04A740AB}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{CE4D0D64-644E-4A70-A345-36FAA357757C}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_gun_damaged" ID="{FD5DEFAF-1721-46D8-AA08-DEBD4C64A24C}" ShortID="945978465">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{CDEE8F2D-8108-48D5-9696-DB746AE040CB}" ShortID="411954213">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{E2DBB88B-FFED-4131-AA7F-637A04E609B0}" ShortID="843933303">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{CDEE8F2D-8108-48D5-9696-DB746AE040CB}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{E2DBB88B-FFED-4131-AA7F-637A04E609B0}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{CDEE8F2D-8108-48D5-9696-DB746AE040CB}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{E2DBB88B-FFED-4131-AA7F-637A04E609B0}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_engine_functional" ID="{A4D91147-6AB5-491A-A4BC-E327B0B58043}" ShortID="1044421923">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{360DD51D-2E7A-43FE-BBA4-B059D7412C74}" ShortID="848832579">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{21ED81B0-CA39-4690-8373-4D7888C23209}" ShortID="321617058">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{360DD51D-2E7A-43FE-BBA4-B059D7412C74}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{21ED81B0-CA39-4690-8373-4D7888C23209}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{360DD51D-2E7A-43FE-BBA4-B059D7412C74}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{21ED81B0-CA39-4690-8373-4D7888C23209}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_enemy_no_hp_damage_at_no_attempt_and_chassis_damaged_by_player" ID="{543D88DC-9B41-4DA6-B837-D4ABC590D580}" ShortID="806006309">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{E6931BE2-107F-4360-A86B-FFCADA7E0FCE}" ShortID="796246679">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{54B6DF84-8BD3-4160-8EE6-D53E6D92BA2F}" ShortID="230436588">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{54B6DF84-8BD3-4160-8EE6-D53E6D92BA2F}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{E6931BE2-107F-4360-A86B-FFCADA7E0FCE}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{E6931BE2-107F-4360-A86B-FFCADA7E0FCE}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{54B6DF84-8BD3-4160-8EE6-D53E6D92BA2F}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_enemy_no_hp_damage_at_attempt_and_gun_damaged_by_player" ID="{59BBE43C-BFD5-4505-92E2-616221F1F024}" ShortID="687809054">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{7AE96DBB-9055-44ED-8704-F0FF9E9A5A36}" ShortID="857509205">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{624D75D9-4319-431A-BE0C-6E7039BFE380}" ShortID="231437044">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{7AE96DBB-9055-44ED-8704-F0FF9E9A5A36}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{624D75D9-4319-431A-BE0C-6E7039BFE380}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{7AE96DBB-9055-44ED-8704-F0FF9E9A5A36}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{624D75D9-4319-431A-BE0C-6E7039BFE380}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_enemy_no_hp_damage_at_no_attempt_and_gun_damaged_by_player" ID="{40FE127F-C6F8-45C0-8DC3-AF793A4C0559}" ShortID="761588547">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{BE9B7304-DDC3-4BB9-A304-32047D75EB04}" ShortID="270116332">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{3F2BE045-23A5-420D-A2CF-2F4D5E745E58}" ShortID="224137549">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{BE9B7304-DDC3-4BB9-A304-32047D75EB04}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{3F2BE045-23A5-420D-A2CF-2F4D5E745E58}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{BE9B7304-DDC3-4BB9-A304-32047D75EB04}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{3F2BE045-23A5-420D-A2CF-2F4D5E745E58}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_start_battle" ID="{D4DDFE69-46C2-4A9A-B958-43A5DFF0DE00}" ShortID="870573303">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{9E9CF54E-AD1F-4C85-B274-62F8AB587740}" ShortID="239519100">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{787103BE-1991-4F9E-BBAE-7159A8C4E2E2}" ShortID="302100746">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{9E9CF54E-AD1F-4C85-B274-62F8AB587740}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{787103BE-1991-4F9E-BBAE-7159A8C4E2E2}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{9E9CF54E-AD1F-4C85-B274-62F8AB587740}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{787103BE-1991-4F9E-BBAE-7159A8C4E2E2}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_fire_started" ID="{A8D9A633-F174-4F41-A7EB-93FECFA9CA5B}" ShortID="608530781">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{44E6F046-CACA-44C5-BCC2-AF124A77C00E}" ShortID="36141463">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{5018FB28-3F2F-49F5-8CBA-241259635E47}" ShortID="622804190">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{5018FB28-3F2F-49F5-8CBA-241259635E47}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{44E6F046-CACA-44C5-BCC2-AF124A77C00E}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{44E6F046-CACA-44C5-BCC2-AF124A77C00E}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{5018FB28-3F2F-49F5-8CBA-241259635E47}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_gunner_killed" ID="{D2C26F7D-8121-40BD-A724-790F15427DCA}" ShortID="661067052">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{9BBE6677-D65D-44A0-9DBA-A73AA41A8F26}" ShortID="995314595">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{0EED6A7F-DF19-4F6C-8B43-FEED1FD2C8F5}" ShortID="908219895">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{9BBE6677-D65D-44A0-9DBA-A73AA41A8F26}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{0EED6A7F-DF19-4F6C-8B43-FEED1FD2C8F5}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{9BBE6677-D65D-44A0-9DBA-A73AA41A8F26}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{0EED6A7F-DF19-4F6C-8B43-FEED1FD2C8F5}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_engine_destroyed" ID="{C2182230-06EE-44A0-B934-44EEBC4EE6D0}" ShortID="457101995">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{E61BF8D1-50DA-49CF-B401-B32F602ECA11}" ShortID="181834727">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{D42EEDD2-F301-49B9-A5E3-19839618F3C2}" ShortID="726723394">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{E61BF8D1-50DA-49CF-B401-B32F602ECA11}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{D42EEDD2-F301-49B9-A5E3-19839618F3C2}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{E61BF8D1-50DA-49CF-B401-B32F602ECA11}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{D42EEDD2-F301-49B9-A5E3-19839618F3C2}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_surveying_devices_crit_damaged" ID="{7116017C-6586-40EC-9C06-008900546D07}" ShortID="640831515">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{3E1AD9BF-E504-44AB-A869-469C9FD04A97}" ShortID="375145267">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{28794AD8-DF9D-42CF-BA94-BBAF796F4D1E}" ShortID="912493974">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{3E1AD9BF-E504-44AB-A869-469C9FD04A97}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{28794AD8-DF9D-42CF-BA94-BBAF796F4D1E}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{3E1AD9BF-E504-44AB-A869-469C9FD04A97}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{28794AD8-DF9D-42CF-BA94-BBAF796F4D1E}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_surveying_devices_functional" ID="{CA938685-5960-480C-9D5F-3456981D7A8D}" ShortID="432923579">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{A3448978-9914-4600-BB86-EDE5E362C079}" ShortID="986352141">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{FAB1C1E1-5FE4-45C8-A548-205BEF486179}" ShortID="772602435">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{A3448978-9914-4600-BB86-EDE5E362C079}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{FAB1C1E1-5FE4-45C8-A548-205BEF486179}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{A3448978-9914-4600-BB86-EDE5E362C079}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{FAB1C1E1-5FE4-45C8-A548-205BEF486179}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_surveying_devices_destroyed" ID="{C5799D75-661A-4454-88A5-70ACCFDA5351}" ShortID="195389121">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{02F8930C-7DF2-4F4A-A998-C10C108D4F70}" ShortID="65937981">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{4EF3EBCD-EC92-404D-8763-3B79B834A604}" ShortID="911566936">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{02F8930C-7DF2-4F4A-A998-C10C108D4F70}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{4EF3EBCD-EC92-404D-8763-3B79B834A604}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{02F8930C-7DF2-4F4A-A998-C10C108D4F70}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{4EF3EBCD-EC92-404D-8763-3B79B834A604}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_surveying_devices_damaged" ID="{24BA5468-478F-4AB1-B998-5295EA940F82}" ShortID="262726250">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{648369A0-4EF3-4E79-8C3E-E37F66DFCAC8}" ShortID="905763981">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{699F0CFC-A4EB-45D7-A0CE-01C6158A10A0}" ShortID="494103637">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{648369A0-4EF3-4E79-8C3E-E37F66DFCAC8}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{699F0CFC-A4EB-45D7-A0CE-01C6158A10A0}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{648369A0-4EF3-4E79-8C3E-E37F66DFCAC8}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{699F0CFC-A4EB-45D7-A0CE-01C6158A10A0}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_target_unlocked" ID="{6723E4FE-347A-4886-AA6C-E660A42E64B6}" ShortID="10207150">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{E3044907-9506-4F79-9F83-E13E8EEA3CD5}" ShortID="298867120">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{4100138C-914C-4DBC-A688-94E548F2DFCF}" ShortID="334363423">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{E3044907-9506-4F79-9F83-E13E8EEA3CD5}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{4100138C-914C-4DBC-A688-94E548F2DFCF}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{E3044907-9506-4F79-9F83-E13E8EEA3CD5}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{4100138C-914C-4DBC-A688-94E548F2DFCF}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_track_damaged" ID="{1D59C219-CFE8-4B01-B8C5-7FF71396F1AC}" ShortID="356309136">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{EA897122-119D-46C9-9AF7-D266F54F98D1}" ShortID="454881660">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{DB47471A-3FB8-46B3-BBE6-8FF29DA323DD}" ShortID="377627322">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{DB47471A-3FB8-46B3-BBE6-8FF29DA323DD}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{EA897122-119D-46C9-9AF7-D266F54F98D1}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{EA897122-119D-46C9-9AF7-D266F54F98D1}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{DB47471A-3FB8-46B3-BBE6-8FF29DA323DD}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_track_destroyed" ID="{BF094520-0F29-4800-BDBC-9A4C0BB55EA1}" ShortID="442160759">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{4C102471-9589-404E-B324-042C02E078A8}" ShortID="806127674">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{E528EDBB-B0C9-4A5F-BF62-290FAEFCBE82}" ShortID="309280336">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{4C102471-9589-404E-B324-042C02E078A8}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{E528EDBB-B0C9-4A5F-BF62-290FAEFCBE82}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{4C102471-9589-404E-B324-042C02E078A8}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{E528EDBB-B0C9-4A5F-BF62-290FAEFCBE82}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_turret_rotator_damaged" ID="{BB938DED-F951-463E-9ECF-48D4C86A7FC1}" ShortID="946557520">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{B5CD26D3-2BF6-4F58-9F90-AD9020928F26}" ShortID="17087976">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{A84CFE61-84B1-4BBD-836F-BBC5F4F7D135}" ShortID="1001541709">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{A84CFE61-84B1-4BBD-836F-BBC5F4F7D135}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{B5CD26D3-2BF6-4F58-9F90-AD9020928F26}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{B5CD26D3-2BF6-4F58-9F90-AD9020928F26}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{A84CFE61-84B1-4BBD-836F-BBC5F4F7D135}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_track_functional_can_move" ID="{EFD5BB09-1710-4BE6-B927-66441F9A7519}" ShortID="819782818">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{3219D675-3C08-49A8-BB59-8630E09CB7B4}" ShortID="739938494">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{00A59959-E3B5-415E-8D06-62BD273B82EB}" ShortID="730317102">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{00A59959-E3B5-415E-8D06-62BD273B82EB}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{3219D675-3C08-49A8-BB59-8630E09CB7B4}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{3219D675-3C08-49A8-BB59-8630E09CB7B4}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{00A59959-E3B5-415E-8D06-62BD273B82EB}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_target_captured" ID="{C38A129F-E461-4F50-91DB-0D186727F933}" ShortID="667364509">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{C17E89F5-FF8B-49FC-A659-F5FFE6D91BDE}" ShortID="727653533">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{0F700067-DB61-4479-B565-16A0FC09F521}" ShortID="967879871">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{0F700067-DB61-4479-B565-16A0FC09F521}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{C17E89F5-FF8B-49FC-A659-F5FFE6D91BDE}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{C17E89F5-FF8B-49FC-A659-F5FFE6D91BDE}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{0F700067-DB61-4479-B565-16A0FC09F521}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_turret_rotator_destroyed" ID="{2F753A3E-74D3-46AA-9922-B29C8AA99E54}" ShortID="483382538">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{2D3DFAFE-0794-43F3-B538-AA0B7FB7A3C8}" ShortID="921923162">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{1C040084-FA88-4C73-9F46-2DA3FF24FE16}" ShortID="244415146">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{1C040084-FA88-4C73-9F46-2DA3FF24FE16}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{2D3DFAFE-0794-43F3-B538-AA0B7FB7A3C8}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{2D3DFAFE-0794-43F3-B538-AA0B7FB7A3C8}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{1C040084-FA88-4C73-9F46-2DA3FF24FE16}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_target_lost" ID="{68CC3999-EF76-481D-B77C-ED6EE40F5800}" ShortID="732096614">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{DBE2A7C4-44FE-47A0-87D2-CC0DC55586FF}" ShortID="658072464">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{61690589-0781-4225-BF12-A39E3D904F4F}" ShortID="773638921">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{61690589-0781-4225-BF12-A39E3D904F4F}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{DBE2A7C4-44FE-47A0-87D2-CC0DC55586FF}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{DBE2A7C4-44FE-47A0-87D2-CC0DC55586FF}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{61690589-0781-4225-BF12-A39E3D904F4F}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_track_functional" ID="{63D060E8-AA92-45B4-B521-5C65017BFF25}" ShortID="290162414">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{2534B62C-F2B5-411E-A8CD-5FE3C2831D0A}" ShortID="841195617">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{6B5CB2CC-DC88-4A93-A951-52E5EB7C69F9}" ShortID="917929476">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{2534B62C-F2B5-411E-A8CD-5FE3C2831D0A}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{6B5CB2CC-DC88-4A93-A951-52E5EB7C69F9}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{2534B62C-F2B5-411E-A8CD-5FE3C2831D0A}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{6B5CB2CC-DC88-4A93-A951-52E5EB7C69F9}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_turret_rotator_functional" ID="{FDBAFB21-8CA6-4360-8A1E-9D07ECB61EDA}" ShortID="249766728">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{1CEAF34A-ABCB-4C9A-B017-9C630CC760C8}" ShortID="543482274">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{E79199C5-F879-41A4-92F8-DD206089F89B}" ShortID="935928683">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{1CEAF34A-ABCB-4C9A-B017-9C630CC760C8}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{E79199C5-F879-41A4-92F8-DD206089F89B}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{1CEAF34A-ABCB-4C9A-B017-9C630CC760C8}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{E79199C5-F879-41A4-92F8-DD206089F89B}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="vo_vehicle_destroyed" ID="{43AB1DC3-9A03-49A5-BA8A-B93C0331211D}" ShortID="907293588">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="female" ID="{294AB67B-5353-4BF3-A81B-43B923AD4943}" ShortID="1058374025">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="male" ID="{374B9977-3CBD-4C33-955A-077495389D6E}" ShortID="116645334">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+														</Reference>
+													</ReferenceList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupRef Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}"/>
+												<DefaultSwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="male" ID="{374B9977-3CBD-4C33-955A-077495389D6E}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="female" ID="{294AB67B-5353-4BF3-A81B-43B923AD4943}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+														<ItemList>
+															<ItemRef Name="female" ID="{294AB67B-5353-4BF3-A81B-43B923AD4943}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+														<ItemList>
+															<ItemRef Name="male" ID="{374B9977-3CBD-4C33-955A-077495389D6E}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="ambient" ID="{23F68F04-8D9D-4AA8-A823-F7BAC960374A}" ShortID="478848925">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{727D5E89-FD8B-4F85-A637-D75EF57404DF}" ShortID="383414153">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="RTPC_ext_menu_volume_master" ID="{076FF243-CAA2-4423-AD8E-C732725F8A32}" WorkUnitID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{F8B157D3-D8B6-420F-827D-73E29E691842}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+								<RTPC Name="" ID="{DF4C45C0-E72B-4DA7-AB65-9B96FF388231}" ShortID="111227011">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="RTPC_ext_menu_volume_ambient" ID="{1A7780F1-C56F-42A4-9F7F-EFA97EC59926}" WorkUnitID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{22DF2A09-0CFC-47C9-B203-03D00023EF03}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+				<ActorMixer Name="effects" ID="{521EB7B1-AFCE-4EC7-A0FE-B3B30CB53913}" ShortID="633051619">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{2009B670-00A4-4BC4-A3E6-C06A81B5A63F}" ShortID="373713054">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="RTPC_ext_menu_volume_master" ID="{076FF243-CAA2-4423-AD8E-C732725F8A32}" WorkUnitID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{661A9CBD-AD89-4304-B8EF-78C17888E21A}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+								<RTPC Name="" ID="{448095E6-EE6D-4BEA-8E13-8C086DEF2B44}" ShortID="487069921">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="RTPC_ext_menu_volume_effects" ID="{B47B53C1-8958-4745-AB6F-640795A8596D}" WorkUnitID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{9E342C1B-BD24-463A-9AAF-B44EEADD5C5D}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+				<ActorMixer Name="music" ID="{C86C2CE0-DDC2-4EC0-A741-9FC63BE7BEE4}" ShortID="661062249">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{2950D410-E6F6-4E89-955D-DA28FECDE51B}" ShortID="310695110">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="RTPC_ext_menu_volume_master" ID="{076FF243-CAA2-4423-AD8E-C732725F8A32}" WorkUnitID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{610192A7-4FC1-4885-A1F2-FF76EC0D0136}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+								<RTPC Name="" ID="{C4E39E16-F4A3-473B-878E-2DB984A269C8}" ShortID="741727278">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="RTPC_ext_menu_volume_music" ID="{4026EB13-43A9-40E2-B6F4-B256937C2C78}" WorkUnitID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{B6D68BF4-3DB8-4314-8D00-DD210C19FD82}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+				<ActorMixer Name="vehicles" ID="{5C5C26D5-E170-4C81-AB62-49DFC2A8714B}" ShortID="372957068">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{47EFF87B-38C6-4F9C-A6AF-80DDE230E3DB}" ShortID="10816785">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="RTPC_ext_menu_volume_master" ID="{076FF243-CAA2-4423-AD8E-C732725F8A32}" WorkUnitID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{3A7483BE-6FF7-4025-8F15-42550FACF79C}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+								<RTPC Name="" ID="{386634EC-7A86-402B-80E2-8FA8B9DEF41B}" ShortID="817738507">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="RTPC_ext_menu_volume_vehicles" ID="{4ED0BDB5-A2FE-4CF0-9974-8AD44D3BB672}" WorkUnitID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{15E0C6E1-12A1-4C53-8C40-9D4B86C08D14}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+				<ActorMixer Name="gui" ID="{7F40D125-7884-4B81-893E-7ED7209C2749}" ShortID="42050641">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{394FE43F-A705-453B-BEEF-D6930D1D2E21}" ShortID="920941732">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="RTPC_ext_menu_volume_master" ID="{076FF243-CAA2-4423-AD8E-C732725F8A32}" WorkUnitID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{C9E7771B-10B1-4773-AC65-BE48CB55999D}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+								<RTPC Name="" ID="{03E224D2-9C27-4D66-BBC0-88C95615187E}" ShortID="500043284">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="RTPC_ext_menu_volume_gui" ID="{CFA10393-C1C7-43EA-8003-66D7C5A599DB}" WorkUnitID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{768EFE47-54F4-4EEA-BF47-4A6BC46FE07E}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+				<ActorMixer Name="music_hangar" ID="{4DBB01C9-DBDD-4109-B625-6D9EA2078C18}" ShortID="242351171">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{E91C8452-57C4-4B0D-8B7F-33DF239605DB}" ShortID="827235797">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="RTPC_ext_menu_volume_master" ID="{076FF243-CAA2-4423-AD8E-C732725F8A32}" WorkUnitID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{675446D0-8B32-43F8-A0E6-9220128AC3D9}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+								<RTPC Name="" ID="{3811E7C1-CFEE-45B9-9B3A-2C989A6F2BE1}" ShortID="753388627">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="RTPC_ext_menu_volume_music_hangar" ID="{AB880157-6695-428B-8B4A-03879918136D}" WorkUnitID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{17EEAFCB-DC8D-4B7B-A784-69CB645FCBC0}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8BF591CD-EB37-4BF0-9F2C-077A75B221F8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{79316453-49D8-4D26-8418-1CC5D18128B7}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

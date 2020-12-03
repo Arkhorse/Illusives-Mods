@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}" SchemaVersion="85">
+	<GameParameters>
+		<WorkUnit Name="Settings" ID="{973ACEFE-55FD-4FB3-810A-5568870FCCB5}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="RTPC_ext_menu_volume_voice" ID="{CBE06477-B4E7-448E-B6EB-A7F887D0FDE7}">
+					<Comment>Внешний RTPC - Отвечает за уровень громкости Интерфейс и уведомления
+    0 - громкость выключена
+100 - максимальная громкость</Comment>
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="100"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_ext_menu_volume_music_hangar" ID="{AB880157-6695-428B-8B4A-03879918136D}">
+					<Comment>Внешний RTPC - Отвечает за уровень громкости Музыка в ангаре
+    0 - громкость выключена
+100 - максимальная громкость</Comment>
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="100"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_ext_menu_volume_effects" ID="{B47B53C1-8958-4745-AB6F-640795A8596D}">
+					<Comment>Внешний RTPC - Отвечает за уровень громкости Эффекты
+    0 - громкость выключена
+100 - максимальная громкость</Comment>
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="100"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_ext_menu_volume_ambient" ID="{1A7780F1-C56F-42A4-9F7F-EFA97EC59926}">
+					<Comment>Внешний RTPC - Отвечает за уровень громкости Окружающая среда
+    0 - громкость выключена
+100 - максимальная громкость</Comment>
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="100"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_ext_menu_volume_gui" ID="{CFA10393-C1C7-43EA-8003-66D7C5A599DB}">
+					<Comment>Внешний RTPC - Отвечает за уровень громкости Интерфейс
+    0 - громкость выключена
+100 - максимальная громкость</Comment>
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="100"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_ext_menu_volume_music" ID="{4026EB13-43A9-40E2-B6F4-B256937C2C78}">
+					<Comment>Внешний RTPC - Отвечает за уровень громкости Музыка
+    0 - громкость выключена
+100 - максимальная громкость </Comment>
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="100"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_ext_menu_volume_vehicles" ID="{4ED0BDB5-A2FE-4CF0-9974-8AD44D3BB672}">
+					<Comment>Внешний RTPC - Отвечает за уровень громкости Техника
+    0 - громкость выключена
+100 - максимальная громкость</Comment>
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="100"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RTPC_ext_menu_volume_master" ID="{076FF243-CAA2-4423-AD8E-C732725F8A32}">
+					<Comment>Внешний RTPC - Отвечает за уровень громкости Оющий уровень
+    0 - громкость выключена
+100 - максимальная громкость</Comment>
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="100"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

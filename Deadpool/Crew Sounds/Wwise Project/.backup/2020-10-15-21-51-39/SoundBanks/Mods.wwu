@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{73CB7B3C-EE5F-434A-ADD3-42427C970EEA}" SchemaVersion="85">
+	<SoundBanks>
+		<WorkUnit Name="Mods" ID="{73CB7B3C-EE5F-434A-ADD3-42427C970EEA}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="voiceover" ID="{C9DEECF1-94B9-416A-82C9-579B33C458D2}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Voiceover_old" ID="{B8424251-D94B-4427-BF66-A85D3ACABAE7}" WorkUnitID="{B8424251-D94B-4427-BF66-A85D3ACABAE7}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="voice" ID="{1BB13A15-FAF8-4E34-887B-6167D468DD76}" WorkUnitID="{47FEE6D6-CBAB-427C-A250-2BADF4F2CA45}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationCache Version="1" SchemaVersion="85">
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1559414799" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Ambient.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Bongfish\Bongfish.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Collision.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Combat_atmosphere.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Damage.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Default Work Unit.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Explosions.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Explosive_objects.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\GUI.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Hangar.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Impacts.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Impacts_Alternative.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Objects.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Pass_By.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Plane.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Roughness.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Turret.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Vehicles.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Attenuations\Weapons.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Audio Devices\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Control Surface Sessions\Default Work Unit.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Conversion Settings\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Deadpool.12400.wsettings" DateLow="1582729304" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Deadpool.wproj" DateLow="1556111591" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Default Work Unit.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Explosive_objects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Factory Altiverb - Outdoor and More.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Factory Auro Headphone.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Factory Convolution Reverb Effects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Factory Effects.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Factory iZotope Box Modeler.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Factory iZotope Delay.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Factory iZotope Dynamics.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Factory iZotope Filters.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Factory McDSP Effects.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Hangar.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Impacts.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Main Mix.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Maps_Zone_Effects.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Plane.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Vehicles.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Effects\Weapons.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Ambient.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Bongfish\Bongfish.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Combat_atmosphere.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Damage.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Engine.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Explosions.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Explosive_objects.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Fortified_Area.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\GUI.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\GUI_hangar.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\GUI_Lootboxes.wwu" DateLow="1556110568" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Gun Reload.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Impacts.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Interactive_music.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Loginscreen.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Mechanisms.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Modules.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Objects.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Pass_By.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Personal_missions.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Physical_Collision.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Plane.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Ranked_battles\Ranked_battles.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Researches.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Treads.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Turret.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Utilite_events.wwu" DateLow="1556628734" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Voiceover_Frontline.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Voiceover_old.wwu" DateLow="1559411819" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Weapons.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Events\Wheel_vehicle.wwu" DateLow="1556110569" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Ambient.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Common.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Damage.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Effects.wwu" DateLow="1554116479" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Explosions.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Fortifierd_Area.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\GUI.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Gun_Reload.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Impacts.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Interactive_music.wwu" DateLow="1554116477" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Multichanel.wwu" DateLow="1554116477" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Music.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Objects.wwu" DateLow="1554116479" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Pass_By.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Personal_missions.wwu" DateLow="1554116477" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Physical_Collision.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Plane.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Settings.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Turret.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Vehicles.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Game Parameters\Weapons.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Mixing Sessions\Default Work Unit.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Mixing Sessions\Main Mix.wwu" DateLow="1556110639" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Mixing Sessions\Weapons.wwu" DateLow="1554115243" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Modulators\ambient.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Modulators\Damage.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Modulators\Default Work Unit.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Modulators\Explosive_objects_burn.wwu" DateLow="1554116378" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Modulators\GUI_hangar.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Modulators\Hangar.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Modulators\Impacts.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Modulators\Objects.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Modulators\Personal_missions.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Modulators\Physical_Collision.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Modulators\Plane.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Modulators\Vehicles.wwu" DateLow="1554116378" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Modulators\Weapons.wwu" DateLow="1554116373" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Presets\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Queries\Build_queries.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Queries\Default Work Unit.wwu" DateLow="1554116489" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Queries\Factory Queries.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\SoundBanks\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\SoundBanks\Mods.wwu" DateLow="1582729294" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1559411819" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\States\Bongfish\Bongfish.wwu" DateLow="1554116479" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\States\Common.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\States\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\States\GUI_Lootboxes.wwu" DateLow="1554116488" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\States\Interactive_music.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Switches\Combat_atmosphere.wwu" DateLow="1554116376" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Switches\Common.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Switches\Damage.wwu" DateLow="1554116376" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Switches\Default Work Unit.wwu" DateLow="1554116376" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Switches\Gun_Reload.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Switches\Impacts.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Switches\Objects.wwu" DateLow="1554116366" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Switches\Pass_By.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Switches\Roughness.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Switches\Turret.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Switches\Vehicles.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Switches\Voiceovers.wwu" DateLow="1559411819" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Switches\Weapons.wwu" DateLow="1554116366" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Triggers\Default Work Unit.wwu" DateLow="1556628735" DateHigh="0"/>
+	<ValidationCacheItem File="F:\Mods\[Published] DeadPool\Wwise Project\Virtual Acoustics\Default Work Unit.wwu" DateLow="1554116488" DateHigh="0"/>
+</ValidationCache>

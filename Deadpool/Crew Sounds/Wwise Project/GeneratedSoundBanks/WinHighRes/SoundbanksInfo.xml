@@ -1,0 +1,1876 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows_HighRes" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>F:\Mods\[Published] DeadPool\Wwise Project\</ProjectRoot>
+		<SourceFilesRoot>F:\Mods\[Published] DeadPool\Wwise Project\.cache\Windows_HighRes\</SourceFilesRoot>
+		<SoundBanksRoot>F:\Mods\[Published] DeadPool\Wwise Project\GeneratedSoundBanks\WinHighRes\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>F:\Mods\[Published] DeadPool\Wwise Project\GeneratedSoundBanks\Windows_HighRes</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank>
+		<File Id="32993886" Language="SFX">
+			<ShortName>IR_50-75mm_tank_interior.wav</ShortName>
+			<Path>Plugins\Wwise Convolution Reverb\IR_50-75mm_tank_interior_6C35A1F3.wem</Path>
+		</File>
+		<File Id="554205954" Language="SFX">
+			<ShortName>Map_Zone\Deep forest.WAV</ShortName>
+			<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Deep forest_24F07BC1.wem</Path>
+		</File>
+		<File Id="684936451" Language="SFX">
+			<ShortName>Map_Zone\Canyons.wav</ShortName>
+			<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Canyons_6D074466.wem</Path>
+		</File>
+		<File Id="823230670" Language="SFX">
+			<ShortName>IR_85-107mm_tank_interior.wav</ShortName>
+			<Path>Plugins\Wwise Convolution Reverb\IR_85-107mm_tank_interior_59F7DD39.wem</Path>
+		</File>
+	</MediaFilesNotInAnyBank>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="14876115" Name="AUX_ev_football_arena" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\VOICE_GUI\AUX_ev_football_arena"/>
+				<AuxBus Id="375152608" Name="AUX_env_Village" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\SFX_control_1\AUX_env_Village"/>
+				<AuxBus Id="394482750" Name="AUX_eng_PC_flanger" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_ambient_control\AUX_eng_PC_flanger"/>
+				<AuxBus Id="401969492" Name="AUX_flange_plane" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_ambient_control\AUX_flange_plane"/>
+				<AuxBus Id="494784805" Name="AUX_reverb_hangar_dark_sfx_pm" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_AMBIENTS\Personal_missions\AUX_reverb_hangar_dark_sfx_pm"/>
+				<AuxBus Id="647771714" Name="AUX_vehicle_control" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_vehicle_control"/>
+				<AuxBus Id="664496982" Name="AUX_reverb_hangar_Forest_env" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_AMBIENTS\Hangar\AUX_reverb_hangar_Forest_env"/>
+				<AuxBus Id="1049984846" Name="AUX_reverb_hangar_Forest_gui" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\VOICE_GUI\AUX_reverb_hangar_Forest_gui"/>
+				<AuxBus Id="1061338871" Name="AUX_reverb_personal_missions" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_AMBIENTS\Personal_missions\AUX_reverb_personal_missions"/>
+				<AuxBus Id="1460769535" Name="AUX_env_Closed_space" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\SFX_control_1\AUX_env_Closed_space"/>
+				<AuxBus Id="1529986663" Name="AUX_sfx_control" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_sfx_control"/>
+				<AuxBus Id="1822577572" Name="AUX_eng_broken" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\045_impact_filter_ducking_group\VEHICLE_control\130_eng_trds_PC\AUX_eng_broken"/>
+				<AuxBus Id="1889485509" Name="AUX_env_City" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\SFX_control_1\AUX_env_City"/>
+				<AuxBus Id="2152316841" Name="AUX_env_Mountain" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\SFX_control_1\AUX_env_Mountain"/>
+				<AuxBus Id="2154148004" Name="AUX_reverb_researches" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_AMBIENTS\Researches\AUX_reverb_researches"/>
+				<AuxBus Id="2343778479" Name="AUX_wpn_50_75mm_reverb_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_sfx_control\AUX_wpn_50_75mm_reverb_01"/>
+				<AuxBus Id="2543630464" Name="AUX_env_Mountain_close" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\SFX_control_1\AUX_env_Mountain_close"/>
+				<AuxBus Id="2575940795" Name="AUX_ev_halloween_wpn_PC" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\SFX_control_2\032_wpn_PC\AUX_ev_halloween_wpn_PC"/>
+				<AuxBus Id="2577149115" Name="AUX_wpn_50_75mm_reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_vehicle_control\AUX_wpn_50_75mm_reverb"/>
+				<AuxBus Id="2682597557" Name="AUX_reverb_expl_ally_NPC" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\VOICE_GUI\AUX_reverb_expl_ally_NPC"/>
+				<AuxBus Id="2805659155" Name="AUX_env_Forest" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\SFX_control_1\AUX_env_Forest"/>
+				<AuxBus Id="2812721831" Name="AUX_multiband_dist_football" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_MUSIC\Lobby_music_garage\Lobby_music_garage_default\AUX_multiband_dist_football"/>
+				<AuxBus Id="3206664178" Name="AUX_stereo_delay_hangar_h07_newyear_2018" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_AMBIENTS\Hangar\AUX_stereo_delay_hangar_h07_newyear_2018"/>
+				<AuxBus Id="3514658147" Name="AUX_PhCol_friction" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\045_impact_filter_ducking_group\VEHICLE_control\110_col_PC\AUX_PhCol_friction"/>
+				<AuxBus Id="3515001147" Name="AUX_wpn_85_107mm_reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_vehicle_control\AUX_wpn_85_107mm_reverb"/>
+				<AuxBus Id="3520008452" Name="AUX_ev_football_engine" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\045_impact_filter_ducking_group\VEHICLE_control\AUX_ev_football_engine"/>
+				<AuxBus Id="3528445383" Name="AUX_ev_halloween_leviathan_eng" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\045_impact_filter_ducking_group\VEHICLE_control\AUX_ev_halloween_leviathan_eng"/>
+				<AuxBus Id="3656279963" Name="AUX_eng_load_distortion" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\045_impact_filter_ducking_group\VEHICLE_control\130_eng_trds_PC\AUX_eng_load_distortion"/>
+				<AuxBus Id="3824605991" Name="AUX_collision_reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_vehicle_control\AUX_collision_reverb"/>
+				<AuxBus Id="3945567761" Name="AUX_reverb_hangar_dark_gui" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\VOICE_GUI\AUX_reverb_hangar_dark_gui"/>
+				<AuxBus Id="4015978123" Name="AUX_NY_comp" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\SFX_control_2\AUX_NY_comp"/>
+				<AuxBus Id="4031197743" Name="AUX_wpn_85_107mm_reverb_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_sfx_control\AUX_wpn_85_107mm_reverb_01"/>
+				<AuxBus Id="4129827565" Name="AUX_reverb_hangar_dark_env" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_AMBIENTS\Hangar\AUX_reverb_hangar_dark_env"/>
+				<AuxBus Id="4186278069" Name="AUX_multiband_dist_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_MUSIC\AUX_multiband_dist_01"/>
+				<AuxBus Id="4241804578" Name="AUX_ambient_control" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_ambient_control"/>
+			</IncludedAuxBusses>
+			<ExcludedMemoryFiles>
+				<File Id="32993886" Language="SFX">
+					<ShortName>IR_50-75mm_tank_interior.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\IR_50-75mm_tank_interior_6C35A1F3.wem</Path>
+				</File>
+				<File Id="554205954" Language="SFX">
+					<ShortName>Map_Zone\Deep forest.WAV</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Deep forest_24F07BC1.wem</Path>
+				</File>
+				<File Id="684936451" Language="SFX">
+					<ShortName>Map_Zone\Canyons.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Canyons_6D074466.wem</Path>
+				</File>
+				<File Id="823230670" Language="SFX">
+					<ShortName>IR_85-107mm_tank_interior.wav</ShortName>
+					<Path>Plugins\Wwise Convolution Reverb\IR_85-107mm_tank_interior_59F7DD39.wem</Path>
+				</File>
+			</ExcludedMemoryFiles>
+			<GameParameters>
+				<GameParameter Id="81471525" Name="RTPC_int_distance_1000m" ObjectPath="\Game Parameters\Common\RTPC_int_distance_1000m"/>
+				<GameParameter Id="248010418" Name="RTPC_int_device_laptop_lowcut_trigger" ObjectPath="\Game Parameters\Settings\RTPC_int_device_laptop_lowcut_trigger"/>
+				<GameParameter Id="257494316" Name="RTPC_ext_menu_volume_master" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_master"/>
+				<GameParameter Id="323535727" Name="RTPC_ext_wind_intensity" ObjectPath="\Game Parameters\Ambient\trees\RTPC_ext_wind_intensity"/>
+				<GameParameter Id="494846457" Name="RTPC_int_HDR_threshold" ObjectPath="\Game Parameters\Common\RTPC_int_HDR_threshold"/>
+				<GameParameter Id="529901698" Name="RTPC_int_wind_ducking_amount" ObjectPath="\Game Parameters\Ambient\wind\RTPC_int_wind_ducking_amount"/>
+				<GameParameter Id="566631840" Name="RTPC_ext_camera_height" ObjectPath="\Game Parameters\Ambient\wind\RTPC_ext_camera_height"/>
+				<GameParameter Id="695757872" Name="RTPC_ext_menu_volume_effects" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_effects"/>
+				<GameParameter Id="896614031" Name="RTPC_ext_viewPlayMode" ObjectPath="\Game Parameters\Common\RTPC_ext_viewPlayMode"/>
+				<GameParameter Id="1033699772" Name="RTPC_int_hangar_resultmusic_go_3D" ObjectPath="\Game Parameters\Interactive_music\RTPC_int_hangar_resultmusic_go_3D"/>
+				<GameParameter Id="1047122343" Name="RTPC_ext_menu_volume_music_hangar" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_music_hangar"/>
+				<GameParameter Id="1631196118" Name="RTPC_ext_menu_volume_ambient" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_ambient"/>
+				<GameParameter Id="1833954181" Name="RTPC_int_eng_damage" ObjectPath="\Game Parameters\Damage\RTPC_int_eng_damage"/>
+				<GameParameter Id="1945071579" Name="RTPC_ext_engine_damage_risk" ObjectPath="\Game Parameters\Vehicles\wheeled_vehicle\RTPC_ext_engine_damage_risk"/>
+				<GameParameter Id="1978220576" Name="RTPC_ext_menu_volume_voice" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_voice"/>
+				<GameParameter Id="2151720954" Name="RTPC_int_bass_boost_band_frequency_device_id" ObjectPath="\Game Parameters\Settings\RTPC_int_bass_boost_band_frequency_device_id"/>
+				<GameParameter Id="2163183645" Name="RTPC_int_friction_release" ObjectPath="\Game Parameters\Physical_Collision\RTPC_int_friction_release"/>
+				<GameParameter Id="2369516155" Name="RTPC_int_music_drone_enable_eq_lowshelf" ObjectPath="\Game Parameters\Interactive_music\RTPC_int_music_drone_enable_eq_lowshelf"/>
+				<GameParameter Id="2370945719" Name="RTPC_ext_menu_volume_music" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_music"/>
+				<GameParameter Id="2466770167" Name="RTPC_ext_roughness_global" ObjectPath="\Game Parameters\Vehicles\vehicles_global\RTPC_ext_roughness_global"/>
+				<GameParameter Id="2497463650" Name="RTPC_ext_speed_rel_global" ObjectPath="\Game Parameters\Vehicles\vehicles_global\RTPC_ext_speed_rel_global"/>
+				<GameParameter Id="2686672294" Name="RTPC_int_dynamic_range" ObjectPath="\Game Parameters\Settings\RTPC_int_dynamic_range"/>
+				<GameParameter Id="3259059030" Name="RTPC_int_impact_sidechain" ObjectPath="\Game Parameters\Common\RTPC_int_impact_sidechain"/>
+				<GameParameter Id="3261467983" Name="RTPC_int_bass_boost_band_gain_device_id" ObjectPath="\Game Parameters\Settings\RTPC_int_bass_boost_band_gain_device_id"/>
+				<GameParameter Id="3266425556" Name="RTPC_ext_camera_height_rel" ObjectPath="\Game Parameters\Ambient\wind\RTPC_ext_camera_height_rel"/>
+				<GameParameter Id="3348539219" Name="RTPC_ext_menu_volume_gui" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_gui"/>
+				<GameParameter Id="3391116920" Name="RTPC_int_vo_ducking" ObjectPath="\Game Parameters\Common\RTPC_int_vo_ducking"/>
+				<GameParameter Id="3394325855" Name="RTPC_int_explosion_sidechain" ObjectPath="\Game Parameters\Common\RTPC_int_explosion_sidechain"/>
+				<GameParameter Id="3436964933" Name="RTPC_int_meter_surface_balance" ObjectPath="\Game Parameters\Vehicles\surface\RTPC_int_meter_surface_balance"/>
+				<GameParameter Id="3546315937" Name="RTPC_ext_menu_volume_vehicles" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_vehicles"/>
+				<GameParameter Id="3567163588" Name="RTPC_ext_physic_load_global" ObjectPath="\Game Parameters\Vehicles\vehicles_global\RTPC_ext_physic_load_global"/>
+				<GameParameter Id="3643357862" Name="RTPC_int_imp_wise_gain" ObjectPath="\Game Parameters\Impacts\RTPC_int_imp_wise_gain"/>
+				<GameParameter Id="3753532465" Name="RTPC_int_bass_boost_trigger" ObjectPath="\Game Parameters\Settings\RTPC_int_bass_boost_trigger"/>
+				<GameParameter Id="3870047102" Name="RTPC_ext_slowmo_factor" ObjectPath="\Game Parameters\Common\RTPC_ext_slowmo_factor"/>
+				<GameParameter Id="4171884463" Name="RTPC_int_multichanel" ObjectPath="\Game Parameters\Multichanel\RTPC_int_multichanel"/>
+				<GameParameter Id="4245421398" Name="RTPC_ext_engine_load_global" ObjectPath="\Game Parameters\Vehicles\vehicles_global\RTPC_ext_engine_load_global"/>
+				<GameParameter Id="4247354303" Name="RTPC_int_bass_boost_gain_compensation" ObjectPath="\Game Parameters\Settings\RTPC_int_bass_boost_gain_compensation"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="791912384" Name="STATE_gamemode_progress_page" ObjectPath="\States\Common\STATE_gamemode_progress_page">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_gamemode_progress_page\None"/>
+						<State Id="3791716968" Name="STATE_gamemode_progress_page_on" ObjectPath="\States\Common\STATE_gamemode_progress_page\STATE_gamemode_progress_page_on"/>
+						<State Id="664190278" Name="STATE_gamemode_progress_page_off" ObjectPath="\States\Common\STATE_gamemode_progress_page\STATE_gamemode_progress_page_off"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="974744403" Name="STATE_viewPlayMode" ObjectPath="\States\Common\STATE_viewPlayMode">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_viewPlayMode\None"/>
+						<State Id="132799494" Name="STATE_viewPlayMode_arcade" ObjectPath="\States\Common\STATE_viewPlayMode\STATE_viewPlayMode_arcade"/>
+						<State Id="85928243" Name="STATE_viewPlayMode_sniper" ObjectPath="\States\Common\STATE_viewPlayMode\STATE_viewPlayMode_sniper"/>
+						<State Id="4289862936" Name="STATE_viewPlayMode_strategic" ObjectPath="\States\Common\STATE_viewPlayMode\STATE_viewPlayMode_strategic"/>
+						<State Id="2318091565" Name="STATE_viewPlayMode_arcade_ceilless" ObjectPath="\States\Common\STATE_viewPlayMode\STATE_viewPlayMode_arcade_ceilless"/>
+						<State Id="360996942" Name="STATE_viewPlayMode_sniper_ceilless" ObjectPath="\States\Common\STATE_viewPlayMode\STATE_viewPlayMode_sniper_ceilless"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1530490698" Name="STATE_gameplace" ObjectPath="\States\Common\STATE_gameplace">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_gameplace\None"/>
+						<State Id="3132916336" Name="STATE_gameplace_hangar" ObjectPath="\States\Common\STATE_gameplace\STATE_gameplace_hangar"/>
+						<State Id="2222908990" Name="STATE_gameplace_arena" ObjectPath="\States\Common\STATE_gameplace\STATE_gameplace_arena"/>
+						<State Id="2668334844" Name="STATE_gamplace_lobby" ObjectPath="\States\Common\STATE_gameplace\STATE_gamplace_lobby"/>
+						<State Id="29304656" Name="STATE_gamplace_loading" ObjectPath="\States\Common\STATE_gameplace\STATE_gamplace_loading"/>
+						<State Id="24118782" Name="STATE_gameplace_result" ObjectPath="\States\Common\STATE_gameplace\STATE_gameplace_result"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2110943632" Name="STATE_underwater" ObjectPath="\States\Common\STATE_underwater">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_underwater\None"/>
+						<State Id="2628170294" Name="STATE_underwater_off" ObjectPath="\States\Common\STATE_underwater\STATE_underwater_off"/>
+						<State Id="1493907064" Name="STATE_underwater_on" ObjectPath="\States\Common\STATE_underwater\STATE_underwater_on"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2343779507" Name="STATE_hangar_camera_rotating" ObjectPath="\States\Common\STATE_hangar_camera_rotating">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_hangar_camera_rotating\None"/>
+						<State Id="3158823513" Name="STATE_hangar_camera_rotating_on" ObjectPath="\States\Common\STATE_hangar_camera_rotating\STATE_hangar_camera_rotating_on"/>
+						<State Id="3054507493" Name="STATE_hangar_camera_rotating_off" ObjectPath="\States\Common\STATE_hangar_camera_rotating\STATE_hangar_camera_rotating_off"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2518278840" Name="STATE_gamemode" ObjectPath="\States\Common\STATE_gamemode">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_gamemode\None"/>
+						<State Id="236638138" Name="STATE_gamemode_default" ObjectPath="\States\Common\STATE_gamemode\STATE_gamemode_default"/>
+						<State Id="1127815430" Name="STATE_gamemode_frontline" ObjectPath="\States\Common\STATE_gamemode\STATE_gamemode_frontline"/>
+						<State Id="1070500498" Name="STATE_gamemode_ranked" ObjectPath="\States\Common\STATE_gamemode\STATE_gamemode_ranked"/>
+						<State Id="1808199260" Name="STATE_gamemode_bootcamp" ObjectPath="\States\Common\STATE_gamemode\STATE_gamemode_bootcamp"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2544266487" Name="STATE_arenastate" ObjectPath="\States\Common\STATE_arenastate">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_arenastate\None"/>
+						<State Id="26253895" Name="STATE_arenastate_waiting" ObjectPath="\States\Common\STATE_arenastate\STATE_arenastate_waiting"/>
+						<State Id="1506040602" Name="STATE_arenastate_counter" ObjectPath="\States\Common\STATE_arenastate\STATE_arenastate_counter"/>
+						<State Id="668236828" Name="STATE_arenastate_battle" ObjectPath="\States\Common\STATE_arenastate\STATE_arenastate_battle"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2617026835" Name="STATE_fortified_area" ObjectPath="\States\Default Work Unit\STATE_fortified_area">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\STATE_fortified_area\None"/>
+						<State Id="3067221881" Name="STATE_fortified_area_on" ObjectPath="\States\Default Work Unit\STATE_fortified_area\STATE_fortified_area_on"/>
+						<State Id="1035658885" Name="STATE_fortified_area_off" ObjectPath="\States\Default Work Unit\STATE_fortified_area\STATE_fortified_area_off"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2773731236" Name="STATE_hangar_filtered" ObjectPath="\States\Default Work Unit\STATE_hangar_filtered">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\STATE_hangar_filtered\None"/>
+						<State Id="19640060" Name="STATE_hangar_filtered_on" ObjectPath="\States\Default Work Unit\STATE_hangar_filtered\STATE_hangar_filtered_on"/>
+						<State Id="3418647162" Name="STATE_hangar_filtered_off" ObjectPath="\States\Default Work Unit\STATE_hangar_filtered\STATE_hangar_filtered_off"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2936847994" Name="STATE_hangar_view" ObjectPath="\States\Common\STATE_hangar_view">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_hangar_view\None"/>
+						<State Id="36532472" Name="STATE_hangar_view_01" ObjectPath="\States\Common\STATE_hangar_view\STATE_hangar_view_01"/>
+						<State Id="36532475" Name="STATE_hangar_view_02" ObjectPath="\States\Common\STATE_hangar_view\STATE_hangar_view_02"/>
+						<State Id="36532474" Name="STATE_hangar_view_03" ObjectPath="\States\Common\STATE_hangar_view\STATE_hangar_view_03"/>
+						<State Id="36532477" Name="STATE_hangar_view_04" ObjectPath="\States\Common\STATE_hangar_view\STATE_hangar_view_04"/>
+						<State Id="36532476" Name="STATE_hangar_view_05" ObjectPath="\States\Common\STATE_hangar_view\STATE_hangar_view_05"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3677561149" Name="STATE_video_overlay" ObjectPath="\States\Default Work Unit\STATE_video_overlay">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\STATE_video_overlay\None"/>
+						<State Id="13612235" Name="STATE_video_overlay_on" ObjectPath="\States\Default Work Unit\STATE_video_overlay\STATE_video_overlay_on"/>
+						<State Id="167349919" Name="STATE_video_overlay_off" ObjectPath="\States\Default Work Unit\STATE_video_overlay\STATE_video_overlay_off"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3764078144" Name="STATE_overlay_hangar_general" ObjectPath="\States\Default Work Unit\STATE_overlay_hangar_general">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\STATE_overlay_hangar_general\None"/>
+						<State Id="420104680" Name="STATE_overlay_hangar_general_on" ObjectPath="\States\Default Work Unit\STATE_overlay_hangar_general\STATE_overlay_hangar_general_on"/>
+						<State Id="1261587398" Name="STATE_overlay_hangar_general_off" ObjectPath="\States\Default Work Unit\STATE_overlay_hangar_general\STATE_overlay_hangar_general_off"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3983889542" Name="STATE_hangar_place" ObjectPath="\States\Common\STATE_hangar_place">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_hangar_place\None"/>
+						<State Id="768442838" Name="STATE_hangar_place_garage" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_garage"/>
+						<State Id="3092877988" Name="STATE_hangar_place_personalMissions" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_personalMissions"/>
+						<State Id="3369004084" Name="STATE_hangar_place_customization" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_customization"/>
+						<State Id="4120106793" Name="STATE_hangar_place_shop" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_shop"/>
+						<State Id="1786143786" Name="STATE_hangar_place_research" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_research"/>
+						<State Id="569750957" Name="STATE_hangar_place_tasks" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_tasks"/>
+						<State Id="2332360656" Name="STATE_hangar_place_barracks" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_barracks"/>
+						<State Id="1461274737" Name="STATE_hangar_place_achievements" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_achievements"/>
+						<State Id="2491654589" Name="STATE_hangar_place_fortarea" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_fortarea"/>
+						<State Id="3354433999" Name="STATE_hangar_place_browser" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_browser"/>
+						<State Id="1751757854" Name="STATE_hangar_place_noobieCenter" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_noobieCenter"/>
+						<State Id="1154502" Name="STATE_hangar_place_warehouse" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_warehouse"/>
+						<State Id="301050511" Name="STATE_hangar_place_researches_preview" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_researches_preview"/>
+						<State Id="101805544" Name="STATE_hangar_place_shop_preview" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_shop_preview"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="1776621568" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\loginscreen</ObjectPath>
+			<ShortName>loginscreen</ShortName>
+			<Path>loginscreen.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3710719896" Name="loginscreen_ambient_start" ObjectPath="\Events\Loginscreen\Loginscreen\loginscreen_ambient_start" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1584937764" Name="loginscreen_ambient_stop" ObjectPath="\Events\Loginscreen\Loginscreen\loginscreen_ambient_stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="166862067" Name="loginscreen_music_pause" ObjectPath="\Events\Loginscreen\Loginscreen\loginscreen_music_pause" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4014834746" Name="loginscreen_music_resume" ObjectPath="\Events\Loginscreen\Loginscreen\loginscreen_music_resume" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="711702153" Name="loginscreen_music_start" ObjectPath="\Events\Loginscreen\Loginscreen\loginscreen_music_start" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3403942020" Name="loginscreen_mute" ObjectPath="\Events\Loginscreen\Loginscreen\loginscreen_mute" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1277201713" Name="loginscreen_unmute" ObjectPath="\Events\Loginscreen\Loginscreen\loginscreen_unmute" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="1799467707" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\music_interactive</ObjectPath>
+			<ShortName>music_interactive</ShortName>
+			<Path>music_interactive.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4182665678" Name="music_abbey_dron_intensive" ObjectPath="\Events\Interactive_music\02_Abbey\music_abbey_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1809337302" Name="music_abbey_dron_relaxed" ObjectPath="\Events\Interactive_music\02_Abbey\music_abbey_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="909754380" Name="music_abbey_loading_screen" ObjectPath="\Events\Interactive_music\02_Abbey\music_abbey_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2126438302" Name="music_abbey_result_defeat" ObjectPath="\Events\Interactive_music\02_Abbey\music_abbey_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3489195993" Name="music_abbey_result_drawn" ObjectPath="\Events\Interactive_music\02_Abbey\music_abbey_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1380392615" Name="music_abbey_result_win" ObjectPath="\Events\Interactive_music\02_Abbey\music_abbey_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3680590169" Name="music_airfield_dron_intensive" ObjectPath="\Events\Interactive_music\18_Airfield\music_airfield_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2091599965" Name="music_airfield_dron_relaxed" ObjectPath="\Events\Interactive_music\18_Airfield\music_airfield_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2786447075" Name="music_airfield_loading_screen" ObjectPath="\Events\Interactive_music\18_Airfield\music_airfield_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3576156511" Name="music_airfield_result_defeat" ObjectPath="\Events\Interactive_music\18_Airfield\music_airfield_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2162941966" Name="music_airfield_result_drawn" ObjectPath="\Events\Interactive_music\18_Airfield\music_airfield_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1623105216" Name="music_airfield_result_win" ObjectPath="\Events\Interactive_music\18_Airfield\music_airfield_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2907442657" Name="music_caucasus_dron_intensive" ObjectPath="\Events\Interactive_music\16_Caucasus\music_caucasus_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="478468421" Name="music_caucasus_dron_relaxed" ObjectPath="\Events\Interactive_music\16_Caucasus\music_caucasus_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="531701627" Name="music_caucasus_loading_screen" ObjectPath="\Events\Interactive_music\16_Caucasus\music_caucasus_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3283264039" Name="music_caucasus_result_defeat" ObjectPath="\Events\Interactive_music\16_Caucasus\music_caucasus_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3404171190" Name="music_caucasus_result_drawn" ObjectPath="\Events\Interactive_music\16_Caucasus\music_caucasus_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2388937272" Name="music_caucasus_result_win" ObjectPath="\Events\Interactive_music\16_Caucasus\music_caucasus_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2294098297" Name="music_cliff_dron_intensive" ObjectPath="\Events\Interactive_music\11_Cliff\music_cliff_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2510386557" Name="music_cliff_dron_relaxed" ObjectPath="\Events\Interactive_music\11_Cliff\music_cliff_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1421125635" Name="music_cliff_loading_screen" ObjectPath="\Events\Interactive_music\11_Cliff\music_cliff_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="230217855" Name="music_cliff_result_defeat" ObjectPath="\Events\Interactive_music\11_Cliff\music_cliff_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3608157358" Name="music_cliff_result_drawn" ObjectPath="\Events\Interactive_music\11_Cliff\music_cliff_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4040459616" Name="music_cliff_result_win" ObjectPath="\Events\Interactive_music\11_Cliff\music_cliff_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="617655851" Name="music_dron_endbattle_stop" ObjectPath="\Events\Interactive_music\music_dron_endbattle_stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1204827667" Name="music_dron_stop" ObjectPath="\Events\Interactive_music\music_dron_stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="849326745" Name="music_el_halluf_dron_intensive" ObjectPath="\Events\Interactive_music\15_El_halluf\music_el_halluf_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="415920797" Name="music_el_halluf_dron_relaxed" ObjectPath="\Events\Interactive_music\15_El_halluf\music_el_halluf_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="888824099" Name="music_el_halluf_loading_screen" ObjectPath="\Events\Interactive_music\15_El_halluf\music_el_halluf_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4137535391" Name="music_el_halluf_result_defeat" ObjectPath="\Events\Interactive_music\15_El_halluf\music_el_halluf_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="904190286" Name="music_el_halluf_result_drawn" ObjectPath="\Events\Interactive_music\15_El_halluf\music_el_halluf_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2835699712" Name="music_el_halluf_result_win" ObjectPath="\Events\Interactive_music\15_El_halluf\music_el_halluf_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="606403776" Name="music_ensk_dron_intensive" ObjectPath="\Events\Interactive_music\09_Ensk\music_ensk_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="166163452" Name="music_ensk_dron_relaxed" ObjectPath="\Events\Interactive_music\09_Ensk\music_ensk_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="650577798" Name="music_ensk_loading_screen" ObjectPath="\Events\Interactive_music\09_Ensk\music_ensk_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4208591684" Name="music_ensk_result_defeat" ObjectPath="\Events\Interactive_music\09_Ensk\music_ensk_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2106314979" Name="music_ensk_result_drawn" ObjectPath="\Events\Interactive_music\09_Ensk\music_ensk_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3091660253" Name="music_ensk_result_win" ObjectPath="\Events\Interactive_music\09_Ensk\music_ensk_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="520395848" Name="music_epic_normandy_dron_battle" ObjectPath="\Events\Interactive_music\31_Epic_Normandy\music_epic_normandy_dron_battle" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2603384909" Name="music_epic_normandy_loading_screen" ObjectPath="\Events\Interactive_music\31_Epic_Normandy\music_epic_normandy_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3587006621" Name="music_epic_normandy_result_defeat" ObjectPath="\Events\Interactive_music\31_Epic_Normandy\music_epic_normandy_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1426365190" Name="music_epic_normandy_result_win" ObjectPath="\Events\Interactive_music\31_Epic_Normandy\music_epic_normandy_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1312965322" Name="music_epic_valley_dron_intensive" ObjectPath="\Events\Interactive_music\30_Epic_valley\music_epic_valley_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2895416914" Name="music_epic_valley_dron_relaxed" ObjectPath="\Events\Interactive_music\30_Epic_valley\music_epic_valley_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="517062512" Name="music_epic_valley_loading_screen" ObjectPath="\Events\Interactive_music\30_Epic_valley\music_epic_valley_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1057754466" Name="music_epic_valley_result_defeat" ObjectPath="\Events\Interactive_music\30_Epic_valley\music_epic_valley_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3050447189" Name="music_epic_valley_result_drawn" ObjectPath="\Events\Interactive_music\30_Epic_valley\music_epic_valley_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2443660331" Name="music_epic_valley_result_win" ObjectPath="\Events\Interactive_music\30_Epic_valley\music_epic_valley_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2049963887" Name="music_erlenberg_dron_intensive" ObjectPath="\Events\Interactive_music\27_Erlenberg\music_erlenberg_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2195670719" Name="music_erlenberg_dron_relaxed" ObjectPath="\Events\Interactive_music\27_Erlenberg\music_erlenberg_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="41160105" Name="music_erlenberg_loading_screen" ObjectPath="\Events\Interactive_music\27_Erlenberg\music_erlenberg_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1417314745" Name="music_erlenberg_result_defeat" ObjectPath="\Events\Interactive_music\27_Erlenberg\music_erlenberg_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="920508772" Name="music_erlenberg_result_drawn" ObjectPath="\Events\Interactive_music\27_Erlenberg\music_erlenberg_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="451217474" Name="music_erlenberg_result_win" ObjectPath="\Events\Interactive_music\27_Erlenberg\music_erlenberg_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="95100359" Name="music_fishingbay_dron_intensive" ObjectPath="\Events\Interactive_music\28_Fishing_bay\music_fishingbay_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3326115799" Name="music_fishingbay_dron_relaxed" ObjectPath="\Events\Interactive_music\28_Fishing_bay\music_fishingbay_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4291480337" Name="music_fishingbay_loading_screen" ObjectPath="\Events\Interactive_music\28_Fishing_bay\music_fishingbay_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4205374801" Name="music_fishingbay_result_defeat" ObjectPath="\Events\Interactive_music\28_Fishing_bay\music_fishingbay_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="766009692" Name="music_fishingbay_result_drawn" ObjectPath="\Events\Interactive_music\28_Fishing_bay\music_fishingbay_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2213847466" Name="music_fishingbay_result_win" ObjectPath="\Events\Interactive_music\28_Fishing_bay\music_fishingbay_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4063324177" Name="music_fjords_dron_intensive" ObjectPath="\Events\Interactive_music\25_Fjords\music_fjords_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3700639829" Name="music_fjords_dron_relaxed" ObjectPath="\Events\Interactive_music\25_Fjords\music_fjords_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="450216683" Name="music_fjords_loading_screen" ObjectPath="\Events\Interactive_music\25_Fjords\music_fjords_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="290566103" Name="music_fjords_result_defeat" ObjectPath="\Events\Interactive_music\25_Fjords\music_fjords_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="871566822" Name="music_fjords_result_drawn" ObjectPath="\Events\Interactive_music\25_Fjords\music_fjords_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2142709512" Name="music_fjords_result_win" ObjectPath="\Events\Interactive_music\25_Fjords\music_fjords_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3722665035" Name="music_great_wall_dron_intensive" ObjectPath="\Events\Interactive_music\38_Great_wall\music_great_wall_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2879808379" Name="music_great_wall_dron_relaxed" ObjectPath="\Events\Interactive_music\38_Great_wall\music_great_wall_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3760060845" Name="music_great_wall_loading_screen" ObjectPath="\Events\Interactive_music\38_Great_wall\music_great_wall_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1758721661" Name="music_great_wall_result_defeat" ObjectPath="\Events\Interactive_music\38_Great_wall\music_great_wall_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="905175792" Name="music_great_wall_result_drawn" ObjectPath="\Events\Interactive_music\38_Great_wall\music_great_wall_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3349295206" Name="music_great_wall_result_win" ObjectPath="\Events\Interactive_music\38_Great_wall\music_great_wall_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3557473644" Name="music_highway_dron_intensive" ObjectPath="\Events\Interactive_music\39_Highway\music_highway_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="181715144" Name="music_highway_dron_relaxed" ObjectPath="\Events\Interactive_music\39_Highway\music_highway_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1366202586" Name="music_highway_loading_screen" ObjectPath="\Events\Interactive_music\39_Highway\music_highway_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3901135608" Name="music_highway_result_defeat" ObjectPath="\Events\Interactive_music\39_Highway\music_highway_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4266509903" Name="music_highway_result_drawn" ObjectPath="\Events\Interactive_music\39_Highway\music_highway_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="94050417" Name="music_highway_result_win" ObjectPath="\Events\Interactive_music\39_Highway\music_highway_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3547353775" Name="music_himmelsdorf_dron_intensive" ObjectPath="\Events\Interactive_music\07_Himmelsdorf\music_himmelsdorf_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1006094079" Name="music_himmelsdorf_dron_relaxed" ObjectPath="\Events\Interactive_music\07_Himmelsdorf\music_himmelsdorf_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="121573609" Name="music_himmelsdorf_loading_screen" ObjectPath="\Events\Interactive_music\07_Himmelsdorf\music_himmelsdorf_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="688719097" Name="music_himmelsdorf_result_defeat" ObjectPath="\Events\Interactive_music\07_Himmelsdorf\music_himmelsdorf_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1129289124" Name="music_himmelsdorf_result_drawn" ObjectPath="\Events\Interactive_music\07_Himmelsdorf\music_himmelsdorf_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2468313474" Name="music_himmelsdorf_result_win" ObjectPath="\Events\Interactive_music\07_Himmelsdorf\music_himmelsdorf_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="698876098" Name="music_karelia_dron_intensive" ObjectPath="\Events\Interactive_music\21_Karelia\music_karelia_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1987085898" Name="music_karelia_dron_relaxed" ObjectPath="\Events\Interactive_music\21_Karelia\music_karelia_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4225556312" Name="music_karelia_loading_screen" ObjectPath="\Events\Interactive_music\21_Karelia\music_karelia_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1055111226" Name="music_karelia_result_defeat" ObjectPath="\Events\Interactive_music\21_Karelia\music_karelia_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2531226253" Name="music_karelia_result_drawn" ObjectPath="\Events\Interactive_music\21_Karelia\music_karelia_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2764793107" Name="music_karelia_result_win" ObjectPath="\Events\Interactive_music\21_Karelia\music_karelia_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3982054900" Name="music_klondike_dron_intensive" ObjectPath="\Events\Interactive_music\33_Klondike\music_klondike_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2363710704" Name="music_klondike_dron_relaxed" ObjectPath="\Events\Interactive_music\33_Klondike\music_klondike_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="756300850" Name="music_klondike_loading_screen" ObjectPath="\Events\Interactive_music\33_Klondike\music_klondike_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="47788832" Name="music_klondike_result_defeat" ObjectPath="\Events\Interactive_music\33_Klondike\music_klondike_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1097008631" Name="music_klondike_result_drawn" ObjectPath="\Events\Interactive_music\33_Klondike\music_klondike_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1797810345" Name="music_klondike_result_win" ObjectPath="\Events\Interactive_music\33_Klondike\music_klondike_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2523050995" Name="music_kursk_dron_intensive" ObjectPath="\Events\Interactive_music\40_Kursk\music_kursk_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1649601827" Name="music_kursk_dron_relaxed" ObjectPath="\Events\Interactive_music\40_Kursk\music_kursk_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="31143397" Name="music_kursk_loading_screen" ObjectPath="\Events\Interactive_music\40_Kursk\music_kursk_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3714676709" Name="music_kursk_result_defeat" ObjectPath="\Events\Interactive_music\40_Kursk\music_kursk_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3696060440" Name="music_kursk_result_drawn" ObjectPath="\Events\Interactive_music\40_Kursk\music_kursk_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3421213854" Name="music_kursk_result_win" ObjectPath="\Events\Interactive_music\40_Kursk\music_kursk_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4160808350" Name="music_lakeville_dron_intensive" ObjectPath="\Events\Interactive_music\19_Lakeville\music_lakeville_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2448929734" Name="music_lakeville_dron_relaxed" ObjectPath="\Events\Interactive_music\19_Lakeville\music_lakeville_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3053809628" Name="music_lakeville_loading_screen" ObjectPath="\Events\Interactive_music\19_Lakeville\music_lakeville_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3631183598" Name="music_lakeville_result_defeat" ObjectPath="\Events\Interactive_music\19_Lakeville\music_lakeville_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="111181673" Name="music_lakeville_result_drawn" ObjectPath="\Events\Interactive_music\19_Lakeville\music_lakeville_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2225774679" Name="music_lakeville_result_win" ObjectPath="\Events\Interactive_music\19_Lakeville\music_lakeville_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="578665073" Name="music_liveoaks_dron_intensive" ObjectPath="\Events\Interactive_music\20_Live_oaks\music_liveoaks_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2266465973" Name="music_liveoaks_dron_relaxed" ObjectPath="\Events\Interactive_music\20_Live_oaks\music_liveoaks_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="157202251" Name="music_liveoaks_loading_screen" ObjectPath="\Events\Interactive_music\20_Live_oaks\music_liveoaks_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4090111287" Name="music_liveoaks_result_defeat" ObjectPath="\Events\Interactive_music\20_Live_oaks\music_liveoaks_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="530630086" Name="music_liveoaks_result_drawn" ObjectPath="\Events\Interactive_music\20_Live_oaks\music_liveoaks_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1500933864" Name="music_liveoaks_result_win" ObjectPath="\Events\Interactive_music\20_Live_oaks\music_liveoaks_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2159903907" Name="music_lost_city_dron_intensive" ObjectPath="\Events\Interactive_music\41_Lost_city\music_lost_city_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="589280691" Name="music_lost_city_dron_relaxed" ObjectPath="\Events\Interactive_music\41_Lost_city\music_lost_city_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2644664469" Name="music_lost_city_loading_screen" ObjectPath="\Events\Interactive_music\41_Lost_city\music_lost_city_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3808263701" Name="music_lost_city_result_defeat" ObjectPath="\Events\Interactive_music\41_Lost_city\music_lost_city_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1123052488" Name="music_lost_city_result_drawn" ObjectPath="\Events\Interactive_music\41_Lost_city\music_lost_city_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="843431726" Name="music_lost_city_result_win" ObjectPath="\Events\Interactive_music\41_Lost_city\music_lost_city_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3039624487" Name="music_malinovka_dron_intensive" ObjectPath="\Events\Interactive_music\05_Malinovka\music_malinovka_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3560113463" Name="music_malinovka_dron_relaxed" ObjectPath="\Events\Interactive_music\05_Malinovka\music_malinovka_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1186763377" Name="music_malinovka_loading_screen" ObjectPath="\Events\Interactive_music\05_Malinovka\music_malinovka_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="900225713" Name="music_malinovka_result_defeat" ObjectPath="\Events\Interactive_music\05_Malinovka\music_malinovka_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2901295420" Name="music_malinovka_result_drawn" ObjectPath="\Events\Interactive_music\05_Malinovka\music_malinovka_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2650235786" Name="music_malinovka_result_win" ObjectPath="\Events\Interactive_music\05_Malinovka\music_malinovka_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1679971929" Name="music_mannerheim_dron_intensive" ObjectPath="\Events\Interactive_music\23_Mannerheim\music_mannerheim_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4246912349" Name="music_mannerheim_dron_relaxed" ObjectPath="\Events\Interactive_music\23_Mannerheim\music_mannerheim_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="785828835" Name="music_mannerheim_loading_screen" ObjectPath="\Events\Interactive_music\23_Mannerheim\music_mannerheim_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="288686175" Name="music_mannerheim_result_defeat" ObjectPath="\Events\Interactive_music\23_Mannerheim\music_mannerheim_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="23287054" Name="music_mannerheim_result_drawn" ObjectPath="\Events\Interactive_music\23_Mannerheim\music_mannerheim_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2377763776" Name="music_mannerheim_result_win" ObjectPath="\Events\Interactive_music\23_Mannerheim\music_mannerheim_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="346358391" Name="music_mines_dron_intensive" ObjectPath="\Events\Interactive_music\04_Mines\music_mines_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1259244519" Name="music_mines_dron_relaxed" ObjectPath="\Events\Interactive_music\04_Mines\music_mines_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2927459585" Name="music_mines_loading_screen" ObjectPath="\Events\Interactive_music\04_Mines\music_mines_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3020560513" Name="music_mines_result_defeat" ObjectPath="\Events\Interactive_music\04_Mines\music_mines_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2079600460" Name="music_mines_result_drawn" ObjectPath="\Events\Interactive_music\04_Mines\music_mines_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1830350330" Name="music_mines_result_win" ObjectPath="\Events\Interactive_music\04_Mines\music_mines_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1570643605" Name="music_minsk_dron_intensive" ObjectPath="\Events\Interactive_music\36_Minsk\music_minsk_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3257850233" Name="music_minsk_dron_relaxed" ObjectPath="\Events\Interactive_music\36_Minsk\music_minsk_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2657807783" Name="music_minsk_loading_screen" ObjectPath="\Events\Interactive_music\36_Minsk\music_minsk_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2613599235" Name="music_minsk_result_defeat" ObjectPath="\Events\Interactive_music\36_Minsk\music_minsk_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2109960698" Name="music_minsk_result_drawn" ObjectPath="\Events\Interactive_music\36_Minsk\music_minsk_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3776893668" Name="music_minsk_result_win" ObjectPath="\Events\Interactive_music\36_Minsk\music_minsk_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2324123839" Name="music_munchen_dron_intensive" ObjectPath="\Events\Interactive_music\37_Munchen\music_munchen_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4233901359" Name="music_munchen_dron_relaxed" ObjectPath="\Events\Interactive_music\37_Munchen\music_munchen_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3117386425" Name="music_munchen_loading_screen" ObjectPath="\Events\Interactive_music\37_Munchen\music_munchen_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4119640393" Name="music_munchen_result_defeat" ObjectPath="\Events\Interactive_music\37_Munchen\music_munchen_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3473470068" Name="music_munchen_result_drawn" ObjectPath="\Events\Interactive_music\37_Munchen\music_munchen_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2749127986" Name="music_munchen_result_win" ObjectPath="\Events\Interactive_music\37_Munchen\music_munchen_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3582465161" Name="music_murovanka_dron_intensive" ObjectPath="\Events\Interactive_music\12_Murovanka\music_murovanka_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3634777261" Name="music_murovanka_dron_relaxed" ObjectPath="\Events\Interactive_music\12_Murovanka\music_murovanka_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="919133907" Name="music_murovanka_loading_screen" ObjectPath="\Events\Interactive_music\12_Murovanka\music_murovanka_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4026590799" Name="music_murovanka_result_defeat" ObjectPath="\Events\Interactive_music\12_Murovanka\music_murovanka_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1328118782" Name="music_murovanka_result_drawn" ObjectPath="\Events\Interactive_music\12_Murovanka\music_murovanka_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="978678416" Name="music_murovanka_result_win" ObjectPath="\Events\Interactive_music\12_Murovanka\music_murovanka_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="541854748" Name="music_overlord_dron_intensive" ObjectPath="\Events\Interactive_music\08_Overlord\music_overlord_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="344662872" Name="music_overlord_dron_relaxed" ObjectPath="\Events\Interactive_music\08_Overlord\music_overlord_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3857457674" Name="music_overlord_loading_screen" ObjectPath="\Events\Interactive_music\08_Overlord\music_overlord_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1093336040" Name="music_overlord_result_defeat" ObjectPath="\Events\Interactive_music\08_Overlord\music_overlord_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1156933695" Name="music_overlord_result_drawn" ObjectPath="\Events\Interactive_music\08_Overlord\music_overlord_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3393941313" Name="music_overlord_result_win" ObjectPath="\Events\Interactive_music\08_Overlord\music_overlord_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2949647472" Name="music_paris_dron_intensive" ObjectPath="\Events\Interactive_music\01_Paris\music_paris_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3002883596" Name="music_paris_dron_relaxed" ObjectPath="\Events\Interactive_music\01_Paris\music_paris_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2973314166" Name="music_paris_loading_screen" ObjectPath="\Events\Interactive_music\01_Paris\music_paris_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4076870196" Name="music_paris_result_defeat" ObjectPath="\Events\Interactive_music\01_Paris\music_paris_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3052485843" Name="music_paris_result_drawn" ObjectPath="\Events\Interactive_music\01_Paris\music_paris_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1573228461" Name="music_paris_result_win" ObjectPath="\Events\Interactive_music\01_Paris\music_paris_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3578104984" Name="music_pilsen_dron_intensive" ObjectPath="\Events\Interactive_music\34_Pilsen\music_pilsen_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3895401108" Name="music_pilsen_dron_relaxed" ObjectPath="\Events\Interactive_music\34_Pilsen\music_pilsen_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3325755790" Name="music_pilsen_loading_screen" ObjectPath="\Events\Interactive_music\34_Pilsen\music_pilsen_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3417255900" Name="music_pilsen_result_defeat" ObjectPath="\Events\Interactive_music\34_Pilsen\music_pilsen_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="486737211" Name="music_pilsen_result_drawn" ObjectPath="\Events\Interactive_music\34_Pilsen\music_pilsen_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2668835269" Name="music_pilsen_result_win" ObjectPath="\Events\Interactive_music\34_Pilsen\music_pilsen_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1422232669" Name="music_poland_dron_intensive" ObjectPath="\Events\Interactive_music\35_Poland\music_poland_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2236943041" Name="music_poland_dron_relaxed" ObjectPath="\Events\Interactive_music\35_Poland\music_poland_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2414082751" Name="music_poland_loading_screen" ObjectPath="\Events\Interactive_music\35_Poland\music_poland_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3626276363" Name="music_poland_result_defeat" ObjectPath="\Events\Interactive_music\35_Poland\music_poland_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3455468162" Name="music_poland_result_drawn" ObjectPath="\Events\Interactive_music\35_Poland\music_poland_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3556423324" Name="music_poland_result_win" ObjectPath="\Events\Interactive_music\35_Poland\music_poland_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="468234051" Name="music_prokhorovka_dron_intensive" ObjectPath="\Events\Interactive_music\13_Prokhorovka\music_prokhorovka_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="736606291" Name="music_prokhorovka_dron_relaxed" ObjectPath="\Events\Interactive_music\13_Prokhorovka\music_prokhorovka_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2852320565" Name="music_prokhorovka_loading_screen" ObjectPath="\Events\Interactive_music\13_Prokhorovka\music_prokhorovka_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1223172661" Name="music_prokhorovka_result_defeat" ObjectPath="\Events\Interactive_music\13_Prokhorovka\music_prokhorovka_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2282403688" Name="music_prokhorovka_result_drawn" ObjectPath="\Events\Interactive_music\13_Prokhorovka\music_prokhorovka_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2676579534" Name="music_prokhorovka_result_win" ObjectPath="\Events\Interactive_music\13_Prokhorovka\music_prokhorovka_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4102864689" Name="music_province_dron_intensive" ObjectPath="\Events\Interactive_music\32_Province\music_province_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1185914229" Name="music_province_dron_relaxed" ObjectPath="\Events\Interactive_music\32_Province\music_province_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2039093003" Name="music_province_loading_screen" ObjectPath="\Events\Interactive_music\32_Province\music_province_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2256701943" Name="music_province_result_defeat" ObjectPath="\Events\Interactive_music\32_Province\music_province_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1148035462" Name="music_province_result_drawn" ObjectPath="\Events\Interactive_music\32_Province\music_province_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2134222504" Name="music_province_result_win" ObjectPath="\Events\Interactive_music\32_Province\music_province_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4065609255" Name="music_redshire_dron_intensive" ObjectPath="\Events\Interactive_music\24_Redshire\music_redshire_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2333926967" Name="music_redshire_dron_relaxed" ObjectPath="\Events\Interactive_music\24_Redshire\music_redshire_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2212748145" Name="music_redshire_loading_screen" ObjectPath="\Events\Interactive_music\24_Redshire\music_redshire_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="668306865" Name="music_redshire_result_defeat" ObjectPath="\Events\Interactive_music\24_Redshire\music_redshire_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1675108924" Name="music_redshire_result_drawn" ObjectPath="\Events\Interactive_music\24_Redshire\music_redshire_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="273423498" Name="music_redshire_result_win" ObjectPath="\Events\Interactive_music\24_Redshire\music_redshire_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2825754573" Name="music_ruinberg_dron_intensive" ObjectPath="\Events\Interactive_music\17_Ruinberg\music_ruinberg_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3627562001" Name="music_ruinberg_dron_relaxed" ObjectPath="\Events\Interactive_music\17_Ruinberg\music_ruinberg_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2277107439" Name="music_ruinberg_loading_screen" ObjectPath="\Events\Interactive_music\17_Ruinberg\music_ruinberg_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4253001147" Name="music_ruinberg_result_defeat" ObjectPath="\Events\Interactive_music\17_Ruinberg\music_ruinberg_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4277980978" Name="music_ruinberg_result_drawn" ObjectPath="\Events\Interactive_music\17_Ruinberg\music_ruinberg_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2256350444" Name="music_ruinberg_result_win" ObjectPath="\Events\Interactive_music\17_Ruinberg\music_ruinberg_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2432355286" Name="music_sand_river_dron_intensive" ObjectPath="\Events\Interactive_music\14_Sand_river\music_sand_river_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2842200734" Name="music_sand_river_dron_relaxed" ObjectPath="\Events\Interactive_music\14_Sand_river\music_sand_river_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3221882532" Name="music_sand_river_loading_screen" ObjectPath="\Events\Interactive_music\14_Sand_river\music_sand_river_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1351086054" Name="music_sand_river_result_defeat" ObjectPath="\Events\Interactive_music\14_Sand_river\music_sand_river_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1866321889" Name="music_sand_river_result_drawn" ObjectPath="\Events\Interactive_music\14_Sand_river\music_sand_river_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1923505567" Name="music_sand_river_result_win" ObjectPath="\Events\Interactive_music\14_Sand_river\music_sand_river_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4278375276" Name="music_serene_coast_dron_intensive" ObjectPath="\Events\Interactive_music\10_Serene_coast\music_serene_coast_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="984442568" Name="music_serene_coast_dron_relaxed" ObjectPath="\Events\Interactive_music\10_Serene_coast\music_serene_coast_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2087104218" Name="music_serene_coast_loading_screen" ObjectPath="\Events\Interactive_music\10_Serene_coast\music_serene_coast_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="982772984" Name="music_serene_coast_result_defeat" ObjectPath="\Events\Interactive_music\10_Serene_coast\music_serene_coast_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="774270031" Name="music_serene_coast_result_drawn" ObjectPath="\Events\Interactive_music\10_Serene_coast\music_serene_coast_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3181235825" Name="music_serene_coast_result_win" ObjectPath="\Events\Interactive_music\10_Serene_coast\music_serene_coast_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2028978521" Name="music_siegfried_dron_intensive" ObjectPath="\Events\Interactive_music\22_Siegfried\music_siegfried_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3387519069" Name="music_siegfried_dron_relaxed" ObjectPath="\Events\Interactive_music\22_Siegfried\music_siegfried_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1134835427" Name="music_siegfried_loading_screen" ObjectPath="\Events\Interactive_music\22_Siegfried\music_siegfried_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1845545311" Name="music_siegfried_result_defeat" ObjectPath="\Events\Interactive_music\22_Siegfried\music_siegfried_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3458861070" Name="music_siegfried_result_drawn" ObjectPath="\Events\Interactive_music\22_Siegfried\music_siegfried_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1555465920" Name="music_siegfried_result_win" ObjectPath="\Events\Interactive_music\22_Siegfried\music_siegfried_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="136122261" Name="music_steppes_dron_intensive" ObjectPath="\Events\Interactive_music\06_Steppes\music_steppes_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2989367929" Name="music_steppes_dron_relaxed" ObjectPath="\Events\Interactive_music\06_Steppes\music_steppes_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1223286439" Name="music_steppes_loading_screen" ObjectPath="\Events\Interactive_music\06_Steppes\music_steppes_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1789413123" Name="music_steppes_result_defeat" ObjectPath="\Events\Interactive_music\06_Steppes\music_steppes_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1841478394" Name="music_steppes_result_drawn" ObjectPath="\Events\Interactive_music\06_Steppes\music_steppes_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3911234532" Name="music_steppes_result_win" ObjectPath="\Events\Interactive_music\06_Steppes\music_steppes_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="721991581" Name="music_stinger" ObjectPath="\Events\Interactive_music\music_stinger" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2201103377" Name="music_sweden_dron_intensive" ObjectPath="\Events\Interactive_music\03_Sweden\music_sweden_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4174212181" Name="music_sweden_dron_relaxed" ObjectPath="\Events\Interactive_music\03_Sweden\music_sweden_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2882963179" Name="music_sweden_loading_screen" ObjectPath="\Events\Interactive_music\03_Sweden\music_sweden_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2161662935" Name="music_sweden_result_defeat" ObjectPath="\Events\Interactive_music\03_Sweden\music_sweden_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1345139174" Name="music_sweden_result_drawn" ObjectPath="\Events\Interactive_music\03_Sweden\music_sweden_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4034112264" Name="music_sweden_result_win" ObjectPath="\Events\Interactive_music\03_Sweden\music_sweden_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="993430093" Name="music_tundra_dron_intensive" ObjectPath="\Events\Interactive_music\29_Tundra\music_tundra_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4043457169" Name="music_tundra_dron_relaxed" ObjectPath="\Events\Interactive_music\29_Tundra\music_tundra_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="444782959" Name="music_tundra_loading_screen" ObjectPath="\Events\Interactive_music\29_Tundra\music_tundra_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2207545659" Name="music_tundra_result_defeat" ObjectPath="\Events\Interactive_music\29_Tundra\music_tundra_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="398908850" Name="music_tundra_result_drawn" ObjectPath="\Events\Interactive_music\29_Tundra\music_tundra_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="386135916" Name="music_tundra_result_win" ObjectPath="\Events\Interactive_music\29_Tundra\music_tundra_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3378761570" Name="music_westfield_dron_intensive" ObjectPath="\Events\Interactive_music\26_Westfield\music_westfield_dron_intensive" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2579731946" Name="music_westfield_dron_relaxed" ObjectPath="\Events\Interactive_music\26_Westfield\music_westfield_dron_relaxed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3135700856" Name="music_westfield_loading_screen" ObjectPath="\Events\Interactive_music\26_Westfield\music_westfield_loading_screen" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1017259226" Name="music_westfield_result_defeat" ObjectPath="\Events\Interactive_music\26_Westfield\music_westfield_result_defeat" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3094543789" Name="music_westfield_result_drawn" ObjectPath="\Events\Interactive_music\26_Westfield\music_westfield_result_drawn" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="637530419" Name="music_westfield_result_win" ObjectPath="\Events\Interactive_music\26_Westfield\music_westfield_result_win" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="2378126911" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\utility</ObjectPath>
+			<ShortName>utility</ShortName>
+			<Path>utility.bnk</Path>
+			<IncludedEvents>
+				<Event Id="712817794" Name="ue_01_loginscreen_enter" ObjectPath="\Events\Utilite_events\session_key_events\ue_01_loginscreen_enter" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2766017104" Name="ue_01_loginscreen_exit" ObjectPath="\Events\Utilite_events\session_key_events\ue_01_loginscreen_exit" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2888579641" Name="ue_02_hangar_enter" ObjectPath="\Events\Utilite_events\session_key_events\ue_02_hangar_enter" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="601736949" Name="ue_02_hangar_exit" ObjectPath="\Events\Utilite_events\session_key_events\ue_02_hangar_exit" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3218275239" Name="ue_03_lobby_enter" ObjectPath="\Events\Utilite_events\session_key_events\ue_03_lobby_enter" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3481742671" Name="ue_03_lobby_exit" ObjectPath="\Events\Utilite_events\session_key_events\ue_03_lobby_exit" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1274044980" Name="ue_04_loadingscreen_enter" ObjectPath="\Events\Utilite_events\session_key_events\ue_04_loadingscreen_enter" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1143708950" Name="ue_04_loadingscreen_exit" ObjectPath="\Events\Utilite_events\session_key_events\ue_04_loadingscreen_exit" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3077324080" Name="ue_05_arena_enter" ObjectPath="\Events\Utilite_events\session_key_events\ue_05_arena_enter" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3822102714" Name="ue_05_arena_exit" ObjectPath="\Events\Utilite_events\session_key_events\ue_05_arena_exit" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2313191547" Name="ue_06_result_enter" ObjectPath="\Events\Utilite_events\session_key_events\ue_06_result_enter" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="412589435" Name="ue_06_result_exit" ObjectPath="\Events\Utilite_events\session_key_events\ue_06_result_exit" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="197868276" Name="ue_events_arena_stop_except_music" ObjectPath="\Events\Utilite_events\ue_events_arena_stop_except_music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="637773918" Name="ue_events_hangar_stop_afterBattleMusic" ObjectPath="\Events\Utilite_events\ue_events_hangar_stop_afterBattleMusic" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="346023504" Name="ue_ext_multichanel_off" ObjectPath="\Events\Utilite_events\multichanel\ue_ext_multichanel_off" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1826536122" Name="ue_ext_multichanel_on" ObjectPath="\Events\Utilite_events\multichanel\ue_ext_multichanel_on" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1465638626" Name="ue_init_outside_arena_universal" ObjectPath="\Events\Utilite_events\ue_init_outside_arena_universal" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="343201978" Name="ue_key_backward_pressed" ObjectPath="\Events\Utilite_events\actions_with_keys\ue_key_backward_pressed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="856829473" Name="ue_key_backward_released" ObjectPath="\Events\Utilite_events\actions_with_keys\ue_key_backward_released" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2744457402" Name="ue_key_forward_pressed" ObjectPath="\Events\Utilite_events\actions_with_keys\ue_key_forward_pressed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2195123745" Name="ue_key_forward_released" ObjectPath="\Events\Utilite_events\actions_with_keys\ue_key_forward_released" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3415466906" Name="ue_key_left_pressed" ObjectPath="\Events\Utilite_events\actions_with_keys\ue_key_left_pressed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3400491905" Name="ue_key_left_released" ObjectPath="\Events\Utilite_events\actions_with_keys\ue_key_left_released" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="229356423" Name="ue_key_right_pressed" ObjectPath="\Events\Utilite_events\actions_with_keys\ue_key_right_pressed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3981580730" Name="ue_key_right_released" ObjectPath="\Events\Utilite_events\actions_with_keys\ue_key_right_released" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="166345957" Name="ue_key_stop_pressed" ObjectPath="\Events\Utilite_events\actions_with_keys\ue_key_stop_pressed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3224179688" Name="ue_key_stop_released" ObjectPath="\Events\Utilite_events\actions_with_keys\ue_key_stop_released" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1342683532" Name="ue_master_mute" ObjectPath="\Events\Utilite_events\ue_master_mute" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="410921641" Name="ue_master_unmute" ObjectPath="\Events\Utilite_events\ue_master_unmute" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3941727767" Name="ue_music_volume_fade_30db" ObjectPath="\Events\Utilite_events\ue_music_volume_fade_30db" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="864029140" Name="ue_music_volume_reset" ObjectPath="\Events\Utilite_events\ue_music_volume_reset" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3208127490" Name="ue_set_preset_acoustic_device_laptop" ObjectPath="\Events\Utilite_events\sound_presets\ue_set_preset_acoustic_device_laptop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2668288691" Name="ue_set_preset_acoustic_device_reset" ObjectPath="\Events\Utilite_events\sound_presets\ue_set_preset_acoustic_device_reset" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3051703358" Name="ue_set_preset_audiosystem20" ObjectPath="\Events\Utilite_events\multichanel\ue_set_preset_audiosystem20" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3102036214" Name="ue_set_preset_audiosystem51" ObjectPath="\Events\Utilite_events\multichanel\ue_set_preset_audiosystem51" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3135591388" Name="ue_set_preset_audiosystem71" ObjectPath="\Events\Utilite_events\multichanel\ue_set_preset_audiosystem71" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="783021765" Name="ue_set_preset_bassboost_off" ObjectPath="\Events\Utilite_events\sound_presets\ue_set_preset_bassboost_off" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4193624249" Name="ue_set_preset_bassboost_on" ObjectPath="\Events\Utilite_events\sound_presets\ue_set_preset_bassboost_on" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2405738403" Name="ue_set_preset_high_dynamic_range" ObjectPath="\Events\Utilite_events\sound_presets\ue_set_preset_high_dynamic_range" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="380007007" Name="ue_set_preset_low_dynamic_range" ObjectPath="\Events\Utilite_events\sound_presets\ue_set_preset_low_dynamic_range" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2589335931" Name="ue_stop_all_voices_except_combat_music" ObjectPath="\Events\Utilite_events\ue_stop_all_voices_except_combat_music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="206862725" Name="ue_stop_loadscreen_music" ObjectPath="\Events\Utilite_events\ue_stop_loadscreen_music" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="4041657371" Language="SFX">
+			<ObjectPath>\SoundBanks\Mods\voiceover</ObjectPath>
+			<ShortName>voiceover</ShortName>
+			<Path>voiceover.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1033127442" Name="ammo_bay_damaged" ObjectPath="\Events\Modules\ammo_bay_damaged" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2964135768" Name="crew_member_contusion" ObjectPath="\Events\Modules\crew_member_contusion" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="442804616" Name="fuel_tank_damaged" ObjectPath="\Events\Modules\fuel_tank_damaged" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1544767705" Name="gun_damaged" ObjectPath="\Events\Modules\gun_damaged" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="336960202" Name="old_vo_flt_ready_for_action" ObjectPath="\Events\Voiceover_old\notifications_flt\old_vo_flt_ready_for_action" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="747709675" Name="old_vo_flt_repair" ObjectPath="\Events\Voiceover_old\notifications_flt\old_vo_flt_repair" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="195694842" Name="radio_damaged" ObjectPath="\Events\Modules\radio_damaged" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3519457753" Name="surveying_devices_destroyed" ObjectPath="\Events\Modules\surveying_devices_destroyed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2301863335" Name="vo_ally_killed_by_player" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_ally_killed_by_player" DurationType="OneShot" DurationMin="1.746100" DurationMax="5.615917">
+					<IncludedMemoryFiles>
+						<File Id="227366921" Language="SFX">
+							<ShortName>HAC88FB.wav</ShortName>
+							<Path>SFX\HAC88FB_C75167D5.wem</Path>
+						</File>
+						<File Id="963747550" Language="SFX">
+							<ShortName>whoopseedaisy!.wav</ShortName>
+							<Path>SFX\whoopseedaisy!_C75167D5.wem</Path>
+						</File>
+						<File Id="979071040" Language="SFX">
+							<ShortName>HAC1C82.wav</ShortName>
+							<Path>SFX\HAC1C82_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="963747550"/>
+								<File Id="979071040"/>
+								<File Id="227366921"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="963747550"/>
+								<File Id="979071040"/>
+								<File Id="227366921"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3166122996" Name="vo_ammo_bay_damaged" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_ammo_bay_damaged" DurationType="OneShot" DurationMin="0.719917" DurationMax="1.274195">
+					<IncludedMemoryFiles>
+						<File Id="323879379" Language="SFX">
+							<ShortName>HAC1D1F.wav</ShortName>
+							<Path>SFX\HAC1D1F_C75167D5.wem</Path>
+						</File>
+						<File Id="981032199" Language="SFX">
+							<ShortName>owie.wav</ShortName>
+							<Path>SFX\owie_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="981032199"/>
+								<File Id="323879379"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="981032199"/>
+								<File Id="323879379"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1332081395" Name="vo_armor_not_pierced_by_player" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_armor_not_pierced_by_player" DurationType="OneShot" DurationMin="5.759917" DurationMax="5.759917">
+					<IncludedMemoryFiles>
+						<File Id="465136121" Language="SFX">
+							<ShortName>HAC1BA2.wav</ShortName>
+							<Path>SFX\HAC1BA2_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="465136121"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="465136121"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2655350512" Name="vo_armor_ricochet_by_player" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_armor_ricochet_by_player" DurationType="OneShot" DurationMin="1.487917" DurationMax="1.823917">
+					<IncludedMemoryFiles>
+						<File Id="545321942" Language="SFX">
+							<ShortName>HAC1D5A.wav</ShortName>
+							<Path>SFX\HAC1D5A_C75167D5.wem</Path>
+						</File>
+						<File Id="619644730" Language="SFX">
+							<ShortName>HAC1C1.wav</ShortName>
+							<Path>SFX\HAC1C1_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="619644730"/>
+								<File Id="545321942"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="619644730"/>
+								<File Id="545321942"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1946435397" Name="vo_commander_killed" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_commander_killed" DurationType="OneShot" DurationMin="1.321383" DurationMax="1.321383">
+					<IncludedMemoryFiles>
+						<File Id="899716183" Language="SFX">
+							<ShortName>hurt kidney.wav</ShortName>
+							<Path>SFX\hurt kidney_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="899716183"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="899716183"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1988695347" Name="vo_crew_deactivated" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_crew_deactivated" DurationType="OneShot" DurationMin="1.415760" DurationMax="1.415760">
+					<IncludedMemoryFiles>
+						<File Id="538136311" Language="SFX">
+							<ShortName>bathroom break!.wav</ShortName>
+							<Path>SFX\bathroom break!_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="538136311"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="538136311"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3716823038" Name="vo_damage_by_near_explosion_by_enemy" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_damage_by_near_explosion_by_enemy" DurationType="OneShot" DurationMin="1.199917" DurationMax="2.265215">
+					<IncludedMemoryFiles>
+						<File Id="14798184" Language="SFX">
+							<ShortName>HAC2A2F.wav</ShortName>
+							<Path>SFX\HAC2A2F_C75167D5.wem</Path>
+						</File>
+						<File Id="296730193" Language="SFX">
+							<ShortName>yes its guttin time!.wav</ShortName>
+							<Path>SFX\yes its guttin time!_C75167D5.wem</Path>
+						</File>
+						<File Id="652474521" Language="SFX">
+							<ShortName>present for ya.wav</ShortName>
+							<Path>SFX\present for ya_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="296730193"/>
+								<File Id="652474521"/>
+								<File Id="14798184"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="296730193"/>
+								<File Id="652474521"/>
+								<File Id="14798184"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2509625173" Name="vo_damage_by_near_explosion_by_player" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_damage_by_near_explosion_by_player" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="2921316646" Name="vo_dp_assistance_been_requested" ObjectPath="\Events\Voiceover_old\notifications_dp\vo_dp_assistance_been_requested" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="831761693" Name="vo_dp_been_excluded_platoon" ObjectPath="\Events\Voiceover_old\notifications_dp\vo_dp_been_excluded_platoon" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="605448325" Name="vo_dp_left_platoon" ObjectPath="\Events\Voiceover_old\notifications_dp\vo_dp_left_platoon" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2717569914" Name="vo_dp_platoon_created" ObjectPath="\Events\Voiceover_old\notifications_dp\vo_dp_platoon_created" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1736989749" Name="vo_dp_platoon_dismissed" ObjectPath="\Events\Voiceover_old\notifications_dp\vo_dp_platoon_dismissed" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1193243693" Name="vo_dp_platoon_joined" ObjectPath="\Events\Voiceover_old\notifications_dp\vo_dp_platoon_joined" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2524427447" Name="vo_dp_player_joined_platoon" ObjectPath="\Events\Voiceover_old\notifications_dp\vo_dp_player_joined_platoon" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="664892591" Name="vo_driver_killed" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_driver_killed" DurationType="OneShot" DurationMin="0.660680" DurationMax="0.660680">
+					<IncludedMemoryFiles>
+						<File Id="571535261" Language="SFX">
+							<ShortName>hurt 1.wav</ShortName>
+							<Path>SFX\hurt 1_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="571535261"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="571535261"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3563950026" Name="vo_enemy_fire_started_by_player" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_enemy_fire_started_by_player" DurationType="OneShot" DurationMin="1.557347" DurationMax="1.557347">
+					<IncludedMemoryFiles>
+						<File Id="796261840" Language="SFX">
+							<ShortName>stings dont it.wav</ShortName>
+							<Path>SFX\stings dont it_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="796261840"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="796261840"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="4209631318" Name="vo_enemy_hp_damaged_by_explosion_at_direct_hit_by_player" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_enemy_hp_damaged_by_explosion_at_direct_hit_by_player" DurationType="OneShot" DurationMin="1.179796" DurationMax="1.179796">
+					<IncludedMemoryFiles>
+						<File Id="255001675" Language="SFX">
+							<ShortName>bamf.wav</ShortName>
+							<Path>SFX\bamf_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="255001675"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="255001675"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="136522141" Name="vo_enemy_hp_damaged_by_projectile_and_chassis_damaged_by_player" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_enemy_hp_damaged_by_projectile_and_chassis_damaged_by_player" DurationType="OneShot" DurationMin="1.967917" DurationMax="4.624830">
+					<IncludedMemoryFiles>
+						<File Id="730522800" Language="SFX">
+							<ShortName>HAC2B38.wav</ShortName>
+							<Path>SFX\HAC2B38_C75167D5.wem</Path>
+						</File>
+						<File Id="918870451" Language="SFX">
+							<ShortName>check me out im the ghost of christmas kick your ass.wav</ShortName>
+							<Path>SFX\check me out im the ghost of christmas kick your ass_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="918870451"/>
+								<File Id="730522800"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="918870451"/>
+								<File Id="730522800"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="102434383" Name="vo_enemy_hp_damaged_by_projectile_and_gun_damaged_by_player" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_enemy_hp_damaged_by_projectile_and_gun_damaged_by_player" DurationType="OneShot" DurationMin="2.591917" DurationMax="4.624830">
+					<IncludedMemoryFiles>
+						<File Id="665335583" Language="SFX">
+							<ShortName>HAC3CEC.wav</ShortName>
+							<Path>SFX\HAC3CEC_C75167D5.wem</Path>
+						</File>
+						<File Id="918870451" Language="SFX">
+							<ShortName>check me out im the ghost of christmas kick your ass.wav</ShortName>
+							<Path>SFX\check me out im the ghost of christmas kick your ass_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="918870451"/>
+								<File Id="665335583"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="918870451"/>
+								<File Id="665335583"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1057290642" Name="vo_enemy_hp_damaged_by_projectile_by_player" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_enemy_hp_damaged_by_projectile_by_player" DurationType="OneShot" DurationMin="1.679917" DurationMax="2.063917">
+					<IncludedMemoryFiles>
+						<File Id="455032322" Language="SFX">
+							<ShortName>HAC1FE9.wav</ShortName>
+							<Path>SFX\HAC1FE9_C75167D5.wem</Path>
+						</File>
+						<File Id="516888762" Language="SFX">
+							<ShortName>pineapple surprise!.wav</ShortName>
+							<Path>SFX\pineapple surprise!_C75167D5.wem</Path>
+						</File>
+						<File Id="753864006" Language="SFX">
+							<ShortName>HAC2B53.wav</ShortName>
+							<Path>SFX\HAC2B53_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="516888762"/>
+								<File Id="455032322"/>
+								<File Id="753864006"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="516888762"/>
+								<File Id="455032322"/>
+								<File Id="753864006"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1316861587" Name="vo_enemy_killed" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_enemy_killed" DurationType="OneShot" DurationMin="0.767917" DurationMax="6.191916">
+					<IncludedMemoryFiles>
+						<File Id="59759616" Language="SFX">
+							<ShortName>HAC73CB.wav</ShortName>
+							<Path>SFX\HAC73CB_C75167D5.wem</Path>
+						</File>
+						<File Id="215231374" Language="SFX">
+							<ShortName>HAC3A3A.wav</ShortName>
+							<Path>SFX\HAC3A3A_C75167D5.wem</Path>
+						</File>
+						<File Id="458552390" Language="SFX">
+							<ShortName>health bar in your face.wav</ShortName>
+							<Path>SFX\health bar in your face_C75167D5.wem</Path>
+						</File>
+						<File Id="499861900" Language="SFX">
+							<ShortName>HAC2A34.wav</ShortName>
+							<Path>SFX\HAC2A34_C75167D5.wem</Path>
+						</File>
+						<File Id="567842983" Language="SFX">
+							<ShortName>next time maybe you should let nero do your fighting skippy.wav</ShortName>
+							<Path>SFX\next time maybe you should let nero do your fighting skippy_C75167D5.wem</Path>
+						</File>
+						<File Id="595331873" Language="SFX">
+							<ShortName>HAC4BC9.wav</ShortName>
+							<Path>SFX\HAC4BC9_C75167D5.wem</Path>
+						</File>
+						<File Id="596661292" Language="SFX">
+							<ShortName>HAC30F9.wav</ShortName>
+							<Path>SFX\HAC30F9_C75167D5.wem</Path>
+						</File>
+						<File Id="692592865" Language="SFX">
+							<ShortName>takes a lickin and keeps on heh guess not.wav</ShortName>
+							<Path>SFX\takes a lickin and keeps on heh guess not_C75167D5.wem</Path>
+						</File>
+						<File Id="753864006" Language="SFX">
+							<ShortName>HAC2B53.wav</ShortName>
+							<Path>SFX\HAC2B53_C75167D5.wem</Path>
+						</File>
+						<File Id="800512446" Language="SFX">
+							<ShortName>HAC49CA.wav</ShortName>
+							<Path>SFX\HAC49CA_C75167D5.wem</Path>
+						</File>
+						<File Id="825938783" Language="SFX">
+							<ShortName>HAC4D50.wav</ShortName>
+							<Path>SFX\HAC4D50_C75167D5.wem</Path>
+						</File>
+						<File Id="842121855" Language="SFX">
+							<ShortName>i just beat mag freaking neto where yo curly moustache at.wav</ShortName>
+							<Path>SFX\i just beat mag freaking neto where yo curly moustache at_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="842121855"/>
+								<File Id="458552390"/>
+								<File Id="567842983"/>
+								<File Id="692592865"/>
+								<File Id="499861900"/>
+								<File Id="215231374"/>
+								<File Id="595331873"/>
+								<File Id="825938783"/>
+								<File Id="800512446"/>
+								<File Id="59759616"/>
+								<File Id="753864006"/>
+								<File Id="596661292"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="842121855"/>
+								<File Id="458552390"/>
+								<File Id="567842983"/>
+								<File Id="692592865"/>
+								<File Id="499861900"/>
+								<File Id="215231374"/>
+								<File Id="595331873"/>
+								<File Id="825938783"/>
+								<File Id="800512446"/>
+								<File Id="59759616"/>
+								<File Id="753864006"/>
+								<File Id="596661292"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1122640859" Name="vo_enemy_killed_by_player" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_enemy_killed_by_player" DurationType="OneShot" DurationMin="0.767917" DurationMax="6.191916">
+					<IncludedMemoryFiles>
+						<File Id="59759616" Language="SFX">
+							<ShortName>HAC73CB.wav</ShortName>
+							<Path>SFX\HAC73CB_C75167D5.wem</Path>
+						</File>
+						<File Id="218863001" Language="SFX">
+							<ShortName>HAC2C54.wav</ShortName>
+							<Path>SFX\HAC2C54_C75167D5.wem</Path>
+						</File>
+						<File Id="458552390" Language="SFX">
+							<ShortName>health bar in your face.wav</ShortName>
+							<Path>SFX\health bar in your face_C75167D5.wem</Path>
+						</File>
+						<File Id="499861900" Language="SFX">
+							<ShortName>HAC2A34.wav</ShortName>
+							<Path>SFX\HAC2A34_C75167D5.wem</Path>
+						</File>
+						<File Id="567842983" Language="SFX">
+							<ShortName>next time maybe you should let nero do your fighting skippy.wav</ShortName>
+							<Path>SFX\next time maybe you should let nero do your fighting skippy_C75167D5.wem</Path>
+						</File>
+						<File Id="595331873" Language="SFX">
+							<ShortName>HAC4BC9.wav</ShortName>
+							<Path>SFX\HAC4BC9_C75167D5.wem</Path>
+						</File>
+						<File Id="596661292" Language="SFX">
+							<ShortName>HAC30F9.wav</ShortName>
+							<Path>SFX\HAC30F9_C75167D5.wem</Path>
+						</File>
+						<File Id="692592865" Language="SFX">
+							<ShortName>takes a lickin and keeps on heh guess not.wav</ShortName>
+							<Path>SFX\takes a lickin and keeps on heh guess not_C75167D5.wem</Path>
+						</File>
+						<File Id="753864006" Language="SFX">
+							<ShortName>HAC2B53.wav</ShortName>
+							<Path>SFX\HAC2B53_C75167D5.wem</Path>
+						</File>
+						<File Id="800512446" Language="SFX">
+							<ShortName>HAC49CA.wav</ShortName>
+							<Path>SFX\HAC49CA_C75167D5.wem</Path>
+						</File>
+						<File Id="825938783" Language="SFX">
+							<ShortName>HAC4D50.wav</ShortName>
+							<Path>SFX\HAC4D50_C75167D5.wem</Path>
+						</File>
+						<File Id="842121855" Language="SFX">
+							<ShortName>i just beat mag freaking neto where yo curly moustache at.wav</ShortName>
+							<Path>SFX\i just beat mag freaking neto where yo curly moustache at_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="842121855"/>
+								<File Id="458552390"/>
+								<File Id="567842983"/>
+								<File Id="692592865"/>
+								<File Id="499861900"/>
+								<File Id="218863001"/>
+								<File Id="595331873"/>
+								<File Id="825938783"/>
+								<File Id="800512446"/>
+								<File Id="59759616"/>
+								<File Id="753864006"/>
+								<File Id="596661292"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="842121855"/>
+								<File Id="458552390"/>
+								<File Id="567842983"/>
+								<File Id="692592865"/>
+								<File Id="499861900"/>
+								<File Id="218863001"/>
+								<File Id="595331873"/>
+								<File Id="825938783"/>
+								<File Id="800512446"/>
+								<File Id="59759616"/>
+								<File Id="753864006"/>
+								<File Id="596661292"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3406769" Name="vo_enemy_no_hp_damage_at_attempt_and_chassis_damaged_by_player" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_enemy_no_hp_damage_at_attempt_and_chassis_damaged_by_player" DurationType="OneShot" DurationMin="1.321383" DurationMax="1.321383">
+					<IncludedMemoryFiles>
+						<File Id="117729478" Language="SFX">
+							<ShortName>taunt button!.wav</ShortName>
+							<Path>SFX\taunt button!_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="117729478"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="117729478"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3175172091" Name="vo_enemy_no_hp_damage_at_attempt_and_gun_damaged_by_player" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_enemy_no_hp_damage_at_attempt_and_gun_damaged_by_player" DurationType="OneShot" DurationMin="1.321383" DurationMax="1.321383">
+					<IncludedMemoryFiles>
+						<File Id="117729478" Language="SFX">
+							<ShortName>taunt button!.wav</ShortName>
+							<Path>SFX\taunt button!_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="117729478"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="117729478"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="730352367" Name="vo_enemy_no_hp_damage_at_no_attempt_and_chassis_damaged_by_player" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_enemy_no_hp_damage_at_no_attempt_and_chassis_damaged_by_player" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="1713814001" Name="vo_enemy_no_hp_damage_at_no_attempt_and_gun_damaged_by_player" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_enemy_no_hp_damage_at_no_attempt_and_gun_damaged_by_player" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="3207438912" Name="vo_enemy_no_hp_damage_at_no_attempt_by_player" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_enemy_no_hp_damage_at_no_attempt_by_player" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="1702267773" Name="vo_engine_damaged" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_engine_damaged" DurationType="OneShot" DurationMin="7.631917" DurationMax="7.631917">
+					<IncludedMemoryFiles>
+						<File Id="1003467901" Language="SFX">
+							<ShortName>HAC4E0A.wav</ShortName>
+							<Path>SFX\HAC4E0A_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="1003467901"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="1003467901"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1302422561" Name="vo_engine_destroyed" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_engine_destroyed" DurationType="OneShot" DurationMin="1.535917" DurationMax="1.535917">
+					<IncludedMemoryFiles>
+						<File Id="922152919" Language="SFX">
+							<ShortName>HAC4C08.wav</ShortName>
+							<Path>SFX\HAC4C08_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="922152919"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="922152919"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="4148607935" Name="vo_engine_functional" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_engine_functional" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="1396083645" Name="vo_fire_started" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_fire_started" DurationType="OneShot" DurationMin="1.510159" DurationMax="1.510159">
+					<IncludedMemoryFiles>
+						<File Id="369148582" Language="SFX">
+							<ShortName>chimichangas.wav</ShortName>
+							<Path>SFX\chimichangas_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="369148582"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="369148582"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3616464105" Name="vo_fire_stopped" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_fire_stopped" DurationType="OneShot" DurationMin="1.535917" DurationMax="1.535917">
+					<IncludedMemoryFiles>
+						<File Id="554118772" Language="SFX">
+							<ShortName>HAC2FFD.wav</ShortName>
+							<Path>SFX\HAC2FFD_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="554118772"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="554118772"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2719910977" Name="vo_flt_ally_captured" ObjectPath="\Events\Voiceover_old\notifications_flt\vo_flt_ally_captured" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2664141873" Name="vo_flt_ally_flag" ObjectPath="\Events\Voiceover_old\notifications_flt\vo_flt_ally_flag" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2204362635" Name="vo_flt_combat_reserve" ObjectPath="\Events\Voiceover_old\notifications_flt\vo_flt_combat_reserve" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1190544762" Name="vo_flt_deliver_flag" ObjectPath="\Events\Voiceover_old\notifications_flt\vo_flt_deliver_flag" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="743931770" Name="vo_flt_drop_flag" ObjectPath="\Events\Voiceover_old\notifications_flt\vo_flt_drop_flag" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2727251273" Name="vo_flt_enemy_take_flag" ObjectPath="\Events\Voiceover_old\notifications_flt\vo_flt_enemy_take_flag" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3472660432" Name="vo_flt_take_flag" ObjectPath="\Events\Voiceover_old\notifications_flt\vo_flt_take_flag" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1641781602" Name="vo_fuel_tank_damaged" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_fuel_tank_damaged" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="693799259" Name="vo_gun_damaged" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_gun_damaged" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="825236543" Name="vo_gun_destroyed" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_gun_destroyed" DurationType="OneShot" DurationMin="1.439917" DurationMax="1.439917">
+					<IncludedMemoryFiles>
+						<File Id="449822051" Language="SFX">
+							<ShortName>HAC1E6A.wav</ShortName>
+							<Path>SFX\HAC1E6A_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="449822051"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="449822051"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="4011208105" Name="vo_gun_functional" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_gun_functional" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="1107412350" Name="vo_gunner_killed" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_gunner_killed" DurationType="OneShot" DurationMin="0.943855" DurationMax="0.943855">
+					<IncludedMemoryFiles>
+						<File Id="674899348" Language="SFX">
+							<ShortName>hurt 3.wav</ShortName>
+							<Path>SFX\hurt 3_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="674899348"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="674899348"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1781671118" Name="vo_loader_killed" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_loader_killed" DurationType="OneShot" DurationMin="0.991043" DurationMax="0.991043">
+					<IncludedMemoryFiles>
+						<File Id="261994919" Language="SFX">
+							<ShortName>hurt 2.wav</ShortName>
+							<Path>SFX\hurt 2_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="261994919"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="261994919"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="575170028" Name="vo_radio_damaged" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_radio_damaged" DurationType="OneShot" DurationMin="1.510159" DurationMax="1.510159">
+					<IncludedMemoryFiles>
+						<File Id="393679950" Language="SFX">
+							<ShortName>you rang.wav</ShortName>
+							<Path>SFX\you rang_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="393679950"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="393679950"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3928775652" Name="vo_radioman_killed" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_radioman_killed" DurationType="OneShot" DurationMin="1.227007" DurationMax="1.227007">
+					<IncludedMemoryFiles>
+						<File Id="1009834622" Language="SFX">
+							<ShortName>hurt 5.wav</ShortName>
+							<Path>SFX\hurt 5_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="1009834622"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="1009834622"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="590598450" Name="vo_start_battle" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_start_battle" DurationType="OneShot" DurationMin="1.510136" DurationMax="6.143917">
+					<IncludedMemoryFiles>
+						<File Id="87636204" Language="SFX">
+							<ShortName>la la la la la la la la la la la la.wav</ShortName>
+							<Path>SFX\la la la la la la la la la la la la_C75167D5.wem</Path>
+						</File>
+						<File Id="212045840" Language="SFX">
+							<ShortName>lets do this.wav</ShortName>
+							<Path>SFX\lets do this_C75167D5.wem</Path>
+						</File>
+						<File Id="333891205" Language="SFX">
+							<ShortName>HAC3DD2.wav</ShortName>
+							<Path>SFX\HAC3DD2_C75167D5.wem</Path>
+						</File>
+						<File Id="342226014" Language="SFX">
+							<ShortName>HAC2C33.wav</ShortName>
+							<Path>SFX\HAC2C33_C75167D5.wem</Path>
+						</File>
+						<File Id="464623465" Language="SFX">
+							<ShortName>HAC2B95.wav</ShortName>
+							<Path>SFX\HAC2B95_C75167D5.wem</Path>
+						</File>
+						<File Id="483247996" Language="SFX">
+							<ShortName>HAC2D25.wav</ShortName>
+							<Path>SFX\HAC2D25_C75167D5.wem</Path>
+						</File>
+						<File Id="492977616" Language="SFX">
+							<ShortName>anime power up time!.wav</ShortName>
+							<Path>SFX\anime power up time!_C75167D5.wem</Path>
+						</File>
+						<File Id="539211032" Language="SFX">
+							<ShortName>try not to suck!.wav</ShortName>
+							<Path>SFX\try not to suck!_C75167D5.wem</Path>
+						</File>
+						<File Id="569475444" Language="SFX">
+							<ShortName>HAC3C6F.wav</ShortName>
+							<Path>SFX\HAC3C6F_C75167D5.wem</Path>
+						</File>
+						<File Id="598346846" Language="SFX">
+							<ShortName>HAC87A8.wav</ShortName>
+							<Path>SFX\HAC87A8_C75167D5.wem</Path>
+						</File>
+						<File Id="652038656" Language="SFX">
+							<ShortName>HAC2D20.wav</ShortName>
+							<Path>SFX\HAC2D20_C75167D5.wem</Path>
+						</File>
+						<File Id="654411238" Language="SFX">
+							<ShortName>HAC81B9.wav</ShortName>
+							<Path>SFX\HAC81B9_C75167D5.wem</Path>
+						</File>
+						<File Id="664330618" Language="SFX">
+							<ShortName>have gun will shoot.wav</ShortName>
+							<Path>SFX\have gun will shoot_C75167D5.wem</Path>
+						</File>
+						<File Id="889946545" Language="SFX">
+							<ShortName>how did anyone ever enjoy these games without me in em.wav</ShortName>
+							<Path>SFX\how did anyone ever enjoy these games without me in em_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="87636204"/>
+								<File Id="212045840"/>
+								<File Id="492977616"/>
+								<File Id="664330618"/>
+								<File Id="889946545"/>
+								<File Id="539211032"/>
+								<File Id="464623465"/>
+								<File Id="342226014"/>
+								<File Id="652038656"/>
+								<File Id="483247996"/>
+								<File Id="569475444"/>
+								<File Id="333891205"/>
+								<File Id="654411238"/>
+								<File Id="598346846"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="87636204"/>
+								<File Id="492977616"/>
+								<File Id="212045840"/>
+								<File Id="664330618"/>
+								<File Id="889946545"/>
+								<File Id="539211032"/>
+								<File Id="464623465"/>
+								<File Id="342226014"/>
+								<File Id="652038656"/>
+								<File Id="483247996"/>
+								<File Id="569475444"/>
+								<File Id="333891205"/>
+								<File Id="654411238"/>
+								<File Id="598346846"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1077949222" Name="vo_surveying_devices_crit_damaged" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_surveying_devices_crit_damaged" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="2775977275" Name="vo_surveying_devices_damaged" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_surveying_devices_damaged" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="1112395295" Name="vo_surveying_devices_destroyed" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_surveying_devices_destroyed" DurationType="OneShot" DurationMin="7.881088" DurationMax="7.881088">
+					<IncludedMemoryFiles>
+						<File Id="606911542" Language="SFX">
+							<ShortName>you see that thats how you beat wolverine people and you dont even need optic blasts!.wav</ShortName>
+							<Path>SFX\you see that thats how you beat wolverine people and you dont even need optic blasts!_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="606911542"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="606911542"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="998311689" Name="vo_surveying_devices_functional" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_surveying_devices_functional" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="1491984609" Name="vo_target_captured" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_target_captured" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="2836359293" Name="vo_target_lost" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_target_lost" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="85617264" Name="vo_target_unlocked" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_target_unlocked" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="766987452" Name="vo_track_damaged" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_track_damaged" DurationType="OneShot" DurationMin="1.967917" DurationMax="1.967917">
+					<IncludedMemoryFiles>
+						<File Id="865794040" Language="SFX">
+							<ShortName>HAC2D09.wav</ShortName>
+							<Path>SFX\HAC2D09_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="865794040"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="865794040"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1244332268" Name="vo_track_destroyed" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_track_destroyed" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="3498324732" Name="vo_track_functional" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_track_functional" DurationType="OneShot" DurationMin="1.462948" DurationMax="1.462948">
+					<IncludedMemoryFiles>
+						<File Id="1004120871" Language="SFX">
+							<ShortName>swift as the wind.wav</ShortName>
+							<Path>SFX\swift as the wind_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="1004120871"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="1004120871"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="311966861" Name="vo_track_functional_can_move" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_track_functional_can_move" DurationType="OneShot" DurationMin="1.462948" DurationMax="1.462948">
+					<IncludedMemoryFiles>
+						<File Id="1004120871" Language="SFX">
+							<ShortName>swift as the wind.wav</ShortName>
+							<Path>SFX\swift as the wind_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="1004120871"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="1004120871"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="47755571" Name="vo_turret_rotator_damaged" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_turret_rotator_damaged" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="1630212423" Name="vo_turret_rotator_destroyed" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_turret_rotator_destroyed" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="257621937" Name="vo_turret_rotator_functional" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_turret_rotator_functional" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+					<SwitchContainers/>
+				</Event>
+				<Event Id="3917054405" Name="vo_vehicle_destroyed" ObjectPath="\Events\Voiceover_old\notifications_vo_old\vo_vehicle_destroyed" DurationType="OneShot" DurationMin="1.391917" DurationMax="3.167917">
+					<IncludedMemoryFiles>
+						<File Id="90332482" Language="SFX">
+							<ShortName>curses foiled again.wav</ShortName>
+							<Path>SFX\curses foiled again_C75167D5.wem</Path>
+						</File>
+						<File Id="318060176" Language="SFX">
+							<ShortName>HAC4F0B.wav</ShortName>
+							<Path>SFX\HAC4F0B_C75167D5.wem</Path>
+						</File>
+						<File Id="655318195" Language="SFX">
+							<ShortName>HAC3EA2.wav</ShortName>
+							<Path>SFX\HAC3EA2_C75167D5.wem</Path>
+						</File>
+						<File Id="664088428" Language="SFX">
+							<ShortName>HAC1FD3.wav</ShortName>
+							<Path>SFX\HAC1FD3_C75167D5.wem</Path>
+						</File>
+						<File Id="729756105" Language="SFX">
+							<ShortName>HAC1C34.wav</ShortName>
+							<Path>SFX\HAC1C34_C75167D5.wem</Path>
+						</File>
+						<File Id="917365031" Language="SFX">
+							<ShortName>i still get paid though right.wav</ShortName>
+							<Path>SFX\i still get paid though right_C75167D5.wem</Path>
+						</File>
+						<File Id="985364423" Language="SFX">
+							<ShortName>HAC1E2B.wav</ShortName>
+							<Path>SFX\HAC1E2B_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}">
+							<Media>
+								<File Id="917365031"/>
+								<File Id="90332482"/>
+								<File Id="729756105"/>
+								<File Id="985364423"/>
+								<File Id="664088428"/>
+								<File Id="655318195"/>
+								<File Id="318060176"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}">
+							<Media>
+								<File Id="917365031"/>
+								<File Id="90332482"/>
+								<File Id="729756105"/>
+								<File Id="985364423"/>
+								<File Id="664088428"/>
+								<File Id="655318195"/>
+								<File Id="318060176"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="14798184" Language="SFX">
+					<ShortName>HAC2A2F.wav</ShortName>
+					<Path>SFX\HAC2A2F_C75167D5.wem</Path>
+				</File>
+				<File Id="59759616" Language="SFX">
+					<ShortName>HAC73CB.wav</ShortName>
+					<Path>SFX\HAC73CB_C75167D5.wem</Path>
+				</File>
+				<File Id="87636204" Language="SFX">
+					<ShortName>la la la la la la la la la la la la.wav</ShortName>
+					<Path>SFX\la la la la la la la la la la la la_C75167D5.wem</Path>
+				</File>
+				<File Id="90332482" Language="SFX">
+					<ShortName>curses foiled again.wav</ShortName>
+					<Path>SFX\curses foiled again_C75167D5.wem</Path>
+				</File>
+				<File Id="117729478" Language="SFX">
+					<ShortName>taunt button!.wav</ShortName>
+					<Path>SFX\taunt button!_C75167D5.wem</Path>
+				</File>
+				<File Id="212045840" Language="SFX">
+					<ShortName>lets do this.wav</ShortName>
+					<Path>SFX\lets do this_C75167D5.wem</Path>
+				</File>
+				<File Id="215231374" Language="SFX">
+					<ShortName>HAC3A3A.wav</ShortName>
+					<Path>SFX\HAC3A3A_C75167D5.wem</Path>
+				</File>
+				<File Id="218863001" Language="SFX">
+					<ShortName>HAC2C54.wav</ShortName>
+					<Path>SFX\HAC2C54_C75167D5.wem</Path>
+				</File>
+				<File Id="227366921" Language="SFX">
+					<ShortName>HAC88FB.wav</ShortName>
+					<Path>SFX\HAC88FB_C75167D5.wem</Path>
+				</File>
+				<File Id="255001675" Language="SFX">
+					<ShortName>bamf.wav</ShortName>
+					<Path>SFX\bamf_C75167D5.wem</Path>
+				</File>
+				<File Id="261994919" Language="SFX">
+					<ShortName>hurt 2.wav</ShortName>
+					<Path>SFX\hurt 2_C75167D5.wem</Path>
+				</File>
+				<File Id="296730193" Language="SFX">
+					<ShortName>yes its guttin time!.wav</ShortName>
+					<Path>SFX\yes its guttin time!_C75167D5.wem</Path>
+				</File>
+				<File Id="318060176" Language="SFX">
+					<ShortName>HAC4F0B.wav</ShortName>
+					<Path>SFX\HAC4F0B_C75167D5.wem</Path>
+				</File>
+				<File Id="323879379" Language="SFX">
+					<ShortName>HAC1D1F.wav</ShortName>
+					<Path>SFX\HAC1D1F_C75167D5.wem</Path>
+				</File>
+				<File Id="333891205" Language="SFX">
+					<ShortName>HAC3DD2.wav</ShortName>
+					<Path>SFX\HAC3DD2_C75167D5.wem</Path>
+				</File>
+				<File Id="342226014" Language="SFX">
+					<ShortName>HAC2C33.wav</ShortName>
+					<Path>SFX\HAC2C33_C75167D5.wem</Path>
+				</File>
+				<File Id="369148582" Language="SFX">
+					<ShortName>chimichangas.wav</ShortName>
+					<Path>SFX\chimichangas_C75167D5.wem</Path>
+				</File>
+				<File Id="393679950" Language="SFX">
+					<ShortName>you rang.wav</ShortName>
+					<Path>SFX\you rang_C75167D5.wem</Path>
+				</File>
+				<File Id="449822051" Language="SFX">
+					<ShortName>HAC1E6A.wav</ShortName>
+					<Path>SFX\HAC1E6A_C75167D5.wem</Path>
+				</File>
+				<File Id="455032322" Language="SFX">
+					<ShortName>HAC1FE9.wav</ShortName>
+					<Path>SFX\HAC1FE9_C75167D5.wem</Path>
+				</File>
+				<File Id="458552390" Language="SFX">
+					<ShortName>health bar in your face.wav</ShortName>
+					<Path>SFX\health bar in your face_C75167D5.wem</Path>
+				</File>
+				<File Id="464623465" Language="SFX">
+					<ShortName>HAC2B95.wav</ShortName>
+					<Path>SFX\HAC2B95_C75167D5.wem</Path>
+				</File>
+				<File Id="465136121" Language="SFX">
+					<ShortName>HAC1BA2.wav</ShortName>
+					<Path>SFX\HAC1BA2_C75167D5.wem</Path>
+				</File>
+				<File Id="483247996" Language="SFX">
+					<ShortName>HAC2D25.wav</ShortName>
+					<Path>SFX\HAC2D25_C75167D5.wem</Path>
+				</File>
+				<File Id="492977616" Language="SFX">
+					<ShortName>anime power up time!.wav</ShortName>
+					<Path>SFX\anime power up time!_C75167D5.wem</Path>
+				</File>
+				<File Id="499861900" Language="SFX">
+					<ShortName>HAC2A34.wav</ShortName>
+					<Path>SFX\HAC2A34_C75167D5.wem</Path>
+				</File>
+				<File Id="516888762" Language="SFX">
+					<ShortName>pineapple surprise!.wav</ShortName>
+					<Path>SFX\pineapple surprise!_C75167D5.wem</Path>
+				</File>
+				<File Id="538136311" Language="SFX">
+					<ShortName>bathroom break!.wav</ShortName>
+					<Path>SFX\bathroom break!_C75167D5.wem</Path>
+				</File>
+				<File Id="539211032" Language="SFX">
+					<ShortName>try not to suck!.wav</ShortName>
+					<Path>SFX\try not to suck!_C75167D5.wem</Path>
+				</File>
+				<File Id="545321942" Language="SFX">
+					<ShortName>HAC1D5A.wav</ShortName>
+					<Path>SFX\HAC1D5A_C75167D5.wem</Path>
+				</File>
+				<File Id="554118772" Language="SFX">
+					<ShortName>HAC2FFD.wav</ShortName>
+					<Path>SFX\HAC2FFD_C75167D5.wem</Path>
+				</File>
+				<File Id="567842983" Language="SFX">
+					<ShortName>next time maybe you should let nero do your fighting skippy.wav</ShortName>
+					<Path>SFX\next time maybe you should let nero do your fighting skippy_C75167D5.wem</Path>
+				</File>
+				<File Id="569475444" Language="SFX">
+					<ShortName>HAC3C6F.wav</ShortName>
+					<Path>SFX\HAC3C6F_C75167D5.wem</Path>
+				</File>
+				<File Id="571535261" Language="SFX">
+					<ShortName>hurt 1.wav</ShortName>
+					<Path>SFX\hurt 1_C75167D5.wem</Path>
+				</File>
+				<File Id="595331873" Language="SFX">
+					<ShortName>HAC4BC9.wav</ShortName>
+					<Path>SFX\HAC4BC9_C75167D5.wem</Path>
+				</File>
+				<File Id="596661292" Language="SFX">
+					<ShortName>HAC30F9.wav</ShortName>
+					<Path>SFX\HAC30F9_C75167D5.wem</Path>
+				</File>
+				<File Id="598346846" Language="SFX">
+					<ShortName>HAC87A8.wav</ShortName>
+					<Path>SFX\HAC87A8_C75167D5.wem</Path>
+				</File>
+				<File Id="606911542" Language="SFX">
+					<ShortName>you see that thats how you beat wolverine people and you dont even need optic blasts!.wav</ShortName>
+					<Path>SFX\you see that thats how you beat wolverine people and you dont even need optic blasts!_C75167D5.wem</Path>
+				</File>
+				<File Id="619644730" Language="SFX">
+					<ShortName>HAC1C1.wav</ShortName>
+					<Path>SFX\HAC1C1_C75167D5.wem</Path>
+				</File>
+				<File Id="652038656" Language="SFX">
+					<ShortName>HAC2D20.wav</ShortName>
+					<Path>SFX\HAC2D20_C75167D5.wem</Path>
+				</File>
+				<File Id="652474521" Language="SFX">
+					<ShortName>present for ya.wav</ShortName>
+					<Path>SFX\present for ya_C75167D5.wem</Path>
+				</File>
+				<File Id="654411238" Language="SFX">
+					<ShortName>HAC81B9.wav</ShortName>
+					<Path>SFX\HAC81B9_C75167D5.wem</Path>
+				</File>
+				<File Id="655318195" Language="SFX">
+					<ShortName>HAC3EA2.wav</ShortName>
+					<Path>SFX\HAC3EA2_C75167D5.wem</Path>
+				</File>
+				<File Id="664088428" Language="SFX">
+					<ShortName>HAC1FD3.wav</ShortName>
+					<Path>SFX\HAC1FD3_C75167D5.wem</Path>
+				</File>
+				<File Id="664330618" Language="SFX">
+					<ShortName>have gun will shoot.wav</ShortName>
+					<Path>SFX\have gun will shoot_C75167D5.wem</Path>
+				</File>
+				<File Id="665335583" Language="SFX">
+					<ShortName>HAC3CEC.wav</ShortName>
+					<Path>SFX\HAC3CEC_C75167D5.wem</Path>
+				</File>
+				<File Id="674899348" Language="SFX">
+					<ShortName>hurt 3.wav</ShortName>
+					<Path>SFX\hurt 3_C75167D5.wem</Path>
+				</File>
+				<File Id="692592865" Language="SFX">
+					<ShortName>takes a lickin and keeps on heh guess not.wav</ShortName>
+					<Path>SFX\takes a lickin and keeps on heh guess not_C75167D5.wem</Path>
+				</File>
+				<File Id="729756105" Language="SFX">
+					<ShortName>HAC1C34.wav</ShortName>
+					<Path>SFX\HAC1C34_C75167D5.wem</Path>
+				</File>
+				<File Id="730522800" Language="SFX">
+					<ShortName>HAC2B38.wav</ShortName>
+					<Path>SFX\HAC2B38_C75167D5.wem</Path>
+				</File>
+				<File Id="753864006" Language="SFX">
+					<ShortName>HAC2B53.wav</ShortName>
+					<Path>SFX\HAC2B53_C75167D5.wem</Path>
+				</File>
+				<File Id="796261840" Language="SFX">
+					<ShortName>stings dont it.wav</ShortName>
+					<Path>SFX\stings dont it_C75167D5.wem</Path>
+				</File>
+				<File Id="800512446" Language="SFX">
+					<ShortName>HAC49CA.wav</ShortName>
+					<Path>SFX\HAC49CA_C75167D5.wem</Path>
+				</File>
+				<File Id="825938783" Language="SFX">
+					<ShortName>HAC4D50.wav</ShortName>
+					<Path>SFX\HAC4D50_C75167D5.wem</Path>
+				</File>
+				<File Id="842121855" Language="SFX">
+					<ShortName>i just beat mag freaking neto where yo curly moustache at.wav</ShortName>
+					<Path>SFX\i just beat mag freaking neto where yo curly moustache at_C75167D5.wem</Path>
+				</File>
+				<File Id="865794040" Language="SFX">
+					<ShortName>HAC2D09.wav</ShortName>
+					<Path>SFX\HAC2D09_C75167D5.wem</Path>
+				</File>
+				<File Id="889946545" Language="SFX">
+					<ShortName>how did anyone ever enjoy these games without me in em.wav</ShortName>
+					<Path>SFX\how did anyone ever enjoy these games without me in em_C75167D5.wem</Path>
+				</File>
+				<File Id="899716183" Language="SFX">
+					<ShortName>hurt kidney.wav</ShortName>
+					<Path>SFX\hurt kidney_C75167D5.wem</Path>
+				</File>
+				<File Id="917365031" Language="SFX">
+					<ShortName>i still get paid though right.wav</ShortName>
+					<Path>SFX\i still get paid though right_C75167D5.wem</Path>
+				</File>
+				<File Id="918870451" Language="SFX">
+					<ShortName>check me out im the ghost of christmas kick your ass.wav</ShortName>
+					<Path>SFX\check me out im the ghost of christmas kick your ass_C75167D5.wem</Path>
+				</File>
+				<File Id="922152919" Language="SFX">
+					<ShortName>HAC4C08.wav</ShortName>
+					<Path>SFX\HAC4C08_C75167D5.wem</Path>
+				</File>
+				<File Id="963747550" Language="SFX">
+					<ShortName>whoopseedaisy!.wav</ShortName>
+					<Path>SFX\whoopseedaisy!_C75167D5.wem</Path>
+				</File>
+				<File Id="979071040" Language="SFX">
+					<ShortName>HAC1C82.wav</ShortName>
+					<Path>SFX\HAC1C82_C75167D5.wem</Path>
+				</File>
+				<File Id="981032199" Language="SFX">
+					<ShortName>owie.wav</ShortName>
+					<Path>SFX\owie_C75167D5.wem</Path>
+				</File>
+				<File Id="985364423" Language="SFX">
+					<ShortName>HAC1E2B.wav</ShortName>
+					<Path>SFX\HAC1E2B_C75167D5.wem</Path>
+				</File>
+				<File Id="1003467901" Language="SFX">
+					<ShortName>HAC4E0A.wav</ShortName>
+					<Path>SFX\HAC4E0A_C75167D5.wem</Path>
+				</File>
+				<File Id="1004120871" Language="SFX">
+					<ShortName>swift as the wind.wav</ShortName>
+					<Path>SFX\swift as the wind_C75167D5.wem</Path>
+				</File>
+				<File Id="1009834622" Language="SFX">
+					<ShortName>hurt 5.wav</ShortName>
+					<Path>SFX\hurt 5_C75167D5.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+			<SwitchGroups>
+				<SwitchGroup Id="2680972683" Name="SWITCH_ext_vo_gender" ObjectPath="\Switches\Voiceovers\SWITCH_ext_vo_gender">
+					<Switches>
+						<Switch Id="410933746" Name="SWITCH_ext_vo_gender_female" ObjectPath="\Switches\Voiceovers\SWITCH_ext_vo_gender\SWITCH_ext_vo_gender_female"/>
+						<Switch Id="1963974085" Name="SWITCH_ext_vo_gender_male" ObjectPath="\Switches\Voiceovers\SWITCH_ext_vo_gender\SWITCH_ext_vo_gender_male"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

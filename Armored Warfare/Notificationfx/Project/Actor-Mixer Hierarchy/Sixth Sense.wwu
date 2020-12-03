@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{5E59F148-46C1-4D02-8C9E-2004A738E738}" SchemaVersion="85">
+<WwiseDocument Type="WorkUnit" ID="{5E59F148-46C1-4D02-8C9E-2004A738E738}" SchemaVersion="97">
 	<AudioObjects>
 		<WorkUnit Name="Sixth Sense" ID="{5E59F148-46C1-4D02-8C9E-2004A738E738}" PersistMode="Standalone">
 			<ChildrenList>
@@ -13,9 +13,12 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="dukes of hazzard - general lee's dixie horn" ID="{48F5B0B6-5B2C-455B-A7A2-2ECF4BE89EBB}" ShortID="887348207">
+						<AudioFileSource Name="dukes of hazzard - general lee's dixie horn" ID="{48F5B0B6-5B2C-455B-A7A2-2ECF4BE89EBB}">
 							<Language>SFX</Language>
 							<AudioFile>dukes of hazzard - general lee's dixie horn.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="887348207"/>
+							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>

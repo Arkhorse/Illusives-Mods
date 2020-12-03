@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{313B3741-DC85-4F7E-8676-1C8706BF2387}" SchemaVersion="85">
+<WwiseDocument Type="WorkUnit" ID="{313B3741-DC85-4F7E-8676-1C8706BF2387}" SchemaVersion="97">
 	<AudioObjects>
 		<WorkUnit Name="AW GUI" ID="{313B3741-DC85-4F7E-8676-1C8706BF2387}" PersistMode="Standalone">
 			<ChildrenList>
@@ -88,9 +88,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_glb_minimap_ping" ID="{544018D2-C56F-4D86-BFD2-3D2DCE1DED27}" ShortID="353867879">
+								<AudioFileSource Name="ui_glb_minimap_ping" ID="{544018D2-C56F-4D86-BFD2-3D2DCE1DED27}">
 									<Language>SFX</Language>
 									<AudioFile>ui_glb_minimap_ping.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="353867879"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -107,9 +110,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_glb_alarm_stereo" ID="{67506DBA-CAF4-4F49-993F-EDB551CD94CB}" ShortID="616325687">
+								<AudioFileSource Name="ui_glb_alarm_stereo" ID="{67506DBA-CAF4-4F49-993F-EDB551CD94CB}">
 									<Language>SFX</Language>
 									<AudioFile>ui_glb_alarm_stereo.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="616325687"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -126,9 +132,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_glb_alarm" ID="{F4A1A889-B856-4CD8-A7E8-B64E2A2AE73B}" ShortID="776301169">
+								<AudioFileSource Name="ui_glb_alarm" ID="{F4A1A889-B856-4CD8-A7E8-B64E2A2AE73B}">
 									<Language>SFX</Language>
 									<AudioFile>ui_glb_alarm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="776301169"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -137,7 +146,8 @@
 						</Sound>
 						<Sound Name="ui_glb_enemy_spotted" ID="{0BB97EBA-C6F1-4A20-9C98-4506CE83DCC0}" ShortID="326898454">
 							<PropertyList>
-								<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
@@ -147,7 +157,6 @@
 								</Property>
 								<Property Name="OverrideAnalysis" Type="bool" Value="True"/>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
-								<Property Name="PositioningType" Type="int16" Value="1"/>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
@@ -166,9 +175,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_glb_enemy_spotted" ID="{DC4022CD-8928-4832-9EA3-383C17179F60}" ShortID="429844057">
+								<AudioFileSource Name="ui_glb_enemy_spotted" ID="{DC4022CD-8928-4832-9EA3-383C17179F60}">
 									<Language>SFX</Language>
 									<AudioFile>ui_glb_enemy_spotted.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="429844057"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -219,9 +231,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_glb_countdown_v2" ID="{9252C392-4E6D-46C7-87D7-0F58346192CB}" ShortID="115237128">
+								<AudioFileSource Name="ui_glb_countdown_v2" ID="{9252C392-4E6D-46C7-87D7-0F58346192CB}">
 									<Language>SFX</Language>
 									<AudioFile>ui_glb_countdown_v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="115237128"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -245,9 +260,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_glb_max_accuracy_07" ID="{8B5F88E9-AB86-4521-9647-93F0F653B0FD}" ShortID="545420069">
+								<AudioFileSource Name="ui_glb_max_accuracy_07" ID="{8B5F88E9-AB86-4521-9647-93F0F653B0FD}">
 									<Language>SFX</Language>
 									<AudioFile>ui_glb_max_accuracy_07.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="545420069"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -256,7 +274,8 @@
 						</Sound>
 						<Sound Name="AW_enemy_spotted" ID="{F78B87B0-DA03-45DC-B0A3-91A991284F1B}" ShortID="493800552">
 							<PropertyList>
-								<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
@@ -266,7 +285,6 @@
 								</Property>
 								<Property Name="OverrideAnalysis" Type="bool" Value="True"/>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
-								<Property Name="PositioningType" Type="int16" Value="1"/>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
@@ -285,9 +303,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="AW_enemy_spotted" ID="{4F69FB5B-8872-42AA-A3B6-773C5683CA6A}" ShortID="879673857">
+								<AudioFileSource Name="AW_enemy_spotted" ID="{4F69FB5B-8872-42AA-A3B6-773C5683CA6A}">
 									<Language>SFX</Language>
 									<AudioFile>AW_enemy_spotted.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="879673857"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -374,9 +395,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_consumable_first_aid" ID="{66CDF651-B187-40A6-873A-49ABA3E1D145}" ShortID="141829834">
+								<AudioFileSource Name="ui_consumable_first_aid" ID="{66CDF651-B187-40A6-873A-49ABA3E1D145}">
 									<Language>SFX</Language>
 									<AudioFile>ui_consumable_first_aid.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="141829834"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -396,9 +420,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_consumable_repair" ID="{CAF0F9B1-AF75-45E2-ACF1-0DC401E0FC97}" ShortID="361975109">
+								<AudioFileSource Name="ui_consumable_repair" ID="{CAF0F9B1-AF75-45E2-ACF1-0DC401E0FC97}">
 									<Language>SFX</Language>
 									<AudioFile>ui_consumable_repair.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="361975109"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -418,9 +445,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_consumable_auto_fire_ext" ID="{F604249D-33FF-424D-9F0A-44B1E532D3D5}" ShortID="991767094">
+								<AudioFileSource Name="ui_consumable_auto_fire_ext" ID="{F604249D-33FF-424D-9F0A-44B1E532D3D5}">
 									<Language>SFX</Language>
 									<AudioFile>ui_consumable_auto_fire_ext.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="991767094"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -440,9 +470,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_consumable_fire_ext" ID="{BA951428-3394-44DB-A482-3A6C52335682}" ShortID="49360024">
+								<AudioFileSource Name="ui_consumable_fire_ext" ID="{BA951428-3394-44DB-A482-3A6C52335682}">
 									<Language>SFX</Language>
 									<AudioFile>ui_consumable_fire_ext.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="49360024"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -526,9 +559,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_60_select" ID="{71C2EB0A-7D9B-4E15-B133-AE8C503CD256}" ShortID="155150212">
+								<AudioFileSource Name="ui_60_select" ID="{71C2EB0A-7D9B-4E15-B133-AE8C503CD256}">
 									<Language>SFX</Language>
 									<AudioFile>ui_60_select.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="155150212"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -545,9 +581,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_60_hover" ID="{6376052E-6E33-4F58-86AF-AE6EBEDC0107}" ShortID="540854575">
+								<AudioFileSource Name="ui_60_hover" ID="{6376052E-6E33-4F58-86AF-AE6EBEDC0107}">
 									<Language>SFX</Language>
 									<AudioFile>ui_60_hover.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="540854575"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -564,9 +603,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_glb_forward" ID="{D5CD68CB-A96A-4280-8E1D-8CF319BF2FBB}" ShortID="349952977">
+								<AudioFileSource Name="ui_glb_forward" ID="{D5CD68CB-A96A-4280-8E1D-8CF319BF2FBB}">
 									<Language>SFX</Language>
 									<AudioFile>ui_glb_forward.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="349952977"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -583,9 +625,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_glb_tab" ID="{0DF5C950-9FE7-417D-9260-347B89C7E1FE}" ShortID="331030533">
+								<AudioFileSource Name="ui_glb_tab" ID="{0DF5C950-9FE7-417D-9260-347B89C7E1FE}">
 									<Language>SFX</Language>
 									<AudioFile>ui_glb_tab.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="331030533"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -602,9 +647,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_glb_back" ID="{6CCCBB0D-35A8-4E14-8F26-D6D0290E10EA}" ShortID="240797260">
+								<AudioFileSource Name="ui_glb_back" ID="{6CCCBB0D-35A8-4E14-8F26-D6D0290E10EA}">
 									<Language>SFX</Language>
 									<AudioFile>ui_glb_back.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="240797260"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -621,9 +669,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_glb_final_select" ID="{0567DCB5-FD3D-4F80-A32D-4F4D3851D8D7}" ShortID="704125468">
+								<AudioFileSource Name="ui_glb_final_select" ID="{0567DCB5-FD3D-4F80-A32D-4F4D3851D8D7}">
 									<Language>SFX</Language>
 									<AudioFile>ui_glb_final_select.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="704125468"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -654,9 +705,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="ui_Ability_Stealth_on" ID="{A444893D-178E-4F30-B382-53FABF6BA280}" ShortID="916672986">
+										<AudioFileSource Name="ui_Ability_Stealth_on" ID="{A444893D-178E-4F30-B382-53FABF6BA280}">
 											<Language>SFX</Language>
 											<AudioFile>ui_Ability_Stealth_on.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="916672986"/>
+											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
@@ -675,9 +729,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_Ability_off" ID="{6E246976-B312-4AB4-BDE4-22518D255E90}" ShortID="514038097">
+								<AudioFileSource Name="ui_Ability_off" ID="{6E246976-B312-4AB4-BDE4-22518D255E90}">
 									<Language>SFX</Language>
 									<AudioFile>ui_Ability_off.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="514038097"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -703,9 +760,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="ui_night_vision_off" ID="{7E917D6A-5190-42E2-8741-818FDCF4759A}" ShortID="223663655">
+										<AudioFileSource Name="ui_night_vision_off" ID="{7E917D6A-5190-42E2-8741-818FDCF4759A}">
 											<Language>SFX</Language>
 											<AudioFile>ui_night_vision_off.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="223663655"/>
+											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
@@ -729,9 +789,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="ui_night_vision_on" ID="{CBEC1380-3298-4EF3-AC37-7314BD79D733}" ShortID="995706142">
+										<AudioFileSource Name="ui_night_vision_on" ID="{CBEC1380-3298-4EF3-AC37-7314BD79D733}">
 											<Language>SFX</Language>
 											<AudioFile>ui_night_vision_on.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="995706142"/>
+											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
@@ -816,9 +879,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_designated_target_lost" ID="{FDA34211-A341-40B5-A0D3-E039243342A6}" ShortID="488495078">
+								<AudioFileSource Name="ui_designated_target_lost" ID="{FDA34211-A341-40B5-A0D3-E039243342A6}">
 									<Language>SFX</Language>
 									<AudioFile>ui_designated_target_lost.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="488495078"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -835,9 +901,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_designated_target_success" ID="{E7055805-16D8-4182-97FE-EC497C861246}" ShortID="839255015">
+								<AudioFileSource Name="ui_designated_target_success" ID="{E7055805-16D8-4182-97FE-EC497C861246}">
 									<Language>SFX</Language>
 									<AudioFile>ui_designated_target_success.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="839255015"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -854,9 +923,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_designated_target_failed" ID="{D9B7C269-D489-4278-BC0C-81F732F07B4A}" ShortID="50638831">
+								<AudioFileSource Name="ui_designated_target_failed" ID="{D9B7C269-D489-4278-BC0C-81F732F07B4A}">
 									<Language>SFX</Language>
 									<AudioFile>ui_designated_target_failed.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="50638831"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>

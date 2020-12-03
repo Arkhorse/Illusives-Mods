@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E44AA8E0-0104-42AD-A2CB-DAF85C6ED70A}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Modules" ID="{E44AA8E0-0104-42AD-A2CB-DAF85C6ED70A}" PersistMode="Standalone">
+			<Comment>Modules mounted on a vehicle</Comment>
+			<ChildrenList>
+				<Event Name="ammo_bay_damaged" ID="{C45E17E8-DFAF-4DBF-91DE-C19BFE89F9B2}">
+					<Comment>Event - Ammo Rack damaged</Comment>
+				</Event>
+				<Event Name="surveying_devices_destroyed" ID="{BEF34718-0987-4CDA-8BAA-5EBD8D24E23D}">
+					<Comment>Event - Observation device damaged</Comment>
+				</Event>
+				<Event Name="radio_damaged" ID="{4FC6DB76-5B69-4EAC-A9B7-152396902971}">
+					<Comment>Event - Radio damaged</Comment>
+				</Event>
+				<Event Name="fuel_tank_damaged" ID="{8660AC4E-7552-4751-8CBF-503425344A6F}">
+					<Comment>Event - Fuel Tanks hit</Comment>
+				</Event>
+				<Event Name="camo_net_start" ID="{14DD238B-A1F4-482A-9FB7-D021C5C9003A}">
+					<Comment>Event - Camouflage Net activation sound</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{BA9F3805-F7FA-42B6-AF55-04B60EA50B2C}" ShortID="128254009">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_Ability_Stealth_on" ID="{1DC675F6-030C-4CBE-8D97-6203769EF443}" WorkUnitID="{313B3741-DC85-4F7E-8676-1C8706BF2387}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stereo_trumpet_start" ID="{BA4450B0-1698-40CE-BC6D-D496DCCF101D}">
+					<Comment>Event - Binocular Telescope activation sound</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{A057222B-8CA3-4A06-BBD8-5031126D5846}" ShortID="244450551">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_night_vision_off" ID="{B899A4C2-6C2D-4B0C-8041-2575012738AC}" WorkUnitID="{313B3741-DC85-4F7E-8676-1C8706BF2387}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{282F8AB4-090B-4E57-8807-9EAAB8168984}" ShortID="33418358">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_night_vision_on" ID="{61F6E62F-A953-4A25-B258-B296FDE3881E}" WorkUnitID="{313B3741-DC85-4F7E-8676-1C8706BF2387}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4F7CB9E7-42A3-4290-B7F9-14D56CFB3F86}" ShortID="414323834">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="STATE_int_camoNet_stereoTrumpet_on" ID="{F580CB22-B615-4947-940E-4537402642EE}" WorkUnitID="{2919E36D-D7A0-482C-9D63-0D8F398C9469}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="camo_net_stop" ID="{1F135B66-01F3-46F1-BDDC-C499826EB1E9}">
+					<Comment>Event - Camouflage Net </Comment>
+					<ChildrenList>
+						<Action Name="" ID="{83C48BF2-F2FF-4831-8EE2-0364454954D0}" ShortID="533739402">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_Ability_off" ID="{D3697DEC-0F6C-4DA5-8069-7743A4CEEC78}" WorkUnitID="{313B3741-DC85-4F7E-8676-1C8706BF2387}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{731D2831-61D4-47CD-9414-2A0B656A8049}" ShortID="517186292">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_Ability_Stealth_on" ID="{1DC675F6-030C-4CBE-8D97-6203769EF443}" WorkUnitID="{313B3741-DC85-4F7E-8676-1C8706BF2387}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="stereo_trumpet_stop" ID="{E5A27455-7948-40B5-8EDB-8A22C3F587C3}">
+					<Comment>Event - Binocular Telescope deactivation sound</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{6D0EBAD3-A0F4-4173-BFB6-8E8BE2553880}" ShortID="245938336">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_night_vision_on" ID="{61F6E62F-A953-4A25-B258-B296FDE3881E}" WorkUnitID="{313B3741-DC85-4F7E-8676-1C8706BF2387}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{50450914-F648-4894-B57C-2FBD722F71BF}" ShortID="469640928">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_night_vision_off" ID="{B899A4C2-6C2D-4B0C-8041-2575012738AC}" WorkUnitID="{313B3741-DC85-4F7E-8676-1C8706BF2387}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E0326FE3-757F-49E4-9D3A-5F3849F177C4}" ShortID="635984480">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="STATE_int_camoNet_stereoTrumpet_off" ID="{385BF16C-0196-4B7D-9191-0DFD87506708}" WorkUnitID="{2919E36D-D7A0-482C-9D63-0D8F398C9469}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="gun_damaged" ID="{16385815-4F0D-4ED3-A905-4BB04C46E2D5}"/>
+				<Event Name="crew_member_contusion" ID="{75A5A228-3CCE-4010-8EBA-A6B22BAC4DE9}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

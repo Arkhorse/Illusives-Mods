@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{AAA10F33-EC6A-489B-8DBD-9BAE7BD594BE}" SchemaVersion="85">
+	<SoundBanks>
+		<WorkUnit Name="Mods" ID="{AAA10F33-EC6A-489B-8DBD-9BAE7BD594BE}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="GUI" ID="{01CE20C2-D3F4-4916-822D-311800EB37B7}" ShortID="937225670">
+					<ChildrenList>
+						<SoundBank Name="AW_battle_equipment" ID="{D787DA18-2DF2-440A-8F1B-D6C75F3C5DF4}">
+							<ObjectInclusionList>
+								<ObjectRef Name="battle_equipment" ID="{420F5C31-A5FB-4B57-BBA4-B4D2D69CE30F}" WorkUnitID="{65190E54-2D13-4236-B92A-68EECE61A842}" Filter="7" Origin="Manual"/>
+								<ObjectRef Name="battle_equipment" ID="{1072060C-FB60-4CD7-B352-5F7ADFC67BB1}" WorkUnitID="{DFF2755B-9A8F-4FB9-A356-F3AC81BDD167}" Filter="7" Origin="Manual"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+						<SoundBank Name="AW_enemy_spotted" ID="{1E8252C0-96AC-4231-9DD8-9CE9BFFCBF19}">
+							<ObjectInclusionList>
+								<ObjectRef Name="AW_enemy_sighted_voice" ID="{0E5B82BD-E094-40D9-BB48-A1D1D896D217}" WorkUnitID="{DFF2755B-9A8F-4FB9-A356-F3AC81BDD167}" Filter="7" Origin="Manual"/>
+								<ObjectRef Name="AW_enemy_spotted" ID="{F78B87B0-DA03-45DC-B0A3-91A991284F1B}" WorkUnitID="{313B3741-DC85-4F7E-8676-1C8706BF2387}" Filter="7" Origin="Manual"/>
+								<ObjectRef Name="ui_glb_enemy_spotted" ID="{0BB97EBA-C6F1-4A20-9C98-4506CE83DCC0}" WorkUnitID="{313B3741-DC85-4F7E-8676-1C8706BF2387}" Filter="7" Origin="Manual"/>
+								<ObjectRef Name="AW_enemy_sighted" ID="{DE63F99B-63E6-4D9F-895F-501559C126F0}" WorkUnitID="{DFF2755B-9A8F-4FB9-A356-F3AC81BDD167}" Filter="7" Origin="Manual"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+						<SoundBank Name="AW_timer" ID="{1542E0BB-7A8C-4119-AA7C-BB363240BC83}">
+							<ObjectInclusionList>
+								<ObjectRef Name="timer_stop" ID="{F1E58D3E-BC3C-4012-877F-50D4CCE8B517}" WorkUnitID="{DFF2755B-9A8F-4FB9-A356-F3AC81BDD167}" Filter="7" Origin="Manual"/>
+								<ObjectRef Name="timer" ID="{920B742E-AC9B-4967-AE08-41B7EEE1365B}" WorkUnitID="{DFF2755B-9A8F-4FB9-A356-F3AC81BDD167}" Filter="7" Origin="Manual"/>
+								<ObjectRef Name="ui_glb_countdown_v2" ID="{E3B1F72A-0E97-49FC-B687-922B08B610C9}" WorkUnitID="{313B3741-DC85-4F7E-8676-1C8706BF2387}" Filter="7" Origin="Manual"/>
+								<ObjectRef Name="025_gui_battle" ID="{23D34E9A-2999-4E56-8369-B494433EF647}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}" Filter="7" Origin="Manual"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Modules" ID="{A888154C-D747-4383-A0B1-50AB0AC4842B}" ShortID="387970125">
+					<ChildrenList>
+						<SoundBank Name="AW_Camo_Net" ID="{B219FE89-9B97-46CA-BDFB-B7B37FFD2131}">
+							<ObjectInclusionList>
+								<ObjectRef Name="camo_net_stop" ID="{1F135B66-01F3-46F1-BDDC-C499826EB1E9}" WorkUnitID="{E44AA8E0-0104-42AD-A2CB-DAF85C6ED70A}" Filter="7" Origin="Manual"/>
+								<ObjectRef Name="camo_net_start" ID="{14DD238B-A1F4-482A-9FB7-D021C5C9003A}" WorkUnitID="{E44AA8E0-0104-42AD-A2CB-DAF85C6ED70A}" Filter="7" Origin="Manual"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+						<SoundBank Name="AW_Binocs" ID="{CCFFDC48-870D-4767-9065-1A00523CD4F1}">
+							<ObjectInclusionList>
+								<ObjectRef Name="stereo_trumpet_stop" ID="{E5A27455-7948-40B5-8EDB-8A22C3F587C3}" WorkUnitID="{E44AA8E0-0104-42AD-A2CB-DAF85C6ED70A}" Filter="7" Origin="Manual"/>
+								<ObjectRef Name="stereo_trumpet_start" ID="{BA4450B0-1698-40CE-BC6D-D496DCCF101D}" WorkUnitID="{E44AA8E0-0104-42AD-A2CB-DAF85C6ED70A}" Filter="7" Origin="Manual"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Sixth Sense" ID="{FFDE1BDC-9DB5-4077-B6AB-149D603B2EB7}" ShortID="839191563">
+					<ChildrenList>
+						<SoundBank Name="General_Lee" ID="{E990CBAB-3BE1-433A-BA6D-C7ED0591B675}">
+							<ObjectInclusionList>
+								<ObjectRef Name="sixthSense" ID="{88652502-B881-42D3-AD43-2FF36ADCB712}" WorkUnitID="{DFF2755B-9A8F-4FB9-A356-F3AC81BDD167}" Filter="7" Origin="Manual"/>
+								<ObjectRef Name="dukes of hazzard - general lee's dixie horn" ID="{1654E340-906A-4DB7-835E-A2216AC4909B}" WorkUnitID="{5E59F148-46C1-4D02-8C9E-2004A738E738}" Filter="7" Origin="Manual"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

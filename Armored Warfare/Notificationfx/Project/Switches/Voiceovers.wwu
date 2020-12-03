@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{71B061DF-27AB-4D7E-B47A-0C4897863468}" SchemaVersion="85">
+<WwiseDocument Type="WorkUnit" ID="{71B061DF-27AB-4D7E-B47A-0C4897863468}" SchemaVersion="97">
 	<Switches>
 		<WorkUnit Name="Voiceovers" ID="{71B061DF-27AB-4D7E-B47A-0C4897863468}" PersistMode="Standalone">
 			<ChildrenList>

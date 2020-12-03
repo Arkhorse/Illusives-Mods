@@ -1,0 +1,16 @@
+Project migration to XML Schema (XSD) version 86 is completed.
+Project migration to XML Schema (XSD) version 87 is completed.
+Project migration to XML Schema (XSD) version 88 is completed.
+Project migration to XML Schema (XSD) version 89 is completed.
+Project migration to XML Schema (XSD) version 90 is completed.
+Project migration to XML Schema (XSD) version 91 is completed.
+Project migration to XML Schema (XSD) version 92 is completed.
+Project migration to XML Schema (XSD) version 93 is completed.
+Project migration to XML Schema (XSD) version 94 is completed.
+Project migration to XML Schema (XSD) version 95 is completed.
+Project migration to XML Schema (XSD) version 96 is completed.
+Project migration to XML Schema (XSD) version 97 is completed.
+Query '\Queries\Factory Queries\Name - Contains' has a 'StartObject' reference to 'Starting Object' that does not exist, for platform 'Linked'. The reference has been removed.
+Query '\Queries\Build_queries\Stream_all_except_wpn_imp_vo_gui_passBy' has a 'StartObject' reference to 'Starting Object' that does not exist, for platform 'Linked'. The reference has been removed.
+Query '\Queries\Factory Queries\Sound\Sound = Voice' has a 'StartObject' reference to 'Starting Object' that does not exist, for platform 'Linked'. The reference has been removed.
+Some new object properties have been added or obsolete properties deleted. The project file was updated. These changes will not have an impact on your project.

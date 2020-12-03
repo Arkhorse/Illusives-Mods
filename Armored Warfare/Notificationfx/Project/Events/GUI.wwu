@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{DFF2755B-9A8F-4FB9-A356-F3AC81BDD167}" SchemaVersion="85">
+<WwiseDocument Type="WorkUnit" ID="{DFF2755B-9A8F-4FB9-A356-F3AC81BDD167}" SchemaVersion="97">
 	<Events>
 		<WorkUnit Name="GUI" ID="{DFF2755B-9A8F-4FB9-A356-F3AC81BDD167}" PersistMode="Standalone">
 			<Comment>Interface sounds</Comment>
@@ -172,7 +172,7 @@
 								<Action Name="" ID="{884A436A-88A8-48FB-ACE8-ED1B86FFB10C}" ShortID="573962173">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
 										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 									</PropertyList>
 									<ReferenceList>

@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Windows_HighRes" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="128">
+<SoundBanksInfo Platform="Windows_HighRes" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>F:\Mods\AW Mod\Notificationfx\Project\</ProjectRoot>
-		<SourceFilesRoot>F:\Mods\AW Mod\Notificationfx\Project\.cache\Windows_HighRes\</SourceFilesRoot>
-		<SoundBanksRoot>F:\Mods\AW Mod\Notificationfx\Project\GeneratedSoundBanks\WinHighRes\</SoundBanksRoot>
+		<ProjectRoot>F:\Mods\[Published] AW Mod\Notificationfx\Project\</ProjectRoot>
+		<SourceFilesRoot>F:\Mods\[Published] AW Mod\Notificationfx\Project\.cache\Windows_HighRes\</SourceFilesRoot>
+		<SoundBanksRoot>F:\Mods\[Published] AW Mod\Notificationfx\Project\GeneratedSoundBanks\WinHighRes\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>F:\Mods\AW Mod\Notificationfx\Project\GeneratedSoundBanks\Windows_HighRes</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>F:\Mods\[Published] AW Mod\Notificationfx\Project\GeneratedSoundBanks\Windows_HighRes</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank>
 		<File Id="32993886" Language="SFX">
 			<ShortName>IR_50-75mm_tank_interior.wav</ShortName>
-			<Path>Plugins\Wwise Convolution Reverb\IR_50-75mm_tank_interior_6027C8E8.wem</Path>
+			<Path>Plugins\Wwise Convolution Reverb\IR_50-75mm_tank_interior_6C35A1F3.wem</Path>
 		</File>
 		<File Id="554205954" Language="SFX">
 			<ShortName>Map_Zone\Deep forest.WAV</ShortName>
-			<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Deep forest_FF6FA842.wem</Path>
+			<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Deep forest_24F07BC1.wem</Path>
 		</File>
 		<File Id="684936451" Language="SFX">
 			<ShortName>Map_Zone\Canyons.wav</ShortName>
-			<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Canyons_92818435.wem</Path>
+			<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Canyons_6D074466.wem</Path>
 		</File>
 		<File Id="823230670" Language="SFX">
 			<ShortName>IR_85-107mm_tank_interior.wav</ShortName>
-			<Path>Plugins\Wwise Convolution Reverb\IR_85-107mm_tank_interior_9E63035A.wem</Path>
+			<Path>Plugins\Wwise Convolution Reverb\IR_85-107mm_tank_interior_59F7DD39.wem</Path>
 		</File>
 	</MediaFilesNotInAnyBank>
 	<SoundBanks>
@@ -35,27 +35,51 @@
 			<IncludedEvents>
 				<Event Id="1294084670" Name="time_countdown" ObjectPath="\Events\GUI\notificationFX\time_countdown" DurationType="OneShot" DurationMin="0.973625" DurationMax="0.973625"/>
 				<Event Id="403533405" Name="time_countdown_stop" ObjectPath="\Events\GUI\notificationFX\time_countdown_stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3920142940" Name="timer" ObjectPath="\Events\GUI\notificationFX\timer" DurationType="OneShot" DurationMin="0.973625" DurationMax="0.973625"/>
+				<Event Id="3920142940" Name="timer" ObjectPath="\Events\GUI\notificationFX\timer" DurationType="OneShot" DurationMin="0.973625" DurationMax="0.973625">
+					<IncludedMemoryFiles>
+						<File Id="115237128" Language="SFX">
+							<ShortName>ui_glb_countdown_v2.wav</ShortName>
+							<Path>SFX\ui_glb_countdown_v2_BE02EBD1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="361847595" Name="timer_stop" ObjectPath="\Events\GUI\notificationFX\timer_stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="115237128" Language="SFX">
 					<ShortName>ui_glb_countdown_v2.wav</ShortName>
-					<Path>SFX\ui_glb_countdown_v2_7ED93EED.wem</Path>
+					<Path>SFX\ui_glb_countdown_v2_BE02EBD1.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+			<GameParameters>
+				<GameParameter Id="248010418" Name="RTPC_int_device_laptop_lowcut_trigger" ObjectPath="\Game Parameters\Settings\RTPC_int_device_laptop_lowcut_trigger"/>
+				<GameParameter Id="257494316" Name="RTPC_ext_menu_volume_master" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_master"/>
+				<GameParameter Id="2151720954" Name="RTPC_int_bass_boost_band_frequency_device_id" ObjectPath="\Game Parameters\Settings\RTPC_int_bass_boost_band_frequency_device_id"/>
+				<GameParameter Id="2686672294" Name="RTPC_int_dynamic_range" ObjectPath="\Game Parameters\Settings\RTPC_int_dynamic_range"/>
+				<GameParameter Id="3261467983" Name="RTPC_int_bass_boost_band_gain_device_id" ObjectPath="\Game Parameters\Settings\RTPC_int_bass_boost_band_gain_device_id"/>
+				<GameParameter Id="3348539219" Name="RTPC_ext_menu_volume_gui" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_gui"/>
+				<GameParameter Id="3753532465" Name="RTPC_int_bass_boost_trigger" ObjectPath="\Game Parameters\Settings\RTPC_int_bass_boost_trigger"/>
+				<GameParameter Id="4247354303" Name="RTPC_int_bass_boost_gain_compensation" ObjectPath="\Game Parameters\Settings\RTPC_int_bass_boost_gain_compensation"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="339745900" Language="SFX">
 			<ObjectPath>\SoundBanks\Mods\Sixth Sense\General_Lee</ObjectPath>
 			<ShortName>General_Lee</ShortName>
 			<Path>General_Lee.bnk</Path>
 			<IncludedEvents>
-				<Event Id="324120239" Name="sixthSense" ObjectPath="\Events\GUI\modes\lightbulb\sixthSense" DurationType="OneShot" DurationMin="4.685351" DurationMax="4.685351"/>
+				<Event Id="324120239" Name="sixthSense" ObjectPath="\Events\GUI\modes\lightbulb\sixthSense" DurationType="OneShot" DurationMin="4.685351" DurationMax="4.685351">
+					<IncludedMemoryFiles>
+						<File Id="887348207" Language="SFX">
+							<ShortName>dukes of hazzard - general lee's dixie horn.wav</ShortName>
+							<Path>SFX\dukes of hazzard - general lee's dixie horn_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="887348207" Language="SFX">
 					<ShortName>dukes of hazzard - general lee's dixie horn.wav</ShortName>
-					<Path>SFX\dukes of hazzard - general lee's dixie horn_C8E51BD1.wem</Path>
+					<Path>SFX\dukes of hazzard - general lee's dixie horn_C75167D5.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -63,24 +87,217 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="14876115" Name="AUX_ev_football_arena" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\VOICE_GUI\AUX_ev_football_arena"/>
+				<AuxBus Id="375152608" Name="AUX_env_Village" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\SFX_control_1\AUX_env_Village"/>
+				<AuxBus Id="394482750" Name="AUX_eng_PC_flanger" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_ambient_control\AUX_eng_PC_flanger"/>
+				<AuxBus Id="401969492" Name="AUX_flange_plane" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_ambient_control\AUX_flange_plane"/>
+				<AuxBus Id="494784805" Name="AUX_reverb_hangar_dark_sfx_pm" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_AMBIENTS\Personal_missions\AUX_reverb_hangar_dark_sfx_pm"/>
+				<AuxBus Id="647771714" Name="AUX_vehicle_control" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_vehicle_control"/>
+				<AuxBus Id="664496982" Name="AUX_reverb_hangar_Forest_env" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_AMBIENTS\Hangar\AUX_reverb_hangar_Forest_env"/>
+				<AuxBus Id="1049984846" Name="AUX_reverb_hangar_Forest_gui" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\VOICE_GUI\AUX_reverb_hangar_Forest_gui"/>
+				<AuxBus Id="1061338871" Name="AUX_reverb_personal_missions" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_AMBIENTS\Personal_missions\AUX_reverb_personal_missions"/>
+				<AuxBus Id="1460769535" Name="AUX_env_Closed_space" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\SFX_control_1\AUX_env_Closed_space"/>
+				<AuxBus Id="1529986663" Name="AUX_sfx_control" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_sfx_control"/>
+				<AuxBus Id="1822577572" Name="AUX_eng_broken" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\045_impact_filter_ducking_group\VEHICLE_control\130_eng_trds_PC\AUX_eng_broken"/>
+				<AuxBus Id="1889485509" Name="AUX_env_City" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\SFX_control_1\AUX_env_City"/>
+				<AuxBus Id="2152316841" Name="AUX_env_Mountain" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\SFX_control_1\AUX_env_Mountain"/>
+				<AuxBus Id="2154148004" Name="AUX_reverb_researches" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_AMBIENTS\Researches\AUX_reverb_researches"/>
+				<AuxBus Id="2343778479" Name="AUX_wpn_50_75mm_reverb_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_sfx_control\AUX_wpn_50_75mm_reverb_01"/>
+				<AuxBus Id="2543630464" Name="AUX_env_Mountain_close" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\SFX_control_1\AUX_env_Mountain_close"/>
+				<AuxBus Id="2575940795" Name="AUX_ev_halloween_wpn_PC" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\SFX_control_2\032_wpn_PC\AUX_ev_halloween_wpn_PC"/>
+				<AuxBus Id="2577149115" Name="AUX_wpn_50_75mm_reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_vehicle_control\AUX_wpn_50_75mm_reverb"/>
+				<AuxBus Id="2682597557" Name="AUX_reverb_expl_ally_NPC" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\VOICE_GUI\AUX_reverb_expl_ally_NPC"/>
+				<AuxBus Id="2805659155" Name="AUX_env_Forest" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\SFX_control_1\AUX_env_Forest"/>
+				<AuxBus Id="2812721831" Name="AUX_multiband_dist_football" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_MUSIC\Lobby_music_garage\Lobby_music_garage_default\AUX_multiband_dist_football"/>
+				<AuxBus Id="3206664178" Name="AUX_stereo_delay_hangar_h07_newyear_2018" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_AMBIENTS\Hangar\AUX_stereo_delay_hangar_h07_newyear_2018"/>
+				<AuxBus Id="3514658147" Name="AUX_PhCol_friction" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\045_impact_filter_ducking_group\VEHICLE_control\110_col_PC\AUX_PhCol_friction"/>
+				<AuxBus Id="3515001147" Name="AUX_wpn_85_107mm_reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_vehicle_control\AUX_wpn_85_107mm_reverb"/>
+				<AuxBus Id="3520008452" Name="AUX_ev_football_engine" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\045_impact_filter_ducking_group\VEHICLE_control\AUX_ev_football_engine"/>
+				<AuxBus Id="3528445383" Name="AUX_ev_halloween_leviathan_eng" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\045_impact_filter_ducking_group\VEHICLE_control\AUX_ev_halloween_leviathan_eng"/>
+				<AuxBus Id="3656279963" Name="AUX_eng_load_distortion" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\045_impact_filter_ducking_group\VEHICLE_control\130_eng_trds_PC\AUX_eng_load_distortion"/>
+				<AuxBus Id="3824605991" Name="AUX_collision_reverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_vehicle_control\AUX_collision_reverb"/>
+				<AuxBus Id="3945567761" Name="AUX_reverb_hangar_dark_gui" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\VOICE_GUI\AUX_reverb_hangar_dark_gui"/>
+				<AuxBus Id="4015978123" Name="AUX_NY_comp" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\SFX_control_2\AUX_NY_comp"/>
+				<AuxBus Id="4031197743" Name="AUX_wpn_85_107mm_reverb_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_sfx_control\AUX_wpn_85_107mm_reverb_01"/>
+				<AuxBus Id="4129827565" Name="AUX_reverb_hangar_dark_env" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_AMBIENTS\Hangar\AUX_reverb_hangar_dark_env"/>
+				<AuxBus Id="4186278069" Name="AUX_multiband_dist_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\LOBBY_MUSIC\AUX_multiband_dist_01"/>
+				<AuxBus Id="4241804578" Name="AUX_ambient_control" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\HDR_dbc\Additional_post_effects\secondary\AUX_ambient_control"/>
+			</IncludedAuxBusses>
 			<ExcludedMemoryFiles>
 				<File Id="32993886" Language="SFX">
 					<ShortName>IR_50-75mm_tank_interior.wav</ShortName>
-					<Path>Plugins\Wwise Convolution Reverb\IR_50-75mm_tank_interior_6027C8E8.wem</Path>
+					<Path>Plugins\Wwise Convolution Reverb\IR_50-75mm_tank_interior_6C35A1F3.wem</Path>
 				</File>
 				<File Id="554205954" Language="SFX">
 					<ShortName>Map_Zone\Deep forest.WAV</ShortName>
-					<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Deep forest_FF6FA842.wem</Path>
+					<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Deep forest_24F07BC1.wem</Path>
 				</File>
 				<File Id="684936451" Language="SFX">
 					<ShortName>Map_Zone\Canyons.wav</ShortName>
-					<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Canyons_92818435.wem</Path>
+					<Path>Plugins\Wwise Convolution Reverb\Map_Zone\Canyons_6D074466.wem</Path>
 				</File>
 				<File Id="823230670" Language="SFX">
 					<ShortName>IR_85-107mm_tank_interior.wav</ShortName>
-					<Path>Plugins\Wwise Convolution Reverb\IR_85-107mm_tank_interior_9E63035A.wem</Path>
+					<Path>Plugins\Wwise Convolution Reverb\IR_85-107mm_tank_interior_59F7DD39.wem</Path>
 				</File>
 			</ExcludedMemoryFiles>
+			<GameParameters>
+				<GameParameter Id="81471525" Name="RTPC_int_distance_1000m" ObjectPath="\Game Parameters\Common\RTPC_int_distance_1000m"/>
+				<GameParameter Id="248010418" Name="RTPC_int_device_laptop_lowcut_trigger" ObjectPath="\Game Parameters\Settings\RTPC_int_device_laptop_lowcut_trigger"/>
+				<GameParameter Id="257494316" Name="RTPC_ext_menu_volume_master" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_master"/>
+				<GameParameter Id="323535727" Name="RTPC_ext_wind_intensity" ObjectPath="\Game Parameters\Ambient\trees\RTPC_ext_wind_intensity"/>
+				<GameParameter Id="494846457" Name="RTPC_int_HDR_threshold" ObjectPath="\Game Parameters\Common\RTPC_int_HDR_threshold"/>
+				<GameParameter Id="529901698" Name="RTPC_int_wind_ducking_amount" ObjectPath="\Game Parameters\Ambient\wind\RTPC_int_wind_ducking_amount"/>
+				<GameParameter Id="566631840" Name="RTPC_ext_camera_height" ObjectPath="\Game Parameters\Ambient\wind\RTPC_ext_camera_height"/>
+				<GameParameter Id="695757872" Name="RTPC_ext_menu_volume_effects" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_effects"/>
+				<GameParameter Id="896614031" Name="RTPC_ext_viewPlayMode" ObjectPath="\Game Parameters\Common\RTPC_ext_viewPlayMode"/>
+				<GameParameter Id="1033699772" Name="RTPC_int_hangar_resultmusic_go_3D" ObjectPath="\Game Parameters\Interactive_music\RTPC_int_hangar_resultmusic_go_3D"/>
+				<GameParameter Id="1047122343" Name="RTPC_ext_menu_volume_music_hangar" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_music_hangar"/>
+				<GameParameter Id="1631196118" Name="RTPC_ext_menu_volume_ambient" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_ambient"/>
+				<GameParameter Id="1833954181" Name="RTPC_int_eng_damage" ObjectPath="\Game Parameters\Damage\RTPC_int_eng_damage"/>
+				<GameParameter Id="1945071579" Name="RTPC_ext_engine_damage_risk" ObjectPath="\Game Parameters\Vehicles\wheeled_vehicle\RTPC_ext_engine_damage_risk"/>
+				<GameParameter Id="1978220576" Name="RTPC_ext_menu_volume_voice" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_voice"/>
+				<GameParameter Id="2151720954" Name="RTPC_int_bass_boost_band_frequency_device_id" ObjectPath="\Game Parameters\Settings\RTPC_int_bass_boost_band_frequency_device_id"/>
+				<GameParameter Id="2163183645" Name="RTPC_int_friction_release" ObjectPath="\Game Parameters\Physical_Collision\RTPC_int_friction_release"/>
+				<GameParameter Id="2369516155" Name="RTPC_int_music_drone_enable_eq_lowshelf" ObjectPath="\Game Parameters\Interactive_music\RTPC_int_music_drone_enable_eq_lowshelf"/>
+				<GameParameter Id="2370945719" Name="RTPC_ext_menu_volume_music" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_music"/>
+				<GameParameter Id="2466770167" Name="RTPC_ext_roughness_global" ObjectPath="\Game Parameters\Vehicles\vehicles_global\RTPC_ext_roughness_global"/>
+				<GameParameter Id="2497463650" Name="RTPC_ext_speed_rel_global" ObjectPath="\Game Parameters\Vehicles\vehicles_global\RTPC_ext_speed_rel_global"/>
+				<GameParameter Id="2686672294" Name="RTPC_int_dynamic_range" ObjectPath="\Game Parameters\Settings\RTPC_int_dynamic_range"/>
+				<GameParameter Id="3259059030" Name="RTPC_int_impact_sidechain" ObjectPath="\Game Parameters\Common\RTPC_int_impact_sidechain"/>
+				<GameParameter Id="3261467983" Name="RTPC_int_bass_boost_band_gain_device_id" ObjectPath="\Game Parameters\Settings\RTPC_int_bass_boost_band_gain_device_id"/>
+				<GameParameter Id="3266425556" Name="RTPC_ext_camera_height_rel" ObjectPath="\Game Parameters\Ambient\wind\RTPC_ext_camera_height_rel"/>
+				<GameParameter Id="3348539219" Name="RTPC_ext_menu_volume_gui" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_gui"/>
+				<GameParameter Id="3391116920" Name="RTPC_int_vo_ducking" ObjectPath="\Game Parameters\Common\RTPC_int_vo_ducking"/>
+				<GameParameter Id="3394325855" Name="RTPC_int_explosion_sidechain" ObjectPath="\Game Parameters\Common\RTPC_int_explosion_sidechain"/>
+				<GameParameter Id="3436964933" Name="RTPC_int_meter_surface_balance" ObjectPath="\Game Parameters\Vehicles\surface\RTPC_int_meter_surface_balance"/>
+				<GameParameter Id="3546315937" Name="RTPC_ext_menu_volume_vehicles" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_vehicles"/>
+				<GameParameter Id="3567163588" Name="RTPC_ext_physic_load_global" ObjectPath="\Game Parameters\Vehicles\vehicles_global\RTPC_ext_physic_load_global"/>
+				<GameParameter Id="3643357862" Name="RTPC_int_imp_wise_gain" ObjectPath="\Game Parameters\Impacts\RTPC_int_imp_wise_gain"/>
+				<GameParameter Id="3753532465" Name="RTPC_int_bass_boost_trigger" ObjectPath="\Game Parameters\Settings\RTPC_int_bass_boost_trigger"/>
+				<GameParameter Id="3870047102" Name="RTPC_ext_slowmo_factor" ObjectPath="\Game Parameters\Common\RTPC_ext_slowmo_factor"/>
+				<GameParameter Id="4171884463" Name="RTPC_int_multichanel" ObjectPath="\Game Parameters\Multichanel\RTPC_int_multichanel"/>
+				<GameParameter Id="4245421398" Name="RTPC_ext_engine_load_global" ObjectPath="\Game Parameters\Vehicles\vehicles_global\RTPC_ext_engine_load_global"/>
+				<GameParameter Id="4247354303" Name="RTPC_int_bass_boost_gain_compensation" ObjectPath="\Game Parameters\Settings\RTPC_int_bass_boost_gain_compensation"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="791912384" Name="STATE_gamemode_progress_page" ObjectPath="\States\Common\STATE_gamemode_progress_page">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_gamemode_progress_page\None"/>
+						<State Id="3791716968" Name="STATE_gamemode_progress_page_on" ObjectPath="\States\Common\STATE_gamemode_progress_page\STATE_gamemode_progress_page_on"/>
+						<State Id="664190278" Name="STATE_gamemode_progress_page_off" ObjectPath="\States\Common\STATE_gamemode_progress_page\STATE_gamemode_progress_page_off"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="974744403" Name="STATE_viewPlayMode" ObjectPath="\States\Common\STATE_viewPlayMode">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_viewPlayMode\None"/>
+						<State Id="132799494" Name="STATE_viewPlayMode_arcade" ObjectPath="\States\Common\STATE_viewPlayMode\STATE_viewPlayMode_arcade"/>
+						<State Id="85928243" Name="STATE_viewPlayMode_sniper" ObjectPath="\States\Common\STATE_viewPlayMode\STATE_viewPlayMode_sniper"/>
+						<State Id="4289862936" Name="STATE_viewPlayMode_strategic" ObjectPath="\States\Common\STATE_viewPlayMode\STATE_viewPlayMode_strategic"/>
+						<State Id="2318091565" Name="STATE_viewPlayMode_arcade_ceilless" ObjectPath="\States\Common\STATE_viewPlayMode\STATE_viewPlayMode_arcade_ceilless"/>
+						<State Id="360996942" Name="STATE_viewPlayMode_sniper_ceilless" ObjectPath="\States\Common\STATE_viewPlayMode\STATE_viewPlayMode_sniper_ceilless"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1530490698" Name="STATE_gameplace" ObjectPath="\States\Common\STATE_gameplace">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_gameplace\None"/>
+						<State Id="3132916336" Name="STATE_gameplace_hangar" ObjectPath="\States\Common\STATE_gameplace\STATE_gameplace_hangar"/>
+						<State Id="2222908990" Name="STATE_gameplace_arena" ObjectPath="\States\Common\STATE_gameplace\STATE_gameplace_arena"/>
+						<State Id="2668334844" Name="STATE_gamplace_lobby" ObjectPath="\States\Common\STATE_gameplace\STATE_gamplace_lobby"/>
+						<State Id="29304656" Name="STATE_gamplace_loading" ObjectPath="\States\Common\STATE_gameplace\STATE_gamplace_loading"/>
+						<State Id="24118782" Name="STATE_gameplace_result" ObjectPath="\States\Common\STATE_gameplace\STATE_gameplace_result"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2110943632" Name="STATE_underwater" ObjectPath="\States\Common\STATE_underwater">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_underwater\None"/>
+						<State Id="2628170294" Name="STATE_underwater_off" ObjectPath="\States\Common\STATE_underwater\STATE_underwater_off"/>
+						<State Id="1493907064" Name="STATE_underwater_on" ObjectPath="\States\Common\STATE_underwater\STATE_underwater_on"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2343779507" Name="STATE_hangar_camera_rotating" ObjectPath="\States\Common\STATE_hangar_camera_rotating">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_hangar_camera_rotating\None"/>
+						<State Id="3158823513" Name="STATE_hangar_camera_rotating_on" ObjectPath="\States\Common\STATE_hangar_camera_rotating\STATE_hangar_camera_rotating_on"/>
+						<State Id="3054507493" Name="STATE_hangar_camera_rotating_off" ObjectPath="\States\Common\STATE_hangar_camera_rotating\STATE_hangar_camera_rotating_off"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2518278840" Name="STATE_gamemode" ObjectPath="\States\Common\STATE_gamemode">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_gamemode\None"/>
+						<State Id="236638138" Name="STATE_gamemode_default" ObjectPath="\States\Common\STATE_gamemode\STATE_gamemode_default"/>
+						<State Id="1127815430" Name="STATE_gamemode_frontline" ObjectPath="\States\Common\STATE_gamemode\STATE_gamemode_frontline"/>
+						<State Id="1070500498" Name="STATE_gamemode_ranked" ObjectPath="\States\Common\STATE_gamemode\STATE_gamemode_ranked"/>
+						<State Id="1808199260" Name="STATE_gamemode_bootcamp" ObjectPath="\States\Common\STATE_gamemode\STATE_gamemode_bootcamp"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2544266487" Name="STATE_arenastate" ObjectPath="\States\Common\STATE_arenastate">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_arenastate\None"/>
+						<State Id="26253895" Name="STATE_arenastate_waiting" ObjectPath="\States\Common\STATE_arenastate\STATE_arenastate_waiting"/>
+						<State Id="1506040602" Name="STATE_arenastate_counter" ObjectPath="\States\Common\STATE_arenastate\STATE_arenastate_counter"/>
+						<State Id="668236828" Name="STATE_arenastate_battle" ObjectPath="\States\Common\STATE_arenastate\STATE_arenastate_battle"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2617026835" Name="STATE_fortified_area" ObjectPath="\States\Default Work Unit\STATE_fortified_area">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\STATE_fortified_area\None"/>
+						<State Id="3067221881" Name="STATE_fortified_area_on" ObjectPath="\States\Default Work Unit\STATE_fortified_area\STATE_fortified_area_on"/>
+						<State Id="1035658885" Name="STATE_fortified_area_off" ObjectPath="\States\Default Work Unit\STATE_fortified_area\STATE_fortified_area_off"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2773731236" Name="STATE_hangar_filtered" ObjectPath="\States\Default Work Unit\STATE_hangar_filtered">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\STATE_hangar_filtered\None"/>
+						<State Id="19640060" Name="STATE_hangar_filtered_on" ObjectPath="\States\Default Work Unit\STATE_hangar_filtered\STATE_hangar_filtered_on"/>
+						<State Id="3418647162" Name="STATE_hangar_filtered_off" ObjectPath="\States\Default Work Unit\STATE_hangar_filtered\STATE_hangar_filtered_off"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2936847994" Name="STATE_hangar_view" ObjectPath="\States\Common\STATE_hangar_view">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_hangar_view\None"/>
+						<State Id="36532472" Name="STATE_hangar_view_01" ObjectPath="\States\Common\STATE_hangar_view\STATE_hangar_view_01"/>
+						<State Id="36532475" Name="STATE_hangar_view_02" ObjectPath="\States\Common\STATE_hangar_view\STATE_hangar_view_02"/>
+						<State Id="36532474" Name="STATE_hangar_view_03" ObjectPath="\States\Common\STATE_hangar_view\STATE_hangar_view_03"/>
+						<State Id="36532477" Name="STATE_hangar_view_04" ObjectPath="\States\Common\STATE_hangar_view\STATE_hangar_view_04"/>
+						<State Id="36532476" Name="STATE_hangar_view_05" ObjectPath="\States\Common\STATE_hangar_view\STATE_hangar_view_05"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3677561149" Name="STATE_video_overlay" ObjectPath="\States\Default Work Unit\STATE_video_overlay">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\STATE_video_overlay\None"/>
+						<State Id="13612235" Name="STATE_video_overlay_on" ObjectPath="\States\Default Work Unit\STATE_video_overlay\STATE_video_overlay_on"/>
+						<State Id="167349919" Name="STATE_video_overlay_off" ObjectPath="\States\Default Work Unit\STATE_video_overlay\STATE_video_overlay_off"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3764078144" Name="STATE_overlay_hangar_general" ObjectPath="\States\Default Work Unit\STATE_overlay_hangar_general">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\STATE_overlay_hangar_general\None"/>
+						<State Id="420104680" Name="STATE_overlay_hangar_general_on" ObjectPath="\States\Default Work Unit\STATE_overlay_hangar_general\STATE_overlay_hangar_general_on"/>
+						<State Id="1261587398" Name="STATE_overlay_hangar_general_off" ObjectPath="\States\Default Work Unit\STATE_overlay_hangar_general\STATE_overlay_hangar_general_off"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="3983889542" Name="STATE_hangar_place" ObjectPath="\States\Common\STATE_hangar_place">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Common\STATE_hangar_place\None"/>
+						<State Id="768442838" Name="STATE_hangar_place_garage" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_garage"/>
+						<State Id="3092877988" Name="STATE_hangar_place_personalMissions" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_personalMissions"/>
+						<State Id="3369004084" Name="STATE_hangar_place_customization" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_customization"/>
+						<State Id="4120106793" Name="STATE_hangar_place_shop" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_shop"/>
+						<State Id="1786143786" Name="STATE_hangar_place_research" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_research"/>
+						<State Id="569750957" Name="STATE_hangar_place_tasks" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_tasks"/>
+						<State Id="2332360656" Name="STATE_hangar_place_barracks" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_barracks"/>
+						<State Id="1461274737" Name="STATE_hangar_place_achievements" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_achievements"/>
+						<State Id="2491654589" Name="STATE_hangar_place_fortarea" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_fortarea"/>
+						<State Id="3354433999" Name="STATE_hangar_place_browser" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_browser"/>
+						<State Id="1751757854" Name="STATE_hangar_place_noobieCenter" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_noobieCenter"/>
+						<State Id="1154502" Name="STATE_hangar_place_warehouse" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_warehouse"/>
+						<State Id="301050511" Name="STATE_hangar_place_researches_preview" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_researches_preview"/>
+						<State Id="101805544" Name="STATE_hangar_place_shop_preview" ObjectPath="\States\Common\STATE_hangar_place\STATE_hangar_place_shop_preview"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 		<SoundBank Id="1776621568" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\loginscreen</ObjectPath>
@@ -355,12 +572,54 @@
 			<ShortName>AW_battle_equipment</ShortName>
 			<Path>AW_battle_equipment.bnk</Path>
 			<IncludedEvents>
-				<Event Id="464867712" Name="battle_equipment_1019" ObjectPath="\Events\GUI\battle_equipment\activating\battle_equipment_1019" DurationType="OneShot" DurationMin="3.868687" DurationMax="3.868687"/>
-				<Event Id="766570708" Name="battle_equipment_1275" ObjectPath="\Events\GUI\battle_equipment\activating\battle_equipment_1275" DurationType="OneShot" DurationMin="3.519000" DurationMax="3.519000"/>
-				<Event Id="2846745167" Name="battle_equipment_1531" ObjectPath="\Events\GUI\battle_equipment\activating\battle_equipment_1531" DurationType="OneShot" DurationMin="3.519000" DurationMax="3.519000"/>
-				<Event Id="121068499" Name="battle_equipment_251" ObjectPath="\Events\GUI\battle_equipment\activating\battle_equipment_251" DurationType="OneShot" DurationMin="2.863958" DurationMax="2.863958"/>
-				<Event Id="38019009" Name="battle_equipment_507" ObjectPath="\Events\GUI\battle_equipment\activating\battle_equipment_507" DurationType="OneShot" DurationMin="3.691958" DurationMax="3.691958"/>
-				<Event Id="2487154093" Name="battle_equipment_763" ObjectPath="\Events\GUI\battle_equipment\activating\battle_equipment_763" DurationType="OneShot" DurationMin="3.868687" DurationMax="3.868687"/>
+				<Event Id="464867712" Name="battle_equipment_1019" ObjectPath="\Events\GUI\battle_equipment\activating\battle_equipment_1019" DurationType="OneShot" DurationMin="3.868687" DurationMax="3.868687">
+					<IncludedMemoryFiles>
+						<File Id="141829834" Language="SFX">
+							<ShortName>ui_consumable_first_aid.wav</ShortName>
+							<Path>SFX\ui_consumable_first_aid_BE02EBD1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="766570708" Name="battle_equipment_1275" ObjectPath="\Events\GUI\battle_equipment\activating\battle_equipment_1275" DurationType="OneShot" DurationMin="3.519000" DurationMax="3.519000">
+					<IncludedMemoryFiles>
+						<File Id="361975109" Language="SFX">
+							<ShortName>ui_consumable_repair.wav</ShortName>
+							<Path>SFX\ui_consumable_repair_BE02EBD1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2846745167" Name="battle_equipment_1531" ObjectPath="\Events\GUI\battle_equipment\activating\battle_equipment_1531" DurationType="OneShot" DurationMin="3.519000" DurationMax="3.519000">
+					<IncludedMemoryFiles>
+						<File Id="361975109" Language="SFX">
+							<ShortName>ui_consumable_repair.wav</ShortName>
+							<Path>SFX\ui_consumable_repair_BE02EBD1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="121068499" Name="battle_equipment_251" ObjectPath="\Events\GUI\battle_equipment\activating\battle_equipment_251" DurationType="OneShot" DurationMin="2.863958" DurationMax="2.863958">
+					<IncludedMemoryFiles>
+						<File Id="49360024" Language="SFX">
+							<ShortName>ui_consumable_fire_ext.wav</ShortName>
+							<Path>SFX\ui_consumable_fire_ext_BE02EBD1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="38019009" Name="battle_equipment_507" ObjectPath="\Events\GUI\battle_equipment\activating\battle_equipment_507" DurationType="OneShot" DurationMin="3.691958" DurationMax="3.691958">
+					<IncludedMemoryFiles>
+						<File Id="991767094" Language="SFX">
+							<ShortName>ui_consumable_auto_fire_ext.wav</ShortName>
+							<Path>SFX\ui_consumable_auto_fire_ext_BE02EBD1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2487154093" Name="battle_equipment_763" ObjectPath="\Events\GUI\battle_equipment\activating\battle_equipment_763" DurationType="OneShot" DurationMin="3.868687" DurationMax="3.868687">
+					<IncludedMemoryFiles>
+						<File Id="141829834" Language="SFX">
+							<ShortName>ui_consumable_first_aid.wav</ShortName>
+							<Path>SFX\ui_consumable_first_aid_BE02EBD1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2085065328" Name="be_nitro_activating" ObjectPath="\Events\GUI\battle_equipment\activating\be_nitro_activating" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3783089513" Name="be_nitro_empty" ObjectPath="\Events\GUI\battle_equipment\replenishment\be_nitro_empty" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="878342208" Name="be_nitro_replenishment_full" ObjectPath="\Events\GUI\battle_equipment\replenishment\be_nitro_replenishment_full" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -370,21 +629,25 @@
 			<IncludedMemoryFiles>
 				<File Id="49360024" Language="SFX">
 					<ShortName>ui_consumable_fire_ext.wav</ShortName>
-					<Path>SFX\ui_consumable_fire_ext_7ED93EED.wem</Path>
+					<Path>SFX\ui_consumable_fire_ext_BE02EBD1.wem</Path>
 				</File>
 				<File Id="141829834" Language="SFX">
 					<ShortName>ui_consumable_first_aid.wav</ShortName>
-					<Path>SFX\ui_consumable_first_aid_7ED93EED.wem</Path>
+					<Path>SFX\ui_consumable_first_aid_BE02EBD1.wem</Path>
 				</File>
 				<File Id="361975109" Language="SFX">
 					<ShortName>ui_consumable_repair.wav</ShortName>
-					<Path>SFX\ui_consumable_repair_7ED93EED.wem</Path>
+					<Path>SFX\ui_consumable_repair_BE02EBD1.wem</Path>
 				</File>
 				<File Id="991767094" Language="SFX">
 					<ShortName>ui_consumable_auto_fire_ext.wav</ShortName>
-					<Path>SFX\ui_consumable_auto_fire_ext_7ED93EED.wem</Path>
+					<Path>SFX\ui_consumable_auto_fire_ext_BE02EBD1.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+			<GameParameters>
+				<GameParameter Id="257494316" Name="RTPC_ext_menu_volume_master" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_master"/>
+				<GameParameter Id="3348539219" Name="RTPC_ext_menu_volume_gui" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_gui"/>
+			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="2378126911" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\utility</ObjectPath>
@@ -440,58 +703,92 @@
 			<ShortName>AW_Binocs</ShortName>
 			<Path>AW_Binocs.bnk</Path>
 			<IncludedEvents>
-				<Event Id="326256530" Name="stereo_trumpet_start" ObjectPath="\Events\Modules\stereo_trumpet_start" DurationType="OneShot" DurationMin="1.499979" DurationMax="1.499979"/>
-				<Event Id="2641540682" Name="stereo_trumpet_stop" ObjectPath="\Events\Modules\stereo_trumpet_stop" DurationType="OneShot" DurationMin="1.249979" DurationMax="1.249979"/>
+				<Event Id="326256530" Name="stereo_trumpet_start" ObjectPath="\Events\Modules\stereo_trumpet_start" DurationType="OneShot" DurationMin="1.499979" DurationMax="1.499979">
+					<IncludedMemoryFiles>
+						<File Id="995706142" Language="SFX">
+							<ShortName>ui_night_vision_on.wav</ShortName>
+							<Path>SFX\ui_night_vision_on_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2641540682" Name="stereo_trumpet_stop" ObjectPath="\Events\Modules\stereo_trumpet_stop" DurationType="OneShot" DurationMin="1.249979" DurationMax="1.249979">
+					<IncludedMemoryFiles>
+						<File Id="223663655" Language="SFX">
+							<ShortName>ui_night_vision_off.wav</ShortName>
+							<Path>SFX\ui_night_vision_off_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
-			<IncludedMemoryFiles>
-				<File Id="223663655" Language="SFX">
-					<ShortName>ui_night_vision_off.wav</ShortName>
-					<Path>SFX\ui_night_vision_off_C8E51BD1.wem</Path>
-				</File>
-				<File Id="995706142" Language="SFX">
-					<ShortName>ui_night_vision_on.wav</ShortName>
-					<Path>SFX\ui_night_vision_on_C8E51BD1.wem</Path>
-				</File>
-			</IncludedMemoryFiles>
+			<StateGroups>
+				<StateGroup Id="190870708" Name="STATE_int_camoNet_stereoTrumpet_on" ObjectPath="\States\Common\STATE_int_camoNet_stereoTrumpet\STATE_int_camoNet_stereoTrumpet_on">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="2765603730" Name="STATE_int_camoNet_stereoTrumpet_off" ObjectPath="\States\Common\STATE_int_camoNet_stereoTrumpet\STATE_int_camoNet_stereoTrumpet_off">
+					<States/>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 		<SoundBank Id="3677593400" Language="SFX">
 			<ObjectPath>\SoundBanks\Mods\Modules\AW_Camo_Net</ObjectPath>
 			<ShortName>AW_Camo_Net</ShortName>
 			<Path>AW_Camo_Net.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1290173500" Name="camo_net_start" ObjectPath="\Events\Modules\camo_net_start" DurationType="OneShot" DurationMin="3.039979" DurationMax="3.039979"/>
-				<Event Id="1584417168" Name="camo_net_stop" ObjectPath="\Events\Modules\camo_net_stop" DurationType="OneShot" DurationMin="1.491812" DurationMax="1.491812"/>
+				<Event Id="1290173500" Name="camo_net_start" ObjectPath="\Events\Modules\camo_net_start" DurationType="OneShot" DurationMin="3.039979" DurationMax="3.039979">
+					<IncludedMemoryFiles>
+						<File Id="916672986" Language="SFX">
+							<ShortName>ui_Ability_Stealth_on.wav</ShortName>
+							<Path>SFX\ui_Ability_Stealth_on_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1584417168" Name="camo_net_stop" ObjectPath="\Events\Modules\camo_net_stop" DurationType="OneShot" DurationMin="1.491812" DurationMax="1.491812">
+					<IncludedMemoryFiles>
+						<File Id="514038097" Language="SFX">
+							<ShortName>ui_Ability_off.wav</ShortName>
+							<Path>SFX\ui_Ability_off_C75167D5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
-			<IncludedMemoryFiles>
-				<File Id="514038097" Language="SFX">
-					<ShortName>ui_Ability_off.wav</ShortName>
-					<Path>SFX\ui_Ability_off_C8E51BD1.wem</Path>
-				</File>
-				<File Id="916672986" Language="SFX">
-					<ShortName>ui_Ability_Stealth_on.wav</ShortName>
-					<Path>SFX\ui_Ability_Stealth_on_C8E51BD1.wem</Path>
-				</File>
-			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="3864713266" Language="SFX">
 			<ObjectPath>\SoundBanks\Mods\GUI\AW_enemy_spotted</ObjectPath>
 			<ShortName>AW_enemy_spotted</ShortName>
 			<Path>AW_enemy_spotted.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2563144241" Name="AW_enemy_sighted" ObjectPath="\Events\GUI\notificationFX\AW_enemy_sighted" MaxAttenuation="41.000000" DurationType="OneShot" DurationMin="1.860208" DurationMax="1.860208"/>
-				<Event Id="154389178" Name="AW_enemy_sighted_voice" ObjectPath="\Events\GUI\notificationFX\AW_enemy_sighted_voice" MaxAttenuation="41.000000" DurationType="OneShot" DurationMin="1.844437" DurationMax="1.844437"/>
+				<Event Id="2563144241" Name="AW_enemy_sighted" ObjectPath="\Events\GUI\notificationFX\AW_enemy_sighted" MaxAttenuation="41.000000" DurationType="OneShot" DurationMin="1.860208" DurationMax="1.860208">
+					<IncludedMemoryFiles>
+						<File Id="429844057" Language="SFX">
+							<ShortName>ui_glb_enemy_spotted.wav</ShortName>
+							<Path>SFX\ui_glb_enemy_spotted_639CF9DE.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="154389178" Name="AW_enemy_sighted_voice" ObjectPath="\Events\GUI\notificationFX\AW_enemy_sighted_voice" MaxAttenuation="41.000000" DurationType="OneShot" DurationMin="1.844437" DurationMax="1.844437">
+					<IncludedMemoryFiles>
+						<File Id="879673857" Language="SFX">
+							<ShortName>AW_enemy_spotted.wav</ShortName>
+							<Path>SFX\AW_enemy_spotted_639CF9DE.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1873550594" Name="enemy_sighted_for_team" ObjectPath="\Events\GUI\notificationFX\enemy_sighted_for_team" MaxAttenuation="41.000000" DurationType="OneShot" DurationMin="1.860208" DurationMax="1.860208"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="429844057" Language="SFX">
 					<ShortName>ui_glb_enemy_spotted.wav</ShortName>
-					<Path>SFX\ui_glb_enemy_spotted_C5DCCAFA.wem</Path>
+					<Path>SFX\ui_glb_enemy_spotted_639CF9DE.wem</Path>
 				</File>
 				<File Id="879673857" Language="SFX">
 					<ShortName>AW_enemy_spotted.wav</ShortName>
-					<Path>SFX\AW_enemy_spotted_C5DCCAFA.wem</Path>
+					<Path>SFX\AW_enemy_spotted_639CF9DE.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+			<GameParameters>
+				<GameParameter Id="257494316" Name="RTPC_ext_menu_volume_master" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_master"/>
+				<GameParameter Id="3348539219" Name="RTPC_ext_menu_volume_gui" ObjectPath="\Game Parameters\Settings\RTPC_ext_menu_volume_gui"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

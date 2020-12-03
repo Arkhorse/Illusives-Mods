@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{38F9F328-114C-4BD0-AE44-B002FC344AAF}" SchemaVersion="85">
+	<SoundBanks>
+		<WorkUnit Name="Armored Warfare" ID="{38F9F328-114C-4BD0-AE44-B002FC344AAF}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="voiceover" ID="{A2799F2A-844B-44AF-8123-74D21C1D143C}">
+					<ObjectInclusionList>
+						<ObjectRef Name="notifications_vo" ID="{E3DC244F-850E-4B84-829B-960A3ECC8D16}" WorkUnitID="{47FEE6D6-CBAB-427C-A250-2BADF4F2CA45}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

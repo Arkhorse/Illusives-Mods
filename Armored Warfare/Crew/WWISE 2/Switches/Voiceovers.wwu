@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{71B061DF-27AB-4D7E-B47A-0C4897863468}" SchemaVersion="97" RootDocumentID="{DD20A8C7-3C20-409F-9EAB-75201A0F56EE}">
+	<Switches>
+		<WorkUnit Name="Voiceovers" ID="{71B061DF-27AB-4D7E-B47A-0C4897863468}" OwnerID="{DD20A8C7-3C20-409F-9EAB-75201A0F56EE}" PersistMode="Nested">
+			<ChildrenList>
+				<SwitchGroup Name="SWITCH_ext_vo_gender" ID="{B90CAED7-9C42-48C6-A170-BEAEE3DECD4B}">
+					<ChildrenList>
+						<Switch Name="SWITCH_ext_vo_gender_female" ID="{D95D0686-94B9-4636-A95B-9B45A8BEBB0D}"/>
+						<Switch Name="SWITCH_ext_vo_gender_male" ID="{435030BB-0FC4-4127-9ABD-A57BBDE5F469}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{6C14C041-810D-427D-A626-84231626968E}" SchemaVersion="85">
+<WwiseDocument Type="WorkUnit" ID="{6C14C041-810D-427D-A626-84231626968E}" SchemaVersion="97">
 	<AudioObjects>
 		<WorkUnit Name="AW Work Unit" ID="{6C14C041-810D-427D-A626-84231626968E}" PersistMode="Standalone">
 			<ChildrenList>
 				<ActorMixer Name="Wrath of the gods" ID="{E49827C4-5940-4EE8-9D6E-702FF3E8CF36}" ShortID="840981229">
 					<PropertyList>
-						<Property Name="EnablePositioning" Type="bool" Value="False"/>
 						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="ListenerRelativeRouting" Type="bool" Value="False"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
 								<Value>10</Value>
@@ -19,9 +19,6 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
-						<Reference Name="Attenuation">
-							<ObjectRef Name="ATT_weapons_600m_pc" ID="{F5F841B7-AB14-4CB0-B423-F01D30E84D85}" WorkUnitID="{FDC8E3CF-67CA-424D-8EA4-187769599D6D}"/>
-						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 						</Reference>
@@ -98,9 +95,9 @@
 							<ChildrenList>
 								<ActorMixer Name="wpn_automatic_NPC" ID="{0AEBDA4A-E34D-4BE0-B52B-0BF4C91D346B}" ShortID="26267041">
 									<PropertyList>
-										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>12</Value>
@@ -121,7 +118,8 @@
 									<ChildrenList>
 										<Sound Name="wpn_20mm_close_loop_300_01" ID="{7B9F7952-2F53-4537-890E-05AC360CC108}" ShortID="865498524">
 											<PropertyList>
-												<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 												<Property Name="IsNonCachable" Type="bool">
 													<ValueList>
 														<Value>True</Value>
@@ -132,7 +130,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
@@ -146,9 +143,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="wpn_20mm_close_loop_300_01" ID="{B42DBB82-5441-4651-B59E-709A61C997EB}" ShortID="721919784">
+												<AudioFileSource Name="wpn_20mm_close_loop_300_01" ID="{B42DBB82-5441-4651-B59E-709A61C997EB}">
 													<Language>SFX</Language>
 													<AudioFile>wpn_20mm_close_loop_300_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="721919784"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -159,9 +159,9 @@
 								</ActorMixer>
 								<ActorMixer Name="wpn_automatic_PC" ID="{D362F702-4832-4650-AC81-07B3BD8D6340}" ShortID="57196493">
 									<PropertyList>
-										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -177,7 +177,8 @@
 									<ChildrenList>
 										<Sound Name="wpn_20mm_int_loop_300_01" ID="{75A1CEC1-A1A7-4FCF-9843-18E4C9F426EC}" ShortID="574297754">
 											<PropertyList>
-												<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 												<Property Name="IsNonCachable" Type="bool">
 													<ValueList>
 														<Value>True</Value>
@@ -188,7 +189,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
@@ -202,9 +202,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="wpn_20mm_int_loop_300_01" ID="{0686117E-D950-4735-BFAD-6321607C7D07}" ShortID="870463833">
+												<AudioFileSource Name="wpn_20mm_int_loop_300_01" ID="{0686117E-D950-4735-BFAD-6321607C7D07}">
 													<Language>SFX</Language>
 													<AudioFile>wpn_20mm_int_loop_300_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="870463833"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -215,9 +218,9 @@
 								</ActorMixer>
 								<ActorMixer Name="wpn_huge_NPC" ID="{5AFD1CC6-AF61-48AA-8636-BCAEDA87951E}" ShortID="134467977">
 									<PropertyList>
-										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>12</Value>
@@ -284,12 +287,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="wpn_156_mm_ext_01" ID="{66EAA926-BEFE-4646-B2A3-9423230EE407}" ShortID="379462903">
+												<AudioFileSource Name="wpn_156_mm_ext_01" ID="{66EAA926-BEFE-4646-B2A3-9423230EE407}">
 													<Language>SFX</Language>
 													<AudioFile>wpn_156_mm_ext_01.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="979571429"/>
-													</ConvertedFileIDList>
+													<MediaIDList>
+														<MediaID ID="979571429"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -300,9 +303,9 @@
 								</ActorMixer>
 								<ActorMixer Name="wpn_huge_PC" ID="{93720082-FBBC-4B99-8371-7157701A766F}" ShortID="144327517">
 									<PropertyList>
-										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -342,9 +345,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="wpn_156_mm_ext_01" ID="{427AE6AF-7EA3-4A65-96F3-2E62134731BD}" ShortID="979571429">
+												<AudioFileSource Name="wpn_156_mm_ext_01" ID="{427AE6AF-7EA3-4A65-96F3-2E62134731BD}">
 													<Language>SFX</Language>
 													<AudioFile>wpn_156_mm_ext_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="979571429"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -353,6 +359,7 @@
 										</Sound>
 										<Sound Name="wpn_huge_PC_int" ID="{47F26A47-A7F2-41C6-AA59-89BFA72CF481}" ShortID="848447021">
 											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="IsNonCachable" Type="bool">
 													<ValueList>
 														<Value>True</Value>
@@ -364,7 +371,6 @@
 													</ValueList>
 												</Property>
 												<Property Name="OverrideOutput" Type="bool" Value="True"/>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -375,9 +381,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="wpn_155mm_int_fire_03" ID="{99699599-3970-44BB-B2D3-D5D54A585955}" ShortID="66534435">
+												<AudioFileSource Name="wpn_155mm_int_fire_03" ID="{99699599-3970-44BB-B2D3-D5D54A585955}">
 													<Language>SFX</Language>
 													<AudioFile>wpn_155mm_int_fire_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="66534435"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -410,12 +419,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="wpn_156_mm_ext_01" ID="{DA3B3E5A-EDB2-4194-81EF-8BAB0E106228}" ShortID="115894469">
+												<AudioFileSource Name="wpn_156_mm_ext_01" ID="{DA3B3E5A-EDB2-4194-81EF-8BAB0E106228}">
 													<Language>SFX</Language>
 													<AudioFile>wpn_156_mm_ext_01.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="979571429"/>
-													</ConvertedFileIDList>
+													<MediaIDList>
+														<MediaID ID="979571429"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -426,9 +435,9 @@
 								</ActorMixer>
 								<ActorMixer Name="wpn_large_NPC" ID="{C6973B80-8624-4C07-AD20-4DABAA0ABC78}" ShortID="750958120">
 									<PropertyList>
-										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>12</Value>
@@ -495,9 +504,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="wpn_140_mm_ext_01" ID="{9DA59B4C-3F3E-43C7-8503-E2DFF811CDE2}" ShortID="839843322">
+												<AudioFileSource Name="wpn_140_mm_ext_01" ID="{9DA59B4C-3F3E-43C7-8503-E2DFF811CDE2}">
 													<Language>SFX</Language>
 													<AudioFile>wpn_140_mm_ext_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="839843322"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -508,9 +520,9 @@
 								</ActorMixer>
 								<ActorMixer Name="wpn_large_PC" ID="{4BB44697-B0D7-426B-A286-6F5C7E80C61C}" ShortID="863343073">
 									<PropertyList>
-										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -546,9 +558,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="wpn_125mm_int_fire_01" ID="{579D32A9-46B2-461C-979B-D2021E1EBD86}" ShortID="816650160">
+												<AudioFileSource Name="wpn_125mm_int_fire_01" ID="{579D32A9-46B2-461C-979B-D2021E1EBD86}">
 													<Language>SFX</Language>
 													<AudioFile>wpn_125mm_int_fire_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="816650160"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -577,12 +592,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="wpn_140_mm_ext_01" ID="{6AE086D8-1768-4EEF-8E26-7D043056EA44}" ShortID="391395259">
+												<AudioFileSource Name="wpn_140_mm_ext_01" ID="{6AE086D8-1768-4EEF-8E26-7D043056EA44}">
 													<Language>SFX</Language>
 													<AudioFile>wpn_140_mm_ext_01.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="839843322"/>
-													</ConvertedFileIDList>
+													<MediaIDList>
+														<MediaID ID="839843322"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -593,9 +608,9 @@
 								</ActorMixer>
 								<ActorMixer Name="wpn_main_NPC" ID="{1EFAFF8D-1876-495F-95E3-7193B49F5BC8}" ShortID="505711325">
 									<PropertyList>
-										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>12</Value>
@@ -662,9 +677,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="wpn_105_mm_ext_01" ID="{3A9936FE-D1AE-4832-85D0-ADBB875CF0DB}" ShortID="217539087">
+												<AudioFileSource Name="wpn_105_mm_ext_01" ID="{3A9936FE-D1AE-4832-85D0-ADBB875CF0DB}">
 													<Language>SFX</Language>
 													<AudioFile>wpn_105_mm_ext_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="217539087"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -675,9 +693,9 @@
 								</ActorMixer>
 								<ActorMixer Name="wpn_main_PC" ID="{77B1CF4B-0718-4368-AAB8-94FE61AE2B56}" ShortID="351827719">
 									<PropertyList>
-										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -713,9 +731,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="wpn_105mm_int_fire_03" ID="{76A76933-0FE2-4309-A5A6-51E49FF0ED52}" ShortID="828844149">
+												<AudioFileSource Name="wpn_105mm_int_fire_03" ID="{76A76933-0FE2-4309-A5A6-51E49FF0ED52}">
 													<Language>SFX</Language>
 													<AudioFile>wpn_105mm_int_fire_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="828844149"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -744,12 +765,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="wpn_105_mm_ext_01" ID="{64AE920B-BA5B-49C2-B7C8-5B9CA8150780}" ShortID="473590259">
+												<AudioFileSource Name="wpn_105_mm_ext_01" ID="{64AE920B-BA5B-49C2-B7C8-5B9CA8150780}">
 													<Language>SFX</Language>
 													<AudioFile>wpn_105_mm_ext_01.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="217539087"/>
-													</ConvertedFileIDList>
+													<MediaIDList>
+														<MediaID ID="217539087"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -760,9 +781,9 @@
 								</ActorMixer>
 								<ActorMixer Name="wpn_meduim_NPC" ID="{2D1B3A27-7748-490F-BAE9-9F30BD692351}" ShortID="511952278">
 									<PropertyList>
-										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>12</Value>
@@ -829,9 +850,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="wpn_20mm_ext_rel_02" ID="{C9FA65D3-4477-4A22-9B6E-F42650838159}" ShortID="867138945">
+												<AudioFileSource Name="wpn_20mm_ext_rel_02" ID="{C9FA65D3-4477-4A22-9B6E-F42650838159}">
 													<Language>SFX</Language>
 													<AudioFile>wpn_20mm_ext_rel_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="867138945"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -842,9 +866,9 @@
 								</ActorMixer>
 								<ActorMixer Name="wpn_meduim_PC" ID="{A0DBA421-DC74-4FE8-AAE1-74029E8BBED6}" ShortID="64917652">
 									<PropertyList>
-										<Property Name="DynamicPositioning" Type="bool" Value="False"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -880,12 +904,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="wpn_20mm_ext_rel_02" ID="{0CA0D14C-C9B3-4915-90DA-3C8A586CCB70}" ShortID="110942340">
+												<AudioFileSource Name="wpn_20mm_ext_rel_02" ID="{0CA0D14C-C9B3-4915-90DA-3C8A586CCB70}">
 													<Language>SFX</Language>
 													<AudioFile>wpn_20mm_ext_rel_02.wav</AudioFile>
-													<ConvertedFileIDList>
-														<File ID="867138945"/>
-													</ConvertedFileIDList>
+													<MediaIDList>
+														<MediaID ID="867138945"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -914,9 +938,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="wpn_20mm_int_fire_03" ID="{E241CCD9-EA5B-4732-86A4-6C48A071F2CD}" ShortID="438063762">
+												<AudioFileSource Name="wpn_20mm_int_fire_03" ID="{E241CCD9-EA5B-4732-86A4-6C48A071F2CD}">
 													<Language>SFX</Language>
 													<AudioFile>wpn_20mm_int_fire_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="438063762"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
@@ -1007,9 +1034,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="reload_20mm_01" ID="{7AC62198-147C-471D-A18A-79918A68AFD7}" ShortID="1042302843">
+										<AudioFileSource Name="reload_20mm_01" ID="{7AC62198-147C-471D-A18A-79918A68AFD7}">
 											<Language>SFX</Language>
 											<AudioFile>reload_20mm_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1042302843"/>
+											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
@@ -1056,9 +1086,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="reload_artillery_shotReady" ID="{3332A149-251A-46BA-9F0C-FAC45B7125AD}" ShortID="693020159">
+										<AudioFileSource Name="reload_artillery_shotReady" ID="{3332A149-251A-46BA-9F0C-FAC45B7125AD}">
 											<Language>SFX</Language>
 											<AudioFile>reload_artillery_shotReady.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="693020159"/>
+											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
@@ -1075,9 +1108,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="reload_largecaliber" ID="{8B5FFE9E-2E3E-4897-8299-AC9759BDABD1}" ShortID="966148093">
+										<AudioFileSource Name="reload_largecaliber" ID="{8B5FFE9E-2E3E-4897-8299-AC9759BDABD1}">
 											<Language>SFX</Language>
 											<AudioFile>reload_largecaliber.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="966148093"/>
+											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
@@ -1094,9 +1130,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="reload_largecaliber_auto" ID="{A5E65659-8C9F-4461-9834-94E77D10BD5D}" ShortID="536283022">
+										<AudioFileSource Name="reload_largecaliber_auto" ID="{A5E65659-8C9F-4461-9834-94E77D10BD5D}">
 											<Language>SFX</Language>
 											<AudioFile>reload_largecaliber_auto.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="536283022"/>
+											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
@@ -1113,9 +1152,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="reload_mediumcaliber" ID="{0733076F-4773-4DFB-B693-EA4D97CB94DE}" ShortID="635796568">
+										<AudioFileSource Name="reload_mediumcaliber" ID="{0733076F-4773-4DFB-B693-EA4D97CB94DE}">
 											<Language>SFX</Language>
 											<AudioFile>reload_mediumcaliber.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="635796568"/>
+											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
@@ -1132,9 +1174,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="tank_reload_01" ID="{2675C95B-E7BD-4047-91E6-E80ECD66889C}" ShortID="1032205419">
+										<AudioFileSource Name="tank_reload_01" ID="{2675C95B-E7BD-4047-91E6-E80ECD66889C}">
 											<Language>SFX</Language>
 											<AudioFile>tank_reload_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1032205419"/>
+											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
@@ -1151,9 +1196,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="out_of_ammo" ID="{A16E8CFE-5681-4BE5-8B0A-55CA61E37CB3}" ShortID="226879251">
+										<AudioFileSource Name="out_of_ammo" ID="{A16E8CFE-5681-4BE5-8B0A-55CA61E37CB3}">
 											<Language>SFX</Language>
 											<AudioFile>out_of_ammo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="226879251"/>
+											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
@@ -1170,9 +1218,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="ATGM_reload_01" ID="{FD9B26DC-3EAA-411F-A502-05817C3773DE}" ShortID="672496117">
+										<AudioFileSource Name="ATGM_reload_01" ID="{FD9B26DC-3EAA-411F-A502-05817C3773DE}">
 											<Language>SFX</Language>
 											<AudioFile>ATGM_reload_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="672496117"/>
+											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>

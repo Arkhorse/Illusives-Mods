@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{7B5D3845-BAC0-472A-9A99-4BD4B8EA6175}" SchemaVersion="85">
+<WwiseDocument Type="WorkUnit" ID="{7B5D3845-BAC0-472A-9A99-4BD4B8EA6175}" SchemaVersion="97">
 	<SoundBanks>
 		<WorkUnit Name="Mod" ID="{7B5D3845-BAC0-472A-9A99-4BD4B8EA6175}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="AW_Weapons" ID="{145AD71F-BF29-4CE6-9972-0ACCB38E3D8D}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Weapons" ID="{E811023D-8930-4266-8283-3B46EAFCF06B}" WorkUnitID="{E811023D-8930-4266-8283-3B46EAFCF06B}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Gun Sounds" ID="{FD43EB5B-058E-45F2-86D1-7BD46E2595E8}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Weapons" ID="{E811023D-8930-4266-8283-3B46EAFCF06B}" WorkUnitID="{E811023D-8930-4266-8283-3B46EAFCF06B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Gun Sounds" ID="{FD43EB5B-058E-45F2-86D1-7BD46E2595E8}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="AW_Gun_Reload" ID="{6AEFF366-09C8-49B4-9B2F-4D3763CBAEA6}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Reload" ID="{B416950D-4DE2-4239-9388-3070B25B4D8B}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Gun Reload" ID="{258FCDEE-B4FE-42C2-8FEE-6A41D76BDD47}" WorkUnitID="{258FCDEE-B4FE-42C2-8FEE-6A41D76BDD47}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="060_reload" ID="{237ADD9E-23E9-4F92-AB8E-AE80861F6318}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Reload" ID="{B416950D-4DE2-4239-9388-3070B25B4D8B}" WorkUnitID="{6C14C041-810D-427D-A626-84231626968E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Gun Reload" ID="{258FCDEE-B4FE-42C2-8FEE-6A41D76BDD47}" WorkUnitID="{258FCDEE-B4FE-42C2-8FEE-6A41D76BDD47}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="060_reload" ID="{237ADD9E-23E9-4F92-AB8E-AE80861F6318}" WorkUnitID="{2234EDCC-911E-442D-AF7F-4A39A6816642}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

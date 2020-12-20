@@ -1,0 +1,18 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro CommonCongratsViewModel()
+    (scope
+        (event onCloseClick)
+        (event onConfirmClick)
+        (event onBackClick)
+
+        (var background:str = '')
+        (var title:str = '')
+        (var description:str = '')
+        (var image:str = '')
+        (var imageAlt:str = '')
+        (var confirmLbl:str = '')
+        (var backLbl:str = '')
+        (var needReset:bool = false)
+    )
+)

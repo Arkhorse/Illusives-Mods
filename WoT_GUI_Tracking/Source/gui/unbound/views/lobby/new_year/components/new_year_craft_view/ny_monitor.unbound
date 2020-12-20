@@ -1,0 +1,578 @@
+(def layout NyMonitor(name:str='')
+    (name = "name")
+    (macro NyCraftMonitorModel)
+    (macro NewYearCraftStates)
+
+    (style
+        (width = 310px)
+        (height = 200px)
+        (paddingLeft = 23px)
+        (paddingTop = 15px)
+        (paddingBottom = 15px)
+        (paddingRight = 15px)
+    )
+
+    (scope
+        (event onAddCraftDecoration)
+        (event onAnimationComplete)
+        (event onStartAnimationInMonitor)
+
+        (event onCraftStateChanged)
+        (event onPrintingChange)
+        (var craftIcon:str = '')
+        (var craftState:number = -1
+            (dispatch onCraftStateChanged on='evChanged')
+        )
+
+        (var craftInProgress:bool = false)
+
+        (event onAnimationChangedStateComplete)
+        (event onStateChanged)
+        (event onShowContent)
+        (event onHideContent)
+        (event onValueChanged)
+        (event onContentPrintComplete)
+        (event onContentPrintStart)
+
+        (var changeState:number = "state"
+            (dispatch onStateChanged on='evChanged'
+                (enabled="!craftInProgress")
+            )
+        )
+
+        (var nextState:number = -1)
+        # Hide prev state
+        (bind nextState -1 init=false
+            (event "onStateChanged")
+            (event "onHideContent")
+        )
+        # Show next state
+        (bind nextState "state" watch=false init=false
+            (event "onAnimationChangedStateComplete")
+            (event "onShowContent")
+        )
+
+        (var printing:bool = false
+            (dispatch onPrintingChange on='evChanged')
+        )
+        (bind printing true
+            (event "onStateChanged")
+            (event "onValueChanged")
+        )
+        (bind printing false
+            (event "onAnimationChangedStateComplete")
+            (event "onContentPrintComplete")
+        )
+
+        (dispatch onPlaySound
+            (event "onPrintingChange")
+            (enabled = "printing")
+        )
+        (dispatch onStopSound
+            (event "onAnimationChangedStateComplete")
+            (event "onContentPrintComplete")
+        )
+    )
+
+    (block
+        (name = 'content')
+        (style
+            (width = 100%)
+        )
+        (bind visible "nextState != -1")
+        # state: not available shards and not available fillers
+        (block
+            (name = 'notAvailableShards')
+            (style
+                (width = 100%)
+            )
+            (tf
+                (name = 'label')
+                (class NyMonitorDescriptionStyle)
+                (text = "R.strings.ny.craftView.monitor.notAvailableShards.label()")
+            )
+            (tf
+                (name = 'description') 
+                (class NyMonitorDescriptionStyle)
+                (text = "R.strings.ny.craftView.monitor.notAvailableShards.description()")
+            )
+            
+            (bind visible "nextState == SHARDS_NOT_AVAILABLE")
+        )
+        
+        # state: not anough shards and not available fillers, regular toy
+        (block
+            (name = 'emptyRegular')
+            (style
+                (width = 100%)
+            )
+            (tf
+                (name = 'label')
+                (class NyMonitorDescriptionStyle)
+                (text = "R.strings.ny.craftView.monitor.notEnoughShards.label()")
+            )
+            (tf
+                (name = 'description')
+                (class NyMonitorDescriptionStyle)
+                (text = "R.strings.ny.craftView.monitor.notEnoughShards.descriptionRegular()")
+            )
+
+            (bind visible "nextState == NOT_ENOUGH_SHARDS_FOR_REGULAR")
+        )
+
+        # state: not anough shards and not available fillers, mega toy
+        (block
+            (name = 'emptyMega')
+            (style
+                (width = 100%)
+            )
+            (tf
+                (name = 'label')
+                (class NyMonitorDescriptionStyle)
+                (text = "R.strings.ny.craftView.monitor.notEnoughShards.label()")
+            )
+            (tf
+                (name = 'description')
+                (class NyMonitorDescriptionStyle)
+                (text = "R.strings.ny.craftView.monitor.notEnoughShards.descriptionMega()")
+            )
+
+            (bind visible "nextState == NOT_ENOUGH_SHARDS_FOR_MEGA")
+        )
+
+        # state: craft regular toy
+        (block
+            (name = 'paramsRegular')
+            (style
+                (width = 100%)
+            )
+            
+            (element NYMonitorParam
+                (name = 'shardsLeft')
+                (scope
+                    (bind value "shardsCount"
+                        (bind enabled "!craftInProgress")
+                    )
+                    (label="R.strings.ny.craftView.monitor.shardsLeft()")
+                )
+            )
+
+            (element NyMonitorDivider)
+
+            (tf
+                (name = 'regularToy')
+                (class NyMonitorDescriptionStyle)
+                (text = "R.strings.ny.craftView.monitor.regularToy()")
+            )
+
+            (element NYMonitorParam
+                (name = 'level')
+                (scope
+                    (bind value "level"
+                        (bind enabled "!craftInProgress")
+                    )
+                    (label="R.strings.ny.craftView.monitor.level()")
+                )
+            )
+
+            (element NYMonitorParam
+                (name = 'setting')
+                (scope
+                    (bind value "setting"
+                        (bind enabled "!craftInProgress")
+                    )
+                    (label="R.strings.ny.craftView.monitor.setting()")
+                )
+            )
+
+            (element NYMonitorParam
+                (name = 'type')
+                (scope
+                    (bind value "type"
+                        (bind enabled "!craftInProgress")
+                    )
+                    (label="R.strings.ny.craftView.monitor.type()")
+                )
+            )
+
+            (element NYMonitorParam
+                (name = 'objectType')
+                (scope
+                    (bind value "objectType"
+                        (bind enabled "!craftInProgress")
+                    )
+                    (label="R.strings.ny.craftView.monitor.objectType()")
+                )
+            )
+
+            (element NYMonitorParam
+                (name = 'dublicate')
+                (scope
+                    (bind value "R.strings.ny.craftView.monitor.duplicate[antiduplicateEnabled ? 'on' : 'off']()"
+                        (bind enabled "!craftInProgress")
+                    )
+                    (label="R.strings.ny.craftView.monitor.duplicate.label()")
+                )
+            )
+
+            (bind visible "nextState == PARAMS_REGULAR")
+        )
+
+        # state: craft mega toy
+        (block
+            (name = 'paramsMega')
+            (style
+                (width = 100%)
+            )
+
+            (element NYMonitorParam
+                (name = 'shardsLeft')
+                (scope
+                    (bind value "shardsCount"
+                        (bind enabled "!craftInProgress")
+                    )
+                    (label="R.strings.ny.craftView.monitor.shardsLeft()")
+                )
+            )
+
+            (element NyMonitorDivider)
+
+            (tf
+                (name = 'megaToy')
+                (class NyMonitorDescriptionStyle)
+                (text = "R.strings.ny.craftView.monitor.megaToy()")
+            )
+
+            (element NYMonitorParam
+                (name = 'countMegaToys')
+                (scope
+                    (bind value "countMegaToys"
+                        (bind enabled "!craftInProgress")
+                    )
+                    (label="R.strings.ny.craftView.monitor.countMegaToys()")
+                )
+            )
+
+            (tf
+                (name = 'megaTypeDecor')
+                (class NyMonitorDescriptionStyle)
+                (text = "R.strings.ny.craftView.monitor.megaTypeDecor()")
+            )
+
+            (bind visible "nextState == PARAMS_MEGA")
+        )
+
+        # state: full regular subgroup toys
+        (block
+            (name = 'fullRegularSubGroup')
+            (style
+                (width = 100%)
+            )
+
+            (element NYMonitorParam
+                (name = 'shardsLeft')
+                (scope
+                    (bind value "shardsCount"
+                        (bind enabled "!craftInProgress")
+                    )
+                    (label="R.strings.ny.craftView.monitor.shardsLeft()")
+                )
+            )
+
+            (element NyMonitorDivider)
+
+            (tf
+                (name = 'description')
+                (class NyMonitorDescriptionStyle)
+                (text = "R.strings.ny.craftView.monitor.fullRegularSubGroup()")
+            )
+
+            (bind visible "nextState == FULL_REGULAR_SUBGROUP")
+        )
+
+        # state: full regular toys
+        (block
+            (name = 'fullRegular')
+            (style
+                (width = 100%)
+            )
+
+            (element NYMonitorParam
+                (name = 'shardsLeft')
+                (scope
+                    (bind value "shardsCount"
+                        (bind enabled "!craftInProgress")
+                    )
+                    (label="R.strings.ny.craftView.monitor.shardsLeft()")
+                )
+            )
+
+            (element NyMonitorDivider)
+
+            (tf
+                (name = 'description')
+                (class NyMonitorDescriptionStyle)
+                (text = "R.strings.ny.craftView.monitor.fullRegular()")
+            )
+
+            (bind visible "nextState == FULL_REGULAR")
+        )
+
+        # state: full mega toys
+        (block
+            (name = 'fullMega')
+            (style
+                (width = 100%)
+            )
+
+            (element NYMonitorParam
+                (name = 'shardsLeft')
+                (scope
+                    (bind value "shardsCount"
+                        (bind enabled "!craftInProgress")
+                    )
+                    (label="R.strings.ny.craftView.monitor.shardsLeft()")
+                )
+            )
+
+            (element NyMonitorDivider)
+
+            (tf
+                (name = 'description')
+                (class NyMonitorDescriptionStyle)
+                (text="R.strings.ny.craftView.monitor.fullMega()")
+            )
+
+            (bind visible "nextState == FULL_MEGA")
+        )
+
+        # state: has random comfig
+        (block
+            (name = 'notAvailableRegularCraft')
+            (style
+                (width = 100%)
+            )
+
+            (element NYMonitorParam
+                (name = 'shardsLeft')
+                (scope
+                    (bind value "shardsCount"
+                        (bind enabled "!craftInProgress")
+                    )
+                    (label="R.strings.ny.craftView.monitor.shardsLeft()")
+                )
+            )
+
+            (element NyMonitorDivider)
+
+            (tf
+                (name = 'description')
+                (class NyMonitorDescriptionStyle)
+                (text = "R.strings.ny.craftView.monitor.hasRandomParam()")
+            )
+
+            (bind visible "nextState == HAS_RANDOM_PARAM")
+        )
+
+        # state: craft regular toy if not available fillers
+        (block
+            (name = 'notAvailableFillers')
+            (style
+                (width = 100%)
+            )
+
+            (element NYMonitorParam
+                (name = 'shardsLeft')
+                (scope
+                    (bind value "shardsCount"
+                        (bind enabled "!craftInProgress")
+                    )
+                    (label="R.strings.ny.craftView.monitor.shardsLeft()")
+                )
+            )
+
+            (element NyMonitorDivider)
+
+            (tf
+                (name = 'description')
+                (class NyMonitorDescriptionStyle)
+                (text = "R.strings.ny.craftView.monitor.notAvailableFillers()")
+            )
+
+            (bind visible "nextState == HAS_NOT_FILLERS")
+        )
+
+        (image
+            (style
+                (position = "absolute")
+                (hcenter = 0px)
+                (vcenter = 0px)
+                (blendMode = 'multiply')
+            )
+            (source = "R.images.gui.maps.icons.new_year.craftMachine.text_noize()")
+        )
+
+        (bind mask "$target.parent.craftToy.textMask" init=false
+            (event "onCraftStateChanged")
+            (event "onStartAnimationInMonitor")
+        )
+    )
+
+    (mc 'NYMonitorNoiseMc'
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (vcenter = 0px)
+        )
+
+        (bindcall gotoAndPlay 'start'
+            (event "onStateChanged")
+        )
+
+        (dispatch onAnimationChangedStateComplete on='animationComplete')
+    )
+
+    (mc 'NYMonitorCraftToyMc'
+        (name = 'craftToy')
+        (style
+            (position = "absolute")
+            (hcenter = -25px)
+            (vcenter = -3px)
+        )
+
+        (.toyRegularArt
+            (.icon
+                (bind source "craftIcon" init=false)
+            )
+        )
+
+        (.toyMegaArt
+            (.icon
+                (bind source "craftIcon" init=false)
+            )
+        )
+
+        (.artRegular
+            (.icon
+                (bind source "craftIcon" init=false)
+            )
+        )
+
+        (.toyRegular
+            (.icon
+                (bind source "craftIcon" init=false)
+            )
+        )
+
+        (.artMega
+            (.icon
+                (bind source "craftIcon" init=false)
+            )
+        )
+
+        (.toyMega
+            (.icon
+                (bind source "craftIcon" init=false)
+            )
+        )
+        (bindcall gotoAndPlay "craftIcon != '' ? 'createRegular' : 'start'" watch=false
+            (enabled="craftState == CRAFT_REGULAR")
+            (event "onCraftStateChanged")
+        )
+
+        (bindcall gotoAndPlay "craftIcon != '' ? 'createRegular' : 'start'" watch=false
+            (enabled="craftState == CRAFT_REGULAR_WITH_FILLER")
+            (event "onStartAnimationInMonitor")
+        )
+
+        (bindcall gotoAndPlay "craftIcon != '' ? 'createMega' : 'start'" watch=false
+            (enabled="craftState == CRAFT_MEGA")
+            (event "onCraftStateChanged")
+        )
+
+        (exec "playSound(craftState == CRAFT_MEGA ? R.sounds.hangar_newyear_make_mega_toys() : R.sounds.hangar_newyear_make_toys())"
+            (event "onCraftStateChanged")
+            (enabled="craftState > -1")
+        )
+
+        (dispatch onAddCraftDecoration on='addCraftDecoration' dir=1)
+        (dispatch onAnimationComplete on='craftComplete' dir=1)
+        (dispatch onHideContent on='hideContent')
+        (dispatch onShowContent on='showContent')
+    )
+)
+
+(def layout NYMonitorParam()
+    (scope
+        (event onContentHide)
+        (event onContentHideStart)
+        (event onContentShow)
+        (event onContentPrintStart)
+        (event onContentPrintComplete)
+        (event onValueChanged)
+        (var value:str = ''
+            (dispatch onValueChanged on='evChanged' dir=1)
+        )
+        (dispatch onContentPrintComplete on='onContentShow' dir=1)
+        (dispatch onContentPrintStart on='onContentHideStart' dir=1)
+        (var label:str = '')
+    )
+
+    (tf
+        (name = 'param')
+        (class NyMonitorTextStyle)
+        (bind text "TextFormat(label, {param: value})" watch=false
+            (enabled="label != '' && value != ''")
+            (event "onContentHide")
+        )
+    )
+
+    (block
+        (name = 'maskBlock')
+        (style
+            (position = "absolute")
+            (height = 100%)
+            (backgroundColor = 0xffff0000)
+        )
+
+        (controller $Animation
+            (bindcall play
+                duration = 0.4
+                to       = "{width:0%}"
+                callbacks="{onStart:onContentHideStart, onComplete: onContentHide}"
+                easing="Easing.cubic_out"
+                (event "onValueChanged")
+            )
+
+            (bindcall play
+                duration = 0.4
+                to       = "{width:100%}"
+                callbacks="{onComplete: onContentShow}"
+                easing="Easing.cubic_out"
+                (event "onContentHide")
+            )
+        )
+    )
+
+    (mask = "$target.maskBlock")
+)
+
+(def element NyMonitorDivider()
+    (style
+        (width = 260px)
+        (height = 1px)
+        (margin = 2px)
+        (backgroundColor = 0xff3dee93)
+    )
+)
+
+(def css NyMonitorTextStyle()
+    (fontFamily = $FieldFont)
+    (fontSize = 16)
+    (textColor = 0x3dee93)
+)
+
+(def css NyMonitorDescriptionStyle()
+    (extends NyMonitorTextStyle)
+    (width = 100%)
+)

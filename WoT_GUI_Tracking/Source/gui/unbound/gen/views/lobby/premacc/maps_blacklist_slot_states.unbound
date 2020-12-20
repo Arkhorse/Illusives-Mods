@@ -1,0 +1,12 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro MapsBlacklistSlotStates()
+    (scope
+        (const MAPS_BLACKLIST_SLOT_STATE_ACTIVE:str = 'active')
+        (const MAPS_BLACKLIST_SLOT_STATE_CHANGE:str = 'change')
+        (const MAPS_BLACKLIST_SLOT_STATE_DISABLED:str = 'disabled')
+        (const MAPS_BLACKLIST_SLOT_STATE_COOLDOWN:str = 'cooldown')
+        (const MAPS_BLACKLIST_SLOT_STATE_SELECTED:str = 'selected')
+        (const MAPS_BLACKLIST_SLOT_STATE_ACTIVE_NO_HOVER:str = 'active_no_hover')
+    )
+)

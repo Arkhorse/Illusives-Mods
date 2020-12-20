@@ -1,0 +1,253 @@
+(def layout CrewBookItemView() entrance=true
+    (macro CrewBookItemModel)
+    (macro CrewBookScreenBreackPoints)
+    (scope
+
+        (var overlayAlpha:number = 0)
+        (var back:str = "R.images.gui.maps.icons.crewBooks.bookItem.back()")
+        (var backSmall:str = "R.images.gui.maps.icons.crewBooks.bookItem.back_small()")
+        (var frame:str = "R.images.gui.maps.icons.crewBooks.bookItem.frame()")
+        (var frameSmall:str = "R.images.gui.maps.icons.crewBooks.bookItem.frame_small()")
+        (var frameSelected:str = "R.images.gui.maps.icons.crewBooks.bookItem.frame_selected()")
+        (var frameSelectedSmall:str = "R.images.gui.maps.icons.crewBooks.bookItem.frame_selected_small()")
+        (var disabled:str = "R.images.gui.maps.icons.crewBooks.bookItem.disabled()")
+        (var disabledSmall:str = "R.images.gui.maps.icons.crewBooks.bookItem.disabled_small()")
+        (var isBigFlag:bool = true)
+        (var descStyle:str = 'MainTextStyle')
+        
+        (bind isBigFlag "viewSize.width >= BORDER_SCREEN_WIDHT && viewSize.height >= BORDER_SCREEN_HEIGHT"
+            (event "viewResized")
+        )
+        (bind descStyle "isBigFlag ? 'MainTextStyle' : 'CounterTextStyle'")
+        
+        (event onCrewBookClick)
+        (event onSelectChange)
+        (event showOverlayEvent)
+        (event hideOverlayEvent)
+        
+        (controller $Animation
+            (bindcall play
+                to="{overlayAlpha:1}"
+                duration=0.3
+                easing="Easing.line"
+                (event "showOverlayEvent")
+            )
+        )
+        (controller $Animation
+            (bindcall play
+                to="{overlayAlpha:0}"
+                duration=0.4
+                easing="Easing.line"
+                (event "hideOverlayEvent")
+            )
+        )
+    )
+    (dispatch evSetUseBtnFocus on='click' dir=1 init=false)
+    (exec "playSound(R.sounds.yes1())"
+        (event "onCrewBookClick")
+    )
+    (exec "playSound(R.sounds.highlight())"
+        (event "showOverlayEvent")
+    )
+    (style
+        (bind width "isBigFlag ? 272px : 218px")
+        (bind height "isBigFlag ? 322px : 258px")
+        (align = "left|top")
+    )
+    (block
+        (dispatch showOverlayEvent dir=0 init=false on='rollOver')
+        (dispatch hideOverlayEvent dir=0 init=false on='rollOut')
+        (dispatch onCrewBookClick args="{index: $index}" dir=1 init=false on='click'
+            (enabled = "!isDisabled && !isSelected")
+        )
+        (bind buttonMode "true")
+        (bind mouseEnabled "!isDisabled")
+        (mouseChildren = false)
+        (style
+            (width = 100%)
+            (height = 100%)
+        )
+        (image
+            (name = 'back')
+            (style
+                (position = "absolute")
+            )
+            (bind source "isBigFlag ? back : backSmall")
+        )
+
+        (image
+            (name = 'frame')
+            (style
+                (position = "absolute")
+            )
+            (bind source "isBigFlag ? frame : frameSmall")
+        )
+
+        (image
+            (name = 'frame selected')
+            (style
+                (position = "absolute")
+                (bind top "isBigFlag ? -8px : -5px")
+                (bind left "isBigFlag ? -8px : -5px")
+                (bind alpha "isSelected")
+            )
+            (bind source "isBigFlag ? frameSelected : frameSelectedSmall")
+        )
+        (image
+            (name = 'back disabled')
+            (style
+                (position = "absolute")
+            )
+            (bind visible "isDisabled")
+            (bind source "isBigFlag ? disabled : disabledSmall")
+        )
+        (block
+            (name = 'bookIcon')
+            (bind class "!isDisabled ? 'CrewBookNormalStyle' : 'CrewBookDisableStyle'")
+            (image
+                (style
+                    (position = "absolute")
+                    (bind scaleX "isBigFlag ? 1 : 0.8")
+                    (bind scaleY "isBigFlag ? 1 : 0.8")
+                    (bind top "isBigFlag ? -28px : -21px")
+                    (bind left "isBigFlag ? 36px : 28px")
+                )
+                (bind source "bookIcon")
+            )
+            (bind alpha "!isDisabled ? 1 - overlayAlpha : 0.8")
+        )
+        (block
+            (name= 'title')
+            (style
+                (bind width "isBigFlag ? 222px : 180px")
+                (bind alpha "isDisabled ? 0.5 : 1")
+                (height = 50px)
+                (bind top "isBigFlag ? 138px : 97px")
+                (bind left "isBigFlag ? 24px : 18px")
+                (position = "absolute")
+                (align = "bottom")
+            )
+            (tf
+                (bind class "isBigFlag ? 'HighTitleTextStyle' : 'MiddleTitleTextStyle'")
+                (style
+                    (width = 100%)
+                    (leading = -2)
+                )
+                (bind text "title")
+            )
+        )
+        (tf
+            (name = 'description block')
+            (style  
+                (bind width "isBigFlag ? 222px : 180px")
+                (bind top "isBigFlag ? 189px : 150px")
+                (bind left "isBigFlag ? 24px : 18px")
+                (position = "absolute")
+                (bind alpha "isDisabled ? 0.7 : 1")
+                (autoSize = true)
+                (wordWrap = true)
+            )
+            (bind htmlText "htmlTextStyle(
+                    formatString(description, descriptionFmtArgs, true),
+                    descStyle,
+                    leading=-1px
+                )" 
+                init=false
+                (enabled="descriptionFmtArgs.length > 0")
+            ) 
+        )
+        (hblock
+            (name = 'countbox')
+            (style
+                (bind right "isBigFlag ? 20px : 18px")
+                (bind bottom "isBigFlag ? 25px : 18px")
+                (position = "absolute")
+                (align = "middle|right")
+            )
+            (image
+                (style
+                    (bind scaleX "isBigFlag ? 1 : 0.8")
+                    (bind scaleY "isBigFlag ? 1 : 0.8")
+                )
+                (source = "R.images.gui.maps.icons.library.storage_icon()")
+            )
+            (tf
+                (class MainTextStyle)
+                (bind text "amount")
+            )
+        )
+        (element SkillBookSlotOverlay
+            (scope
+                (bind amount "amount" init=false)
+                (bind bookIcon "bookIcon" init=false)
+                (bind title "title"init=false)
+                (bind description "description" init=false)
+                (bind descriptionFmtArgs "descriptionFmtArgs" init=false)
+                (bind overlayDescription "overlayDescription" init=false)
+                (bind overlayDescriptionFmtArgs "overlayDescriptionFmtArgs" init=false)
+                (bind isDisabled "isDisabled" init=false)
+            )
+            (bind alpha "overlayAlpha")
+            (bind visible "!isDisabled")
+        )
+    )
+    (hblock
+        (name = 'buttons')
+        (style
+            (width = 100%)
+            (bind bottom "isBigFlag ? -10px : -10px")
+            (position = "absolute")
+            (align = "center|middle")
+        )
+        (bind visible "isInShop")
+        (image
+            (name = 'back')
+            (style
+                (position = "absolute")
+                (vcenter = -1px)
+                (hcenter = 0px)
+            )
+            (source = "R.images.gui.maps.icons.crewBooks.bookItem.buy_btn_line()")
+        )
+        (button
+            (macro ButtonStylePrimary "BUTTON_SIZE_MEDIUM")
+            (bind visible "isDisabled")
+            (scope
+                (dispatch onBuyBtnClick args="{compactDesc:compactDesc}"on='clicked' dir=1)
+            )
+            (label = "R.strings.crew_books.screen.button.buy.label()")
+            (style
+                (bind width "isBigFlag ? 108px : 90px")
+                (height = 22px)
+            )
+        )
+        (button
+            (macro ButtonStyleSecondary "BUTTON_SIZE_MEDIUM")
+            (bind visible "!isDisabled")
+            (scope
+                (dispatch onBuyBtnClick args="{compactDesc:compactDesc}"on='clicked' dir=1)
+            )
+            (label = "R.strings.crew_books.screen.button.buy.label()")
+            (style
+                (bind width "isBigFlag ? 108px : 90px")
+                (height = 22px)
+            )
+        )
+    )
+)
+
+(def css CrewBookDisableStyle()
+    (filters
+        (colorMatrix
+            (matrix =  [0.3,0.59,0.11,
+                        0,0,0.3,0.59,
+                        0.11,0,0,0.3,
+                        0.59,0.11,0,0,
+                        0,0,0,1,0])
+        )
+    )
+)
+
+(def css CrewBookNormalStyle()
+    (filters)
+)

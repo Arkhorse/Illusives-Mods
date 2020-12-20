@@ -1,0 +1,208 @@
+(def layout RewardVideoPlayer(name:str = '')
+    (scope
+        (var videoName:str ='')
+        (event evStopAnimation)
+        (event evMetaDataChanged)
+        (event evPlaybackStarted)
+        (event evSeekCompleted)
+        (event evSeekStarted)
+
+        (var bufferLength:number = 1)
+        (var videoDuration:number = 0)
+        (var videoAspectRatio:number = 0)
+        (bind videoAspectRatio "$event.width/$event.height" init=false
+            (event "evMetaDataChanged")
+        )
+        (bind videoDuration "$event.duration-0.001" init=false
+            (event "evMetaDataChanged")
+        )
+        (var viewRatio:number = "viewSize.width / viewSize.height")
+        (var w:number = 0)
+        (var h:number = 0)
+        (var videoMarginRight:number = 0)
+        (var videoMarginLeft:number = 0)
+        (bind viewRatio "viewSize.width / viewSize.height"
+            (event "viewResized")
+        )
+        (bind w "viewRatio > videoAspectRatio ? viewSize.width : videoAspectRatio * viewSize.height" init=false
+            (event "viewResized")
+            (bind enabled "viewRatio > 0 && videoAspectRatio > 0")
+        )
+        (bind h "viewRatio > videoAspectRatio ? viewSize.width / videoAspectRatio : viewSize.height" init=false
+            (event "viewResized")
+            (bind enabled "viewRatio > 0 && videoAspectRatio > 0")
+        )
+        (bind videoMarginRight "h > viewSize.height ? -(h - viewSize.height >> 1) : 0" watch=false init=false
+            (bind trigger "h")
+        )
+        (bind videoMarginLeft "w > viewSize.width ? -(w - viewSize.width >> 1) : 0" watch=false init=false
+            (bind trigger "w")
+        )
+
+        (var needSeekToEnd:bool = false)
+
+        (var needStop:bool = false)
+        (var needPause:bool = false)
+        (var playbackStarted:bool = false)
+
+        (bind playbackStarted true init=false
+            (event "evPlaybackStarted")
+        )
+
+        (var playerAlpha:number = 0)
+        (controller $Animation
+            (play duration=0.5 to={playerAlpha:1})
+        )
+    )
+    (style
+        (bind alpha "playerAlpha")
+    )
+
+    (video original_widht=1024 original_height=768
+        (name = 'player')
+        (style
+            (bind width "w" init=false)
+            (bind height "h" init=false)
+            (bind marginTop "videoMarginRight" init=false)
+            (bind marginLeft "videoMarginLeft" init=false)
+        )
+
+        # videoSrc from scope
+        (volume = 1)
+        (autoPlay = 1)
+        (seek = 0)
+        (bind bufferTime "bufferLength")
+        (bind source "videoName")
+
+        (bindcall pause
+             (bind enabled "needPause")
+        )
+        (bindcall resume
+             (bind enabled "!needPause")
+        )
+
+        (bindcall stop init=false
+             (bind enabled "!needSeekToEnd && needStop")
+        )
+
+        (bind seek "videoDuration - 0.001" init=false watch=false
+            (bind enabled "needSeekToEnd && needStop")
+        )
+
+        (dispatch evMetaDataChanged dir=1 on='metaDataChanged')
+        (dispatch evPlaybackStarted on='playbackStarted')
+        (dispatch evStopAnimation on='playbackStopped')
+        (dispatch evSeekCompleted on='seekCompleted')
+    )
+)
+
+(def layout RewardVideo()
+    (scope
+        (event evNeedStop)
+
+        (var sourceName:str = '')
+        (var bufferLength:number = 1)
+        (event evOnPlaybackStarted)
+        (event evOnPlaybackStopped)
+        (event evOnVideoFadeOut)
+        (var canClick:bool = true)
+        (var isVideoPaused:bool = false)
+        (var canEscape:bool = false)
+        (var canFadeOut:bool = true)
+        (var seekToEnd:bool = false)
+        (var reset:bool = false)
+        (var isVideoPlaying:bool = false)
+        (bind isVideoPlaying true init=false
+            (event "evOnPlaybackStarted")
+        )
+        (bind isVideoPlaying false init=false
+            (event "evOnPlaybackStopped")
+        )
+        (var playVideo:bool = false)
+        (bind playVideo false init=false
+            (bind enabled "isVideoPlaying")
+        )
+        (bind playVideo false init=false
+            (bind enabled "reset")
+        )
+        (var stopVideo:bool = false)
+        (bind stopVideo false init=false
+            (bind enabled "!isVideoPlaying")
+        )
+        (bind stopVideo false init=false
+            (bind enabled "reset")
+        )
+
+        # hack for WOTD-174378
+        (var isStopEnabled:number = 0)
+        (controller $Animation
+            (bindcall stop (bind enabled "!isVideoPlaying"))
+            (bindcall play duration=0.5 from="{isStopEnabled:0}" to="{isStopEnabled:1}"
+                (bind enabled "isVideoPlaying")
+            )
+        )
+        (bind isStopEnabled 0 init=false
+            (bind enabled "!isVideoPlaying")
+        )
+        (var videoAlpha:number = 0)
+        (controller $Animation
+            (bindcall play duration=0.5 from={videoAlpha:1} to={videoAlpha:0} callbacks="{onComplete: evOnVideoFadeOut}"
+                (event "evOnPlaybackStopped")
+                (enabled = "canFadeOut")
+            )
+            (bindcall play duration=0.5 from={videoAlpha:0} to={videoAlpha:1} init=true)
+        )
+    )
+    (style
+        (position = "absolute")
+        (backgroundColor = 0x01000000)
+    )
+    (dispatch evOnPlaybackStopped
+        (bind enabled "reset && isVideoPlaying")
+    )
+
+    # Place for entry video
+    (controller $Instance renderer = 'RewardVideoPlayer' layout = true
+        (enabled = false)
+        (bind enabled true init=false
+            (bind enabled "sourceName != '' && playVideo && !reset")
+        )
+        (bind enabled false init=false
+            (event "evOnVideoFadeOut")
+        )
+        (bind enabled false init=false
+            (bind enabled "reset")
+        )
+        (exprs
+            (scope
+                (bind bufferLength "bufferLength")
+                (bind videoName "sourceName")
+                (bind needSeekToEnd "seekToEnd")
+                (bind needStop true init=false
+                    (event "evNeedStop")
+                )
+                (dispatch evOnPlaybackStarted on='evPlaybackStarted')
+                (dispatch evOnPlaybackStopped on='evStopAnimation'
+                    (enabled = "isVideoPlaying")
+                )
+                (bind needPause "isVideoPaused")
+            )
+            (style
+                (bind alpha "videoAlpha")
+            )
+        )
+    )
+
+    (dispatch evNeedStop on='stageClick'
+        (enabled = "$event.buttonIdx == MOUSE.LEFT && canClick && isStopEnabled == 1")
+    )
+    (dispatch evNeedStop on='stageKeyUp'
+        (enabled = "canClick && $event.keyCode == KEYBOARD.SPACE && isStopEnabled == 1")
+    )
+    (dispatch evNeedStop on='stageKeyUp'
+        (enabled = "$event.keyCode == KEYBOARD.ESCAPE && canEscape && isStopEnabled == 1")
+    )
+    (dispatch evNeedStop
+        (bind enabled "stopVideo && isStopEnabled == 1")
+    )
+)

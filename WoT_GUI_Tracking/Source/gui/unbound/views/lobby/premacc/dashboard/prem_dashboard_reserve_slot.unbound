@@ -1,0 +1,192 @@
+(def macro PremDashboardReserveSlot(
+        size:expression, back:expression, hover:expression, active:expression, 
+        active_hover:expression, gradient:expression, line_color:expression,
+        icon:expression, empty_tooltip:expression, active_toottip:expression=null
+    )
+    (scope
+        (var isActive:bool = "progress >= 0")
+        
+        (event evTimeleftChanged)
+        (var changedTimeLift:number = "timeleft"
+            (dispatch evTimeleftChanged on='evChanged')
+        )
+
+        (var dayStr:str = "R.strings.premacc.dashboard.header.timeLeft.day()")
+        (var hourStr:str = "R.strings.premacc.dashboard.header.timeLeft.hour()")
+        (var minStr:str = "R.strings.premacc.dashboard.header.timeLeft.min()")
+        (var lessMinStr:str = "R.strings.premacc.dashboard.header.timeLeft.lessMin()")
+
+        (const FILL_PADDING:number = 2)
+        (var activeFillSize:number = "size - FILL_PADDING * 2")
+        (var activeFillWidth:number = "activeFillSize")
+        (var activeFillHeight:number = "round(activeFillSize * (100 - progress) * 0.01)")
+    )
+    (controller $ToolTip
+        (args body="empty_tooltip")
+        (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+        (bind enabled "!isActive")
+    )
+    (controller $ToolTip
+        (args tooltipType="active_toottip" id="id")
+        (content = "R.views.common.tooltip_window.backport_tooltip_content.BackportTooltipContent.resId")
+        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+        (bind enabled "active_toottip != null && isActive")
+    )
+    (button
+        (style
+            (width = "size")
+            (height = "size")
+        )
+        (macro StateComponentsSound)
+        (bindcall hover source="isActive ? active_hover : hover" scale9grid=null blend='normal' offsets=null init=true)
+        (bindcall background source="isActive ? active : back" scale9grid=null offsets=null init=true)
+        (block
+            (style
+                (position = "absolute")
+                (hcenter = 0px)
+                (bottom = "FILL_PADDING")
+                (bind width "activeFillWidth")
+                (bind height "activeFillHeight")
+            )
+            (mouseEnabled=false)
+            (mouseChildren=false)
+            (bind visible "isActive")
+            (block
+                (name = 'activeGradient')
+                (style
+                    (macro AbsPositionFullSize)
+                    (bind backgroundImage "gradient")
+                    (backgroundSize = "fill")
+                )
+            )
+            (block
+                (name = 'activeLine')
+                (style
+                    (macro AbsPositionFullSize)
+                )
+                (.graphics
+                    (bindcall clear
+                        (event "evTimeleftChanged")
+                    )
+                    (bindcall lineStyle 0 "line_color" 0.5 true 'none' 'none'
+                        (event "evTimeleftChanged")
+                    )
+                    (bindcall moveTo 1 0 watch=false
+                        (event "evTimeleftChanged")
+                    )
+                    (bindcall lineTo "activeFillWidth - 1" 0 watch=false
+                        (event "evTimeleftChanged")
+                    )
+                )
+            )
+            (block
+                (name = 'pattern')
+                (style
+                    (macro AbsPositionFullSize)
+                    (backgroundImage = 'bitmap:ReserveSlotFillPattern')
+                    (backgroundSize = "repeat")
+                )
+            )
+        )
+        (image
+            (style
+                (position = "absolute")
+                (hcenter = 0)
+                (vcenter = 0)
+            )
+            (bind source "icon"
+                (bind enabled "isActive && iconId != ''")
+            )
+            (bind visible "isActive")
+        )
+    )
+    (tf
+        (name = 'time_left')
+        (class BoosterTextStyle)
+        (style
+            (width = 100%)
+            (position = "absolute")
+            (hcenter = 0)
+            (top = "100% + 5px")
+            (textAlign = "center")
+        )
+        (bind text "timeLeft(timeleft, dayStr, hourStr, minStr, lessMinStr)"
+            (enabled="isActive && timeleft > 0")
+        )
+        (bind visible "isActive")
+    )
+)
+
+(def constant PREM_DASHBRD_BIG_SLOT_SZ 80)
+(def constant PREM_DASHBRD_SMALL_SLOT_SZ 48)
+(def constant PREM_DASHBRD_PRSNL_SLOT_TOP_LINE_CLR 0xdb9d20)
+(def constant PREM_DASHBRD_CLAN_SLOT_TOP_LINE_CLR 0x6fdb20)
+
+(def element PremDashboardPersonalReserveSlotBig() layout=true
+    (macro PremDashboardHeaderReserveModel)
+    (macro PremDashboardHeaderTooltips)
+    (macro PremDashboardReserveSlot
+        "PREM_DASHBRD_BIG_SLOT_SZ"
+        "R.images.gui.maps.icons.premacc.dashboard.header.personalSlot.normal()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.personalSlot.hover()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.personalSlot.active()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.personalSlot.active_hover()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.personalSlot.gradient()"
+        "PREM_DASHBRD_PRSNL_SLOT_TOP_LINE_CLR"
+        "R.images.gui.maps.icons.boosters[iconId + '_medium']()"
+        "R.strings.tooltips.prem.dashboard.header.personalReserves.emptySlot.body()"
+        "TOOLTIP_PERSONAL_RESERVE"
+    )
+)
+
+(def element PremDashboardPersonalReserveSlotSmall() layout=true
+    (macro PremDashboardHeaderReserveModel)
+    (macro PremDashboardHeaderTooltips)
+    (macro PremDashboardReserveSlot
+        "PREM_DASHBRD_SMALL_SLOT_SZ"
+        "R.images.gui.maps.icons.premacc.dashboard.header.personalSlot.normal_small()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.personalSlot.hover_small()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.personalSlot.active_small()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.personalSlot.active_small_hover()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.personalSlot.gradient()"
+        "PREM_DASHBRD_PRSNL_SLOT_TOP_LINE_CLR"
+        "R.images.gui.maps.icons.boosters[iconId]()"
+        "R.strings.tooltips.prem.dashboard.header.personalReserves.emptySlot.body()"
+        "TOOLTIP_PERSONAL_RESERVE"
+    )
+)
+
+(def element PremDashboardClanReserveSlotBig() layout=true
+    (macro PremDashboardHeaderReserveModel)
+    (macro PremDashboardHeaderTooltips)
+    (macro PremDashboardReserveSlot
+        "PREM_DASHBRD_BIG_SLOT_SZ"
+        "R.images.gui.maps.icons.premacc.dashboard.header.clanSlot.normal()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.clanSlot.hover()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.clanSlot.active()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.clanSlot.active_hover()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.clanSlot.gradient()"
+        "PREM_DASHBRD_CLAN_SLOT_TOP_LINE_CLR"
+        "R.images.gui.maps.icons.boosters[iconId + '_medium']()"
+        "R.strings.tooltips.prem.dashboard.header.clanReserves.emptySlot.body()"
+        "TOOLTIP_CLAN_RESERVE"
+    )
+)
+
+(def element PremDashboardClanReserveSlotSmall() layout=true
+    (macro PremDashboardHeaderReserveModel)
+    (macro PremDashboardHeaderTooltips)
+    (macro PremDashboardReserveSlot
+        "PREM_DASHBRD_SMALL_SLOT_SZ"
+        "R.images.gui.maps.icons.premacc.dashboard.header.clanSlot.normal_small()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.clanSlot.hover_small()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.clanSlot.active_small()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.clanSlot.active_small_hover()"
+        "R.images.gui.maps.icons.premacc.dashboard.header.clanSlot.gradient()"
+        "PREM_DASHBRD_CLAN_SLOT_TOP_LINE_CLR"
+        "R.images.gui.maps.icons.boosters[iconId]()"
+        "R.strings.tooltips.prem.dashboard.header.clanReserves.emptySlot.body()"
+        "TOOLTIP_CLAN_RESERVE"
+    )
+)

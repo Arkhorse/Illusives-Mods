@@ -1,0 +1,1560 @@
+.TextButton_base_b6 {
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    font-size: 12rem;
+    position: relative;
+    cursor: pointer;
+}
+
+    .TextButton_base__right_39 {
+        flex-direction: row-reverse;
+    }
+.TextButton_icon_17 {
+    width: 32rem;
+    height: 32rem;
+    background: no-repeat center / contain;
+    position: relative;
+}
+.TextButton_icon__back_43,
+    .TextButton_icon__forward_59 {
+        margin: -1rem -5rem;
+        background-image: url('R.images.gui.maps.icons.components.text_button.back');
+        transform: translateY(1rem);
+    }
+.TextButton_icon__forward_59 {
+        transform: rotate(180deg) translateY(1rem);
+    }
+.TextButton_icon__close_53 {
+        margin: -1rem 0;
+        background-image: url('R.images.gui.maps.icons.components.text_button.close');
+    }
+.TextButton_icon__info_33 {
+        margin: -1rem -5rem;
+        background-image: url('R.images.gui.maps.icons.components.text_button.info');
+    }
+.TextButton_glow_a4 {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .16s;
+}
+.TextButton_icon__back_43 .TextButton_glow_a4,
+    .TextButton_icon__forward_59 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.back_hover');
+    }
+.TextButton_icon__close_53 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.close_hover');
+    }
+.TextButton_icon__info_33 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.info_hover');
+    }
+.TextButton_base_b6:hover .TextButton_glow_a4 {
+        opacity: 1;
+    }
+.TextButton_base_b6:active .TextButton_glow_a4 {
+        opacity: 0;
+    }
+.TextButton_caption_82 {
+    position: relative;
+    transition: color .16s;
+}
+.TextButton_caption__back_b9,
+    .TextButton_caption__forward_4e,
+    .TextButton_caption__close_36 {
+        color: #FFDD99;
+        text-shadow: 0 0 10rem rgba(255,42,0, 1),
+            0 0 10rem rgba(255,42,0, .4),
+            0 0 10rem rgba(255,42,0, .4),
+            0 0 2rem rgba(255,42,0, .4),
+            0 0 1rem rgba(255,42,0, .4),
+            0 0 2rem rgba(255,42,0, .4),
+            0 0 1rem rgba(255,42,0, .4);
+    }
+.TextButton_base_b6:hover .TextButton_caption__back_b9, .TextButton_base_b6:hover .TextButton_caption__forward_4e, .TextButton_base_b6:hover .TextButton_caption__close_36 {
+            color: #fffa9f;
+        }
+.TextButton_base_b6:active .TextButton_caption__back_b9, .TextButton_base_b6:active .TextButton_caption__forward_4e, .TextButton_base_b6:active .TextButton_caption__close_36 {
+            color: #FFDD99;
+        }
+.TextButton_caption__info_23 {
+        padding: 0 5rem;
+        color: #CCFFFF;
+        text-shadow: 0 0 12rem rgba(31,68,255, .8),
+            0 0 8rem #00eaff;
+    }
+.TextButton_base_b6:hover .TextButton_caption__info_23 {
+            color: #e3ffff;
+            text-shadow: 0 0 12rem rgba(31,68,255, .8),
+                0 0 12rem rgba(0,234,255, 1),
+                0 0 8rem #00eaff;
+        }
+.TextButton_base_b6:active .TextButton_caption__info_23 {
+            color: #CCFFFF;
+            text-shadow: 0 0 12rem rgba(31,68,255, .6),
+                0 0 8rem #00eaff;
+        }
+.TextButton_goto_e7 {
+    color: #7c7c6c;
+}
+.TextButton_base__left_ff .TextButton_goto_e7 {
+        margin-left: 8rem;
+    }
+.TextButton_base__right_39 .TextButton_goto_e7 {
+        margin-right: 8rem;
+    }
+.TextButton_shine_e2 {
+    width: 90rem;
+    height: 40rem;
+    background: url('R.images.gui.maps.icons.components.text_button.shine') no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: -4rem;
+    transition: opacity .16s;
+    pointer-events: none;
+}
+.TextButton_base__left_ff .TextButton_shine_e2 {
+        left: -4rem;
+    }
+.TextButton_base__right_39 .TextButton_shine_e2 {
+        right: -4rem;
+        transform: rotate(180deg);
+    }
+.TextButton_base_b6:hover .TextButton_shine_e2 {
+        opacity: 1;
+    }
+.TextButton_base_b6:active .TextButton_shine_e2 {
+        opacity: 0;
+    }
+
+@keyframes Header_fadeOut_49 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes Header_fadeIn_53 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes Header_fadeInWithScale_c7 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes Header_slideUp_34 {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes Header_slideLeft_e9 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes Header_scale_b5 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.Header_base_eb {
+    position: relative;
+    transform: translateY(-50rem);
+    animation: Header_baseIn_db .5s ease-out 1s 1 cubic-bezier(.07, .82, .17, 1) forwards;
+}
+
+.Header_title_4c {
+    color: #fff;
+    font-size: 73rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+@media (min-width: 1600px) and (min-height: 900px) {
+
+.Header_title_4c {
+        font-size: 144rem
+}
+    }
+
+.Header_title__overlay_bf {
+        opacity: 0;
+        mix-blend-mode: overlay;
+        animation: Header_overlayIn_f8 .5s linear 1s 1 normal forwards;
+    }
+
+.Header_title__add_43 {
+        opacity: 0;
+        mix-blend-mode: additive;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: Header_addIn_93 .5s linear 1s 1 normal forwards;
+    }
+
+@keyframes Header_baseIn_db {
+    0% {
+        transform: translateY(-50rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes Header_overlayIn_f8 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .7;
+    }
+}
+
+@keyframes Header_addIn_93 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .3;
+    }
+}
+
+@keyframes Subheader_fadeOut_b9 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes Subheader_fadeIn_8d {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes Subheader_fadeInWithScale_b5 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes Subheader_slideUp_37 {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes Subheader_slideLeft_c9 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes Subheader_scale_73 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.Subheader_base_78 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50rem);
+    animation: Subheader_baseIn_c7 .5s ease-out 1s 1 cubic-bezier(.07, .82, .17, 1) forwards;
+}
+
+.Subheader_line_12 {
+    width: 320rem;
+    height: 2rem;
+    background: repeat-y center center / contain;
+    opacity: 0;
+    animation: Subheader_lineIn_d2 .5s ease-out 1s 1 cubic-bezier(.07, .82, .17, 1) forwards;
+}
+
+.Subheader_line__left_b9 {
+        background-image: url('R.images.gui.maps.icons.seniorityAwards.season2020.line_left');
+    }
+
+.Subheader_line__right_8f {
+        background-image: url('R.images.gui.maps.icons.seniorityAwards.season2020.line_right');
+    }
+
+.Subheader_text_74 {
+    position: relative;
+}
+
+.Subheader_title_69 {
+    padding: 5rem 20rem 6rem;
+    border-left: 1rem solid rgba(0, 0, 0, 0); /* bug fix font render */
+    color: #fefeec;
+    font-size: 20rem;
+    line-height: 1;
+}
+
+@media (min-width: 1600px) and (min-height: 900px) {
+
+.Subheader_title_69 {
+        font-size: 24rem
+}
+    }
+
+.Subheader_title__overlay_50 {
+        opacity: 0;
+        mix-blend-mode: overlay;
+        animation: Subheader_overlayIn_d6 .5s linear 1s 1 normal forwards;
+    }
+
+.Subheader_title__add_cc {
+        opacity: 0;
+        mix-blend-mode: additive;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: Subheader_addIn_cb .5s linear 1s 1 normal forwards;
+    }
+
+@keyframes Subheader_lineIn_d2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes Subheader_baseIn_c7 {
+    0% {
+        transform: translateY(-50rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes Subheader_overlayIn_d6 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .7;
+    }
+}
+
+@keyframes Subheader_addIn_cb {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .7;
+    }
+}
+
+.Reward_base_ea {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    height: 80rem;
+    position: relative;
+}
+
+    .Reward_base_ea.Reward_small_e3 {
+        width: 48rem;
+        height: 48rem;
+    }
+
+    .Reward_base_ea .Reward_image_89 {
+        position: relative;
+    }
+
+    .Reward_base_ea .Reward_image_89 .Reward_icon_df {
+            width: 80rem;
+            height: 80rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            z-index: 1;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_icon_df.Reward_small_e3 {
+                width: 48rem;
+                height: 48rem;
+            }
+
+    .Reward_base_ea .Reward_image_89 .Reward_overlay_68 {
+            width: 128rem;
+            height: 128rem;
+            background: no-repeat center / 100%;
+            position: absolute;
+            top: -32rem;
+            left: -32rem;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_overlay_68.Reward_small_e3 {
+                width: 96rem;
+                height: 96rem;
+                background-size: 100%;
+                overflow: visible;
+                top: -24rem;
+                left: -24rem;
+            }
+
+    .Reward_base_ea .Reward_image_89 .Reward_highlight_36 {
+            width: 80rem;
+            height: 80rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 80rem 80rem;
+            position: absolute;
+            z-index: 0;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_highlight_36.Reward_small_e3 {
+                width: 48rem;
+                height: 48rem;
+                background-size: 50rem 50rem;
+            }
+
+    .Reward_base_ea .Reward_info_72 {
+        margin-top: -13rem;
+        color: #e9e2bf;
+        font-size: 14rem;
+        line-height: 18rem;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .Reward_base_ea .Reward_info_72.Reward_multi_64 {
+            margin-right: 2rem;
+            text-align: right;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_multi_64.Reward_small_e3 {
+                margin-right: 0;
+            }
+
+    .Reward_base_ea .Reward_info_72.Reward_small_e3 {
+            margin: -10rem -10rem 0;
+            font-size: 14rem;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_credits_3f {
+            color: #ced9d9;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_gold_e3 {
+            color: #ffc363;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_crystal_69 {
+            color: #c9c9b6;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_premiumTank_29 {
+            color: #fd9;
+        }
+
+@keyframes Rewards_fadeOut_67 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes Rewards_fadeIn_56 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes Rewards_fadeInWithScale_65 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes Rewards_slideUp_5f {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes Rewards_slideLeft_1e {
+    0% {
+        opacity: 0;
+        transform: translateX(-50rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes Rewards_scale_6a {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.Rewards_base_e7 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.Rewards_reward_72 {
+    margin: 0 25rem;
+    position: relative;
+    transition: .4s cubic-bezier(.07, .82, .17, 1) opacity,
+                .4s cubic-bezier(.07, .82, .17, 1) transform;
+}
+
+.Rewards_reward__small_b8 {
+        margin: 0 12rem;
+    }
+
+.Rewards_reward_72.Rewards_entering_d0 {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+
+.Rewards_reward_72.Rewards_entered_26 {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+.Rewards_count_39 {
+    opacity: 0;
+    animation-name: Rewards_fadeIn_56;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: 1.8s;
+    animation-iteration-count: 1;
+    color: #e9e2bf;
+    font-size: 14rem;
+    position: absolute;
+    top: 90%;
+    right: 15%;
+    z-index: 4;
+}
+
+.Rewards_count__silver_aa {
+        color: #ced9d9;
+    }
+
+.Rewards_count__gold_2f {
+        color: #ffc363;
+    }
+
+.Rewards_count__crystal_b7 {
+        width: 100%;
+        color: #c9c9b6;
+        text-align: center;
+        right: 0;
+    }
+
+.Rewards_count__premium_99 {
+        width: 90%;
+        text-align: center;
+        right: 0;
+    }
+
+@keyframes Vehicles_fadeOut_a6 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes Vehicles_fadeIn_30 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes Vehicles_fadeInWithScale_b1 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes Vehicles_slideUp_da {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes Vehicles_slideLeft_4f {
+    0% {
+        opacity: 0;
+        transform: translateX(-50rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes Vehicles_scale_c5 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.Vehicles_base_1d {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.Vehicles_vehicle_97 {
+    width: 370rem;
+    height: 230rem;
+    margin: 0 -60rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0;
+    position: relative;
+    transform: scale(.01);
+}
+
+.Vehicles_vehicle__small_d7 {
+        width: 340rem;
+        height: 210rem;
+        margin: 0 -55rem;
+    }
+
+.Vehicles_vehicle_97.Vehicles_entered_c3 {
+        opacity: 1;
+        animation: Vehicles_bounce_e5 1s cubic-bezier(.07, .82, .17, 1) forwards;
+    }
+
+@keyframes Vehicles_bounce_e5 {
+    0% {
+        transform: scale(.01);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes Ribbon_fadeOut_6b {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes Ribbon_fadeIn_d9 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes Ribbon_fadeInWithScale_2f {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes Ribbon_slideUp_de {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes Ribbon_slideLeft_d3 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes Ribbon_scale_50 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.Ribbon_base_0f {
+    display: flex;
+    align-items: flex-end;
+    height: 170rem;
+    margin: 100rem 0;
+    position: relative;
+}
+
+.Ribbon_base__withVehicles_d4 {
+        height: 350rem;
+        margin-top: 50rem;
+    }
+
+.Ribbon_base__small_55 {
+        height: 150rem;
+    }
+
+.Ribbon_base__smallWithVehicles_8e {
+        height: 300rem;
+        margin-top: 50rem;
+    }
+
+.Ribbon_ribbon_33 {
+    position: relative;
+}
+
+.Ribbon_rewards_4b {
+    opacity: 0;
+    animation-name: Ribbon_fadeIn_d9;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    width: 2089rem;
+    height: 170rem;
+    background: url('R.images.gui.maps.icons.seniorityAwards.season2020.ribbon') no-repeat center center / contain;
+    position: relative;
+    z-index: 4;
+}
+
+.Ribbon_base__small_55 .Ribbon_rewards_4b {
+        height: 150rem;
+        background-image: url('R.images.gui.maps.icons.seniorityAwards.season2020.ribbon_small');
+    }
+
+.Ribbon_vehicles_2d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 150rem;
+    left: 0;
+    z-index: 5;
+    transform: translateY(30rem);
+}
+
+.Ribbon_light_20 {
+    transform: scale(0);
+    animation-name: Ribbon_scale_50;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: 1.2s;
+    animation-iteration-count: 1;
+    width: 1920rem;
+    height: 486rem;
+    margin-left: -960rem;
+    background: url('R.images.gui.maps.icons.seniorityAwards.season2020.ribbon_light') no-repeat center center / contain;
+    position: absolute;
+    top: -484rem;
+    left: 50%;
+    z-index: 1;
+    transform-origin: center bottom;
+    pointer-events: none;
+}
+
+.Ribbon_base__small_55 .Ribbon_light_20 {
+        top: -464rem;
+    }
+
+.Ribbon_glow_05 {
+    opacity: 0;
+    animation-name: Ribbon_fadeIn_d9;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: 1.2s;
+    animation-iteration-count: 1;
+    width: 1920rem;
+    height: 486rem;
+    margin: -413rem 0 0 -960rem;
+    background: url('R.images.gui.maps.icons.seniorityAwards.season2020.ribbon_glow') no-repeat center center / contain;
+    mix-blend-mode: additive;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.Ribbon_base__small_55 .Ribbon_glow_05 {
+        margin-top: -393rem;
+    }
+
+.Ribbon_rays_df {
+    width: 1300rem;
+    height: 980rem;
+    margin: -565rem 0 0 -650rem;
+    background: url('R.images.gui.maps.icons.seniorityAwards.season2020.rays') no-repeat center center / contain;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 2;
+    animation-name: Ribbon_raysAppearance_9a, Ribbon_rotate_50;
+    animation-duration: 1.2s, 60s;
+    animation-fill-mode: forwards, forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1), linear;
+    animation-delay: 1.4s, 2.2s;
+    animation-iteration-count: 1, infinite;
+    pointer-events: none;
+}
+
+.Ribbon_rays__vehicles_84 {
+        top: 0;
+        animation-name: Ribbon_raysAppearance_9a, Ribbon_none_0a;
+        animation-delay: 1.8s, 1.8s;
+    }
+
+@keyframes Ribbon_raysAppearance_9a {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes Ribbon_rotate_50 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.CButton_base_40 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0 0 0 1rem rgba(0,0,0, .6);
+    position: relative;
+    cursor: pointer;
+}
+
+    /* type*/
+
+    .CButton_base__main_42,
+    .CButton_base__primary_7f,
+    .CButton_base__primaryGreen_6f,
+    .CButton_base__primaryRed_ec,
+    .CButton_base__secondary_50 {
+        background-size: 100% 100%;
+    }
+
+    .CButton_base__main_42 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+
+    .CButton_base__primary_7f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+
+    .CButton_base__primaryGreen_6f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+
+    .CButton_base__primaryRed_ec {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+
+    .CButton_base__secondary_50 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+
+    .CButton_base__ghost_ed {
+        border-radius: 3rem;
+        box-shadow: 0 0 0 1rem rgba(0,0,0, .3),
+            0 0 0 1rem rgba(255,255,255, .15) inset;
+        background-image: linear-gradient(0deg, rgba(13, 11, 3, 0) 0%, rgba(13, 11, 3, .04) 27%, rgba(13, 11, 3, 0) 100%);
+    }
+
+    /* size*/
+
+    .CButton_base__extraSmall_27 {
+        min-height: 17rem;
+        padding: 0 16rem;
+    }
+
+    .CButton_base__small_df,
+    .CButton_base__medium_74 {
+        padding: 0 20rem;
+    }
+
+    .CButton_base__small_df {
+        min-height: 20rem;
+    }
+
+    .CButton_base__medium_74 {
+        min-height: 31rem;
+    }
+
+    /*state*/
+
+    .CButton_base__disabled_d9 {
+        cursor: default;
+    }
+/* Element .back and background-image in element .base need for fix bug in GF https://jira.wargaming.net/browse/WOTD-158525
+The bug is that under certain conditions, when using border-image, stripes appear. Strip is a single-pixel gap
+between 'border-image-width' and 'fill'.
+This bug is reproduced in Google Chrome 81.0.4044.113
+*/
+.CButton_back_e5 {
+    border-image-slice: 4 fill;
+    border-image-width: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_base__main_42 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+.CButton_base__primary_7f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+.CButton_base__primaryGreen_6f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+.CButton_base__primaryRed_ec .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+.CButton_base__secondary_50 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+.CButton_texture_fe {
+    background: url('R.images.gui.maps.icons.components.button.standard_texture_file');
+    background-size: 155rem 31rem;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_state_11 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: box-shadow .16s ease-in-out;
+}
+.CButton_base__focus_83 .CButton_state_11 {
+        border-radius: 2rem;
+        box-shadow: inset 0 0 2rem 1rem rgba(255,85,0, .2);
+    }
+.CButton_stateHighlightHover_ff,
+.CButton_stateHighlightActive_35,
+.CButton_stateDisabled_54 {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity .16s ease-in-out;
+}
+.CButton_stateHighlightHover_ff {
+    background-image: linear-gradient(180deg, rgba(252,248,235, .25) 0%, rgba(252,248,235, .1) 50%, rgba(255,255,255, 0) 100%);
+}
+.CButton_base_40:hover .CButton_stateHighlightHover_ff {
+        opacity: 1;
+    }
+.CButton_base_40:active .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__disabled_d9:hover .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__ghost_ed .CButton_stateHighlightHover_ff {
+        box-shadow: 0 15rem 12rem 0 rgba(242, 242, 230, .11) inset;
+        background-color: rgba(8, 6, 0, .18);
+        background-image: none;
+    }
+.CButton_stateHighlightActive_35 {
+    background-image: linear-gradient(180deg, rgba(0,0,0, .3) 0%, rgba(0,0,0, .15) 100%);
+}
+.CButton_base_40:active .CButton_stateHighlightActive_35 {
+        opacity: 1;
+    }
+.CButton_base__disabled_d9:active .CButton_stateHighlightActive_35 {
+        opacity: 0;
+    }
+.CButton_stateDisabled_54 {
+    background-color: rgba(0, 0, 0, .25);
+    background-image: url('R.images.gui.maps.icons.components.button.texture_disable');
+    background-size: 15rem;
+}
+.CButton_base__disabled_d9 .CButton_stateDisabled_54 {
+        opacity: 1;
+    }
+.CButton_content_cc {
+    display: flex;
+    align-items: center;
+    color: #f2f2e6;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 -1rem 1rem #000;
+    letter-spacing: .03em;
+    transform: translateY(-5%);
+}
+.CButton_content_cc[lang=ja],
+    .CButton_content_cc[lang=ko],
+    .CButton_content_cc[lang=zh_tw],
+    .CButton_content_cc[lang=zh_sg],
+    .CButton_content_cc[lang=zh_ch],
+    .CButton_content_cc[lang=th] {
+        font-weight: 400;
+    }
+/* type*/
+.CButton_base__main_42 .CButton_content_cc,
+    .CButton_base__primaryRed_ec .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #600;
+    }
+.CButton_base__secondary_50 .CButton_content_cc {
+        color: rgba(254,254,236, .75);
+    }
+.CButton_base__primaryGreen_6f .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #1c2502;
+    }
+/* size*/
+.CButton_base__extraSmall_27 .CButton_content_cc {
+        font-size: 12rem;
+    }
+.CButton_base__small_df .CButton_content_cc {
+        font-size: 14rem;
+    }
+.CButton_base__medium_74 .CButton_content_cc {
+        font-size: 15rem;
+    }
+/*state*/
+.CButton_base__disabled_d9 .CButton_content_cc {
+        opacity: .6;
+    }
+
+.RewardBox_base__large_2e {
+        width: 650rem;
+        height: 460rem;
+        background: url('R.images.gui.maps.icons.seniorityAwards.rewardBox.large') no-repeat center center / cover;
+    }
+    .RewardBox_base__medium_bf {
+        width: 490rem;
+        height: 350rem;
+        background: url('R.images.gui.maps.icons.seniorityAwards.rewardBox.medium') no-repeat center center / cover;
+    }
+    .RewardBox_base__mediumWide_db {
+        width: 700rem;
+        height: 290rem;
+        background: url('R.images.gui.maps.icons.seniorityAwards.rewardBox.medium_wide') no-repeat center center / cover;
+    }
+    .RewardBox_base__smallWide_fa {
+        width: 700rem;
+        height: 210rem;
+        background: url('R.images.gui.maps.icons.seniorityAwards.rewardBox.small_wide') no-repeat center center / cover;
+    }
+
+@keyframes Footer_fadeOut_8a {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes Footer_fadeIn_e9 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes Footer_fadeInWithScale_1e {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes Footer_slideUp_8b {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes Footer_slideLeft_f0 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes Footer_scale_ec {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.Footer_base_0b {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.Footer_base__withBox_c1 {
+        height: 185rem;
+    }
+
+.Footer_glow_f9 {
+    opacity: 0;
+    animation-name: Footer_fadeInWithScale_1e;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    width: 700rem;
+    height: 250rem;
+    margin: -105rem 0 0 -350rem;
+    background: url('R.images.gui.maps.icons.seniorityAwards.season2020.glow_small_buttn') no-repeat center center / contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+}
+
+.Footer_boxWrapper_b7 {
+    opacity: 0;
+    animation-name: Footer_fadeIn_e9;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: 5s;
+    animation-iteration-count: 1;
+    width: 700rem;
+    margin-left: -350rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    pointer-events: none;
+}
+
+.Footer_giftTitle_57 {
+    opacity: 0;
+    animation-name: Footer_slideLeft_f0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: 5.4s;
+    animation-iteration-count: 1;
+    margin-top: -10rem;
+    padding-top: 10rem; /* bug fix font render */
+    padding-bottom: 10rem; /* bug fix font render */
+    border-left: 1rem solid rgba(0, 0, 0, 0); /* bug fix font render */
+    color: #f5eed5;
+    font-size: 24rem;
+    font-weight: 700;
+    line-height: .9;
+    white-space: pre;
+    position: absolute;
+    top: 51%;
+    left: 385rem;
+}
+
+@media (min-width: 1600px) and (min-height: 900px) {
+
+.Footer_giftTitle_57 {
+        font-size: 32rem;
+        top: 56%;
+        left: 385rem
+}
+    }
+
+.Footer_buttonWrapper_c3 {
+    display: flex;
+    position: relative;
+}
+
+.Footer_button_d2 {
+    opacity: 0;
+    animation-name: Footer_fadeIn_e9;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: 5.8s;
+    animation-iteration-count: 1;
+    min-width: 160rem;
+}
+
+@keyframes App_fadeOut_a4 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes App_fadeIn_c0 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes App_fadeInWithScale_c6 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes App_slideUp_a5 {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes App_slideLeft_b6 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes App_scale_47 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.App_base_0f {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.App_overlay2_78 {
+    background: url('R.images.gui.maps.icons.seniorityAwards.award_bg2') no-repeat center center / cover;
+    background-color: rgba(17,17,17, .3);
+    position: absolute;
+    top: -20rem;
+    right: -20rem;
+    bottom: -20rem;
+    left: -20rem;
+}
+
+.App_overlay_d6 {
+    background: url('R.images.gui.maps.icons.seniorityAwards.award_bg') no-repeat center center / cover;
+    background-color: rgba(17,17,17, .3);
+    position: absolute;
+    top: -20rem;
+    right: -20rem;
+    bottom: -20rem;
+    left: -20rem;
+    animation: App_overlayIn_a1 .5s linear .8s 1 cubic-bezier(.07, .82, .17, 1) forwards;
+}
+
+.App_close_f1 {
+    position: absolute;
+    top: 42rem;
+    right: 42rem;
+    z-index: 1;
+}
+
+.App_title_86 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15rem;
+    position: relative;
+}
+
+.App_header_de {
+    margin-bottom: 5rem;
+}
+
+.App_ribbon_2b {
+    opacity: 0;
+    animation-name: App_fadeIn_c0;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.App_footer_72 {
+    margin-bottom: 100rem;
+    position: relative;
+    z-index: 2;
+}
+
+.App_base__withBox_81 .App_footer_72 {
+        margin-top: -70rem;
+        margin-bottom: 40rem;
+    }
+
+@media (min-width: 1600px) and (min-height: 900px) {
+
+.App_base__withBox_81 .App_footer_72 {
+            margin-top: 0
+    }
+    }
+
+@keyframes App_overlayIn_a1 {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
+
+body {
+    margin: 0;
+    line-height: normal;
+    overflow: hidden;
+}
+

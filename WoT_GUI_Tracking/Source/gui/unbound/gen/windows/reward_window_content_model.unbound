@@ -1,0 +1,15 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro RewardWindowContentModel()
+    (scope
+        (event onConfirmBtnClicked)
+        (event onSecondBtnClicked)
+        (event onHyperLinkClicked)
+
+        (var eventName:str = '')
+        (var showRewards:bool = false)
+
+        # The following submodels are used in this model:
+        # rewardsList:ui_kit.list_model
+    )
+)

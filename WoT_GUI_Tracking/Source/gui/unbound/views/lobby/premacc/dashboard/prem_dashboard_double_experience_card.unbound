@@ -1,0 +1,165 @@
+(def layout PremDashboardDoubleExperienceCard() entrance=true
+    (macro PremDashboardDoubleExperienceCardModel)
+    (scope
+        (const BOUNDARY_WIDTH:number = 1600)
+        (const BOUNDARY_HEIGHT:number = 900)
+
+        (var isNormalSize:bool = "viewSize.width >= BOUNDARY_WIDTH && viewSize.height >= BOUNDARY_HEIGHT"
+            (event "viewResized")
+        )
+        (var bonusActiveIcon:str = "isNormalSize ? R.images.gui.maps.icons.premacc.dashboard.cardXp['x' + multiplier + '_360']() : 
+            R.images.gui.maps.icons.premacc.dashboard.cardXp['x' + multiplier + '_340']()"
+        )
+        (var bonusNotActiveIcon:str = "isNormalSize ? R.images.gui.maps.icons.premacc.dashboard.cardXp.x1_360() : 
+            R.images.gui.maps.icons.premacc.dashboard.cardXp.x1_disabled_340()"
+        )
+
+        (var disableTexture:str = 'bitmap:DisableCard')
+        (event evCardOver)
+        (event evCardOut)
+    )
+    (dispatch onGoToDoubleExpView on='click' (enabled="$event.buttonIdx == MOUSE.LEFT"))
+    (dispatch evCardOver on='rollOver')
+    (dispatch evCardOut on='rollOut')
+    (style
+        (width = 100%)
+        (height = 100%)
+        (backgroundColor = 0xff0c0c0c)
+    )
+    
+    (macro DashboardCardSounds over="evCardOver" click="onGoToDoubleExpView")
+
+    (image
+        (name = 'bg')
+        (style
+            (width = 100%)
+            (height = 100%)
+            (bind alpha "isAvailable && isTankPremiumActive ? 1: 0.4")
+        )
+        (bind source "isAvailable && isTankPremiumActive ? bonusActiveIcon : bonusNotActiveIcon")
+        
+    )
+
+    (block
+        (name = 'disable')
+        (style
+            (macro AbsPositionFullSize)
+            (bind backgroundImage "disableTexture")
+            (bind backgroundSize "repeat")
+            (alpha = 0.3)
+        )
+        (bind visible "!isAvailable")
+    )
+
+    (block
+        (name = 'multiplier')
+        (style
+            (macro AbsPositionFullSize)
+            (align = "center|bottom")
+            (bottom = 34px)
+            (gap = 19px)
+            (paddingLeft = 10px)
+            (paddingRight = 10px)
+        )
+        (tf
+            (style
+                (width = 100%)
+            )
+            (bind htmlText "TextFormat(
+                    htmlTextStyle(R.strings.premacc.doubleExperienceCard.multiplierExp(), 'HighTitleTextStyle','center', -3),
+                    {multiplier: 
+                        htmlTextStyle(TextFormat(R.strings.premacc.doubleExperienceCard.multiplier(),{multiplier:multiplier}), 'MultiplierStyle')
+                    }
+                )"
+            )
+        )
+        (hblock
+            (name = 'leftTotalBattles')
+            (style
+                (gap = 5px)
+                (paddingTop = -2px)
+            )
+            (tf
+                (bind class "isNormalSize ? 'GrandTitleTextStyle' : 'CreditsTextBigStyle'" )
+                (bind text "leftBonusCount")
+            )
+            (tf
+                (style
+                     (alpha = 0.5)
+                )
+                (bind class "isNormalSize ? 'GrandTitleTextStyle' : 'CreditsTextBigStyle'" )
+                (bind text "R.strings.common.common.slash() +' '+ totalBonusCount")
+            )
+        )
+        (bind visible "isTankPremiumActive && isAvailable")
+    )
+
+    (block
+        (name = 'lockBlock')
+        (style
+            (width = 100%)
+            (position = "absolute")
+            (hcenter = 0px)
+            (bind top "isNormalSize ? 111px : 89px")
+            (align = "center|middle")
+            (paddingLeft = 10px)
+            (paddingRight = 10px)
+        )
+        (image
+            (name = 'lock')
+            (style
+                (bind alpha "isAvailable ? 1 : 0.8")
+                (marginBottom = -19px)
+            )
+            (source = "R.images.gui.maps.icons.premacc.dashboard.cardXp.lock()")
+        )
+        (tf
+            (name = 'title')
+            (style
+                (bind alpha "isAvailable ? 1 : 0.6")
+                (marginTop = -10px)
+                (width = 100%)
+                (textAlign = "center")
+            )
+            (class HighTitleTextStyle)
+            (text = "R.strings.premacc.dailyExperiencePage.bonus.title()")
+        )
+        
+        (tf
+            (name = 'multiplierLocked')
+            (style
+                (textAlign = "center")
+                (bind alpha "isAvailable ? 1 : 0.6")
+                (width = 100%)
+                (multiline = true)
+                (marginTop = 5px)
+            )
+            (bind class "isNormalSize ? 'MainBigTextStyle' : 'MainTextStyle'" )
+            (text = "R.strings.premacc.doubleExperienceCard.multiplierLocked()")
+        )
+        
+        (bind visible "!isTankPremiumActive || !isAvailable")
+    )
+    (tf
+        (name = 'notAvailableNow')
+        (style
+            (position = "absolute")
+            (hcenter = 0)
+            (bottom = 29px)
+        )
+        (class ErrorTextStyle)
+        (text = "R.strings.premacc.doubleExperienceCard.notAvailableNow()")
+        (bind visible "!isAvailable")
+    )
+    (macro HoverCardAndStroke)
+
+    (bind buttonMode "isAvailable")
+    (bind mouseEnabled "isAvailable")
+    (mouseChildren = false)
+)
+
+(def css MultiplierStyle()
+    (fontFamily = $TitleFont)
+    (fontSize = 18)
+    (textColor = 0xFFDD99)
+)

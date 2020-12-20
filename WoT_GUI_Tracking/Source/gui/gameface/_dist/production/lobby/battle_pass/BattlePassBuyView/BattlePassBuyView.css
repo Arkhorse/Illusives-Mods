@@ -1,0 +1,2348 @@
+.TextButton_base_b6 {
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    font-size: 12rem;
+    position: relative;
+    cursor: pointer;
+}
+
+    .TextButton_base__right_39 {
+        flex-direction: row-reverse;
+    }
+.TextButton_icon_17 {
+    width: 32rem;
+    height: 32rem;
+    background: no-repeat center / contain;
+    position: relative;
+}
+.TextButton_icon__back_43,
+    .TextButton_icon__forward_59 {
+        margin: -1rem -5rem;
+        background-image: url('R.images.gui.maps.icons.components.text_button.back');
+        transform: translateY(1rem);
+    }
+.TextButton_icon__forward_59 {
+        transform: rotate(180deg) translateY(1rem);
+    }
+.TextButton_icon__close_53 {
+        margin: -1rem 0;
+        background-image: url('R.images.gui.maps.icons.components.text_button.close');
+    }
+.TextButton_icon__info_33 {
+        margin: -1rem -5rem;
+        background-image: url('R.images.gui.maps.icons.components.text_button.info');
+    }
+.TextButton_glow_a4 {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .16s;
+}
+.TextButton_icon__back_43 .TextButton_glow_a4,
+    .TextButton_icon__forward_59 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.back_hover');
+    }
+.TextButton_icon__close_53 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.close_hover');
+    }
+.TextButton_icon__info_33 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.info_hover');
+    }
+.TextButton_base_b6:hover .TextButton_glow_a4 {
+        opacity: 1;
+    }
+.TextButton_base_b6:active .TextButton_glow_a4 {
+        opacity: 0;
+    }
+.TextButton_caption_82 {
+    position: relative;
+    transition: color .16s;
+}
+.TextButton_caption__back_b9,
+    .TextButton_caption__forward_4e,
+    .TextButton_caption__close_36 {
+        color: #FFDD99;
+        text-shadow: 0 0 10rem rgba(255,42,0, 1),
+            0 0 10rem rgba(255,42,0, .4),
+            0 0 10rem rgba(255,42,0, .4),
+            0 0 2rem rgba(255,42,0, .4),
+            0 0 1rem rgba(255,42,0, .4),
+            0 0 2rem rgba(255,42,0, .4),
+            0 0 1rem rgba(255,42,0, .4);
+    }
+.TextButton_base_b6:hover .TextButton_caption__back_b9, .TextButton_base_b6:hover .TextButton_caption__forward_4e, .TextButton_base_b6:hover .TextButton_caption__close_36 {
+            color: #fffa9f;
+        }
+.TextButton_base_b6:active .TextButton_caption__back_b9, .TextButton_base_b6:active .TextButton_caption__forward_4e, .TextButton_base_b6:active .TextButton_caption__close_36 {
+            color: #FFDD99;
+        }
+.TextButton_caption__info_23 {
+        padding: 0 5rem;
+        color: #CCFFFF;
+        text-shadow: 0 0 12rem rgba(31,68,255, .8),
+            0 0 8rem #00eaff;
+    }
+.TextButton_base_b6:hover .TextButton_caption__info_23 {
+            color: #e3ffff;
+            text-shadow: 0 0 12rem rgba(31,68,255, .8),
+                0 0 12rem rgba(0,234,255, 1),
+                0 0 8rem #00eaff;
+        }
+.TextButton_base_b6:active .TextButton_caption__info_23 {
+            color: #CCFFFF;
+            text-shadow: 0 0 12rem rgba(31,68,255, .6),
+                0 0 8rem #00eaff;
+        }
+.TextButton_goto_e7 {
+    color: #7c7c6c;
+}
+.TextButton_base__left_ff .TextButton_goto_e7 {
+        margin-left: 8rem;
+    }
+.TextButton_base__right_39 .TextButton_goto_e7 {
+        margin-right: 8rem;
+    }
+.TextButton_shine_e2 {
+    width: 90rem;
+    height: 40rem;
+    background: url('R.images.gui.maps.icons.components.text_button.shine') no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: -4rem;
+    transition: opacity .16s;
+    pointer-events: none;
+}
+.TextButton_base__left_ff .TextButton_shine_e2 {
+        left: -4rem;
+    }
+.TextButton_base__right_39 .TextButton_shine_e2 {
+        right: -4rem;
+        transform: rotate(180deg);
+    }
+.TextButton_base_b6:hover .TextButton_shine_e2 {
+        opacity: 1;
+    }
+.TextButton_base_b6:active .TextButton_shine_e2 {
+        opacity: 0;
+    }
+
+/* colors*/
+
+@keyframes BattlePassBuyCard_fadeOut_f3 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes BattlePassBuyCard_fadeIn_f2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes BattlePassBuyCard_fadeInWithScale_73 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes BattlePassBuyCard_slideUp_39 {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes BattlePassBuyCard_scale_18 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.BattlePassBuyCard_base_ab {
+    opacity: 0;
+    animation-name: BattlePassBuyCard_slideUp_39;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.1, .1, .16, 1);
+    animation-delay: .4s;
+    animation-iteration-count: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 1;
+    width: 300rem;
+    height: 370rem;
+    margin: 0 10rem;
+    padding: 160rem 20rem 65rem;
+    border: 1rem solid #ffd67a;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem #000;
+    position: relative;
+    cursor: pointer;
+}
+
+.BattlePassBuyCard_base__large_38 {
+        width: 400rem;
+        height: 460rem;
+        padding: 190rem 20rem 90rem;
+    }
+
+.BattlePassBuyCard_base__battlePassCard_b6 {
+        padding-bottom: 39rem;
+    }
+
+.BattlePassBuyCard_base__battlePassCardLarge_7e {
+        padding-bottom: 57rem;
+    }
+
+.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab {
+    opacity: 0;
+    animation-name: BattlePassBuyCard_slideUp_39;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.1, .1, .16, 1);
+    animation-delay: .8s;
+    animation-iteration-count: 1;
+    }
+
+.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab {
+    opacity: 0;
+    animation-name: BattlePassBuyCard_slideUp_39;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.1, .1, .16, 1);
+    animation-delay: 1.2s;
+    animation-iteration-count: 1;
+    }
+
+.BattlePassBuyCard_base__purchased_01,
+    .BattlePassBuyCard_base__timeLocked_17,
+    .BattlePassBuyCard_base__locked_3d {
+        border-color: rgba(255,255,255, .5);
+        cursor: default;
+    }
+
+.BattlePassBuyCard_base__timeLocked_17,
+    .BattlePassBuyCard_base__locked_3d {
+        border-color: rgba(255,255,255, .25);
+    }
+
+.BattlePassBuyCard_background_8d {
+    background: rgba(0,0,0, .5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_background_8d,
+    .BattlePassBuyCard_base__purchased_01:hover .BattlePassBuyCard_background_8d,
+    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_background_8d,
+    .BattlePassBuyCard_base__timeLocked_17:hover .BattlePassBuyCard_background_8d,
+    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_background_8d,
+    .BattlePassBuyCard_base__locked_3d:hover .BattlePassBuyCard_background_8d {
+        background-color: rgba(0,0,0, 0);
+    }
+
+.BattlePassBuyCard_backgroundAsset_27 {
+    width: 100%;
+    height: 100%;
+    background: url('R.images.gui.maps.icons.battlePass2020.buy.bg_lines') no-repeat center bottom / contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.BattlePassBuyCard_base__small_d9 .BattlePassBuyCard_backgroundAsset_27 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.bg_lines_small');
+    }
+
+.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_backgroundAsset_27 {
+        opacity: .3;
+    }
+
+.BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundAsset_27,
+    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_backgroundAsset_27 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.bg_stripes');
+        background-repeat: repeat;
+        opacity: .3;
+    }
+
+.BattlePassBuyCard_backgroundColor_c3 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,66,0, .25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .2s ease-in-out background-color;
+}
+
+.BattlePassBuyCard_base_ab:hover .BattlePassBuyCard_backgroundColor_c3 {
+        background-color: rgba(255,66,0, .5);
+    }
+
+.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_backgroundColor_c3,
+    .BattlePassBuyCard_base__purchased_01:hover .BattlePassBuyCard_backgroundColor_c3 {
+        background-color: rgba(0,0,0, .5);
+    }
+
+.BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundColor_c3,
+    .BattlePassBuyCard_base__timeLocked_17:hover .BattlePassBuyCard_backgroundColor_c3,
+    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_backgroundColor_c3,
+    .BattlePassBuyCard_base__locked_3d:hover .BattlePassBuyCard_backgroundColor_c3 {
+        background-color: rgba(0,0,0, 0);
+    }
+
+.BattlePassBuyCard_backgroundTop_66,
+.BattlePassBuyCard_backgroundBottom_56 {
+    height: 130rem;
+    opacity: 0;
+    mix-blend-mode: additive;
+    position: absolute;
+    right: 0;
+    left: 0;
+    animation: BattlePassBuyCard_fade-in_ca 250ms linear 1s forwards;
+}
+
+.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_backgroundTop_66, .BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_backgroundBottom_56 {
+        animation-delay: 1.3s;
+    }
+
+.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_backgroundTop_66, .BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_backgroundBottom_56 {
+        animation-delay: 1.6s;
+    }
+
+.BattlePassBuyCard_backgroundTop_66 {
+    background: url('R.images.gui.maps.icons.battlePass2020.buy.bg_top') no-repeat center top / contain;
+    top: 0;
+}
+
+.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_backgroundTop_66,
+    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundTop_66,
+    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_backgroundTop_66 {
+        display: none;
+    }
+
+.BattlePassBuyCard_backgroundBottom_56 {
+    background: url('R.images.gui.maps.icons.battlePass2020.buy.bg_bottom') no-repeat center bottom / contain;
+    bottom: 0;
+}
+
+.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_backgroundBottom_56,
+    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundBottom_56,
+    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_backgroundBottom_56 {
+        width: 400rem;
+        height: 259rem;
+        margin-top: -1rem;
+        mix-blend-mode: normal;
+        left: 50%;
+        transform: translate(-50%, 49%);
+    }
+
+.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_backgroundBottom_56 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.checked_bg');
+    }
+
+.BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundBottom_56,
+    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_backgroundBottom_56 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.lock_bg');
+    }
+
+.BattlePassBuyCard_backgroundIcon_d6 {
+    background: no-repeat center bottom / contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -47%);
+}
+
+.BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundIcon_d6,
+    .BattlePassBuyCard_base__large_38 .BattlePassBuyCard_backgroundIcon_d6 {
+        transform: translate(-50%, -50%);
+    }
+
+.BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundIcon_d6,
+    .BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_backgroundIcon_d6,
+    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_backgroundIcon_d6 {
+        width: 60rem;
+        height: 60rem;
+    }
+
+.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_backgroundIcon_d6 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.check');
+    }
+
+.BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_backgroundIcon_d6 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.lock');
+    }
+
+.BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundIcon_d6 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.clock');
+    }
+
+.BattlePassBuyCard_rays_d5 {
+    height: 400rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.buy.rays_small') no-repeat center top / contain;
+    opacity: 0;
+    mix-blend-mode: additive;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    animation: BattlePassBuyCard_fade-in_ca 250ms linear 1s forwards;
+}
+
+.BattlePassBuyCard_base__large_38 .BattlePassBuyCard_rays_d5 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.rays');
+    }
+
+.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_rays_d5,
+    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_rays_d5,
+    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_rays_d5 {
+        display: none;
+    }
+
+.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_rays_d5 {
+        animation-delay: 1.3s;
+    }
+
+.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_rays_d5 {
+        animation-delay: 1.6s;
+    }
+
+.BattlePassBuyCard_lightWrapper_9c {
+    transform: scale(0);
+    animation: BattlePassBuyCard_light-appearance_48 1s linear .7s forwards;
+}
+
+.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_lightWrapper_9c {
+        animation-delay: 1s;
+    }
+
+.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_lightWrapper_9c {
+        animation-delay: 1.4s;
+    }
+
+.BattlePassBuyCard_light_0e {
+    width: 564rem;
+    height: 564rem;
+    margin-top: 40rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.buy.light_small') no-repeat center / contain;
+    mix-blend-mode: additive;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    animation: BattlePassBuyCard_light-rotation_a4 20s linear infinite;
+    pointer-events: none;
+}
+
+.BattlePassBuyCard_base__large_38 .BattlePassBuyCard_light_0e {
+        width: 807rem;
+        height: 807rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.light');
+    }
+
+.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_light_0e,
+    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_light_0e,
+    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_light_0e {
+        display: none;
+    }
+
+.BattlePassBuyCard_content_eb {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    position: relative;
+}
+
+.BattlePassBuyCard_contentTop_62 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BattlePassBuyCard_icon_8d {
+    width: 270rem;
+    height: 203rem;
+    margin-left: 20rem;
+    background: no-repeat center / contain;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+.BattlePassBuyCard_base__large_38 .BattlePassBuyCard_icon_8d {
+        width: 360rem;
+        height: 270rem;
+        transform: translate(-50%, -33%);
+    }
+
+.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_icon_8d,
+    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_icon_8d,
+    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_icon_8d {
+        filter: brightness(.5);
+    }
+
+.BattlePassBuyCard_title_93 {
+    margin: 0 0 2rem;
+    color: #f2f2e7;
+    font-size: 18rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.BattlePassBuyCard_base__large_38 .BattlePassBuyCard_title_93 {
+        font-size: 24rem;
+    }
+
+.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_title_93,
+    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_title_93,
+    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_title_93 {
+        opacity: .5;
+    }
+
+.BattlePassBuyCard_description_d4 {
+    margin: 0;
+    color: #cfc7a8;
+    font-size: 14rem;
+    text-align: center;
+}
+
+.BattlePassBuyCard_base__large_38 .BattlePassBuyCard_description_d4 {
+        color: #e9e2bf;
+        font-size: 16rem;
+    }
+
+.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_description_d4,
+    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_description_d4,
+    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_description_d4 {
+        opacity: .5;
+    }
+
+.BattlePassBuyCard_price_2c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.05;
+}
+
+.BattlePassBuyCard_priceValue_b7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffc363;
+    font-size: 22rem;
+    font-weight: 700;
+}
+
+.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_priceValue_b7,
+    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_priceValue_b7,
+    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_priceValue_b7 {
+        opacity: .5;
+    }
+
+.BattlePassBuyCard_priceIcon_2c {
+    width: 16rem;
+    height: 16rem;
+    margin: 2rem 0 0 5rem;
+    background: url('R.images.gui.maps.icons.library.goldIconBig') no-repeat center / contain;
+}
+
+.BattlePassBuyCard_priceTitle_26 {
+    margin: 2rem 0 -16rem;
+    color: rgba(207,199,168, .5);
+    font-size: 14rem;
+}
+
+.BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_priceTitle_26,
+    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_priceTitle_26 {
+        color: rgba(207,199,168, .35);
+    }
+
+.BattlePassBuyCard_timer_31 {
+    margin-top: 15rem;
+    color: #fd9;
+    font-size: 14rem;
+    text-align: center;
+    filter: drop-shadow(0 0 7px #f00);
+    opacity: .6;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    transform: translateY(4rem);
+}
+
+@keyframes BattlePassBuyCard_light-rotation_a4 {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes BattlePassBuyCard_light-appearance_48 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes BattlePassBuyCard_fade-in_ca {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.BattlePassBuyViewContent_base_85 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 30rem 0 75rem;
+    overflow: hidden;
+    position: relative;
+}
+
+    .BattlePassBuyViewContent_base__large_4d {
+        padding-top: 60rem;
+    }
+
+.BattlePassBuyViewContent_back_d2 {
+    position: absolute;
+    top: 75rem;
+    left: 35rem;
+    z-index: 1;
+}
+
+.BattlePassBuyViewContent_header_50 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0;
+    margin-bottom: 77rem;
+    text-align: center;
+}
+
+.BattlePassBuyViewContent_header__medium_48 {
+        margin-bottom: 106rem;
+    }
+
+.BattlePassBuyViewContent_header__large_e4 {
+        margin-bottom: 170rem;
+    }
+
+.BattlePassBuyViewContent_title_8a {
+    margin-bottom: 4rem;
+    color: #fff;
+    font-size: 36rem;
+    font-weight: 700;
+}
+
+.BattlePassBuyViewContent_title__large_7f {
+        color: #f2f2f7;
+        font-size: 56rem;
+    }
+
+.BattlePassBuyViewContent_subtitle_72 {
+    width: 550rem;
+    color: #e9e2bf;
+    font-size: 18rem;
+    font-weight: 700;
+    line-height: 24rem;
+}
+
+.BattlePassBuyViewContent_subtitle__large_1d {
+        color: #fefeec;
+        font-size: 24rem;
+        font-weight: 400;
+        line-height: 30rem;
+    }
+
+.BattlePassBuyViewContent_cards_ed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0;
+}
+
+.CButton_base_40 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0 0 0 1rem rgba(0,0,0, .6);
+    position: relative;
+    cursor: pointer;
+}
+
+    /* type*/
+
+    .CButton_base__main_42,
+    .CButton_base__primary_7f,
+    .CButton_base__primaryGreen_6f,
+    .CButton_base__primaryRed_ec,
+    .CButton_base__secondary_50 {
+        background-size: 100% 100%;
+    }
+
+    .CButton_base__main_42 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+
+    .CButton_base__primary_7f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+
+    .CButton_base__primaryGreen_6f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+
+    .CButton_base__primaryRed_ec {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+
+    .CButton_base__secondary_50 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+
+    .CButton_base__ghost_ed {
+        border-radius: 3rem;
+        box-shadow: 0 0 0 1rem rgba(0,0,0, .3),
+            0 0 0 1rem rgba(255,255,255, .15) inset;
+        background-image: linear-gradient(0deg, rgba(13, 11, 3, 0) 0%, rgba(13, 11, 3, .04) 27%, rgba(13, 11, 3, 0) 100%);
+    }
+
+    /* size*/
+
+    .CButton_base__extraSmall_27 {
+        min-height: 17rem;
+        padding: 0 16rem;
+    }
+
+    .CButton_base__small_df,
+    .CButton_base__medium_74 {
+        padding: 0 20rem;
+    }
+
+    .CButton_base__small_df {
+        min-height: 20rem;
+    }
+
+    .CButton_base__medium_74 {
+        min-height: 31rem;
+    }
+
+    /*state*/
+
+    .CButton_base__disabled_d9 {
+        cursor: default;
+    }
+/* Element .back and background-image in element .base need for fix bug in GF https://jira.wargaming.net/browse/WOTD-158525
+The bug is that under certain conditions, when using border-image, stripes appear. Strip is a single-pixel gap
+between 'border-image-width' and 'fill'.
+This bug is reproduced in Google Chrome 81.0.4044.113
+*/
+.CButton_back_e5 {
+    border-image-slice: 4 fill;
+    border-image-width: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_base__main_42 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+.CButton_base__primary_7f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+.CButton_base__primaryGreen_6f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+.CButton_base__primaryRed_ec .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+.CButton_base__secondary_50 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+.CButton_texture_fe {
+    background: url('R.images.gui.maps.icons.components.button.standard_texture_file');
+    background-size: 155rem 31rem;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_state_11 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: box-shadow .16s ease-in-out;
+}
+.CButton_base__focus_83 .CButton_state_11 {
+        border-radius: 2rem;
+        box-shadow: inset 0 0 2rem 1rem rgba(255,85,0, .2);
+    }
+.CButton_stateHighlightHover_ff,
+.CButton_stateHighlightActive_35,
+.CButton_stateDisabled_54 {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity .16s ease-in-out;
+}
+.CButton_stateHighlightHover_ff {
+    background-image: linear-gradient(180deg, rgba(252,248,235, .25) 0%, rgba(252,248,235, .1) 50%, rgba(255,255,255, 0) 100%);
+}
+.CButton_base_40:hover .CButton_stateHighlightHover_ff {
+        opacity: 1;
+    }
+.CButton_base_40:active .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__disabled_d9:hover .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__ghost_ed .CButton_stateHighlightHover_ff {
+        box-shadow: 0 15rem 12rem 0 rgba(242, 242, 230, .11) inset;
+        background-color: rgba(8, 6, 0, .18);
+        background-image: none;
+    }
+.CButton_stateHighlightActive_35 {
+    background-image: linear-gradient(180deg, rgba(0,0,0, .3) 0%, rgba(0,0,0, .15) 100%);
+}
+.CButton_base_40:active .CButton_stateHighlightActive_35 {
+        opacity: 1;
+    }
+.CButton_base__disabled_d9:active .CButton_stateHighlightActive_35 {
+        opacity: 0;
+    }
+.CButton_stateDisabled_54 {
+    background-color: rgba(0, 0, 0, .25);
+    background-image: url('R.images.gui.maps.icons.components.button.texture_disable');
+    background-size: 15rem;
+}
+.CButton_base__disabled_d9 .CButton_stateDisabled_54 {
+        opacity: 1;
+    }
+.CButton_content_cc {
+    display: flex;
+    align-items: center;
+    color: #f2f2e6;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 -1rem 1rem #000;
+    letter-spacing: .03em;
+    transform: translateY(-5%);
+}
+.CButton_content_cc[lang=ja],
+    .CButton_content_cc[lang=ko],
+    .CButton_content_cc[lang=zh_tw],
+    .CButton_content_cc[lang=zh_sg],
+    .CButton_content_cc[lang=zh_ch],
+    .CButton_content_cc[lang=th] {
+        font-weight: 400;
+    }
+/* type*/
+.CButton_base__main_42 .CButton_content_cc,
+    .CButton_base__primaryRed_ec .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #600;
+    }
+.CButton_base__secondary_50 .CButton_content_cc {
+        color: rgba(254,254,236, .75);
+    }
+.CButton_base__primaryGreen_6f .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #1c2502;
+    }
+/* size*/
+.CButton_base__extraSmall_27 .CButton_content_cc {
+        font-size: 12rem;
+    }
+.CButton_base__small_df .CButton_content_cc {
+        font-size: 14rem;
+    }
+.CButton_base__medium_74 .CButton_content_cc {
+        font-size: 15rem;
+    }
+/*state*/
+.CButton_base__disabled_d9 .CButton_content_cc {
+        opacity: .6;
+    }
+
+/* colors*/
+
+@keyframes ConfirmTemplate_fadeOut_6d {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes ConfirmTemplate_fadeIn_04 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes ConfirmTemplate_fadeInWithScale_b1 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes ConfirmTemplate_slideUp_ac {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ConfirmTemplate_scale_ca {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.ConfirmTemplate_base_df {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.bg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-size: 14rem;
+    line-height: 1;
+    position: relative;
+}
+
+.ConfirmTemplate_control_12 {
+    position: absolute;
+    top: 75rem;
+    left: 35rem;
+    z-index: 1;
+}
+
+.ConfirmTemplate_view_e5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 920rem;
+    opacity: .5;
+    animation-name: ConfirmTemplate_windowIn_22;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+}
+
+.ConfirmTemplate_title_3d {
+    margin: 0;
+    color: #f2f2f7;
+    font-size: 36rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.ConfirmTemplate_subTitle_e5 {
+    margin-top: 22rem;
+    color: #c9c9b6;
+    font-size: 16rem;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.ConfirmTemplate_base__small_9d .ConfirmTemplate_subTitle_e5 {
+        margin-bottom: 75rem;
+    }
+
+.ConfirmTemplate_base__medium_a8 .ConfirmTemplate_subTitle_e5 {
+        margin-bottom: 110rem;
+    }
+
+.ConfirmTemplate_base__large_61 .ConfirmTemplate_subTitle_e5 {
+        margin-bottom: 150rem;
+    }
+
+.ConfirmTemplate_divider_2d {
+    width: 720rem;
+    height: 1rem;
+    background-color: #fff;
+    opacity: .1;
+}
+
+.ConfirmTemplate_buttons_bf {
+    display: flex;
+    justify-content: center;
+    margin: 16rem 0 0;
+}
+
+.ConfirmTemplate_buttons__indent_5d {
+        margin-top: 24rem;
+    }
+
+.ConfirmTemplate_button_e4 {
+    width: 160rem;
+    margin: 16rem 0 0;
+}
+
+.ConfirmTemplate_button__indent_35 {
+        margin-top: 24rem;
+    }
+
+.ConfirmTemplate_rewardBtn_72 {
+    width: 230rem;
+    margin-top: 20rem;
+    margin-bottom: 55rem;
+}
+
+.ConfirmTemplate_rewardBtn__indent_c9 {
+        margin-top: 20rem;
+    }
+
+@keyframes ConfirmTemplate_windowIn_22 {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.Currency_base_57 {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+    .Currency_base__insufficient_34 {
+        color: #ed2415;
+    }
+.Currency_icon_c5 {
+    width: 16rem;
+    height: 16rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+}
+.Currency_icon__credits-small_9b {
+        background-image: url('R.images.gui.maps.icons.library.CreditsIcon_2');
+        transform: translateY(3rem);
+    }
+.Currency_icon__credits-large_ac {
+        width: 48rem;
+        height: 48rem;
+        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.money_silver');
+        transform: translateY(8rem);
+    }
+.Currency_icon__credits-big_96 {
+        background-image: url('R.images.gui.maps.icons.library.CreditsIcon_1');
+        transform: translateY(-1rem);
+    }
+.Currency_icon__gold-small_86 {
+        background-image: url('R.images.gui.maps.icons.library.GoldIcon_2');
+        transform: translateY(2rem);
+    }
+.Currency_icon__gold-big_15 {
+        background-image: url('R.images.gui.maps.icons.library.GoldIcon_1');
+        transform: translateY(-1rem);
+    }
+.Currency_icon__gold-large_36 {
+        width: 48rem;
+        height: 48rem;
+        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.money_gold');
+        transform: translateY(8rem);
+    }
+.Currency_icon__crystal-small_27 {
+        background-image: url('R.images.gui.maps.icons.library.CrystalIcon_2');
+        transform: translateY(2rem);
+    }
+.Currency_icon__crystal-big_cd {
+        width: 23rem;
+        height: 22rem;
+        background-image: url('R.images.gui.maps.icons.library.crystal_23x22');
+        transform: translateY(2rem);
+    }
+.Currency_icon__crystal-large_d3 {
+        width: 48rem;
+        height: 48rem;
+        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.money_bonds');
+        transform: translateY(8rem);
+    }
+.Currency_icon__xp-small_a7 {
+        width: 16rem;
+        height: 16rem;
+        background-image: url('R.images.gui.maps.icons.library.NormalXpIcon');
+        transform: translateY(2rem);
+    }
+.Currency_icon__xp-big_97 {
+        width: 23rem;
+        height: 22rem;
+        background-image: url('R.images.gui.maps.icons.library.xpIcon_23x22');
+        transform: translateY(2rem);
+    }
+.Currency_icon__freeXp-small_63 {
+        background-image: url('R.images.gui.maps.icons.library.freeXPIcon16x16');
+        transform: translateY(2rem);
+    }
+.Currency_icon__freeXp-big_5f {
+        width: 24rem;
+        height: 24rem;
+        background-image: url('R.images.gui.maps.icons.library.freeXPIconBig24x24');
+        transform: translateY(3rem);
+    }
+.Currency_value_e1 {
+    position: relative;
+    z-index: 2;
+}
+.Currency_value__small_e9 {
+        padding-right: 2rem;
+    }
+.Currency_value__big_d4 {
+        padding-right: 5rem;
+        font-size: 22rem;
+        font-weight: 700;
+    }
+.Currency_value__large_85 {
+        font-size: 36rem;
+        font-weight: 700;
+    }
+.Currency_value__freeXp_e3 {
+        color: #F2F2F7;
+    }
+.Currency_value__xp_b0,
+    .Currency_value__credits_76 {
+        color: #CED9D9;
+    }
+.Currency_value__gold_dd {
+        color: #FFC363;
+    }
+.Currency_value__crystal_19 {
+        color: #C9C9B6;
+    }
+.Currency_value__notEnough_56.Currency_value__small_e9 {
+            color: #FF2717;
+        }
+.Currency_value__notEnough_56.Currency_value__big_d4 {
+            color: #B70000;
+        }
+.Currency_stock_87 {
+    height: 13rem;
+    color: #fd9;
+    font-size: 13rem;
+    line-height: 1;
+    position: relative;
+    z-index: 0;
+    pointer-events: none;
+}
+.Currency_stock__indent_a1 {
+        margin-left: 3rem;
+    }
+.Currency_stock__sizeBig_b5 {
+        transform: translateY(-1rem);
+    }
+.Currency_stock__interactive_93 {
+        pointer-events: auto;
+    }
+.Currency_stockBackground_82 {
+    width: 80rem;
+    height: 45rem;
+    background-image: url('R.images.gui.maps.icons.library.RedActionBG');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    right: -27rem;
+    z-index: -1;
+    transform: translateY(-47%);
+}
+
+.Footer_base_0e {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 32rem;
+    padding-bottom: 6rem;
+}
+
+.Footer_levelsBlock_15 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Footer_priceBlock_15 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 26rem;
+}
+
+.Footer_levelsLabel_c9 {
+    color: #ced9d9;
+    font-size: 22rem;
+    font-weight: 700;
+}
+
+.Footer_footerLabel_b5 {
+    padding-right: 9rem;
+    color: #8c8c7e;
+    font-size: 16rem;
+}
+
+/* colors*/
+
+.Points_base_aa {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -1rem;
+    pointer-events: none;
+}
+
+.Points_labelSplitter_87 {
+    background: url('R.images.gui.maps.icons.battlePass2020.buy.confirm.progress_line') right bottom / initial no-repeat;
+}
+
+.Points_label_9e {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 13rem;
+    font-size: 12rem;
+}
+
+@media (min-width: 1600px) {
+
+.Points_label_9e {
+        font-size: 14rem
+}
+    }
+
+.Points_label__passed_84 {
+        color: #c9c9b6;
+        opacity: 1;
+    }
+
+.Points_label__selected_52 {
+        color: #feab34;
+        opacity: 1;
+    }
+
+.Points_label__possiblySelected_23 {
+        color: #f0c17d;
+        opacity: .7;
+    }
+
+.Points_label__available_2b {
+        color: #c9c9b6;
+        opacity: 1;
+    }
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.LevelProgressBar_base_ee {
+    width: 100%;
+    height: 12rem;
+    position: relative;
+}
+.LevelProgressBar_base__small_8a {
+        height: 2rem;
+    }
+.LevelProgressBar_glow_69 {
+    width: 19rem;
+    height: 37rem;
+    background: no-repeat center / contain;
+    mix-blend-mode: additive;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-18rem);
+    pointer-events: none;
+}
+.LevelProgressBar_glow__left_d9 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.confirm.Flare_left');
+        right: 100%;
+    }
+.LevelProgressBar_glow__right_ce {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.confirm.Flare_right');
+        left: 100%;
+    }
+.LevelProgressBar_base__disabled_87 .LevelProgressBar_glow_69,
+    .LevelProgressBar_base__finished_8d .LevelProgressBar_glow_69 {
+        display: none;
+    }
+.LevelProgressBar_progressBar_66 {
+    background-image: linear-gradient(90deg, var(--progress-base) 60%, transparent 40%);
+    background-repeat: repeat no-repeat;
+    background-position: 0 50%;
+    background-size: 3rem 10rem;
+    pointer-events: none;
+}
+.LevelProgressBar_delta_e9 {
+    width: 0;
+    max-width: 8001px;
+    box-shadow: var(--progress-delta-shadow);
+    background-color: var(--progress-delta-color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: right center;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39), cubic-bezier(.21, .61, .35, 1);
+    transition-property: width, transform;
+}
+.LevelProgressBar_line_86 {
+    max-width: 8001px;
+    height: 100%;
+    background-color: var(--progress-line-base);
+    position: relative;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-property: width;
+}
+.LevelProgressBar_base__disabled_87 .LevelProgressBar_line_86 {
+        background-color: var(--progress-line-disabled);
+    }
+.LevelProgressBar_base__finished_8d .LevelProgressBar_line_86 {
+        background-color: var(--progress-line-finished);
+    }
+.LevelProgressBar_pattern_0e {
+    background-image: linear-gradient(90deg, var(--progress-pattern-base) 60%, transparent 40%);
+    max-width: 8001px;
+    background-repeat: repeat no-repeat;
+    background-position: 0 50%;
+    background-size: 3rem 10rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+}
+.LevelProgressBar_base__small_8a .LevelProgressBar_pattern_0e {
+        top: 0;
+        bottom: 0;
+    }
+.LevelProgressBar_base__disabled_87 .LevelProgressBar_pattern_0e {
+    background-image: linear-gradient(90deg, var(--progress-pattern-disabled) 60%, transparent 40%);
+    }
+.LevelProgressBar_base__finished_8d .LevelProgressBar_pattern_0e {
+    background-image: linear-gradient(90deg, var(--progress-pattern-finished) 60%, transparent 40%);
+    }
+.LevelProgressBar_gradient_ae {
+    max-width: 8001px;
+    background-image: linear-gradient(90deg, rgba(0,0,0, .5), rgba(255,255,255, .75));
+    mix-blend-mode: overlay;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    bottom: 1rem;
+    left: 0;
+}
+.LevelProgressBar_base__small_8a .LevelProgressBar_gradient_ae {
+        top: 0;
+        bottom: 0;
+    }
+.LevelProgressBar_base__disabled_87 .LevelProgressBar_gradient_ae {
+        display: none;
+    }
+.LevelProgressBar_base__finished_8d .LevelProgressBar_gradient_ae {
+        background-image: linear-gradient(90deg, rgba(0,0,0, .5), rgba(255,255,255, .75), rgba(0,0,0, .5));
+    }
+
+
+.ProgressBarBlink_base_24 {
+    width: 60rem;
+    height: 100rem;
+    background-image: var(--progress-glow);
+    background-size: contain;
+    mix-blend-mode: lighten;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    pointer-events: none;
+}
+
+    .ProgressBarBlink_base__small_0f {
+        width: 44rem;
+        height: 43rem;
+        background-image: var(--progress-glow-small);
+    }
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressLineImpose_base_80 {
+    max-width: 8001px;
+    height: 100%;
+    background-color: var(--progress-line-base);
+    position: relative;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-property: width;
+}
+.ProgressLineImpose_base__disabled_cc {
+        background-color: var(--progress-line-disabled);
+    }
+.ProgressLineImpose_base__finished_d4 {
+        background-color: var(--progress-line-finished);
+    }
+.ProgressLineImpose_base__withoutBounce_56 {
+        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+    }
+.ProgressLineImpose_pattern_1c {
+    max-width: 8001px;
+    background-image: linear-gradient(90deg, var(--progress-pattern-base) 60%, transparent 40%);
+    background-repeat: repeat;
+    background-position: 0 50%;
+    background-size: 3rem 10rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+}
+.ProgressLineImpose_base__small_55 .ProgressLineImpose_pattern_1c {
+        top: 0;
+        bottom: 0;
+    }
+.ProgressLineImpose_base__disabled_cc .ProgressLineImpose_pattern_1c {
+    background-image: linear-gradient(90deg, var(--progress-pattern-disabled) 60%, transparent 40%);
+    }
+.ProgressLineImpose_base__finished_d4 .ProgressLineImpose_pattern_1c {
+    background-image: linear-gradient(90deg, var(--progress-pattern-finished) 60%, transparent 40%);
+    }
+.ProgressLineImpose_gradient_35 {
+    max-width: 8001px;
+    background-image: linear-gradient(90deg, rgba(0,0,0, .5), rgba(255,255,255, .75));
+    mix-blend-mode: overlay;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    bottom: 1rem;
+    left: 0;
+}
+.ProgressLineImpose_base__small_55 .ProgressLineImpose_gradient_35 {
+        top: 0;
+        bottom: 0;
+    }
+.ProgressLineImpose_base__disabled_cc .ProgressLineImpose_gradient_35 {
+        display: none;
+    }
+.ProgressLineImpose_base__finished_d4 .ProgressLineImpose_gradient_35 {
+        background-image: linear-gradient(90deg, rgba(0,0,0, .5), rgba(255,255,255, .75), rgba(0,0,0, .5));
+    }
+.ProgressLineImpose_glow_a5 {
+    width: 60rem;
+    max-width: 8001px;
+    height: 100rem;
+    background-image: var(--progress-glow);
+    background-size: contain;
+    mix-blend-mode: lighten;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.ProgressLineImpose_glow__left_d8 {
+        left: 1rem;
+    }
+.ProgressLineImpose_base__disabled_cc .ProgressLineImpose_glow_a5,
+    .ProgressLineImpose_base__finished_d4 .ProgressLineImpose_glow_a5 {
+        display: none;
+    }
+.ProgressLineImpose_base__small_55 .ProgressLineImpose_glow_a5 {
+        width: 44rem;
+        height: 43rem;
+        background-image: var(--progress-glow-small);
+    }
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressBarDeltaSimple_base_6c {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.ProgressBarDeltaSimple_delta_99 {
+    width: 0;
+    max-width: 8001px;
+    height: 100%;
+    box-shadow: var(--progress-delta-shadow);
+    background-color: var(--progress-delta-color);
+    position: absolute;
+    bottom: 0;
+    transform-origin: right center;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39), cubic-bezier(.21, .61, .35, 1);
+    transition-property: width, transform;
+}
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressBarDeltaGrow_base_7e {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-property: width;
+}
+.ProgressBarDeltaGrow_base__withoutBounce_b5 {
+        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+    }
+.ProgressBarDeltaGrow_glow_68 {
+    width: 0;
+    max-width: 8001px;
+    height: 100%;
+    box-shadow: var(--progress-delta-shadow);
+    background-color: var(--progress-delta-color);
+    position: absolute;
+    bottom: 0;
+    transform-origin: right center;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-property: width;
+}
+.ProgressBarDeltaGrow_base__withoutBounce_b5 .ProgressBarDeltaGrow_glow_68 {
+        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+    }
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressBar_base_45 {
+    width: 100%;
+    height: 12rem;
+    position: relative;
+}
+.ProgressBar_base__small_df {
+        height: 2rem;
+    }
+.ProgressBar_background_51 {
+    background-image: linear-gradient(90deg, var(--progress-base) 60%, transparent 40%);
+    width: 100%;
+    max-width: 8001px;
+    height: 100%;
+    background-repeat: repeat;
+    background-position: 0 50%;
+    background-size: 3rem 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.ProgressBar_background__small_46 {
+        height: 2rem;
+    }
+.ProgressBar_lineWrapper_6a {
+    display: flex;
+    flex: 1;
+}
+
+.LevelSlider_base_21 {
+    cursor: pointer;
+}
+
+    .LevelSlider_base__locked_4f {
+        cursor: initial;
+    }
+
+.LevelSlider_slider_7c {
+    width: 15rem;
+    height: 30rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.buy.confirm.control') center center / contain no-repeat;
+    position: relative;
+    transform: translate(-8rem, -2rem);
+    cursor: pointer;
+}
+
+.LevelSlider_slider_7c:hover {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.confirm.Control_hover');
+    }
+
+.LevelSlider_slider__down_87:hover {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.confirm.Control_active');
+    }
+
+.Rewards_rewards_1c {
+    display: flex;
+    flex-direction: row;
+}
+
+    .Rewards_rewards_1c.Rewards_column_cb {
+        flex-direction: column;
+    }
+
+.Reward_base_ea {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    height: 80rem;
+    position: relative;
+}
+
+    .Reward_base_ea.Reward_small_e3 {
+        width: 48rem;
+        height: 48rem;
+    }
+
+    .Reward_base_ea .Reward_image_89 {
+        position: relative;
+    }
+
+    .Reward_base_ea .Reward_image_89 .Reward_icon_df {
+            width: 80rem;
+            height: 80rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            z-index: 1;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_icon_df.Reward_small_e3 {
+                width: 48rem;
+                height: 48rem;
+            }
+
+    .Reward_base_ea .Reward_image_89 .Reward_overlay_68 {
+            width: 128rem;
+            height: 128rem;
+            background: no-repeat center / 100%;
+            position: absolute;
+            top: -32rem;
+            left: -32rem;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_overlay_68.Reward_small_e3 {
+                width: 96rem;
+                height: 96rem;
+                background-size: 100%;
+                overflow: visible;
+                top: -24rem;
+                left: -24rem;
+            }
+
+    .Reward_base_ea .Reward_image_89 .Reward_highlight_36 {
+            width: 80rem;
+            height: 80rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 80rem 80rem;
+            position: absolute;
+            z-index: 0;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_highlight_36.Reward_small_e3 {
+                width: 48rem;
+                height: 48rem;
+                background-size: 50rem 50rem;
+            }
+
+    .Reward_base_ea .Reward_info_72 {
+        margin-top: -13rem;
+        color: #e9e2bf;
+        font-size: 14rem;
+        line-height: 18rem;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .Reward_base_ea .Reward_info_72.Reward_multi_64 {
+            margin-right: 2rem;
+            text-align: right;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_multi_64.Reward_small_e3 {
+                margin-right: 0;
+            }
+
+    .Reward_base_ea .Reward_info_72.Reward_small_e3 {
+            margin: -10rem -10rem 0;
+            font-size: 14rem;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_credits_3f {
+            color: #ced9d9;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_gold_e3 {
+            color: #ffc363;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_crystal_69 {
+            color: #c9c9b6;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_premiumTank_29 {
+            color: #fd9;
+        }
+
+/* colors*/
+
+.Content_base_09 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.Content_levelSlider__notAllowSlide_56 {
+        margin-bottom: 30rem;
+    }
+
+.Content_rewardsList_de {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    transition-duration: .2s;
+    transition-property: opacity;
+}
+
+.Content_base__large_2f .Content_rewardsList_de {
+        margin-top: 15rem;
+    }
+
+.Content_dividerWrapper_b5 {
+    width: 100%;
+    position: relative;
+}
+
+.Content_divider_73 {
+    height: 1rem;
+    background-color: #fff;
+    opacity: .1;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+@media (min-width: 1360px) {
+
+.Content_divider_73 {
+        right: 24rem;
+        left: 24rem
+}
+    }
+
+.Content_rewardBtn_10 {
+    width: 230rem;
+    margin-top: 20rem;
+    margin-bottom: 20rem;
+    transition-duration: .2s;
+    transition-property: opacity;
+}
+
+.Content_base__small_69 .Content_rewardBtn_10 {
+        margin-bottom: 65rem;
+    }
+
+.Content_base__medium_b1 .Content_rewardBtn_10 {
+        margin-bottom: 100rem;
+    }
+
+.Content_base__large_2f .Content_rewardBtn_10 {
+        margin-top: 35rem;
+        margin-bottom: 120rem;
+    }
+
+.ScrollArea_base_47 {
+    width: 100%;
+    min-width: 1rem;
+    min-height: 1rem;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+    .ScrollArea_base__scrollIndent_1d.ps--active-y {
+        padding-right: 13rem;
+    }
+
+    .ScrollArea_base__scrollIndent_1d.ps--active-х {
+        padding-bottom: 13rem;
+    }
+
+    .ScrollArea_base__verticalScrollbarMargin_50 .ps__rail-y {
+                margin: 20rem 0;
+                right: 5rem;
+            }
+
+    .ScrollArea_base__multiple_44 .ps__rail-y {
+                margin-bottom: 30rem;
+            }
+
+    .ScrollArea_base__hidden_ec {
+        visibility: hidden;
+    }
+.ps--scrolling-dragging {
+        cursor: move;
+    }
+.ps__rail-x, .ps__thumb-x {
+        height: 13rem;
+        position: absolute;
+    }
+.ps__rail-y, .ps__thumb-y {
+        width: 13rem;
+        position: absolute;
+    }
+.ps__thumb-x, .ps__button-start-x, .ps__button-end-x, .ps__thumb-y, .ps__button-start-y, .ps__button-end-y {
+        border: 1rem solid #7e7b68;
+        box-shadow: inset 0 0 1rem rgba(255,255,190, .3);
+        opacity: .7;
+    }
+.ps__thumb-x:hover, .ps__button-start-x:hover, .ps__button-end-x:hover, .ps__thumb-y:hover, .ps__button-start-y:hover, .ps__button-end-y:hover {
+            opacity: 1;
+        }
+.ps__thumb-x, .ps__button-start-x, .ps__button-end-x {
+        bottom: -6rem;
+    }
+.ps__thumb-y, .ps__button-start-y, .ps__button-end-y {
+        right: -6rem;
+    }
+.ps__rail-x {
+        display: none;
+        margin: 0 15rem;
+        border-top: 6rem solid transparent;
+        border-bottom: 6rem solid transparent;
+        bottom: 0;
+        cursor: pointer;
+    }
+.ps__rail-y {
+        display: none;
+        margin: 15rem 0;
+        border-left: 6rem solid transparent;
+        border-right: 6rem solid transparent;
+        right: 0;
+        cursor: pointer;
+    }
+.ps__track_x, .ps__track_y {
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.background');
+        background-size: 1rem;
+        position: relative;
+    }
+.ps__track_x:hover, .ps__track_y:hover {
+            opacity: .7;
+        }
+.ps__track_x {
+        width: 100%;
+        height: 1rem;
+        background-repeat: repeat-x;
+        background-position: 50% 0;
+    }
+.ps__track_y {
+        width: 1rem;
+        height: 100%;
+        background-repeat: repeat-y;
+        background-position: 0 50%;
+    }
+.ps--active-x > .ps__rail-x, .ps--active-y > .ps__rail-y {
+        display: block;
+    }
+.ps__thumb-x, .ps__thumb-y {
+        background: #26241b 50% 50% no-repeat;
+        transition: opacity linear .13s;
+    }
+.ps__thumb-x:active, .ps__thumb-y:active {
+            opacity: .7;
+        }
+.ps__thumb-x {
+        min-width: 10rem;
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.thumb_horizontal');
+        background-size: 8rem 7rem;
+    }
+.ps__thumb-y {
+        min-height: 10rem;
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.thumb');
+        background-size: 7rem 8rem;
+    }
+.ps__button-start-x, .ps__button-end-x, .ps__button-start-y, .ps__button-end-y {
+        width: 13rem;
+        height: 13rem;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 7rem 5rem;
+        position: absolute;
+    }
+.ps__button-start-x.disabled, .ps__button-end-x.disabled, .ps__button-start-y.disabled, .ps__button-end-y.disabled {
+            opacity: .3;
+            cursor: default;
+            pointer-events: none;
+        }
+.ps__button-start-x, .ps__button-start-y {
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.arrow_top');
+    }
+.ps__button-end-x, .ps__button-end-y {
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.arrow_down');
+    }
+.ps__button-start-x, .ps__button-end-x {
+        transform: rotate(-90deg);
+    }
+.ps__button-start-x {
+        left: -14rem;
+    }
+.ps__button-end-x {
+        right: -14rem;
+    }
+.ps__button-start-y {
+        top: -14rem;
+    }
+.ps__button-end-y {
+        bottom: -14rem;
+    }
+
+.FormatText_base_d0 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.GroupTitle_base_74 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.GroupTitle_text_10 {
+    color: #c9c9b6;
+}
+
+.GroupTitle_divider_58 {
+    flex: 1;
+    height: 1rem;
+}
+
+.GroupTitle_divider__left_17 {
+        background-image: linear-gradient(to left, rgba(255,255,255, .3), transparent);
+    }
+
+.GroupTitle_divider__right_e4 {
+        background-image: linear-gradient(to right, rgba(255,255,255, .3), transparent);
+    }
+
+.GroupTitle_inner_1a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20rem;
+    font-size: 16rem;
+    transform: translateY(-2rem);
+}
+
+.GroupTitle_icon_3b {
+    width: 24rem;
+    height: 24rem;
+    background: no-repeat center / contain;
+}
+
+.GroupTitle_icon__now_fa {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.icon_now_rewards_title');
+    }
+
+.GroupTitle_icon__future_97 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.icon_future_rewards_title');
+    }
+
+.GroupTitle_steps_c5 {
+    margin-left: 4rem;
+    color: #e9e2bf;
+}
+
+.GroupRewards_base_1b {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.GroupRewards_item_2a {
+    padding: 15rem;
+}
+
+.RewardsViewContent_base_eb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.bg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+.RewardsViewContent_title_8b {
+    color: #f2f2f7;
+    font-weight: 700;
+}
+.RewardsViewContent_title__small_1e {
+        margin-bottom: 20rem;
+        font-size: 28rem;
+    }
+.RewardsViewContent_title__large_7c {
+        margin-bottom: 30rem;
+        font-size: 36rem;
+    }
+.RewardsViewContent_mainSlots_55 {
+    display: flex;
+    position: relative;
+}
+.RewardsViewContent_base__extraSmall_20 .RewardsViewContent_mainSlots_55 {
+        width: 960rem;
+        max-height: 450rem;
+    }
+.RewardsViewContent_base__small_28 .RewardsViewContent_mainSlots_55 {
+        width: 1040rem;
+        max-height: 501rem;
+    }
+.RewardsViewContent_base__medium_0c .RewardsViewContent_mainSlots_55 {
+        width: 1250rem;
+        max-height: 551rem;
+    }
+.RewardsViewContent_base__large_27 .RewardsViewContent_mainSlots_55 {
+        width: 1300rem;
+        max-height: 671rem;
+    }
+.RewardsViewContent_mainContent_4e {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.RewardsViewContent_base__extraSmall_20 .RewardsViewContent_mainContent_4e {
+        padding: 0 50rem;
+    }
+.RewardsViewContent_base__small_28 .RewardsViewContent_mainContent_4e {
+        padding: 0 60rem;
+    }
+.RewardsViewContent_base__medium_0c .RewardsViewContent_mainContent_4e {
+        padding: 0 20rem;
+    }
+.RewardsViewContent_base__large_27 .RewardsViewContent_mainContent_4e {
+        padding: 0 45rem;
+    }
+.RewardsViewContent_base__extraSmall_20 .RewardsViewContent_groupTitle_8c,
+    .RewardsViewContent_base__small_28 .RewardsViewContent_groupTitle_8c {
+        margin-top: 40rem;
+        margin-bottom: 10rem;
+    }
+.RewardsViewContent_base__medium_0c .RewardsViewContent_groupTitle_8c,
+    .RewardsViewContent_base__large_27 .RewardsViewContent_groupTitle_8c {
+        margin-top: 50rem;
+        margin-bottom: 15rem;
+    }
+.RewardsViewContent_base__extraSmall_20 .RewardsViewContent_groupRewards_0e,
+    .RewardsViewContent_base__small_28 .RewardsViewContent_groupRewards_0e {
+        margin-bottom: 10rem;
+    }
+.RewardsViewContent_base__medium_0c .RewardsViewContent_groupRewards_0e,
+    .RewardsViewContent_base__large_27 .RewardsViewContent_groupRewards_0e {
+        margin-bottom: 15rem;
+    }
+.RewardsViewContent_footerButton_f4 {
+    width: 157rem;
+    margin-top: 42rem;
+}
+.RewardsViewContent_lip_80 {
+    background: url('R.images.gui.maps.icons.battlePass2020.buy.lip') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    right: 20rem;
+    left: 20rem;
+    z-index: 2;
+    pointer-events: none;
+}
+.RewardsViewContent_base__extraSmall_20 .RewardsViewContent_lip_80 {
+        right: 50rem;
+        left: 50rem;
+    }
+.RewardsViewContent_base__extraSmall_20 .RewardsViewContent_lip_80,
+    .RewardsViewContent_base__small_28 .RewardsViewContent_lip_80 {
+        height: 96rem;
+        right: 60rem;
+        left: 60rem;
+    }
+.RewardsViewContent_base__medium_0c .RewardsViewContent_lip_80 {
+        height: 112rem;
+        right: 20rem;
+        left: 20rem;
+    }
+.RewardsViewContent_base__large_27 .RewardsViewContent_lip_80 {
+        height: 144rem;
+        right: 45rem;
+        left: 45rem;
+    }
+.RewardsViewContent_lip__top_2a {
+        top: -1rem;
+        transform: translate(0, -50%);
+    }
+.RewardsViewContent_lip__bottom_2e {
+        bottom: 0;
+        transform: translate(0, 50%) rotate(180deg);
+    }
+.RewardsViewContent_back_05 {
+    position: absolute;
+    top: 75rem;
+    left: 35rem;
+    z-index: 1;
+}
+
+.ConfirmBuyViewContent_header_48 {
+    width: 360rem;
+    height: 385rem;
+    margin-top: -90rem;
+    position: relative;
+}
+
+    .ConfirmBuyViewContent_header__large_58 {
+        width: 540rem;
+        height: 580rem;
+        margin-top: -127rem;
+    }
+
+.ConfirmBuyViewContent_backIcon_da {
+    width: 360rem;
+    height: 360rem;
+    margin-top: 30rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.buy.confirm.logo_bp_small') no-repeat center;
+    position: absolute;
+}
+
+.ConfirmBuyViewContent_backIcon__large_38 {
+        width: 540rem;
+        height: 540rem;
+        margin-top: 45rem;
+        background: url('R.images.gui.maps.icons.battlePass2020.buy.confirm.logo_bp') no-repeat center;
+    }
+
+.ConfirmBuyViewContent_rewardsIcon_5c {
+    width: 360rem;
+    height: 213rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.buy.confirm.rewards_bp_small') no-repeat center;
+    position: absolute;
+    bottom: 0;
+}
+
+.ConfirmBuyViewContent_rewardsIcon__large_62 {
+        width: 540rem;
+        height: 320rem;
+        background: url('R.images.gui.maps.icons.battlePass2020.buy.confirm.rewards_bp') no-repeat center;
+    }
+
+.ConfirmBuyViewContent_close_27 {
+    position: absolute;
+    top: 20rem;
+    right: 20rem;
+    z-index: 1;
+}
+
+.ConfirmBuyViewContent_priceBlock_a3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 26rem;
+}
+
+.ConfirmBuyViewContent_footer_af {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 25rem;
+}
+
+.ConfirmBuyViewContent_footerLabel_40 {
+    padding-right: 9rem;
+    color: #8c8c7e;
+    font-size: 16rem;
+}
+
+/* colors*/
+
+@keyframes BattlePassBuyView_fadeOut_92 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes BattlePassBuyView_fadeIn_ab {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes BattlePassBuyView_fadeInWithScale_b5 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes BattlePassBuyView_slideUp_72 {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes BattlePassBuyView_scale_fc {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+body {
+    margin: 0;
+    line-height: normal;
+}
+
+/* stylelint-disable */
+
+[lang=ja],
+[lang=ko],
+[lang=zh_tw],
+[lang=zh_sg],
+[lang=zh_ch],
+[lang=th] {
+    overflow-wrap: break-word;
+}
+
+/* stylelint-enable */
+
+.BattlePassBuyView_base_d6 {
+    opacity: 0;
+    animation-name: BattlePassBuyView_fadeIn_ab;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: .1s;
+    animation-iteration-count: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: url('R.images.gui.maps.icons.battlePass2020.buy.bg') no-repeat 50% 50% / cover;
+    overflow: hidden;
+    position: relative;
+}
+

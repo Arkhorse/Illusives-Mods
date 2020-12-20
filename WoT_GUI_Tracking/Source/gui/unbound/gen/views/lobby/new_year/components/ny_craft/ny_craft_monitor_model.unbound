@@ -1,0 +1,28 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NyCraftMonitorModel()
+    (scope
+        (event onPlaySound)
+        (event onStopSound)
+
+        (var state:number = -1)
+        (var shardsCount:number = 0)
+        (var level:str = '')
+        (var setting:str = '')
+        (var type:str = '')
+        (var objectType:str = '')
+        (var antiduplicateEnabled:bool = false)
+        (var countMegaToys:number = 0)
+
+        (const SHARDS_NOT_AVAILABLE:number = 0)
+        (const NOT_ENOUGH_SHARDS_FOR_REGULAR:number = 1)
+        (const NOT_ENOUGH_SHARDS_FOR_MEGA:number = 2)
+        (const PARAMS_REGULAR:number = 3)
+        (const PARAMS_MEGA:number = 4)
+        (const FULL_REGULAR:number = 5)
+        (const FULL_REGULAR_SUBGROUP:number = 6)
+        (const FULL_MEGA:number = 7)
+        (const HAS_RANDOM_PARAM:number = 8)
+        (const HAS_NOT_FILLERS:number = 9)
+    )
+)

@@ -1,0 +1,18 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro LootDefRendererModel()
+    (scope
+        (var labelStr:str = '')
+        (var bonusName:str = '')
+        (var icon:str = '')
+        (var tooltipId:number = 0)
+        (var rendererType:str = '')
+        (var isSmall:bool = false)
+        (var isEpic:bool = false)
+        (var hasCompensation:bool = false)
+        (var labelAlign:str = 'center')
+        (var highlightType:str = '')
+        (var overlayType:str = '')
+        (var isEnabled:bool = true)
+    )
+)

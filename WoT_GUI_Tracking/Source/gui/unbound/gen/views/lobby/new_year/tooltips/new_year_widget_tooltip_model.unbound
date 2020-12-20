@@ -1,0 +1,14 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NewYearWidgetTooltipModel()
+    (scope
+        (var currentLevel:str = 'I')
+        (var nextLevel:str = 'II')
+        (var currentPoints:number = 1)
+        (var nextPoints:number = 1)
+
+        # The following submodels are used in this model:
+        # multipliersTable:gui.impl.wrappers.user_list_model.UserListModel
+        # bonusFormula:gui.impl.gen.view_models.views.lobby.new_year.tooltips.new_year_bonus_formula_model.NewYearBonusFormulaModel
+    )
+)

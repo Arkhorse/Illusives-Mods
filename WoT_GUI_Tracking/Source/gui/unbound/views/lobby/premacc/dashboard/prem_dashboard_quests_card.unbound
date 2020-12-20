@@ -1,0 +1,146 @@
+(def layout PremDashboardQuestsCard() entrance=true
+    (macro PremDashboardQuestsCardModel)
+    (macro PremDashboardAdaptiveSize)
+    (style
+        (width = 100%)
+        (height = 100%)
+        (backgroundColor = 0xff0c0c0c)
+    )
+    (scope
+        (event evCardOver)
+        (event evCardOut)
+    )
+    (dispatch onGoToQuestsView on='click' 
+        (enabled="$event.buttonIdx == MOUSE.LEFT")
+    )
+    (dispatch evCardOver on='rollOver')
+    (dispatch evCardOut on='rollOut')
+    
+    (macro DashboardCardSounds over="evCardOver" click="onGoToQuestsView")
+
+    (image
+        (name = 'bg')
+        (style
+            (position = "absolute")
+            (bind alpha "isAvailable && isTankPremiumActive ? 1: 0.4")
+        )
+        (bind source "isNormalSize ? R.images.gui.maps.icons.premacc.dashboard.cardMissions.pq_360() :
+                R.images.gui.maps.icons.premacc.dashboard.cardMissions.pq_250()")
+    )
+
+    (block
+        (name = 'disable')
+        (style
+            (macro AbsPositionFullSize)
+            (bind backgroundImage "CARD_DISABLE_TEXTURE")
+            (bind backgroundSize "repeat")
+            (alpha = 0.3)
+        )
+        (bind visible "!isAvailable")
+    )
+    # If player has tank Pemium
+    (block
+        (style
+            (width = 100%)
+            (height = 100%)
+            (paddingTop = 10px)
+        )
+        (tf
+            (style
+                (position = "absolute")
+                (hcenter = 0px)
+                (top = 10px)
+            )
+            (class HighTitleTextStyle)
+            (text = "R.strings.premacc.missionsCard.premiumTasks()")
+        )
+        (group name = 'premiumQuests'
+            (style
+                (width = 100%)
+                (height = 100%)
+                (align = "center|middle")
+                (paddingTop = 10px)
+            )
+            (renderer = 'PremTaskRenderer')
+            (container
+                (style
+                    (align = "middle")
+                    (gap = 2px)
+                    (flow = "Flow.HORIZONTAL")
+                )
+            )
+        )
+        (bind visible "isAvailable && isTankPremiumActive")
+    )
+ 
+
+    (block
+        (name = 'lock')
+        (style
+            (width = 100%)
+            (height = 100%)
+            (align = "center|middle")
+            (bind paddingBottom "!isTankPremiumActive && isAvailable ? 1px : 21px")
+        )
+        (image
+            (style
+                (bind alpha "isAvailable ? 1 : 0.8")
+            )
+            (source = "R.images.gui.maps.icons.premacc.dashboard.cardMissions.lock()")
+        )
+        (tf
+            (style
+                (bind marginTop "!isTankPremiumActive && isAvailable ? -20px : -24px")
+                (bind alpha "isAvailable ? 1 : 0.6")
+            )
+            (class HighTitleTextStyle)
+            (text = "R.strings.premacc.missionsCard.premiumTasks()")
+        )
+        (bind visible "!isTankPremiumActive || !isAvailable")
+    )
+    
+    (tf 
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (bottom = 29px)
+        )
+        (class ErrorTextStyle)
+        (text = "R.strings.premacc.doubleExperienceCard.notAvailableNow()")
+        (bind visible "!isAvailable")
+    )
+    
+    (macro HoverCardAndStroke)
+    
+    (bind buttonMode "isAvailable")
+    (bind mouseEnabled "isAvailable")
+    (mouseChildren = false)
+)
+
+(def layout PremTaskRenderer()
+    (macro CardQuestsTasksModel)
+    (macro PremDashboardAdaptiveSize)
+    (style
+        (flow = "Flow.HORIZONTAL")
+        (align = "center|middle")
+    )
+    (image
+        (style
+            (bind scaleX "isNormalSize ? 1 : 0.75")
+            (bind scaleY "isNormalSize ? 1 : 0.75")
+        )
+        (bind source "R.images.gui.maps.icons.premacc.dashboard.cardMissions['mission_' + state]()" init=false)
+    )
+    (block
+        (name = 'lineBlock')
+        (style
+            (marginLeft = 2px)
+            (bind width "isNormalSize ? 50px : 33px" )
+            (height = 2px)
+            (backgroundColor = 0xffffffff)
+            (alpha = 0.2)
+            (bind marginTop "isNormalSize ? 0px : 1px")
+        )
+        (bind visible "showLine")
+    )
+)

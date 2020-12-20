@@ -1,0 +1,22 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro LootBoxOpeningModel()
+    (scope
+        (event onOpeningStart)
+        (event onOpeningEnd)
+        (event onReloadEnd)
+        (event onNeedShowRewards)
+        (event onVideoOffViewReady)
+        (event onLoadError)
+
+        (var boxCategory:str = '')
+        (var isFreeBox:bool = false)
+        (var isVideoOff:bool = false)
+        (var specialRewardType:str = '')
+        (var isOpening:bool = false)
+        (var isReloading:bool = false)
+        (var isWindowAccessible:bool = true)
+        (var streamBufferLength:number = 1)
+        (var isForcedToEnd:bool = false)
+    )
+)

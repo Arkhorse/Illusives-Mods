@@ -1,0 +1,398 @@
+(def layout NYTabBar(rendererName:str, rendererSelectionName:str = '', itemSize:dict = null, nameTab:str = '')
+    (name = "nameTab")
+    (macro ExtendedComponentEvents)
+    (scope
+        (event evTabBarIndexChanged)
+        (event evTabBarDisabledEvent)
+        (event evTabPositionClick)
+        (event __evSelectedIndexChanged)
+        
+        (var gapStartedFromIndex:number = -1)
+        (var gapSize:number = 0)
+
+        (var horizontal:bool = true)
+        (var selectedTabSwitchAnimationDelay:number = 0.3)
+        (var selectedIndex:number = -1
+            (dispatch evTabBarIndexChanged args="{index:selectedIndex}" on='evChanged')
+        )
+        (var isSmall:bool = false)
+        (var isHideText:bool = false)
+        (bind selectedIndex "$event.index" init=false
+            (event "__evSelectedIndexChanged")
+        )
+
+        (var renderers:array = [])
+        (var isEnabled:bool = true
+            (dispatch evTabBarDisabledEvent on='evChanged' 
+                (enabled="!isEnabled")
+            )
+        )
+        (var selected:bool = true)
+        (var itemWidth:number = "rendererSelectionName != '' ? (isSmall ? itemSize.widthSmall : itemSize.widthBig) : 0")
+        (var itemHeight:number = "rendererSelectionName != '' ? (isSmall ? itemSize.heightSmall : itemSize.heightBig) : 0")
+        (var offsetTop:number = "horizontal ? 0 : itemHeight")
+        (var offsetLeft:number = "horizontal ? itemWidth : 0")
+        (var paddingRenderers:number = 10)
+        
+        (var gapBasedSelectPositionOffset : number = "gapStartedFromIndex > -1 && selectedIndex > gapStartedFromIndex ? gapSize : 0")
+        (var selectPosition:number = "selectedIndex * (horizontal ? itemWidth : itemHeight) + gapBasedSelectPositionOffset")
+    )
+    (style
+        (bind flow "horizontal ? Flow.HORIZONTAL : Flow.VERTICAL")
+        (bind paddingTop "horizontal ?  0 : paddingRenderers")
+        (bind paddingBottom "horizontal ?  0 : -paddingRenderers")
+        (bind paddingLeft "horizontal ?  paddingRenderers : 0")
+        (bind paddingRight "horizontal ?  paddingRenderers : 0")
+    )
+    (controller $Instance renderer="rendererSelectionName"
+        (exprs
+            (name = "'selection_' + rendererSelectionName")
+            (scope
+                (bind isEnabled "isEnabled" 
+                    (event "evTabBarDisabledEvent")
+                )
+                (bind horizontal "horizontal")
+                (bind isSmall "isSmall")
+                (bind selectPosition "selectPosition")
+                (bind selectedIndex "selectedIndex")
+                (bind selectedTabSwitchAnimationDelay "selectedTabSwitchAnimationDelay")
+            )
+            (mouseChildren = false)
+            (mouseEnabled = false)
+        )
+        (bind enabled "rendererSelectionName != ''")
+    )
+    (controller $Repeat renderer="rendererName"
+        (bind count "renderers.length")
+        (exprs
+            (name = "'tabRenderer_' + rendererName + '_' + $index")
+            (scope
+                (dispatch __evSelectedIndexChanged args="{index:$index}" on='evBtnLeftClickEvent')
+
+                (bind selected "$index == selectedIndex")
+                (bind isEnabled "isEnabled" 
+                    (event "evTabBarDisabledEvent")
+                )
+                (bind horizontal "horizontal")
+                (bind tabModel "renderers[$index]")
+                (bind isSmall "isSmall")
+                (bind isHideText "isHideText")
+            )
+            (style
+                (bind marginRight "horizontal && gapStartedFromIndex > -1 && $index == gapStartedFromIndex ? gapSize : 0px")
+                (bind marginBottom "!horizontal && gapStartedFromIndex > -1 && $index == gapStartedFromIndex ? gapSize : 0px")
+            )
+        )
+    )
+)
+
+(def macro AbstractNYSideTabBar()
+    (macro ComponentStateBase "NY_SIDE_TAB_BTN_CONTENT")
+    (scope
+        (var tabModel:dict = {})
+        (var isEnabled:bool = true)
+        (var horizontal:bool = true)
+        (var isSmall:bool = false)
+        (var isHideText:bool = false)
+        (var enabledTooltip:bool = false)
+        (var textElideStatus:bool = false)
+        (var isExistString:bool = false)
+        (bind isExistString "R.strings.ny.tabBar[tabModel.name].exists()" init=false)
+        (event evTabBarSelectionPositionChange)
+        (bind enabledTooltip "textElideStatus")
+        (dispatch evPreSwitchContent dir=1 args="{view:tabModel.name}" on='evBtnLeftClickEvent'
+            (enabled = "!selected")
+        )
+    )
+    (bind buttonMode "!selected")
+    
+    (style
+        (bind width "isSmall ? MENU_LEFT_SIZE['widthSmall'] : MENU_LEFT_SIZE['widthBig']")
+        (bind height "isSmall ? MENU_LEFT_SIZE['heightSmall'] : MENU_LEFT_SIZE['heightBig']")
+        (align = "center")
+    )
+
+    (block
+        (style
+            (width = 100%)
+            (height = 100%)
+            (align = "center|middle")
+            (bind paddingTop "isSmall ? -20px : isExistString ? -35px : -10px")
+        )
+        (image
+            (name = 'icon')
+            (bind source "isSmall && R.images.gui.maps.icons.new_year.leftTabBar[tabModel.iconName + '_s'].exists() 
+                ? R.images.gui.maps.icons.new_year.leftTabBar[tabModel.iconName + '_s']()
+                : R.images.gui.maps.icons.new_year.leftTabBar[tabModel.iconName]()" 
+                init=false
+            )
+        )
+        (view_holder 'content'
+            (style
+                (width = 100%)
+            )
+        )
+    )
+    
+    (block
+        (style
+            (position = "absolute")
+            (alpha = 0)
+            (top = -10px)
+        )
+        (image
+            (style
+                (bind width "isSmall ? MENU_LEFT_SIZE['widthSmall'] : MENU_LEFT_SIZE['widthBig']")
+                (bind height "isSmall ? MENU_LEFT_SIZE['heightSmall'] : MENU_LEFT_SIZE['heightBig']")
+            )
+            (name = 'hover')
+            (source  = "R.images.gui.maps.icons.new_year.leftTabBar.leftMenuOver()")
+        )
+        (controller $Animation
+            (bindcall play duration="0.3" from="{alpha:0}" to="{alpha: 1}" id=TB_HOVER easing="Easing.cubic_out"
+                (event "evBtnOverEvent")
+            )
+
+            (bindcall play duration="0.3" from="{alpha:1}" to="{alpha: 0}" easing="Easing.cubic_out"
+                (event "evBtnOutEvent")
+            )
+
+            (bindcall stop TB_HOVER
+                (event "evBtnOutEvent")
+            )
+        )
+    )
+    
+    (element NySmallBubble
+        (scope
+            (bind value "tabModel.unseenCount" init=false)
+        )
+        (style
+            (position = "absolute")
+            (bind top "isSmall ? 12px : 8px")
+            (bind left "isSmall ? 38px : 63px")
+        )
+    )
+
+    (controller $ToolTip
+        (delay = "0.4")
+        (args
+            body="R.strings.ny.tabBar[tabModel.name]()"
+        )
+        (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+        (bind enabled "(enabledTooltip || isHideText) && isExistString")
+    )
+)
+
+(def layout NySideTabBarRenderer()
+    (macro AbstractNYSideTabBar)
+
+    (view_holder_content 'content'
+        (tf
+            (name = 'tabName')
+            (style
+                (width = 100%)
+                (textAlign = "center")
+                (marginTop = -10px)
+                (elideMode = true)
+            )
+            (bind class "selected ? 'TabBarSelectedTextStyle' : 'TabBarTextStyle'")
+            (bind text "isExistString ? R.strings.ny.tabBar[tabModel.name]() : '' " init=false )
+            (sync textElideStatus '$event.value' init=false on='textElideStatus')
+            (bind visible "!isHideText")
+        )
+    )
+)
+
+(def macro TabBarSelectedRendererMacro()
+    (scope
+        (event evSelectionPositionChange)
+        (event evSelectedIndexChange)
+        (var isEnabled:bool = false)
+        (var selectedIndex:number = -1
+            (dispatch evSelectedIndexChange on='evChanged')
+        )
+        (var selectPosition:number = 0
+            (dispatch evSelectionPositionChange on='evChanged')
+        )
+        (var isSmall:bool = false)
+        (var horizontal:bool = false)
+        (var selectedTabSwitchAnimationDelay:number = 0.3)
+    )
+    (bind visible "isEnabled")
+    (macro EmptyHitAreaMacro)
+)
+
+(def layout NyTabBarSelectedBlockRenderer()
+    (macro TabBarSelectedRendererMacro)
+    (scope
+        (event evAnimStart)
+        (event evAnimComplete)
+        
+        (var arrowRightPos:number = "horizontal ? 42px : isSmall ? 5px : -10px")
+        (var currentSelectPosition:number = "selectPosition" watch=false)
+
+        (controller $Animation
+            (bindcall stop
+                (event "evSelectionPositionChange")
+            )
+            (bindcall play 
+                duration="NY_MENU_ANIMATION_TIME"
+                delay="selectedTabSwitchAnimationDelay"
+                to="{currentSelectPosition: selectPosition}" 
+                callbacks="{onStart:evAnimStart, onComplete:evAnimComplete}" 
+                easing="Easing.cubic_out" init=false watch=false
+                (event "evSelectionPositionChange")
+                (bind enabled "!horizontal && selectedIndex != -1")
+            )
+            (bindcall play 
+                duration="NY_MENU_ANIMATION_TIME"
+                to="{currentSelectPosition: selectPosition}"
+                callbacks="{onStart:evAnimStart, onComplete:evAnimComplete}" 
+                easing="Easing.cubic_out" init=false watch=false
+                (event "evSelectionPositionChange")
+                (bind enabled "horizontal && selectedIndex != -1")
+            )
+        )
+    )
+    (style
+        (position = "absolute")
+        (bind top "currentSelectPosition" init=false
+            (bind enabled "!horizontal")
+        )
+        (bind left "currentSelectPosition" init=false
+            (bind enabled "horizontal")
+        )
+    )
+
+    (image
+        (name = 'background')
+        (style
+            (bind width "isSmall ? MENU_LEFT_SIZE['widthSmall'] : MENU_LEFT_SIZE['widthBig']")
+            (bind height "isSmall ? MENU_LEFT_SIZE['heightSmall'] : MENU_LEFT_SIZE['heightBig']")
+        )
+        (source = "R.images.gui.maps.icons.new_year.leftTabBar.selected_indicator()")
+    )
+    (image
+        (name = 'arrow')
+        (style
+            (position = "absolute")
+            (vcenter = 0px)
+            (margin = [-60,-60,-60,-20])
+            (alpha = 1)
+            (right = "arrowRightPos")
+        )
+
+        (bind source "R.images.gui.maps.icons.new_year.leftTabBar[isSmall ? 'leftMenuArrow_s' : 'leftMenuArrow']()")
+
+        (controller $Animation
+            (bindcall playSeq 
+                "[
+                    {duration:0.3, to:{right:arrowRightPos+20,alpha: 0}, easing:Easing.cubic_out},
+                    {delay:0.5, duration:0.3, to:{right:arrowRightPos, alpha: 1}, easing:Easing.cubic_out}
+                ]"
+                init=false
+                (event "evSelectionPositionChange")
+            )
+        )
+    )
+
+    (image
+        (name = 'shine')
+        (class AbsPositionCenterStyle)
+        
+        (style
+            (pivotX = 50%)
+            (pivotY = 50%)
+            (blendMode = 'add')
+        )
+        (source = "R.images.gui.maps.icons.new_year.leftTabBar.shine()")
+        (controller $Animation
+            (bindcall playSeq "[
+                    {duration:NY_MENU_HALF_ANIMATION_TIME, from:{alpha:1, scaleX:1}, to:{alpha:0, scaleX:0.5}, easing:Easing.cubic_out},
+                    {duration:NY_MENU_HALF_ANIMATION_TIME, from:{alpha:0, scaleX:0.5}, to:{alpha:1, scaleX:1}, easing:Easing.cubic_out}
+                ]"  
+                init=false watch=false 
+                (event "evAnimStart")
+            )
+        )
+    )
+    
+    (image
+        (name = 'particles')
+        (style
+            (alpha = 0)
+        )
+        (class AbsPositionCenterStyle)
+        (source  = "R.images.gui.maps.icons.new_year.leftTabBar.leftMenuParticles()")
+        (controller $Animation
+            (bindcall play duration="0.2" from="{alpha: 1}" to="{alpha: 0}" easing="Easing.cubic_out"
+                (event "evAnimStart")
+            )
+            (bindcall play duration="0.2" from="{alpha: 0}" to="{alpha: 1}" easing="Easing.cubic_in"
+                (event "evAnimComplete")
+            )
+        )
+    )
+)
+
+
+(def element NySmallBubble() layout=true
+    (scope
+        (var value:number = 0)
+    )
+    (image
+        (source = "R.images.gui.maps.icons.new_year.leftTabBar.bubble_x05()")
+        (style
+            (marginTop = -18px)
+            (marginRight = -18px)
+        )
+    )
+    (bind visible "value != 0")
+)
+
+(def constant NY_SIDE_TAB_BTN_CONTENT {
+        up : {}, 
+        hover : {sound: "R.sounds.highlight()"}, 
+        down : {sound:"R.sounds.tabs()"},
+        disabled : {},
+        upSelected : {}, 
+        hoverSelected : {}, 
+        downSelected : {}
+    }
+)
+
+(def constant MENU_LEFT_SIZE {
+        widthBig : 122,
+        heightBig : 104, 
+        heightSmall : 82,
+        widthSmall : 75
+    }
+)
+
+(def constant NY_MENU_ANIMATION_TIME 0.3)
+(def constant NY_MENU_HALF_ANIMATION_TIME 0.2)
+
+
+
+(def css TabBarTextStyle()
+    (fontFamily = $FieldFont)
+    (textColor = 0xc6e9ff)
+    (filters)
+)
+
+(def css TabBarSelectedTextStyle()
+    (fontFamily = $FieldFont)
+    (textColor = 0xffffff)
+    (filters
+        (dropShadow
+            (distance = 0)
+            (angle = 0)
+            (color = 0xddfaff)
+            (blurX = 10)
+            (blurY = 10)
+            (quality = 2)
+        )
+    )
+)

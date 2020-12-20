@@ -1,0 +1,213 @@
+(def layout BackgroundVideoAnimation()
+    (scope
+        (event evMetaDataChanged)
+        (event evSeekCompleted)
+        (event evSeekStarted)
+        (event evOnTransitionEnd)
+        (event evOnKeyPointReached)
+        (event evOnVideoScaleChanged)
+        (event resumeVideoPlayback)
+        (event pauseVideoPlayback)
+        (event evLoadError)
+
+        (var bufferLength:number = 1)
+        (var idleSource:str = null)
+        (var mainSource:str = null)
+        (var fitVideo:bool = false)
+        (var viewWidth:number = 1024)
+        (var viewHeight:number = 768)
+        (var transitionStart:number = 0)
+        (var showTransition:bool = false)
+        (bind showTransition false init=false
+            (event "evOnTransitionEnd")
+            (enabled = "showIdle")
+        )
+        (var showIdle:bool = true)
+
+        (const DEF_VIDEO_WIDTH:number = 1920)
+        (const DEF_VIDEO_HEIGHT:number = 1200)
+        (const H_OFFSET:number = 210)
+        (const SCALE_OFFSET:number = 1.03)
+        (const H_OFFSET_SHADOWS:number = 195)
+
+        (var baseAspectRatio:number = "viewWidth / viewHeight")
+        (var aspectRatio:number = "16 / 10")
+        (bind aspectRatio "$event.width / $event.height" init=false
+            (event "evMetaDataChanged")
+        )
+        (var videoScale:number = "SCALE_OFFSET"
+            (dispatch evOnVideoScaleChanged args="{value: videoScale}"  on='evChanged' dir=1)
+        )
+        (bind videoScale "(viewSize.height * SCALE_OFFSET + H_OFFSET) / DEF_VIDEO_HEIGHT"
+            (enabled = "fitVideo")
+            (event "viewResized")
+            (event "evMetaDataChanged")
+        )
+
+        (var isSeeking:bool = false)
+        (var seekPoint:number = 0)
+        (bind isSeeking true init=false
+            (event "evSeekStarted")
+        )
+        (bind seekPoint "transitionStart" init=false watch=false
+            (event "evSeekStarted")
+        )
+        (bind isSeeking false init=false
+            (event "evSeekCompleted")
+        )
+
+        (var videoAlpha:number = 1)
+        (var showBorders:bool = "fitVideo && (aspectRatio * (viewHeight + H_OFFSET_SHADOWS) * SCALE_OFFSET < viewWidth)")
+
+        (var transitionAlpha:number = 0)
+        (bind transitionAlpha 1 init=false
+            (event "evSeekCompleted")
+            (enabled = "showTransition")
+        )
+        (controller $Animation
+            (bindcall stop
+                (event "evSeekCompleted")
+                (enabled = "showTransition")
+            )
+            (bindcall play to={transitionAlpha:0} duration=0.07
+                (event "evOnTransitionEnd")
+                (enabled = "showIdle")
+            )
+        )
+    )
+
+    (class AbsPositionFullSizeStyle)
+    (mouseEnabled = false)
+    (mouseChildren = false)
+
+    (hblock
+        (name = 'videoBlock')
+        (class AbsPositionCenterStyle)
+
+        (block
+            (name = 'videoHolder')
+            (style
+                (bind alpha "videoAlpha")
+            )
+
+            (video original_widht="DEF_VIDEO_WIDTH" original_height="DEF_VIDEO_HEIGHT"
+                (name = 'idleVideo')
+                (style
+                    (bind width "aspectRatio * viewHeight * SCALE_OFFSET + H_OFFSET * aspectRatio"
+                        (bind enabled "fitVideo")
+                    )
+                    (bind height "viewHeight * SCALE_OFFSET + H_OFFSET"
+                        (bind enabled "fitVideo")
+                    )
+                    (bind width "baseAspectRatio >= aspectRatio ? viewWidth : viewHeight * aspectRatio"
+                        (bind enabled "!fitVideo")
+                    )
+                    (bind height "baseAspectRatio <= aspectRatio ? viewHeight : viewWidth / aspectRatio"
+                        (bind enabled "!fitVideo")
+                    )
+                )
+
+                (autoPlay = true)
+                (loop = true)
+
+                (bind bufferTime "bufferLength")
+                (bind source "idleSource" init=false)
+
+                (bindcall pause
+                    (event "pauseVideoPlayback")
+                    (enabled = "!showTransition")
+                )
+                (bindcall resume
+                    (event "resumeVideoPlayback")
+                    (enabled = "!showTransition")
+                )
+                (bindcall pause on='playbackStarted'
+                    (bind enabled "!showIdle || (showTransition && !isSeeking)")
+                )
+                (bindcall resume
+                    (bind enabled "showIdle && (!showTransition || isSeeking)")
+                )
+                (dispatch evLoadError on='loadError')
+            )
+
+            (block
+                (name = 'transitionWrapper')
+                (style
+                    (position = absolute)
+                    (bind alpha "transitionAlpha")
+                )
+                (video original_widht="DEF_VIDEO_WIDTH" original_height="DEF_VIDEO_HEIGHT"
+                    (name = 'mainVideo')
+                    (style
+                        (bind width "aspectRatio * viewHeight * SCALE_OFFSET + H_OFFSET * aspectRatio"
+                            (bind enabled "fitVideo")
+                        )
+                        (bind height "viewHeight * SCALE_OFFSET + H_OFFSET"
+                            (bind enabled "fitVideo")
+                        )
+                        (bind width "baseAspectRatio >= aspectRatio ? viewWidth : viewHeight * aspectRatio"
+                            (bind enabled "!fitVideo")
+                        )
+                        (bind height "baseAspectRatio <= aspectRatio ? viewHeight : viewWidth / aspectRatio"
+                            (bind enabled "!fitVideo")
+                        )
+                    )
+
+                    (loop = true)
+                    (autoPlay = true)
+                    (chapterPlay = true)
+
+                    (bind bufferTime "bufferLength")
+                    (bind source "mainSource" init=false)
+                    (bind seek "transitionStart" init=false watch=false on='playbackStarted')
+                    (bind seek "transitionStart" init=false
+                        (bind enabled "showTransition")
+                    )
+
+                    (bindcall pause on='playbackStarted')
+                    (bindcall pause
+                        (event "pauseVideoPlayback")
+                        (enabled = "showTransition")
+                    )
+                    (bindcall resume on='seekCompleted'
+                        (event "resumeVideoPlayback")
+                        (enabled = "showTransition")
+                    )
+
+                    (dispatch evMetaDataChanged on='metaDataChanged')
+                    (dispatch evSeekCompleted on='seekCompleted')
+                    (dispatch evSeekStarted on='seekStarted')
+                    (dispatch evOnTransitionEnd on='cuePointReached'
+                        (enabled = "$event.type == 'navigation' && $event.time != seekPoint")
+                    )
+                    (dispatch evOnKeyPointReached args="$event" on='cuePointReached'
+                        (enabled = "$event.type == 'event'")
+                    )
+                    (dispatch evLoadError on='loadError')
+                )
+            )
+        )
+
+        (image
+            (name = 'left_shadow')
+            (style
+                (position = "absolute")
+                (height = 100%)
+                (left = 0px)
+            )
+            (source = "R.images.gui.maps.icons.lootboxes.left_shadow()")
+            (bind visible "showBorders")
+        )
+
+        (image
+            (name = 'right_shadow')
+            (style
+                (position = "absolute")
+                (height = 100%)
+                (right = -1px)
+            )
+            (source = "R.images.gui.maps.icons.lootboxes.right_shadow()")
+            (bind visible "showBorders")
+        )
+    )
+)

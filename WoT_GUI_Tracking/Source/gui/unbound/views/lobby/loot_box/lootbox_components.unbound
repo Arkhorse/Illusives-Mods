@@ -1,0 +1,154 @@
+(def constant NY_LOOTBOX_REWARD_SLOT_HEIGHT {
+        'small' : 90px,
+        'big' : 97px
+    }   
+)
+
+(def layout BuyLootboxGiftButton(name:str = '')
+    (bind name "name")
+    (scope
+        (event evLootBoxRollOver)
+        (event evLootBoxRollOut)
+
+        (var alphaValue:number = 0)
+
+        (controller $Animation
+            (bindcall play 
+                duration=0.5 
+                from={alphaValue: 1} 
+                to={alphaValue: 0} 
+                init=false 
+                (event "evLootBoxRollOut")
+            )
+            (bindcall play id='overId'
+                duration=0.5
+                from={alphaValue: 0}
+                to={alphaValue: 1}
+                init=false
+                (event "evLootBoxRollOver")
+                )
+            (bindcall stop id='overId'
+                (event "evLootBoxRollOut")
+            )
+        )
+    )
+    (style
+        (align = "center|middle")
+    )
+
+    (dispatch evLootBoxRollOver dir=1 on='rollOver')
+    (dispatch evLootBoxRollOut dir=1 on='rollOut')
+
+    (exec "playSound(R.sounds.gui_lootbox_logistic_center_buy_more())"
+        on='rollOver'
+    )
+
+    (image
+        (name = 'boxImg')
+        (style
+            (alpha = "0.8")
+        )
+        (source ="R.images.gui.maps.icons.lootboxes.lootboxIconEmptyNoBg()")
+    )
+
+    (image
+        (name = 'boxImgHover')
+        (style
+            (position = "absolute")
+            (bind alpha "alphaValue")
+        )
+        (source = "R.images.gui.maps.icons.lootboxes.lootboxIconEmptyNoBg()")
+    )
+
+    (tf
+        (name = 'buyTitle')
+        (style
+            (maxWidth = 120px)
+            (textAlign = "center")
+            (marginTop = -10px)
+        )
+
+        (class = 'TextButtonMainTextStyle')
+        (text = "R.strings.lootboxes.entryView.buyLabel()")
+    )
+    (element NewYearHitArea w=126px h=100px
+        (style
+            (hcenter = 0px)
+            (vcenter = 0px)
+        )
+    )
+    (macro SetSimpleToolTip
+        body="R.strings.lootboxes.tooltip.entryView.buyBoxes.resId"
+    )
+    (hitArea = "$target.hit")
+    (buttonMode = true)
+    (tabEnabled = false)
+    (tabChildren = false)
+)
+
+(def layout SnowFallAnimation()
+    (style
+        (position = "absolute")
+        (top = 0)
+        (hcenter = 0)
+    )
+    (swf
+        (name = 'snowFallAnimation')
+        (source = "R.animations.ny.snow_fall()")
+        (macro EmptyHitAreaMacro)
+    )
+    (macro NoTabAndMouse)
+)
+
+(def layout SparkAnim(nameStr:str = '', posLeft:expression="0", posTop:expression="0", xScale:number=1, yScale:number=1)
+    (style
+        (position = "absolute")
+        (left = "posLeft")
+        (top = "posTop")
+    )
+    (swf
+        (name = "nameStr")
+        (style
+            (position = "absolute")
+            (scaleX = "xScale")
+            (scaleY = "yScale")
+        )
+        (source = "R.animations.ny.sparkler()")
+        (macro EmptyHitAreaMacro)
+    )
+)
+
+(def layout LBCounter()
+    (scope
+        (var boxesCount:number = 0)
+    )
+
+    (mouseChildren = false)
+    (mouseEnabled = false)
+    (image
+        (name = 'bg')
+        (style
+            (position = "absolute")
+            (width = 100%)
+            (height = 70%)
+            (vcenter = 0px)
+            (scale9grid = "Rect(1, 1, 11, 11)")
+        )
+        (source = "R.images.gui.maps.icons.lootboxes.counterBg()")
+    )
+    (tf 
+        (name = 'boxCounter')
+        (class LBCounterStyle)
+        (style
+            (textAlign = "center")
+            (marginLeft = 6px)
+            (marginRight = 6px)
+            (marginTop = 3px)
+            (marginBottom = 3px)
+            (minWidth = 20px)
+        )
+
+        (selectable = false)
+        (bind text "boxesCount > 999 ? '999+' : boxesCount")
+    )
+)

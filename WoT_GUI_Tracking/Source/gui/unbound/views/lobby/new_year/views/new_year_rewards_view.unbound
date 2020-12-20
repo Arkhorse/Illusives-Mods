@@ -1,0 +1,30 @@
+(def layout NewYearRewardsView() entrance=true
+    (macro NewYearRewardsViewModel)
+    (macro NewYearTabbedViewAnimationData)
+    (style
+        (macro ViewResizeBindedSize)
+        (backgroundColor = 0xff000000)
+        (paddingBottom = 50px)
+    )
+    (scope
+        (event evReadyToShow)
+
+        (var isSmall:bool = "viewSize.width <= BASE_WIDTH_1366 || viewSize.height <= BASE_HEIGHT_768"
+            (event "viewResized")
+        )
+
+        (dispatch evPreSwitchContent args="{view: nextViewName}" init=false dir=1
+            (bind trigger "nextViewName")
+        )
+    )
+
+    (element BackgroundElement 
+        (scope
+            (bind bgSource "R.images.gui.maps.icons.new_year.levels_rewards[$event.view == bgChangeViewName ? 'background' : 'collection_rewards_bg']()" init=false watch=false
+                (event "onSwitchContent")
+            )
+        )
+    )
+
+    (macro NewYearTabbedViewAnimationLogic "R.dynamic_ids.newYearRewardsView()")
+)

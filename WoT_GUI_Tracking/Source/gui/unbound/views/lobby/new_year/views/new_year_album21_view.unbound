@@ -1,0 +1,95 @@
+(def element NewYearAlbum21View() layout=true hideBeforeResolve=true entrance=true
+    (macro NewYearAlbumCoverViewModel)
+    (macro ExtendedComponentEvents)
+    (macro AlbumScaleAndPosition)
+
+    (image
+        (name = 'albumBack')
+        (style
+            (position = "absolute")
+            (vcenter = 0px)
+            (hcenter = 0px)
+        )
+        (source = "R.images.gui.maps.icons.new_year.album.back2021()")
+    )
+    
+    (image
+        (name = 'Vignette')
+        (style
+            (position = "absolute")
+            (vcenter = 0px)
+            (hcenter = 0px)
+        )
+        (source = "R.images.gui.maps.icons.new_year.album.vig()")
+    )
+
+    (element NewYearAlbumSettingBtn 'hitNewYear' 0 0
+        (scope
+            (pictureHover = "R.images.gui.maps.icons.new_year.album.page21.entryHover.NewYear()")
+        )
+        (style
+            (position = "absolute")
+            (vcenter = -184px)
+            (hcenter = -80px)
+        )
+        (dispatch onPictureBtnClick args="{typeName: typesList[0]}" on='click'
+            (enabled="$event.buttonIdx == 0")
+        )
+    )
+
+    (element NewYearAlbumSettingBtn 'hitOriental' 0 10
+        (scope
+            (pictureHover = "R.images.gui.maps.icons.new_year.album.page21.entryHover.Oriental()")
+        )
+        (style
+            (position = "absolute")
+            (vcenter = -204px)
+            (hcenter = 260px)
+        )
+        (dispatch onPictureBtnClick args="{typeName: typesList[1]}" on='click'
+            (enabled="$event.buttonIdx == 0")
+        )
+    )
+
+    (element NewYearAlbumSettingBtn 'hitFairytale' 0 0
+        (scope
+            (pictureHover = "R.images.gui.maps.icons.new_year.album.page21.entryHover.Fairytale()")
+        )
+        (style
+            (position = "absolute")
+            (vcenter = 50px)
+            (hcenter = 2px)
+        )
+        (dispatch onPictureBtnClick args="{typeName: typesList[2]}" on='click'
+            (enabled="$event.buttonIdx == 0")
+        )
+    )
+
+    (element NewYearAlbumSettingBtn 'hitChristmas' 0 0
+        (scope
+            (pictureHover = "R.images.gui.maps.icons.new_year.album.page21.entryHover.Christmas()")
+        )
+        (style
+            (position = "absolute")
+            (vcenter = 24px)
+            (hcenter = 290px)
+        )
+        (dispatch onPictureBtnClick args="{typeName: typesList[3]}" on='click'
+            (enabled="$event.buttonIdx == 0")
+        )
+    )
+
+    (element NewYearAlbumSettingBtn 'hitMega' 0 5
+        (scope
+            (pictureHover = "R.images.gui.maps.icons.new_year.album.page21.entryHover.Mega()")
+        )
+        (style
+            (position = "absolute")
+            (vcenter = 194px)
+            (hcenter = -186px)
+        )
+        (dispatch onPictureBtnClick args="{typeName: typesList[4]}" on='click'
+            (enabled="$event.buttonIdx == 0")
+        )
+    )
+)

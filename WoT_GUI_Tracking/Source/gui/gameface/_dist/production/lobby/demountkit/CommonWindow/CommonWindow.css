@@ -1,0 +1,763 @@
+.tagging-color_base_ce {
+    display: inline;
+}
+
+    .tagging-color_base__warning_0f {
+        color: #e9e2bf;
+    }
+
+    .tagging-color_base__white_00 {
+        color: #e9e2bf;
+    }
+
+    .tagging-color_base__red_6e {
+        color: #ff2717;
+    }
+
+.CommonDescription_base_42 {
+    color: #8c8c7e;
+    font-size: 16rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+    .CommonDescription_base__html_cb {
+        text-align: initial;
+    }
+
+.CommonDescription_line_26 {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.Currency_base_57 {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+    .Currency_base__insufficient_34 {
+        color: #ed2415;
+    }
+.Currency_icon_c5 {
+    width: 16rem;
+    height: 16rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+}
+.Currency_icon__credits-small_9b {
+        background-image: url('R.images.gui.maps.icons.library.CreditsIcon_2');
+        transform: translateY(3rem);
+    }
+.Currency_icon__credits-large_ac {
+        width: 48rem;
+        height: 48rem;
+        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.money_silver');
+        transform: translateY(8rem);
+    }
+.Currency_icon__credits-big_96 {
+        background-image: url('R.images.gui.maps.icons.library.CreditsIcon_1');
+        transform: translateY(-1rem);
+    }
+.Currency_icon__gold-small_86 {
+        background-image: url('R.images.gui.maps.icons.library.GoldIcon_2');
+        transform: translateY(2rem);
+    }
+.Currency_icon__gold-big_15 {
+        background-image: url('R.images.gui.maps.icons.library.GoldIcon_1');
+        transform: translateY(-1rem);
+    }
+.Currency_icon__gold-large_36 {
+        width: 48rem;
+        height: 48rem;
+        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.money_gold');
+        transform: translateY(8rem);
+    }
+.Currency_icon__crystal-small_27 {
+        background-image: url('R.images.gui.maps.icons.library.CrystalIcon_2');
+        transform: translateY(2rem);
+    }
+.Currency_icon__crystal-big_cd {
+        width: 23rem;
+        height: 22rem;
+        background-image: url('R.images.gui.maps.icons.library.crystal_23x22');
+        transform: translateY(2rem);
+    }
+.Currency_icon__crystal-large_d3 {
+        width: 48rem;
+        height: 48rem;
+        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.money_bonds');
+        transform: translateY(8rem);
+    }
+.Currency_icon__xp-small_a7 {
+        width: 16rem;
+        height: 16rem;
+        background-image: url('R.images.gui.maps.icons.library.NormalXpIcon');
+        transform: translateY(2rem);
+    }
+.Currency_icon__xp-big_97 {
+        width: 23rem;
+        height: 22rem;
+        background-image: url('R.images.gui.maps.icons.library.xpIcon_23x22');
+        transform: translateY(2rem);
+    }
+.Currency_icon__freeXp-small_63 {
+        background-image: url('R.images.gui.maps.icons.library.freeXPIcon16x16');
+        transform: translateY(2rem);
+    }
+.Currency_icon__freeXp-big_5f {
+        width: 24rem;
+        height: 24rem;
+        background-image: url('R.images.gui.maps.icons.library.freeXPIconBig24x24');
+        transform: translateY(3rem);
+    }
+.Currency_value_e1 {
+    position: relative;
+    z-index: 2;
+}
+.Currency_value__small_e9 {
+        padding-right: 2rem;
+    }
+.Currency_value__big_d4 {
+        padding-right: 5rem;
+        font-size: 22rem;
+        font-weight: 700;
+    }
+.Currency_value__large_85 {
+        font-size: 36rem;
+        font-weight: 700;
+    }
+.Currency_value__freeXp_e3 {
+        color: #F2F2F7;
+    }
+.Currency_value__xp_b0,
+    .Currency_value__credits_76 {
+        color: #CED9D9;
+    }
+.Currency_value__gold_dd {
+        color: #FFC363;
+    }
+.Currency_value__crystal_19 {
+        color: #C9C9B6;
+    }
+.Currency_value__notEnough_56.Currency_value__small_e9 {
+            color: #FF2717;
+        }
+.Currency_value__notEnough_56.Currency_value__big_d4 {
+            color: #B70000;
+        }
+.Currency_stock_87 {
+    height: 13rem;
+    color: #fd9;
+    font-size: 13rem;
+    line-height: 1;
+    position: relative;
+    z-index: 0;
+    pointer-events: none;
+}
+.Currency_stock__indent_a1 {
+        margin-left: 3rem;
+    }
+.Currency_stock__sizeBig_b5 {
+        transform: translateY(-1rem);
+    }
+.Currency_stock__interactive_93 {
+        pointer-events: auto;
+    }
+.Currency_stockBackground_82 {
+    width: 80rem;
+    height: 45rem;
+    background-image: url('R.images.gui.maps.icons.library.RedActionBG');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    right: -27rem;
+    z-index: -1;
+    transform: translateY(-47%);
+}
+
+.CommonFooter_base_88 {
+    display: flex;
+    align-items: flex-end;
+}
+
+.CommonFooter_text_82 {
+    padding-right: 10rem;
+    color: #c9c9b6;
+    font-size: 15rem;
+}
+
+.TextButton_base_b6 {
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    font-size: 12rem;
+    position: relative;
+    cursor: pointer;
+}
+
+    .TextButton_base__right_39 {
+        flex-direction: row-reverse;
+    }
+.TextButton_icon_17 {
+    width: 32rem;
+    height: 32rem;
+    background: no-repeat center / contain;
+    position: relative;
+}
+.TextButton_icon__back_43,
+    .TextButton_icon__forward_59 {
+        margin: -1rem -5rem;
+        background-image: url('R.images.gui.maps.icons.components.text_button.back');
+        transform: translateY(1rem);
+    }
+.TextButton_icon__forward_59 {
+        transform: rotate(180deg) translateY(1rem);
+    }
+.TextButton_icon__close_53 {
+        margin: -1rem 0;
+        background-image: url('R.images.gui.maps.icons.components.text_button.close');
+    }
+.TextButton_icon__info_33 {
+        margin: -1rem -5rem;
+        background-image: url('R.images.gui.maps.icons.components.text_button.info');
+    }
+.TextButton_glow_a4 {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .16s;
+}
+.TextButton_icon__back_43 .TextButton_glow_a4,
+    .TextButton_icon__forward_59 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.back_hover');
+    }
+.TextButton_icon__close_53 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.close_hover');
+    }
+.TextButton_icon__info_33 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.info_hover');
+    }
+.TextButton_base_b6:hover .TextButton_glow_a4 {
+        opacity: 1;
+    }
+.TextButton_base_b6:active .TextButton_glow_a4 {
+        opacity: 0;
+    }
+.TextButton_caption_82 {
+    position: relative;
+    transition: color .16s;
+}
+.TextButton_caption__back_b9,
+    .TextButton_caption__forward_4e,
+    .TextButton_caption__close_36 {
+        color: #FFDD99;
+        text-shadow: 0 0 10rem rgba(255,42,0, 1),
+            0 0 10rem rgba(255,42,0, .4),
+            0 0 10rem rgba(255,42,0, .4),
+            0 0 2rem rgba(255,42,0, .4),
+            0 0 1rem rgba(255,42,0, .4),
+            0 0 2rem rgba(255,42,0, .4),
+            0 0 1rem rgba(255,42,0, .4);
+    }
+.TextButton_base_b6:hover .TextButton_caption__back_b9, .TextButton_base_b6:hover .TextButton_caption__forward_4e, .TextButton_base_b6:hover .TextButton_caption__close_36 {
+            color: #fffa9f;
+        }
+.TextButton_base_b6:active .TextButton_caption__back_b9, .TextButton_base_b6:active .TextButton_caption__forward_4e, .TextButton_base_b6:active .TextButton_caption__close_36 {
+            color: #FFDD99;
+        }
+.TextButton_caption__info_23 {
+        padding: 0 5rem;
+        color: #CCFFFF;
+        text-shadow: 0 0 12rem rgba(31,68,255, .8),
+            0 0 8rem #00eaff;
+    }
+.TextButton_base_b6:hover .TextButton_caption__info_23 {
+            color: #e3ffff;
+            text-shadow: 0 0 12rem rgba(31,68,255, .8),
+                0 0 12rem rgba(0,234,255, 1),
+                0 0 8rem #00eaff;
+        }
+.TextButton_base_b6:active .TextButton_caption__info_23 {
+            color: #CCFFFF;
+            text-shadow: 0 0 12rem rgba(31,68,255, .6),
+                0 0 8rem #00eaff;
+        }
+.TextButton_goto_e7 {
+    color: #7c7c6c;
+}
+.TextButton_base__left_ff .TextButton_goto_e7 {
+        margin-left: 8rem;
+    }
+.TextButton_base__right_39 .TextButton_goto_e7 {
+        margin-right: 8rem;
+    }
+.TextButton_shine_e2 {
+    width: 90rem;
+    height: 40rem;
+    background: url('R.images.gui.maps.icons.components.text_button.shine') no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: -4rem;
+    transition: opacity .16s;
+    pointer-events: none;
+}
+.TextButton_base__left_ff .TextButton_shine_e2 {
+        left: -4rem;
+    }
+.TextButton_base__right_39 .TextButton_shine_e2 {
+        right: -4rem;
+        transform: rotate(180deg);
+    }
+.TextButton_base_b6:hover .TextButton_shine_e2 {
+        opacity: 1;
+    }
+.TextButton_base_b6:active .TextButton_shine_e2 {
+        opacity: 0;
+    }
+
+.CButton_base_40 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0 0 0 1rem rgba(0,0,0, .6);
+    position: relative;
+    cursor: pointer;
+}
+
+    /* type*/
+
+    .CButton_base__main_42,
+    .CButton_base__primary_7f,
+    .CButton_base__primaryGreen_6f,
+    .CButton_base__primaryRed_ec,
+    .CButton_base__secondary_50 {
+        background-size: 100% 100%;
+    }
+
+    .CButton_base__main_42 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+
+    .CButton_base__primary_7f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+
+    .CButton_base__primaryGreen_6f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+
+    .CButton_base__primaryRed_ec {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+
+    .CButton_base__secondary_50 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+
+    .CButton_base__ghost_ed {
+        border-radius: 3rem;
+        box-shadow: 0 0 0 1rem rgba(0,0,0, .3),
+            0 0 0 1rem rgba(255,255,255, .15) inset;
+        background-image: linear-gradient(0deg, rgba(13, 11, 3, 0) 0%, rgba(13, 11, 3, .04) 27%, rgba(13, 11, 3, 0) 100%);
+    }
+
+    /* size*/
+
+    .CButton_base__extraSmall_27 {
+        min-height: 17rem;
+        padding: 0 16rem;
+    }
+
+    .CButton_base__small_df,
+    .CButton_base__medium_74 {
+        padding: 0 20rem;
+    }
+
+    .CButton_base__small_df {
+        min-height: 20rem;
+    }
+
+    .CButton_base__medium_74 {
+        min-height: 31rem;
+    }
+
+    /*state*/
+
+    .CButton_base__disabled_d9 {
+        cursor: default;
+    }
+/* Element .back and background-image in element .base need for fix bug in GF https://jira.wargaming.net/browse/WOTD-158525
+The bug is that under certain conditions, when using border-image, stripes appear. Strip is a single-pixel gap
+between 'border-image-width' and 'fill'.
+This bug is reproduced in Google Chrome 81.0.4044.113
+*/
+.CButton_back_e5 {
+    border-image-slice: 4 fill;
+    border-image-width: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_base__main_42 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+.CButton_base__primary_7f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+.CButton_base__primaryGreen_6f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+.CButton_base__primaryRed_ec .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+.CButton_base__secondary_50 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+.CButton_texture_fe {
+    background: url('R.images.gui.maps.icons.components.button.standard_texture_file');
+    background-size: 155rem 31rem;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_state_11 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: box-shadow .16s ease-in-out;
+}
+.CButton_base__focus_83 .CButton_state_11 {
+        border-radius: 2rem;
+        box-shadow: inset 0 0 2rem 1rem rgba(255,85,0, .2);
+    }
+.CButton_stateHighlightHover_ff,
+.CButton_stateHighlightActive_35,
+.CButton_stateDisabled_54 {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity .16s ease-in-out;
+}
+.CButton_stateHighlightHover_ff {
+    background-image: linear-gradient(180deg, rgba(252,248,235, .25) 0%, rgba(252,248,235, .1) 50%, rgba(255,255,255, 0) 100%);
+}
+.CButton_base_40:hover .CButton_stateHighlightHover_ff {
+        opacity: 1;
+    }
+.CButton_base_40:active .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__disabled_d9:hover .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__ghost_ed .CButton_stateHighlightHover_ff {
+        box-shadow: 0 15rem 12rem 0 rgba(242, 242, 230, .11) inset;
+        background-color: rgba(8, 6, 0, .18);
+        background-image: none;
+    }
+.CButton_stateHighlightActive_35 {
+    background-image: linear-gradient(180deg, rgba(0,0,0, .3) 0%, rgba(0,0,0, .15) 100%);
+}
+.CButton_base_40:active .CButton_stateHighlightActive_35 {
+        opacity: 1;
+    }
+.CButton_base__disabled_d9:active .CButton_stateHighlightActive_35 {
+        opacity: 0;
+    }
+.CButton_stateDisabled_54 {
+    background-color: rgba(0, 0, 0, .25);
+    background-image: url('R.images.gui.maps.icons.components.button.texture_disable');
+    background-size: 15rem;
+}
+.CButton_base__disabled_d9 .CButton_stateDisabled_54 {
+        opacity: 1;
+    }
+.CButton_content_cc {
+    display: flex;
+    align-items: center;
+    color: #f2f2e6;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 -1rem 1rem #000;
+    letter-spacing: .03em;
+    transform: translateY(-5%);
+}
+.CButton_content_cc[lang=ja],
+    .CButton_content_cc[lang=ko],
+    .CButton_content_cc[lang=zh_tw],
+    .CButton_content_cc[lang=zh_sg],
+    .CButton_content_cc[lang=zh_ch],
+    .CButton_content_cc[lang=th] {
+        font-weight: 400;
+    }
+/* type*/
+.CButton_base__main_42 .CButton_content_cc,
+    .CButton_base__primaryRed_ec .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #600;
+    }
+.CButton_base__secondary_50 .CButton_content_cc {
+        color: rgba(254,254,236, .75);
+    }
+.CButton_base__primaryGreen_6f .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #1c2502;
+    }
+/* size*/
+.CButton_base__extraSmall_27 .CButton_content_cc {
+        font-size: 12rem;
+    }
+.CButton_base__small_df .CButton_content_cc {
+        font-size: 14rem;
+    }
+.CButton_base__medium_74 .CButton_content_cc {
+        font-size: 15rem;
+    }
+/*state*/
+.CButton_base__disabled_d9 .CButton_content_cc {
+        opacity: .6;
+    }
+
+.CurrencyBalance_base_fd {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40rem;
+}
+
+.CurrencyBalance_currency_09 {
+    height: 20rem;
+    margin-left: 20rem;
+    padding-left: 20rem;
+    background-repeat: no-repeat;
+    background-size: 16rem 16rem;
+    color: #c9c9b6;
+    font-size: 14rem;
+}
+
+.CurrencyBalance_currency__credit_06 {
+        background-image: url('R.images.gui.maps.icons.library.CreditsIcon_2');
+        background-position: 0 2rem;
+        color: #ced9d9;
+    }
+
+.CurrencyBalance_currency__gold_37 {
+        background-image: url('R.images.gui.maps.icons.library.GoldIcon_2');
+        background-position: 0 1rem;
+        color: #ffc363;
+    }
+
+.CurrencyBalance_currency__crystal_aa {
+        background-image: url('R.images.gui.maps.icons.library.CrystalIcon_2');
+    }
+
+.CurrencyBalance_currency__freexp_34 {
+        background-image: url('R.images.gui.maps.icons.library.FreeXpIcon_2');
+        background-position: 0 1rem;
+    }
+
+body {
+    margin: 0;
+    line-height: normal;
+}
+
+.DialogTemplate_base_de {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background-color: rgba(19,18,16, .5);
+    font-size: 14rem;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.DialogTemplate_top_a0 {
+    padding-right: 10rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 4;
+}
+
+.DialogTemplate_topButton_10 {
+    display: flex;
+    align-self: flex-end;
+    margin-top: 38rem;
+    margin-right: 31rem;
+}
+
+.DialogTemplate_view_5c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 720rem;
+    opacity: 0;
+    isolation: isolate;
+}
+
+.DialogTemplate_view__show_b7 {
+        animation-name: DialogTemplate_windowIn_41;
+        animation-duration: .5s;
+        animation-fill-mode: both;
+    }
+
+.DialogTemplate_icon_75 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 135rem;
+    margin-bottom: 25rem;
+    background: no-repeat 50% 50% / contain;
+    position: relative;
+    z-index: 0;
+}
+
+.DialogTemplate_icon__warning_b4 {
+        width: 114rem;
+        background-image: url('R.images.gui.maps.icons.demountKit.warning_icon');
+    }
+
+.DialogTemplate_iconImage_53 {
+    width: 180rem;
+    height: 100%;
+    background: no-repeat 0 0 / contain;
+    position: relative;
+    z-index: 2;
+}
+
+.DialogTemplate_iconOverlay_21 {
+    display: none;
+    width: 248rem;
+    height: 224rem;
+    background: no-repeat 0 0 / contain;
+    position: absolute;
+    z-index: 3;
+}
+
+.DialogTemplate_iconOverlay__simple_16 {
+        display: block;
+        width: 48rem;
+        height: 47rem;
+        top: 0;
+        left: 0;
+    }
+
+.DialogTemplate_iconHighlight_7f {
+    display: none;
+    width: 492rem;
+    height: 310rem;
+    background: no-repeat 0 0 / contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+.DialogTemplate_iconHighlight__simple_7f {
+        display: block;
+    }
+
+.DialogTemplate_iconHighlight__warning_66 {
+        display: block;
+        width: 828rem;
+        height: 798rem;
+    }
+
+.DialogTemplate_upArrow_b7 {
+    width: 248rem;
+    height: 224rem;
+    background: url('R.images.gui.maps.icons.demountKit.yellow_arrow_up') no-repeat 0 0 / contain;
+    position: absolute;
+    z-index: 3;
+}
+
+.DialogTemplate_title_59 {
+    margin: 0;
+    color: #f2f2f7;
+    font-size: 36rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.DialogTemplate_content_df {
+    margin-top: 12rem;
+    color: #8c8c7e;
+    font-size: 16rem;
+}
+
+.DialogTemplate_divider_48 {
+    width: 100%;
+    height: 1rem;
+    margin: 24rem 0;
+    background-color: #fff;
+    opacity: .1;
+}
+
+.DialogTemplate_footer_24 {
+    display: flex;
+    align-items: center;
+    color: #c9c9b6;
+    font-size: 16rem;
+}
+
+.DialogTemplate_buttons_21 {
+    display: flex;
+    justify-content: center;
+    margin: 16rem 0 0;
+}
+
+.DialogTemplate_buttons__indent_ab {
+        margin-top: 24rem;
+    }
+
+.DialogTemplate_buttonsItem_43 + .DialogTemplate_buttonsItem_43 {
+        margin-left: 10rem;
+    }
+
+.DialogTemplate_button_b9 {
+    width: 175rem;
+}
+
+@keyframes DialogTemplate_windowIn_41 {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.CommonComponent_base_57 {
+    display: flex;
+    align-self: center;
+}
+
+    .CommonComponent_base__indent_84 {
+        margin-top: 2rem;
+    }
+

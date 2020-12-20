@@ -1,0 +1,173 @@
+(def layout FilterCounterElement(name:str = '')
+    (macro FilterCounterModel)
+    (name = "name")
+    (style
+        (flow = "Flow.HORIZONTAL")
+    )
+
+    (scope
+        (var resultLabel:str = '')
+        (var buttonTooltipHeader:str='')
+        (var buttonTooltipBody:str='')
+        (var popoverId:number = -1)
+        (var buttonEnabled:bool = true)
+
+        (var resetButtonTooltipHeader:str = '')
+        (var resetButtonTooltipBody:str = '')
+
+        (var animationAlpha:number = 0)
+        (controller $Animation
+            (bindcall play
+                watch=false
+                duration = 0.6
+                from     = "{animationAlpha:0}"
+                to       = "{animationAlpha:1}"
+                easing   = "isFilterApplied ? Easing.cubic_out : Easing.cubic_in"
+                reverse  = "!isFilterApplied"
+                (bind trigger "isFilterApplied")
+            )
+        )
+    )
+
+    (button 
+        (name = 'openFilterBtn')
+        (macro ButtonStylePrimary "BUTTON_SIZE_MEDIUM")
+        (style
+            (width = 40px)
+            (height = 24px)
+        )
+        (icon = "R.images.gui.maps.icons.buttons.filter()")
+        (bind enabled "buttonEnabled")
+        (tabEnabled = false)
+        (controller $PopOverEvent
+            (direction = "Direction.DOWN")
+            (bind content "popoverId" init=false)
+            (decorator = "R.views.common.pop_over_window.pop_over_window.PopOverWindow.resId")
+        )
+
+        (macro SetSimpleToolTip
+            header="buttonTooltipHeader"
+            body="buttonTooltipBody"
+        )
+    )
+
+    (tf
+        (name = 'resultLabel')
+        (class MainTextStyle)
+        (style
+            (marginLeft = 10px)
+        )
+        (bind text "resultLabel")
+    )
+    (block
+        (tf
+            (name = 'currentCount')
+            (bind class "currentCount != 0 ? 'StatsTextStyle' : 'ErrorTextStyle'")
+            (style
+                (minWidth = 20px)
+                (marginLeft = 5px)
+                (textAlign = "right")
+            )
+            (bind text "currentCount")
+        )
+
+        (image
+            (style
+                (position = "absolute")
+                (top = 7px)
+                (hcenter = 2px)
+                (bind alpha "animationAlpha")
+            )
+            (source = "R.atlases.components.count_filter_up()")
+            (bind visible "animationAlpha != 0")
+        )
+
+        (element CounterBlink
+            (style
+                (position = "absolute")
+                (top = 7px)
+                (hcenter = 2px)
+                (bind alpha "animationAlpha")
+            )
+            (bind visible "animationAlpha != 0")
+            (scope
+                (bind playAnimation "isFilterApplied")
+            )
+        )
+    )
+
+    (tf
+        (name = 'totalCount')
+        (class MainTextStyle)
+        (bind text "'' + R.strings.common.common.slash() + ' ' + totalCount")
+    )
+
+    (button 
+        (name = 'resetBtn')
+        (macro ButtonStylePrimaryGhost "BUTTON_SIZE_MEDIUM")
+        (style
+            (marginLeft = 10px)
+            (width = 24px)
+            (height = 24px)
+            (bind alpha "animationAlpha")
+        )
+        (icon = "R.atlases.components.crossIcon()")
+        (bind enabled "buttonEnabled")
+        (dispatch onResetBtnClick on='clicked')
+        (bind visible "animationAlpha != 0")
+        (tabEnabled = false)
+        (macro SetSimpleToolTip
+            header="resetButtonTooltipHeader"
+            body="resetButtonTooltipBody"
+        )
+    )
+)
+
+(def layout CounterBlink()
+    (scope
+        (var redMultiplier:number = 1.0)
+        (var greenMultiplier:number = 1.0)
+        (var blueMultiplier:number = 1.0)
+        (var alphaMultiplier:number = 1.0)
+        (var alphaOffset:number = 0)
+        (var redOffset:number = 0)
+        (var greenOffset:number = 0)
+        (var blueOffset:number = 0)
+        (var animationAlpha:number = 0)
+
+        (var playAnimation:bool = false)
+
+        (controller $Animation
+            (bindcall playSeq "[
+                    {
+                        duration:0.3, from:{animationAlpha:0, alphaMultiplier:1, redOffset:0, greenOffset:0}, 
+                                        to:{animationAlpha:1, alphaMultiplier:0.91, redOffset:73, greenOffset:18}
+                    },
+                    {
+                        duration:0.3, from:{alphaMultiplier:1, redOffset:80, greenOffset:20}, 
+                                        to:{alphaMultiplier:0.82, redOffset:66, greenOffset:16}
+                    },
+                    {
+                        duration:0.7, from:{animationAlpha:1}, 
+                                        to:{animationAlpha:0}
+                    }
+                ]" 
+                init=true
+                (bind trigger "playAnimation")
+            )
+        )
+    )
+
+
+    (image
+        (style
+            (bind alpha "animationAlpha")
+        )
+        (source = "R.atlases.components.count_filter_up()")
+    )
+
+    (bind colorTransform "{
+        redMultiplier:redMultiplier, greenMultiplier:greenMultiplier, blueMultiplier:blueMultiplier, alphaMultiplier:alphaMultiplier,
+        redOffset:redOffset, greenOffset:greenOffset, blueOffset:blueOffset, alphaOffset:alphaOffset}"
+    )
+)

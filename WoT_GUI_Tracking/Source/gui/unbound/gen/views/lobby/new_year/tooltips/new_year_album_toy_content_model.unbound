@@ -1,0 +1,19 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NewYearAlbumToyContentModel()
+    (scope
+        (var rankNumber:str = '')
+        (var rankRoman:str = '')
+        (var setting:str = '')
+        (var typeName:str = '')
+        (var isInCollection:bool = false)
+        (var isInInventory:bool = false)
+        (var toyIcon:str = '')
+        (var toyName:str = '')
+        (var toyDesc:str = '')
+        (var isMount:bool = false)
+        (var isMega:bool = false)
+        (var totalBonus:number = 0.0)
+        (var toyBonus:number = 0.0)
+    )
+)

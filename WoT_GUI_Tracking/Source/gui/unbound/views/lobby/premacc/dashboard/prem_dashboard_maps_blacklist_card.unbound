@@ -1,0 +1,110 @@
+(def layout PremDashboardMapsBlacklistCard() entrance=true
+    (macro PremDashboardMapsBlacklistCardModel)
+    (macro PremDashboardAdaptiveSize)
+    (macro PremDashboardAvailable)
+
+    (style
+        (width = 100%)
+        (height = 100%)
+        (backgroundColor = 0xff0c0c0c)
+    )
+    (scope
+        (event evCardOver)
+        (event evCardOut)
+    )
+    (dispatch onGoToMapsBlacklistView on='click' 
+        (enabled="$event.buttonIdx == MOUSE.LEFT")
+    )
+    (dispatch evCardOver on='rollOver')
+    (dispatch evCardOut on='rollOut')
+
+    (macro DashboardCardSounds over="evCardOver" click="onGoToMapsBlacklistView")
+
+    (image
+        (name = 'bg')
+        (style
+            (position = "absolute")
+            (bind alpha "isAvailable && isTankPremiumActive ? 1: 0.4")
+        )
+        (bind source "R.images.gui.maps.icons.premacc.dashboard.cardBlackMapList[isNormalSize ? 'Bad_map_360':'Bad_map_250']()")
+    )
+
+    (tf
+        (name = 'labelTF')
+        (style
+            (bind alpha "isAvailable ? 1 : 0.6")
+            (position = "absolute")
+            (hcenter = 0px)
+            (top = 10px)
+        )
+        (class HighTitleTextStyle)
+        (text = "R.strings.premacc.mapsBlacklist.infoTooltip.header()")
+        (mouseEnabled = false)
+        (bind visible "isAvailable")
+    )
+
+    (block
+        (name = 'lock')
+        (style
+            (width = 100%)
+            (height = 100%)
+            (align = "center|middle")
+        )
+        (tf
+            (name = 'labelTF')
+            (style
+                (bind alpha "isAvailable ? 1 : 0.6")
+            )
+            (class HighTitleTextStyle)
+            (text = "R.strings.premacc.mapsBlacklist.infoTooltip.header()")
+        )
+        (image
+            (name = 'lockImg')
+            (style
+                (position = "absolute")
+                (hcenter = 0px)
+                (vcenter = -10px)
+                (bind alpha "isAvailable ? 1 : 0.8")
+            )
+            (source = "R.images.gui.maps.icons.premacc.dashboard.cardMissions.lock()")
+            
+        )
+
+        (tf
+            (name = 'notAvailableTF')
+            (style
+                (position = "absolute")
+                (hcenter = 0px)
+                (bottom = 29px)
+            )
+            (class ErrorTextStyle)
+            (text = "R.strings.premacc.doubleExperienceCard.notAvailableNow()")
+        )
+        (bind visible "!isAvailable")
+    )
+
+    (group name = 'disabledMaps'
+        (style
+            (width = 100%)
+            (height = 100%)
+            (align = "middle|center")
+            (paddingTop = 25px)
+            
+        )
+        (renderer = 'MapsBlacklistWidgetSlot')
+        (container
+            (style
+                (gap = 10px)
+                (flow = "Flow.HORIZONTAL")
+            )
+        )
+
+        (bind visible "isAvailable && (isTankPremiumActive || isBasePremiumActive)")
+    )
+    
+    (macro HoverCardAndStroke)
+
+    (bind buttonMode "isAvailable")
+    (bind mouseEnabled "isAvailable")
+    (bind mouseChildren "isAvailable")
+)

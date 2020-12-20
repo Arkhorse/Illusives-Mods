@@ -1,0 +1,200 @@
+(def layout LootBoxPopoverContent() entrance=true hideBeforeResolve=true
+    (name = 'LootBoxPopoverContent')
+    (macro LootBoxPopoverContentModel)
+    (block
+        (name = 'content')
+        (style
+            (marginTop = 25px)
+            (width = 509px)
+        )
+        (hblock
+            (name = 'renderers')
+            (style
+                (width = 100%)
+                (align = "center")
+                (gap = 30px)
+            )
+            (controller $Repeat renderer='LootBoxPopoverRenderer'
+                (bind count "entryList.length")
+                (args "'renderer'+$index" "entryList[$index]" "entryList.length == $index + 1")
+            )
+        )
+        (hblock
+            (name = 'buttons')
+            (mouseEnabled = true)
+            (style
+                (marginTop = 25px)
+                (marginBottom = 10px)
+                (width = 100%)
+                (align = "center")
+                (gap = 30px)
+            )
+            (controller $Repeat renderer='LootBoxPopoverButtonsRenderer'
+                (bind count "isFestivityEnabled ? entryList.length : 0")
+                (args "'buttons'+$index" "entryList[$index]" "entryList.length == $index + 1")
+                (exprs
+                    (scope
+                        (dispatch onEventBtnClick args="{label: $event.label}" on='onEventClick')
+                    )
+                )
+            )
+
+            (controller $Instance layout=true
+                (exprs
+                    (element LootBoxNotAvailableWarning "R.strings.lootboxes.entryDesc.notAvailableNow()"
+                        (style
+                            (width = 100%)
+                            (align = "center")
+                        )
+                    )
+                )
+                (bind enabled "!isFestivityEnabled")
+            )
+        )
+    )
+)
+
+(def layout LootBoxPopoverRenderer(itemName:str, slotModel:dict, isLastElement:bool)
+    (name = "itemName")
+    (style
+        (width = 50%)
+        (align = "center")
+    )
+    (block
+        (name = 'image')
+        (style
+            (align = "center")
+            (width = 244px)
+            (height = 128px)
+            (marginLeft = -15px)
+            (marginBottom = 10px)
+        )
+        (image
+            (name = "'image_' + slotModel.labelStr")
+            (bind source "R.images.gui.maps.icons.lootboxes.types[slotModel.labelStr]()")
+        )
+
+        (element LBCounter
+            (name = 'boxCounter')
+            (scope
+                (bind boxesCount "slotModel.count")
+            )
+            (style
+                (position = "absolute")
+                (right = 33px)
+                (bottom = 0px)
+            )
+
+            (bind visible "slotModel.count > 0")
+        )
+    )
+    (block
+        (name = 'texts')
+        (style
+            (align = "center")
+            (width = 100%)
+        )
+        (tf
+            (name = 'titleTF')
+            (style
+                (marginBottom = 3px)
+                (width = 100%)
+                (textAlign = "center")
+            )
+            (class NYPopoverTitleTextStyle)
+            (bind text "R.strings.lootboxes.entryDesc[slotModel.labelStr].title()")
+            (multiline = true)
+        )
+
+        (tf	
+            (name = 'descrTF')
+            (style
+                (width = 100%)
+                (textAlign = "center")
+            )
+            (class NYPopoverMainTextStyle)
+            (bind text "R.strings.lootboxes.entryDesc[slotModel.labelStr].descr()")
+            (multiline = true)
+        )
+    )
+)
+
+(def layout LootBoxPopoverButtonsRenderer(itemName:str, slotModel:dict, isLastElement:bool)
+    (name = "itemName")
+    (scope
+        (event onEventClick)
+    )
+    (style
+        (width = 50%)
+        (align = "center")
+    )
+    
+    # Orange or Primary button with warning icon if loot box functions are in restricted mode
+    (hblock
+        (name = 'buttons')
+        (style
+            (width = 100%)
+            (align = "center")
+            (gap = 10)
+        )
+        (block
+            (bind visible "slotModel.isEnabled")
+            (button 'openPrimaryBtn'
+                (macro ButtonStylePrimary "BUTTON_SIZE_MEDIUM") 
+                (label = "R.strings.lootboxes.buttonLabel.open()")
+                (bind enabled "(slotModel.isAvailable && slotModel.isEnabled)")
+                (dispatch onEventClick args="{label: slotModel.labelStr}" dir=1 on='clicked')
+                (style
+                    (width = 102px)
+                )
+            )
+
+            (controller $ToolTip
+                (args body="R.strings.lootboxes.entryDesc.boxEmpty.resId")
+                (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+                (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+                (bind enabled "!slotModel.isAvailable")
+            )
+        )
+        
+
+        (button 'buyOrangeBtn'
+            (macro ButtonStyleMain "BUTTON_SIZE_MEDIUM") 
+            (bind visible "slotModel.isOrangeBtn && slotModel.isEnabled")
+            (label = "R.strings.lootboxes.buttonLabel.buy()")
+            (bind enabled "slotModel.isEnabled")
+            (dispatch onBuyBtnClick dir=1 on='clicked')
+            (style
+                (width = 102px)
+            )
+            (bind icon "slotModel.isBrowserIconVisible ?
+                R.images.gui.maps.icons.library.browser_link() : null"
+            )
+        )
+        
+        (element LootBoxNotAvailableWarning "R.strings.lootboxes.entryDesc.notAvailableNowShort()"
+            (bind visible "!slotModel.isEnabled")
+        )
+    )
+)
+
+(def layout LootBoxNotAvailableWarning(text:expression)
+    (name = 'LootBoxNotAvailableWarning')
+    (hblock
+        (name = 'content')
+        (image
+            (name = 'alertImg')
+            (source = "R.images.gui.maps.icons.library.alertBigIcon()")
+        )
+        (tf
+            (name = 'warningTF')
+            (style
+                (marginTop = 2px)
+                (textAlign = "center")
+            )
+            (class AlertTextStyle)
+            (bind text "text")
+            (multiline = false)
+        )
+    )
+)

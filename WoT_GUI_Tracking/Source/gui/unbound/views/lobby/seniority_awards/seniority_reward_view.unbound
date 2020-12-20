@@ -1,0 +1,189 @@
+(def layout SeniorityRewardView() entrance=true
+    (macro SeniorityRewardViewModel)
+    (scope
+        (const SCREEN_HEIGHT_POINT:number = 900)
+
+        (event evOnFadeInComplete)
+        (event evReadyToShow)
+        (event evOnCloseAction)
+
+        (macro BgAspectRatioHelper "evReadyToShow")
+
+        (var offsetIdx:number = 0)
+        (bind offsetIdx "viewSize.width > 1360 && viewSize.height > SCREEN_HEIGHT_POINT ? 0 : 1" (event "viewResized"))
+
+        (const OFFSETS:dict = {
+            btnBottomMargin: [61, 41],
+            descriptionTitleBottomMargin: [57px, 47px],
+        })
+    )
+    (style
+        (alpha = 0)
+        (width = 100%)
+        (height = 100%)
+        (align = "center|middle")
+    )
+    
+    (bind mouseChildren "true" init=false
+        (event "evOnFadeInComplete")
+    )
+
+    # Close button and event for ESC
+    (dispatch evOnCloseAction on='escPressed'
+        (enabled = "!fadeOut")
+    )
+
+    (controller $Animation
+        # fadeIn effect animation
+        (bindcall play duration=0.3 from={alpha:0} to={alpha:1} callbacks="{onComplete: evOnFadeInComplete}" init=false
+            (event "evReadyToShow")
+        )
+        # starts closing by button
+        (bindcall play duration=0.3 to={alpha:0} callbacks="{onComplete: onCloseAction}" init=false
+            (event "evOnCloseAction")
+        )
+        # starts closing by python
+        (bindcall play duration=0.3 to={alpha:0} callbacks="{onComplete: onCloseAction}" init=false
+            (bind enabled "hardReset")
+        )
+        # ends closing with fadeOut effect
+        (bindcall play duration=0.3 to={alpha:0} callbacks="{onComplete: onDestroyEvent}" init=false
+            (bind enabled "fadeOut")
+        )
+    )
+
+    (macro ViewTransparentBg)
+    (image
+        (name = 'bgImg')
+        (style
+            (position = "absolute")
+            (hcenter = 0)
+            (vcenter = 0)
+            (bind width "bgW") 
+            (bind height "bgH") 
+        )
+
+        (dispatch evReadyToShow on='complete')
+        (bind source "R.images.gui.maps.icons.progressiveReward.screenBg.hidden()")
+    )
+
+    (block
+        (name = 'contentBlock')
+        (style
+            (align = "center")
+            (width = 1000px)
+            (bind height "viewSize.height < SCREEN_HEIGHT_POINT ? 700px : 850px"
+                (event "viewResized")
+            )
+        )
+
+        (block
+            (name = 'header')
+            (style
+                (align = "center")
+                (paddingTop = -18px)
+            )
+            (tf
+                (name = 'seniorityRewardLabel')
+                (antiAliasType = 'normal')
+                (bind class "viewSize.height < SCREEN_HEIGHT_POINT ? 'HeroTitleTextStyle' : 'EpicTitleTextStyle'"
+                    (event "viewResized")
+                )
+                (text = "R.strings.seniority_awards.openBoxView.header()")
+            )
+            (hblock
+                (name = 'descriptionBlock')
+                (style
+                    (align = "middle")
+                )
+                (tf
+                    (name = 'descriptionText')
+                    (class BonusLocalTextStyle)
+                    (text = "R.strings.seniority_awards.openBoxView.description()")
+                )
+                (block
+                    (name = 'autoOpenInfo')
+                    (image
+                        (source = "R.images.gui.maps.icons.library.info()")
+                    )
+                    (controller $ToolTip
+                        (args header="R.strings.seniority_awards.openBoxView.autoOpenTooltip.header()"
+                            body="TextFormat(R.strings.seniority_awards.openBoxView.autoOpenTooltip.body(),
+                                {date: autoOpenDate})"
+                        )
+                        (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+                        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+                    )
+                )
+            )
+        )
+
+        (block
+            (name = 'rewardBlock')
+            (style
+                (paddingTop = 30px)
+                (align = "center")
+            )
+            (image
+                (name = 'rewardsImg')
+                (source = "R.images.gui.maps.icons.progressiveReward.rewards.big.big_hidden()")
+                (bind scaleX "viewSize.height < SCREEN_HEIGHT_POINT ? 0.8 : 1" (event "viewResized"))
+                (bind scaleY "viewSize.height < SCREEN_HEIGHT_POINT ? 0.8 : 1" (event "viewResized"))
+            )
+        )
+
+        (block
+            (style
+                (position = "absolute")
+                (hcenter = 0)
+                (bottom = 0)
+            )
+
+            (block
+                (style
+                    (align = "center")
+                    (width = 100%)
+                    (bind marginBottom "OFFSETS.descriptionTitleBottomMargin[offsetIdx]")
+                )
+
+                (tf
+                    (bind htmlText "
+                            htmlTextStyle(formatString(R.strings.seniority_awards.openBoxView.boxesInStorage(),
+                            [{value: htmlTextStyle(countAwards, 'StatusWarningTextStyle'), name:'count'}], true),
+                            'HighlightTextStyle')" init=false
+                    )
+                )
+
+                (button
+                    (macro ButtonStyleMain "BUTTON_SIZE_LARGE")
+                    (style
+                        (width = 160px)
+                        (marginTop = 14px)
+                        (bind marginBottom "OFFSETS.btnBottomMargin[offsetIdx]")
+                    )
+                    (bind label "TextFormat(
+                            R.strings.seniority_awards.openBoxView.openBoxesLabel(),
+                            {count:buyBtnOpenCount})"
+                    )
+                    (soundDown = "R.sounds.yes1()")
+                    (dispatch onOpenBtnClick on='clicked')
+                    (setFocus)
+                )
+            )
+        )
+    )
+    
+    (text_button
+        (name = 'closeBtn')
+        (macro ButtonCloseStyle)
+        (style
+            (position = "absolute")
+            (right = 30px)
+            (top = 30px)
+        )
+        (label = "R.strings.menu.viewHeader.closeBtn.label()")
+        (dispatch evOnCloseAction on='clicked'
+            (enabled = "!fadeOut")
+        )
+    )
+)

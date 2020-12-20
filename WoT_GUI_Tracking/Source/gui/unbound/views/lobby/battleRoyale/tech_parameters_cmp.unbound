@@ -1,0 +1,119 @@
+(def element TechParametersCmp() layout=true entrance=true
+	(macro TechParametersCmpViewModel)
+	(scope
+	    (const WIDTH_BREAK_POINT:number = 1366)
+	    (const HEIGHT_BREAK_POINT:number = 900)
+
+	    (var fullSize:bool = true)
+	    (bind fullSize "viewSize.width >= WIDTH_BREAK_POINT && viewSize.height >= HEIGHT_BREAK_POINT"
+	        (event "viewResized")
+        )
+	)
+	(style
+		(bind width "viewSize.width"
+			(event "viewResized")
+		)
+	)
+	(block
+		(name = vehicleFeatures)
+		(style
+			(position = absolute)
+			(right = 0)
+			(width = 349px)
+			(bind marginTop "viewSize.width >= BR_BREAK_POINT_WIDTH ? 67px : 69px" (event "viewResized"))
+			(bind padding "fullSize ? [78px, 29px, 20px, 29px] : [78px, 14px, 20px, 14px]")
+			(backgroundImage = "R.images.gui.maps.icons.battleRoyale.hangar.vehicleFeaturesBg()")
+			(backgroundSize = "crop")
+		)
+		(tf
+			(class HighTitleTextStyle)
+			(text = "R.strings.battle_royale.vehicleFeatures.subTitle.force()")
+		)
+		(group 'vehicleGoodSpec'
+			(style
+				(width = 100%)
+				(bind marginTop "fullSize ? 8px : 4px")
+			)
+			(renderer = 'BrVehicleSpecifications')
+			(container
+				(style
+					(width = 100%)
+				)
+			)
+		)
+		(macro BrSpecificationsDelimiter)
+		(tf
+			(class HighTitleTextStyle)
+			(text = "R.strings.battle_royale.vehicleFeatures.subTitle.weak()")
+
+		)
+		(group 'vehicleBadSpec'
+			(style
+				(width = 100%)
+				(bind marginTop "fullSize ? 8px : 4px")
+			)
+			(renderer = 'BrVehicleSpecifications')
+			(container
+				(style
+					(width = 100%)
+				)
+			)
+		)
+		(macro BrSpecificationsDelimiter)
+        (tf
+            (class HighTitleTextStyle)
+            (text = "R.strings.battle_royale.vehicleFeatures.subTitle.description()")
+        )
+        (tf
+            (class MainBigTextStyle)
+            (style
+                (marginTop = 3px)
+                (width = 251px)
+            )
+            (bind text "vehicleDescription")
+        )
+	)
+)
+
+(def macro BrSpecificationsDelimiter()
+    (block
+        (style
+            (width = 251px)
+            (height = 1px)
+            (bind margin "fullSize ? [0px, 16px, 0px, 16px] : [0px, 8px, 0px, 8px]")
+            (backgroundColor = 0x1ad1d1d1)
+        )
+    )
+)
+
+(def element BrVehicleSpecifications() layout = true
+    (macro BrVehicleSpecificationsModel)
+    (style
+        (flow = "Flow.HORIZONTAL")
+        (width = 100%)
+        (paddingTop = 5px)
+        (paddingBottom = 5px)
+    )
+    (block
+        (style
+            (width = 28px)
+            (height = 28px)
+            (marginRight = 10px)
+        )
+        (image
+            (bind source "iconSource")
+            (style
+                (position = absolute)
+                (vcenter = 0)
+                (hcenter = 0)
+            )
+        )
+    )
+    (tf
+        (class MainBigTextStyle)
+        (style
+            (width = 213px)
+        )
+        (bind text "specName")
+    )
+)

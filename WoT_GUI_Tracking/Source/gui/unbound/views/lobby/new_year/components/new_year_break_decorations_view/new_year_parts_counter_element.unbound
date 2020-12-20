@@ -1,0 +1,40 @@
+(def layout NewYearPartsCounterElement ()
+    (scope
+        (event evShardsCountChanged)
+        (event evShardsAnimaComplete)
+
+        (var shardsCount:number = 0
+            (dispatch evShardsCountChanged on='evChanged')
+        )
+
+        (var countStyle:str = 'NewYearCountPartsStyle')
+
+        (var animationCounterEnabled:bool = false)
+
+        (var _animationShards:number = 0)
+        (bind _animationShards "shardsCount"
+            (bind enabled "!animationCounterEnabled")
+        )
+
+        (controller $Animation
+            (bindcall play
+                duration = 0.8
+                to       = "{_animationShards:shardsCount}"
+                easing   = "Easing.cubic_in"
+                callbacks="{onComplete: evShardsAnimaComplete}"
+                (event "evShardsCountChanged")
+                (enabled = "animationCounterEnabled")
+            )
+        )
+    )
+
+    (tf
+        (name = 'shardsCount')
+        (bind class "countStyle")
+        (style
+            (marginTop = 3px)
+        )
+        # TODO: replace 'formatSeparator' after implement WOTD-119345
+        (bind text "formatSeparator(round(_animationShards))")
+    )
+)

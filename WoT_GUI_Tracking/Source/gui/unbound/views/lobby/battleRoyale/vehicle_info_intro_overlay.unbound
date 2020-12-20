@@ -1,0 +1,198 @@
+(def element VehicleInfoIntroOverlay() layout=true entrance=true
+    (macro VehicleInfoIntroOverlayModel)
+    (scope
+        (const FADE_IN_DURATION : number = 0.5)
+
+        (event onSWFLoaded)
+        (event onTitleShown)
+        (event onDescriptionShown)
+        (event onProgressBlockShown)
+        (event onLeftTipShown)
+        (event onRightTipShown)
+        (event onGainingXpAnimFinish)
+        (event onLevelUpAnimFinish)
+
+        (var swfLoaded : bool = false)
+        (var showProgressAnim : bool = false)
+        (bind swfLoaded true init=false (event "onSWFLoaded"))
+        (bind showProgressAnim true init=false (event "onDescriptionShown"))
+    )
+    (name = 'vehicleInfoIntroOverlay')
+    (style
+        (bind width "viewSize.width" (event "viewResized"))
+        (bind height "viewSize.height" (event "viewResized"))
+        (bind gap "viewSize.height * 0.05" (event "viewResized"))
+        (backgroundColor = 0x10000000)
+        (padding = [10%,10%,10%,10%])
+        (align = "center|top")
+    )
+    (dispatch onSubmitBtnClick on='escPressed')
+    (tf
+        (name = 'titleTf')
+        (class SuperPromoTitleTextStyle)
+        (text = "R.strings.battle_royale.hangarVehicleInfo.introDialog.title()")
+        (controller $Animation
+            (bindcall play
+                from={alpha:0, marginTop:10}
+                to={alpha:1, marginTop:0}
+                duration="FADE_IN_DURATION"
+                callbacks="{onComplete:onTitleShown}"
+                init=true
+            )
+        )
+    )
+    (tf
+        (name = 'messageTf')
+        (visible = false)
+        (bind visible true init=false watch=false (event "onTitleShown"))
+        (class MainBigTextStyle)
+        (style
+            (width = 800px)
+            (multiline = true)
+            (textAlign = "center")
+        )
+        (text = "R.strings.battle_royale.hangarVehicleInfo.introDialog.message()")
+        (controller $Animation
+            (bindcall play
+                from={alpha:0, marginTop:10}
+                to={alpha:1, marginTop:0}
+                duration="FADE_IN_DURATION"
+                callbacks="{onComplete:onDescriptionShown}"
+                (event "onTitleShown")
+            )
+        )
+    )
+    (block
+        (name = 'progressBlock')
+        (visible = false)
+        (bind visible true init=false watch=false (event "onDescriptionShown"))
+        (style
+            (width = 100%)
+            (height = 100%)
+            (align = "center")
+            (alpha = 0)
+        )
+        (controller $Animation
+            (bindcall play to={alpha:1} duration="FADE_IN_DURATION" callbacks="{onComplete:onProgressBlockShown}"
+                (bind enabled "swfLoaded && showProgressAnim")
+            )
+        )
+        (block
+            (name = 'swfContainer')
+            (style
+                (height = 33%)
+                (align = "center|middle")
+            )
+            (swf
+                (name = 'progressBarAnimation')
+                (source = "R.animations.battleRoyale.progressBar_levelUp()")
+                (bindcall stop on='complete' (event "onLevelUpAnimFinish") (event "onGainingXpAnimFinish"))
+                (dispatch onSWFLoaded on='complete')
+                (addFrameEvent "$lastFrame" "onLevelUpAnimFinish")
+                (addFrameEvent 64 "onGainingXpAnimFinish")
+                (bindcall play (event "onLeftTipShown") (event "onRightTipShown"))
+            )
+        )
+        (hblock
+            (name = 'tutorialBlock')
+            (style
+                (gap = 50%)
+                (height = 67%)
+                (align = "center|middle")
+            )
+            (element TipRenderer 'leftTip'
+                (scope
+                    (iconSource = "R.images.gui.maps.icons.battleRoyale.vehicleIntro.damage_icon()")
+                    (textSource = "R.strings.battle_royale.hangarVehicleInfo.introDialog.tipLeft()")
+                )
+                (controller $Animation
+                    (bindcall play to={alpha:1} duration="FADE_IN_DURATION" callbacks="{onComplete:onLeftTipShown}"
+                        (event "onProgressBlockShown")
+                    )
+                )
+            )
+            (image
+                (name = 'vehicleImage')
+                (bind source "R.images.gui.maps.icons.battleRoyale.vehicleIntro.vehicles[vehicleTag]()" init=false)
+            )
+            (element TipRenderer 'rightTip'
+                (scope
+                    (iconSource = "R.images.gui.maps.icons.battleRoyale.vehicleIntro.loot_icon()")
+                    (textSource = "R.strings.battle_royale.hangarVehicleInfo.introDialog.tipRight()")
+                )
+                (controller $Animation
+                    (bindcall play
+                        to={alpha:1}
+                        delay=0.5
+                        duration="FADE_IN_DURATION"
+                        callbacks="{onComplete:onRightTipShown}"
+                        (event "onGainingXpAnimFinish")
+                    )
+                )
+            )
+        )
+    )
+    (button 'submitButton'
+        (name = 'submitButton')
+        (macro ButtonStylePrimary "BUTTON_SIZE_LARGE")
+        (style
+            (alpha = 0)
+            (minWidth = 160px)
+            (marginTop = 10%)
+        )
+        (label = "R.strings.battle_royale.hangarVehicleInfo.introDialog.submit()")
+        (enabled = false)
+        (bind enabled true init=false (event "onLevelUpAnimFinish"))
+        (controller $Animation
+            (bindcall play to={alpha:1} duration="FADE_IN_DURATION" (event "onLevelUpAnimFinish"))
+        )
+        (dispatch onSubmitBtnClick on='clicked')
+    )
+    (text_button 'closeButton'
+        (name = 'closeButton')
+        (macro ButtonCloseStyle)
+        (style
+            (position = "absolute")
+            (top = 40px)
+            (right = 31px)
+        )
+        (bind visible "!isFirstView" init=false)
+        (label = "R.strings.menu.viewHeader.closeBtn.label()")
+        (dispatch onSubmitBtnClick on='clicked')
+    )
+)
+
+(def element TipRenderer(name:str) layout=true
+    (name = "name")
+    (scope
+        (var iconSource : str = '')
+        (var textSource : str = '')
+    )
+    (style
+        (alpha = 0)
+        (width = 111px)
+        (align = "center|middle")
+    )
+    (block
+        (name = 'iconContainer')
+        (style
+            (width = 100%)
+            (height = 111px)
+            (align = "center|middle")
+        )
+        (image
+            (name = 'tipIcon')
+            (bind source "iconSource")
+        )
+    )
+    (tf
+        (name = 'tipText')
+        (class HighlightTextStyle)
+        (style
+            (width = 100%)
+            (multiline = true)
+            (textAlign = "center")
+        )
+        (bind text "textSource")
+    )
+)

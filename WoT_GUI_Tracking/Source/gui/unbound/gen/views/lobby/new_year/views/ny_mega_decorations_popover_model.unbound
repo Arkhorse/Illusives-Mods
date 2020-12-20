@@ -1,0 +1,20 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NyMegaDecorationsPopoverModel()
+    (scope
+        (event onSelectedDecoration)
+        (event onSlotStatusIsNewChanged)
+
+        (var decorationTypeIcon:str = '')
+        (var decorationName:str = '')
+        (var objectBonus:number = 0.0)
+        (var totalBonus:number = 0.0)
+        (var hasDecoration:bool = false)
+        (var selected:bool = false)
+        (var partsCurrent:number = 0)
+        (var partsTotal:number = 0)
+
+        # The following submodels are used in this model:
+        # slot:views.lobby.new_year.components.new_year_popover_mega_decoration_slot_model
+    )
+)

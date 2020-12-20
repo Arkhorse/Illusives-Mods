@@ -1,0 +1,111 @@
+(def element SkillBookSlotOverlay() layout = true
+    (macro CrewBookScreenBreackPoints)
+    (scope
+
+        (var bookIcon:str = '')
+        (var hoverBg:str = "R.images.gui.maps.icons.crewBooks.bookItem.hover()")
+        (var hoverBgSmall:str = "R.images.gui.maps.icons.crewBooks.bookItem.hover_small()")
+        (var amount:number = 0)
+        (var title:str = '')
+        (var description:str = '')
+        (var overlayDescription:str = '')
+        (var descriptionFmtArgs:array = [])
+        (var overlayDescriptionFmtArgs:array = [])
+        (var isBigFlag:bool = true)
+        (var descStyle:str = "isBigFlag ? 'MainTextStyle' : 'CounterTextStyle'")
+        (bind isBigFlag "viewSize.width >= BORDER_SCREEN_WIDHT && viewSize.height >= BORDER_SCREEN_HEIGHT"
+            (event "viewResized")
+        )
+    )
+    
+    (style
+        (bind width "isBigFlag ? 272px : 218px")
+        (bind height "isBigFlag ? 322px : 256px")
+    )
+
+    (image
+        (name = 'hover bg')
+        (style
+        )
+        (bind source "isBigFlag ? hoverBg : hoverBgSmall")
+    )
+    (block
+        (name = 'bookIcon')
+        (bind class CrewBookNormalStyle)
+        (style
+            (position = "absolute")
+            (bind top "isBigFlag ? 40px : 28px")
+            (bind left "isBigFlag ? 36px : 28px")
+        )
+        (image
+            (style
+                (bind scaleX "isBigFlag ? 1 : 0.8")
+                (bind scaleY "isBigFlag ? 1 : 0.8")
+                (alpha = 0.1)
+            )
+            (bind source "bookIcon")
+        )
+    )
+    (block
+        (name= 'title')
+        (style
+            (bind width "isBigFlag ? 222px : 180px")
+            (height = 80px)
+            (bind top "isBigFlag ? 11px : -22px")
+            (bind left "isBigFlag ? 24px : 18px")
+            (position = "absolute")
+            (align = "bottom")
+        )
+        (tf
+            (bind class "isBigFlag ? 'HighTitleTextStyle' : 'MiddleTitleTextStyle'")
+            (style
+                (width = 100%)
+                (leading = -2)
+            )
+            (bind text "title")
+        )
+    )
+
+    (block
+        (name = 'description_block')
+        (style
+            (bind top "isBigFlag ? 97px : 61px")
+            (bind left "isBigFlag ? 24px : 18px")
+            (position = "absolute")
+        )
+        (tf
+            (style
+                (bind width "isBigFlag ? 222px : 180px")
+                (autoSize = true)
+                (wordWrap = true)
+            )
+            (bind htmlText "htmlTextStyle(
+                    formatString(description, descriptionFmtArgs, true),
+                    descStyle,
+                    leading=-1px
+                )"
+                init=false
+                (bind enabled "descriptionFmtArgs.length > 0") 
+            )
+        )
+        (tf
+            (style
+                (bind width "isBigFlag ? 222px : 180px")
+                (autoSize = true)
+                (wordWrap = true)
+            )
+            (bind htmlText "htmlTextStyle(
+                    formatString(overlayDescription, overlayDescriptionFmtArgs, true),
+                    descStyle,
+                    leading=-1px
+                )"
+                init=false
+                (bind enabled "overlayDescriptionFmtArgs.length > 0")
+            )
+            (bind htmlText "htmlTextStyle(overlayDescription, descStyle)"
+                init=false
+                (bind enabled "overlayDescriptionFmtArgs.length == 0")
+            )
+        )
+    )
+)

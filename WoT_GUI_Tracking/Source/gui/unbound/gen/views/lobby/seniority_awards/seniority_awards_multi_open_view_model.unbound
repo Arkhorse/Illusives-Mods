@@ -1,0 +1,24 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro SeniorityAwardsMultiOpenViewModel()
+    (scope
+        (event onOpenBox)
+        (event onCloseBtnClick)
+        (event onOpenBoxBtnClick)
+        (event onReadyToRestart)
+        (event onSkipAnimation)
+
+        (var boxesCounter:number = 0)
+        (var limitToOpen:number = 0)
+        (var rewards:array = [])
+        (var rewardSize:str = '')
+        (var lootboxIcon:str = '')
+        (var restart:bool = false)
+        (var isOpenBoxBtnEnabled:bool = true)
+        (var hardReset:bool = false)
+        (var startShowIndex:number = 0)
+        (var isServerError:bool = false)
+
+        (const WINDOW_MAX_BOX_COUNT:number = 5)
+    )
+)

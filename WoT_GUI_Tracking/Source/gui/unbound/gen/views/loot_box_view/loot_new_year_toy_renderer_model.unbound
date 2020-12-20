@@ -1,0 +1,12 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro LootNewYearToyRendererModel()
+    (macro LootDefRendererModel)
+    (scope
+        (var toyID:number = 0)
+        (var decorationImage:str = '')
+        (var rankImage:str = '')
+        (var isMega:bool = false)
+        (var rank:number = 0)
+    )
+)

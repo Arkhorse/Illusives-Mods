@@ -1,0 +1,12 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro DialogPricesContentModel()
+    (scope
+        (var tooltipId:number = 0)
+        (var hasAdditionalCost:bool = false)
+
+        # The following submodels are used in this model:
+        # valueMain:views.value_price
+        # valueAdditional:views.value_price
+    )
+)

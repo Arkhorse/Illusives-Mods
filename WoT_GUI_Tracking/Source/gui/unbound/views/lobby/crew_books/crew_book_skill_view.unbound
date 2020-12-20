@@ -1,0 +1,63 @@
+(def layout CrewBookSkillView()
+    (macro CrewBookSkillModel)
+    (macro CrewBooksTooltips)
+    (scope
+        (var percentFormatter:str = "isUnlearned ? '%' : ''")
+        (var xFormatter:str = "isCompact ? 'x' : ''")
+        (var gainedXpFormatter:str = "isLowGainedXp ? '%*' : '%'")
+    )
+    (style
+        (height = 14px)
+        (flow = "Flow.HORIZONTAL")
+        (align = "middle")
+    )
+    (hblock
+        (style
+            (height = 100%)
+            (align = "middle")
+        )
+        (image
+            (bind source "icon")
+        )
+        (tf
+            (bind visible "isUnlearned || isCompact")
+            (bind class "isUnlearned ? 'BonusPreviewTextStyle' : 'CreditsTextStyle'")
+            (style
+                (marginLeft = 2px)
+            )
+            (bind text "xFormatter + description + percentFormatter")
+        )
+        (controller $ToolTip
+            (bindcall args 
+                tooltipId = "TOOLTIP_TANKMAN_SKILL"
+                tankmanInvId = "tankmanInvId"
+                skillName = "skillName"
+            )
+            (bind content "R.views.common.tooltip_window.backport_tooltip_content.BackportTooltipContent.resId")
+            (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+            (bind enabled "isTooltipEnable")
+        )
+    )
+    (block
+        (style
+            (height = 100%)
+            (align = "middle")
+        )
+        (tf
+            (bind visible "isGainProgressVisible")
+            (class BonusAppliedTextStyle)
+            (style
+                (marginRight = 2px)
+            )
+            (bind text "'+' + gainProgress + gainedXpFormatter")
+        )
+        (controller $ToolTip
+            (args 
+                body = "R.strings.tooltips.crewBooks.tankman.skill.lowGainedXp()"
+            )
+            (bind content "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+            (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+            (bind enabled "isLowGainedXp")
+        )
+    )
+)

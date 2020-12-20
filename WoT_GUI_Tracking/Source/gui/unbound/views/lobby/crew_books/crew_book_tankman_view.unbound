@@ -1,0 +1,311 @@
+(def layout CrewBookTankmanView(name:str ='')
+    (macro CrewBookTankmanModel)
+    (macro CrewBooksTooltips)
+    (macro CrewBookScreenBreackPoints)
+    (name = "name")
+    (scope
+        (const PERCENT_FORMATTER:str = '%')
+
+        (event onTankmanClick)
+        (event evBtnOverEvent)
+        (event evBtnOutEvent)
+        (event playArrowIdleAnimationEvent)
+        (event onArrowUpComplete)
+
+        (var isBigFlag:bool = false)
+        (var arrowAlpha:number = 0)
+        (var wrongVehicleOffsetY:number = "isSkillsEmpty ? 20px : 0px")
+        (var selectAnimTriger:bool = false)
+        (var arrowAnimTrigger:bool = false
+            (dispatch playArrowIdleAnimationEvent on='evChanged' init=false)
+        )
+        (var xpArrow:str = "R.images.gui.maps.icons.crewBooks.tankmanComponents.xp_arrow()")
+        (var xpArrowSmall:str = "R.images.gui.maps.icons.crewBooks.tankmanComponents.xp_arrow_small()")
+
+        (bind arrowAnimTrigger "isArrowAnimPlay" init=false)
+        (bind selectAnimTriger "isTankamanSelected" init=false) 
+
+        (bind isBigFlag "viewSize.width >= BORDER_SCREEN_WIDHT && viewSize.height >= BORDER_SCREEN_HEIGHT"
+            (event "viewResized")
+        )
+        (controller $Animation
+            (bindcall play
+                to="{arrowAlpha:1}"
+                duration=0.2
+                (event "evBtnOverEvent")
+            )
+            (bindcall play
+                to="{arrowAlpha:0.5}"
+                duration=0.2
+                (event "evBtnOutEvent")
+                (enabled = "isClickEnable && isArrowAnimPlay")
+            )
+            (bindcall play
+                to="{arrowAlpha:0}"
+                duration=0.2
+                (event "evBtnOutEvent")
+                (enabled = "isClickEnable && !isArrowAnimPlay")
+            )
+            (bindcall play
+                to="{arrowAlpha:1}"
+                duration=0.2
+                (bind enabled "isTankamanSelected")
+            )
+            (bindcall play
+                to="{arrowAlpha:0.5}"
+                duration=0.2
+                (bind enabled "isArrowAnimPlay")
+            )
+            (bindcall play
+                to="{arrowAlpha:0}"
+                duration=0.2
+                (bind enabled "!isTankamanSelected && !isArrowAnimPlay")
+            )
+            (bindcall play
+                to="{arrowAlpha:0}"
+                duration=0.2
+                (bind enabled "isLearnDisable")
+            )
+        )
+    )
+    (dispatch evSetUseBtnFocus on='click' dir=1 init=false)
+    (dispatch evBtnOverEvent on='rollOver'
+        (enabled="isClickEnable")
+    )
+    (dispatch evBtnOutEvent on='rollOut')
+    (dispatch onTankmanClick  on='click' args="{index: idx}" dir=1 init=false
+        (enabled = "isClickEnable")
+    )
+    (exec "playSound(R.sounds.yes1())"
+        (event "onTankmanClick")
+    )
+    (exec "playSound(R.sounds.highlight())"
+        (event "evBtnOverEvent")
+    )
+    (style 
+        (bind width "isBigFlag ? 170px : 136px")
+        (bind height "isBigFlag ? 170px : 136px")
+    )
+    (block
+        (mouseChildren = "false")
+        (bind buttonMode "isClickEnable")
+        (style
+            (width = 100%)
+            (height = 100%)
+        )
+        (controller $ToolTip
+            (args 
+                tooltipId = "TOOLTIP_TANKMAN"
+                invID = "invID"
+            ) 
+            (bind content "R.views.common.tooltip_window.backport_tooltip_content.BackportTooltipContent.resId")
+            (bind enabled "!isEmpty && isTooltipEnable")
+        )
+        (block
+            (name = 'mouseOverHighlight')
+            (style
+                (alpha = 0)
+            )
+            (image
+                (style
+                    (bind scaleX "isBigFlag ? 1 : 0.8")
+                    (bind scaleY "isBigFlag ? 1 : 0.8")
+                    (bind top "isBigFlag ? 14px : 20px")
+                    (left = 8px)
+                    (position = absolute)
+                )
+                (source = "R.images.gui.maps.icons.crewBooks.tankmanComponents.hover()")
+            ) 
+            (controller $Animation
+                (bindcall play 
+                    duration=0.2 
+                    to="{alpha:1}"
+                    (event "evBtnOverEvent")
+                )
+                (bindcall play 
+                    duration=0.2 
+                    to="{alpha:0}"
+                    (event "evBtnOutEvent")
+                )
+            )
+        )
+        (image
+            (name = 'roleIcon')
+            (style
+                (bind scaleX "isBigFlag ? 1 : 0.8")
+                (bind scaleY "isBigFlag ? 1 : 0.8")
+                (bind top "isBigFlag ? 10px : 15px")
+                (bind right "isBigFlag ? 10px : -3px")
+                (bind alpha "isLearnDisable ? 0.5 : 1")
+                (position = absolute)
+            )
+            (bind source "roleIcon")
+        )
+        (image
+            (name = 'disabledHetch')
+            (bind visible "isLearnDisable")
+            (style
+                (bind scaleX "isBigFlag ? 1 : 0.8")
+                (bind scaleY "isBigFlag ? 1 : 0.8")
+                (bind top "isBigFlag ? 10px : 17px")
+                (left = 9px)
+                (position = absolute)
+            )
+            (source = "R.images.gui.maps.icons.crewBooks.tankmanComponents.disabled()")
+        )
+        (block
+            (name = 'upgradeArrowBlock')
+            (bind visible "!isLearnDisable && !isEmpty")
+            (style
+                (position = absolute)
+                (bind alpha "arrowAlpha")
+            )
+            (image
+                (style
+                    (bind top "isBigFlag ? 38px : 45px")
+                    (bind left "isBigFlag ? 0px : 4px")
+                    (position = absolute)
+                )
+                (bind source "isBigFlag ? xpArrow : xpArrowSmall")
+            ) 
+            (controller $Animation
+                (bindcall stop
+                    id='finishArrowIdleAnim'
+                    (bind trigger "selectAnimTriger")
+                )
+                (bindcall stopSeq
+                    id='arrowIdleAnim'
+                    (bind trigger "arrowAnimTrigger")
+                )
+                (bindcall playSeq
+                    "[
+                        {duration:0.8,  to:{marginTop:0}, easing:Easing.cubic_out},
+                        {duration:0.8,  to:{marginTop:-20}, easing:Easing.cubic_out}
+                    ]"
+                    repeatCount=-1
+                    id='arrowIdleAnim'
+                    (bind enabled "arrowAnimTrigger")
+                )
+                (bindcall play
+                    to="{marginTop:0}"
+                    duration=0.2
+                    id='finishArrowIdleAnim'
+                    (bind enabled "!arrowAnimTrigger")
+                )
+                (bindcall play
+                    to="{marginTop:-20}"
+                    duration=0.2
+                    (bind trigger "selectAnimTriger")
+                    (enabled = "isTankamanSelected")
+                )
+                (bindcall play
+                    to="{marginTop:0}"
+                    duration=0.2
+                    (bind trigger "selectAnimTriger")
+                    (enabled = "!isTankamanSelected && !arrowAnimTrigger")
+                )
+            )
+        )
+
+        (image
+            (name = 'tankmenIcon')
+            (style
+                (bind scaleX "isBigFlag ? 1 : 0.8")
+                (bind scaleY "isBigFlag ? 1 : 0.8")
+                (bind alpha "isLearnDisable ? 0.7 : 1")
+                (bind top "isBigFlag ? 14px : 20px")
+                (left = 6px)
+                (position = absolute)
+            )
+            (bind source "tankmanIcon")
+        )
+        (block
+            (name = 'nativeVehicle')
+            (bind visible "isLearnDisable && isWrongVehicle")
+            (style
+                (width = 100%)
+                (height = 100%)
+            )
+            (image
+                (name = 'redLight')
+                (style
+                    (bind scaleX "isBigFlag ? 1 : 0.8")
+                    (bind scaleY "isBigFlag ? 1 : 0.8")
+                    (position = absolute)
+                    (bind left "isBigFlag ? 20px : 16px")
+                    (bind bottom "isBigFlag ? -27px + wrongVehicleOffsetY : -48px + wrongVehicleOffsetY")
+                )
+                (source = "R.images.gui.maps.icons.crewBooks.tankmanComponents.red_light_native_vehicle()")
+            )
+            (tf
+                (class ErrorTextStyle)
+                (style
+                    (width = 100%)
+                    (textAlign = "center")
+                    (bind bottom "isBigFlag ? -8px + wrongVehicleOffsetY : -22px + wrongVehicleOffsetY")
+                    (position = absolute)
+                )
+                (bind text "nativeVehicle")
+            )
+        )
+        (image
+            (name = 'roleLevelRedLight')
+            (bind visible "isLearnDisable && isLowRoleLevel")
+            (style
+                (top = -2px)
+                (bind left "isBigFlag ? -4px : -8px")
+                (position = absolute)
+            )
+            (source = "R.images.gui.maps.icons.crewBooks.tankmanComponents.red_light()")
+        ) 
+        (tf
+            (name = 'roleLevel')
+            (bind visible "roleLevel != '' && isLearnDisable && isLowRoleLevel")
+            (style
+                (top = 13px)
+                (bind left "isBigFlag ? 15px : 12px")
+                (position = absolute)
+            )
+            (bind class "isLearnDisable && isLowRoleLevel ? 'ErrorTextStyle' : 'StatsTextStyle'")
+            (bind text "roleLevel + PERCENT_FORMATTER")
+        )
+        (hblock
+            (bind visible "isTankamanSelected")
+             (style
+                (top = 13px)
+                (width = 100%)
+                (bind left "isBigFlag ? -53px : -35px")
+                (align = "center|middle")
+                (position = absolute)
+            )
+            (tf
+                (name = 'tankmenGainExp')
+                (class ExpTextStyle)
+                (bind text "tankmanGainExp")
+            )
+            (image
+                (source = "R.images.gui.maps.icons.library.XpIcon_1()")
+            )
+        )
+    )
+    (group name = 'tankmanSkillList'
+        (style
+            (width = "100%")
+            (height = "14px")
+            (bind bottom "isBigFlag ? 16px : 0px")
+            (position = absolute)
+        )
+        (renderer = 'CrewBookSkillView')
+        (container
+            (style
+                (flow = "Flow.HORIZONTAL")
+                (width = "100%") 
+                (height = "100%")
+                (align = "center|bottom")
+                (gap = "2px")
+            )
+        )
+        (bind alpha "isLearnDisable ? 0.5 : 1")
+    )
+)
+

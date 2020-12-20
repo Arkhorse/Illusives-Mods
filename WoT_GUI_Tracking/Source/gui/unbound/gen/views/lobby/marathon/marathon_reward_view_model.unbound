@@ -1,0 +1,18 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro MarathonRewardViewModel()
+    (scope
+        (event onGoToVehicleBtnClick)
+        (event onViewRewardsBtnClick)
+        (event onCloseBtnClick)
+        (event onVideoStarted)
+        (event onVideoStopped)
+
+        (var isGoToVehicleBtnEnabled:bool = true)
+        (var videoSource:str = '')
+        (var vehicleIsElite:bool = false)
+        (var vehicleType:str = '')
+        (var vehicleLvl:str = '')
+        (var vehicleName:str = '')
+    )
+)

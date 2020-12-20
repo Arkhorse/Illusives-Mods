@@ -1,0 +1,18 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro CrewBooksDialogContentModel()
+    (scope
+        (event onClosed)
+        (event onUseBtnClick)
+
+        (var isUseStarted:bool = false)
+        (var isAllCrewIconVisible:bool = false)
+        (var title:str = '')
+        (var icon:str = '')
+        (var description:str = '')
+        (var descriptionFmtArgs:array = [])
+
+        # The following submodels are used in this model:
+        # crewBookTankmenList:ui_kit.list_model
+    )
+)

@@ -1,0 +1,41 @@
+.TooltipDecorator_base_c9 {
+    display: flex;
+    position: absolute;
+}
+
+.TooltipDecorator_decorator_3d {
+    padding: 4rem 6rem 8rem; /* border offset*/
+    border-image-source: url('R.atlases.components.tooltip_background');
+    border-image-slice: 24 fill;
+    border-image-width: 24rem;
+    position: relative;
+}
+
+.TooltipDecorator_decoratorContent_de {
+    background-color: #000;
+}
+
+.FormatText_base_d0 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.TooltipContent_base_d7 {
+    max-width: 400rem;
+    padding: 20rem;
+}
+
+.TooltipContent_format_95 {
+    margin: 0;
+    color: #8c8c7e;
+    font-size: 14rem;
+}
+
+.TooltipContent_crystalIco_bf {
+    width: 16rem;
+    height: 16rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    background: url('R.images.gui.maps.icons.library.CrystalIcon_2') no-repeat;
+}
+

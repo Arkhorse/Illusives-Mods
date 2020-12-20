@@ -1,0 +1,17 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NyCraftAntiduplicatorModel()
+    (scope
+        (event onTumblerToggleChanged)
+        (event onHidingUsingFillerStart)
+
+        (var countFillers:number = 0)
+        (var fillerState:number = -1)
+        (var enabled:bool = true)
+        (var tumblerTurnOn:bool = false)
+
+        (const EMPTY:number = 0)
+        (const INSERTED:number = 1)
+        (const USING:number = 2)
+    )
+)

@@ -1,0 +1,560 @@
+(def layout SeniorityRewardAwardView() entrance=true isReadyTracked=true loadOrder="LoadOrder.NOT_WAITING_FIRST"
+    (name = 'SeniorityRewardAwardView')
+    (macro SeniorityRewardAwardViewModel)
+    (scope
+        (event evOnCloseAction)
+
+        (event onBgBlurred)
+        (event onBgLoaded)
+
+        (event onHeaderAnimComplete)
+        (event onRibbonAwardsAnimComplete)
+        (event onLootBoxAnimStart)
+        (event onAllAnimComplete)
+        (event onVehicleRendererAnimComplete)
+        (event onStartFooterAnim)
+
+        (event onMainRewardResize)
+
+        (macro BgImageScalingHelper "onBgLoaded")
+
+        (var isInitialized:bool = false)
+        (bind isInitialized true init=false
+            (event "$evReadyChanged")
+        )
+
+        (var countChildren:number = 0)
+
+        (var bgScaleFactor:number = 1)
+        (controller $Animation
+            (bindcall play duration=15 to={bgScaleFactor:1.05} easing="Easing.sine_out"
+                (event "onBgBlurred")
+            )
+        )
+
+        (var blurValue:number = 0)
+        (controller $Animation
+            (bindcall play duration=1 to={blurValue:20} callbacks="{onComplete:onBgBlurred}"
+                (bind enabled "isInitialized")
+            )
+        )
+
+        (var vehiclesCount:number = "vehicles.length")
+        (var isFirstFooterAnim:bool = true)
+        (dispatch onStartFooterAnim
+            (event "onRibbonAwardsAnimComplete")
+            (enabled = "vehiclesCount > 0")
+        )
+
+        (dispatch onStartFooterAnim
+            (event "onRibbonAwardsAnimComplete")
+            (enabled = "vehiclesCount == 0")
+        )
+        (bind isFirstFooterAnim false init=false
+            (event "onAllAnimComplete")
+        )
+
+        (const SMALL_SCREEN_IDX:number = 0)
+        (const MEDIUM_SCREEN_IDX:number = 1)
+        (const BIG_SCREEN_IDX:number = 2)
+        (var stateIdx:number = "BIG_SCREEN_IDX")
+        (bind stateIdx "BIG_SCREEN_IDX"
+            (bind enabled "viewSize.width >= BASE_WIDTH_1920 && viewSize.height >= BASE_HEIGHT_1080"
+                (event "viewResized")
+            )
+        )
+        (bind stateIdx "MEDIUM_SCREEN_IDX"
+            (bind enabled "viewSize.width >= BASE_WIDTH_1366 && viewSize.width < BASE_WIDTH_1920
+                    && viewSize.height >= BASE_HEIGHT_900"
+                (event "viewResized")
+            )
+        )
+        (bind stateIdx "MEDIUM_SCREEN_IDX"
+            (bind enabled "viewSize.height >= BASE_HEIGHT_900 && viewSize.height < BASE_HEIGHT_1080
+                    && viewSize.width >= BASE_WIDTH_1366"
+                (event "viewResized")
+            )
+        )
+        (bind stateIdx "SMALL_SCREEN_IDX"
+            (bind enabled "viewSize.width < BASE_WIDTH_1366 || viewSize.height < BASE_HEIGHT_900"
+                (event "viewResized")
+            )
+        )
+
+        (var allAnimIsComplete:bool = false)
+        (bind allAnimIsComplete true init=false
+            (event "onAllAnimComplete")
+        )
+
+        (var state:dict = "vehiclesCount > 0 ? SA_SCREEN_STATES[stateIdx] :
+                SA_SCREEN_STATES_WITHOUT_VEHICLES[stateIdx]"
+        )
+    )
+    (dispatch onCloseAction on='escPressed')
+    (exec "playSound(R.sounds.gui_hangar_award_screen())"
+        (bind enabled "isInitialized")
+    )
+    (exec "playSound(R.sounds.gui_hangar_award_screen_stop())"
+        (event "onCloseAction")
+    )
+    (style
+        (align = "center|middle")
+        (width = 100%)
+        (height = 100%)
+        (backgroundColor = 0xff000000)
+    )
+    (controller $Animation
+        (bindcall play duration=0.3 from={alpha:1} to={alpha:0} callbacks="{onComplete: onCloseAction}"
+            (event "evOnCloseAction")
+        )
+    )
+
+    (image
+        (name = 'bg')
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (vcenter = 0px)
+            (pivotX = 50%)
+            (pivotY = 50%)
+            (bind scaleX "bgScale * bgScaleFactor")
+            (bind scaleY "bgScale * bgScaleFactor")
+            (filters
+                (blur
+                    (bind blurX "blurValue")
+                    (bind blurY "blurValue")
+                    (quality = 2)
+                )
+            )
+        )
+        (source = "R.images.gui.maps.icons.seniorityAwards.award_bg()")
+        (dispatch onBgLoaded on='complete')
+    )
+    (image
+        (name = 'sparks')
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (vcenter = 0px)
+            (pivotX = 50%)
+            (pivotY = 50%)
+            (bind scaleX "bgScale")
+            (bind scaleY "bgScale")
+            (blendMode = 'add')
+            (filters
+                (blur
+                    (bind blurX "blurValue")
+                    (bind blurY "blurValue")
+                    (quality = 2)
+                )
+            )
+        )
+        (source = "R.images.gui.maps.icons.seniorityAwards.sparks()")
+    )
+    (block
+        (name = 'headerBlock')
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (bind top "state.titleTopMargin")
+            (bind zindex "countChildren-2" init=false)
+        )
+        (visible = false)
+        # fix autohide after resize when block alpha = 0
+        (bind visible true init=false
+            (bind enabled "isInitialized")
+        )
+        (block
+            (name = 'titleBlock')
+            (block
+                (name = 'titleBlendAdd')
+                (style
+                    (blendMode = 'add')
+                    (alpha = 0.03)
+                )
+                (tf
+                    (name = 'titleTF')
+                    (class = 'EpicTitleTextStyle')
+                    (text = "R.strings.seniority_awards.rewardsView.title()")
+                    (style
+                        (bind scaleX "state.titleScale")
+                        (bind scaleY "state.titleScale")
+                    )
+                )
+            )
+            (block
+                (name = 'titleBlendOver')
+                (style
+                    (position = "absolute")
+                    (blendMode = 'overlay')
+                    (alpha = 0.7)
+                )
+                (tf
+                    (name = 'titleTF')
+                    (class = 'EpicTitleTextStyle')
+                    (text = "R.strings.seniority_awards.rewardsView.title()")
+                    (style
+                        (bind scaleX "state.titleScale")
+                        (bind scaleY "state.titleScale")
+                    )
+                )
+            )
+        )
+        (hblock
+            (name = 'subtitleBlock')
+            (style
+                (width = 100%)
+                (align = "middle|center")
+                (bind marginTop "state.titleBottomMargin")
+            )
+            (bind visible "category != ''")
+            (image
+                (name = 'leftDelimiter')
+                (source = "R.images.gui.maps.icons.progressiveReward.delimiter()")
+            )
+            (tf
+                (name = 'subtitleTF')
+                (style
+                    (marginLeft = 20px)
+                    (marginRight = 20px)
+                )
+                (bind class "state.subTitle")
+                (bind text "R.strings.seniority_awards.rewardsView.subTitle[category]()")
+            )
+            (block
+                (name = 'rightDelimiterBlock')
+                (style
+                    (width = 320px)
+                )
+                (image
+                    (name = 'rightDelimiter')
+                    (style
+                        (position = "absolute")
+                        (rotation = 180)
+                        (pivotX = 100%)
+                        (pivotY = 50%)
+                    )
+                    (source = "R.images.gui.maps.icons.progressiveReward.delimiter()")
+                )
+            )
+        )
+        (controller $Animation
+            (bindcall play delay=1 duration=0.5 from={top: -20px} to="{top: state.titleTopMargin}"
+                    callbacks="{onComplete: onHeaderAnimComplete}" easing="Easing.cubic_out"
+                watch=false
+                (bind enabled "isInitialized")
+            )
+        )
+        (controller $Animation
+            (bindcall play delay=1 duration=0.5 from={alpha:0} to={alpha:1} easing="Easing.cubic_out"
+                (bind enabled "isInitialized")
+            )
+        )
+    )
+    (hblock
+        (name = 'mainRewardBlock')
+        (style
+            (bind zindex "countChildren-3" init=false)
+            (bind height "state.mainRewardHeight")
+            (align = "center|bottom")
+            (width = 100%)
+            (bind marginTop "boxCount <= 0 && vehiclesCount == 0 ? 0 : state.headerHeight")
+        )
+        (mouseEnabled = false)
+        (view_holder 'LootboxBig')
+        (view_holder_content 'LootboxBig' "vehiclesCount == 0 && boxCount > 0"
+            (mouseEnabled = false)
+            (mouseChildren = false)
+            (element LootBoxesReward 'big'
+                (name = 'LootboxesReward')
+                (scope
+                    (bind state "stateIdx == SMALL_SCREEN_IDX ? SALootBoxStates['medium'] : SALootBoxStates['big']")
+                    (bind count "boxCount")
+                    (bind showAnim true init=false
+                        (event "onHeaderAnimComplete")
+                    )
+                    (dispatch onLootBoxAnimStart on='evOnLootBoxAnimStart')
+                )
+            )
+        )
+        (controller $Repeat renderer='SeniorityAwardsVehicleRenderer'
+            (bind count "vehiclesCount"
+                (bind enabled "isInitialized")
+            )
+            (args renderer_name="'VehicleRenderer' + $index" renderer_model="vehicles[$index]")
+            (exprs
+                (scope
+                    (dispatch onMainRewardResize
+                        args="{
+                            width:$event.size.width,
+                            height:$event.size.height,
+                            paddingTop:$event.padding[1],
+                            paddingBottom:$event.padding[3]
+                        }"
+                        on='evOnVehicleResize'
+                        (enabled = "$index == vehiclesCount - 1")
+                    )
+                    (bind state 0
+                        (enabled = "vehiclesCount == 1")
+                    )
+                    (bind state "$index + 1"
+                        (enabled = "vehiclesCount > 1")
+                    )
+                    (bind size "stateIdx == SMALL_SCREEN_IDX ? 'small' : 'normal'")
+
+                    (fadeInDelay = "$index * 0.7")
+                    (bind showAnim true init=false
+                        (event "onHeaderAnimComplete")
+                    )
+                    (dispatch onVehicleRendererAnimComplete on='evOnAnimationComplete'
+                        (enabled = "$index == vehiclesCount - 1")
+                    )
+                    (exec "playSound(R.sounds.gui_hangar_award_tank_01())" on='evOnAnimationStart'
+                        (enabled = "vehiclesCount == 1")
+                    )
+                    (exec "playSound(R.sounds.gui_hangar_award_tank_02())" on='evOnAnimationStart'
+                        (enabled = "vehiclesCount > 1 && $index == 0")
+                    )
+                    (exec "playSound(R.sounds.gui_hangar_award_tank_03())" on='evOnAnimationStart'
+                        (enabled = "vehiclesCount > 1 && $index > 0")
+                    )
+                )
+            )
+        )
+    )
+    (element SeniorityAwardsRibbon 'bonusesRibbon'
+        (scope
+            (bind bonuses "bonuses")
+            (bind showRibbon true init=false
+                (event "onHeaderAnimComplete")
+            )
+            (bind showBonuses true init=false
+                (event "onVehicleRendererAnimComplete")
+                (event "onLootBoxAnimStart")
+                (enabled = "boxCount > 0")
+            )
+
+            (bind showBonuses true init=false
+                (event "onHeaderAnimComplete")
+                (enabled = "boxCount <= 0 && vehiclesCount <= 0")
+            )
+            (bind showBonuses true init=false
+                (event "onVehicleRendererAnimComplete")
+                (enabled = "vehiclesCount > 0")
+            )
+            (bind bonuses "[]" init=false
+                (event "onOpenBtnClick")
+            )
+            (bind bonusIndex 0 init=false
+                (event "onOpenBtnClick")
+            )
+            (bind ribbonSource "state.ribbon")
+            (bind ribbonGap "state.ribbonGap")
+        )
+        (style
+            (bind zindex "countChildren-4" init=false)
+        )
+        (view_holder_content 'boxShining' "vehiclesCount == 0 && boxCount > 0"
+            (style
+                (position = "absolute")
+                (hcenter = 0px)
+                (pivotY = 100%)
+            )
+            (mouseEnabled = false)
+            (mouseChildren = false)
+            (element MainRewardShineRenderer
+                (scope
+                    (bind showShining true init=false watch=false
+                        (event "onLootBoxAnimStart")
+                    )
+                )
+                (style
+                    (height = "SALootBoxStates['big'].height")
+                    (padding = "SALootBoxStates['big'].shiningPadding")
+                )
+            )
+        )
+        (view_holder_content 'vehicleShining' "vehiclesCount > 0"
+            (style
+                (position = "absolute")
+                (hcenter = 0px)
+                (pivotY = 100%)
+            )
+            (mouseEnabled = false)
+            (mouseChildren = false)
+            (element MainRewardShineRenderer
+                (scope
+                    (bind showShining true init=false
+                        (event "onVehicleRendererAnimComplete")
+                    )
+                )
+                (style
+                    (bind width "$event.width" init=false
+                        (event "onMainRewardResize")
+                    )
+                    (bind height "$event.height" init=false
+                        (event "onMainRewardResize")
+                    )
+                    (bind paddingTop "$event.paddingTop" init=false
+                        (event "onMainRewardResize")
+                    )
+                    (bind paddingBottom "$event.paddingBottom" init=false
+                        (event "onMainRewardResize")
+                    )
+                )
+            )
+        )
+    )
+    (view_holder 'smallLootboxReward')
+    (view_holder_content 'smallLootboxReward' "vehiclesCount != 0 && boxCount > 0"
+        (style
+            (bind zindex "countChildren-5" init=false)
+        )
+        (mouseEnabled = false)
+        (mouseChildren = false)
+        (element LootBoxesReward 'small'
+            (name = 'LootboxesReward')
+            (scope
+                (bind count "boxCount")
+                (bind showAnim true init=false
+                    (event "onRibbonAwardsAnimComplete")
+                )
+                (dispatch onLootBoxAnimStart on='evOnLootBoxAnimStart')
+            )
+            (style
+                (bind marginTop "state.bottomLootBoxTopMargin")
+            )
+        )
+    )
+
+    (block
+        (name = 'vGapBlock')
+        (style
+            (bind height "stateIdx <= MEDIUM_SCREEN_IDX ? 70px : 120px")
+        )
+    )
+
+    (block
+        (name = 'footer')
+        (style
+            (align = "center")
+            (marginTop = -20px)
+            (bind marginBottom "state.bottomMargin")
+            (bind alpha "allAnimIsComplete ? 1 : 0")
+            (bind zindex "countChildren-3" init=false)
+        )
+        (view_holder 'openBtn')
+        (view_holder_content 'openBtn' "boxCount > 0"
+            (image
+                (name = 'buttonGlow')
+                (style
+                    (position = "absolute")
+                    (hcenter = 0px)
+                    (vcenter = 20px)
+                    (bind vcenter -43px
+                        (bind enabled "vehiclesCount > 0")
+                    )
+                    (blendMode = 'add')
+                )
+                (source = "R.images.gui.maps.icons.seniorityAwards.glow_small_button()")
+                (bind source "R.images.gui.maps.icons.seniorityAwards.glow_button()"
+                    (bind enabled "vehiclesCount > 0")
+                )
+            )
+            (button
+                (name = 'openButton')
+                (style
+                    (pivotX = 50%)
+                    (pivotY = 50%)
+                    (minWidth = 120px)
+                )
+                (macro ButtonStyleMain "BUTTON_SIZE_LARGE")
+                (label = "R.strings.seniority_awards.rewardsView.openBtn()")
+                (soundDown = "R.sounds.yes1()")
+                (controller $Animation
+                    (bindcall play duration=0.9 from={scaleX:0, scaleY:0} to={scaleX:1, scaleY:1} easing="Easing.back_out"
+                        (event "onStartFooterAnim")
+                    )
+                )
+                (bind enabled false init=false on='clicked')
+                (dispatch onOpenBtnClick on='clicked')
+            )
+        )
+        
+        (button
+            (name = 'nextButton')
+            (style
+                (pivotX = 50%)
+                (pivotY = 50%)
+                (minWidth = 120px)
+            )
+            (visible = "boxCount <= 0")
+            (macro ButtonStylePrimary "BUTTON_SIZE_LARGE") 
+            (bind label "btnLabel")
+            (soundDown = "R.sounds.yes1()")
+            (controller $Animation
+                (bindcall play duration=0.9 from={scaleX:0, scaleY:0} to={scaleX:1, scaleY:1} easing="Easing.back_out"
+                    (event "onStartFooterAnim")
+                    (bind enabled "isFirstFooterAnim")
+                )
+            )
+            (bind enabled false init=false on='clicked')
+            (bind enabled true init=false
+                (bind enabled "bonuses.length > 0")
+                (event "onRibbonAwardsAnimComplete")
+            )
+
+            (dispatch onOpenBtnClick on='clicked')
+        )
+        (controller $Animation
+            (bindcall play duration=0.9 from={alpha:0} to={alpha:1} easing="Easing.back_out"
+                    callbacks="{onComplete: onAllAnimComplete}"
+                (event "onStartFooterAnim")
+                (bind enabled "isFirstFooterAnim")
+            )
+        )
+        (bind mouseChildren "allAnimIsComplete")
+    )
+    (text_button 'closeBtn'
+        (name = 'closeBtn')
+        (macro ButtonCloseStyle)
+        (style
+            (position = "absolute")
+            (right = 30px)
+            (top = 30px)
+            (bind zindex "countChildren-1" init=false)
+        )
+        (label = "R.strings.menu.viewHeader.closeBtn.label()")
+        (dispatch evOnCloseAction on='clicked')
+    )
+    (sync countChildren from='numChildren'
+        (bind enabled "isInitialized")
+    )
+)
+
+(def macro BgImageScalingHelper(evBgImageLoaded:expression)
+    (var bgImageWidth:number = 0)
+    (bind bgImageWidth "$event.width" init=false
+        (event "evBgImageLoaded")
+    )
+    (var bgImageHeight:number = 0)
+    (bind bgImageHeight "$event.height" init=false
+        (event "evBgImageLoaded")
+    )
+    (var bgAspectRatio:number = 0)
+    (bind bgAspectRatio "$event.width / $event.height" init=false
+        (event "evBgImageLoaded")
+    )
+
+    (var bgScale:number = 1)
+    (bind bgScale "viewSize.width / bgImageWidth" init=false watch=false
+        (enabled = "bgAspectRatio > 0 && viewSize.width / viewSize.height >= bgAspectRatio")
+        (event "evBgImageLoaded")
+        (event "viewResized")
+    )
+    (bind bgScale "viewSize.height / bgImageHeight" init=false watch=false
+        (enabled = "bgAspectRatio > 0 && viewSize.width / viewSize.height < bgAspectRatio")
+        (event "evBgImageLoaded")
+        (event "viewResized")
+    )
+)

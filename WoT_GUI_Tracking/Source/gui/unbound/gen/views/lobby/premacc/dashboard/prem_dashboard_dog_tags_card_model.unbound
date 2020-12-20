@@ -1,0 +1,15 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro PremDashboardDogTagsCardModel()
+    (scope
+        (event onGoToDogTagsView)
+
+        (var isAvailable:bool = true)
+        (var isMaxLevel:bool = false)
+        (var background:str = '')
+        (var engraving:str = '')
+
+        # The following submodels are used in this model:
+        # Counter:ui_kit.counter_model
+    )
+)

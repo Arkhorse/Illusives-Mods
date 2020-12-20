@@ -1,0 +1,40 @@
+(def constant NyMegaBulbStates "{
+        GREEN:'green',
+        RED:'red',
+        OFF:'off'
+    }"
+)
+
+(def element NyMegaBulb()
+    (style
+        (width = 16px)
+        (height = 16px)
+    )
+    (scope
+        (var state:str = '')
+        (var isStartAnimation:bool = false)
+    )
+    (image
+        (name = 'bulb')
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (vcenter = 0px)
+        )
+        (bind source "R.images.gui.maps.icons.new_year.craftMachine.bulb[state]()" init=false)
+        
+        (controller $Animation
+            (bindcall stop
+                (bind enabled "!isStartAnimation")
+            )
+            (bindcall playSeq
+                "[
+                    {duration:randFloat(0.05, 0.06), to:{alpha:0.9}},
+                    {duration:randFloat(0.01, 0.02), to:{alpha:1}}
+                ]"
+                repeatCount=-1
+                (bind enabled "isStartAnimation")
+            )
+        )
+    )
+)

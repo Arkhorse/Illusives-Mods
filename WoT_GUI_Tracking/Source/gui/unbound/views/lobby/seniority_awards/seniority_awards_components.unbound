@@ -1,0 +1,14 @@
+(def constant LOOTBOX_REWARD_SLOT_HEIGHT {
+        'small' : 90px,
+        'big' : 110px
+    }   
+)
+
+(def constant LOOTBOX_REWARD_SEPARATOR_WIDTH {
+        'small' : 526,
+        'big' : 718
+    }
+)
+
+(def constant LOOTBOX_REWARD_RENDER_LEFT_OFFSET 35px
+)

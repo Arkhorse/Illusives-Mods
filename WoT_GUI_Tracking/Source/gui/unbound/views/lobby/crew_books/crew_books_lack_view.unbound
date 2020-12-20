@@ -1,0 +1,147 @@
+(def layout CrewBooksLackView() entrance=true
+    (macro CrewBooksLackViewModel)
+    (macro CrewBookScreenBreackPoints)
+    (scope
+
+        (var isBigFlag:bool = false)
+
+        (bind isBigFlag "viewSize.width >= BORDER_SCREEN_WIDHT && viewSize.height >= BORDER_SCREEN_HEIGHT"
+            (event "viewResized")
+        )
+    )
+    (style
+        (bind width "viewSize.width"
+            (event "viewResized")
+        )
+        (bind height "viewSize.height" 
+            (event "viewResized")
+        )
+        (align = "center")
+    )
+
+    (image
+        (style
+            (width = 100%)
+            (height = 100%)
+            (position = "absolute")
+        )
+        (source = "R.images.gui.maps.icons.lobby.settings_blured_bg()")
+    )
+    (text_button 'closeBtn'
+        (macro ButtonCloseStyle)
+        (style
+            (position = "absolute")
+            (right = 40px)
+            (top = 40px)
+        )
+        (label = "R.strings.crew_books.screen.button.close.label()")
+        (dispatch onCloseBtnClick on='clicked')
+    )
+    (dispatch onCloseBtnClick on='escPressed')
+
+    (image
+        (name = 'flag')
+        (style
+            (top = 33px)
+            (hcenter = 0px)
+            (position = "absolute")
+        )
+        (bind source "flagIcon")
+    )
+    (block
+        (name = 'screenTitle')
+        (style
+            (width = 100%)
+            (height = 100%)
+            (bind top "isBigFlag ? -363px : -278px")
+            (position = "absolute")
+            (align = "center|middle")
+        )
+        (tf
+            (bind class "isBigFlag ? 'HeroTitleTextStyle' : 'GrandTitleTextStyle'")
+            (text = "R.strings.crew_books.screen.header()")
+        ) 
+        (tf
+            (bind class "isBigFlag ? 'PromoTitleTextStyle' : 'HighTitleTextStyle'")
+            (style
+                (maxWidth = 1000px)
+                (bind marginTop "isBigFlag ? 0px : -7px")
+            )
+            (bind text "screenDescription")
+        ) 
+    )
+    (element Group name='noBooksList' binder='group' renderer_name='CrewBookLackItemView' container_flow="Flow.HORIZONTAL"
+        (scope
+            (bind containerWidth "100%")
+            (bind containerHeight "100%")
+            (bind containerMarginTop "isBigFlag ? -20px : -30px")
+            (bind containerAlign "center|middle")
+            (containerGap = 16px)
+        )
+    )
+    (block
+        (name = 'footer')
+        (style
+            (width = 100%)
+            (height = 100%)
+            (bind top "isBigFlag ? 329px : 241px")
+            (position = "absolute") 
+            (align = "center|middle")
+        )
+        (tf
+            (class MainBigTextStyle)
+            (style
+                (maxWidth = 600px)
+            )
+            (bind htmlText "htmlTextStyle(
+                    formatString(footerDescription, footerDescriptionFmtArgs, true),
+                    'MainBigTextStyle'
+                )"
+                init=false
+                (enabled = "footerDescriptionFmtArgs.length > 0")
+            )
+            (bind htmlText "htmlTextStyle(footerDescription,'MainBigTextStyle')"
+                init=false
+                (enabled = "footerDescriptionFmtArgs.length == 0")
+            )
+        )
+        (hblock
+            (style
+                (marginTop = 10px)
+            )
+            (button
+                (macro ButtonStylePrimary "BUTTON_SIZE_LARGE")
+                (bind visible "isCrewBooksPurchaseEnabled")
+                (label = "R.strings.crew_books.screen.button.buy.label()")
+                (scope
+                    (dispatch onBuyBtnClick on='clicked' dir=1 init=false)
+                )
+                (style
+                    (minWidth = 164px)
+                    (minHeight = 33px)
+                )
+            )
+            (button
+                (macro ButtonStyleSecondary "BUTTON_SIZE_LARGE")
+                (label = "R.strings.crew_books.screen.button.hangar()")
+                (scope
+                    (dispatch onHangarBtnClick on='clicked')
+                )
+                (style
+                    (minWidth = 164px)
+                    (minHeight = 33px)
+                    (marginLeft = 20px)
+                )
+            )
+        )
+    )
+    (image
+        (bind visible "isDialogOpen")
+        (style
+            (width = 100%)
+            (height = 100%)
+            (position = "absolute")
+        )
+        (source = "R.images.gui.maps.icons.lobby.settings_blured_bg()")
+    )
+)

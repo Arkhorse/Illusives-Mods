@@ -1,0 +1,20 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro CrewBooksBuyDialogModel()
+    (scope
+        (event onClosed)
+        (event onStepperChanged)
+        (event onBuyBtnClick)
+
+        (var dialogTitle:str = '')
+        (var bookIcon:str = '')
+        (var bookTitle:str = '')
+        (var bookDescription:str = '')
+        (var bookDescriptionFmtArgs:array = [])
+        (var buyComplete:bool = false)
+        (var isBuyEnable:bool = false)
+
+        # The following submodels are used in this model:
+        # bookPrice:ui_kit.list_model
+    )
+)

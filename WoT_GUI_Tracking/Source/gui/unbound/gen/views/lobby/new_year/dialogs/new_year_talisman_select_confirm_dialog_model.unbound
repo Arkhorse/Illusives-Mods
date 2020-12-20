@@ -1,0 +1,17 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NewYearTalismanSelectConfirmDialogModel()
+    (scope
+        (event onSelectClick)
+        (event onCloseBtnClick)
+
+        (var talismanType:str = '')
+        (var contentWidthSmall:number = -1)
+        (var contentWidthMedium:number = -1)
+        (var contentWidthLarge:number = -1)
+        (var contentWidthExtraLarge:number = -1)
+        (var horizontalChangeBreakpointSM:number = 0)
+        (var horizontalChangeBreakpointML:number = 0)
+        (var horizontalChangeBreakpointEL:number = 0)
+    )
+)

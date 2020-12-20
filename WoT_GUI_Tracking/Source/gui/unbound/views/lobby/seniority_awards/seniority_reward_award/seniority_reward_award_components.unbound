@@ -1,0 +1,454 @@
+(def element SeniorityAwardsRibbon(element_name:str='ribbon')
+    (name = "element_name")
+    (scope
+        (event onRibbonAwardsAnimComplete)
+        (event evOnRibbonAnimComplete)
+        (event evOnStopSlotAnimation)
+        (event evOnStartShowBonuses)
+
+        (var showRibbon:bool = false)
+        (var showBonuses:bool = false)
+        (var bonuses:array = [])
+        (var ribbonSource:str = '')
+        (var ribbonGap:number = 0)
+
+        (var showBonusDelay:number = 0.5)
+        (controller $Animation
+            (bindcall play duration="showBonusDelay" to={showBonusDelay:0} callbacks="{onComplete:evOnStartShowBonuses}"
+                watch=false
+                (bind enabled "showBonuses")
+            )
+        )
+
+        (var bonusIndex:number = -1)
+        (bind bonusIndex "bonusIndex+1" init=false watch=false
+            (event "evOnStartShowBonuses")
+            (event "evOnStopSlotAnimation")
+        )
+
+        (var shineAlpha:number = 0)
+        (controller $Animation
+            (bindcall play duration=1 to={shineAlpha:1} easing="Easing.sine_in"
+                    callbacks="{onComplete:evOnRibbonAnimComplete}"
+                (bind enabled "showRibbon")
+            )
+        )
+        (controller $Animation
+                (bindcall playSeq "[
+                        {to:{shineAlpha:0.75}, duration:1.5, easing:Easing.sine_in},
+                        {to:{shineAlpha:1}, duration:1.5, easing:Easing.sine_in}
+                    ]"
+                    repeatCount=-1 watch=false
+                    (event "evOnRibbonAnimComplete")
+                )
+        )
+
+        (dispatch onRibbonAwardsAnimComplete dir=1
+            (bind enabled "bonusIndex == bonuses.length && bonuses.length > 0")
+        )
+    )
+    (style
+        (align = "center|middle")
+    )
+    (mouseEnabled = false)
+
+    (image
+        (name = 'shine_background')
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (pivotY = 100%)
+            (top = 1px)
+            (bind alpha "shineAlpha"
+                (bind enabled false init=false
+                    (event "evOnRibbonAnimComplete")
+                )
+            )
+        )
+        (source = "R.images.gui.maps.icons.seniorityAwards.ribbon_shine_bg()")
+    )
+    (view_holder 'vehicleShining')
+    (view_holder 'boxShining')
+    (image
+        (name = 'ribbonImg')
+        (style
+            (alpha = 0)
+        )
+        (bind source "ribbonSource")
+        (controller $Animation
+            (bindcall play to={alpha:1} delay=0.25 duration=0.5
+                (bind enabled "showRibbon")
+            )
+        )
+    )
+    (image
+        (name = 'ribbonImgScreen')
+        (style
+            (position = "absolute")
+            (blendMode = 'screen')
+            (alpha = 0)
+            (width = 100%)
+        )
+        (bind source "ribbonSource")
+        (controller $Animation
+            (bindcall playSeq "[
+                    {duration:0.5, to:{alpha:1}, easing:Easing.sine_out},
+                    {duration:0.5, from:{alpha:1}, to:{alpha:0}}
+                ]"
+                (bind enabled "showRibbon")
+            )
+        )
+    )
+    (image
+        (name = 'shine_effect')
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (pivotY = 50%)
+            (blendMode = 'add')
+            (bind alpha "shineAlpha")
+        )
+        (source = "R.images.gui.maps.icons.seniorityAwards.ribbon_shine()")
+    )
+    (hblock
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (vcenter = -75px)
+            (bind hgap "ribbonGap")
+            (align = "center|top")
+            (backgroundColor = 0xff000000)
+        )
+        (controller $Repeat layout=true
+            (bind count "bonuses.length")
+            (exprs
+                (controller $Instance
+                    (bind renderer "bonuses[$index]['rendererType'] ? bonuses[$index].rendererType : 'LootRenderer'")
+                    (args "bonuses[$index]")
+                    (exprs
+                        (mouseEnabled = false)
+                        (bind mouseEnabled true
+                            (bind enabled "$index == bonusIndex")
+                        )
+                        (scope
+                            (bind isShowStarted true
+                                (bind enabled "$index == bonusIndex")
+                            )
+                            (dispatch evOnStopSlotAnimation dir=1 on='evShowComplete')
+                        )
+                    )
+                )
+            )
+            (bind enabled "showBonuses")
+        )
+    )
+)
+
+(def element MainRewardShineRenderer(renderer_name:str='shineRenderer')
+    (name = "renderer_name")
+    (scope
+        (event onShineFadeInComplete)
+        (event onShineIterationComplete)
+
+        (var shineRotation:number = 0)
+        (bind shineRotation "randInt(1, 360)" init=false
+            (event "onShineFadeInComplete")
+            (event "onShineIterationComplete")
+        )
+
+        (var showShining:bool = false)
+    )
+    (mouseEnabled = false)
+    (mouseChildren = false)
+    (image
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (vcenter = 0px)
+            (alpha = 0)
+            (blendMode = 'add')
+        )
+        (controller $Animation
+            (bindcall play to={alpha:1} duration=1 easing="Easing.sine_in"
+                    callbacks="{onComplete:onShineFadeInComplete}"
+                (bind enabled "showShining")
+            )
+            (bindcall stop
+                (event "onShineIterationComplete")
+            )
+            (bindcall playSeq "[
+                    {from:{alpha:1}, to:{alpha:0.5}, duration:1},
+                    {from:{alpha:0.5}, to:{alpha:1}, duration:1, easing:Easing.sine_out}
+                ]"
+                (event "onShineIterationComplete")
+                (event "onShineFadeInComplete")
+            )
+        )
+        (source = "R.images.gui.maps.icons.seniorityAwards.reward_shine()")
+    )
+    (image
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (vcenter = 0px)
+            (alpha = 0)
+            (pivotX = 50%)
+            (pivotY = 50%)
+            (blendMode = 'screen')
+            (bind rotation "shineRotation")
+        )
+        (controller $Animation
+            (bindcall playSeq "[
+                    {from:{alpha:0},to:{alpha:1}, duration:1, easing:Easing.sine_in},
+                    {from:{alpha:1}, to:{alpha:0}, duration:1, callbacks:{onComplete:onShineIterationComplete}}
+                ]" repeatCount=-1
+                (event "onShineFadeInComplete")
+            )
+        )
+        (source = "R.images.gui.maps.icons.seniorityAwards.reward_shine()")
+    )
+)
+
+(def element SeniorityAwardsVehicleRenderer(renderer_name:str='vehicleRenderer', renderer_model:dict=null)
+    (macro SeniorityAwardsVehicleRendererModel)
+    (name = "renderer_name")
+    (scope
+        (const SMALL_SIZE_SINGLE:str = 'small_single')
+        (const NORMAL_SIZE_SINGLE:str = 'normal_single')
+        (const SMALL_SIZE_MULTI:str = 'small_multi')
+        (const NORMAL_SIZE_MULTI:str = 'normal_multi')
+        (const VEH_SIZE:array = [
+                {
+                    'small': {'width': 340px, 'height': 210px},
+                    'normal': {'width': 390px, 'height': 245px},
+                },
+                {
+                    'small': {'width': 340px, 'height': 210px},
+                    'normal': {'width': 370px, 'height': 230px}
+                },
+                {
+                    'small': {'width': 340px, 'height': 210px},
+                    'normal': {'width': 370px, 'height': 230px}
+                }
+        ])
+        (const VEH_PADDING:array = [
+                {
+                    'small': [0px, 32px, 0px, -32px],
+                    'normal': [0px, 48px, 0px, -48px],
+                },
+                {
+                    'small': [50px, 32px, -50px, -32px],
+                    'normal': [60px, 40px, -60px, -40px]
+                },
+                {
+                    'small': [-50px, 32px, 50px, -32px],
+                    'normal': [-60px, 40px, 60px, -40px]
+                }
+        ])
+
+        (event evOnAnimationStart)
+        (event evOnAnimationComplete)
+        (event evOnVehicleResize)
+        (event evOnStateValueChange)
+        (event evOnSizeValueChange)
+
+        (bind vehicleCD "renderer_model.vehicleCD"
+            (enabled = "renderer_model != null")
+        )
+        (bind imgSource "renderer_model.imgSource"
+            (enabled = "renderer_model != null")
+        )
+
+        (var state:number = 0
+            (dispatch evOnStateValueChange on='evChanged')
+        )
+        (var size:str = ''
+            (dispatch evOnSizeValueChange on='evChanged')
+        )
+        (dispatch evOnVehicleResize args="{padding:VEH_PADDING[state][size], size:VEH_SIZE[state][size]}"
+            (event "evOnStateValueChange")
+            (event "evOnSizeValueChange")
+            (enabled = "size != ''")
+        )
+
+        (var fadeInDelay:number = 0)
+        (var showAnim:bool = false)
+
+        (var animFactor:number = 0)
+        (controller $Animation
+            (bindcall play duration=1 delay="fadeInDelay" to={animFactor:1} easing="Easing.sine_out"
+                    callbacks="{onStart:evOnAnimationStart, onComplete:evOnAnimationComplete}"
+                watch=false
+                (bind enabled "showAnim")
+            )
+        )
+    )
+    (mouseEnabled = false)
+    (bind mouseEnabled true init=false
+        (event "evOnAnimationComplete")
+    )
+    (mouseChildren = false)
+    (bind visible "showAnim")
+    (style
+        (align = "right|middle")
+        (bind width "VEH_SIZE[state][size].width"
+            (enabled = "size != ''")
+        )
+        (bind height "VEH_SIZE[state][size].height"
+            (enabled = "size != ''")
+        )
+        (bind padding "VEH_PADDING[state][size]"
+            (enabled = "size != ''")
+        )
+    )
+
+    (image
+        (style
+            (width = 100%)
+            (height = 100%)
+            (bind scaleX "animFactor")
+            (bind scaleY "animFactor")
+            (bind alpha "animFactor")
+        )
+        (bind source "imgSource")
+    )
+
+    (controller $ToolTip
+        (args tooltipId="TOOLTIP_VEHICLE_REWARD" vehicleCD="vehicleCD")
+        (content = "R.views.common.tooltip_window.backport_tooltip_content.BackportTooltipContent.resId")
+        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+    )
+)
+
+(def element LootBoxesReward(stateArg:str = 'small')
+    (scope
+        (event evOnLootBoxAnimStart)
+        (event evOnLootBoxAnimComplete)
+
+        (var state:dict = "SALootBoxStates[stateArg]")
+        (var count:number = 0)
+        (var showAnim:bool = false)
+    )
+    (style
+        (bind width "state.width")
+        (bind height "state.height")
+        (flow = "Flow.HORIZONTAL")
+        (align = "center|middle")
+        (bind padding "state.contentPadding")
+    )
+    (bind visible "count > 0")
+    (block
+        (name = 'boxImages')
+        (style
+            (bind padding "state.imagesPadding")
+            (width = 0px)
+        )
+        (bind visible "showAnim")
+        (image
+            (style
+                (position = "absolute")
+                (bind hcenter "state.confettiXY[0]")
+                (bind vcenter "state.confettiXY[1]")
+                (alpha = 0)
+            )
+            (bind source "state.confetti")
+            (blendMode = 'add')
+            (controller $Animation
+                (bindcall play duration=1 delay=0.8 from="{alpha:0}" to="{alpha:1}" easing="Easing.cubic_in"
+                    (bind enabled "showAnim")
+                )
+            )
+        )
+        (image
+            (style
+                (position = "absolute")
+                (hcenter = 0px)
+                (vcenter = 0px)
+            )
+            (bind source "state.icon")
+        )
+        (controller $Animation
+            (bindcall play duration=1 from="{scaleX:0, scaleY:0}" to="{scaleX:1, scaleY:1}" easing="Easing.back_out"
+                (bind enabled "showAnim")
+            )
+        )
+        (controller $Animation
+            (bindcall play duration=1 from="{alpha:0}" to="{alpha:1}" easing="Easing.back_out"
+                (bind enabled "showAnim")
+            )
+        )
+    )
+    (block
+        (style
+            (bind marginTop "state.textBlockMarginTop")
+        )
+        (hblock
+            (style
+                (align = "bottom")
+                (height = 110px)
+            )
+            (bind visible "showAnim")
+            (block
+                (style
+                    (width = 0px)
+                    (bind padding "state.multPadding")
+                )
+                (tf
+                    (name = 'multiplier')
+                    (bind class "state.multStyle")
+                    (text = "R.strings.seniority_awards.rewardsView.lootBox.multiplier()")
+                )
+            )
+
+            (tf
+                (style
+                    (bind scaleX "state.counterScale")
+                    (bind scaleY "state.counterScale")
+                    (fontFamily = $TitleFont)
+                    (fontSize = 50)
+                    (textColor = 0xf5eed5)
+                    (bind margin "state.counterMargin")
+                )
+                (name = 'count')
+                (width = 100px)
+                (bind text "count")
+            )
+
+            (block
+                (name = 'description')
+                (style
+                    (bind height "state.descrBlockHeight")
+                    (width = 20px)
+                    (align = "middle")
+                    (paddingLeft = 15px)
+                )
+                (tf
+                    (bind class "state.descrTopStyle")
+                    (style
+                        (height = 136px)
+                        (bind leading "state.titleLeading")
+                        (bind margin "state.descrTopMargin")
+                    )
+                    (name = 'title')
+                    (autoSize = 'left')
+                    (text = "R.strings.seniority_awards.rewardsView.lootBox.title()")
+                )
+                (tf
+                    (name = 'descr')
+                    (bind class "state.descrBottomStyle")
+                    (text = "R.strings.seniority_awards.rewardsView.lootBox.descr()")
+                )
+            )
+            (controller $Animation
+                (bindcall play duration=0.8 delay=1 from="{x: -50, alpha: 0}" to="{x: 0, alpha: 1}"
+                        easing="Easing.cubic_out"
+                        callbacks="{onStart: evOnLootBoxAnimStart, onComplete: evOnLootBoxAnimComplete}"
+                    (bind enabled "showAnim")
+                )
+            )
+            (exec "playSound(R.sounds.gui_hangar_award_contentment())"
+                (bind enabled "showAnim")
+            )
+        )
+    )
+)

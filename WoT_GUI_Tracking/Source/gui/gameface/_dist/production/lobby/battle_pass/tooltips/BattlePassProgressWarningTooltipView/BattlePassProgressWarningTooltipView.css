@@ -1,0 +1,56 @@
+.Content_base_10 {
+    display: flex;
+    flex-direction: row;
+    width: 450rem;
+    padding: 20rem 40rem 25rem 15rem;
+}
+/* stylelint-disable */
+[lang=ja],
+[lang=ko],
+[lang=zh_tw],
+[lang=zh_sg],
+[lang=zh_ch],
+[lang=th] {
+    overflow-wrap: break-word;
+}
+/* stylelint-enable */
+.Content_textBlock_81 {
+    display: flex;
+    flex-direction: column;
+}
+.Content_title_ee {
+    margin-bottom: 10rem;
+    color: #e9e2bf;
+    font-size: 15rem;
+    font-weight: 700;
+}
+.Content_description_ae {
+    color: #8c8c7e;
+    font-size: 14rem;
+}
+.Content_alert_dd {
+    display: flex;
+    align-self: start;
+    width: 32rem;
+    height: 32rem;
+    margin-right: 10rem;
+    background: url('R.images.gui.maps.icons.library.icon_alert_32x32') no-repeat center / contain;
+}
+
+.TooltipDecorator_base_c9 {
+    display: flex;
+    position: absolute;
+}
+
+.TooltipDecorator_decorator_3d {
+    padding: 4rem 6rem 8rem; /* border offset*/
+    border-image-source: url('R.atlases.components.tooltip_background');
+    border-image-slice: 24 fill;
+    border-image-width: 24rem;
+    position: relative;
+}
+
+.TooltipDecorator_decoratorContent_de {
+    background-color: #000;
+}
+

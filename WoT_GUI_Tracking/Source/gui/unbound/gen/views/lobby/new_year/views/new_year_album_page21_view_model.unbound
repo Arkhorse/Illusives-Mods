@@ -1,0 +1,13 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NewYearAlbumPage21ViewModel()
+    (macro NewYearAlbumPageViewModel)
+    (scope
+        (event onHangMegaToy)
+
+        (var bonusValue:number = 0.0)
+        (var creditBonusValue:number = 0.0)
+        (var isToysShow:bool = false)
+        (var isAnimation:bool = false)
+    )
+)

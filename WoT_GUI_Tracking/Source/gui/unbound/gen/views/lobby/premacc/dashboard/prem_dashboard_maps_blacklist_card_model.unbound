@@ -1,0 +1,14 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro PremDashboardMapsBlacklistCardModel()
+    (scope
+        (event onGoToMapsBlacklistView)
+
+        (var isAvailable:bool = true)
+        (var isBasePremiumActive:bool = false)
+        (var isTankPremiumActive:bool = true)
+
+        # The following submodels are used in this model:
+        # disabledMaps:ui_kit.list_model
+    )
+)

@@ -1,0 +1,11 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NewYearStyleRewardViewModel()
+    (scope
+        (event onClose)
+
+        (var rewards:array = [])
+        (var styleStr:str = '')
+        (var isMega:bool = false)
+    )
+)

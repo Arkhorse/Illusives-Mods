@@ -1,0 +1,512 @@
+(def layout SeniorityAwardsMultiOpenView() entrance=true hideBeforeResolve=true
+    (macro SeniorityAwardsMultiOpenViewModel)
+    (name = 'SeniorityAwardsMultiOpenView')
+    (scope
+        (event evOnCloseBtnClick)
+        (event onSkipAnimationBtnClick)
+        (dispatch onSkipAnimation dir=2 (event "onSkipAnimationBtnClick"))
+        
+        # start ribbon anim
+        (event onFadeInStart)
+        (event onFadeInComplete)
+        (var isFadeIn:bool = false)
+        (bind isFadeIn true init=false 
+            (event "onFadeInComplete")
+        )
+        # start awards animation
+        (event onHeaderAnimated)
+        (event onRewardsAnimStart)
+        (dispatch onRewardsAnimStart args="{'wasSkipped': wasSkipped}" dir=2 init=false
+            (event "onHeaderAnimated")
+        )
+        #end of slot animation
+        (event evOnRewardSlotAnimationEnd)
+        (event onAnimComplete)
+
+        # on bg loaded
+        (event evOnBgLoaded)
+        (event evReadyToShow)
+
+        (event evFadeBeforeOpen)
+        (event evFadeBeforeOpenComplete)
+
+        (var currentRewardIndex:number = 0)
+        (bind currentRewardIndex "$event.index" init=false
+            (event "evOnRewardSlotAnimationEnd")
+        )
+
+        (macro BgAspectRatioHelper "evOnBgLoaded")
+
+        (var fadeInChanges:number = 0)
+        (bind fadeInChanges "fadeInChanges + 1" init=false watch=false
+            (event "onFadeInStart")
+        )
+
+        (var wasSkipped:bool = false)
+        (bind wasSkipped true init=false (event "onSkipAnimation"))
+        (bind wasSkipped true init=false (event "onAnimComplete"))
+        (bind wasSkipped false init=false (event "onOpenBoxBtnClick"))
+
+        (var defaultRewardSize:str = "rewardSize != null && rewardSize != '' ? rewardSize : 'big'")
+
+        (var _boxCount:number = 0)
+        (bind _boxCount "boxesCounter > limitToOpen ? limitToOpen : boxesCounter")
+        (const additionalBorderSize:number = 12)
+    )
+
+    (dispatch onCloseBtnClick on='stageKeyDown' (enabled="wasSkipped && $event.keyCode == KEYBOARD.ESCAPE"))
+    (dispatch onSkipAnimationBtnClick on='stageKeyDown'
+        (enabled = "!wasSkipped && $event.keyCode == KEYBOARD.ESCAPE")
+    )
+    (exec "playSound(R.sounds.gui_hangar_award_item_rollout())"
+        (event "onSkipAnimationBtnClick")
+    )
+    (bind mouseChildren false init=false 
+        (event "evFadeBeforeOpen")
+    )
+
+    (exec "playSound(R.sounds.gui_lootboxes.gui_lootbox_reward_5_lootboxes())"
+        (event "onFadeInStart")
+        (enabled = "fadeInChanges < 2")
+    )
+
+    (style
+        (bind width "viewSize.width"
+            (event "viewResized")
+        )
+        (bind height "viewSize.height"
+            (event "viewResized")
+        )
+        (align = "center|middle")
+        (alpha = 0)
+        (bind alpha "1" init=false
+             (event "viewResized")
+        )
+    )
+
+    (controller $Animation
+        (bindcall play duration=0.5 to={alpha:1} callbacks="{onComplete: onFadeInComplete}"
+            (event "evOnBgLoaded")
+        )
+        (bindcall play duration=0.5 to={alpha:0} callbacks="{onComplete: onCloseBtnClick}"
+            (event "evOnCloseBtnClick")
+        )
+
+        (bindcall play duration=0.3 to={alpha:0} callbacks="{onComplete: evFadeBeforeOpenComplete}" init=false
+            (event "evFadeBeforeOpen")
+        )
+
+        (bindcall play duration=0.3 to={alpha:0} callbacks="{onComplete: onCloseBtnClick}" init=false
+            (bind enabled "hardReset")
+        )
+    )
+
+    (block
+        (name='backgroundImage')
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (vcenter = 0px)
+            (bind width "bgW + additionalBorderSize")
+            (bind height "bgH + additionalBorderSize")
+            
+            (filters
+                (blur
+                    (quality = 2)
+                    (blurX = 10)
+                    (blurY = 10)
+                )
+            )
+        )
+        (image
+            (name = 'backImg')
+            (style
+                (width = 100%)
+                (height = 100%)
+            )
+            (dispatch evOnBgLoaded on='complete')
+            (source = "R.images.gui.maps.icons.progressiveReward.screenBg.hidden()")
+        )
+
+        (block
+            (style
+                (position = "absolute")
+                (hcenter = 0)
+                (vcenter = 0)
+                (filters
+                    (blur
+                        (quality = 2)
+                        (blurX = 10)
+                        (blurY = 10)
+                    )
+                )
+            )
+            (image
+                (name = 'rewardsImg')
+                (source = "R.images.gui.maps.icons.progressiveReward.rewards.big.big()")
+           
+                (bind scaleX "viewSize.height < BASE_HEIGHT_900 ? 0.8 : 1" (event "viewResized"))
+                (bind scaleY "viewSize.height < BASE_HEIGHT_900 ? 0.8 : 1" (event "viewResized"))
+            )
+        )
+
+        (block
+            (name = 'shadowBlack')
+            (style
+                (position = "absolute")
+                (backgroundColor = 0x4d000000)
+                (width = 100%)
+                (height = 100%)
+            )
+        )
+
+    )
+
+    (block
+        (name = 'contentBlock')
+        (style
+            (align = "center")
+            (bind paddingTop "viewSize.height > BASE_HEIGHT_900 ? -19 : 20"
+                (event "viewResized")
+            )
+        )
+
+        (tf
+            (name = 'titleTf')
+            (style
+                (bind marginBottom "viewSize.height > BASE_HEIGHT_900 ? 40 : 20"
+                    (event "viewResized")
+                )
+                (alpha = 0)
+                (bind alpha "1" init=false
+                    (event "viewResized")
+                )
+            )
+            
+            (bind class "viewSize.width >= BASE_WIDTH_1600 ? 'EpicTitleTextStyle': 'HeroTitleTextStyle'"
+                (event "viewResized")
+            )
+            (text = "R.strings.seniority_awards.multiOpenView.title()")
+            (antiAliasType = 'normal')
+            (controller $Animation
+                (bindcall play duration=0.5 delay=0.3 to="{alpha:1}" 
+                    callbacks="{onComplete: onHeaderAnimated}" init=true
+                    easing="Easing.cubic_in"
+                    (bind enabled "isFadeIn")
+                    (event "onOpenBoxBtnClick")
+                )
+            )
+        )
+
+        (element RenderersLootAnimation
+            (scope
+                (bind renderer_array "rewards")
+                (bind renderer_array "[]" (event "onOpenBoxBtnClick"))
+                (bind size "defaultRewardSize")
+            )
+        )
+
+        (block
+            (name = 'footerBlock')
+            (style
+                (bind marginTop "viewSize.height > BASE_HEIGHT_900 ? 35px : 10px")
+                (marginBottom = 35px)
+                (width = 200px)
+                (alpha = 0)
+                (bind alpha 0 init=false (event "onOpenBoxBtnClick"))
+            )
+            (bind mouseChildren false init=true (event "onOpenBoxBtnClick"))
+            (bind mouseChildren true init=false
+                (event "onAnimComplete")
+                (event "onSkipAnimation")
+            )
+            (tf
+                (name = 'boxCounterTF')
+                (style
+                    (width = 100%)
+                    (marginTop = 5px)
+                )
+                (bind htmlText "boxesCounter > 0 ? htmlTextStyle(formatString(R.strings.seniority_awards.multiOpenView.boxesInStorage(),
+                            [{value: htmlTextStyle(boxesCounter, 'StatusWarningTextStyle'), name:'count'}], 
+                            true), 'HighlightTextStyle', 'center') : 
+                            htmlTextStyle(R.strings.seniority_awards.multiOpenView.boxesNotAvailable(), 'HighlightTextStyle', 'center')" init=false
+                )
+            )
+            (block
+                (name = 'emptyBlock')
+                (style
+                    (bind height "viewSize.height > BASE_HEIGHT_900 ? 14px : 5px")
+                )
+            )
+            (button 
+                (name = 'applyBtn')
+                (macro ButtonStyleMain "BUTTON_SIZE_LARGE")
+                (style
+                    (width = 200px)
+                )
+                (bind label "TextFormat(R.strings.seniority_awards.multiOpenView.openBoxesLabel(), {count:_boxCount})")
+                (soundDown = "R.sounds.yes1()")
+                (dispatch onOpenBoxBtnClick on='clicked')
+                (bind enabled "isOpenBoxBtnEnabled")
+  
+                (bind visible "boxesCounter > 0")
+                
+                (controller $ToolTip
+                    (delay = "0.4")
+                    (args body="R.strings.seniority_awards.tooltip.restrictedMode.resId")
+                    (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+                    (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+                    (bind enabled "!isOpenBoxBtnEnabled")
+                )
+                (bind tabEnabled "isOpenBoxBtnEnabled")
+                (bindcall setFocus
+                    (event "onAnimComplete")
+                    (bind enabled "boxesCounter >  0")
+                )
+            )
+
+            (button 
+                (name = 'confirmButton')
+                (macro ButtonStylePrimary "BUTTON_SIZE_LARGE") 
+                (label = "R.strings.seniority_awards.multiOpenView.applyLabel()")
+                (soundDown = "R.sounds.yes1()")
+                (dispatch evOnCloseBtnClick on='clicked')
+                (style
+                    (width = 200px)
+                )
+                (bind visible "boxesCounter <= 0")
+                (bindcall setFocus
+                    (bind enabled "!isOpenBoxBtnEnabled")
+                )
+            )
+            (controller $Animation
+                (bindcall play delay = 0.6 duration=0.3 from={alpha:0} to={alpha:1} init=false
+                    (event "onAnimComplete")
+                )
+            )
+        )
+    )
+
+    # Place close button
+    (text_button 'closeBtn'
+        (macro ButtonCloseStyle)
+        (style
+            (position = "absolute")
+            (right = 30px)
+            (top = 30px)
+        )
+        (label = "R.strings.menu.viewHeader.closeBtn.label()")
+        (dispatch evOnCloseBtnClick on='clicked')
+        (bind visible false (event "onOpenBoxBtnClick"))
+        (bind visible true init=false (event "onAnimComplete"))
+    )
+
+    (element VideoChangeBtn
+        (name = 'videoChangeButton')
+        (style
+            (position = "absolute")
+            (paddingLeft = 10px)
+        )
+        (scope
+            (isVideoOff = false)
+            (labelOn = "R.strings.seniority_awards.multiOpenView.skipBtn()")
+        )
+        (tabEnabled = true)
+        (dispatch onSkipAnimationBtnClick on='click')
+        (dispatch onSkipAnimationBtnClick on='stageKeyDown'
+            (enabled = "!wasSkipped && ($event.keyCode == KEYBOARD.ENTER || $event.keyCode == KEYBOARD.SPACE)")
+        )
+        (bind visible false init=false 
+            (event "onAnimComplete")
+            (event "onSkipAnimation")
+        )
+        (bind visible true init=false 
+            (event "onOpenBoxBtnClick")
+        )
+        (bindcall setFocus
+            (event "onFadeInComplete")
+            (event "onHeaderAnimated")
+        )
+    )
+)
+
+(def layout RenderersLootAnimation()
+    (name = 'renderersLootAnimation')
+    (scope
+        (event onSkipAnimation)
+
+        (var renderer_array:array = [])
+        (var size:str = 'small')
+        (event onRewardsAnimStart)
+        (event evOnAnimComplete)
+        (event onAnimComplete)
+
+        (var animEnabled:bool = false)
+        (bind animEnabled "!$event.wasSkipped" init=false
+            (event "onRewardsAnimStart")
+        )
+        (bind animEnabled false
+            (event "onSkipAnimation")
+            (event "onAnimComplete")
+        )
+    )
+
+    (style
+        (bind height "LOOTBOX_REWARD_SLOT_HEIGHT[size] * renderer_array.length")
+        (width = 754px)
+    )
+    (bind mouseChildren false (bind enabled "renderer_array.length == 0"))
+    (bind mouseChildren true init=false (event "onAnimComplete"))
+    (controller $Repeat renderer='MultiOpenRenderer'
+        (bind count "renderer_array.length")
+        (bindcall args rendererModel="renderer_array[$index]" size="size" init=true)
+        (exprs
+            (scope
+                (bind lineIndex "$index + 1")
+                (bind isLast "$index==(renderer_array.length-1)")
+                (bind startAnim "animEnabled")
+            )
+        )
+    )
+    (dispatch onAnimComplete dir=1 init=false
+        (event "evOnAnimComplete")
+    )
+)
+
+(def layout MultiOpenRenderer(rendererModel:dict, size:str='small')
+    # Represent slot renderer with position number and rewards list
+    (scope
+        (event evOnAnimComplete)
+        (event evOnStartAnim)
+        (event onAnimComplete)
+        (event onSkipAnimation)
+
+        (var lineIndex:number = 0)
+        (var isLast:bool = false)
+        (var startAnim:bool = false)
+        (var isLastComplete:bool = false)
+        (var skipAnim:bool = false)
+        (bind skipAnim true init=false (event "onSkipAnimation"))
+        (bind skipAnim false init=false (event "onAnimComplete"))
+        (const FIRST_LINE_IDX:number = 1)
+        (bind isLastComplete "isLast" init=false watch=false (event "evOnAnimComplete"))
+        (dispatch onAnimComplete dir=1 init=false
+            (bind enabled "isLastComplete")
+        )
+    )
+    (style
+        (width = 100%)
+        (bind height "LOOTBOX_REWARD_SLOT_HEIGHT[size]")
+        (alpha = 0)
+    )
+
+    (exec "playSound(R.sounds.gui_hangar_award_item_rollout())"
+        (event "evOnStartAnim")
+        (enabled = "!skipAnim")
+    )
+    
+    (view_holder 'separatorTop')
+    (view_holder_content 'separatorTop' "lineIndex == FIRST_LINE_IDX"
+        (element MultiOpenRendererSeparator
+            (name = 'separatorTop')
+            (style
+                (position = "absolute")
+                (left = "LOOTBOX_REWARD_RENDER_LEFT_OFFSET")
+                (bind width "LOOTBOX_REWARD_SEPARATOR_WIDTH[size]")
+                (height = 1px)
+            )
+        )
+    )
+
+    (hblock
+        (name = 'contentBlock')
+        (style
+            (align = "center|middle")
+            (bind height "LOOTBOX_REWARD_SLOT_HEIGHT[size]")
+            (bind paddingLeft "viewSize.width > BASE_WIDTH_1280 ? 30px : 30px" )
+        )
+        (block
+            (name = 'positionBlock')
+            (style
+                (width = 60px)
+                (bind height "LOOTBOX_REWARD_SLOT_HEIGHT[size]")
+                (align = "center | middle")
+            )
+
+            (tf
+                (name = 'positionTF')
+                (style
+                    (marginBottom = 2px)
+                )
+                (class PromoTitleTextStyle)
+                (bind text "rendererModel.indx")
+            )
+        )
+        (hblock
+            (style
+                (gap = 25px)
+            )
+            (controller $Repeat renderer='BigRewardRenderer'
+                (bind count "rendererModel.rewards.length")
+                (exprs
+                    (scope
+                        (icon = "rendererModel.rewards[$index].icon")
+                        (hasCompensation = "rendererModel.rewards[$index].hasCompensation")
+                        (highlightType = "rendererModel.rewards[$index].highlightType")
+                        (labelAlign = "rendererModel.rewards[$index].labelAlign")
+                        (labelStr = "rendererModel.rewards[$index].labelStr")
+                        (overlayType = "rendererModel.rewards[$index].overlayType")
+                        (tooltipId = "rendererModel.rewards[$index].tooltipId")
+                    )
+                )
+            )
+        )
+    )
+
+    (element MultiOpenRendererSeparator
+        (name = 'separatorBottom')
+        (style
+            (bind width "LOOTBOX_REWARD_SEPARATOR_WIDTH[size]")
+            (height = 1px)
+            (marginLeft = "LOOTBOX_REWARD_RENDER_LEFT_OFFSET")
+            (bottom = 3px)
+        )
+    )
+
+    (controller $Animation
+        (bindcall play delay="lineIndex - 0.5" duration=0.2 from="{alpha:0}" to="{alpha:1}" callbacks="{onStart: evOnStartAnim, onComplete: evOnAnimComplete}"
+            (bind enabled "startAnim")
+        )
+        (bindcall stop
+            (bind enabled "!startAnim")
+        )
+    )
+    (controller $Animation
+        (bindcall play duration=0.2 to="{alpha:1}" callbacks="{onStart: evOnStartAnim, onComplete: evOnAnimComplete}"
+            (event "onSkipAnimation")
+        )
+    )
+)
+
+
+(def layout MultiOpenRendererSeparator()
+    (style
+        (backgroundColor = 0x22FFFFFF)
+        (width = 720px)
+    )
+)
+
+
+(def css LootboxImgBigStyle()
+    (marginBottom = 0px)
+    (marginRight = 40px)
+    (width = 280px)
+    (height = 240px)
+)
+
+(def css LootboxImgSmallStyle()
+    (marginBottom = 25px)
+    (marginRight = 20px)
+    (width = 162px)
+    (height = 102px)
+)

@@ -1,0 +1,241 @@
+(def layout PremDashboardHeader() entrance=true
+    (macro PremDashboardHeaderModel)
+    (macro PremDashboardAdaptiveSize)
+    (scope
+        (var hasPreffixBadge:bool = "prefixBadgeId != ''")
+        (var hasSuffixBadge:bool = "suffixBadgeId != ''")
+        (var badgeIcnId:str = "hasPreffixBadge ? prefixBadgeId : 'empty'")
+        (var badgeIcnFld:str = "isNormalSize ? 'c_80x80' : 'c_48x48'")
+    )
+    (style
+        (align = "bottom|center")
+        (flow = "Flow.HORIZONTAL")
+        (width = 100%)
+    )
+
+    (hblock
+        (name = 'userInfoBlcok')
+        (style
+            (width = 100%)
+            (align = "middle")
+            (gap = 17px)
+        )
+        (button
+            (name = 'badgeSlot')
+            (hover source="R.images.gui.maps.icons.premacc.dashboard.header.badgeSlot.hover()" 
+                    scale9grid="Rect(15,15,18,18)" blend='add' offsets=null
+            )
+            (background source="R.images.gui.maps.icons.premacc.dashboard.header.badgeSlot.bg()" 
+                        scale9grid="Rect(15,15,18,18)" offsets=null
+            )
+            (padding = 0px)
+            (bind icon "R.images.gui.maps.icons.library.badges[badgeIcnFld]['badge_' + badgeIcnId]()")
+            (dispatch onShowBadges on='clicked')
+            (image
+                (style
+                    (position = "absolute")
+                    (bottom = 1px)
+                    (right = 1px)
+                )
+                (source = "R.images.gui.maps.icons.library.slotPlusIcon()")
+                (bind visible "!hasPreffixBadge")
+            )
+            (element BitmapDigits
+                (style
+                    (position = "absolute")
+                    (hcenter = -1px)
+                    (bind top "isNormalSize ? 30% : 27%")
+                    (bind gap "isNormalSize ? -7px : -3px")
+                )
+                (scope
+                    (bind text "badgeContent"
+                        (bind enabled "isDynamicBadge")
+                    )
+                    (bind size "isNormalSize ? '80x80' : '48x48'"
+                        (bind enabled "isDynamicBadge")
+                    )
+                )
+                (bind visible "isDynamicBadge")
+            )
+            (controller $Tutorial viewTutorialId='PremDashboardView' controlID='badgeSlot')
+            (controller $ToolTip
+                (args body="R.strings.tooltips.prem.dashboard.header.badgeSlot()")
+                (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+                (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+            )
+            (macro StateComponentsSound)
+        )
+        (block
+            (style
+                (align = "middle")
+                (gap = -4px)
+                (marginTop = -8px)
+            )
+            (hblock
+                (style
+                    (align = "middle")
+                )
+                (element UserName 'userName'
+                    (style
+                        (zindex = "ZIndex.FOREGROUND")
+                    )
+                    (scope
+                        (bind nameMaxWidth "isNormalSize ? 530px : 420px")
+                        (bind txtStyle "isNormalSize ? 'HeroTitleTextStyle' : 'GrandTitleTextStyle'")
+                        (bind teamKillTxtStyle 
+                            "isNormalSize ? 'HeroTitleTKTextStyle' : 'GrandTitleTKTextStyle'"
+                        )
+                        (showClanAbbrev = false)
+                    )
+                )
+                (image
+                    (name = 'badgeBack')
+                    (style
+                        (bind marginLeft "isNormalSize ? -65px : -45px")
+                        (marginRight = -25px)
+                        (bind marginTop "isNormalSize ? 3px : 2px")
+                    )
+                    (bind source "R.images.gui.maps.icons.library.badges.strips.c_68x28['strip_' + suffixBadgeId]()"
+                        (bind enabled "!isNormalSize && hasSuffixBadge")
+                    )
+                    (bind source "R.images.gui.maps.icons.library.badges.strips.c_100x40['strip_' + suffixBadgeId]()"
+                        (bind enabled "isNormalSize && hasSuffixBadge")
+                    )
+                    (bind visible "hasSuffixBadge")
+                )
+                (image
+                    (style
+                        (bind marginTop "isNormalSize ? 3px : 1px")
+                    )
+                    (bind source "R.images.gui.maps.icons.library.badges.c_32x32['badge_' + suffixBadgeId]()"
+                        (bind enabled "!isNormalSize && hasSuffixBadge")
+                    )
+                    (bind source "R.images.gui.maps.icons.library.badges.c_48x48['badge_' + suffixBadgeId]()"
+                        (bind enabled "isNormalSize && hasSuffixBadge")
+                    )
+                    (bind visible "hasSuffixBadge")
+                )
+            )
+            (element PremDashboardHeaderClanInfo 'clanInfo'
+                (scope
+                    (bind txtStyle "isNormalSize ? 'MainBigTextStyle' : 'MainTextStyle'")
+                    (bind isInClan "isInClan")
+                )
+                (bind visible "isInClan")
+            )
+
+        )
+    )
+    (hblock
+        (name = 'reservesBlock')
+        (style
+            (bind gap "isNormalSize ? 40px : 20px")
+        )
+        (block
+            (macro PremDashboardHeaderReservesBlock 
+                "'personalReserves'"
+                "R.strings.premacc.dashboard.header.personalReserves.title()"
+                "isNormalSize ? 'MainBigTextStyle' : 'MainTextStyle'"
+                "isNormalSize ? 'PremDashboardPersonalReserveSlotBig' : 'PremDashboardPersonalReserveSlotSmall'"
+                "R.strings.tooltips.prem.dashboard.header.personalReserves.header()"
+                "R.strings.tooltips.prem.dashboard.header.personalReserves.body()"
+            )
+        )
+        (block
+            (macro PremDashboardHeaderReservesBlock 
+                "'clanReserves'"
+                "R.strings.premacc.dashboard.header.clanReserves.title()"
+                "isNormalSize ? 'MainBigTextStyle' : 'MainTextStyle'"
+                "isNormalSize && hasClanReserves ? 'PremDashboardClanReserveSlotBig' : 'PremDashboardClanReserveSlotSmall'"
+                "R.strings.tooltips.prem.dashboard.header.clanReserves.header()"
+                "R.strings.tooltips.prem.dashboard.header.clanReserves.body()"
+            )
+            (bind visible "hasClanReserves")
+        )
+    )
+)
+
+(def element PremDashboardHeaderClanInfo(name:str) layout=true
+    (macro PremDashboardHeaderClanInfoModel)
+    (macro PremDashboardHeaderTooltips)
+    (name = "name")
+    (scope
+        (var txtStyle:str = 'MainTextStyle')
+        (var isInClan:bool = false)
+    )
+    (style
+        (flow = "Flow.HORIZONTAL")
+    )
+    (tf
+        (name = 'clanRole')
+        (bind class "txtStyle"
+            (bind enabled "isInClan")
+        )
+        # todo: use right string, because of WOTD-130764: R.strings.menu.profile.header.clan.position[roleInClan]()
+        (bind text "TextFormat(
+                R.strings.premacc.dashboard.header.clanInfo.role(), 
+                {'role': R.strings.menu.header.account.popover.clan.position[roleInClan]()}
+            )"
+            (bind enabled "isInClan")
+        )
+    )
+    (tf
+        (name = 'clanTag')
+        (bind class "txtStyle"
+            (bind enabled "isInClan")
+        )
+        (bind text "TextFormat(R.strings.common.clanTag(), {abbrev: clanAbbrev})"
+            (bind enabled "isInClan")
+        )
+        (controller $ToolTip
+            (content = "R.views.lobby.tooltips.clans.ClanShortInfoTooltipContent.resId")
+            (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+        )
+    )
+)
+
+(def macro PremDashboardHeaderReservesBlock(groupName:expression, titleTxt:expression, 
+        titleStyle:expression, rendererName:expression, ttHeader:expression, ttBody:expression
+    )
+    (name = "groupName + 'Block'")
+    (style
+        (bind gap "isNormalSize ? 14px : 4px")
+    )
+    (hblock
+        (style
+            (align = "middle")
+        )
+        (tf
+            (style
+                (marginLeft = -2px)
+            )
+            (name = "groupName + 'Title'")
+            (bind class "titleStyle")
+            (text = "titleTxt")
+        )
+        (block
+            (name = "groupName")
+            (image
+                (style
+                    (alpha = 0.6)
+                    (marginLeft = -3px)
+                )
+                (source = "R.images.gui.maps.icons.library.info()")
+            )
+            (controller $ToolTip
+                (args header="ttHeader" body="ttBody")
+                (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+                (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+            )
+        )
+    )
+    (group "groupName"
+        (bind renderer "rendererName")
+        (container
+            (style
+                (flow = "Flow.HORIZONTAL")
+                (bind gap "isNormalSize ? 20px : 10px")
+            )
+        )
+    )
+)

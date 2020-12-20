@@ -1,0 +1,28 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NewYearGladeViewModel()
+    (scope
+        (event onIncreaseLevel)
+        (event onHoverSlot)
+        (event onHoverOutSlot)
+        (event onSelectNewTalismanClick)
+        (event onMouseEnterProgress)
+
+        (var isDragging:bool = false)
+        (var tabType:number = 1)
+        (var talismanGiftState:str = 'disabled')
+        (var talismanLevel:number = 0)
+        (var expectedTalismanLevel:number = 0)
+        (var totalReceivedToys:number = -1)
+        (var prevTotalReceivedToys:number = 0)
+        (var maxReceivedToys:number = 0)
+        (var talismanLevelsInfo:array = [])
+        (var talismanGiftCooldown:number = 0)
+        (var currentShards:number = 0)
+        (var hasTalismanToSelect:bool = false)
+        (var showTalismanHint:bool = false)
+
+        # The following submodels are used in this model:
+        # groupSlots:gui.impl.wrappers.user_list_model.UserListModel
+    )
+)

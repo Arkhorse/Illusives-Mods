@@ -1,0 +1,49 @@
+.Content_base_3a {
+    display: flex;
+    flex-direction: column;
+    width: 500rem;
+    padding: 280rem 40rem 40rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.tooltips.tooltip_lock') center top / contain no-repeat;
+    line-height: normal;
+}
+/* stylelint-disable */
+[lang=ja],
+[lang=ko],
+[lang=zh_tw],
+[lang=zh_sg],
+[lang=zh_ch],
+[lang=th] {
+    overflow-wrap: break-word;
+}
+/* stylelint-enable */
+.Content_title_3c {
+    margin-bottom: 10rem;
+    color: #f2f2f7;
+    font-size: 24rem;
+    font-weight: 700;
+}
+.Content_description_eb {
+    color: #cfc7a8;
+    font-size: 16rem;
+}
+.Content_description__indent_9a {
+        margin-top: 15rem;
+    }
+
+.TooltipDecorator_base_c9 {
+    display: flex;
+    position: absolute;
+}
+
+.TooltipDecorator_decorator_3d {
+    padding: 4rem 6rem 8rem; /* border offset*/
+    border-image-source: url('R.atlases.components.tooltip_background');
+    border-image-slice: 24 fill;
+    border-image-width: 24rem;
+    position: relative;
+}
+
+.TooltipDecorator_decoratorContent_de {
+    background-color: #000;
+}
+

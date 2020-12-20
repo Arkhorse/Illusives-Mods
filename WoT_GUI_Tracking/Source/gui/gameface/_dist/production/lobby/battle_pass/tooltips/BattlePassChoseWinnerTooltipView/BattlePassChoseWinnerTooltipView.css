@@ -1,0 +1,119 @@
+.FinalLevel_level_49 {
+    width: 100%;
+    margin-top: 8rem;
+    margin-bottom: -12rem;
+    color: #f2f2f7;
+    font-size: 73rem;
+    font-weight: 700;
+    line-height: 102rem;
+    text-align: center;
+}
+
+.FinalLevel_levelLabel_04 {
+    margin-bottom: 35rem;
+    color: #e9e2bf;
+    font-size: 16rem;
+    line-height: 20rem;
+}
+
+.Content_base_0c {
+    line-height: normal;
+}
+.Content_separator_6d {
+    width: 283rem;
+    height: 1rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.tooltips.Devider_points') 50% / contain no-repeat;
+}
+.Content_rewards_6a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 403rem;
+    height: 154rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.tooltips.Ribbon_large') bottom / cover no-repeat;
+    color: #c9c9b6;
+    font-size: 14rem;
+}
+.Content_base_0c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 398rem;
+    padding: 28rem;
+    overflow: hidden;
+}
+/* stylelint-disable */
+[lang=ja],
+[lang=ko],
+[lang=zh_tw],
+[lang=zh_sg],
+[lang=zh_ch],
+[lang=th] {
+    overflow-wrap: break-word;
+}
+/* stylelint-enable */
+.Content_bg_ad {
+    display: flex;
+    align-self: center;
+    width: 398rem;
+    height: 225rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.tooltips.c_45_lvl_BG') center top / cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.Content_title_da {
+    margin-top: 116rem;
+    color: #f2f2e7;
+    font-size: 24rem;
+    font-weight: 700;
+    position: relative;
+}
+.Content_description_ee {
+    margin-top: 23rem;
+    color: #8c8c7e;
+    font-size: 14rem;
+    text-align: center;
+    position: relative;
+}
+.Content_finalLevel_9d {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+.Content_levelFlare_4b {
+    width: 400rem;
+    height: 400rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.tooltips.c_45_lvl_Flare') center / cover no-repeat;
+    mix-blend-mode: additive;
+    position: absolute;
+    transform: translate(0, -273rem);
+}
+.Content_separatorContainer_d1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.TooltipDecorator_base_c9 {
+    display: flex;
+    position: absolute;
+}
+
+.TooltipDecorator_decorator_3d {
+    padding: 4rem 6rem 8rem; /* border offset*/
+    border-image-source: url('R.atlases.components.tooltip_background');
+    border-image-slice: 24 fill;
+    border-image-width: 24rem;
+    position: relative;
+}
+
+.TooltipDecorator_decoratorContent_de {
+    background-color: #000;
+}
+

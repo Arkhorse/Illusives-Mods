@@ -1,0 +1,130 @@
+(def layout NewYearAlbumToyOldTooltipContent() layout=true entrance=true
+    (macro NewYearAlbumOldToyContentModel)
+    (style
+        (width = 335px)
+    )
+    (image
+        (style
+            (position = "absolute")
+            (marginLeft = -15px)
+            (marginTop = -13px)
+        )
+        (bind source "R.images.gui.maps.icons.new_year.rankBG[NY_RANK_BG_PREFIX + rankNumber]()" init=false)
+    )
+    
+    (image
+        (style
+            (position = "absolute")
+        )
+        (bind source "R.images.gui.maps.icons.new_year.settings[setting]()" init=false)
+    )
+    (tf
+        (style
+            (width = 280px)
+            (marginLeft = 64px)
+        )
+        (class HighTitleTextStyle)
+        (bind text "toyName" init=false)
+    )   
+    (tf
+        (style
+            (width = 280px)
+            (marginLeft = 64px)
+            (marginBottom = 10px)
+        )
+        (class StandardTextStyle)
+        (bind text "R.strings.ny.settings[setting]()" init=false)
+    )
+    (tf
+        (style
+            (width = 265px)
+            (marginLeft = 64px)
+            (marginBottom = 20px)
+        )
+        (class StatsTextStyleResetFilter)
+        (bind text "toyDesc" init=false)
+        (bind visible "isInCollection && rankNumber >= 5")
+    )
+
+    (macro NewYearInfotypeSeparator)
+    
+    (hblock
+        (style
+            (width = 100%)
+            (backgroundImage = 'symbol:popupWhiteBgUI')
+            (backgroundSize = "fill")
+            (gap = 15px)
+            (paddingLeft = 18px)
+            (paddingTop = 20px)
+            (paddingBottom = 20px)
+        )
+
+        (block
+            (style
+                (width = 30px)
+                (align = "right")
+            )
+            (tf
+                (class CreditsTextStyle)
+                (bind text "rankRoman" init=false)
+            )
+            (tf
+                (class CreditsTextStyle)
+                (bind text "shards")
+            )
+        )
+
+        (block   
+            (tf
+                (class MainTextStyle)
+                (text = "R.strings.ny.toy18Infotype.decorLevel()")
+            )
+            (hblock
+                (image
+                    (source = "R.images.gui.maps.icons.new_year.icons.parts_24x24()")
+                )
+                (tf
+                    (class MainTextStyle)
+                    (text = "R.strings.ny.toy18Infotype.costParts()")
+                )
+            )
+        )
+    )
+    
+    (macro NewYearInfotypeSeparator)
+
+    (hblock
+        (style
+            (width = 100%)
+            (align = "center")
+        )
+        (image
+            (style
+                (marginTop = 17px)
+            )
+            (source = "R.images.gui.maps.icons.new_year.album.page19.check()")
+            (bind visible "isInCollection")
+        )
+        (tf
+            (style
+                (bind textColor "isInCollection ? 0x7ab300 : 0xff2717")
+                (marginTop = 20px)
+            )
+            (class StatusWarningTextStyle)
+            (bind text "isInCollection ? R.strings.ny.album.ny19.infotype.received() : R.strings.ny.album.ny19.infotype.notReceived()")
+        )
+    )
+)
+
+(def macro NewYearInfotypeSeparator()
+    (block
+        (style
+            (width = 100%)
+            (align = "center")
+        )
+        (image
+            (source = "R.atlases.components.tool_tip_separator()")
+        )
+    )
+)
+

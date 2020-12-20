@@ -1,0 +1,24 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NewYearVehiclesViewModel()
+    (macro NyWithRomanNumbersModel)
+    (scope
+        (event onCloseBtnClick)
+        (event onClearBtnClick)
+        (event onSwitchExtraSlotBonus)
+        (event onGoToChallengeQuests)
+        (event onSetIntroInProgress)
+        (event onReadyToShow)
+
+        (var isInProgressIntro:bool = false)
+        (var isPostEventIntro:bool = false)
+        (var isExtraSlotBonusHint:bool = false)
+        (var introRegularCooldown:number = 0)
+        (var introExtraCooldown:number = 0)
+
+        # The following submodels are used in this model:
+        # vehicleSlots:ui_kit.list_model
+        # extraSlots:ui_kit.list_model
+        # bonuses:gui.impl.wrappers.user_list_model.UserListModel
+    )
+)

@@ -1,0 +1,98 @@
+(def constant TALISMAN_INFO_WIDTH_MARGIN 90px)
+(def constant TALISMAN_SHADOW_WIDTH_EXTENTION 140px)
+
+(def layout NYTalismanSelectConfirmDialog() entrance=true
+    (macro NewYearTalismanSelectConfirmDialogModel)
+    (scope
+        (var isSmall:number = "viewSize.width <= horizontalChangeBreakpointSM"
+            (event "viewResized")
+        )
+        (var isLarge:number = "viewSize.width >= horizontalChangeBreakpointML"
+            (event "viewResized")
+        )
+        (var isExtraLarge:number = "viewSize.width >= horizontalChangeBreakpointEL"
+            (event "viewResized")
+        )
+        (var _currentWidth:number = "isSmall ? contentWidthSmall : (isExtraLarge ? contentWidthExtraLarge : (isLarge ? contentWidthLarge : contentWidthMedium))")
+    )
+
+    (style
+        (align = "center | middle")
+        (bind width "_currentWidth")
+        (gap = 15px)
+        (paddingTop = 10px)
+        (paddingBottom = 10px)
+        (marginTop = -20px)
+        (marginBottom = 7px)
+    )
+
+    (image
+        (name = 'shadowBg')
+        (style
+            (position = "absolute")
+            (vcenter = 50px)
+            (hcenter = -20px)
+            (bind width "_currentWidth + TALISMAN_SHADOW_WIDTH_EXTENTION")
+        )
+        (source = "R.images.gui.maps.icons.new_year.talismans.dialog_shadow()")
+    )
+
+    (tf
+        (name = 'talismanSelectTitle')
+        (style
+            (bind width "_currentWidth")
+        )
+        (class TalismanSelectConfirmDialogTitleStyle)
+        (bind text "R.strings.ny.newYearTalisman.talisman.select.confirm.title[talismanType]()")
+    )
+
+    (tf
+        (name = 'talismanSelectDescription')
+        (style
+            (bind width "_currentWidth")
+        )
+        (class TalismanSelectConfirmDialogDescriptionStyle)
+        (bind text "R.strings.ny.newYearTalisman.talisman.select.confirm.description[talismanType]()")
+    )
+
+    (block
+        (name = 'talismanDescriptionInfo')
+        (style
+            (bind width "_currentWidth")
+            (align = "center")
+            (marginTop = 10px)
+        )
+        (image
+            (name = 'talismanDescriptionInfoBackground')
+            (class AbsPositionFullSizeStyle)
+            (style
+                (scale9grid = "Rect(16,16,1,1)")
+                (alpha = 0.35)
+            )
+            (source = "R.images.gui.maps.icons.new_year.talismans.dialog_info_back()")
+        )
+        (hblock
+            (style
+                (align = "middle")
+                (marginTop = 20px)
+                (marginBottom = 22px)
+            )
+            (image
+                (name = 'talismanSelectDescriptionInfoIcon')
+                (style
+                    (marginRight = 20px)
+                )
+                (source = "R.images.gui.maps.icons.library.InformationIcon_1()")
+            )
+            (tf
+                (name = 'talismanSelectDescriptionInfo')
+                (style
+                    (bind width "_currentWidth - TALISMAN_INFO_WIDTH_MARGIN")
+                )
+                (class TalismanSelectConfirmDialogInfoStyle)
+                (bind text "R.strings.ny.newYearTalisman.talisman.select.confirm.description.info[talismanType]()")
+            )
+        )
+    )
+    
+)

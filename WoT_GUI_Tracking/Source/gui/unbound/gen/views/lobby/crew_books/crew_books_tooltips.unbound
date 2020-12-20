@@ -1,0 +1,10 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro CrewBooksTooltips()
+    (scope
+        (const TOOLTIP_CREW_BOOK_RESTRICTED:str = 'crewBookRestricted')
+        (const TOOLTIP_TANKMAN:str = 'tankman')
+        (const TOOLTIP_TANKMAN_NEW_SKILL:str = 'tankmanNewSkill')
+        (const TOOLTIP_TANKMAN_SKILL:str = 'tankmanSkill')
+    )
+)

@@ -1,0 +1,545 @@
+(def layout NYMainMenuInject() entrance=true
+    (name = 'NYMainMenuInject')
+    (macro NyMainMenuModel)
+    (macro NewYearTabbedViewAnimationData)
+    (scope
+        (const CUSTOM_BREAKPOINT_WIDTH_DOWN:number = 1124)
+        (const CUSTOM_BREAKPOINT_WIDTH_UP:number = 1480)
+        (const MENU_TAB_SIZE_OFFSET:number = -32)
+        (const MENU_TAB_SIZE_OFFSET_SMALL:number = -23)
+        (const TOP_OFFSET:number = -15)
+
+        (var isSmall:bool = "viewSize.width <= BASE_WIDTH_1366 || viewSize.height <= BASE_HEIGHT_768"
+            (event "viewResized")
+        )
+        (var scale:number = "isSmall ? 0.75 : 1.0")
+        (var closeBtnHover:str = "isSmall ? null : R.atlases.components.button_back_shine_flipped()")
+        (var closeBtnOffset:array = "isSmall ? [] : [auto, auto, -10px, auto, auto, 0px]")
+        (var isCloseLabelHided:bool = "viewSize.width <= BASE_WIDTH_1280 || (viewSize.width > BASE_WIDTH_1366 && viewSize.width < CUSTOM_BREAKPOINT_WIDTH_UP)"
+            (event "viewResized")
+        )
+        (var menuTabOffset:number = 0)
+        (var menuTabSizeOffset:number = "isSmall ? MENU_TAB_SIZE_OFFSET_SMALL : MENU_TAB_SIZE_OFFSET" watch=false)
+
+        (var idleAlpha:number = 0)
+        (controller $Animation
+            (play
+                delay=0.5
+                duration=0.5
+                to="{idleAlpha:1}"
+                init=true
+            )
+        )
+    )
+    (style
+        (macro ViewResizeBindedSize)
+        (bind paddingTop "isSmall ? 5 : 29")
+
+        (align = "center")
+    )
+
+    (controller $Instance layout=true
+        (exprs
+            (name = 'bigIdleAnim')
+            (style
+                (position = "absolute")
+                (pivotX = 50%)
+                (hcenter = 0px)
+                (bind top "menuTabOffset + menuTabSizeOffset + TOP_OFFSET")
+                (blendMode = 'add')
+                (bind alpha "idleAlpha")
+
+                (bind scaleX "scale")
+                (bind scaleY "scale")
+            )
+            (swf 
+                (name = 'bigIdleAnim')
+                (source = "R.animations.ny.nyBigIdleAnim()")
+            )
+            (macro NYWidgetEmptyHitAreaMacro)
+        )
+
+        (bind enabled "isExtendedAnim")
+    )
+
+    (block
+        (name = 'idleImgBlock')
+        (style
+            (position = "absolute")
+            (pivotX = 50%)
+            (hcenter = 0px)
+            (bind top "menuTabOffset + menuTabSizeOffset + TOP_OFFSET")
+            (blendMode = 'add')
+            (bind alpha "idleAlpha")
+
+            (bind scaleX "scale")
+            (bind scaleY "scale")
+        )
+
+        (image
+            (name = 'idleImage')
+            (source = "R.images.gui.maps.icons.new_year.widget.nyBigIdleAnim()")
+        )
+        (bind visible "!isExtendedAnim")
+        (macro NYWidgetEmptyHitAreaMacro)
+    )
+
+    (block
+        (name = 'content')
+        (style
+            (bind alpha "menuAlpha")
+        )
+
+        (element NYTabBar 'NYHorizontalTabBarRenderer' 'NYHorizontalSelectedBlockRenderer' "NY_TABBAR_TOP_MENU_ITEM_SIZE" 'commonTabBar'
+            (scope
+                (bind selectedIndex "startIndexMenu")
+                (bind renderers "itemsMenu")
+                (bind isSmall "isSmall")
+                (gapStartedFromIndex = 2)
+                (bind gapSize "isSmall ? 220 : 280")
+                (horizontal = true)
+            )
+        )
+    )
+
+    (text_button 'closeBtn'
+        (macro ButtonCloseStyle)
+        (bindcall hover source="closeBtnHover" scale9grid=null blend='add' offsets="closeBtnOffset" wath=true init=true)
+        (style
+            (position = "absolute")
+            (bind right "isCloseLabelHided ? 13 : 37")
+            (bind top "isSmall ? 22 : 43")
+        )
+        (bind label "!isCloseLabelHided ? R.strings.menu.viewHeader.closeBtn.label() : ''")
+        (dispatch onCloseBtnClick on='clicked')
+    )
+)
+
+(def constant NY_TABBAR_TOP_BTN_CONTENT {
+        up : {},
+        hover : {sound: "R.sounds.highlight()"},
+        down : {sound:"R.sounds.carouselButton()"},
+        disabled : {},
+        upSelected : {},
+        hoverSelected : {},
+        downSelected : {}
+    }
+)
+
+(def constant NY_TABBAR_TOP_MENU_ITEM_SIZE {
+        widthSmall : 120,
+        widthBig : 160,
+        heightSmall :  51,
+        heightBig : 51
+    }
+)
+
+(def layout NYHorizontalTabBarRenderer()
+    (macro ComponentStateBase "NY_TABBAR_TOP_BTN_CONTENT")
+    (scope
+        (var tabModel:dict = null)
+        (var isEnabled:bool = true)
+        (var horizontal:bool = true)
+        (var isSmall:bool = false)
+        (dispatch evPreSwitchContent dir=1 args="{view:tabModel.name}" on='evBtnLeftClickEvent'
+            (enabled = "tabModel != null && !selected")
+        )
+
+        (var currentWidth : number = "isSmall ? NY_TABBAR_TOP_MENU_ITEM_SIZE['widthSmall'] : NY_TABBAR_TOP_MENU_ITEM_SIZE['widthBig']")
+        (var currentHeight : number = "isSmall ? NY_TABBAR_TOP_MENU_ITEM_SIZE['heightSmall'] : NY_TABBAR_TOP_MENU_ITEM_SIZE['heightBig']")
+    )
+
+    (style
+        (bind width "currentWidth")
+        (bind height "currentHeight")
+    )
+
+    (element NewYearHitArea w="currentWidth" h="currentHeight")
+    (hitArea = "$target.hit")
+
+    (bind buttonMode "!selected")
+
+    (hblock
+        (name = 'contentBlock')
+        (style
+            (height = 48px)
+            (align = "middle")
+        )
+
+        (image
+            (name = 'hoverImg')
+            (style
+                (blendMode = 'add')
+                (alpha = 0)
+                (position = "absolute")
+                (bottom = -64px)
+                (hcenter = 13px)
+            )
+            (source = "R.images.gui.maps.icons.new_year.widget.menu.menu_item_over()")
+
+            (controller $Animation
+                (bindcall play duration="0.2" from="{alpha:0}" to="{alpha: 0.6}" id=TBH_HOVER easing="Easing.cubic_out"
+                    (event "evBtnOverEvent")
+                )
+
+                (bindcall play duration="0.4" from="{alpha:0.6}" to="{alpha: 0}" easing="Easing.cubic_out"
+                    (event "evBtnOutEvent")
+                )
+
+                (bindcall stop TBH_HOVER
+                    (event "evBtnOutEvent")
+                )
+            )
+        )
+
+        (block
+            (style
+                (align = "middle")
+            )
+            (image
+                (name = 'icon')
+                (bind source "R.images.gui.maps.icons.new_year.widget.menu[isSmall ? tabModel.name + '_small' : tabModel.name]()" init=false
+                    (bind enabled "tabModel != null")
+                )
+            )
+            (element NySmallBubble
+                (scope
+                    (bind value "tabModel.unseenCount" init=false)
+                )
+                (style
+                    (position = "absolute")
+                    (bind top "isSmall ? 7px: 10px")
+                    (bind left "isSmall ? 17px: 30px")
+                )
+            )
+            (element NYMenuInfoCount
+                (style
+                    (position = "absolute")
+                    (bind vcenter "isSmall ? 16px : 18px")
+                    (hcenter = 0px)
+                    (filters
+                        (dropShadow
+                            (angle = 270)
+                            (blurX = 6)
+                            (blurY = 6)
+                            (strength = 1)
+                            (distance = 1)
+                            (color = 0x091221)
+                            (alpha = 1)
+                        )
+                    )
+                )
+                (scope
+                    (bind count "tabModel != null && tabModel.infoCount ? tabModel.infoCount : 0" init=false)
+                    (bind isSmall "isSmall")
+                )
+                (name = 'infoCount')
+                (bind visible "tabModel != null && tabModel.infoCount != ''")
+            )
+        )
+
+        (tf
+            (name = 'tabName')
+            (style
+                (fontFamily = $FieldFont)
+                (bind fontSize "isSmall ? 11 : 14")
+                (bind textColor "currState == 'hover' || selected ? 0xFFFFFF : 0xC6F2FF")
+                (alpha = 0.8)
+                (letterSpacing = 1)
+                (bind marginLeft "isSmall ? -10 : -5")
+            )
+            (bind text "R.strings.ny.widget.menu[tabModel.name]()" init=false
+                (bind enabled "tabModel != null")
+            )
+
+            (bind class "selected ? 'MainMenuTabSelectedFilter' : 'OffFilterStyle'")
+        )
+    )
+
+    (controller $ToolTip
+        (delay = 0.4)
+        (args header="R.strings.ny.widget.menu[tabModel.name].header()"
+            body="R.strings.ny.widget.menu[tabModel.name].body()"
+        )
+        (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+        (bind enabled "tabModel != null && (tabModel.name != 'shards' && tabModel.name != 'collections')")
+    )
+    (controller $ToolTip
+        (delay = 0.4)
+        (content = "R.views.lobby.new_year.tooltips.new_year_parts_tooltip_content.NewYearPartsTooltipContent.resId")
+        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+        (bind enabled "tabModel != null && tabModel.name == 'shards'")
+    )
+    (controller $ToolTip
+        (delay = 0.4)
+        (content = "R.views.lobby.new_year.tooltips.new_year_collections_tooltip_content.NYCollectionsTooltipContent.resId")
+        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+        (bind enabled "tabModel != null && tabModel.name == 'collections'")
+    )
+)
+
+(def layout NYTopTabsSelectionPrevFx()
+    (scope
+        # workaround because of issue with FxInstance (mc blinks at 1st frame even if it's invisible)
+        (event evShow)
+        (var tmp:number = 0)
+        (controller $Animation
+            (play
+                duration=0.001
+                to="{tmp:1}"
+                callbacks="{onComplete:evShow}"
+            )
+        )
+    )
+    (controller $Instance layout = true
+        (exprs
+            (mc 'nyTopTabsPrevSelectionFx')
+        )
+        (enabled = false)
+        (bind enabled true init=false
+            (event "evShow")
+        )
+    )
+)
+
+(def layout NYHorizontalSelectedBlockRenderer()
+    (macro TabBarSelectedRendererMacro)
+    (scope
+        (const TOP_OFFSET:number = 28px)
+        (var leftOffset:number = "isSmall ? 34px : 43px")
+        (var prevPosition:number = "selectPosition" watch=false)
+        (controller $Animation
+            (bindcall play
+                duration=0.001
+                delay=0.1
+                to="{prevPosition:selectPosition}"
+                watch=false
+                (event "evSelectionPositionChange")
+            )
+        )
+    )
+
+    (style
+        (position = "absolute")
+        (blendMode = 'layer')
+    )
+
+    (mc 'nyTopTabsCurSelectionFx'
+        (style
+            (position = "absolute")
+            (top = "TOP_OFFSET")
+            (bind left "selectPosition + leftOffset")
+        )
+        (bindcall gotoAndPlay 1
+            (event "evSelectedIndexChange")
+        )
+    )
+
+    (controller $FxInstance renderer='NYTopTabsSelectionPrevFx' lifetime=1.0
+        (exprs
+            (style
+                (position = "absolute")
+                (top = "TOP_OFFSET")
+                (left = "prevPosition + leftOffset")
+            )
+        )
+        (bindcall create
+            (event "evSelectedIndexChange")
+        )
+    )
+)
+
+(def layout NYMenuInfoCount()
+    (scope
+        (event evRectChange)
+        (event evParentSizeChanged)
+        (event evInfoCountAnmComplete)
+        (event evCountChanged)
+        (var count:number = -1
+            (dispatch evCountChanged on='evChanged')
+        )
+        (var maxCount:number = 0
+            (dispatch evCountChanged on='evChanged')
+        )
+        # TODO: replace 'formatSeparator' after implement WOTD-119345
+
+        (event evCountStrChanged)
+        (event evAnimCountStrChanged)
+        (var animCount:number = -1)
+        (var countStr:str = '0'
+            (dispatch evCountStrChanged on='evChanged')
+        )
+        (bind countStr "(maxCount > 0 && count > maxCount) ? (formatSeparator(maxCount) + '+') : formatSeparator(count)"
+            init=false
+            (enabled = "initCount == count")
+        )
+        (bind countStr "animCountStr"
+            init=false
+            watch=false
+            (event "evInfoCountAnmComplete")
+        )
+        (var animCountStr:str = '0'
+            (dispatch evAnimCountStrChanged on='evChanged')
+        )
+        (bind animCountStr "(maxCount > 0 && animCount > maxCount) ? (formatSeparator(maxCount) + '+') : formatSeparator(floor(animCount))"
+            init=false
+            (enabled = "count != initCount")
+        )
+        (var initCount:number = -1)
+        (bind initCount "count" init=false watch=false
+            (event "evCountChanged")
+            (enabled = "initCount == -1")
+        )
+        (bind initCount "count"
+            watch=false
+            init=false
+            (event "evInfoCountAnmComplete")
+        )
+        (var prevCount:number = -1)
+        (bind prevCount "initCount"
+            (enabled = "initCount == count")
+        )
+        (bind prevCount "count" init=false watch=false
+            (event "evInfoCountAnmComplete")
+        )
+
+        (var isSmall:bool = false
+            (dispatch evParentSizeChanged on='evChanged')
+        )
+        (var rectWidth:number = "max(max(countStr.length, animCountStr.length) * 6 + 4, (isSmall ? 30 : 36))"
+            (dispatch evRectChange on='evChanged')
+        )
+        (bind rectWidth "max(max(countStr.length, animCountStr.length) * 6 + 4, (isSmall ? 30 : 36))"
+            init=false
+            watch=false
+            (event "evCountStrChanged")
+            (event "evAnimCountStrChanged")
+        )
+        (var rectHeight:number = "isSmall ? 12 : 13"
+            (dispatch evRectChange on='evChanged')
+        )
+
+        (controller $Animation
+            (bindcall play
+                delay=0.5
+                duration=0.5
+                from="{animCount:prevCount}"
+                to="{animCount: count}"
+                init=false
+                (enabled = "count != initCount && abs(prevCount - count) > 0")
+                (event "evCountChanged")
+            )
+        )
+    )
+
+    (.graphics
+        (bindcall clear init=true
+            (event "evRectChange")
+            (event "evParentSizeChanged")
+        )
+        (bindcall lineStyle 1 0xFFC6F2FF 1 init=true
+            (event "evRectChange")
+            (event "evParentSizeChanged")
+        )
+        (bindcall beginFill "0xFFC6F2FF" "1" init=true
+            (event "evRectChange")
+            (event "evParentSizeChanged")
+        )
+        (bindcall drawRoundRect "0" "0" "rectWidth" "rectHeight" "2" "2" init=true watch=false
+            (event "evRectChange")
+            (event "evParentSizeChanged")
+        )
+        (bindcall endFill init=true
+            (event "evRectChange")
+            (event "evParentSizeChanged")
+        )
+    )
+
+    (tf
+        (style
+            (fontFamily = $TitleFont)
+            (bind fontSize "isSmall ? 11 : 12")
+            (textColor = 0x0f2548)
+            (alpha = 0.8)
+            (bind width "rectWidth")
+            (multiline = false)
+            (textAlign = "center")
+
+            (bind marginTop "isSmall ? -2 : -3")
+        )
+        (name = 'infoCount')
+
+        (bind text "animCountStr"
+            init=false
+            watch=false
+           (event "evAnimCountStrChanged")
+           
+        )
+        (bind text "countStr"
+            init=false
+            watch=false
+            (event "evCountStrChanged")
+        )
+    )
+
+    (macro NyTopTabsInfoCountAnimation 'nyTopTabsInfoCountIncAnimation' "count != initCount && prevCount < count" "R.sounds.hangar_newyear_debrises_get()")
+    (macro NyTopTabsInfoCountAnimation 'nyTopTabsInfoCountDecAnimation' "count != initCount && prevCount > count" "R.sounds.hangar_newyear_debrises_spend()")
+)
+
+(def macro NyTopTabsInfoCountAnimation(mcName:str, enableExp:expression, sound:expression)
+    (mc "mcName"
+        (name = "mcName")
+        (style
+            (position = "absolute")
+            (top = 50%)
+            (left = 50%)
+        )
+        (visible = false)
+        (bind visible true init=false
+            (event "evCountChanged")
+            (enabled = "enableExp")
+        )
+        (bind visible false init=false
+            (event "evInfoCountAnmComplete")
+            (enabled = "$event.id == mcName")
+        )
+        (stop)
+        (bindcall stop
+            (event "evInfoCountAnmComplete")
+            (enabled = "$event.id == mcName")
+        )
+        (bindcall gotoAndPlay 1
+            (event "evCountChanged")
+            (enabled = "enableExp")
+        )
+        (.valueRect
+            (.innerRect
+                # coef because of empty area in bitmap with rect in animation
+                (bind width "rectWidth * 2.5641")
+                (bind height "rectHeight * 3.5294")
+            )
+        )
+        (mouseChildren = false)
+        (mouseEnabled = false)
+        (dispatch evInfoCountAnmComplete args="{id:mcName}" on='topTabsInfoCountAnimationComplete')
+    )
+    (exec "playSound(sound)"
+        (event "evCountChanged")
+        (enabled = "enableExp")
+    )
+)
+
+(def css MainMenuTabSelectedFilter()
+    (filters
+        (dropShadow
+            (distance = 0)
+            (angle = 0)
+            (color = 0x17b0d1)
+            (blurX = 10)
+            (blurY = 10)
+            (strength = 2)
+            (quality = 3)
+        )
+    )
+)

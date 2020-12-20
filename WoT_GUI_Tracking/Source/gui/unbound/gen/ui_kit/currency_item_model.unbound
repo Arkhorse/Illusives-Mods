@@ -1,0 +1,10 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro CurrencyItemModel()
+    (scope
+        (var value:str = '--')
+        (var currency:str = '')
+        (var isEnough:bool = true)
+        (var specialTooltip:str = '')
+    )
+)

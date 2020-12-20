@@ -1,0 +1,25 @@
+(def layout LootBoxCategoryTooltipContent() entrance=true
+    (macro LootBoxCategoryTooltipModel)
+    (macro TooltipDefaultConstraints)
+    (tf
+        (class HighTitleTextStyle)
+        (bind text "R.strings.lootboxes.tooltip.category.header[category]()" init=false)
+    )
+
+    (tf
+        (style
+            (width = 285px)
+            (marginTop = 5px)
+        )
+        (bind htmlText "htmlTextStyle(
+                category == 'newYear_usual'
+                ? R.strings.lootboxes.tooltip.category.usual_rewards()
+                : TextFormat(
+                    R.strings.lootboxes.tooltip.category.rewards.description(),
+                    {category:htmlTextStyle(R.strings.lootboxes.tooltip.category.rewards[category](), 'NeutralTextStyle')}
+                ), 
+                'MainTextStyle')"
+            init=false
+        )
+    )
+)

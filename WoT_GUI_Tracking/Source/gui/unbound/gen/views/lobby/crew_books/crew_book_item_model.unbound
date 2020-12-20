@@ -1,0 +1,17 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro CrewBookItemModel()
+    (scope
+        (var bookIcon:str = '')
+        (var compactDesc:number = 0)
+        (var amount:number = 0)
+        (var isSelected:bool = false)
+        (var isDisabled:bool = false)
+        (var title:str = '')
+        (var description:str = '')
+        (var descriptionFmtArgs:array = [])
+        (var overlayDescription:str = '')
+        (var overlayDescriptionFmtArgs:array = [])
+        (var isInShop:bool = false)
+    )
+)

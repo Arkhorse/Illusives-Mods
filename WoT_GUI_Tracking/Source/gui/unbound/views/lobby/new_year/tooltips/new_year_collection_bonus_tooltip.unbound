@@ -1,0 +1,143 @@
+(def layout NewYearCollectionBonusTooltip() entrance=true
+    (macro NewYearCollectionBonusTooltipModel)
+    (style
+        (width = 470px)
+        (paddingLeft = 10px)
+        (paddingRight = 10px)
+        (paddingTop = 10px)
+        (paddingBottom = 12px)
+        (align = "center")
+    )
+    (block
+        (name = 'header')
+        (style
+            (width = 100%)
+        )
+        (tf
+            (class HighTitleTextStyle)
+            (text = "R.strings.ny.collectionBonusTooltip.header()")
+        )
+        (tf
+            (class MainTextStyle)
+            (text = "R.strings.ny.collectionBonusTooltip.description()")
+        )
+    )
+    (block
+        (style
+            (width = 100%)
+            (paddingTop = 20px)
+        )
+        (hblock
+            (style
+                (align = "middle")
+            )
+            (tf
+                (style
+                    (width = 155px)
+                )
+                (class NYMainTextStyle)
+                (text = "R.strings.ny.collectionBonusTooltip.toysCount()")
+            )
+            (hblock
+                (style
+                    (gap = 44px)
+                    (align = "middle")
+                )
+                (image
+                    (bind source "R.images.gui.maps.icons.new_year.infotype[selectedCollection == NEW_YEAR ? NEW_YEAR + '_active' : NEW_YEAR]()")
+                )
+                (image
+                    (bind source "R.images.gui.maps.icons.new_year.infotype[selectedCollection == ORIENTAL ? ORIENTAL + '_active'  : ORIENTAL]()")
+                )
+                (image
+                    (bind source "R.images.gui.maps.icons.new_year.infotype[selectedCollection == FAIRYTALE ? FAIRYTALE + '_active' : FAIRYTALE]()")
+                )
+                (image
+                    (bind source "R.images.gui.maps.icons.new_year.infotype[selectedCollection == XMAS ? XMAS + '_active' : XMAS]()")
+                )
+            )
+        )
+        (group 'collectionsTable'
+            (renderer = 'NewYearCollectionTableRow')
+            (container
+            )
+        )
+    )
+    (image
+        (style
+            (marginTop = -81px)
+            (zindex = "ZIndex.BACKGROUND")
+        )
+        (source = "R.images.gui.maps.icons.new_year.infotype.arrow()")
+    )
+    (element NewYearCreditsBonus 'bonusFormula' 'collections')
+)
+
+(def element NewYearCollectionTableRow() layout=true
+    (macro NewYearCollectionTableValue)
+    (block
+        (style
+            (align = "center")
+            (height = 32px)
+            (width = 450px)
+        )
+        (image
+            (style
+                (width = 100%)
+            )
+            (source = "R.images.gui.maps.icons.new_year.infotype.line()")
+        )
+        (image
+            (bind visible "isEnabled")
+            (style
+                (position = "absolute")
+                (left = 20px)
+                (top = 1px)
+            )
+            (source = "R.images.gui.maps.icons.new_year.infotype.selected_row()")
+        )
+        (hblock
+            (style
+                (paddingTop = 4px)
+                (width = 100%)
+            )
+            (tf
+                (style
+                    (width = 165px)
+                )
+                (bind class "isEnabled ? 'MainOrangeTextStyle' : 'MainTextStyle'")
+                (bind text "interval")
+            )
+            (group 'collectionBonuses'
+                (renderer = 'SingleCollectionBonus')
+                (container
+                    (style
+                        (flow = "Flow.HORIZONTAL")
+                    )
+                )
+            )
+        )
+    )
+)
+
+(def element SingleCollectionBonus()
+    (macro SingleCollectionBonusModel)
+    (hblock
+        (style
+            (width = 80px)
+        )
+        (image
+            (bind visible "isEnabled")
+            (style
+                (marginTop = -4px)
+                (marginLeft = -28px)
+                (marginRight = -4px)
+            )
+            (source = "R.images.gui.maps.icons.new_year.infotype.icon_checkbox_checked()")
+        )
+        (tf
+            (bind class "isEnabled ? 'MainOrangeTextStyle' : 'MainTextStyle'")
+            (bind text "100% * value")
+        )
+    )
+)

@@ -1,0 +1,9 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro MapsBlacklistMapFilterNames()
+    (scope
+        (const MAPS_BLACKLIST_FILTER_NAME_SUMMER:str = 'summer')
+        (const MAPS_BLACKLIST_FILTER_NAME_WINTER:str = 'winter')
+        (const MAPS_BLACKLIST_FILTER_NAME_DESERT:str = 'desert')
+    )
+)

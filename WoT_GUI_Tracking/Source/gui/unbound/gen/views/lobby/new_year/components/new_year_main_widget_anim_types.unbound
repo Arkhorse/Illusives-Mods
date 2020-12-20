@@ -1,0 +1,10 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NewYearMainWidgetAnimTypes()
+    (scope
+        (const ANIM_TYPE_NONE:str = 'none')
+        (const ANIM_TYPE_UP:str = 'up')
+        (const ANIM_TYPE_DOWN:str = 'down')
+        (const ANIM_TYPE_UP_LONG:str = 'upLong')
+    )
+)

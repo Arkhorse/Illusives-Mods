@@ -1,0 +1,19 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro HangarBottomPanelViewModel()
+    (scope
+        (event onModuleBtnClicked)
+        (event onRepairBtnClicked)
+
+        (var vehStatus:str = '')
+        (var isModuleFirstEnter:bool = false)
+        (var isRepairBtnVisible:bool = false)
+        (var isRepairBtnDisabled:bool = false)
+        (var isVehicleInBattle:bool = false)
+
+        # The following submodels are used in this model:
+        # ammunition:ui_kit.list_model
+        # abilities:ui_kit.list_model
+        # repairPrice:ui_kit.list_model
+    )
+)

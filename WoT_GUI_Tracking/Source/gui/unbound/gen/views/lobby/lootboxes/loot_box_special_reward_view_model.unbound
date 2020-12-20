@@ -1,0 +1,21 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro LootBoxSpecialRewardViewModel()
+    (scope
+        (event onContinueBtnClick)
+        (event onGoToRewardBtnClick)
+        (event onCloseBtnClick)
+        (event onVideoStarted)
+        (event onVideoStopped)
+        (event onVideoInterrupted)
+
+        (var videoSource:str = '')
+        (var congratsType:str = '')
+        (var vehicleIsElite:bool = false)
+        (var vehicleType:str = '')
+        (var vehicleLvl:str = '')
+        (var vehicleName:str = '')
+        (var streamBufferLength:number = 1)
+        (var isViewAccessible:bool = true)
+    )
+)

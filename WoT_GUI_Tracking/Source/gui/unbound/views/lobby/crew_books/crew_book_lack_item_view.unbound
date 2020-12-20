@@ -1,0 +1,60 @@
+(def layout CrewBookLackItemView()
+    (macro CrewBookLackItemModel)
+    (style
+        (width = 260px)
+        (height = 320px)
+        (align = "center|top")
+    )
+    (image
+        (name = 'slotIcon')
+        (style
+            (top = 27px)
+            (left = 9px)
+            (position = absolute)
+        )
+        (bind source "icon")
+    )
+    (image
+        (bind visible "hasArrow")
+        (style
+            (top = -12px)
+            (left = 120px)
+            (position = absolute)
+        )
+        (source = "R.images.gui.maps.icons.crewBooks.noBooks.arrow_glow()")
+    )
+    (block
+        (style
+            (width = 240px)
+            (height = 100%)
+            (top = 192px)
+            (position = absolute)
+            (align = "right|top")
+        )
+        (tf
+            (style
+                (width = 100%)
+            )
+            (class HighlightTextStyle)
+            (bind text "title")
+        )
+        (tf
+            (style
+                (width = 100%)
+                (marginTop = 6px)
+            )
+            (bind htmlText "htmlTextStyle(
+                    formatString(description, descriptionFmtArgs, true),
+                    'MainTextStyle',
+                    leading = -1px
+                )"
+                init=false
+                (enabled = "descriptionFmtArgs.length > 0")
+            )
+            (bind htmlText "htmlTextStyle(description,'MainTextStyle', leading = -1px)"
+                init=false
+                (enabled = "descriptionFmtArgs.length == 0")
+            )
+        )
+    )
+)

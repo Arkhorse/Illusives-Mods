@@ -1,0 +1,3963 @@
+.CButton_base_40 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0 0 0 1rem rgba(0,0,0, .6);
+    position: relative;
+    cursor: pointer;
+}
+
+    /* type*/
+
+    .CButton_base__main_42,
+    .CButton_base__primary_7f,
+    .CButton_base__primaryGreen_6f,
+    .CButton_base__primaryRed_ec,
+    .CButton_base__secondary_50 {
+        background-size: 100% 100%;
+    }
+
+    .CButton_base__main_42 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+
+    .CButton_base__primary_7f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+
+    .CButton_base__primaryGreen_6f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+
+    .CButton_base__primaryRed_ec {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+
+    .CButton_base__secondary_50 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+
+    .CButton_base__ghost_ed {
+        border-radius: 3rem;
+        box-shadow: 0 0 0 1rem rgba(0,0,0, .3),
+            0 0 0 1rem rgba(255,255,255, .15) inset;
+        background-image: linear-gradient(0deg, rgba(13, 11, 3, 0) 0%, rgba(13, 11, 3, .04) 27%, rgba(13, 11, 3, 0) 100%);
+    }
+
+    /* size*/
+
+    .CButton_base__extraSmall_27 {
+        min-height: 17rem;
+        padding: 0 16rem;
+    }
+
+    .CButton_base__small_df,
+    .CButton_base__medium_74 {
+        padding: 0 20rem;
+    }
+
+    .CButton_base__small_df {
+        min-height: 20rem;
+    }
+
+    .CButton_base__medium_74 {
+        min-height: 31rem;
+    }
+
+    /*state*/
+
+    .CButton_base__disabled_d9 {
+        cursor: default;
+    }
+/* Element .back and background-image in element .base need for fix bug in GF https://jira.wargaming.net/browse/WOTD-158525
+The bug is that under certain conditions, when using border-image, stripes appear. Strip is a single-pixel gap
+between 'border-image-width' and 'fill'.
+This bug is reproduced in Google Chrome 81.0.4044.113
+*/
+.CButton_back_e5 {
+    border-image-slice: 4 fill;
+    border-image-width: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_base__main_42 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+.CButton_base__primary_7f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+.CButton_base__primaryGreen_6f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+.CButton_base__primaryRed_ec .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+.CButton_base__secondary_50 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+.CButton_texture_fe {
+    background: url('R.images.gui.maps.icons.components.button.standard_texture_file');
+    background-size: 155rem 31rem;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_state_11 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: box-shadow .16s ease-in-out;
+}
+.CButton_base__focus_83 .CButton_state_11 {
+        border-radius: 2rem;
+        box-shadow: inset 0 0 2rem 1rem rgba(255,85,0, .2);
+    }
+.CButton_stateHighlightHover_ff,
+.CButton_stateHighlightActive_35,
+.CButton_stateDisabled_54 {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity .16s ease-in-out;
+}
+.CButton_stateHighlightHover_ff {
+    background-image: linear-gradient(180deg, rgba(252,248,235, .25) 0%, rgba(252,248,235, .1) 50%, rgba(255,255,255, 0) 100%);
+}
+.CButton_base_40:hover .CButton_stateHighlightHover_ff {
+        opacity: 1;
+    }
+.CButton_base_40:active .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__disabled_d9:hover .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__ghost_ed .CButton_stateHighlightHover_ff {
+        box-shadow: 0 15rem 12rem 0 rgba(242, 242, 230, .11) inset;
+        background-color: rgba(8, 6, 0, .18);
+        background-image: none;
+    }
+.CButton_stateHighlightActive_35 {
+    background-image: linear-gradient(180deg, rgba(0,0,0, .3) 0%, rgba(0,0,0, .15) 100%);
+}
+.CButton_base_40:active .CButton_stateHighlightActive_35 {
+        opacity: 1;
+    }
+.CButton_base__disabled_d9:active .CButton_stateHighlightActive_35 {
+        opacity: 0;
+    }
+.CButton_stateDisabled_54 {
+    background-color: rgba(0, 0, 0, .25);
+    background-image: url('R.images.gui.maps.icons.components.button.texture_disable');
+    background-size: 15rem;
+}
+.CButton_base__disabled_d9 .CButton_stateDisabled_54 {
+        opacity: 1;
+    }
+.CButton_content_cc {
+    display: flex;
+    align-items: center;
+    color: #f2f2e6;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 -1rem 1rem #000;
+    letter-spacing: .03em;
+    transform: translateY(-5%);
+}
+.CButton_content_cc[lang=ja],
+    .CButton_content_cc[lang=ko],
+    .CButton_content_cc[lang=zh_tw],
+    .CButton_content_cc[lang=zh_sg],
+    .CButton_content_cc[lang=zh_ch],
+    .CButton_content_cc[lang=th] {
+        font-weight: 400;
+    }
+/* type*/
+.CButton_base__main_42 .CButton_content_cc,
+    .CButton_base__primaryRed_ec .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #600;
+    }
+.CButton_base__secondary_50 .CButton_content_cc {
+        color: rgba(254,254,236, .75);
+    }
+.CButton_base__primaryGreen_6f .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #1c2502;
+    }
+/* size*/
+.CButton_base__extraSmall_27 .CButton_content_cc {
+        font-size: 12rem;
+    }
+.CButton_base__small_df .CButton_content_cc {
+        font-size: 14rem;
+    }
+.CButton_base__medium_74 .CButton_content_cc {
+        font-size: 15rem;
+    }
+/*state*/
+.CButton_base__disabled_d9 .CButton_content_cc {
+        opacity: .6;
+    }
+
+.CommonReward_base_c0 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+    .CommonReward_base__small_cb {
+        width: 48rem;
+        height: 48rem;
+    }
+
+    .CommonReward_base__medium_e4 {
+        width: 80rem;
+        height: 80rem;
+    }
+
+    .CommonReward_base__big_4c {
+        width: 240rem;
+        height: 180rem;
+    }
+
+.CommonReward_bonusIcon_a5 {
+    width: 100%;
+    height: 100%;
+    background: center / contain no-repeat;
+    z-index: 1;
+}
+
+.CommonReward_compensationIcon_d9 {
+    width: 24rem;
+    height: 24rem;
+    background: url('R.images.gui.maps.icons.library.changeTank') center / contain no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.CommonReward_base__big_4c .CommonReward_compensationIcon_d9 {
+        top: 20rem;
+        right: 40rem;
+    }
+
+.CommonReward_info_37 {
+    margin-top: -13rem;
+    color: #e9e2bf;
+    font-size: 14rem;
+    line-height: 18rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.CommonReward_info__credits_4b {
+        color: #ced9d9;
+    }
+
+.CommonReward_info__gold_73 {
+        color: #ffc363;
+    }
+
+.CommonReward_info__crystal_f8 {
+        color: #c9c9b6;
+    }
+
+.CommonReward_info__premiumTank_a6 {
+        color: #fd9;
+    }
+
+.CommonReward_info__multi_64 {
+        margin-right: 2rem;
+        text-align: right;
+    }
+
+.CommonReward_base__small_cb .CommonReward_info__multi_64 {
+            margin-right: 0;
+        }
+
+.CommonReward_base__big_4c .CommonReward_info__multi_64 {
+            margin-right: 40rem;
+        }
+
+.CommonReward_base__small_cb .CommonReward_info_37 {
+        margin: -10rem -10rem 0;
+    }
+
+.ToyReward_base_1d {
+    display: flex;
+    width: 80rem;
+    height: 80rem;
+    position: relative;
+}
+
+.ToyReward_background_e3 {
+    width: 100%;
+    height: 100%;
+    background-image: url('R.images.gui.maps.icons.new_year.slots.c_80x80.slot_bg');
+}
+
+.ToyReward_image_46 {
+    width: 80rem;
+    height: 80rem;
+    background: center / contain no-repeat;
+    position: absolute;
+}
+
+.ToyReward_rank_46 {
+    width: 47rem;
+    height: 47rem;
+    background: center / contain no-repeat;
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
+}
+
+.ToyReward_value_03 {
+    width: 35rem;
+    height: 15rem;
+    border-radius: 2rem;
+    background-color: #c6f9ff;
+    color: #4e4e8d;
+    font-size: 12rem;
+    font-weight: 700;
+    line-height: 14rem;
+    text-align: center;
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.PremiumReward_base_16 {
+    width: 80rem;
+    height: 80rem;
+    padding-top: 12rem;
+}
+
+.PremiumReward_icon_e2 {
+    width: 100%;
+    height: 100%;
+    background: url('R.images.gui.maps.icons.quests.bonuses.big.premium_plus_1') center / contain no-repeat;
+}
+
+.PremiumReward_info_13 {
+    margin-top: -13rem;
+    color: #fd9;
+    font-size: 14rem;
+    line-height: 18rem;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.PopoverDecorator_base_ed {
+    display: flex;
+    position: absolute;
+}
+
+.PopoverDecorator_decorator_d3 {
+    padding: 58rem;
+    border-image-source: url('R.images.gui.maps.icons.popovers.popover_bg');
+    border-image-slice: 90 fill;
+    border-image-width: 90rem;
+    position: relative;
+    z-index: 0;
+}
+
+.PopoverDecorator_arrow_8a {
+    background: no-repeat 0 0 / contain;
+    position: absolute;
+}
+
+.PopoverDecorator_arrow__bottom_c3,
+    .PopoverDecorator_arrow__top_6e {
+        width: 301rem;
+        height: 90rem;
+        margin: 0 58rem;
+        background-image: url('R.images.gui.maps.icons.popovers.popover_arrow_top');
+        left: 50%;
+    }
+
+.PopoverDecorator_arrow__left_7a,
+    .PopoverDecorator_arrow__right_b6 {
+        width: 84rem;
+        height: 181rem;
+        margin: 58rem 0;
+        background-image: url('R.images.gui.maps.icons.popovers.popover_arrow_left');
+        top: 50%;
+    }
+
+.PopoverDecorator_arrow__left_7a {
+        right: 10rem;
+        transform: scaleX(-1) translateY(-90rem);
+    }
+
+.PopoverDecorator_arrow__right_b6 {
+        left: 10rem;
+        transform: translateY(-90rem);
+    }
+
+.PopoverDecorator_arrow__top_6e {
+        bottom: 8rem;
+        transform: scaleY(-1) translateX(-150rem);
+    }
+
+.PopoverDecorator_arrow__bottom_c3 {
+        top: 8rem;
+        transform: translateX(-150rem);
+    }
+
+.PopoverDecorator_closeBtn_32 {
+    width: 18rem;
+    height: 18rem;
+    background: url('R.images.gui.maps.icons.popovers.close_button_slim_up') no-repeat 0 0 / contain;
+    position: absolute;
+    top: 6rem;
+    right: 6rem;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.PopoverDecorator_closeBtn_32:hover {
+        filter: brightness(160%);
+    }
+
+.PopoverDecorator_closeBtn_32:active {
+        background-image: url('R.images.gui.maps.icons.popovers.close_button_slim_press');
+        filter: brightness(100%);
+    }
+
+.PopoverDecorator_content_f0 {
+    position: relative;
+    z-index: 2;
+}
+
+.DiscountReward_base_86 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transform: translateY(0);
+    transition: transform .3s;
+}
+
+    .DiscountReward_base_86:hover {
+        transform: translateY(-10rem);
+    }
+
+    .DiscountReward_base__noAnimation_52,
+    .DiscountReward_base__noAnimation_52:hover {
+        transform: translateY(-10rem);
+    }
+
+    .DiscountReward_base__disabled_8a,
+    .DiscountReward_base__disabled_8a:hover {
+        transform: translateY(0);
+    }
+.DiscountReward_discountReward_5a {
+    background: center / contain no-repeat;
+    position: relative;
+}
+.DiscountReward_base__applied_fd .DiscountReward_discountReward_5a {
+        transform: translateY(8rem);
+    }
+.DiscountReward_base__small_74 .DiscountReward_discountReward_5a {
+        width: 48rem;
+        height: 48rem;
+    }
+.DiscountReward_base__medium_98 .DiscountReward_discountReward_5a {
+        width: 80rem;
+        height: 80rem;
+    }
+.DiscountReward_base__big_02 .DiscountReward_discountReward_5a {
+        width: 240rem;
+        height: 180rem;
+    }
+.DiscountReward_vehicleLevel_0b {
+    color: #fff;
+    font-size: 12rem;
+    line-height: 14rem;
+    text-shadow: 0 1rem 7rem #fff,
+        0 1rem 7rem rgba(255, 255, 255, .7);
+    position: absolute;
+}
+.DiscountReward_base__defaultAnimation_a1 .DiscountReward_vehicleLevel_0b {
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: opacity .3s, transform .3s;
+    }
+.DiscountReward_base__defaultAnimation_a1:hover .DiscountReward_vehicleLevel_0b {
+    opacity: 1;
+    transform: translateY(0);
+    }
+.DiscountReward_base__small_74 .DiscountReward_vehicleLevel_0b {
+        top: 4rem;
+        left: 0;
+    }
+.DiscountReward_base__medium_98 .DiscountReward_vehicleLevel_0b {
+        top: 12rem;
+        left: 8rem;
+    }
+.DiscountReward_base__big_02 .DiscountReward_vehicleLevel_0b {
+        font-size: 20rem;
+        line-height: 20rem;
+        top: 42rem;
+        left: 52rem;
+    }
+.DiscountReward_base__applied_fd .DiscountReward_vehicleLevel_0b {
+        visibility: hidden;
+    }
+.DiscountReward_discountAmount_cc {
+    color: #fd9;
+    font-size: 18rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 0 4rem rgba(255, 127, 0, .25),
+        0 0 7rem #ff2a00,
+        0 0 7rem #e52;
+    position: absolute;
+}
+.DiscountReward_base__defaultAnimation_a1 .DiscountReward_discountAmount_cc {
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: opacity .3s, transform .3s;
+    }
+.DiscountReward_base__defaultAnimation_a1:hover .DiscountReward_discountAmount_cc {
+    opacity: 1;
+    transform: translateY(0);
+    }
+.DiscountReward_base__small_74 .DiscountReward_discountAmount_cc {
+        right: -9rem;
+        bottom: 5rem;
+    }
+.DiscountReward_base__medium_98 .DiscountReward_discountAmount_cc {
+        right: 5rem;
+        bottom: 18rem;
+    }
+.DiscountReward_base__big_02 .DiscountReward_discountAmount_cc {
+        font-size: 24rem;
+        right: 35rem;
+        bottom: 30rem;
+    }
+.DiscountReward_base__applied_fd .DiscountReward_discountAmount_cc {
+        visibility: hidden;
+    }
+.DiscountReward_shine_57 {
+    width: 150rem;
+    height: 150rem;
+    background: url('swf://gui/flash/animations/ny/godRaysSmall.swf') center / contain no-repeat;
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+}
+.DiscountReward_base__small_74 .DiscountReward_shine_57 {
+    top: -51rem;
+    left: -51rem;
+    }
+.DiscountReward_base__medium_98 .DiscountReward_shine_57 {
+    top: -35rem;
+    left: -35rem;
+    }
+.DiscountReward_base__big_02 .DiscountReward_shine_57 {
+        display: none;
+    }
+.DiscountReward_base__disabled_8a .DiscountReward_shine_57,
+    .DiscountReward_base__applied_fd .DiscountReward_shine_57 {
+        visibility: hidden;
+    }
+.DiscountReward_discountApplied_fc {
+    width: 60rem;
+    height: 40rem;
+    background: url('R.images.gui.maps.icons.quests.discount_applied') center / contain no-repeat;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.DiscountReward_base__applied_fd .DiscountReward_discountApplied_fc {
+        visibility: visible;
+    }
+.DiscountReward_buttonContainer_2c {
+    height: 20rem;
+    position: absolute;
+    bottom: -20rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.DiscountReward_base__big_02 .DiscountReward_buttonContainer_2c {
+        transform: translate(-50%, -5rem);
+    }
+.DiscountReward_base__disabled_8a .DiscountReward_buttonContainer_2c,
+    .DiscountReward_base__applied_fd .DiscountReward_buttonContainer_2c {
+        visibility: hidden;
+    }
+.DiscountReward_buttonWrapper_68 {
+    width: 100%;
+    height: 100%;
+}
+.DiscountReward_base__defaultAnimation_a1 .DiscountReward_buttonWrapper_68 {
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: opacity .3s, transform .3s;
+    }
+.DiscountReward_base__defaultAnimation_a1:hover .DiscountReward_buttonWrapper_68 {
+    opacity: 1;
+    transform: translateY(0);
+    }
+.DiscountReward_base__onlyButtonAnimation_29 .DiscountReward_buttonWrapper_68 {
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: opacity .3s, transform .3s;
+    }
+.DiscountReward_base__onlyButtonAnimation_29:hover .DiscountReward_buttonWrapper_68 {
+    opacity: 1;
+    transform: translateY(0);
+    }
+.DiscountReward_button_cd {
+    padding: 0 10rem;
+}
+.DiscountReward_base__big_02 .DiscountReward_button_cd {
+        padding: 0 25rem;
+    }
+.DiscountReward_buttonLabel_d2 {
+    font-size: 12rem;
+    font-weight: 400;
+    line-height: 14rem;
+}
+.DiscountReward_base__big_02 .DiscountReward_buttonLabel_d2 {
+        font-size: 16rem;
+        line-height: 17rem;
+    }
+
+@keyframes RewardItem_fadeIn_ae {
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+}
+.RewardItem_base_e2 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 20rem) scale(1.2);
+    animation-name: RewardItem_fadeIn_ae;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, .55, .45, 1);
+    animation-delay: calc(var(--reward-index)*0.2s);
+}
+.RewardItem_base__withInitialDelay_4d {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 20rem) scale(1.2);
+    animation-name: RewardItem_fadeIn_ae;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, .55, .45, 1);
+    animation-delay: calc(1s + var(--reward-index)*0.2s);
+    }
+
+.RewardRow_base_de {
+    display: flex;
+}
+
+.RewardRow_reward_3b + .RewardRow_reward_3b {
+        margin-left: 30rem;
+    }
+
+.RewardRow_base__extraSmall_ba .RewardRow_reward_3b + .RewardRow_reward_3b {
+        margin-left: 10rem;
+    }
+
+@keyframes FinalRewardScreen_fadeIn_6c {
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+}
+.FinalRewardScreen_base_a8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding-top: 80rem;
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.backgroundFinal') center / 100% no-repeat;
+    position: relative;
+}
+.FinalRewardScreen_base__medium_cd {
+        padding-top: 100rem;
+    }
+.FinalRewardScreen_base__large_1a,
+    .FinalRewardScreen_base__extraLarge_bb {
+        padding-top: 120rem;
+    }
+.FinalRewardScreen_header_7a {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 20rem) scale(1);
+    animation-name: FinalRewardScreen_fadeIn_6c;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, .55, .45, 1);
+    animation-delay: .5s;
+    color: #f4fcff;
+    font-size: 36rem;
+    font-weight: 700;
+    text-align: center;
+    z-index: 1;
+}
+.FinalRewardScreen_base__medium_cd .FinalRewardScreen_header_7a {
+        font-size: 36rem;
+    }
+.FinalRewardScreen_base__large_1a .FinalRewardScreen_header_7a,
+    .FinalRewardScreen_base__extraLarge_bb .FinalRewardScreen_header_7a {
+        font-size: 56rem;
+    }
+.FinalRewardScreen_ribbon_cc {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 20rem) scale(1);
+    animation-name: FinalRewardScreen_fadeIn_6c;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, .55, .45, 1);
+    animation-delay: .8s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 400rem;
+    padding-top: 150rem;
+    background: url('R.images.gui.maps.icons.new_year.challenge_reward_screen.ribbon') center / contain no-repeat;
+    z-index: 2;
+}
+.FinalRewardScreen_base__small_5e .FinalRewardScreen_ribbon_cc {
+        height: 350rem;
+        padding-top: 95rem;
+    }
+.FinalRewardScreen_base__medium_cd .FinalRewardScreen_ribbon_cc {
+        height: 430rem;
+        padding-top: 130rem;
+    }
+.FinalRewardScreen_base__large_1a .FinalRewardScreen_ribbon_cc,
+    .FinalRewardScreen_base__extraLarge_bb .FinalRewardScreen_ribbon_cc {
+        height: 450rem;
+        padding-top: 130rem;
+    }
+.FinalRewardScreen_rewards_2c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.FinalRewardScreen_discountBonusesTitle_a1 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 0) scale(1);
+    animation-name: FinalRewardScreen_fadeIn_6c;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, .55, .45, 1);
+    animation-delay: 1s;
+    margin-bottom: 6rem;
+    color: #f2f2f7;
+    font-size: 24rem;
+    line-height: 30rem;
+}
+.FinalRewardScreen_bonusesTitle_a9 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 0) scale(1);
+    animation-name: FinalRewardScreen_fadeIn_6c;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, .55, .45, 1);
+    animation-delay: 0s;
+    margin: 30rem 0 14rem;
+    color: #f2f2f7;
+    font-size: 16rem;
+}
+.FinalRewardScreen_rewardRowWrapper_a5 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 20rem) scale(1);
+    animation-name: FinalRewardScreen_fadeIn_6c;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, .55, .45, 1);
+    animation-delay: 0s;
+}
+.FinalRewardScreen_buttonWrapper_c8 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 0) scale(1);
+    animation-name: FinalRewardScreen_fadeIn_6c;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, .55, .45, 1);
+    animation-delay: calc(1s + (var(--discount-bonuses-count) + 1)*0.2s);
+    margin-top: 50rem;
+}
+.FinalRewardScreen_buttonLabel_a5 {
+    color: #f1f0e0;
+    font-size: 14rem;
+    font-weight: 400;
+    line-height: 16rem;
+}
+
+.FormatText_base_d0 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Heading_base_75 {
+    display: flex;
+    width: 520rem;
+    height: 140rem;
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.logo') left bottom / contain no-repeat;
+    position: relative;
+}
+
+    .Heading_base__medium_e6 {
+        width: 420rem;
+        height: 113rem;
+    }
+
+    .Heading_base__small_f0 {
+        width: 360rem;
+        height: 94rem;
+    }
+.Heading_decorationWrapper_9a {
+    flex: 3 3 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.Heading_decoration_c6 {
+    width: 520rem;
+    height: 100%;
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.line') left bottom / contain no-repeat;
+}
+.Heading_base__medium_e6 .Heading_decoration_c6 {
+        width: 420rem;
+    }
+.Heading_base__small_f0 .Heading_decoration_c6 {
+        width: 360rem;
+    }
+.Heading_progress_c1 {
+    width: auto;
+    padding-left: 8rem;
+    padding-top: 27rem;
+    padding-right: 52rem;
+    color: #71b5ee;
+    font-size: 14rem;
+    line-height: 18rem;
+}
+.Heading_progress__medium_5d {
+        padding-top: 19rem;
+        padding-right: 42rem;
+    }
+.Heading_progress__small_cf {
+        padding-left: 6rem;
+        padding-top: 15rem;
+        padding-right: 42rem;
+        font-size: 12rem;
+        line-height: 14rem;
+    }
+.Heading_base__RU_41 .Heading_progress__medium_5d {
+            padding-top: 15rem;
+            padding-right: 28rem;
+        }
+.Heading_base__RU_41 .Heading_progress__small_cf {
+            padding-top: 12rem;
+            padding-right: 28rem;
+        }
+.Heading_base__CN_04 .Heading_progress_c1 {
+        padding-top: 24rem;
+        padding-right: 65rem;
+    }
+.Heading_base__CN_04 .Heading_progress__medium_5d {
+            padding-top: 16rem;
+            padding-right: 55rem;
+        }
+.Heading_base__CN_04 .Heading_progress__small_cf {
+            padding-top: 12rem;
+            padding-right: 50rem;
+        }
+.Heading_text_9d {
+    display: flex;
+    align-items: center;
+}
+.Heading_questsQuantity_f4 {
+    color: #fefeec;
+}
+
+.Timer_base_2c {
+    display: flex;
+    align-items: center;
+    width: auto;
+    position: relative;
+}
+
+.Timer_card_3d {
+    color: #fff;
+    font-size: 24rem;
+    line-height: 28rem;
+}
+
+.Timer_card__small_78 {
+        font-size: 20rem;
+        line-height: 24rem;
+    }
+
+.Timer_card__medium_ad {
+        font-size: 22rem;
+        line-height: 26rem;
+    }
+
+.Timer_main_b6 {
+    color: #ffe78f;
+    font-size: 36rem;
+    font-weight: 700;
+    line-height: 42rem;
+}
+
+.Timer_main__small_86 {
+        font-size: 24rem;
+        line-height: 28rem;
+    }
+
+.Timer_icon_39 {
+    transform: translateY(3rem);
+}
+
+.Timer_card_3d .Timer_icon_39 {
+        width: 38rem;
+        height: 38rem;
+        margin-top: 2rem;
+        margin-right: -5rem;
+        background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.clock') center / contain no-repeat;
+    }
+
+.Timer_card__small_78 .Timer_icon_39 {
+        width: 32rem;
+        height: 32rem;
+    }
+
+.Timer_main_b6 .Timer_icon_39 {
+        width: 56rem;
+        height: 56rem;
+        background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.clock_big') center / contain no-repeat;
+    }
+
+.Timer_main__small_86 .Timer_icon_39 {
+        width: 32rem;
+        height: 32rem;
+    }
+
+.Timer_wrapper_d2 {
+    display: flex;
+    position: relative;
+}
+
+.Timer_highlight_ff {
+    display: flex;
+    width: 334rem;
+    height: 166rem;
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.highlight') center / contain no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.Timer_card__small_78 .Timer_highlight_ff {
+        width: 190rem;
+    }
+
+.Timer_item_1a {
+    display: flex;
+    margin-top: 3rem;
+    z-index: 2;
+}
+
+.Timer_item_1a + .Timer_item_1a {
+        margin-left: 4rem;
+    }
+
+.Timer_main_b6 .Timer_item_1a {
+        margin-left: 6rem;
+    }
+
+.Timer_label_f5 {
+    margin-left: 2rem;
+}
+
+.Timer_main_b6 .Timer_label_f5 {
+        margin-left: 4rem;
+    }
+
+.BigTimer_base_17 {
+    display: flex;
+    margin-top: 20rem;
+}
+
+    .BigTimer_base__small_12 {
+        margin-top: 10rem;
+    }
+.BigTimer_wrapper_ba {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 640rem;
+    height: 170rem;
+    position: relative;
+}
+.BigTimer_wrapper_ba .BigTimer_base__small_12 {
+        height: 140rem;
+    }
+.BigTimer_container_5d {
+    width: 100%;
+    height: 100%;
+    padding: 30rem 0 40rem;
+}
+.BigTimer_decorator_44 {
+    width: 60vw;
+    height: 100%;
+    background: linear-gradient(
+        270deg,
+        rgba(94, 189, 243, 0) 0%,
+        rgba(94, 198, 243, .2) 21%,
+        rgba(176, 241, 255, .5) 64%,
+        rgba(94, 189, 243, .2) 82%,
+        rgba(94, 171, 243, 0) 100%
+    ) left center / cover;
+    opacity: .3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -10vw;
+}
+.BigTimer_timer_05 {
+    margin-bottom: 10rem;
+}
+.BigTimer_description_1c {
+    max-width: 550rem;
+    margin-left: 15rem;
+    color: rgba(199, 203, 195, .7);
+    font-size: 16rem;
+    line-height: 20rem;
+}
+.BigTimer_base__small_12 .BigTimer_description_1c {
+        max-width: 450rem;
+        margin-left: 10rem;
+        font-size: 14rem;
+        line-height: 18rem;
+    }
+
+
+.ProgressBarBlink_base_24 {
+    width: 60rem;
+    height: 100rem;
+    background-image: var(--progress-glow);
+    background-size: contain;
+    mix-blend-mode: lighten;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    pointer-events: none;
+}
+
+    .ProgressBarBlink_base__small_0f {
+        width: 44rem;
+        height: 43rem;
+        background-image: var(--progress-glow-small);
+    }
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressLineImpose_base_80 {
+    max-width: 8001px;
+    height: 100%;
+    background-color: var(--progress-line-base);
+    position: relative;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-property: width;
+}
+.ProgressLineImpose_base__disabled_cc {
+        background-color: var(--progress-line-disabled);
+    }
+.ProgressLineImpose_base__finished_d4 {
+        background-color: var(--progress-line-finished);
+    }
+.ProgressLineImpose_base__withoutBounce_56 {
+        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+    }
+.ProgressLineImpose_pattern_1c {
+    max-width: 8001px;
+    background-image: linear-gradient(90deg, var(--progress-pattern-base) 60%, transparent 40%);
+    background-repeat: repeat;
+    background-position: 0 50%;
+    background-size: 3rem 10rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+}
+.ProgressLineImpose_base__small_55 .ProgressLineImpose_pattern_1c {
+        top: 0;
+        bottom: 0;
+    }
+.ProgressLineImpose_base__disabled_cc .ProgressLineImpose_pattern_1c {
+    background-image: linear-gradient(90deg, var(--progress-pattern-disabled) 60%, transparent 40%);
+    }
+.ProgressLineImpose_base__finished_d4 .ProgressLineImpose_pattern_1c {
+    background-image: linear-gradient(90deg, var(--progress-pattern-finished) 60%, transparent 40%);
+    }
+.ProgressLineImpose_gradient_35 {
+    max-width: 8001px;
+    background-image: linear-gradient(90deg, rgba(0,0,0, .5), rgba(255,255,255, .75));
+    mix-blend-mode: overlay;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    bottom: 1rem;
+    left: 0;
+}
+.ProgressLineImpose_base__small_55 .ProgressLineImpose_gradient_35 {
+        top: 0;
+        bottom: 0;
+    }
+.ProgressLineImpose_base__disabled_cc .ProgressLineImpose_gradient_35 {
+        display: none;
+    }
+.ProgressLineImpose_base__finished_d4 .ProgressLineImpose_gradient_35 {
+        background-image: linear-gradient(90deg, rgba(0,0,0, .5), rgba(255,255,255, .75), rgba(0,0,0, .5));
+    }
+.ProgressLineImpose_glow_a5 {
+    width: 60rem;
+    max-width: 8001px;
+    height: 100rem;
+    background-image: var(--progress-glow);
+    background-size: contain;
+    mix-blend-mode: lighten;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.ProgressLineImpose_glow__left_d8 {
+        left: 1rem;
+    }
+.ProgressLineImpose_base__disabled_cc .ProgressLineImpose_glow_a5,
+    .ProgressLineImpose_base__finished_d4 .ProgressLineImpose_glow_a5 {
+        display: none;
+    }
+.ProgressLineImpose_base__small_55 .ProgressLineImpose_glow_a5 {
+        width: 44rem;
+        height: 43rem;
+        background-image: var(--progress-glow-small);
+    }
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressBarDeltaSimple_base_6c {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.ProgressBarDeltaSimple_delta_99 {
+    width: 0;
+    max-width: 8001px;
+    height: 100%;
+    box-shadow: var(--progress-delta-shadow);
+    background-color: var(--progress-delta-color);
+    position: absolute;
+    bottom: 0;
+    transform-origin: right center;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39), cubic-bezier(.21, .61, .35, 1);
+    transition-property: width, transform;
+}
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressBarDeltaGrow_base_7e {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-property: width;
+}
+.ProgressBarDeltaGrow_base__withoutBounce_b5 {
+        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+    }
+.ProgressBarDeltaGrow_glow_68 {
+    width: 0;
+    max-width: 8001px;
+    height: 100%;
+    box-shadow: var(--progress-delta-shadow);
+    background-color: var(--progress-delta-color);
+    position: absolute;
+    bottom: 0;
+    transform-origin: right center;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-property: width;
+}
+.ProgressBarDeltaGrow_base__withoutBounce_b5 .ProgressBarDeltaGrow_glow_68 {
+        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+    }
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressBar_base_45 {
+    width: 100%;
+    height: 12rem;
+    position: relative;
+}
+.ProgressBar_base__small_df {
+        height: 2rem;
+    }
+.ProgressBar_background_51 {
+    background-image: linear-gradient(90deg, var(--progress-base) 60%, transparent 40%);
+    width: 100%;
+    max-width: 8001px;
+    height: 100%;
+    background-repeat: repeat;
+    background-position: 0 50%;
+    background-size: 3rem 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.ProgressBar_background__small_46 {
+        height: 2rem;
+    }
+.ProgressBar_lineWrapper_6a {
+    display: flex;
+    flex: 1;
+}
+
+.QuestRewards_base_b2 {
+    position: relative;
+}
+.QuestRewards_rewards_75 {
+    display: flex;
+    align-items: center;
+    transform: translateY(0);
+}
+.QuestRewards_base__small_c8 .QuestRewards_rewards_75 {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10rem);
+        transition: opacity .2s,
+            transform .2s,
+            visibility .2s;
+    }
+.QuestRewards_base__hover_19 .QuestRewards_rewards_75 {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        transition: opacity .2s .15s,
+            transform .2s .15s;
+    }
+.QuestRewards_discountReward_15 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 96rem;
+    height: 80rem;
+    pointer-events: auto;
+}
+.QuestRewards_commonReward_55 {
+    transform: translateX(-30%);
+    pointer-events: auto;
+}
+.QuestRewards_giftBox_b7 {
+    display: none;
+    width: 48rem;
+    height: 48rem;
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.gift_box') center / 29rem 32rem no-repeat;
+    opacity: .3;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: auto;
+}
+.QuestRewards_base__completed_cb .QuestRewards_giftBox_b7 {
+        opacity: 1;
+    }
+.QuestRewards_base__small_c8 .QuestRewards_giftBox_b7 {
+        display: flex;
+        visibility: visible;
+        transition: opacity 0s .15s,
+            visibility 0s .15s;
+    }
+.QuestRewards_base__hover_19 .QuestRewards_giftBox_b7 {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .15s,
+            visibility .15s;
+    }
+.QuestRewards_giftBubble_c7 {
+    display: none;
+    width: 48rem;
+    height: 48rem;
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.gift_bubble') center / contain no-repeat;
+    position: absolute;
+    bottom: 10rem;
+    left: 10rem;
+}
+.QuestRewards_base__completed_cb .QuestRewards_giftBubble_c7 {
+        display: flex;
+    }
+.QuestRewards_base__applied_2c .QuestRewards_giftBubble_c7 {
+        display: none;
+    }
+
+.QuestLevel_base_8d {
+    position: relative;
+}
+.QuestLevel_pin_09 {
+    width: 1rem;
+    height: 28rem;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0),
+        rgb(255, 255, 255) 8rem,
+        rgba(0, 0, 0, 0) 8rem,
+        rgba(0, 0, 0, 0) 20rem,
+        rgb(255, 255, 255) 20rem,
+        rgba(255, 255, 255, 0)
+    );
+    opacity: .4;
+}
+.QuestLevel_reward_1a {
+    position: absolute;
+    bottom: 28rem;
+    left: 0;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+.QuestLevel_level_6c {
+    min-width: 12rem;
+    color: #8c8c7e;
+    font-size: 12rem;
+    line-height: 14rem;
+    text-align: center;
+    position: absolute;
+    top: 28rem;
+    left: 0;
+    transform: translateX(-50%);
+}
+.QuestLevel_level__completed_02 {
+        color: #feab34;
+    }
+
+.Caption_base_8a {
+    width: 100%;
+    color: #8c8c7e;
+    font-size: 16rem;
+    line-height: 20rem;
+    text-align: center;
+}
+
+    .Caption_base__small_f9 {
+        font-size: 14rem;
+        line-height: 18rem;
+    }
+
+.Caption_completedTasks_fc {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.Caption_completedRatio_60 {
+    color: #e9e2bf;
+}
+
+.Caption_completed__highlight_c9 {
+        color: #feab34;
+    }
+
+.Caption_infoBtn_73 {
+    width: 30rem;
+    height: 20rem;
+    margin-left: 5rem;
+    border: 1rem solid rgba(255, 255, 255, .1);
+    border-radius: 2rem;
+    box-shadow: inset 0 1px 20px rgba(255, 255, 255, .1);
+    background-color: rgba(0, 0, 0, .15);
+    position: relative;
+    transform: translateY(1rem);
+    cursor: pointer;
+}
+
+.Caption_infoBtnIcon_e3 {
+    width: 38rem;
+    height: 38rem;
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.info_blue') center / contain no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Caption_info_34 {
+    display: flex;
+    align-items: center;
+    opacity: .7;
+}
+
+/* colors*/
+
+@keyframes QuestProgressBar_slideInFadeIn_32 {
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes QuestProgressBar_fadeOut_cf {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes QuestProgressBar_fadeIn_77 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes QuestProgressBar_fadeInWithScale_d9 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes QuestProgressBar_slideUp_3e {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes QuestProgressBar_scale_41 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.QuestProgressBar_base_76 {
+    width: 100%;
+}
+
+.QuestProgressBar_base__animate_89 {
+    opacity: 0;
+    transform: translateY(30rem);
+    animation-name: QuestProgressBar_slideInFadeIn_32;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: .3s;
+    animation-iteration-count: 1;
+    }
+
+.QuestProgressBar_progressBar_00 {
+    width: 100%;
+    margin-bottom: 19rem;
+    padding: 8rem 0;
+    position: relative;
+}
+
+.QuestProgressBar_pin_89 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.QuestProgressBar_caption_79 {
+    margin-top: 2rem;
+}
+
+.QuestProgressBar_base__medium_d9 .QuestProgressBar_caption_79 {
+        margin-top: -3rem;
+    }
+
+.ArrowButton_base_ae {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 5rem;
+    transition: right .2s ease-out;
+    cursor: pointer;
+}
+
+.ArrowButton_button_77 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.ArrowButton_button__close_29 {
+        opacity: 0;
+        transition: opacity .2s ease-out;
+    }
+
+.ArrowButton_base__active_c3 .ArrowButton_button__close_29 {
+            opacity: 1;
+        }
+
+.ArrowButton_button__open_cf {
+        opacity: 1;
+        transition: opacity .2s ease-in;
+    }
+
+.ArrowButton_base__active_c3 .ArrowButton_button__open_cf {
+            opacity: 0;
+        }
+
+.ArrowButton_text_a9 {
+    flex-wrap: wrap;
+    height: auto;
+    color: #cff;
+    font-size: 12rem;
+    line-height: 16rem;
+    text-align: right;
+    text-shadow: 0 0 14px #00a2ff;
+    position: relative;
+    z-index: 2;
+}
+
+.ArrowButton_base__small_66 .ArrowButton_text_a9 {
+        font-size: 10rem;
+        line-height: 13rem;
+    }
+
+.ArrowButton_button__open_cf .ArrowButton_text_a9 {
+        margin-right: 5rem;
+    }
+
+.ArrowButton_button__close_29 .ArrowButton_text_a9 {
+        margin-left: 5rem;
+    }
+
+.ArrowButton_icon_81 {
+    width: 200%;
+    height: 200%;
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.arrow') center / cover no-repeat;
+    opacity: .6;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    z-index: 1;
+    transform: rotate(0) translateX(0);
+    transition: opacity .3s ease-out;
+    pointer-events: none;
+}
+
+.ArrowButton_base__active_c3 .ArrowButton_icon_81 {
+        transform: rotate(180deg) translateX(-20rem);
+    }
+
+.ArrowButton_base_ae:hover .ArrowButton_icon_81 {
+        opacity: 1;
+    }
+
+.ScrollArea_base_47 {
+    width: 100%;
+    min-width: 1rem;
+    min-height: 1rem;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+    .ScrollArea_base__scrollIndent_1d.ps--active-y {
+        padding-right: 13rem;
+    }
+
+    .ScrollArea_base__scrollIndent_1d.ps--active-х {
+        padding-bottom: 13rem;
+    }
+
+    .ScrollArea_base__verticalScrollbarMargin_50 .ps__rail-y {
+                margin: 20rem 0;
+                right: 5rem;
+            }
+
+    .ScrollArea_base__multiple_44 .ps__rail-y {
+                margin-bottom: 30rem;
+            }
+
+    .ScrollArea_base__hidden_ec {
+        visibility: hidden;
+    }
+.ps--scrolling-dragging {
+        cursor: move;
+    }
+.ps__rail-x, .ps__thumb-x {
+        height: 13rem;
+        position: absolute;
+    }
+.ps__rail-y, .ps__thumb-y {
+        width: 13rem;
+        position: absolute;
+    }
+.ps__thumb-x, .ps__button-start-x, .ps__button-end-x, .ps__thumb-y, .ps__button-start-y, .ps__button-end-y {
+        border: 1rem solid #7e7b68;
+        box-shadow: inset 0 0 1rem rgba(255,255,190, .3);
+        opacity: .7;
+    }
+.ps__thumb-x:hover, .ps__button-start-x:hover, .ps__button-end-x:hover, .ps__thumb-y:hover, .ps__button-start-y:hover, .ps__button-end-y:hover {
+            opacity: 1;
+        }
+.ps__thumb-x, .ps__button-start-x, .ps__button-end-x {
+        bottom: -6rem;
+    }
+.ps__thumb-y, .ps__button-start-y, .ps__button-end-y {
+        right: -6rem;
+    }
+.ps__rail-x {
+        display: none;
+        margin: 0 15rem;
+        border-top: 6rem solid transparent;
+        border-bottom: 6rem solid transparent;
+        bottom: 0;
+        cursor: pointer;
+    }
+.ps__rail-y {
+        display: none;
+        margin: 15rem 0;
+        border-left: 6rem solid transparent;
+        border-right: 6rem solid transparent;
+        right: 0;
+        cursor: pointer;
+    }
+.ps__track_x, .ps__track_y {
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.background');
+        background-size: 1rem;
+        position: relative;
+    }
+.ps__track_x:hover, .ps__track_y:hover {
+            opacity: .7;
+        }
+.ps__track_x {
+        width: 100%;
+        height: 1rem;
+        background-repeat: repeat-x;
+        background-position: 50% 0;
+    }
+.ps__track_y {
+        width: 1rem;
+        height: 100%;
+        background-repeat: repeat-y;
+        background-position: 0 50%;
+    }
+.ps--active-x > .ps__rail-x, .ps--active-y > .ps__rail-y {
+        display: block;
+    }
+.ps__thumb-x, .ps__thumb-y {
+        background: #26241b 50% 50% no-repeat;
+        transition: opacity linear .13s;
+    }
+.ps__thumb-x:active, .ps__thumb-y:active {
+            opacity: .7;
+        }
+.ps__thumb-x {
+        min-width: 10rem;
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.thumb_horizontal');
+        background-size: 8rem 7rem;
+    }
+.ps__thumb-y {
+        min-height: 10rem;
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.thumb');
+        background-size: 7rem 8rem;
+    }
+.ps__button-start-x, .ps__button-end-x, .ps__button-start-y, .ps__button-end-y {
+        width: 13rem;
+        height: 13rem;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 7rem 5rem;
+        position: absolute;
+    }
+.ps__button-start-x.disabled, .ps__button-end-x.disabled, .ps__button-start-y.disabled, .ps__button-end-y.disabled {
+            opacity: .3;
+            cursor: default;
+            pointer-events: none;
+        }
+.ps__button-start-x, .ps__button-start-y {
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.arrow_top');
+    }
+.ps__button-end-x, .ps__button-end-y {
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.arrow_down');
+    }
+.ps__button-start-x, .ps__button-end-x {
+        transform: rotate(-90deg);
+    }
+.ps__button-start-x {
+        left: -14rem;
+    }
+.ps__button-end-x {
+        right: -14rem;
+    }
+.ps__button-start-y {
+        top: -14rem;
+    }
+.ps__button-end-y {
+        bottom: -14rem;
+    }
+
+.TimerCard_base_31 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.TimerCard_container_b9 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40rem;
+    border: 1rem solid rgba(164,245,255, .15);
+    border-radius: 2rem;
+    background-color: rgba(14,24,39, .6);
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+}
+
+.TimerCard_base__small_62 .TimerCard_container_b9 {
+        padding: 24rem;
+    }
+
+.TimerCard_base__medium_e3 .TimerCard_container_b9 {
+        padding: 32rem;
+    }
+
+.TimerCard_base__masked_6c .TimerCard_container_b9 {
+        opacity: .4;
+    }
+
+.TimerCard_mask_18 {
+    background: linear-gradient(
+        to left,
+        rgb(11, 17, 34) 0%,
+        rgb(11, 17, 34) 35%,
+        rgba(23, 30, 50, .7) 70%,
+        rgba(23, 30, 50, 0) 100%
+    ) center / cover;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.TimerCard_base__masked_6c .TimerCard_mask_18 {
+        opacity: 1;
+        transition: opacity .1s ease-out;
+    }
+
+.TimerCard_description_50 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+    color: #e9e2bf;
+    font-size: 16rem;
+    line-height: 20rem;
+    text-align: center;
+}
+
+.TimerCard_base__small_62 .TimerCard_description_50 {
+        font-size: 12rem;
+        line-height: 14rem;
+    }
+
+.TimerCard_base__medium_e3 .TimerCard_description_50 {
+        font-size: 14rem;
+        line-height: 18rem;
+    }
+
+.TimerCard_timer_5c {
+    margin-left: -20rem;
+}
+
+.TimerCard_base__small_62 .TimerCard_timer_5c {
+        margin-left: 0;
+    }
+
+@keyframes QuestCardWindFrames_rotateInY_16 {
+    0% {
+        transform: rotateX(0) rotateY(0);
+    }
+
+    53% {
+        transform: rotateX(1deg) rotateY(-400deg);
+    }
+
+    74% {
+        transform: rotateX(0) rotateY(-340deg);
+    }
+
+    89% {
+        transform: rotateX(0) rotateY(-370deg);
+    }
+
+    100% {
+        transform: rotateX(0) rotateY(-360deg);
+    }
+}
+@keyframes QuestCardWindFrames_fadeInFadeOutSwf_ce {
+    0% {
+        opacity: 0;
+    }
+
+    22% {
+        opacity: 1;
+    }
+
+    44% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes QuestCardWindFrames_fadeInFadeOutShine_8f {
+    0% {
+        opacity: 0;
+    }
+
+    4% {
+        opacity: 1;
+    }
+
+    11% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes QuestCardWindFrames_fadeInFadeZoomOut_d6 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) scale(3);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
+@keyframes QuestCardWindFrames_colorBlinkInOut_95 {
+    0% {
+        background-color: rgba(155,255,0, .1);
+        opacity: 1;
+    }
+
+    100% {
+        background-color: rgba(155,255,0, 0);
+    }
+}
+.QuestCardWindFrames_base_dc {
+    width: 100%;
+    height: 100%;
+    background: center / cover no-repeat;
+    opacity: 0;
+    mix-blend-mode: additive;
+    animation: QuestCardWindFrames_fadeInFadeOutSwf_ce .9s ease-in forwards;
+}
+.QuestCardWindFrames_shine_c1 {
+    background-color: rgba(255,90,0, .2);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    animation: QuestCardWindFrames_fadeInFadeOutShine_8f 5.6s .4s cubic-bezier(.85, 0, .15, 1) forwards;
+}
+
+.Reward_base_ea {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    height: 80rem;
+    position: relative;
+}
+
+    .Reward_base_ea.Reward_small_e3 {
+        width: 48rem;
+        height: 48rem;
+    }
+
+    .Reward_base_ea .Reward_image_89 {
+        position: relative;
+    }
+
+    .Reward_base_ea .Reward_image_89 .Reward_icon_df {
+            width: 80rem;
+            height: 80rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            z-index: 1;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_icon_df.Reward_small_e3 {
+                width: 48rem;
+                height: 48rem;
+            }
+
+    .Reward_base_ea .Reward_image_89 .Reward_overlay_68 {
+            width: 128rem;
+            height: 128rem;
+            background: no-repeat center / 100%;
+            position: absolute;
+            top: -32rem;
+            left: -32rem;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_overlay_68.Reward_small_e3 {
+                width: 96rem;
+                height: 96rem;
+                background-size: 100%;
+                overflow: visible;
+                top: -24rem;
+                left: -24rem;
+            }
+
+    .Reward_base_ea .Reward_image_89 .Reward_highlight_36 {
+            width: 80rem;
+            height: 80rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 80rem 80rem;
+            position: absolute;
+            z-index: 0;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_highlight_36.Reward_small_e3 {
+                width: 48rem;
+                height: 48rem;
+                background-size: 50rem 50rem;
+            }
+
+    .Reward_base_ea .Reward_info_72 {
+        margin-top: -13rem;
+        color: #e9e2bf;
+        font-size: 14rem;
+        line-height: 18rem;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .Reward_base_ea .Reward_info_72.Reward_multi_64 {
+            margin-right: 2rem;
+            text-align: right;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_multi_64.Reward_small_e3 {
+                margin-right: 0;
+            }
+
+    .Reward_base_ea .Reward_info_72.Reward_small_e3 {
+            margin: -10rem -10rem 0;
+            font-size: 14rem;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_credits_3f {
+            color: #ced9d9;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_gold_e3 {
+            color: #ffc363;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_crystal_69 {
+            color: #c9c9b6;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_premiumTank_29 {
+            color: #fd9;
+        }
+
+.SimplificationButton_base_f3 {
+    font-size: 14rem;
+    line-height: 18rem;
+}
+
+    .SimplificationButton_base__small_a4 {
+        font-size: 12rem;
+    }
+
+    .SimplificationButton_base__medium_e6 {
+        font-size: 14rem;
+    }
+
+.SimplificationButton_button_05 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SimplificationButton_text_4c {
+    color: #e7c184;
+    text-shadow: 0 0 15px #f10000;
+}
+
+.SimplificationButton_note_73 {
+    color: #8c8c7e;
+}
+
+/* colors*/
+
+.Progress_base_1a {
+    margin-bottom: 8rem;
+}
+
+.Progress_progress_4c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 14rem;
+    font-size: 16rem;
+    line-height: 20rem;
+}
+
+.Progress_base__small_13 .Progress_progress_4c {
+        margin-bottom: 8rem;
+        font-size: 14rem;
+        line-height: 18rem;
+    }
+
+.Progress_current_fc {
+    color: #feab34;
+}
+
+.Progress_final_80,
+.Progress_divider_a9 {
+    color: #8c8c7e;
+}
+
+.Progress_divider_a9 {
+    margin: 0 4rem;
+}
+
+@keyframes QuestInfo_rotateInY_b0 {
+    0% {
+        transform: rotateX(0) rotateY(0);
+    }
+
+    53% {
+        transform: rotateX(1deg) rotateY(-400deg);
+    }
+
+    74% {
+        transform: rotateX(0) rotateY(-340deg);
+    }
+
+    89% {
+        transform: rotateX(0) rotateY(-370deg);
+    }
+
+    100% {
+        transform: rotateX(0) rotateY(-360deg);
+    }
+}
+@keyframes QuestInfo_fadeInFadeOutSwf_94 {
+    0% {
+        opacity: 0;
+    }
+
+    22% {
+        opacity: 1;
+    }
+
+    44% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes QuestInfo_fadeInFadeOutShine_45 {
+    0% {
+        opacity: 0;
+    }
+
+    4% {
+        opacity: 1;
+    }
+
+    11% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes QuestInfo_fadeInFadeZoomOut_f0 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) scale(3);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
+@keyframes QuestInfo_colorBlinkInOut_68 {
+    0% {
+        background-color: rgba(155,255,0, .1);
+        opacity: 1;
+    }
+
+    100% {
+        background-color: rgba(155,255,0, 0);
+    }
+}
+.QuestInfo_base_d2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.QuestInfo_base__clickable_85 {
+        cursor: pointer;
+    }
+.QuestInfo_wrapper_fc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.QuestInfo_top_26,
+.QuestInfo_bottom_74 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+.QuestInfo_top_26 {
+    margin-bottom: 12rem;
+}
+.QuestInfo_iconWrapper_39 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    width: 90rem;
+    height: 90rem;
+    opacity: 1;
+    position: relative;
+    pointer-events: none;
+}
+.QuestInfo_base__small_3d .QuestInfo_iconWrapper_39 {
+        width: 48rem;
+        height: 48rem;
+    }
+.QuestInfo_base__medium_e9 .QuestInfo_iconWrapper_39 {
+        width: 60rem;
+        height: 60rem;
+    }
+.QuestInfo_base__hovered_03 .QuestInfo_iconWrapper_39 {
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    }
+.QuestInfo_icon_38 {
+    width: 128rem;
+    height: 128rem;
+    background: center / contain no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.QuestInfo_base__small_3d .QuestInfo_icon_38 {
+        width: 90rem;
+        height: 90rem;
+    }
+.QuestInfo_base__medium_e9 .QuestInfo_icon_38 {
+        width: 120rem;
+        height: 120rem;
+    }
+.QuestInfo_description_c8 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #f2f2f7;
+    font-size: 16rem;
+    line-height: 20rem;
+    mix-blend-mode: additive;
+}
+.QuestInfo_base__small_3d .QuestInfo_description_c8 {
+        font-size: 12rem;
+        line-height: 14rem;
+    }
+.QuestInfo_base__medium_e9 .QuestInfo_description_c8 {
+        font-size: 14rem;
+        line-height: 18rem;
+    }
+.QuestInfo_base__hovered_03 .QuestInfo_description_c8 {
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    }
+.QuestInfo_goalValue_e2 {
+    mix-blend-mode: additive;
+    position: relative;
+}
+.QuestInfo_shine_36 {
+    width: 1000%;
+    height: 1000%;
+    background: center / contain no-repeat;
+    opacity: 0;
+    mix-blend-mode: additive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    transition: opacity 1s ease-out;
+}
+.QuestInfo_shine__visible_14 {
+        opacity: .7;
+        transition: opacity .3s ease-out;
+    }
+.QuestInfo_progress_f0 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    width: 100%;
+}
+.QuestInfo_base__hovered_03 .QuestInfo_progress_f0 {
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    }
+.QuestInfo_rewardWrapper_86 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    display: flex;
+    pointer-events: none;
+}
+.QuestInfo_base__hovered_03 .QuestInfo_rewardWrapper_86 {
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    }
+.QuestInfo_reward_55 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 34rem;
+}
+.QuestInfo_base__small_3d .QuestInfo_reward_55 {
+        margin-bottom: 29rem;
+    }
+.QuestInfo_base__medium_e9 .QuestInfo_reward_55 {
+        margin-bottom: 24rem;
+    }
+.QuestInfo_reward_55 + .QuestInfo_reward_55 {
+        margin-left: 5rem;
+    }
+.QuestInfo_rewardLabel_5a {
+    display: flex;
+    align-items: center;
+    margin-top: -10rem;
+    color: #8c8c7e;
+    font-size: 14rem;
+    line-height: 18rem;
+}
+.QuestInfo_base__small_3d .QuestInfo_rewardLabel_5a {
+        margin-top: -6rem;
+        font-size: 12rem;
+        line-height: 14rem;
+    }
+.QuestInfo_base__medium_e9 .QuestInfo_rewardLabel_5a {
+        margin-top: -6rem;
+        font-size: 14rem;
+        line-height: 18rem;
+    }
+.QuestInfo_rewardLabelValue_d6 {
+    color: #dcd5b4;
+}
+.QuestInfo_button_ac {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+}
+.QuestInfo_base__hovered_03 .QuestInfo_button_ac {
+        opacity: 0;
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    }
+.QuestInfo_simplificationButton_62 {
+    position: absolute;
+}
+.QuestInfo_base__completed_dd .QuestInfo_simplificationButton_62 {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .1s cubic-bezier(.55, 0, 1, .45), visibility .1s cubic-bezier(.55, 0, 1, .45);
+    }
+.QuestInfo_complete_d7 {
+    color: #9bff00;
+    font-size: 14rem;
+    line-height: 18rem;
+    opacity: 0;
+    position: absolute;
+}
+.QuestInfo_base__small_3d .QuestInfo_complete_d7 {
+        font-size: 12rem;
+    }
+.QuestInfo_base__medium_e9 .QuestInfo_complete_d7 {
+        font-size: 14rem;
+    }
+.QuestInfo_base__completed_dd .QuestInfo_complete_d7 {
+        opacity: 1;
+        transition: opacity .25s .6s cubic-bezier(0, .55, .45, 1);
+    }
+
+/* colors*/
+
+.SimplificationSection_base_c6 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 56rem;
+    padding-left: 56rem;
+    border: 1rem solid rgba(164, 245, 255, .2);
+    border-radius: 2rem;
+    background-color: rgba(164, 245, 255, 0);
+    position: relative;
+    transition: background-color .2s ease-out;
+    cursor: pointer;
+}
+
+.SimplificationSection_base_c6:hover {
+        background-color: rgba(164, 245, 255, .05);
+    }
+
+.SimplificationSection_base__first_4f {
+        border-radius: 2rem 2rem 0 0;
+        border-bottom-color: transparent;
+    }
+
+.SimplificationSection_base__second_34 {
+        border-radius: 0 0 2rem 2rem;
+        border-top-color: transparent;
+    }
+
+.SimplificationSection_base__small_4e {
+        height: 40rem;
+        padding-left: 34rem;
+    }
+
+.SimplificationSection_base__medium_81 {
+        height: 48rem;
+        padding-left: 42rem;
+    }
+
+.SimplificationSection_base__active_e2,
+    .SimplificationSection_base__active_e2:hover {
+        border-color: #ddb06c;
+        background-color: rgba(164, 245, 255, 0);
+        cursor: default;
+    }
+
+.SimplificationSection_base__disabled_ab {
+        cursor: default;
+        pointer-events: none;
+    }
+
+.SimplificationSection_base__disabled_ab .SimplificationSection_disabledDecoration_b5 {
+        background: rgba(0, 0, 0, .25) url('R.images.gui.maps.icons.components.button.texture_disable') left center / 15rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+.SimplificationSection_wrapper_90 {
+    display: flex;
+    align-items: center;
+    opacity: .6;
+    transition: opacity .2s ease-out;
+}
+
+.SimplificationSection_base_c6:hover .SimplificationSection_wrapper_90,
+    .SimplificationSection_base__active_e2 .SimplificationSection_wrapper_90 {
+        opacity: 1;
+    }
+
+.SimplificationSection_iconWrapper_0f {
+    transform: translateX(-24rem);
+    position: relative;
+}
+
+.SimplificationSection_base__small_4e .SimplificationSection_iconWrapper_0f {
+    transform: translateX(-14rem);
+    }
+
+.SimplificationSection_base__medium_81 .SimplificationSection_iconWrapper_0f {
+    transform: translateX(-18rem);
+    }
+
+.SimplificationSection_icon_4d {
+    width: 64rem;
+    height: 64rem;
+    background: center / contain no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.SimplificationSection_base__small_4e .SimplificationSection_icon_4d {
+        width: 40rem;
+        height: 40rem;
+    }
+
+.SimplificationSection_base__medium_81 .SimplificationSection_icon_4d {
+        width: 48rem;
+        height: 48rem;
+    }
+
+.SimplificationSection_description_cf {
+    color: #C9C9B6;
+    font-size: 22rem;
+    font-weight: 700;
+    line-height: 1.2;
+    display: flex;
+    margin-bottom: 4rem;
+    font-weight: 400;
+}
+
+.SimplificationSection_base__small_4e .SimplificationSection_description_cf {
+        color: ;
+        font-size: 14rem;
+        font-weight: 400;
+        line-height: 1.3;
+    }
+
+.SimplificationSection_base__medium_81 .SimplificationSection_description_cf {
+        color: ;
+        font-size: 20rem;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+
+.SimplificationSection_goalValue_27 {
+    color: #F2F2F7;
+}
+
+@keyframes SimplificationCard_rotateInY_b4 {
+    0% {
+        transform: rotateX(0) rotateY(0);
+    }
+
+    53% {
+        transform: rotateX(1deg) rotateY(-400deg);
+    }
+
+    74% {
+        transform: rotateX(0) rotateY(-340deg);
+    }
+
+    89% {
+        transform: rotateX(0) rotateY(-370deg);
+    }
+
+    100% {
+        transform: rotateX(0) rotateY(-360deg);
+    }
+}
+@keyframes SimplificationCard_fadeInFadeOutSwf_de {
+    0% {
+        opacity: 0;
+    }
+
+    22% {
+        opacity: 1;
+    }
+
+    44% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes SimplificationCard_fadeInFadeOutShine_f1 {
+    0% {
+        opacity: 0;
+    }
+
+    4% {
+        opacity: 1;
+    }
+
+    11% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes SimplificationCard_fadeInFadeZoomOut_28 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) scale(3);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
+@keyframes SimplificationCard_colorBlinkInOut_56 {
+    0% {
+        background-color: rgba(155,255,0, .1);
+        opacity: 1;
+    }
+
+    100% {
+        background-color: rgba(155,255,0, 0);
+    }
+}
+.SimplificationCard_base_70 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.SimplificationCard_heading_6f {
+    opacity: 0;
+    transform: translateY(-10rem);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    margin-bottom: 22rem;
+    color: #8c8c7e;
+    font-size: 20rem;
+    line-height: 24rem;
+    text-align: center;
+}
+.SimplificationCard_base__hovered_82 .SimplificationCard_heading_6f {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+        transform: translateY(0);
+    }
+.SimplificationCard_base__small_49 .SimplificationCard_heading_6f {
+        margin-bottom: 15rem;
+        font-size: 14rem;
+        line-height: 18rem;
+    }
+.SimplificationCard_base__medium_e7 .SimplificationCard_heading_6f {
+        font-size: 18rem;
+        line-height: 22rem;
+    }
+.SimplificationCard_wrapper_7a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.SimplificationCard_variants_65 {
+    opacity: 0;
+    transform: translateY(-10rem);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    width: 100%;
+    margin-bottom: 27rem;
+}
+.SimplificationCard_base__hovered_82 .SimplificationCard_variants_65 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    }
+.SimplificationCard_base__small_49 .SimplificationCard_variants_65 {
+        margin-bottom: 15rem;
+    }
+.SimplificationCard_currencyIcon_41 {
+    width: 16rem;
+    height: 16rem;
+    margin-left: 3rem;
+    background: center / contain no-repeat;
+}
+.SimplificationCard_button_d9 {
+    opacity: 0;
+    transform: translateY(-10rem);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    width: auto;
+    min-width: 190rem;
+    min-height: 31rem;
+    overflow: hidden;
+}
+.SimplificationCard_base__small_49 .SimplificationCard_button_d9 {
+        min-width: 152rem;
+        min-height: 24rem;
+        padding: 0 10rem;
+    }
+.SimplificationCard_base__medium_e7 .SimplificationCard_button_d9 {
+        min-width: 180rem;
+        min-height: 31rem;
+        padding: 0 10rem;
+    }
+.SimplificationCard_base__hovered_82 .SimplificationCard_button_d9 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    }
+.SimplificationCard_buttonText_31 {
+    display: flex;
+    align-items: center;
+    color: #f1f0e0;
+    font-size: 16rem;
+    line-height: 21rem;
+    text-align: center;
+    text-shadow: 0 -1px 2px rgba(0, 0, 0, .7);
+}
+.SimplificationCard_base__small_49 .SimplificationCard_buttonText_31 {
+        font-size: 12rem;
+        line-height: 14rem;
+    }
+.SimplificationCard_base__medium_e7 .SimplificationCard_buttonText_31 {
+        font-size: 14rem;
+        line-height: 16rem;
+    }
+.SimplificationCard_buttonLabel_1a {
+    margin-right: 3rem;
+}
+.SimplificationCard_note_48 {
+    opacity: 0;
+    transform: translateY(-10rem);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: #8c8c7e;
+    font-size: 14rem;
+    line-height: 18rem;
+    text-align: center;
+    opacity: 0;
+    position: relative;
+}
+.SimplificationCard_base__small_49 .SimplificationCard_note_48 {
+        max-width: 170rem;
+        font-size: 12rem;
+        line-height: 14rem;
+    }
+.SimplificationCard_base__medium_e7 .SimplificationCard_note_48 {
+        max-width: 240rem;
+        font-size: 14rem;
+        line-height: 18rem;
+    }
+.SimplificationCard_base__hovered_82 .SimplificationCard_note_48 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .25s ease-in-out,
+    transform .25s ease-in-out;
+    }
+.SimplificationCard_noteIcon_51 {
+    width: 20rem;
+    height: 20rem;
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.info_icon') center / contain no-repeat;
+    transform: translateY(1rem);
+}
+.SimplificationCard_base__small_49 .SimplificationCard_noteIcon_51 {
+        width: 18rem;
+        height: 18rem;
+    }
+
+@keyframes QuestCard_rotateInY_bc {
+    0% {
+        transform: rotateX(0) rotateY(0);
+    }
+
+    53% {
+        transform: rotateX(1deg) rotateY(-400deg);
+    }
+
+    74% {
+        transform: rotateX(0) rotateY(-340deg);
+    }
+
+    89% {
+        transform: rotateX(0) rotateY(-370deg);
+    }
+
+    100% {
+        transform: rotateX(0) rotateY(-360deg);
+    }
+}
+@keyframes QuestCard_fadeInFadeOutSwf_37 {
+    0% {
+        opacity: 0;
+    }
+
+    22% {
+        opacity: 1;
+    }
+
+    44% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes QuestCard_fadeInFadeOutShine_ed {
+    0% {
+        opacity: 0;
+    }
+
+    4% {
+        opacity: 1;
+    }
+
+    11% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes QuestCard_fadeInFadeZoomOut_8f {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) scale(3);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
+@keyframes QuestCard_colorBlinkInOut_cd {
+    0% {
+        background-color: rgba(155,255,0, .1);
+        opacity: 1;
+    }
+
+    100% {
+        background-color: rgba(155,255,0, 0);
+    }
+}
+.QuestCard_base_6c {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    opacity: 1;
+    position: relative;
+}
+.QuestCard_base__masked_9b {
+        opacity: .4;
+        transition: opacity .4s ease-out;
+    }
+.QuestCard_container_81 {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+}
+.QuestCard_base__animated_7c .QuestCard_container_81 {
+        animation: QuestCard_rotateInY_bc 1.9s .4s cubic-bezier(.85, 0, .15, 1) forwards;
+    }
+.QuestCard_swf_2d {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.QuestCard_shine_da {
+    background-color: rgba(255,90,0, .2);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    animation: QuestCard_fadeInFadeOutShine_ed 5.6s .4s cubic-bezier(.85, 0, .15, 1) forwards;
+}
+.QuestCard_check_12 {
+    width: 20rem;
+    height: 20rem;
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.complete') center / contain;
+    opacity: 0;
+    position: absolute;
+    bottom: -10rem;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.QuestCard_base__small_f5 .QuestCard_check_12 {
+        width: 14rem;
+        height: 14rem;
+        bottom: -7rem;
+    }
+.QuestCard_base__completed_71 .QuestCard_check_12 {
+        animation: QuestCard_fadeInFadeZoomOut_8f .5s .1s cubic-bezier(.55, 0, 1, .45) forwards;
+    }
+.QuestCard_base__completedAnimationShown_25 .QuestCard_check_12 {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+.QuestCard_mask_e5 {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    background: linear-gradient(
+        to left,
+        rgb(11, 17, 34) 0%,
+        rgb(11, 17, 34) 35%,
+        rgba(23, 30, 50, .7) 70%,
+        rgba(23, 30, 50, 0) 100%
+    ) center / cover;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.QuestCard_base__masked_9b .QuestCard_mask_e5 {
+        opacity: 1;
+        z-index: 2;
+        transition: opacity .3s ease-out;
+        pointer-events: auto;
+    }
+.QuestCard_borderWrapper_9e,
+.QuestCard_glowWrapper_21 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.QuestCard_glowWrapper_21 {
+    overflow: hidden;
+    z-index: 1;
+    transition: opacity .6s ease-out;
+}
+.QuestCard_glowWrapper__invisible_15 {
+        opacity: 0;
+    }
+.QuestCard_base__hoverable_c2:hover .QuestCard_glowWrapper_21 {
+        opacity: 0;
+    }
+.QuestCard_border_8f {
+    border: 1rem solid rgba(164,245,255, .2);
+    border-radius: 2rem;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+.QuestCard_base__rendered_1c .QuestCard_border_8f {
+        transition-duration: .25s;
+        transition-property: all;
+    }
+.QuestCard_base__masked_9b .QuestCard_border_8f {
+        pointer-events: none;
+    }
+.QuestCard_base__hoverable_c2:hover .QuestCard_border_8f {
+        border-color: rgba(221,176,108, .75);
+        box-shadow: 0 0 6px 0 rgba(255,42,0, .15), 0 0 16px 0 rgba(238,80,3, .35);
+    }
+.QuestCard_base__animated_7c .QuestCard_border_8f {
+        border-color: rgba(221,176,108, .75);
+        transition-delay: 0s;
+        transition-duration: 0s;
+    }
+.QuestCard_base__completed_71 .QuestCard_border_8f {
+        border-color: rgba(155,255,0, .25);
+        box-shadow: inset 0 0 24px rgba(155,255,0, .05);
+        transition-delay: 0s;
+        transition-timing-function: cubic-bezier(.55, 0, 1, .45);
+        transition-duration: .5s;
+    }
+.QuestCard_base__completedAnimationShown_25 .QuestCard_border_8f {
+        border-color: rgba(155,255,0, .25);
+        box-shadow: inset 0 0 24px rgba(155,255,0, .05);
+        transition-duration: 0s;
+    }
+.QuestCard_glow_1b {
+    width: 330rem;
+    height: 210rem;
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.orangeGlow') center / contain no-repeat;
+    opacity: 1;
+    position: absolute;
+    bottom: -10rem;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, 50%);
+    pointer-events: none;
+}
+.QuestCard_base__small_f5 .QuestCard_glow_1b {
+        bottom: 0;
+    }
+.QuestCard_base__completed_71 .QuestCard_glow_1b {
+        opacity: 0;
+        transition: opacity .5s cubic-bezier(.55, 0, 1, .45);
+    }
+.QuestCard_base__completedAnimationShown_25 .QuestCard_glow_1b {
+        opacity: 0;
+    }
+.QuestCard_background_c0,
+.QuestCard_hoverBackground_40,
+.QuestCard_completeBackground_2a {
+    border-radius: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    pointer-events: none;
+}
+.QuestCard_background_c0 {
+    background-color: rgba(14,24,39, .85);
+    z-index: -2;
+}
+.QuestCard_hoverBackground_40 {
+    background: linear-gradient(
+          180deg,
+          rgba(255, 42, 0, .1) 0%,
+          rgba(255, 42, 0, 0) .01%,
+          rgba(255, 127, 0, .1) 100%
+        ) center / cover;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity .25s ease-in;
+}
+.QuestCard_base__hoverable_c2:hover .QuestCard_hoverBackground_40 {
+        opacity: 1;
+    }
+.QuestCard_base__completed_71 .QuestCard_hoverBackground_40,
+    .QuestCard_base__completedAnimationShown_25 .QuestCard_hoverBackground_40 {
+        background: rgba(137, 167, 1, .05);
+        opacity: 1;
+    }
+.QuestCard_completeBackground_2a {
+    background-color: rgba(221,176,108, 0);
+    mix-blend-mode: additive;
+}
+.QuestCard_base__completed_71 .QuestCard_completeBackground_2a {
+        opacity: 0;
+        animation: QuestCard_colorBlinkInOut_cd 1.5s .6s cubic-bezier(0, .55, .45, 1) forwards;
+    }
+.QuestCard_base__completedAnimationShown_25 .QuestCard_completeBackground_2a {
+        background-color: rgba(155,255,0, 0);
+    }
+.QuestCard_wrapper_cb {
+    border-radius: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+}
+.QuestCard_base__masked_9b .QuestCard_wrapper_cb {
+        pointer-events: none;
+    }
+.QuestCard_marker_a0 {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #f00,
+        0 0 20px #f00;
+    background-color: #f00;
+    opacity: 1;
+    position: absolute;
+    top: -4rem;
+    right: -3rem;
+    z-index: 1;
+    transition: opacity .5s ease-out;
+}
+.QuestCard_marker__visited_91 {
+        opacity: 0;
+    }
+.QuestCard_questInfo_6f,
+.QuestCard_simplificationInfo_20 {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.QuestCard_base__small_f5 .QuestCard_questInfo_6f, .QuestCard_base__small_f5 .QuestCard_simplificationInfo_20 {
+        padding: 16rem;
+    }
+.QuestCard_questInfo_6f {
+    padding: 24rem 48rem;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+}
+.QuestCard_base__hoverable_c2:hover .QuestCard_questInfo_6f {
+        opacity: 0;
+    }
+.QuestCard_simplificationInfo_20 {
+    padding: 49rem 32rem 31rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .25s ease-in-out;
+}
+.QuestCard_base__medium_00 .QuestCard_simplificationInfo_20 {
+        padding-top: 26rem;
+        padding-bottom: 23rem;
+    }
+.QuestCard_base__hoverable_c2 .QuestCard_simplificationInfo_20 {
+        visibility: visible;
+    }
+.QuestCard_base__hoverable_c2:hover .QuestCard_simplificationInfo_20 {
+        opacity: 1;
+    }
+
+/* colors*/
+
+@keyframes QuestList_slideInFadeIn_be {
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes QuestList_fadeOut_fd {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes QuestList_fadeIn_0f {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes QuestList_fadeInWithScale_34 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes QuestList_slideUp_43 {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes QuestList_scale_28 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.QuestList_base_2f {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 484rem;
+    position: relative;
+}
+
+.QuestList_base__small_01 {
+        height: 327rem;
+        margin-top: -10rem;
+    }
+
+.QuestList_base__medium_4b {
+        height: 416rem;
+    }
+
+.QuestList_base__scrollDisabled_91 {
+        overflow: hidden;
+    }
+
+.QuestList_baseWidget_fa {
+    width: 1048rem;
+}
+
+.QuestList_baseWidget__small_61 {
+        width: 683rem;
+    }
+
+.QuestList_baseWidget__medium_f3 {
+        width: 918rem;
+    }
+
+.QuestList_baseWidget__extraLarge_11 {
+        width: 1404rem;
+    }
+
+.QuestList_baseActive_69 {
+    width: 1409rem;
+}
+
+.QuestList_baseActive__small_07 {
+        width: 913rem;
+    }
+
+@media (max-width: 1199rem) {
+
+.QuestList_baseActive__small_07 {
+            width: 683rem
+    }
+        }
+
+.QuestList_baseActive__medium_fa {
+        width: 1229rem;
+    }
+
+.QuestList_quests_99 {
+    display: flex;
+}
+
+.QuestList_item_14 {
+    width: 336rem;
+    height: 424rem;
+}
+
+.QuestList_item_14 + .QuestList_item_14 {
+        margin-left: 20rem;
+    }
+
+.QuestList_base__small_01 .QuestList_item_14 {
+        width: 218rem;
+        height: 277rem;
+    }
+
+.QuestList_base__small_01 .QuestList_item_14 + .QuestList_item_14 {
+        margin-left: 12rem;
+    }
+
+.QuestList_base__medium_4b .QuestList_item_14 {
+        width: 291rem;
+        height: 366rem;
+    }
+
+.QuestList_base__animate_d6 .QuestList_item__0_68 {
+    opacity: 0;
+    transform: translateY(50rem);
+    animation-name: QuestList_slideInFadeIn_be;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 0.45s;
+    animation-iteration-count: 1;
+            }
+
+.QuestList_base__animate_d6 .QuestList_item__1_3a {
+    opacity: 0;
+    transform: translateY(50rem);
+    animation-name: QuestList_slideInFadeIn_be;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 0.75s;
+    animation-iteration-count: 1;
+            }
+
+.QuestList_base__animate_d6 .QuestList_item__2_17 {
+    opacity: 0;
+    transform: translateY(50rem);
+    animation-name: QuestList_slideInFadeIn_be;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 1.05s;
+    animation-iteration-count: 1;
+            }
+
+.QuestList_base__animate_d6 .QuestList_item__3_a3 {
+    opacity: 0;
+    transform: translateY(50rem);
+    animation-name: QuestList_slideInFadeIn_be;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 1.35s;
+    animation-iteration-count: 1;
+            }
+
+/* colors*/
+
+@keyframes ChallengeScreen_slideInFadeIn_79 {
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes ChallengeScreen_fadeOut_5a {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes ChallengeScreen_fadeIn_a3 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes ChallengeScreen_fadeInWithScale_48 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes ChallengeScreen_slideUp_ee {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ChallengeScreen_scale_f5 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.ChallengeScreen_base_dd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.ChallengeScreen_wrapper_31 {
+    display: flex;
+    flex: 1 0;
+    width: 100%;
+    margin-top: 10rem;
+    position: relative;
+}
+
+.ChallengeScreen_base__medium_c4 .ChallengeScreen_wrapper__timer_17 {
+            margin-left: 100rem;
+        }
+
+.ChallengeScreen_base__small_2a .ChallengeScreen_wrapper__timer_17 {
+            margin-left: 70rem;
+        }
+
+.ChallengeScreen_questsInfo_f6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 50%;
+    margin-top: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: margin-left .9s cubic-bezier(.65, 0, .35, 1);
+}
+
+.ChallengeScreen_base__medium_c4 .ChallengeScreen_questsInfo_f6 {
+        margin-top: 10rem;
+    }
+
+.ChallengeScreen_base__small_2a .ChallengeScreen_questsInfo_f6 {
+        margin-top: 15rem;
+    }
+
+.ChallengeScreen_questsInfoActive_5e {
+    width: 1409rem;
+}
+
+.ChallengeScreen_base__small_2a .ChallengeScreen_questsInfoActive_5e {
+        width: 913rem;
+    }
+
+@media (max-width: 1199rem) {
+
+.ChallengeScreen_base__small_2a .ChallengeScreen_questsInfoActive_5e {
+            width: 683rem
+    }
+        }
+
+.ChallengeScreen_base__medium_c4 .ChallengeScreen_questsInfoActive_5e {
+        width: 1229rem;
+    }
+
+.ChallengeScreen_questsInfoWidget_74 {
+    width: 1048rem;
+}
+
+.ChallengeScreen_base__small_2a .ChallengeScreen_questsInfoWidget_74 {
+        width: 683rem;
+    }
+
+.ChallengeScreen_base__medium_c4 .ChallengeScreen_questsInfoWidget_74 {
+        width: 918rem;
+    }
+
+.ChallengeScreen_base__extraLarge_3f .ChallengeScreen_questsInfoWidget_74 {
+        width: 1404rem;
+    }
+
+.ChallengeScreen_heading_98 {
+    margin-left: -40rem;
+    margin-bottom: 18rem;
+}
+
+.ChallengeScreen_base__medium_c4 .ChallengeScreen_heading_98 {
+        margin-left: -25rem;
+        margin-bottom: 8rem;
+    }
+
+.ChallengeScreen_base__small_2a .ChallengeScreen_heading_98 {
+        margin-left: -28rem;
+        margin-bottom: 8rem;
+    }
+
+.ChallengeScreen_base__animate_10 .ChallengeScreen_heading_98 {
+    opacity: 0;
+    transform: translateY(50rem);
+    animation-name: ChallengeScreen_slideInFadeIn_79;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: .3s;
+    animation-iteration-count: 1;
+    }
+
+.ChallengeScreen_questList_d4,
+.ChallengeScreen_questListInner_f0 {
+    flex: 1;
+    position: relative;
+}
+
+.ChallengeScreen_questList_d4 {
+    margin-top: -36rem;
+}
+
+.ChallengeScreen_base__medium_c4 .ChallengeScreen_questList_d4,
+    .ChallengeScreen_base__small_2a .ChallengeScreen_questList_d4 {
+        margin-top: -25rem;
+    }
+
+.ChallengeScreen_progressBar_9c {
+    width: 77vw;
+    max-width: 1480rem;
+    margin-bottom: 15rem;
+}
+
+.ChallengeScreen_base__small_2a .ChallengeScreen_progressBar_9c {
+        width: 72vw;
+    }
+
+.ChallengeScreen_base__medium_c4 .ChallengeScreen_progressBar_9c {
+        width: 1219rem;
+    }
+
+.ChallengeScreen_button_c3 {
+    width: 108rem;
+    height: 132rem;
+    opacity: 0;
+    position: absolute;
+    right: 40rem;
+    z-index: 2;
+    transform: translateY(-50%);
+}
+
+.ChallengeScreen_button__visible_64 {
+        opacity: 1;
+    }
+
+.ChallengeScreen_base__small_2a .ChallengeScreen_button_c3 {
+        width: 98rem;
+        height: 128rem;
+        right: 15rem;
+    }
+
+/* colors*/
+
+.IntroItem_base_cd {
+    display: flex;
+    width: 100%;
+}
+
+.IntroItem_icon_32 {
+    width: 64rem;
+    height: 64rem;
+    background: center / contain no-repeat;
+}
+
+.IntroItem_base__large_a9 .IntroItem_icon_32,
+    .IntroItem_base__extraLarge_a2 .IntroItem_icon_32 {
+        width: 96rem;
+        height: 96rem;
+    }
+
+.IntroItem_content_8b {
+    flex: 1;
+    margin-left: 15rem;
+}
+
+@media (min-width: 1600px) and (min-height: 837px) {
+
+.IntroItem_content_8b {
+        margin-left: 25rem
+}
+    }
+
+.IntroItem_title_a6 {
+    color: #f2f2f7;
+    font-size: 18rem;
+    font-weight: 700;
+    line-height: 20rem;
+}
+
+.IntroItem_base__medium_39 .IntroItem_title_a6 {
+        font-size: 22rem;
+        line-height: 24rem;
+    }
+
+.IntroItem_base__large_a9 .IntroItem_title_a6,
+    .IntroItem_base__extraLarge_a2 .IntroItem_title_a6 {
+        font-size: 24rem;
+        line-height: 28rem;
+    }
+
+.IntroItem_description_cc {
+    margin-top: 8rem;
+    color: #b7babe;
+    font-size: 14rem;
+    line-height: 18rem;
+}
+
+.IntroItem_base__medium_39 .IntroItem_description_cc,
+    .IntroItem_base__large_a9 .IntroItem_description_cc,
+    .IntroItem_base__extraLarge_a2 .IntroItem_description_cc {
+        font-size: 16rem;
+        line-height: 20rem;
+    }
+
+/* colors*/
+
+@keyframes Intro_slideInFadeIn_97 {
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes Intro_fadeOut_f4 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes Intro_fadeIn_bd {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes Intro_fadeInWithScale_24 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes Intro_slideUp_0f {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes Intro_scale_35 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.Intro_base_3c {
+    width: 36vw;
+}
+
+.Intro_base__medium_6b,
+    .Intro_base__large_2c,
+    .Intro_base__extraLarge_11 {
+        max-width: 585rem;
+    }
+
+.Intro_title_0c,
+.Intro_decoration_78 {
+    width: 400rem;
+    height: 105rem;
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.logo') center / contain no-repeat;
+    pointer-events: none;
+}
+
+.Intro_base__medium_6b .Intro_title_0c, .Intro_base__medium_6b .Intro_decoration_78 {
+        width: 520rem;
+        height: 140rem;
+    }
+
+.Intro_base__large_2c .Intro_title_0c,
+    .Intro_base__extraLarge_11 .Intro_title_0c,
+    .Intro_base__large_2c .Intro_decoration_78,
+    .Intro_base__extraLarge_11 .Intro_decoration_78 {
+        width: 595rem;
+        height: 155rem;
+    }
+
+.Intro_base__animate_0e .Intro_title_0c {
+    opacity: 0;
+    transform: translateY(20rem);
+    animation-name: Intro_slideInFadeIn_97;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    }
+
+.Intro_decoration_78 {
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.line') center / contain no-repeat;
+}
+
+.Intro_content_e7 {
+    width: 100%;
+    margin-left: 30rem;
+    margin-top: 15rem;
+}
+
+.Intro_content_e7 .Intro_base__medium_6b {
+        margin-left: 25rem;
+        margin-top: 10rem;
+    }
+
+.Intro_base__large_2c .Intro_content_e7,
+    .Intro_base__extraLarge_11 .Intro_content_e7 {
+        margin-left: 40rem;
+        margin-top: 24rem;
+    }
+
+.Intro_item_b8 {
+    width: 100%;
+}
+
+.Intro_item_b8 + .Intro_item_b8 {
+        margin-top: 24rem;
+    }
+
+.Intro_base__medium_6b .Intro_item_b8 + .Intro_item_b8 {
+        margin-bottom: 30rem;
+    }
+
+.Intro_base__large_2c .Intro_item_b8 + .Intro_item_b8,
+    .Intro_base__extraLarge_11 .Intro_item_b8 + .Intro_item_b8 {
+        margin-top: 40rem;
+    }
+
+.Intro_base__animate_0e .Intro_item__1_7b {
+    opacity: 0;
+    transform: translateY(20rem);
+    animation-name: Intro_slideInFadeIn_97;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 0.1s;
+    animation-iteration-count: 1;
+    }
+
+.Intro_base__animate_0e .Intro_item__2_44 {
+    opacity: 0;
+    transform: translateY(20rem);
+    animation-name: Intro_slideInFadeIn_97;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+    }
+
+.Intro_base__animate_0e .Intro_item__3_80 {
+    opacity: 0;
+    transform: translateY(20rem);
+    animation-name: Intro_slideInFadeIn_97;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 0.3s;
+    animation-iteration-count: 1;
+    }
+
+.Intro_base__animate_0e .Intro_item__4_6e {
+    opacity: 0;
+    transform: translateY(20rem);
+    animation-name: Intro_slideInFadeIn_97;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 0.4s;
+    animation-iteration-count: 1;
+    }
+
+.Intro_divider_ac {
+    width: 100%;
+    height: 1rem;
+    margin-top: 30rem;
+    background: linear-gradient(
+        to right,
+        rgba(204, 255, 255, .05),
+        rgba(204, 255, 255, .2),
+        rgba(204, 255, 255, .05)
+    );
+}
+
+.Intro_base__medium_6b .Intro_divider_ac {
+        margin-top: 24rem;
+    }
+
+.Intro_base__large_2c .Intro_divider_ac,
+    .Intro_base__extraLarge_11 .Intro_divider_ac {
+        margin-top: 42rem;
+    }
+
+.Intro_actions_89 {
+    display: flex;
+    justify-content: center;
+    margin-top: 15rem;
+}
+
+.Intro_base__animate_0e .Intro_actions_89 {
+    opacity: 0;
+    transform: translateY(20rem);
+    animation-name: Intro_slideInFadeIn_97;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 0.4s;
+    animation-iteration-count: 1;
+    }
+
+.Intro_base__medium_6b .Intro_actions_89,
+    .Intro_base__large_2c .Intro_actions_89,
+    .Intro_base__extraLarge_11 .Intro_actions_89 {
+        margin-top: 24rem;
+    }
+
+.Intro_button_1b {
+    min-width: 160rem;
+}
+
+.Main_base_52 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.Main_challenge_d5,
+.Main_finalReward_b6,
+.Main_intro_40 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.Main_challenge_d5 {
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.backgroundMain') left center / 100% 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.Main_base__challenge_a6 .Main_challenge_d5 {
+        opacity: 1;
+        visibility: visible;
+        z-index: auto;
+        pointer-events: auto;
+    }
+
+.Main_finalReward_b6 {
+    display: none;
+}
+
+.Main_base__final_ae .Main_finalReward_b6 {
+        display: flex;
+    }
+
+.Main_intro_40 {
+    display: none;
+    align-items: center;
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.backgroundIntro') left center / 100% 100%;
+}
+
+.Main_base__intro_64 .Main_intro_40 {
+        display: flex;
+    }
+
+.Main_introWrapper_4f {
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    height: 100%;
+    margin-left: 50vw;
+    margin-top: 20rem;
+    transform: translateX(-20rem);
+}
+
+.Main_introWrapper__medium_88 {
+        transform: translateX(-5rem);
+    }
+
+.Main_blackout_62 {
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.background') left center / 100% 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity .6s ease-out;
+}
+
+.Main_blackout__visible_9a {
+        opacity: 1;
+    }
+
+.App_base_65 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.App_background_f4 {
+    background: url('R.images.gui.maps.icons.new_year.celebrity_challenge.background') center / cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.App_content_13 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 35rem;
+    left: 0;
+}
+

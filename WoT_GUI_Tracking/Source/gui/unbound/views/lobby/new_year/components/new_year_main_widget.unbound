@@ -1,0 +1,478 @@
+(def constant WIDGET_WIDTH 600px)
+(def constant WIDGET_HEIGHT 160px)
+
+(def layout NewYearMainWidget() entrance=true hideBeforeResolve=true
+    (name = 'NewYearMainWidget')
+
+    (macro NewYearMainWidgetModel)
+    (macro SimpleComponentEvents)
+
+    (style
+        (width = "WIDGET_WIDTH")
+        (height = "WIDGET_HEIGHT")
+    )
+    (scope
+        (event evLobbyModeChanged)
+
+        (const MENU_TAB_SIZE_OFFSET:number = -32)
+        (const MENU_TAB_SIZE_OFFSET_SMALL:number = -23)
+        (const TOP_OFFSET:number = -15)
+
+        (var isSmall:bool = "viewSize.width <= BASE_WIDTH_1366 || viewSize.height <= BASE_HEIGHT_768"
+            (event "viewResized")
+        )
+        (var scale:number = "isSmall ? 0.75 : 1.0")
+        (var menuTabOffset:number = 0)
+        (var menuTabSizeOffset:number = "isSmall ? MENU_TAB_SIZE_OFFSET_SMALL : MENU_TAB_SIZE_OFFSET" watch=false)
+
+        (event evLevelChanged)
+        (var __level:number = "level"
+            (dispatch evLevelChanged on='evChanged')
+        )
+
+        (const WIDGET_MAX_OFFSET:number = -34)
+
+        (var lobbyModeChanged:bool = "lobbyMode"
+            (dispatch evLobbyModeChanged on='evChanged')
+        )
+
+        (controller $Animation
+            (bindcall play duration=0.4 from="{menuTabOffset: 0}" to="{menuTabOffset: WIDGET_MAX_OFFSET}" easing="Easing.cubic_out"
+                (event "evLobbyModeChanged")
+                (enabled = "!lobbyMode")
+            )
+            (bindcall play duration=0.6 from="{menuTabOffset:WIDGET_MAX_OFFSET}" to="{menuTabOffset: 0}" easing="Easing.cubic_out" 
+                (event "evLobbyModeChanged")
+                (enabled = "lobbyMode")
+            )
+
+            (bindcall play duration=0.2 to="{menuTabSizeOffset: MENU_TAB_SIZE_OFFSET}" easing="Easing.cubic_out" 
+                (event "viewResized")
+                (enabled = "!isSmall")
+            )
+            (bindcall play duration=0.2 to="{menuTabSizeOffset: MENU_TAB_SIZE_OFFSET_SMALL}" easing="Easing.cubic_in" 
+                (event "viewResized")
+                (enabled = "isSmall")
+            )
+        )
+
+        (var overStateOn:bool = false)
+        (bind overStateOn true
+            (enabled="lobbyMode")
+            (event "evBtnOverEvent")
+        )
+        (bind overStateOn false
+            (enabled="lobbyMode")
+            (event "evBtnOutEvent")
+        )
+
+        (var levelsPath:str = "'levels' + (isRomanNumbersAllowed ? '' : '_alt')")
+    )
+
+    (name = 'widget')
+    (tabEnabled = false)
+    (tabChildren = false)
+    (bind buttonMode "lobbyMode")
+
+    (dispatch onWidgetClick on='click'
+        (enabled = "$event.buttonIdx == 0")
+    )
+
+    (controller $Instance layout=true
+        (exprs
+            (name = 'idleAnim')
+            (style
+                (position = "absolute")
+                (pivotX = 50%)
+                (hcenter = 0px)
+                (bind top "menuTabOffset + menuTabSizeOffset + TOP_OFFSET")
+                (blendMode = 'add')
+            )
+            (swf 
+                (name = 'mainWidgetAmbient')
+                (source = "R.animations.ny.mainWidgetAmbient()")
+            )
+            (macro NYWidgetEmptyHitAreaMacro)
+        )
+
+        (bind enabled "isExtendedAnim")
+    )
+
+    (element NYCenterProgressWidget
+        (name = 'centerPart')
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (bind top "menuTabOffset + menuTabSizeOffset")
+            (bind width "WIDGET_WIDTH * scale")
+            (bind height "WIDGET_HEIGHT * scale")
+        )
+        (scope 
+            (bind animationType "animationType" 
+                (event "evLevelChanged")
+            )
+            (bind language "userLanguage")
+            (bind level "level")
+            (bind progressValue "currentPoints / nextPoints")
+            (bind scale "scale")
+            (bind levelRoman "levelRoman")
+            (bind overStateOn "overStateOn")
+            (bind levelsPath "levelsPath")
+        )
+    )
+
+    (element NewYearHitArea w=220px h=150px
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (bind top "menuTabOffset + menuTabSizeOffset + (isSmall ? TOP_OFFSET : 0)")
+        )
+    )
+    (hitArea = "$target.hit")
+
+    (controller $ToolTip
+        (delay = "0.4")
+        (content = "R.views.lobby.new_year.tooltips.new_year_widget_tooltip.NewYearWidgetTooltip.resId")
+        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+    )
+)
+
+(def layout NYProgressBarRound()
+    (macro NewYearMainWidgetAnimTypes)
+    (scope
+        (event evValueChanged)
+        (event evShowDelta)
+        (event evHideDelta)
+        (event evAnimChange)
+
+        (const ANIM_KOEFF:number = 0.5)
+
+        (var animationType:str = ''
+            (dispatch evAnimChange on='evChanged')
+        )
+        (var animInProgress:bool = false)
+        (bind animInProgress "true"
+            (event "evShowDelta")
+        )
+        (bind animInProgress "false"
+            (event "evHideDelta")
+            (event "evValueChanged")
+        )
+        (var curValue:number = 0)
+        (var value:number = 0
+            (dispatch evValueChanged on='evChanged')
+        )
+        (var nextAnimType:str = '')
+        (bind nextAnimType "animationType"
+            watch=false
+            (enabled = "!animInProgress")
+            (event "evHideDelta")
+            (event "evAnimChange")
+        )
+
+        (controller $Animation name='deltaSize'
+            (bindcall stop
+                (event "evValueChanged")
+            )
+
+            (bindcall play duration="abs(curValue-value) * ANIM_KOEFF + 0.001" to="{curValue:value}" easing="Easing.cubic_out"
+                callbacks="{onStart: evShowDelta, onComplete: evHideDelta}"
+                watch=false
+                (enabled = "nextAnimType == '' || nextAnimType == ANIM_TYPE_NONE")
+                (event "evValueChanged")
+            )
+
+            (bindcall playSeq "[
+                    {duration:((0.99-curValue) * ANIM_KOEFF) + 0.001, to:{curValue:0.99}},
+                    {duration:0.005, to:{curValue:0.01}},
+                    {duration:(value * ANIM_KOEFF) + 0.001, to:{curValue:value}}
+                ]"
+                watch=false
+                callbacks="{onStart: evShowDelta, onComplete: evHideDelta}"
+                (enabled = "nextAnimType == ANIM_TYPE_UP || nextAnimType == ANIM_TYPE_UP_LONG")
+                (event "evValueChanged")
+            )
+
+            (bindcall playSeq "[
+                    {duration:(curValue * ANIM_KOEFF) + 0.001, to:{curValue:0}},
+                    {duration:0.005, to:{curValue:0.99}},
+                    {duration:((0.99-value) * ANIM_KOEFF) + 0.001, to:{curValue:value}}
+                ]"
+                watch=false
+                callbacks="{onStart: evShowDelta, onComplete: evHideDelta}"
+                (enabled = "nextAnimType == ANIM_TYPE_DOWN")
+                (event "evValueChanged")
+            )
+        )
+    ) 
+    (progress
+        (bind value "curValue")
+        (renderer = 'NYRoundProgressBarMC')
+        (blendMode = 'add')
+    )
+)
+
+(def macro WidgetLevelAnimation(mcName:str, enableExp:expression, sound:expression)
+    (mc "mcName"
+        (name = "mcName")
+        (style
+            (position = "absolute")
+            (top = 50%)
+            (left = 50%)
+        )
+        (visible = false)
+        (bind visible true init=false
+            (event "evLevelChange")
+            (enabled = "enableExp")
+        )
+        (bind visible false init=false
+            (event "evWidgetLevelAnmComplete")
+            (enabled = "$event.id == mcName")
+        )
+        (stop)
+        (stop init=false
+            (event "evWidgetLevelAnmComplete")
+            (enabled = "$event.id == mcName")
+        )
+        (bindcall gotoAndPlay 1 init=false
+            (event "evLevelChange")
+            (enabled = "enableExp")
+        )
+        (dispatch evWidgetLevelAnmComplete args="{id: mcName}" on='widgetLevelAnimationComplete')
+
+        (macro NYWidgetEmptyHitAreaMacro)
+    )
+    (exec "playSound(sound)"
+        (event "evLevelChange")
+        (enabled = "enableExp")
+    )
+)
+
+(def macro WidgetLevelLongAnimation(enableExp:expression)
+    # nyLvlUpAnimMc nyWidgetLevelUpLongAnimation
+    (mc 'nyLvlUpAnimMc'
+        (name = 'nyWidgetLevelUpLongAnimation')
+        (style
+            (position = "absolute")
+            (bind top "17 * scale")
+            (bind left "59 * scale")
+            (bind scaleX "scale")
+            (bind scaleY "scale")
+            (blendMode = 'add')
+        )
+        
+        (visible = false)
+        (bind visible true init=false
+            (event "evNewLevelAchived")
+            (enabled = "enableExp")
+        )
+        (bind visible false init=false
+            (event "evWidgetLevelLongAnmComplete")
+        )
+
+        (bindcall gotoAndStop 'idle'
+            (event "evWidgetLevelLongAnmComplete")
+        )
+        (bindcall gotoAndPlay 'active'
+            (event "evNewLevelAchived")
+            (enabled = "enableExp")
+        )
+
+        (dispatch evCurrentLevelAnimStarted on='currentLevelAnimStarted')
+        (dispatch evWidgetLevelLongAnmComplete on='widgetLevelLongAnimationComplete')
+
+        (.curLevelImage
+            (bind source "R.images.gui.maps.icons.new_year.widget[levelsPath]['level' + prevLevel].exists()
+                            ? R.images.gui.maps.icons.new_year.widget[levelsPath]['level' + prevLevel]()
+                            : ''" init=false
+            )
+        )
+        (.nextLevelImage
+            (bind source "R.images.gui.maps.icons.new_year.widget[levelsPath]['level' + level].exists()
+                            ? R.images.gui.maps.icons.new_year.widget[levelsPath]['level' + level]()
+                            : ''" init=false
+            )
+        )
+
+        (macro NYWidgetEmptyHitAreaMacro)
+    )
+    (exec "playSound(R.sounds.hangar_newyear_level_up())"
+        (event "evNewLevelAchived")
+        (enabled = "enableExp")
+    )
+)
+
+(def layout NYCenterProgressWidget()
+    (macro NewYearMainWidgetAnimTypes)
+    (scope
+        (event evLevelChange)
+        (event evNewLevelAchived)
+        (event evScaleChange)
+        (event evWidgetLevelAnmComplete)
+        (event evWidgetLevelLongAnmComplete)
+        (event evCurrentLevelAnimStarted)
+        (event evChangeIconLevelStart)
+        (event evChangeIconLevelComplete)
+
+        (var scale:number = 1.0)
+        (var animationType:str = '')
+        (bind animationType "''"
+            (event "evWidgetLevelLongAnmComplete")
+            (event "evWidgetLevelAnmComplete")
+        )
+        (var levelRoman:str = ''
+            (dispatch evNewLevelAchived on='evChanged')
+        )
+        (var language:str = '')
+        (var level:number = 0
+            (dispatch evLevelChange on='evChanged')
+        )
+       
+        (var animPrevLevel:number = "level" watch=false)
+        (var prevLevel:number = "level" watch=false)
+        (bind prevLevel "level" init=false watch=false
+            (event "evChangeIconLevelComplete")
+        )
+        (var progressValue:number = 0)
+        
+        (var overStateOn:bool = false)
+        (var levelsPath:str = 'levels')
+        (var levelChangeStarted:bool = false)
+        (bind levelChangeStarted true init=false
+            (event "evChangeIconLevelStart")
+        )
+        (bind levelChangeStarted false init=false
+            (event "evChangeIconLevelComplete")
+        )
+        
+        (const OVERLAY_BG_COLORS:array = [0xff0000, 0xffffff])
+        (const OVERLAY_BG_ALPHAS:array = [1, 0])
+        (const OVERLAY_BG_RATIOS:array = [200, 255])
+        (controller $Animation
+            (bindcall play 
+                id='levelNumberChangeAnimation'
+                duration=0.001
+                delay="animationType == ANIM_TYPE_UP || animationType == ANIM_TYPE_DOWN 
+                        ? 0.4 
+                        : (animationType == ANIM_TYPE_NONE ? 0.1 : NY_WIDGET_LVL_UP_CHANGE_LEVEL)"
+                to="{animPrevLevel:level}"
+                watch=false
+                callbacks="{onStart:evChangeIconLevelStart, onComplete:evChangeIconLevelComplete}"
+                (event "evLevelChange")
+                (enabled = "!levelChangeStarted")
+            )
+            (bindcall stop 
+                id='levelNumberChangeAnimation'
+                (event "evLevelChange")
+                (enabled = "levelChangeStarted")
+            )
+            (bindcall play
+                duration=0.001
+                delay=0.001
+                to="{levelChangeStarted:false}"
+                callbacks="{onComplete:evLevelChange}"
+                (event "evLevelChange")
+                (enabled = "levelChangeStarted")
+            )
+        )
+    )
+    (block
+        (name = 'bglanguageHeaderImg')
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (vcenter = 0px)
+            # fixed WOTD-148221
+            (backgroundColor = 0x01000000)
+        )
+        (image
+            (style
+                (bind scaleX "scale")
+                (bind scaleY "scale")
+                (blendMode = 'add')
+            )
+            (bind source "R.images.gui.maps.icons.new_year.widget.header_title[language].exists() ? 
+                R.images.gui.maps.icons.new_year.widget.header_title[language]() :
+                R.images.gui.maps.icons.new_year.widget.header_title.EN()")
+        )
+        (bind class "overStateOn ? 'NYMainWidgetStyleOverStyle' : 'OffFilterStyle'")
+    )
+    
+
+    (block
+        (name = 'levelBlock')
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (bind vcenter "35px * scale")
+        )
+        (block
+            (name = 'progress')
+            (element NYProgressBarRound
+                (style
+                    (bind scaleX "scale")
+                    (bind scaleY "scale")
+                    (bind marginTop "17 * scale")
+                    (bind marginLeft "59 * scale")
+                )
+                (scope
+                    (bind animationType "animationType")
+                    (bind value "progressValue")
+                )
+            )
+            (image
+                (name = 'levelIcon')
+                (style
+                    (position = "absolute")
+                    (bind vcenter "4 * scale")
+                    (hcenter = 0px)
+                    (bind ubScaleX "scale")
+                    (bind ubScaleY "scale")
+                    (backgroundSize = 'autosize')
+                )
+                (bind source "prevLevel > 0 ? R.images.gui.maps.icons.new_year.widget[levelsPath]['level' + prevLevel]() : null" init=false)
+                # hide levels and show it after level up long animatio ends
+                (bind visible false init=false
+                    (event "evCurrentLevelAnimStarted")
+                )
+                (bind visible true init=false
+                    (event "evWidgetLevelLongAnmComplete")
+                )
+            )
+        )
+        (macro WidgetLevelLongAnimation "animationType == ANIM_TYPE_UP_LONG")
+        (macro WidgetLevelAnimation 'nyWidgetLevelUpAnimation' "animationType == ANIM_TYPE_UP" "R.sounds.hangar_newyear_level_post_up()")
+        (macro WidgetLevelAnimation 'nyWidgetLevelDownAnimation' "animationType == ANIM_TYPE_DOWN" "R.sounds.hangar_newyear_level_post_down()")
+        (macro NYWidgetEmptyHitAreaMacro)
+    )
+
+    (macro NYWidgetEmptyHitAreaMacro)
+)
+
+
+(def macro NYWidgetEmptyHitAreaMacro()
+    # using HitArea from common.unbound
+    (element HitArea
+        (name = 'hit')
+        (style
+            (width = 0px)
+            (height = 0px)
+        )
+    )
+    (hitArea = "$target.hit")
+    (mouseChildren = false)
+    (mouseEnabled = false)
+)
+
+(def css NYMainWidgetStyleOverStyle()
+    (filters
+        (colorMatrix
+            (matrix = [
+                1.62226,-0.54846,-0.0738,0,35,
+                -0.27774,1.35154,-0.0738,0,35,
+                -0.27774,-0.54846,1.8262,0,35,
+                0,0,0,1,0]
+            )
+        )
+    )
+)

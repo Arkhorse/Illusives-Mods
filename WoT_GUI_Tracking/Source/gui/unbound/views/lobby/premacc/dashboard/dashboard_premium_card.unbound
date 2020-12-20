@@ -1,0 +1,376 @@
+(def layout DashboardPremiumCard() entrance=true
+    (macro DashboardPremiumCardModel)
+    (name = 'premCard')
+    (style
+        (width = 100%)
+        (height = 100%)
+        (filters
+            (dropShadow
+                (angle = 90)
+                (strength = 1)
+                (distance = 0)
+                (color = 0x000000)
+                (quality = 0)
+                (alpha = 0.41)
+            )
+        )
+        (blendMode = 'myltiply')
+    )
+    
+    (scope
+        (const BOUNDARY_WIDTH:number = 1600)
+        (const BOUNDARY_HEIGHT:number = 900)
+        (const MARGIN_NORMAL:number = -35)
+        (const MARGIN_MIN_SIZE:number = -28)
+
+        (var isNormalSize:bool = "viewSize.width >= BOUNDARY_WIDTH && viewSize.height >= BOUNDARY_HEIGHT"
+            (event "viewResized")
+        )
+        (var bonus:array = ['bonus_exp','bonus_piggy','bonus_tasks','bonus_map','bonus_credits'])
+
+        (event evCardOver)
+        (event evCardOut)
+
+        # It's the same logic that in LobbyHader
+        (var tankPremTimeLeftDay:str = "TextFormat(R.strings.menu.timeLeft.short.day(), {day: ceil(tankPremTimeLeft / ONE_DAY)})")
+        (var tankPremTimeLeftHour:str = "TextFormat(R.strings.menu.timeLeft.short.hour(), {hour: ceil(tankPremTimeLeft / ONE_HOUR)})")
+
+        (var basePremTimeLeftDay:str = "TextFormat(R.strings.menu.timeLeft.short.day(), {day: ceil(basePremTimeLeft / ONE_DAY)})")
+        (var basePremTimeLeftHour:str = "TextFormat(R.strings.menu.timeLeft.short.hour(), {hour: ceil(basePremTimeLeft / ONE_HOUR)})")
+
+    )
+    (dispatch onClick on='click'
+        (enabled="$event.buttonIdx == MOUSE.LEFT")
+    )
+    (dispatch evCardOver on='rollOver')
+    (dispatch evCardOut on='rollOut')
+
+    (macro DashboardCardSounds over="evCardOver" click="onClick")
+
+    (image
+        (name = 'bg')
+        (style
+            (macro AbsPositionFullSize)
+        )
+        (bind source "isTankPremiumActive ? R.images.gui.maps.icons.premacc.dashboard.cardPrem[isNormalSize ? 'PA_Glow' : 'PA_Glow_366']() :
+                    R.images.gui.maps.icons.premacc.dashboard.cardPrem[isNormalSize ? 'PA_no_glow' : 'PA_no_glow_366']()")
+    )
+
+    #If the player has no premium
+    (block
+        (name = 'tryPremium')
+        (style
+            (bind paddingTop "isNormalSize ? 45px : 30px")
+            (width = 100%)
+            (height = 100%)
+            (gap = 7px)
+        )
+        (tf
+            (name = 'tryLabel')
+            (style
+                (width = 100%)
+                (textAlign = "center")
+            )
+            (bind class "isNormalSize ? 'SuperPromoTitleTextStyle':'PromoSubTitleTextStyle'")
+            (text = "R.strings.premacc.premiumCard.tryPremium()")
+        )
+        (hblock 
+            (name = 'bonusesBlock')
+            (style
+                (width = 100%)
+                (align = "center")
+                (paddingTop = 20px)
+                (gap = 20px)
+            )
+            (hblock
+                (name = 'expBonus')
+                (image
+                    (style
+                        (marginTop = -4px)
+                    )
+                    (bind source "R.images.gui.maps.icons.premacc.dashboard.cardPrem[isNormalSize ? 'icon_exp_48' : 'icon_exp_32']()")
+                )
+                (tf
+                    (bind class "isNormalSize ? 'SuperPromoTitleTextStyle':'HighTitleTextStyle'")
+                    (bind text "'+'+experienceBonus + R.strings.common.common.percent()")
+                )
+                
+            )
+            (hblock
+                (name = 'credistBonus')
+                (image
+                    (style
+                        (marginTop = -4px)
+                    )
+                    (bind source "R.images.gui.maps.icons.premacc.dashboard.cardPrem[isNormalSize ? 'icon_credits_48' : 'icon_credits_32']()")
+                )
+                (tf
+                    (bind class "isNormalSize ? 'SuperPromoTitleTextStyle':'HighTitleTextStyle'")
+                    (bind text "'+'+creditsBonus + R.strings.common.common.percent()")
+                )
+                
+            )
+            (hblock
+                (name = 'squadBonus')
+                (image
+                    (style
+                        (bind marginTop "isNormalSize ? -4px : -1px")
+                    )
+                    (bind source "R.images.gui.maps.icons.premacc.dashboard.cardPrem[isNormalSize ? 'icon_squad_48' : 'icon_squad_32']()")
+                )
+                (tf
+                    (bind class "isNormalSize ? 'SuperPromoTitleTextStyle':'HighTitleTextStyle'")
+                    (bind text "'+'+squadBonus + R.strings.common.common.percent()")
+                )
+            )
+
+        )
+        (block
+            (name = 'threeAbvantages')
+            (style
+                (width = 100%)
+                (align = "center")
+                (paddingTop =20px)
+            )
+            (tf
+                (style
+                    (width = 50%)
+                    (textAlign = "center")
+                )
+                (name = 'and_three_advantages')
+                (bind class "isNormalSize ? 'MainBigTextStyle' : 'MainTextStyle'")
+                (text = "R.strings.premacc.premiumCard.threeAdvantages()")
+            )
+        )
+        
+        (bind visible "isNotPremium")
+    )
+    #If the player has no premium ...end
+
+    #If player has base premium
+    (block
+        (name = 'basePremium')
+        (style
+            (macro AbsPositionFullSize)
+            (bind paddingTop "isNormalSize ? 55px : 30px")
+        )
+        (image
+            (style
+                (macro AbsPositionFullSize)
+            )
+            (source = "R.images.gui.maps.icons.premacc.dashboard.cardPrem.PA_no_glow()")
+        )
+        (tf
+            (name = 'upPremiumLabel')
+            (style
+                (width = 100%)
+                (textAlign = "center")
+            )
+            (bind class "isNormalSize ? 'SuperPromoTitleTextStyle':'PromoSubTitleTextStyle'")
+            (text = "R.strings.premacc.premiumCard.upToTankPremium()")
+        )
+        (block 
+            (name = 'bonusesGroup')
+            (style
+                (width = 100%)
+                (align = "center")
+                (bind paddingTop "isNormalSize ? 10px : 5px")
+            )
+            (controller $Repeat renderer='BasePremInfo' count=5 layout=true	
+                (exprs
+                    (style
+                        (width = 100%)
+                        (bind paddingLeft "isNormalSize ? 150px : 75px")
+                        (paddingTop = 5px)
+                    )
+                    (scope
+                        (bind descr "R.strings.premacc.premiumCard[bonus[$index]]()")
+                        (bind icon "R.images.gui.maps.icons.premacc.dashboard.cardPrem[bonus[$index]]()")
+                    )
+                )
+            )
+        )
+        (bind visible "isBasePremiumActive && !isTankPremiumActive")
+    )
+    #If player has base premium ...end
+    
+    (macro HoverCardAndStroke)
+
+    #If player has tank premium
+    (block
+        (name = 'tankPremium')
+        (style
+            (macro AbsPositionFullSize)
+        )
+        (image
+            (name = 'backlight')
+            (style
+                (position = "absolute")
+                (hcenter = 0px)
+                (bind bottom "isNormalSize ?  165px : 125px")
+            )
+            (bind source "R.images.gui.maps.icons.premacc.dashboard.cardPrem[isNormalSize ? 'logo_backlight' : 'logo_backlight_small']()")
+        )
+        (block
+            (style
+                (macro AbsPositionFullSize)
+                (align = "center")
+                (bind top "isNormalSize ? -31px : -13px")
+            )
+            (image
+                (name = 'logo')
+                (style
+                    (margin = -60px)
+                )
+                (bind source "R.images.gui.maps.icons.premacc.dashboard.cardPrem[isNormalSize ? 'logo_premium' : 'logo_premium_small']()")
+            )
+            (tf
+                (name = 'header')
+                (style
+                    (bind marginTop "isNormalSize ? -15px : -16px")
+                )
+                (bind class "isNormalSize ? 'SuperPromoTitleTextStyle':'PromoSubTitleTextStyle'")
+                (text = "R.strings.premacc.premiumCard.tankPremium()")
+                
+            )
+            (tf
+                (name = 'tankPremTimeLeft')
+                (style
+                    (marginTop = -2px)
+                )
+                (class GoldTextBigStyle)
+                (bind text "tankPremTimeLeft > ONE_DAY ? tankPremTimeLeftDay : tankPremTimeLeftHour")
+                (bind visible "tankPremTimeLeft >= 0")
+            )
+            (tf
+                (name = 'basePremTimeLeft')
+                (style
+                    (bind marginTop "isNormalSize ? 1px : -7px")
+                )
+                (bind class "isNormalSize ? 'MainBigTextStyle': 'MainTextStyle'")
+                (bind text "TextFormat(
+                    R.strings.premacc.premiumCard.basePremLeft(), 
+                    {timeLeft:basePremTimeLeft > ONE_DAY ? basePremTimeLeftDay : basePremTimeLeftHour})"
+                )
+                (bind visible "basePremTimeLeft >= 0")
+            )
+        )
+        (bind visible "isTankPremiumActive")
+    )
+    #If player has tank premium ...end
+
+    # Bonus comparison 
+    (block
+        (style
+            (macro AbsPositionFullSize)
+            (align = "bottom")
+        )
+        (image 
+            (name = 'separator')
+            (style
+                (position = "absolute")
+                (bind vcenter "isNormalSize ? 82px: 62px")
+                (width = 100%)
+            )
+            (source = "R.images.gui.maps.icons.premacc.dashboard.card_separator()")
+        )
+        (hblock
+            (style
+                (width = 100%)
+                (height = 25%)
+                (bind paddingTop "isNormalSize ?  1px : -8px")
+            )
+            (block
+                (style
+                    (width = 50%)
+                    (height = 30%)
+                    (align = "right")
+                    (paddingRight = 40px)
+                    (bind alpha "isNotPremium ? 1 : 0.4")
+                )
+                (tf
+                    (class MainTextStyle)
+                    (text = "R.strings.premacc.premiumCard.stats.withoutPrem()")
+                )
+
+                (group name = 'withoutPremium'
+                    (renderer = 'PremiumCardSessionInfo')
+                    (container
+                        (style
+                            (align = "right")
+                        )
+                    )
+                )
+            )
+            (block
+                (style
+                    (width = 50%)
+                    (height = 30%)
+                    (align = "right")
+                    (bind paddingRight "isNormalSize ? 130px : 65px")
+                    (bind alpha "isTankPremiumActive ? 1 : 0.4")
+                )
+                (tf
+                    (class GoldTextStyle)
+                    (text = "R.strings.premacc.premiumCard.stats.withPrem()")
+                )
+
+                (group name = 'withPremium'
+                    (renderer = 'PremiumCardSessionInfo')
+                    (container
+                        (style
+                            (align = "right")
+                        )
+                    )
+                )
+            )
+        )
+        (bind visible "isTankPremiumActive || isNotPremium")
+    )
+
+    (buttonMode = true)
+    (mouseChildren = false)
+
+    (element HitArea)
+    (hitArea = "$target.hitElement")
+)
+
+(def layout PremiumCardSessionInfo()
+    (macro CardPremInfoModel)
+    (style
+        (flow = "Flow.HORIZONTAL")
+        (gap = 3px)
+    )
+    (macro PremDashboardAdaptiveSize)
+    (tf
+        (bind class "isCredits ? 'CreditsTextStyle' : 'ExpTextStyle'")
+        (bind text "value")
+    )
+    (image
+        (style
+            (marginTop = 3px)
+        )
+        (bind source "icon")
+    )
+)
+
+(def layout BasePremInfo()
+    (scope
+        (var icon:str = '')
+        (var descr:str = '')
+    )
+    (style
+        (flow = "Flow.HORIZONTAL")
+        (gap = 5px)
+    )
+    (image
+        (bind source "icon" init=false)
+    )
+    (tf
+        (style
+            (marginTop = 5px)
+        )
+        (class HighlightTextStyle)
+        (bind text "descr" init=false)
+    )
+)

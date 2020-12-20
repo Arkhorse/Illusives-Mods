@@ -1,0 +1,20 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro CrewBooksLackViewModel()
+    (scope
+        (event onCloseBtnClick)
+        (event onBuyBtnClick)
+        (event onHangarBtnClick)
+
+        (var flagIcon:str = '')
+        (var screenDescription:str = '')
+        (var footerDescription:str = '')
+        (var footerDescriptionFmtArgs:array = [])
+        (var noBooksOnStock:bool = false)
+        (var isDialogOpen:bool = false)
+        (var isCrewBooksPurchaseEnabled:bool = true)
+
+        # The following submodels are used in this model:
+        # noBooksList:ui_kit.list_model
+    )
+)

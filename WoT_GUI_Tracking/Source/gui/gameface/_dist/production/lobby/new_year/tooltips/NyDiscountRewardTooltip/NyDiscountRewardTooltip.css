@@ -1,0 +1,41 @@
+.TooltipDecorator_base_c9 {
+    display: flex;
+    position: absolute;
+}
+
+.TooltipDecorator_decorator_3d {
+    padding: 4rem 6rem 8rem; /* border offset*/
+    border-image-source: url('R.atlases.components.tooltip_background');
+    border-image-slice: 24 fill;
+    border-image-width: 24rem;
+    position: relative;
+}
+
+.TooltipDecorator_decoratorContent_de {
+    background-color: #000;
+}
+
+.App_base_04 {
+    display: flex;
+    align-items: center;
+    padding: 24rem 24rem 26rem;
+    border: 1rem solid rgba(242, 242, 230, .1);
+    border-radius: 2rem;
+    background: url('R.images.gui.maps.icons.new_year.tooltips.discount_reward_tooltip.bg') left center / contain no-repeat;
+    color: #f2f2f7;
+}
+
+.App_discount_60 {
+    font-size: 36rem;
+    font-weight: 700;
+    line-height: 40rem;
+    text-align: center;
+}
+
+.App_description_b0 {
+    width: 200rem;
+    margin-left: 24rem;
+    font-size: 15rem;
+    line-height: 17rem;
+}
+

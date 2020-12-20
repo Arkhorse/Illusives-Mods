@@ -1,0 +1,130 @@
+(def layout NYVehiclesIntro()
+    (scope
+        (event evCloseBtnClick)
+
+        (var isPostEventIntro:bool = false)
+        (var isSmall:bool = false)
+        (var introRegularCooldown:number = 0)
+        (var isRomanNumbersAllowed:bool = true)
+
+        (var blocksGap:number = "isSmall ? 40px : 70px")
+    )
+
+    (style
+        (width = 100%)
+        (height = 100%)
+        (align = "center")
+        (bind paddingTop "isSmall ? 10% : 15%")
+    )
+
+    (block
+        (name = 'titleBlock')
+        (style
+            (align = "center|middle")
+            (gap = 8px)
+        )
+        (tf
+            (name = 'title')
+            (style
+                (bind fontSize "isSmall ? 24px : 36px")
+                (textColor = 0xFFFFFF)
+            )
+            (class SuperPromoTitleTextStyle)
+            (bind text "R.strings.ny.vehiclesView.intro[isPostEventIntro ? 'postEvent': 'event'].header()")
+        )
+        (tf
+            (name = 'subTitle')
+            (bind class "isSmall ? 'NyVehicleDescSmallTextStyle' : 'NyVehicleDescTextStyle'")
+            (style
+                (maxWidth = 1000px)
+                (multiline = true)
+                (textAlign = "center")
+            )
+            (bind text "R.strings.ny.vehiclesView.intro[isPostEventIntro ? 'postEvent': 'event'].desc()")
+        )
+    )
+
+    (hblock
+        (name = 'eventBlocks')
+        (style
+            # TODO: workaround to gap. Delete after fix WOTD-146461. Doesnt work align with binding gap
+            (bind width "300 * 3 + blocksGap * 2")
+            (bind hgap "blocksGap")
+            (bind marginTop "isSmall ? 50px : 120px")
+        )
+
+        (controller $Repeat renderer='IntroVehicleViewBlock' count=3
+            (exprs
+                (scope
+                    (bind isPostEventIntro "isPostEventIntro ")
+                    (bind isSmall "isSmall")
+                    (bind isAltIcon "$index == 0 && !isRomanNumbersAllowed")
+                )
+            )
+        )
+    )
+
+    (button
+        (name = 'okBtn')
+        (macro ButtonStylePrimary "BUTTON_SIZE_MEDIUM")
+        (style
+            (marginTop = 48px)
+            (minWidth = 150px)
+            (minHeight = 30px)
+        )
+        (label = "R.strings.ny.vehiclesView.intro.okBtn.label()")
+        (dispatch evCloseBtnClick dir=1 on='clicked')
+    )
+)
+
+(def layout IntroVehicleViewBlock()
+    (style
+        (width = 300px)
+        (align = "center")
+    )
+
+    (scope
+        (var isPostEventIntro:bool = false)
+        (var isSmall:bool = false)
+        (var isAltIcon:bool = false)
+        (const INTRO_EVENT_NAMES:array = ['eventFirst', 'eventSecond', 'eventThird'])
+        (const INTRO_POST_EVENT_NAMES:array = ['postEventFirst', 'postEventSecond', 'postEventThird'])
+
+        (var blockName:str = "isPostEventIntro ? INTRO_POST_EVENT_NAMES[$index] : INTRO_EVENT_NAMES[$index]")
+    )
+
+    (block
+        (name = 'icon')
+        (style
+            (width = 256px)
+            (height = 256px)
+            (align = "middle|center")
+        )
+        (image
+            (bind source "R.images.gui.maps.icons.new_year.vehicles_view.icons.slots['slot_' + ($index + 1) + (isAltIcon ? '_alt' : '')]()")
+        )
+    )
+
+    (tf
+        (name = 'title')
+        (class PromoTitleTextStyle)
+        (style
+            (bind fontSize "isSmall ? 18px: 24px")
+            (width = 100%)
+            (textAlign = "center")
+        )
+        (bind text "R.strings.ny.vehiclesView.intro[blockName].header()")
+    )
+
+    (tf
+        (name = 'description')
+        (bind class "isSmall ? 'NyVehicleDescSmallTextStyle' : 'NyVehicleDescTextStyle'")
+        (style
+            (width = 100%)
+            (textAlign = "center")
+            (marginTop = 10px)
+        )
+
+        (bind text "R.strings.ny.vehiclesView.intro[blockName].desc()")
+    )
+)

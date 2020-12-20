@@ -1,0 +1,347 @@
+(def constant NY_ALBUM_18 'page18')
+(def constant NY_ALBUM_19 'page19')
+(def constant NY_ALBUM_20 'page20')
+(def constant NY_ALBUM_21 'page21')
+
+(def layout NewYearAlbumMainView() hideBeforeResolve=true entrance=true
+    (macro NewYearAlbumMainModel)
+    (macro ExtendedComponentEvents)
+    (macro NewYearTabbedViewAnimationData)
+    (scope
+        (var isSmall:bool = "viewSize.width <= BASE_WIDTH_1366 || viewSize.height <= BASE_HEIGHT_768"
+            (event "viewResized")
+        )
+        (dispatch evPreSwitchContent args="{view: nextViewName}" init=false dir=1
+            (bind trigger "nextViewName")
+        )
+    )
+
+    (style
+        (macro ViewResizeBindedSize)
+        (backgroundColor = 0xff000000)
+    )
+
+    (macro NewYearTabbedViewAnimationLogic "R.dynamic_ids.newYearAlbumMain()")
+)
+
+(def layout NewYearAlbumSettingBtn(mcName:str ='', _vcenter:number = 0, _hcenter:number = 0) hideBeforeResolve=true
+    (macro SimpleComponentEvents)
+    (scope
+        (var pictureHover:str = null)
+    )
+    (block
+        (image
+            (style
+                (alpha = 0)
+                (blendMode = 'add')
+            )
+            (bind source "pictureHover")
+            (controller $Animation
+                (bindcall play duration=0.2 to={alpha:1}
+                    (event "evBtnOverEvent")
+                )
+                (bindcall play duration=0.2 to={alpha:0}
+                    (event "evBtnOutEvent")
+                )
+            )
+        )
+    )
+    (block
+        (name = 'hit')
+        (style
+            (position = "absolute")
+            (vcenter = "_vcenter")
+            (hcenter = "_hcenter")
+            (alpha = 0)
+        )
+        (mc "mcName")
+    )
+    (hitArea = "$target.hit")
+    
+    (buttonMode = true)
+    (mouseChildren = false)
+
+    (exec "playSound(R.sounds.hangar_newyear_album_choice())" on='rollOver')
+)
+
+(def layout NyTabBarAlbumRenderer()
+    (macro AbstractNYSideTabBar)
+
+    (view_holder_content 'content'
+        (style
+            (align = "center")
+        )
+        (progress
+            (style
+                (marginLeft = 2px)
+                (bind marginTop "isSmall ? -8px : -13px")
+            )
+            (bind value "tabModel.totalValue != 0 ? tabModel.currentValue / tabModel.totalValue : 0" init=false)
+            (bind renderer "isSmall ? 'NYProgressSmallMC' : 'NYProgressNormalMC'")
+        )
+        (hblock
+            (style
+                (bind paddingTop "isSmall ? -8px : -4px")
+            )
+            (tf
+                (style
+                    (bind fontSize "isSmall ? 12 : 14")
+                )
+                (name = 'currentProgress')
+                (bind class "selected ? 'TabBarSelectedTextStyle' : 'TabBarTextStyle'")
+                (bind text "tabModel.currentValue" init=false)
+            )
+            (tf
+                (name = 'totalProgress')
+                (style
+                    (alpha = 0.5)
+                    (bind fontSize "isSmall ? 12 : 14")
+                )
+                (bind class "selected ? 'TabBarSelectedTextStyle' : 'TabBarTextStyle'")
+                (bind text "SLASH_SPACE + tabModel.totalValue" init=false)
+            )
+        )
+    )
+)
+
+(def macro AlbumNotAvailable()
+    (block
+        (name = 'albumNotAvailable')
+        (style
+            (position = "absolute")
+            (vcenter = 0px)
+            (hcenter = 0px)
+            (width = 1972px)
+            (height = 1140px)
+            (backgroundColor = 0xaf000000)
+        )
+        (bind visible "isNeedToShowCover")
+        (block
+            (style
+                (position = "absolute")
+                (vcenter = -40px)
+                (hcenter = -235px)
+            )
+            (block
+                (name = 'levelContainer')
+                (class AbsPositionCenterStyle)
+
+                (image
+                    (name = 'blueBG')
+                    (class AbsPositionCenterStyle)
+                    (source = "R.images.gui.maps.icons.new_year.level_up_view.blue_background()")
+                )
+
+                (mc 'BlueShineAnimUI'
+                    (name = 'CircleBlueShineAnimUI')
+                    (class AbsPositionCenterStyle)
+                    (style
+                        (width = 500px)
+                        (height = 500px)
+                        (blendMode = 'screen')
+                    )
+                    
+                    (mouseEnabled = false)
+                    (mouseChildren = false)
+                )
+
+                (swf
+                    (name = 'levelUpAnimation')
+                    (source = "R.animations.ny.levelUpWindowLevelAnimation()")
+                )
+
+                (image
+                    (name = 'levelImage')
+                    (class AbsPositionCenterStyle)
+                    (style
+                        (filters
+                            (blur
+                                (blurX = 20)
+                                (blurY = 20)
+                                (quality = 2)
+                            )
+                        )
+                    )
+                    (bind source "R.images.gui.maps.icons.new_year.level_up_view['levels' + (isRomanNumbersAllowed ? '' : '_alt')]['level10']()" init=true)
+                )
+
+                (image
+                    (name = 'levelCircleImage')
+                    (class AbsPositionCenterStyle)
+                    (style
+                        (filters
+                            (blur
+                                (blurX = 20)
+                                (blurY = 20)
+                                (quality = 2)
+                            )
+                        )
+                    )
+                    (source = "R.images.gui.maps.icons.new_year.level_up_view.emitter_ring()")
+                )
+            )
+        )
+        (block
+            (style
+                (position = "absolute")
+                (vcenter = -40px)
+                (hcenter = 270px)
+            )
+            (tf
+                (class SuperPromoTitleTextStyle)
+                (style
+                    (maxWidth = 545px)
+                    (multiline = true)
+                )
+                (text = "R.strings.ny.album.fillLastYear.title()")
+            )
+            (tf
+                (style
+                    (marginTop = 15px)
+                    (maxWidth = 545px)
+                    (multiline = true)
+                )
+                (class MainBigTextStyle)
+                (text = "R.strings.ny.album.fillLastYear.message()")
+            )
+            (element Horizontal1pxWidthLine 0xFFFFFF 0.2
+                (style
+                    (scaleX = 530)
+                    (height = 10px)
+                    (marginTop = 20px)
+                    (marginBottom = 20px)
+                )
+            )
+            (button
+                (macro ButtonStyleMain "BUTTON_SIZE_LARGE")
+                (style
+                    (width = 160px)
+                )
+                (bind label "isMaxLvl ? R.strings.ny.album.fillLastYear.goToCollection() : R.strings.ny.album.fillLastYear.goToHangar()")
+                (dispatch onGotoBtnClick on='clicked')
+            )
+        )
+    )
+)
+
+(def macro AlbumScaleAndPosition()
+    (style
+        (backgroundColor = 0xff000000)
+        (position = "absolute")
+        (bind scaleX "viewSize.height < BASE_HEIGHT_900 ? 0.8 : 1"
+            (event "viewResized")
+        )
+        (bind scaleY "viewSize.height < BASE_HEIGHT_900 ? 0.8 : 1"
+            (event "viewResized")
+        )
+        (hcenter = 0px)
+        (vcenter = 0px)
+    )
+)
+
+(def macro AlbumBackAndVingette(back:expression, vingette:expression)
+    (image
+        (name = 'albumBack')
+        (class AbsPositionCenterStyle)
+        (bind source "back")
+    )
+
+    (image
+        (name = 'Vignette')
+        (style
+            (position = "absolute")
+            (vcenter = 0px)
+            (hcenter = 0px)
+        )
+        (bind source "vingette")
+    )
+)
+
+(def macro AlbumPageScaleAndPosition(innerPage:expression, blackVingette:expression)
+    (class AbsPositionCenterStyle)
+    (style
+        (bind scaleX "(viewSize.height < BASE_HEIGHT_900) || (viewSize.width <= BASE_WIDTH_1074) ? 0.85 : 1"
+            (event "viewResized")
+        )
+        (bind scaleY "(viewSize.height < BASE_HEIGHT_900) || (viewSize.width <= BASE_WIDTH_1074) ? 0.85 : 1"
+            (event "viewResized")
+        )
+    )
+    (image
+        (class AbsPositionCenterStyle)
+        (name = 'Page Screen')
+        (bind source "innerPage")
+    )
+
+    (image
+        (name = 'Vignette')
+        (class AbsPositionCenterStyle)
+        (style
+            (bind width "viewSize.height <= BASE_HEIGHT_768 && viewSize.width <= BASE_WIDTH_1024  ? 1324px : BASE_WIDTH_1920"
+                (event "viewResized")
+            )
+            (bind height "viewSize.height <= BASE_HEIGHT_768 && viewSize.width <= BASE_WIDTH_1024  ? 1025px : BASE_HEIGHT_1080"
+                (event "viewResized")
+            )
+        )
+        (bind source "blackVingette")
+    )
+)
+
+(def macro ToysCount(textStyle:str, icon:expression)
+    (block
+        (name = 'toysCountBlock')
+        (style
+            (position = "absolute")
+            (vcenter = -290px)
+            (hcenter = 23px)
+            (width = 900px)
+            (height = 100px)
+            (align = "center")
+        )
+        (hblock
+            (style
+                (width = 100%)
+                (align = "center")
+                (marginTop = 32px)
+            )
+            (image
+                (style
+                    (scaleX = 0.83)
+                    (scaleY = 0.83)
+                    (marginTop = 12px)
+                    (marginRight = 6px)
+                )
+                (name = 'collectionIcon')
+                (bind source "icon" init=false)
+            )
+            (tf
+                (bind class "textStyle")
+                (bind text "R.strings.ny.albumHeader.settings[currentType]() + ': ' + currentToys + '/' + totalToys" init=false)
+            )
+            (block
+                (name = 'infoIcon')
+                (style
+                    (paddingTop = 11px)
+                    (paddingLeft = 4px)
+                )
+                (image
+                    (source = "R.images.gui.maps.icons.new_year.album.page20.info()")
+                )
+                
+                (controller $ToolTip
+                    (delay = "0.4")
+                    (content = "R.views.lobby.new_year.tooltips.new_year_collection_bonus_tooltip.NewYearCollectionBonusTooltip.resId")
+                    (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+                )
+                (bind visible "PAGE_NAME == NY_ALBUM_21")
+            )
+        )
+        
+        (image
+            (name = 'noize')
+            (class AbsPositionCenterStyle)
+            (source = "R.images.gui.maps.icons.new_year.album.noize()")
+        )
+    )
+)

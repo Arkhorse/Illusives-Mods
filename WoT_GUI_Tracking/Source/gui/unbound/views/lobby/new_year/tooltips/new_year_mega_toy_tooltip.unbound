@@ -1,0 +1,142 @@
+(def layout NewYearMegaToyBonusTooltip() entrance=true
+    (macro NewYearMegaToyBonusTooltipModel)
+    (style
+        (width = 470px)
+        (paddingLeft = 10px)
+        (paddingRight = 10px)
+        (paddingTop = 10px)
+        (paddingBottom = 12px)
+        (align = "center")
+    )
+    (block
+        (name = 'header')
+        (style
+            (width = 100%)
+        )
+        (tf
+            (class HighTitleTextStyle)
+            (text = "R.strings.ny.megaToyBonusTooltip.header()")
+        )
+        (tf
+            (style
+                (width = 100%)
+            )
+            (class MainTextStyle)
+            (bind text "TextFormat(R.strings.ny.megaToyBonusTooltip.description(), {toyBonus: bonusValue * 100})")
+        )
+    )
+    (block
+        (style
+            (width = 100%)
+            (paddingTop = 20px)
+        )
+        (hblock
+            (name = 'tableHeader')
+            (style
+                (width = 100%)
+                (paddingBottom = 10px)
+            )
+            (tf
+                (style
+                    (width = 35%)
+                )
+                (class NYMainTextStyle)
+                (text = "R.strings.ny.megaToyBonusTooltip.toyType()")
+            )
+            (tf
+                (style
+                    (width = 35%)
+                )
+                (class NYMainTextStyle)
+                (text = "R.strings.ny.megaToyBonusTooltip.status()")
+            )
+            (tf
+                (style
+                    (width = 30%)
+                )
+                (class NYMainTextStyle)
+                (text = "R.strings.ny.megaToyBonusTooltip.bonus()")
+            )
+        )
+        (group 'toysTable'
+            (renderer = 'NewYearMegaToyTableRow')
+            (container
+            )
+        )
+    )
+    (image
+        (style
+            (marginTop = -81px)
+            (zindex = "ZIndex.BACKGROUND")
+        )
+        (source = "R.images.gui.maps.icons.new_year.infotype.arrow()")
+    )
+    (element NewYearCreditsBonus 'bonusFormula' 'mega')
+)
+
+(def element NewYearMegaToyTableRow() layout=true
+    (macro SingleMegaToysBonusModel)
+    (scope
+        (var isEnabled:bool = "status==INSTALLED")
+        (var _style:str = "isEnabled ? 'MainOrangeTextStyle' : 'MainTextStyle'")
+    )
+    (style
+        (align = "center")
+        (height = 32px)
+        (width = 450px)
+    )
+    (image
+        (style
+            (width = 100%)
+        )
+        (source = "R.images.gui.maps.icons.new_year.infotype.line()")
+    )
+    (image
+        (bind visible "isEnabled")
+        (style
+            (position = "absolute")
+            (left = 20px)
+            (top = 1px)
+        )
+        (source = "R.images.gui.maps.icons.new_year.infotype.selected_row()")
+    )
+    (hblock
+        (style
+            (paddingTop = 4px)
+            (width = 100%)
+        )
+        (tf
+            (style
+                (width = 35%)
+            )
+            (bind class "_style")
+            (bind text "R.strings.ny.megaToyBonusTooltip.toyType[type]()")
+        )
+        (tf
+            (style
+                (width = 35%)
+            )
+            (bind class "_style")
+            (bind text "R.strings.ny.megaToyBonusTooltip.status[status]()")
+        )
+        (hblock
+            (style
+                (width = 30%)
+            )
+            (image
+                (bind visible "isEnabled")
+                (style
+                    (marginTop = -4px)
+                    (marginLeft = -28px)
+                    (marginRight = -4px)
+                )
+                (source = "R.images.gui.maps.icons.new_year.infotype.icon_checkbox_checked()")
+            )
+            (tf
+                (bind class "_style")
+                (bind text "100% * value")
+            )
+        )
+    )
+    
+)

@@ -1,0 +1,202 @@
+@keyframes CraftMachineEntryPointContent_zoom-in_b1 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.03);
+    }
+}
+
+@keyframes CraftMachineEntryPointContent_zoom-out_89 {
+    0% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes CraftMachineEntryPointContent_brightness-in_24 {
+    0% {
+        filter: brightness(1);
+    }
+
+    100% {
+        filter: brightness(1.05);
+    }
+}
+
+@keyframes CraftMachineEntryPointContent_brightness-out_7d {
+    0% {
+        filter: brightness(1.05);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+}
+
+.CraftMachineEntryPointContent_base_a2 {
+    width: 100%;
+    height: 100%;
+}
+
+.CraftMachineEntryPointContent_wrapper_e0 {
+    margin-left: 6rem;
+    margin-top: 3rem;
+    border-radius: 4rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.CraftMachineEntryPointContent_base__wideBig_e7 .CraftMachineEntryPointContent_wrapper_e0 {
+        width: 400rem;
+        height: 140rem;
+    }
+
+.CraftMachineEntryPointContent_base__wideSmall_62 .CraftMachineEntryPointContent_wrapper_e0 {
+        width: 300rem;
+        height: 120rem;
+    }
+
+.CraftMachineEntryPointContent_base__thinBig_cc .CraftMachineEntryPointContent_wrapper_e0 {
+        width: 220rem;
+        height: 140rem;
+    }
+
+.CraftMachineEntryPointContent_base__thinSmall_86 .CraftMachineEntryPointContent_wrapper_e0 {
+        width: 160rem;
+        height: 120rem;
+    }
+
+.CraftMachineEntryPointContent_shadow_b2 {
+    background: no-repeat center / cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.CraftMachineEntryPointContent_base__wideBig_e7 .CraftMachineEntryPointContent_shadow_b2 {
+        background-image: url('R.images.gui.maps.icons.event.craftMachine.entryPoint.shadow_wideBig');
+    }
+
+.CraftMachineEntryPointContent_base__wideSmall_62 .CraftMachineEntryPointContent_shadow_b2 {
+        background-image: url('R.images.gui.maps.icons.event.craftMachine.entryPoint.shadow_wideSmall');
+    }
+
+.CraftMachineEntryPointContent_base__thinBig_cc .CraftMachineEntryPointContent_shadow_b2 {
+        background-image: url('R.images.gui.maps.icons.event.craftMachine.entryPoint.shadow_thinBig');
+    }
+
+.CraftMachineEntryPointContent_base__thinSmall_86 .CraftMachineEntryPointContent_shadow_b2 {
+        background-image: url('R.images.gui.maps.icons.event.craftMachine.entryPoint.shadow_thinSmall');
+    }
+
+.CraftMachineEntryPointContent_bg_56 {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center / cover;
+    animation: CraftMachineEntryPointContent_zoom-out_89 .5s cubic-bezier(.07, .82, .17, 1) forwards, CraftMachineEntryPointContent_brightness-out_7d .5s cubic-bezier(.07, .82, .17, 1) forwards;
+}
+
+.CraftMachineEntryPointContent_bg_56:hover {
+        animation: CraftMachineEntryPointContent_zoom-in_b1 .5s cubic-bezier(.07, .82, .17, 1) forwards, CraftMachineEntryPointContent_brightness-in_24 .5s cubic-bezier(.07, .82, .17, 1) forwards;
+    }
+
+.CraftMachineEntryPointContent_content_c9 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.CraftMachineEntryPointContent_icon_06 {
+    width: 140rem;
+    height: 140rem;
+    background: no-repeat center / contain;
+    position: absolute;
+    top: 0;
+}
+
+.CraftMachineEntryPointContent_base__wideSmall_62 .CraftMachineEntryPointContent_icon_06,
+    .CraftMachineEntryPointContent_base__thinSmall_86 .CraftMachineEntryPointContent_icon_06 {
+        height: 120rem;
+        margin-top: -2rem;
+    }
+
+.CraftMachineEntryPointContent_title_8b {
+    margin-bottom: 0;
+    color: #F2F2F7;
+    font-size: 18rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 0 10rem #000000;
+    letter-spacing: 1rem;
+    z-index: 1;
+}
+
+.CraftMachineEntryPointContent_base__wideBig_e7 .CraftMachineEntryPointContent_title_8b,
+    .CraftMachineEntryPointContent_base__wideSmall_62 .CraftMachineEntryPointContent_title_8b {
+        letter-spacing: .1em;
+    }
+
+.CraftMachineEntryPointContent_base__wideSmall_62 .CraftMachineEntryPointContent_title_8b,
+    .CraftMachineEntryPointContent_base__thinSmall_86 .CraftMachineEntryPointContent_title_8b {
+        margin-bottom: 2rem;
+        font-size: 15rem;
+        line-height: 15rem;
+    }
+
+.CraftMachineEntryPointContent_subtitle_6e {
+    width: 100%;
+    margin-bottom: 7rem;
+    color: #F2F2F7;
+    font-size: 14rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.CraftMachineEntryPointContent_base__wideSmall_62 .CraftMachineEntryPointContent_subtitle_6e,
+    .CraftMachineEntryPointContent_base__thinSmall_86 .CraftMachineEntryPointContent_subtitle_6e {
+        margin-bottom: 4rem;
+        font-size: 12rem;
+    }
+
+.CraftMachineEntryPointContent_status_2d {
+    width: 100%;
+    margin-bottom: 21rem;
+    color: #FFDD99;
+    font-size: 14rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.CraftMachineEntryPointContent_base__wideSmall_62 .CraftMachineEntryPointContent_status_2d,
+    .CraftMachineEntryPointContent_base__thinSmall_86 .CraftMachineEntryPointContent_status_2d {
+        margin-bottom: 10rem;
+        font-size: 12rem;
+    }
+
+body {
+    margin: 1rem;
+    overflow: hidden;
+}
+
+html {
+    overflow: hidden;
+}
+

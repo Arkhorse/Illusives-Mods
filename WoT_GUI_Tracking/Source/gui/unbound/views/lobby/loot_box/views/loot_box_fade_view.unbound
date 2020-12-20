@@ -1,0 +1,113 @@
+(def layout LootBoxFadeView() entrance=true hideBeforeResolve=true
+    (macro LootBoxFadeViewModel)
+    (name = 'LootBoxFadeView')
+    (scope
+        (var viewAlpha:number = 0)
+        (controller $Animation
+            (bindcall play
+                from="{viewAlpha:0}"
+                to="{viewAlpha:1}"
+                duration=0.3
+                callbacks="{onComplete: onFadeInCompleted}"
+                watch=false
+                init=false
+                (bind enabled "showWindow")
+            )
+            (bindcall play
+                from="{viewAlpha:1}"
+                to="{viewAlpha:0}"
+                duration=0.3
+                callbacks="{onComplete: onWindowClose}"
+                init=false
+                (bind enabled "!showWindow")
+            )
+        )
+
+        (var baseAspectRatio:number = "viewSize.width / viewSize.height")
+        (bind baseAspectRatio "viewSize.width / viewSize.height"
+            init=true
+            (enabled = "showError")
+            (event "viewResized")
+            (bind enabled "showError")
+        )
+        (var aspectRatio:number = 1.77)
+
+    )
+    (style
+        (bind width "viewSize.width"
+            (event "viewResized")
+        )
+        (bind height "viewSize.height"
+            (event "viewResized")
+        )
+        (bind alpha "viewAlpha")
+    )
+
+    (block
+        (name = 'bgBlock')
+        (style
+            (position = "absolute")
+            (backgroundColor = 0xFF000000)
+            (bind width "viewSize.width + 1"
+                (event "viewResized")
+            )
+            (bind height "viewSize.height"
+                (event "viewResized")
+            )
+            (left = -1)
+        )
+        (tabEnabled = true)
+    )
+
+    (image
+        (name = 'errorBg')
+        (style
+            (position = "absolute")
+            (bind width "baseAspectRatio >= aspectRatio ? viewSize.width : viewSize.height * aspectRatio")
+            (bind height "baseAspectRatio <= aspectRatio ? viewSize.height : viewSize.width / aspectRatio")
+            (hcenter = 0px)
+            (vcenter = 0px)
+        )
+        (source = "R.images.gui.maps.icons.lootboxes.errorBg()")
+        (bind visible "showError")
+    )
+
+    (block
+        (name = 'content')
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (vcenter = 60px)
+            (align = "center")
+            (gap = 30px)
+        )
+        (bind visible "showError")
+
+        (tf
+            (name = 'errorTf')
+            (class SuperPromoTitleTextStyle)
+            (style
+                (textAlign = "center")
+                (width = 500px)
+                (minWidth = 500px)
+                (multiline = true)
+            )
+            (text = "R.strings.system_messages.memory_critical.insufficient_memory_please_reboot()")
+        )
+
+        (button 
+            (name = 'closeBtn')
+            (macro ButtonStylePrimary "BUTTON_SIZE_LARGE")
+            (style
+                (minWidth = 120px)
+            )
+            (bind label "R.strings.dialogs.graphicsPresetRestartConfirmation.submit()")
+
+            (dispatch onCloseClick
+                on='clicked'
+            )
+
+            (bind enabled "showError")
+        )
+    )
+)

@@ -1,0 +1,12 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NewYearBreakFilterPopoverModel()
+    (scope
+        (event onCloseBtnClick)
+
+        # The following submodels are used in this model:
+        # levelBtns:gui.impl.wrappers.user_list_model.UserListModel
+        # typeDecorationBtns:gui.impl.wrappers.user_list_model.UserListModel
+        # megaDecorationBtn:gui.impl.wrappers.user_list_model.UserListModel
+    )
+)

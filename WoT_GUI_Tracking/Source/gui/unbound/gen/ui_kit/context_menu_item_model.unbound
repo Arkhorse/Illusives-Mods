@@ -1,0 +1,15 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro ContextMenuItemModel()
+    (scope
+        (var label:str = '')
+        (var icon:str = '')
+        (var isEnabled:bool = true)
+        (var isSeparator:bool = false)
+        (var id:number = 0)
+        (var subItemsCount:number = 0)
+
+        # The following submodels are used in this model:
+        # subItemsList:ui_kit.list_model
+    )
+)

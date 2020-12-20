@@ -1,0 +1,182 @@
+(def layout CrewBooksDialogContent() entrance=true
+    (macro CrewBooksDialogContentModel)
+    (scope
+        (var fadeInAlpha:number = 0)
+        (var fadeOutAlpha:number = 1)
+        (event setSubmitBtnFocus)
+        (controller $Animation
+            (bindcall play
+                to="{fadeInAlpha:1, fadeOutAlpha:0}"
+                duration=0.3
+                (bind enabled "isUseStarted")
+            )
+        )
+    )
+    (style
+        (bind width "viewSize.width"
+            (event "viewResized")
+        )
+        (bind height "viewSize.height"
+            (event "viewResized")
+        )
+        (backgroundColor = 0x20131210)
+        (align = "middle|center")
+    )
+    (dispatch onClosed on='escPressed')
+    (text_button 'closeBtn' 
+        (macro ButtonCloseStyle)
+        (style
+            (position = "absolute")
+            (top = 40px)
+            (right = 31px)
+        )
+        (label = "R.strings.menu.viewHeader.closeBtn.label()")
+        (dispatch onClosed on='clicked')
+    )
+    (block
+        (style
+            (pivotX = 50%)
+            (pivotY = 50%)
+            (align = "center")
+            (width = 100%)
+        )
+        (block
+            (style
+                (alpha = 0)
+                (position = absolute)
+                (hcenter = 0px)
+                (vcenter = -70px)
+                (blendMode = 'add')
+            )
+            (image
+                (source = "R.images.gui.maps.icons.crewBooks.lightSmall_add_use_dialog()")
+            )
+            (controller $Animation
+                (bindcall play
+                    to="{alpha:0.8}"
+                    duration=1 
+                    (bind enabled "isUseStarted")
+                )
+            )
+        )
+        (image
+            (name = 'all_crew_icon')
+            (bind visible "isAllCrewIconVisible")
+            (source = "R.images.gui.maps.icons.crewBooks.use_dialog()")
+        )
+        (block
+            (bind visible "!isAllCrewIconVisible")
+            (style
+                (width = 100%)
+                (height = 125px)
+            )
+            (element Group 'crewBookTankmenList' 'group' renderer_name='CrewBookTankmanView' container_flow="Flow.HORIZONTAL"
+                (scope 
+                    (bind containerWidth "100%")
+                    (bind containerHeight "100%")
+                    (bind containerAlign "center|middle")
+                    (containerGap = 0px)
+                )
+            )
+        )
+        (tf
+            (name = 'title')
+            (class GrandTitleTextStyle)
+            (style
+                (width = 100%)
+                (marginBottom = 7px)
+                (textAlign = "center")
+            )
+            (bind text "title")
+        )
+        (tf
+            (name = 'description')
+            (style
+                (marginBottom = 2px)
+            )
+            (bind htmlText "htmlTextStyle(
+                    formatString(description, descriptionFmtArgs, true), 
+                    'MainBigTextStyle', 
+                    'center'
+                )" 
+                (enabled="descriptionFmtArgs.length > 0 && description != ''")
+            )
+        )
+        (block
+            (name = 'divider')
+            (style
+                (width = 720px)
+                (backgroundColor = 0x19FFFFFF)
+                (height = 1px)
+                (marginTop = 16px)
+                (marginBottom = 24px)
+            )
+        )
+        (hblock
+            (bind visible "fadeOutAlpha != 0")
+            (style
+                (bind alpha "fadeOutAlpha")
+                (width = 100%)
+                (position = absolute)
+                (align = "center|middle")
+                (vcenter = 160px)
+                (hgap = 18px)
+            )
+            (button
+                (macro ButtonStylePrimary "BUTTON_SIZE_MEDIUM") 
+                (style 
+                    (minWidth = 164px)
+                    (minHeight = 33px)
+                    (marginRight = -7px)
+                )
+                (scope
+                    (dispatch onUseBtnClick on='clicked')
+                )
+                (bindcall setFocus (event "setSubmitBtnFocus"))
+                (label = "R.strings.dialogs.crewBooks.confirmation.button.submit()")
+            )
+            (button
+                (macro ButtonStyleSecondary "BUTTON_SIZE_MEDIUM") 
+                (bind enabled "!isUseStarted")
+                (style 
+                    (minWidth = 164px)
+                    (minHeight = 33px)
+                )
+                (scope
+                    (dispatch onClosed on='clicked')
+                )
+                (label = "R.strings.dialogs.crewBooks.confirmation.button.cancel()")
+            )
+        )
+        (exec "playSound(R.sounds.crewbooks_apply())"
+            (bind trigger "isUseStarted")
+        )
+        (controller $Animation
+            (play 
+                delay=0.2 
+                duration=0.3 
+                from={alpha:0, scaleX:1.1, scaleY:1.1} 
+                to={alpha:1,  scaleX:1, scaleY:1} 
+                easing="Easing.cubic_out"
+                callbacks="{onStart:setSubmitBtnFocus}"
+                fixTextJitter=true
+            )
+        )
+    )
+    (button
+            (macro ButtonStylePrimary "BUTTON_SIZE_MEDIUM")
+            (bind visible "isUseStarted")
+            (style 
+                (minWidth = 164px)
+                (minHeight = 33px)
+                (bind alpha "fadeInAlpha")
+                (position = absolute)
+                (vcenter = 160px)
+                (hcenter = 0px)
+            )
+            (scope
+                (dispatch onClosed on='clicked')
+            )
+            (label = "R.strings.crew_books.screen.button.confirm.label()")
+        )
+)

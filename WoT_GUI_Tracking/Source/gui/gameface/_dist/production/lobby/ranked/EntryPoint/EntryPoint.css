@@ -1,0 +1,205 @@
+@keyframes EntryPointContent_zoom-in_2d {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.03);
+    }
+}
+@keyframes EntryPointContent_zoom-out_38 {
+    0% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes EntryPointContent_brightness-in_2f {
+    0% {
+        filter: brightness(1);
+    }
+
+    100% {
+        filter: brightness(1.05);
+    }
+}
+@keyframes EntryPointContent_brightness-out_1c {
+    0% {
+        filter: brightness(1.05);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+}
+.EntryPointContent_base_d2 {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .3s;
+}
+.EntryPointContent_base__locked_12 {
+        cursor: default;
+    }
+.EntryPointContent_base__visible_e4 {
+        opacity: 1;
+    }
+.EntryPointContent_contentWrapper_15 {
+    margin-left: 6rem;
+    margin-top: 3rem;
+    border-radius: 4rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.EntryPointContent_base__small_01 .EntryPointContent_contentWrapper__thin_81 {
+            width: 160rem;
+            height: 120rem;
+        }
+.EntryPointContent_base__big_e3 .EntryPointContent_contentWrapper__thin_81 {
+            width: 220rem;
+            height: 140rem;
+        }
+.EntryPointContent_base__small_01 .EntryPointContent_contentWrapper__wide_d2 {
+            width: 300rem;
+            height: 120rem;
+        }
+.EntryPointContent_base__big_e3 .EntryPointContent_contentWrapper__wide_d2 {
+            width: 400rem;
+            height: 140rem;
+        }
+.EntryPointContent_contentWrapper__locked_00 {
+        pointer-events: none;
+    }
+.EntryPointContent_bg_47 {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center / cover;
+    animation: EntryPointContent_zoom-out_38 .5s cubic-bezier(.07, .82, .17, 1) forwards, EntryPointContent_brightness-out_1c .5s cubic-bezier(.07, .82, .17, 1) forwards;
+}
+.EntryPointContent_base__small_01 .EntryPointContent_bg__thin_34 {
+            background-image: url('R.images.gui.maps.icons.rankedBattles.entryPoint.bg_small_thin');
+        }
+.EntryPointContent_base__big_e3 .EntryPointContent_bg__thin_34 {
+            background-image: url('R.images.gui.maps.icons.rankedBattles.entryPoint.bg_big_thin');
+        }
+.EntryPointContent_base__small_01 .EntryPointContent_bg__wide_05 {
+            background-image: url('R.images.gui.maps.icons.rankedBattles.entryPoint.bg_small_wide');
+        }
+.EntryPointContent_base__big_e3 .EntryPointContent_bg__wide_05 {
+            background-image: url('R.images.gui.maps.icons.rankedBattles.entryPoint.bg_big_wide');
+        }
+.EntryPointContent_bg_47:hover {
+        animation: EntryPointContent_zoom-in_2d .5s cubic-bezier(.07, .82, .17, 1) forwards, EntryPointContent_brightness-in_2f .5s cubic-bezier(.07, .82, .17, 1) forwards;
+    }
+.EntryPointContent_content_7b {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.EntryPointContent_particles_ef {
+    mix-blend-mode: screen;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.EntryPointContent_particles__hidden_42 {
+        display: none;
+    }
+.EntryPointContent_base__small_01 .EntryPointContent_particlesSwf_21 {
+        width: 300rem;
+        height: 120rem;
+    }
+.EntryPointContent_base__big_e3 .EntryPointContent_particlesSwf_21 {
+        width: 400rem;
+        height: 140rem;
+    }
+.EntryPointContent_logo_17 {
+    background: no-repeat center / cover;
+}
+.EntryPointContent_base__small_01 .EntryPointContent_logo_17 {
+        width: 120rem;
+        height: 120rem;
+        margin-top: -22rem;
+        background-image: url('R.images.gui.maps.icons.rankedBattles.entryPoint.logo_small');
+    }
+.EntryPointContent_base__big_e3 .EntryPointContent_logo_17 {
+        width: 140rem;
+        height: 140rem;
+        margin-top: -21rem;
+        background-image: url('R.images.gui.maps.icons.rankedBattles.entryPoint.logo_big');
+    }
+.EntryPointContent_frozen_06 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 12, 16, .8);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.EntryPointContent_frozen__hidden_13 {
+        display: none;
+    }
+.EntryPointContent_title_6c {
+    color: #d2c28c;
+    font-weight: 700;
+    letter-spacing: 1rem;
+    z-index: 1;
+}
+.EntryPointContent_base__small_01 .EntryPointContent_title_6c {
+        margin-top: -54rem;
+        font-size: 15rem;
+    }
+.EntryPointContent_base__big_e3 .EntryPointContent_title_6c {
+        margin-top: -61rem;
+        font-size: 18rem;
+    }
+.EntryPointContent_descr_a8 {
+    width: 100%;
+    color: #e6e6e6;
+    text-align: center;
+    z-index: 1;
+}
+.EntryPointContent_base__small_01 .EntryPointContent_descr_a8 {
+        margin-top: 1rem;
+        font-size: 12rem;
+    }
+.EntryPointContent_base__big_e3 .EntryPointContent_descr_a8 {
+        margin-top: 2rem;
+        font-size: 14rem;
+    }
+.EntryPointContent_shadow_d8 {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center / cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.EntryPointContent_base__small_01 .EntryPointContent_shadow__thin_50 {
+            background-image: url('R.images.gui.maps.icons.rankedBattles.entryPoint.shadow_small_thin');
+        }
+.EntryPointContent_base__big_e3 .EntryPointContent_shadow__thin_50 {
+            background-image: url('R.images.gui.maps.icons.rankedBattles.entryPoint.shadow_big_thin');
+        }
+.EntryPointContent_base__small_01 .EntryPointContent_shadow__wide_e2 {
+            background-image: url('R.images.gui.maps.icons.rankedBattles.entryPoint.shadow_small_wide');
+        }
+.EntryPointContent_base__big_e3 .EntryPointContent_shadow__wide_e2 {
+            background-image: url('R.images.gui.maps.icons.rankedBattles.entryPoint.shadow_big_wide');
+        }
+
+body {
+    margin: 1rem;
+}
+

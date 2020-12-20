@@ -1,0 +1,16 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro CrewBookSkillModel()
+    (scope
+        (var icon:str = '')
+        (var description:str = '0')
+        (var skillName:str = '')
+        (var tankmanInvId:number = 0)
+        (var gainProgress:str = '')
+        (var isGainProgressVisible:bool = false)
+        (var isUnlearned:bool = false)
+        (var isCompact:bool = false)
+        (var isTooltipEnable:bool = true)
+        (var isLowGainedXp:bool = false)
+    )
+)

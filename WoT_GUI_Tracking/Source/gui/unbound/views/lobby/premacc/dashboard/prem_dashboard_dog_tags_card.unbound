@@ -1,0 +1,132 @@
+(def layout PremDashboardDogTagsCard() entrance=true
+    (macro PremDashboardDogTagsCardModel)
+    (macro PremDashboardAdaptiveSize)
+    (macro PremDashboardAvailable)
+
+    (bind buttonMode "isAvailable")
+    (bind mouseEnabled "isAvailable")
+    (mouseChildren = false)
+
+    (scope
+        (event evCardOver)
+        (event evCardOut)
+        (const COUNTER_OFFSET_TOP:number = 14%)
+        (const DOG_TAG_RESOLUTION_OFFSET:number = 70px)
+
+        (var counterOffsetRight:number = "isNormalSize ? 17% : 41%"
+            (event "viewResized")
+        )
+
+        (var hasBackground:bool = "background != ''")
+        (var hasEngraving:bool = "engraving != ''")
+        (var hasFlames:bool = "isMaxLevel == true")
+    )
+    (style
+        (width = 100%)
+        (height = 100%)
+        (backgroundColor = 0xff0c0c0c)
+    )
+
+    (exec "playSound(R.sounds.highlight())" on='rollOver'
+        (bind enabled "isAvailable")
+    )
+    (exec "playSound(R.sounds.play())" on='click'
+        (bind enabled "isAvailable")
+    )
+
+    (dispatch onGoToDogTagsView on='click'
+        (enabled="$event.buttonIdx == MOUSE.LEFT")
+    )
+    (dispatch evCardOver on='rollOver')
+    (dispatch evCardOut on='rollOut')
+
+    (image
+        (name = 'bg')
+        (style
+            (position = "absolute")
+        )
+        (bind source "R.images.gui.maps.icons.premacc.dashboard.dogTags[isNormalSize ? 'DT_bg_520':'DT_bg_365']()")
+    )
+
+    (tf
+        (name = 'labelTF')
+        (bind visible "isAvailable")
+        (style
+            (position = "absolute")
+            (top = 10px)
+            (left = 12px)
+            (multiline = true)
+            (width  = 150px)
+        )
+        (class HighTitleTextStyle)
+        (bind text "R.strings.premacc.dogTags.header.normalSize()")
+    )
+
+    (hblock
+        (bind visible "!isAvailable")
+        (style
+            (width = 100%)
+            (height = 100%)
+            (align = "center|middle")
+            (gap = 5px)
+        )
+        (image
+            (source = "R.images.gui.maps.icons.library.alertIcon()")
+        )
+        (tf
+            (style
+                (textAlign = "center")
+            )
+            (class = 'AlertTextStyle')
+            (text = "R.strings.menu.browser.dataUnavailable.description()")
+        )
+    )
+
+    (block
+        (mouseChildren = false)
+        (bind visible "isAvailable")
+        (name = 'dogTag')
+        (style
+            (width = 100%)
+            (height = 100%)
+        )
+        (image
+            (name = 'background')
+            (style
+                (position = "absolute")
+                (bind hcenter "isNormalSize ? 0px : DOG_TAG_RESOLUTION_OFFSET")
+                (vcenter = 0px)
+            )
+            (bind source "R.images.gui.maps.icons.dogtags.small.backgrounds[background]()" init=false
+                (bind enabled "hasBackground")
+            )
+        )
+        (image
+            (name = 'engraving')
+            (style
+                (position = "absolute")
+                (bind hcenter "isNormalSize ? 0px : DOG_TAG_RESOLUTION_OFFSET")
+                (vcenter = 0px)
+            )
+            (bind source "R.images.gui.maps.icons.dogtags.small.engravings[engraving]()" init=false
+                (bind enabled "hasEngraving")
+            )
+        )
+        (mc 'Dogtag_Flames'
+            (name = 'flamesAnim')
+            (style
+                (position = "absolute")
+                (bind hcenter "isNormalSize ? 0px : DOG_TAG_RESOLUTION_OFFSET")
+                (vcenter = 0px)
+            )
+            (bind visible "hasFlames")
+        )
+        (controller $Counter 'Counter'
+            (renderer = 'CounterX1')
+            (bind center "counterOffsetRight")
+            (top = "COUNTER_OFFSET_TOP")
+        )
+    )
+
+    (macro HoverCardAndStroke)
+)

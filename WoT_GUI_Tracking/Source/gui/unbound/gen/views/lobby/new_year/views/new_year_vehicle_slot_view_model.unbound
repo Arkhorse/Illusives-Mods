@@ -1,0 +1,33 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NewYearVehicleSlotViewModel()
+    (scope
+        (event onClearBtnClick)
+
+        (var vehicleName:str = '')
+        (var slotID:number = 0)
+        (var levelStr:str = '')
+        (var vehicleIcon:str = '')
+        (var nationIcon:str = '')
+        (var slotState:number = 0)
+        (var levelIcon:str = '')
+        (var vehicleTypeIcon:str = '')
+        (var vehicleCD:number = 0)
+        (var cooldown:number = 0)
+        (var changePriceString:str = '')
+        (var isPostEvent:bool = false)
+        (var isExtraSlot:bool = false)
+
+        (const CHANGE_AVAILABLE:number = 0)
+        (const CHANGE_TIME_OUT:number = 1)
+        (const CHANGE_IN_BATTLE:number = 2)
+        (const SLOT_DISABLED:number = 3)
+        (const SET_AVAILABLE:number = 4)
+        (const SET_COOLDOWN:number = 5)
+        (const CHANGE_IN_SQUAD:number = 6)
+
+        # The following submodels are used in this model:
+        # choiceBonusesDropDown:gui.impl.wrappers.user_drop_down_menu_model.NY2020DropDownMenuModel
+        # bonus:views.lobby.new_year.views.new_year_bonus_info_model
+    )
+)

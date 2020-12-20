@@ -1,0 +1,13 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NewYearCollectionStyleTab()
+    (scope
+        (event onCollectionNameChanged)
+
+        (var name:str = 'NewYear')
+        (var year:str = 'ny21')
+        (var count:number = 0)
+        (var total:number = 0)
+        (var isSelected:bool = false)
+    )
+)

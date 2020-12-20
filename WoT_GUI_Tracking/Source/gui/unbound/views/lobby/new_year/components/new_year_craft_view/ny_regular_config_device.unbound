@@ -1,0 +1,101 @@
+(def layout NyRegularConfigDevice(name:str = '')
+    (name = "name")
+    (macro NyCraftRegularConfigModel)
+    (scope
+        (event onTabTypeChanged)
+        (event onSliderLevelChanged)
+        (event onSliderSettingChanged)
+
+        (bind currentLevelIndex "$event.index" init=false
+            (event "onSliderLevelChanged")
+        )
+        (bind currentSettingIndex "$event.index" init=false
+            (event "onSliderSettingChanged")
+        )
+        (bind currentTypeIndex "$event.index" init=false
+            (event "onTabTypeChanged")
+        )
+
+        (dispatch onConfigChanged args="{type:LEVEL}"
+            (event "onSliderLevelChanged")
+        )
+        (dispatch onConfigChanged args="{type:SETTING}"
+            (event "onSliderSettingChanged")
+        )
+        (dispatch onConfigChanged args="{type:TYPE}"
+            (event "onTabTypeChanged")
+        )
+
+        (var isCrafting:bool = false)
+        (var useRomanNumbers:bool = true)
+    )
+
+    (style
+        (width = 790px)
+        (height = 370px)
+    )
+
+    (element NewYearRadialSlider linkage='SettingsBlockUI' minDegrees=-180 maxDegrees=0 step=45
+        (name='settingsRadial')
+        (style
+            (marginLeft = 16px)
+        )
+        (scope
+            (title = "R.strings.ny.craftView.settingsSlider.title()")
+            (bind selectedIndex "currentSettingIndex")
+            (dispatch onSliderSettingChanged on='onSelectedIndexChanged')
+            (bind enabled "enabled && !isCrafting")
+        )
+    )
+
+    (view_holder 'romanLevels')
+    (view_holder_content 'romanLevels' "useRomanNumbers"
+        (element NewYearRadialSlider linkage='LevelsBlockUI' minDegrees=-180 maxDegrees=0 step=36
+            (name='levelsRadial')
+            (style
+                (marginTop = 47px)
+                (marginLeft = 17px)
+            )
+            (scope
+                (title = "R.strings.ny.craftView.levelsSlider.title()")
+                (dispatch onSliderLevelChanged on='onSelectedIndexChanged')
+                (bind selectedIndex "currentLevelIndex")
+                (bind enabled "enabled && !isCrafting")
+            )
+        )
+    )
+
+    (view_holder 'arabicLevels')
+    (view_holder_content 'arabicLevels' "!useRomanNumbers"
+        (element NewYearRadialSlider linkage='LevelsBlockAltUI' minDegrees=-180 maxDegrees=0 step=36
+            (name='levelsRadial')
+            (style
+                (marginTop = 47px)
+                (marginLeft = 17px)
+            )
+            (scope
+                (title = "R.strings.ny.craftView.levelsSlider.title()")
+                (dispatch onSliderLevelChanged on='onSelectedIndexChanged')
+                (bind selectedIndex "currentLevelIndex")
+                (bind enabled "enabled && !isCrafting")
+            )
+        )
+    )
+
+    (element NyTypeToggleButtonGroup
+        (name = 'typeButtons')
+        (style
+            (position = "absolute")
+            (top = 48px)
+            (left = 283px)
+        )
+
+        (scope
+            (bind tabTypes "tabTypes")
+            (bind tabGroupNames "tabGroupNames")
+            (bind selectedIndex "currentTypeIndex")
+            (bind enabled "enabled && !isCrafting")
+            (dispatch onTabTypeChanged on='onSelectedIndexChanged')
+        )
+    )
+)

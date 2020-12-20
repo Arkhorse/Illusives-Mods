@@ -1,0 +1,4240 @@
+.TextButton_base_b6 {
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    font-size: 12rem;
+    position: relative;
+    cursor: pointer;
+}
+
+    .TextButton_base__right_39 {
+        flex-direction: row-reverse;
+    }
+.TextButton_icon_17 {
+    width: 32rem;
+    height: 32rem;
+    background: no-repeat center / contain;
+    position: relative;
+}
+.TextButton_icon__back_43,
+    .TextButton_icon__forward_59 {
+        margin: -1rem -5rem;
+        background-image: url('R.images.gui.maps.icons.components.text_button.back');
+        transform: translateY(1rem);
+    }
+.TextButton_icon__forward_59 {
+        transform: rotate(180deg) translateY(1rem);
+    }
+.TextButton_icon__close_53 {
+        margin: -1rem 0;
+        background-image: url('R.images.gui.maps.icons.components.text_button.close');
+    }
+.TextButton_icon__info_33 {
+        margin: -1rem -5rem;
+        background-image: url('R.images.gui.maps.icons.components.text_button.info');
+    }
+.TextButton_glow_a4 {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .16s;
+}
+.TextButton_icon__back_43 .TextButton_glow_a4,
+    .TextButton_icon__forward_59 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.back_hover');
+    }
+.TextButton_icon__close_53 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.close_hover');
+    }
+.TextButton_icon__info_33 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.info_hover');
+    }
+.TextButton_base_b6:hover .TextButton_glow_a4 {
+        opacity: 1;
+    }
+.TextButton_base_b6:active .TextButton_glow_a4 {
+        opacity: 0;
+    }
+.TextButton_caption_82 {
+    position: relative;
+    transition: color .16s;
+}
+.TextButton_caption__back_b9,
+    .TextButton_caption__forward_4e,
+    .TextButton_caption__close_36 {
+        color: #FFDD99;
+        text-shadow: 0 0 10rem rgba(255,42,0, 1),
+            0 0 10rem rgba(255,42,0, .4),
+            0 0 10rem rgba(255,42,0, .4),
+            0 0 2rem rgba(255,42,0, .4),
+            0 0 1rem rgba(255,42,0, .4),
+            0 0 2rem rgba(255,42,0, .4),
+            0 0 1rem rgba(255,42,0, .4);
+    }
+.TextButton_base_b6:hover .TextButton_caption__back_b9, .TextButton_base_b6:hover .TextButton_caption__forward_4e, .TextButton_base_b6:hover .TextButton_caption__close_36 {
+            color: #fffa9f;
+        }
+.TextButton_base_b6:active .TextButton_caption__back_b9, .TextButton_base_b6:active .TextButton_caption__forward_4e, .TextButton_base_b6:active .TextButton_caption__close_36 {
+            color: #FFDD99;
+        }
+.TextButton_caption__info_23 {
+        padding: 0 5rem;
+        color: #CCFFFF;
+        text-shadow: 0 0 12rem rgba(31,68,255, .8),
+            0 0 8rem #00eaff;
+    }
+.TextButton_base_b6:hover .TextButton_caption__info_23 {
+            color: #e3ffff;
+            text-shadow: 0 0 12rem rgba(31,68,255, .8),
+                0 0 12rem rgba(0,234,255, 1),
+                0 0 8rem #00eaff;
+        }
+.TextButton_base_b6:active .TextButton_caption__info_23 {
+            color: #CCFFFF;
+            text-shadow: 0 0 12rem rgba(31,68,255, .6),
+                0 0 8rem #00eaff;
+        }
+.TextButton_goto_e7 {
+    color: #7c7c6c;
+}
+.TextButton_base__left_ff .TextButton_goto_e7 {
+        margin-left: 8rem;
+    }
+.TextButton_base__right_39 .TextButton_goto_e7 {
+        margin-right: 8rem;
+    }
+.TextButton_shine_e2 {
+    width: 90rem;
+    height: 40rem;
+    background: url('R.images.gui.maps.icons.components.text_button.shine') no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: -4rem;
+    transition: opacity .16s;
+    pointer-events: none;
+}
+.TextButton_base__left_ff .TextButton_shine_e2 {
+        left: -4rem;
+    }
+.TextButton_base__right_39 .TextButton_shine_e2 {
+        right: -4rem;
+        transform: rotate(180deg);
+    }
+.TextButton_base_b6:hover .TextButton_shine_e2 {
+        opacity: 1;
+    }
+.TextButton_base_b6:active .TextButton_shine_e2 {
+        opacity: 0;
+    }
+
+
+.ProgressBarBlink_base_24 {
+    width: 60rem;
+    height: 100rem;
+    background-image: var(--progress-glow);
+    background-size: contain;
+    mix-blend-mode: lighten;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    pointer-events: none;
+}
+
+    .ProgressBarBlink_base__small_0f {
+        width: 44rem;
+        height: 43rem;
+        background-image: var(--progress-glow-small);
+    }
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressLineImpose_base_80 {
+    max-width: 8001px;
+    height: 100%;
+    background-color: var(--progress-line-base);
+    position: relative;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-property: width;
+}
+.ProgressLineImpose_base__disabled_cc {
+        background-color: var(--progress-line-disabled);
+    }
+.ProgressLineImpose_base__finished_d4 {
+        background-color: var(--progress-line-finished);
+    }
+.ProgressLineImpose_base__withoutBounce_56 {
+        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+    }
+.ProgressLineImpose_pattern_1c {
+    max-width: 8001px;
+    background-image: linear-gradient(90deg, var(--progress-pattern-base) 60%, transparent 40%);
+    background-repeat: repeat;
+    background-position: 0 50%;
+    background-size: 3rem 10rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+}
+.ProgressLineImpose_base__small_55 .ProgressLineImpose_pattern_1c {
+        top: 0;
+        bottom: 0;
+    }
+.ProgressLineImpose_base__disabled_cc .ProgressLineImpose_pattern_1c {
+    background-image: linear-gradient(90deg, var(--progress-pattern-disabled) 60%, transparent 40%);
+    }
+.ProgressLineImpose_base__finished_d4 .ProgressLineImpose_pattern_1c {
+    background-image: linear-gradient(90deg, var(--progress-pattern-finished) 60%, transparent 40%);
+    }
+.ProgressLineImpose_gradient_35 {
+    max-width: 8001px;
+    background-image: linear-gradient(90deg, rgba(0,0,0, .5), rgba(255,255,255, .75));
+    mix-blend-mode: overlay;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    bottom: 1rem;
+    left: 0;
+}
+.ProgressLineImpose_base__small_55 .ProgressLineImpose_gradient_35 {
+        top: 0;
+        bottom: 0;
+    }
+.ProgressLineImpose_base__disabled_cc .ProgressLineImpose_gradient_35 {
+        display: none;
+    }
+.ProgressLineImpose_base__finished_d4 .ProgressLineImpose_gradient_35 {
+        background-image: linear-gradient(90deg, rgba(0,0,0, .5), rgba(255,255,255, .75), rgba(0,0,0, .5));
+    }
+.ProgressLineImpose_glow_a5 {
+    width: 60rem;
+    max-width: 8001px;
+    height: 100rem;
+    background-image: var(--progress-glow);
+    background-size: contain;
+    mix-blend-mode: lighten;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.ProgressLineImpose_glow__left_d8 {
+        left: 1rem;
+    }
+.ProgressLineImpose_base__disabled_cc .ProgressLineImpose_glow_a5,
+    .ProgressLineImpose_base__finished_d4 .ProgressLineImpose_glow_a5 {
+        display: none;
+    }
+.ProgressLineImpose_base__small_55 .ProgressLineImpose_glow_a5 {
+        width: 44rem;
+        height: 43rem;
+        background-image: var(--progress-glow-small);
+    }
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressBarDeltaSimple_base_6c {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.ProgressBarDeltaSimple_delta_99 {
+    width: 0;
+    max-width: 8001px;
+    height: 100%;
+    box-shadow: var(--progress-delta-shadow);
+    background-color: var(--progress-delta-color);
+    position: absolute;
+    bottom: 0;
+    transform-origin: right center;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39), cubic-bezier(.21, .61, .35, 1);
+    transition-property: width, transform;
+}
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressBarDeltaGrow_base_7e {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-property: width;
+}
+.ProgressBarDeltaGrow_base__withoutBounce_b5 {
+        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+    }
+.ProgressBarDeltaGrow_glow_68 {
+    width: 0;
+    max-width: 8001px;
+    height: 100%;
+    box-shadow: var(--progress-delta-shadow);
+    background-color: var(--progress-delta-color);
+    position: absolute;
+    bottom: 0;
+    transform-origin: right center;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-property: width;
+}
+.ProgressBarDeltaGrow_base__withoutBounce_b5 .ProgressBarDeltaGrow_glow_68 {
+        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+    }
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressBar_base_45 {
+    width: 100%;
+    height: 12rem;
+    position: relative;
+}
+.ProgressBar_base__small_df {
+        height: 2rem;
+    }
+.ProgressBar_background_51 {
+    background-image: linear-gradient(90deg, var(--progress-base) 60%, transparent 40%);
+    width: 100%;
+    max-width: 8001px;
+    height: 100%;
+    background-repeat: repeat;
+    background-position: 0 50%;
+    background-size: 3rem 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.ProgressBar_background__small_46 {
+        height: 2rem;
+    }
+.ProgressBar_lineWrapper_6a {
+    display: flex;
+    flex: 1;
+}
+
+@keyframes EmblemProgressBar_hideLevel_1e {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(40rem);
+    }
+}
+@keyframes EmblemProgressBar_showLevel_5d {
+    0% {
+        transform: translateY(-20rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes EmblemProgressBar_hideLevelSmall_ae {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(30rem);
+    }
+}
+@keyframes EmblemProgressBar_showLevelSmall_df {
+    0% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes EmblemProgressBar_showIcon_55 {
+    0% {
+        opacity: 0;
+        transform: translateY(-20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes EmblemProgressBar_showIconSmall_26 {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes EmblemProgressBar_hideProgress_18 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+.EmblemProgressBar_base_5c {
+    width: 60rem;
+    height: 3rem;
+    background-color: #030303;
+    overflow: hidden;
+    position: absolute;
+    top: 62rem;
+}
+.EmblemProgressBar_base__small_6c {
+        width: 40rem;
+        top: 50rem;
+    }
+.EmblemProgressBar_base__completed_6d {
+    animation-name: EmblemProgressBar_hideProgress_18;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: .6s;
+    animation-iteration-count: 1;
+    }
+.EmblemProgressBar_base__completePostProgression_20 {
+    animation-name: EmblemProgressBar_hideProgress_18;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    }
+.EmblemProgressBar_base__hidden_8b {
+        display: none;
+    }
+
+@keyframes Label_hideLevel_61 {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(40rem);
+    }
+}
+@keyframes Label_showLevel_55 {
+    0% {
+        transform: translateY(-20rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes Label_hideLevelSmall_9d {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(30rem);
+    }
+}
+@keyframes Label_showLevelSmall_96 {
+    0% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes Label_showIcon_0f {
+    0% {
+        opacity: 0;
+        transform: translateY(-20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes Label_showIconSmall_96 {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes Label_hideProgress_0c {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes Label_show_69 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes Label_hide_33 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes Label_maskAppearance_26 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes Label_textAppearance_31 {
+    from {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.Label_base_85 {
+    display: flex;
+    position: relative;
+}
+.Label_textWithBlend_07 {
+    display: flex;
+    mix-blend-mode: screen;
+    position: relative;
+}
+.Label_textWithBlend__show_fa {
+        opacity: 0;
+    animation-name: Label_show_69;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .16, 1);
+    animation-delay: .3s;
+    animation-iteration-count: 1;
+    }
+.Label_textWithBlend__new_4a {
+        opacity: 0;
+    animation-name: Label_show_69;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .16, 1);
+    animation-delay: .8s;
+    animation-iteration-count: 1;
+    }
+.Label_textWithBlend__hide_f1 {
+    animation-name: Label_hide_33;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.6, .04, .98, .34);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    }
+.Label_textMask_7f {
+    width: 100%;
+    height: 100%;
+    background-image: url('R.images.gui.maps.icons.battlePass2020.logo.font_texture');
+    background-position: 50% 4rem;
+    background-size: cover;
+    mix-blend-mode: multiply;
+    position: absolute;
+    transform: scale(.98);
+}
+/* blend-mode border fix*/
+.Label_textMask__gold_71 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.font_texture_gold');
+    }
+.Label_textMask__goldContrast_05 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.font_texture_gold_contrast');
+    }
+.Label_textMask__animated_38 {
+    opacity: 0;
+    animation-name: Label_maskAppearance_26;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 1.3s;
+    animation-iteration-count: 1;
+    }
+.Label_textMask__extraLarge_4c {
+        background-position: 50% 9rem;
+    }
+.Label_text_67 {
+    display: flex;
+    font-size: 40rem;
+    font-weight: 700;
+}
+.Label_text__small_e0 {
+        font-size: 32rem;
+    }
+.Label_text__large_65 {
+        font-size: 60rem;
+    }
+.Label_text__extraLarge_22 {
+        font-size: 75rem;
+    }
+.Label_text__blended_67 {
+        background: #000;
+        color: #fff;
+        mix-blend-mode: lighten;
+    }
+.Label_text__filtered_86 {
+        color: #000;
+        text-shadow: 0 1rem 0 #000, 0 4rem 10rem #000, 0 -1rem 2rem #ff9d7266;
+        position: absolute;
+    }
+.Label_text__rewardScreen_68 {
+    opacity: 0;
+    mix-blend-mode: normal;
+    animation-name: Label_textAppearance_31;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 1.2s;
+    animation-iteration-count: 1;
+    }
+.Label_text__show_95 {
+        opacity: 0;
+    animation-name: Label_show_69;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .16, 1);
+    animation-delay: .3s;
+    animation-iteration-count: 1;
+    }
+.Label_text__hide_37 {
+    animation-name: Label_hide_33;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.6, .04, .98, .34);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    }
+.Label_text__hideWithDelay_53 {
+    animation-name: Label_hide_33;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.6, .04, .98, .34);
+    animation-delay: .8s;
+    animation-iteration-count: 1;
+    }
+.Label_text__new_a0 {
+        opacity: 0;
+    animation-name: Label_show_69;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .16, 1);
+    animation-delay: .8s;
+    animation-iteration-count: 1;
+    }
+
+@keyframes EmblemLabels_hideLevel_be {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(40rem);
+    }
+}
+@keyframes EmblemLabels_showLevel_04 {
+    0% {
+        transform: translateY(-20rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes EmblemLabels_hideLevelSmall_c1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(30rem);
+    }
+}
+@keyframes EmblemLabels_showLevelSmall_2f {
+    0% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes EmblemLabels_showIcon_d3 {
+    0% {
+        opacity: 0;
+        transform: translateY(-20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes EmblemLabels_showIconSmall_cb {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes EmblemLabels_hideProgress_7f {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+.EmblemLabels_label_14 {
+    position: absolute;
+    top: 18rem;
+}
+.EmblemLabels_label__small_a3 {
+        top: 12rem;
+    }
+.EmblemLabels_label__hasProgress_26 {
+        top: 8rem;
+        /* stylelint-enable */
+    }
+.EmblemLabels_label__hasProgressSmall_c1 {
+            top: 8rem;
+        }
+/* stylelint-disable */
+.EmblemLabels_label__hasProgressSmall_c1,
+        .EmblemLabels_label__hasProgress_26 [lang=ja],
+        .EmblemLabels_label__hasProgress_26 [lang=ko],
+        .EmblemLabels_label__hasProgress_26 [lang=zh_tw],
+        .EmblemLabels_label__hasProgress_26 [lang=zh_sg],
+        .EmblemLabels_label__hasProgress_26 [lang=zh_ch],
+        .EmblemLabels_label__hasProgress_26 [lang=th] {
+            top: 12rem;
+        }
+/* stylelint-disable */
+.EmblemLabels_label__hasProgress_26,
+    .EmblemLabels_label_14 [lang=ja],
+    .EmblemLabels_label_14 [lang=ko],
+    .EmblemLabels_label_14 [lang=zh_tw],
+    .EmblemLabels_label_14 [lang=zh_sg],
+    .EmblemLabels_label_14 [lang=zh_ch],
+    .EmblemLabels_label_14 [lang=th] {
+        top: 14rem;
+    }
+/* stylelint-enable */
+.EmblemLabels_label__show_3d {
+    animation-name: EmblemLabels_showLevel_04;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .16, 1);
+    animation-delay: .3s;
+    animation-iteration-count: 1;
+    }
+.EmblemLabels_label__showSmall_7e {
+    animation-name: EmblemLabels_showLevelSmall_2f;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .16, 1);
+    animation-delay: .3s;
+    animation-iteration-count: 1;
+        }
+.EmblemLabels_label__hide_28 {
+    animation-name: EmblemLabels_hideLevel_be;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.6, .04, .98, .34);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    }
+.EmblemLabels_label__hideSmall_6d {
+    animation-name: EmblemLabels_hideLevelSmall_c1;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.6, .04, .98, .34);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+        }
+.EmblemLabels_label__hideWithDelay_68 {
+    animation-name: EmblemLabels_hideLevel_be;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.6, .04, .98, .34);
+    animation-delay: .8s;
+    animation-iteration-count: 1;
+    }
+.EmblemLabels_label__hideWithDelaySmall_36 {
+    animation-name: EmblemLabels_hideLevelSmall_c1;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.6, .04, .98, .34);
+    animation-delay: .8s;
+    animation-iteration-count: 1;
+        }
+.EmblemLabels_label__new_d7 {
+    animation-name: EmblemLabels_showLevel_04;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .16, 1);
+    animation-delay: .8s;
+    animation-iteration-count: 1;
+    }
+.EmblemLabels_label__newSmall_c1 {
+    animation-name: EmblemLabels_showLevelSmall_2f;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .16, 1);
+    animation-delay: .8s;
+    animation-iteration-count: 1;
+        }
+.EmblemLabels_label__disabled_b6 {
+        display: none;
+    }
+.EmblemLabels_iconCompleted_4b {
+    width: 70rem;
+    height: 70rem;
+    margin-top: -7rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.logo.tank') center center / contain no-repeat;
+}
+.EmblemLabels_iconCompleted__small_64 {
+        width: 58rem;
+        height: 60rem;
+        margin-top: -4rem;
+        background: url('R.images.gui.maps.icons.battlePass2020.logo.tank_small') center center / contain no-repeat;
+    }
+.EmblemLabels_iconCompleted__animated_8e {
+    animation-name: EmblemLabels_showIcon_d3;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.6, .04, .98, .34);
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+        opacity: 0;
+    }
+.EmblemLabels_iconCompleted__animatedSmall_46 {
+    animation-name: EmblemLabels_showIconSmall_cb;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.6, .04, .98, .34);
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+        opacity: 0;
+    }
+
+@keyframes Emblem_hideLevel_f2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(40rem);
+    }
+}
+@keyframes Emblem_showLevel_c5 {
+    0% {
+        transform: translateY(-20rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes Emblem_hideLevelSmall_cc {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(30rem);
+    }
+}
+@keyframes Emblem_showLevelSmall_31 {
+    0% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes Emblem_showIcon_c2 {
+    0% {
+        opacity: 0;
+        transform: translateY(-20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes Emblem_showIconSmall_1d {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes Emblem_hideProgress_b4 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+.Emblem_base_be {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.Emblem_progress_37 {
+    width: 60rem;
+    height: 3rem;
+    background-color: #030303;
+    position: absolute;
+    top: 62rem;
+}
+.Emblem_progress__small_42 {
+        width: 40rem;
+        top: 50rem;
+    }
+.Emblem_progress__completed_69 {
+    animation-name: Emblem_hideProgress_b4;
+    animation-duration: .1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: .6s;
+    animation-iteration-count: 1;
+    }
+.Emblem_progress__completePostProgression_65 {
+    animation-name: Emblem_hideProgress_b4;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    }
+.Emblem_progress__hidden_6d {
+        display: none;
+    }
+.Emblem_image_dc {
+    display: flex;
+    justify-content: center;
+    width: 130rem;
+    height: 130rem;
+    padding-top: 25rem;
+    padding-bottom: 78rem;
+    background: left top / cover no-repeat;
+    position: relative;
+}
+.Emblem_image__small_ce {
+        width: 100rem;
+        height: 100rem;
+        padding-top: 18rem;
+        padding-bottom: 57rem;
+    }
+.Emblem_image__noVehicles_54 {
+        filter: brightness(.7) saturate(.7);
+    }
+.Emblem_image__mainNoBattlePass_7a {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Main_NoBP');
+    }
+.Emblem_image__mainNoBattlePassSmall_c2 {
+            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Main_NoBP_small');
+        }
+.Emblem_image__mainBattlePass_c6 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Main_BP');
+    }
+.Emblem_image__mainBattlePassSmall_0f {
+            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Main_BP_small');
+        }
+.Emblem_image__postBattlePass_b1 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Post_BP');
+    }
+.Emblem_image__postBattlePassSmall_55 {
+            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Post_BP_small');
+        }
+.Emblem_image__seasonWaiting_96 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.seasonWaiting');
+    }
+.Emblem_image__seasonWaitingSmall_c0 {
+            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.seasonWaiting_small');
+        }
+.Emblem_alert_33 {
+    height: 0;
+    position: relative;
+}
+.Emblem_alertIcon_f4 {
+    width: 32rem;
+    height: 26rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.logo.alert_big') no-repeat center center / contain;
+    position: absolute;
+    bottom: 33rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.Emblem_alertIcon__small_a9 {
+        width: 28rem;
+        height: 22rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.alert_small');
+        bottom: 24rem;
+    }
+
+.Counter_base_9e {
+    display: flex;
+    min-width: 14rem;
+    height: 14rem;
+    position: relative;
+    z-index: 0;
+    animation: Counter_show_be ease-in-out forwards;
+}
+
+    .Counter_base__big_19 {
+        min-width: 21rem;
+        height: 21rem;
+    }
+
+    .Counter_base__small_3b {
+        min-width: 13rem;
+        height: 13rem;
+    }
+
+    .Counter_base__empty_98 {
+        min-width: 6rem;
+        height: 6rem;
+    }
+
+    .Counter_base__animated_40 {
+        animation-duration: .2s;
+    }
+
+    .Counter_base__hidden_56 {
+        animation-direction: reverse;
+    }
+.Counter_bg_74 {
+    border: 1rem solid #fe4e0f;
+    border-radius: 7rem;
+    box-shadow: 0 0 0 1rem rgba(0,0,0, .3),
+            0 0 6rem rgba(254,103,0, .2),
+            0 0 12rem 4rem rgba(249,0,0, .3);
+    background-image: url('R.images.gui.maps.icons.components.counter.pattern');
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.Counter_base__big_19 .Counter_bg_74 {
+        border-radius: 11rem;
+    }
+.Counter_base__small_3b .Counter_bg_74 {
+        border-radius: 7rem;
+    }
+.Counter_value_3e {
+    padding: 0 4rem;
+    color: #fefeec;
+    font-size: 11rem;
+    line-height: 13rem;
+}
+.Counter_base__big_19 .Counter_value_3e {
+        padding: 0 7rem;
+        font-size: 14rem;
+        line-height: 20rem;
+    }
+.Counter_base__small_3b .Counter_value_3e {
+        font-size: 9rem;
+        line-height: 12rem;
+    }
+.Counter_value__text_d6 {
+        padding: 0 7rem;
+    }
+.Counter_base__big_19 .Counter_value__text_d6 {
+            padding: 0 10rem;
+        }
+.Counter_base__small_3b .Counter_value__text_d6 {
+            padding: 0 5rem;
+        }
+.Counter_base__pattern_71 .Counter_value_3e {
+        display: none;
+    }
+.Counter_pattern_83 {
+    display: none;
+}
+.Counter_base__pattern_71 .Counter_pattern_83 {
+        display: block;
+        border-radius: 50%;
+        background-image: url('R.images.gui.maps.icons.components.counter.pattern');
+        opacity: .8;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+@keyframes Counter_show_be {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* colors*/
+
+/* Calculate glow mask according to the button size*/
+
+.FlatButton_base_36 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 66rem;
+    height: 66rem;
+    border: 1rem solid rgba(255,255,255, .25);
+    border-radius: 2rem;
+    background: rgba(0,0,0, .3) repeat-y right center;
+    color: #e9e2bf;
+    font-size: 15rem;
+    font-weight: 700;
+    position: relative;
+    transition: border linear .16s,
+        background-color linear .16s;
+    cursor: pointer;
+}
+
+@media (min-width: 1280px) {
+
+.FlatButton_base_36 {
+        width: 205rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.buttons_lines')
+}
+    }
+
+@media (min-width: 1600px) {
+
+.FlatButton_base_36 {
+        width: 245rem
+}
+    }
+
+@media (min-width: 1280px) {
+
+.FlatButton_base__small_ec {
+            width: 66rem;
+            background: rgba(0,0,0, .3) repeat-y right center
+    }
+    }
+
+@media (min-width: 1600px) {
+
+.FlatButton_base__small_ec {
+            width: 66rem
+    }
+    }
+
+@media (min-width: 1920px) {
+
+.FlatButton_base__small_ec {
+            width: 245rem;
+            background-image: url('R.images.gui.maps.icons.battlePass2020.progression.buttons_lines')
+    }
+    }
+
+.FlatButton_base__disabled_1e {
+        opacity: .5;
+        cursor: default;
+    }
+
+.FlatButton_base__hover_41 {
+        border-color: rgba(255,255,255, .35);
+        background-color: rgba(0,0,0, .4);
+    }
+
+.FlatButton_base__click_ab {
+        border-color: rgba(255,255,255, .25);
+        background-color: rgba(0,0,0, .3);
+    }
+
+.FlatButton_base__highlight_0b {
+        border: 0;
+        box-shadow: 0 0 7px #ff2a00;
+    }
+
+.FlatButton_highlight_b0 {
+    width: 100%;
+    height: 100%;
+    border: 1rem solid #fd9;
+    border-radius: 2rem;
+    filter: drop-shadow(0 0 7px #ff2a00);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.FlatButton_glowInner_cb {
+    width: 100%;
+    height: 100%;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.rare_light_large') no-repeat center / contain;
+    mix-blend-mode: additive;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: FlatButton_rotating_25 15s linear infinite;
+}
+
+.FlatButton_glow_12 {
+    clip-path: polygon(
+                    0% 0%,
+                    0% 100%,
+                    118rem 100%,
+                    118rem 118rem,
+                    184rem 118rem,
+                    184rem 184rem,
+                    118rem 184rem,
+                    118rem 100%,
+                    100% 100%,
+                    100% 0%
+    );
+    width: 302rem;
+    height: 302rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+@media (min-width: 1280px) {
+
+.FlatButton_glow_12 {
+    clip-path: polygon(
+                    0% 0%,
+                    0% 100%,
+                    48.5rem 100%,
+                    48.5rem 118rem,
+                    253.5rem 118rem,
+                    253.5rem 184rem,
+                    48.5rem 184rem,
+                    48.5rem 100%,
+                    100% 100%,
+                    100% 0%
+    )
+}
+    }
+
+@media (min-width: 1600px) {
+
+.FlatButton_glow_12 {
+    clip-path: polygon(
+                    0% 0%,
+                    0% 100%,
+                    28.5rem 100%,
+                    28.5rem 118rem,
+                    273.5rem 118rem,
+                    273.5rem 184rem,
+                    28.5rem 184rem,
+                    28.5rem 100%,
+                    100% 100%,
+                    100% 0%
+    )
+}
+    }
+
+@media (min-width: 1280px) {
+
+.FlatButton_base__small_ec .FlatButton_glow_12 {
+    clip-path: polygon(
+                    0% 0%,
+                    0% 100%,
+                    118rem 100%,
+                    118rem 118rem,
+                    184rem 118rem,
+                    184rem 184rem,
+                    118rem 184rem,
+                    118rem 100%,
+                    100% 100%,
+                    100% 0%
+    )
+    }
+    }
+
+@media (min-width: 1920px) {
+
+.FlatButton_base__small_ec .FlatButton_glow_12 {
+    clip-path: polygon(
+                    0% 0%,
+                    0% 100%,
+                    28.5rem 100%,
+                    28.5rem 118rem,
+                    273.5rem 118rem,
+                    273.5rem 184rem,
+                    28.5rem 184rem,
+                    28.5rem 100%,
+                    100% 100%,
+                    100% 0%
+    )
+    }
+    }
+
+.FlatButton_content_3f {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    padding: 0 9rem;
+    line-height: 1.25;
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.FlatButton_icon_24 {
+    width: 52rem;
+    height: 52rem;
+    background: no-repeat center / contain;
+    filter: brightness(70%);
+    transition: filter linear .16s;
+}
+
+.FlatButton_base__hover_41 .FlatButton_icon_24 {
+        filter: brightness(100%);
+    }
+
+.FlatButton_label_a4 {
+    display: none;
+    white-space: pre;
+}
+
+@media (min-width: 1280px) {
+
+.FlatButton_label_a4 {
+        display: flex;
+        flex: 0;
+        margin-left: 10rem;
+        padding-bottom: 3rem
+}
+    }
+
+.FlatButton_base__small_ec .FlatButton_label_a4 {
+        display: none;
+    }
+
+@media (min-width: 1920px) {
+
+.FlatButton_base__small_ec .FlatButton_label_a4 {
+            display: flex
+    }
+    }
+
+.FlatButton_counter_c3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(40%, -50%);
+}
+
+@keyframes FlatButton_rotating_25 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* vertical offset for positioning progression's progressbar at the center of screen */
+.Header_base_be {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 120rem;
+    margin-top: -3rem;
+    padding: 0 50rem;
+    z-index: 1;
+}
+.Header_base__large_6e {
+        height: 220rem;
+        padding-bottom: 19rem;
+    }
+.Header_labels_82 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+}
+.Header_title_1f {
+    margin-left: 0;
+    position: relative;
+    transform: translateY(-4rem);
+}
+.Header_title__small_06 {
+        margin-left: -5rem;
+    }
+.Header_titleText_81 {
+    color: #f2f2f7;
+    font-size: 28rem;
+    font-weight: 700;
+    line-height: 1;
+}
+.Header_titleText__large_42 {
+        font-size: 36rem;
+        line-height: 40rem;
+    }
+.Header_date_5f {
+    color: #e9e2bf;
+    font-size: 15rem;
+    font-weight: 700;
+    line-height: 18rem;
+    position: absolute;
+    left: 0;
+    transform: translateY(-100%);
+}
+.Header_date__small_c0 {
+        top: -1rem;
+    }
+.Header_date__medium_7c {
+        top: -7rem;
+    }
+.Header_date__large_b7 {
+        font-size: 18rem;
+        line-height: 28rem;
+        top: -4rem;
+    }
+.Header_titleButton_1d {
+    position: absolute;
+    top: 100%;
+    left: -7rem;
+}
+.Header_titleButton__small_60 {
+        margin-top: 2rem;
+    }
+.Header_titleButton__medium_58 {
+        margin-top: 6rem;
+    }
+.Header_titleButton__large_78 {
+        margin-top: 10rem;
+    }
+.Header_logo_2d {
+    margin-left: -6rem;
+    padding-right: 12rem;
+}
+.Header_logo__medium_9f {
+        transform: translateY(3rem);
+    }
+.Header_logo__large_68 {
+        padding-right: 8rem;
+    }
+.Header_buttons_70 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+.Header_buttonsItem_45 + .Header_buttonsItem_45 {
+        margin-right: 20rem;
+    }
+
+.ScrollArea_base_47 {
+    width: 100%;
+    min-width: 1rem;
+    min-height: 1rem;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+    .ScrollArea_base__scrollIndent_1d.ps--active-y {
+        padding-right: 13rem;
+    }
+
+    .ScrollArea_base__scrollIndent_1d.ps--active-х {
+        padding-bottom: 13rem;
+    }
+
+    .ScrollArea_base__verticalScrollbarMargin_50 .ps__rail-y {
+                margin: 20rem 0;
+                right: 5rem;
+            }
+
+    .ScrollArea_base__multiple_44 .ps__rail-y {
+                margin-bottom: 30rem;
+            }
+
+    .ScrollArea_base__hidden_ec {
+        visibility: hidden;
+    }
+.ps--scrolling-dragging {
+        cursor: move;
+    }
+.ps__rail-x, .ps__thumb-x {
+        height: 13rem;
+        position: absolute;
+    }
+.ps__rail-y, .ps__thumb-y {
+        width: 13rem;
+        position: absolute;
+    }
+.ps__thumb-x, .ps__button-start-x, .ps__button-end-x, .ps__thumb-y, .ps__button-start-y, .ps__button-end-y {
+        border: 1rem solid #7e7b68;
+        box-shadow: inset 0 0 1rem rgba(255,255,190, .3);
+        opacity: .7;
+    }
+.ps__thumb-x:hover, .ps__button-start-x:hover, .ps__button-end-x:hover, .ps__thumb-y:hover, .ps__button-start-y:hover, .ps__button-end-y:hover {
+            opacity: 1;
+        }
+.ps__thumb-x, .ps__button-start-x, .ps__button-end-x {
+        bottom: -6rem;
+    }
+.ps__thumb-y, .ps__button-start-y, .ps__button-end-y {
+        right: -6rem;
+    }
+.ps__rail-x {
+        display: none;
+        margin: 0 15rem;
+        border-top: 6rem solid transparent;
+        border-bottom: 6rem solid transparent;
+        bottom: 0;
+        cursor: pointer;
+    }
+.ps__rail-y {
+        display: none;
+        margin: 15rem 0;
+        border-left: 6rem solid transparent;
+        border-right: 6rem solid transparent;
+        right: 0;
+        cursor: pointer;
+    }
+.ps__track_x, .ps__track_y {
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.background');
+        background-size: 1rem;
+        position: relative;
+    }
+.ps__track_x:hover, .ps__track_y:hover {
+            opacity: .7;
+        }
+.ps__track_x {
+        width: 100%;
+        height: 1rem;
+        background-repeat: repeat-x;
+        background-position: 50% 0;
+    }
+.ps__track_y {
+        width: 1rem;
+        height: 100%;
+        background-repeat: repeat-y;
+        background-position: 0 50%;
+    }
+.ps--active-x > .ps__rail-x, .ps--active-y > .ps__rail-y {
+        display: block;
+    }
+.ps__thumb-x, .ps__thumb-y {
+        background: #26241b 50% 50% no-repeat;
+        transition: opacity linear .13s;
+    }
+.ps__thumb-x:active, .ps__thumb-y:active {
+            opacity: .7;
+        }
+.ps__thumb-x {
+        min-width: 10rem;
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.thumb_horizontal');
+        background-size: 8rem 7rem;
+    }
+.ps__thumb-y {
+        min-height: 10rem;
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.thumb');
+        background-size: 7rem 8rem;
+    }
+.ps__button-start-x, .ps__button-end-x, .ps__button-start-y, .ps__button-end-y {
+        width: 13rem;
+        height: 13rem;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 7rem 5rem;
+        position: absolute;
+    }
+.ps__button-start-x.disabled, .ps__button-end-x.disabled, .ps__button-start-y.disabled, .ps__button-end-y.disabled {
+            opacity: .3;
+            cursor: default;
+            pointer-events: none;
+        }
+.ps__button-start-x, .ps__button-start-y {
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.arrow_top');
+    }
+.ps__button-end-x, .ps__button-end-y {
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.arrow_down');
+    }
+.ps__button-start-x, .ps__button-end-x {
+        transform: rotate(-90deg);
+    }
+.ps__button-start-x {
+        left: -14rem;
+    }
+.ps__button-end-x {
+        right: -14rem;
+    }
+.ps__button-start-y {
+        top: -14rem;
+    }
+.ps__button-end-y {
+        bottom: -14rem;
+    }
+
+/* vertical offset for positioning progression's progressbar at the center of screen */
+/* colors*/
+@keyframes Bookmark_fadeOut_68 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes Bookmark_fadeIn_79 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes Bookmark_fadeInWithScale_f1 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes Bookmark_slideUp_10 {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes Bookmark_scale_c9 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+.Bookmark_base_cc {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+.Bookmark_container_72 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+}
+.Bookmark_container__start_b1 {
+        height: 50rem;
+    }
+.Bookmark_container__startSmall_5e {
+            width: 376rem;
+        }
+.Bookmark_container__startMedium_6f {
+            width: 501rem;
+        }
+.Bookmark_container__startLarge_96 {
+            width: 576rem;
+        }
+.Bookmark_container__wide_14 {
+        height: 130rem;
+    }
+.Bookmark_container__wideSmall_84 {
+            width: 316rem;
+        }
+.Bookmark_container__wideMedium_64 {
+            width: 436rem;
+        }
+.Bookmark_container__wideLarge_c7 {
+            width: 486rem;
+        }
+.Bookmark_textWrapper_46 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50rem;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .3s ease-in-out opacity;
+}
+.Bookmark_textWrapper__small_b1 {
+        padding-right: 47rem;
+    }
+.Bookmark_textWrapper__medium_99 {
+        padding-right: 62rem;
+    }
+.Bookmark_textWrapper__large_98 {
+        padding-right: 84.5rem;
+    }
+.Bookmark_textWrapper__collapsed_47 {
+        opacity: 1;
+        visibility: visible;
+    }
+.Bookmark_withTooltip_58 {
+    width: 100%;
+    cursor: default;
+}
+.Bookmark_text_6f {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 235rem;
+    color: #8c8c7e;
+    font-size: 10rem;
+    letter-spacing: 1rem;
+    opacity: 1;
+    transition: .3s ease-in-out opacity;
+}
+.Bookmark_text__basic_01 {
+        margin-left: 8rem;
+    }
+.Bookmark_text__basicSmall_65 {
+        width: 170rem;
+    }
+.Bookmark_text__basicMedium_5f {
+        width: 230rem;
+    }
+.Bookmark_text__basicLarge_82 {
+        width: 255rem;
+    }
+.Bookmark_text__premium_b8 {
+        margin-right: 8rem;
+    }
+.Bookmark_text__premiumSmall_a3 {
+        width: 150rem;
+    }
+.Bookmark_text__premiumMedium_1b {
+        width: 210rem;
+    }
+.Bookmark_text__premiumLarge_55 {
+        width: 235rem;
+    }
+.Bookmark_text__single_a0 {
+        width: 100%;
+    }
+.Bookmark_text__medium_27,
+    .Bookmark_text__large_71 {
+        font-size: 12rem;
+    }
+.Bookmark_text__wide_4c {
+        color: #e9e2bf;
+    }
+.Bookmark_text__collapsed_f2 {
+        opacity: 0;
+        visibility: hidden;
+    }
+.Bookmark_textInner_b4 {
+    margin: 0 10rem;
+}
+.Bookmark_textInner__large_ed {
+        margin: 0 20rem;
+    }
+.Bookmark_leftTextLine_0a,
+.Bookmark_rightTextLine_37 {
+    flex: 1;
+    height: 1rem;
+}
+.Bookmark_leftTextLine_0a {
+    border-right: 1rem solid #fff;
+    background-image: linear-gradient(to right, transparent, rgba(255,255,255, .2) 80%, rgba(255,255,255, .4) 90%, rgba(255,255,255, .6) 100%);
+}
+.Bookmark_rightTextLine_37 {
+    border-left: 1rem solid #fff;
+    background-image: linear-gradient(to left, transparent, rgba(255,255,255, .2) 80%, rgba(255,255,255, .4) 90%, rgba(255,255,255, .6) 100%);
+}
+
+.ArrowButton_base_8c {
+    width: 30rem;
+    height: 80rem;
+    box-shadow: 0 0 0 1px rgba(247,211,145, .2);
+    background-color: rgba(0,0,0, .5);
+    position: relative;
+    transition: box-shadow linear .2s;
+    cursor: pointer;
+}
+
+    .ArrowButton_base_8c:hover {
+        box-shadow: 0 0 0 1px rgba(247,211,145, .35);
+    }
+.ArrowButton_icon_af {
+    width: 86rem;
+    height: 120rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.icon_arrow_button') no-repeat center / contain;
+    opacity: .8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: opacity linear .2s;
+    pointer-events: none;
+}
+.ArrowButton_icon__back_28 {
+        transform: translate(-50%, -50%);
+    }
+.ArrowButton_icon__forward_ff {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+.ArrowButton_base_8c:hover .ArrowButton_icon_af {
+        opacity: 1;
+    }
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.OptimizedProgressBar_base_1f {
+    width: 100%;
+    padding: 30rem 0;
+    overflow: hidden;
+}
+.OptimizedProgressBar_wrapper_ab {
+    position: relative;
+}
+.OptimizedProgressBar_line_ef {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.OptimizedProgressBar_background_ce {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 8000rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.Rewards_rewards_1c {
+    display: flex;
+    flex-direction: row;
+}
+
+    .Rewards_rewards_1c.Rewards_column_cb {
+        flex-direction: column;
+    }
+
+.Reward_base_ea {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    height: 80rem;
+    position: relative;
+}
+
+    .Reward_base_ea.Reward_small_e3 {
+        width: 48rem;
+        height: 48rem;
+    }
+
+    .Reward_base_ea .Reward_image_89 {
+        position: relative;
+    }
+
+    .Reward_base_ea .Reward_image_89 .Reward_icon_df {
+            width: 80rem;
+            height: 80rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            z-index: 1;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_icon_df.Reward_small_e3 {
+                width: 48rem;
+                height: 48rem;
+            }
+
+    .Reward_base_ea .Reward_image_89 .Reward_overlay_68 {
+            width: 128rem;
+            height: 128rem;
+            background: no-repeat center / 100%;
+            position: absolute;
+            top: -32rem;
+            left: -32rem;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_overlay_68.Reward_small_e3 {
+                width: 96rem;
+                height: 96rem;
+                background-size: 100%;
+                overflow: visible;
+                top: -24rem;
+                left: -24rem;
+            }
+
+    .Reward_base_ea .Reward_image_89 .Reward_highlight_36 {
+            width: 80rem;
+            height: 80rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 80rem 80rem;
+            position: absolute;
+            z-index: 0;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_highlight_36.Reward_small_e3 {
+                width: 48rem;
+                height: 48rem;
+                background-size: 50rem 50rem;
+            }
+
+    .Reward_base_ea .Reward_info_72 {
+        margin-top: -13rem;
+        color: #e9e2bf;
+        font-size: 14rem;
+        line-height: 18rem;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .Reward_base_ea .Reward_info_72.Reward_multi_64 {
+            margin-right: 2rem;
+            text-align: right;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_multi_64.Reward_small_e3 {
+                margin-right: 0;
+            }
+
+    .Reward_base_ea .Reward_info_72.Reward_small_e3 {
+            margin: -10rem -10rem 0;
+            font-size: 14rem;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_credits_3f {
+            color: #ced9d9;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_gold_e3 {
+            color: #ffc363;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_crystal_69 {
+            color: #c9c9b6;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_premiumTank_29 {
+            color: #fd9;
+        }
+
+.Divider_base_8f {
+    width: 1rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+    .Divider_base__left_bd {
+        left: 0;
+    }
+
+    .Divider_base__right_1e {
+        right: 0;
+    }
+
+    .Divider_base__fullBasic_b1 {
+        background-image: linear-gradient(to bottom, transparent, rgba(255,255,255, .2));
+    }
+
+    .Divider_base__fullPremium_0a {
+        background-image: linear-gradient(to top, transparent, rgba(255,255,255, .2));
+    }
+.Divider_inner_40 {
+    width: 1rem;
+    height: 12rem;
+    position: absolute;
+    left: 0;
+}
+.Divider_inner__basic_17 {
+        background-image: linear-gradient(to top, #fff, #fff 1rem, rgba(255,255,255, .4) 1rem, transparent);
+        bottom: 0;
+    }
+.Divider_inner__premium_28 {
+        background-image: linear-gradient(to bottom, #fff, #fff 1rem, rgba(255,255,255, .4) 1rem, transparent);
+        top: 0;
+    }
+
+/* vertical offset for positioning progression's progressbar at the center of screen */
+.Stage_base_46 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: translateY(-100%);
+}
+.Stage_base__notStarted_86 {
+        opacity: .5;
+    }
+.Stage_number_1f {
+    color: #e9e2bf;
+    font-size: 18rem;
+    font-weight: 700;
+    line-height: 20rem;
+    position: relative;
+    z-index: 1;
+}
+.Stage_numberAnimated_c6 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.Stage_numberAnimated__enter_98 {
+        opacity: 1;
+    }
+.Stage_numberAnimated__enterActive_1a {
+        animation-name: Stage_highlightScale_6b;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+        animation-delay: .25s;
+        animation-iteration-count: 1;
+    }
+.Stage_numberAnimated__enterDone_68 {
+        opacity: 0;
+    }
+.Stage_numberGlow_b7 {
+    width: 100%;
+    height: 302rem;
+    background: url('swf://gui/flash/animations/battlePass/sparks.swf') no-repeat center / 302rem;
+    opacity: 0;
+    mix-blend-mode: additive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.Stage_numberGlow_b7 .Stage_base__small_ee,
+    .Stage_base__medium_56 .Stage_numberGlow_b7 {
+        margin-top: 4rem;
+        transform: translate(-50%, -50%) scale(.75);
+    }
+.Stage_base__large_dd .Stage_numberGlow_b7 {
+        margin-top: 14rem;
+    }
+.Stage_numberGlow__active_3c {
+        animation-name: Stage_circleOut_87;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(.39, .57, .56, 1);
+        animation-delay: .25s;
+        animation-iteration-count: 1;
+    }
+.Stage_numberGlow__exit_d9 {
+        width: 0;
+        height: 0;
+        margin-top: 0;
+    }
+.Stage_numberInProgress_69 {
+    margin-bottom: 3rem;
+    color: #f2f2f7;
+    font-weight: 700;
+    line-height: 1;
+    z-index: 1;
+}
+.Stage_numberInProgress_69 .Stage_base__small_ee,
+    .Stage_base__medium_56 .Stage_numberInProgress_69 {
+        font-size: 36rem;
+    }
+.Stage_base__large_dd .Stage_numberInProgress_69 {
+        font-size: 56rem;
+    }
+.Stage_title_ee {
+    color: #e9e2bf;
+    font-size: 18rem;
+    font-weight: 700;
+    line-height: 20rem;
+}
+.Stage_glow_9e {
+    background: no-repeat center / contain;
+    mix-blend-mode: additive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.Stage_glow__inProgress_6a {
+        width: 302rem;
+        height: 302rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.bg_rare_light_current');
+    }
+.Stage_glow__inProgressSmall_e9 {
+        margin-top: 4rem;
+        transform: translate(-50%, -50%) scale(.75);
+    }
+.Stage_glow__inProgressMedium_5a,
+    .Stage_glow__inProgressLarge_b3 {
+        margin-top: 14rem;
+    }
+.Stage_iconFinal_70 {
+    background: no-repeat center / contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.Stage_iconFinal__default_c6 {
+        width: 150rem;
+        height: 100rem;
+        margin-top: 10rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.bg_final_stage');
+        background-size: contain;
+    }
+.Stage_iconFinal__inProgressSmall_ac {
+        width: 200rem;
+        height: 150rem;
+        margin-top: -5rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.bg_final_stage_current_small');
+        background-size: contain;
+    }
+.Stage_iconFinal__inProgressMedium_25,
+    .Stage_iconFinal__inProgressLarge_63 {
+        width: 300rem;
+        height: 200rem;
+        margin-top: -5rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.bg_final_stage_current');
+        background-size: contain;
+    }
+@keyframes Stage_highlightScale_6b {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2.5);
+    }
+}
+@keyframes Stage_circleOut_87 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* vertical offset for positioning progression's progressbar at the center of screen */
+.CurrentPoints_base_98 {
+    display: flex;
+    flex-direction: row;
+    font-size: 18rem;
+    font-weight: 700;
+    line-height: 20rem;
+    position: relative;
+}
+.CurrentPoints_value_ec {
+    position: absolute;
+    top: 50%;
+}
+.CurrentPoints_value__current_73 {
+        color: #e9e2bf;
+        left: 0;
+        transform: translate(-100%, -50%);
+    }
+.CurrentPoints_value__total_b4 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: rgba(233,226,191, .3);
+        left: 100%;
+        transform: translateY(-50%);
+    }
+.CurrentPoints_divider_dc {
+    padding: 0 4rem 0 6rem;
+    color: rgba(233,226,191, .3);
+    font-weight: 400;
+}
+.CurrentPoints_icon_08 {
+    width: 24rem;
+    height: 24rem;
+    margin: 2rem 0 0 5rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.icon_points_current') no-repeat center / contain;
+}
+
+/* vertical offset for positioning progression's progressbar at the center of screen */
+.Status_base_1f {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Status_base__small_2d {
+        height: 30rem;
+    }
+.Status_base__medium_d4 {
+        height: 25rem;
+    }
+.Status_base__large_36 {
+        height: 40rem;
+    }
+.Status_base__default_a1 {
+        justify-content: center;
+    }
+.Status_base__premiumInProgressSmall_33 {
+        padding-bottom: 8rem;
+    }
+.Status_base__premiumInProgressSmall_33,
+        .Status_base__premiumInProgressMedium_59 {
+            padding-bottom: 8rem;
+        }
+.Status_base__premiumInProgressLarge_bb {
+            padding-bottom: 16rem;
+        }
+.Status_iconContainer_2f {
+    width: 100%;
+    height: 24rem;
+    position: relative;
+}
+.Status_iconWrapper_ae {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.Status_icon_8b {
+    background: no-repeat center / contain;
+}
+.Status_icon__completed_d3 {
+        width: 24rem;
+        height: 24rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.icon_check');
+    }
+.Status_icon__locked_27 {
+        width: 46rem;
+        height: 46rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.icon_lock');
+        opacity: .6;
+    }
+.Status_icon__lockedCurrentSmall_dc {
+        width: 36rem;
+        height: 36rem;
+        margin-top: -3rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.icon_lock_current_small');
+    }
+.Status_icon__lockedCurrentMedium_bb,
+    .Status_icon__lockedCurrentLarge_d4 {
+        width: 56rem;
+        height: 56rem;
+        margin-top: -15rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.icon_lock_current');
+    }
+.Status_icon__lockedExit_6a {
+        opacity: .6;
+    }
+.Status_icon__lockedExitActive_c4,
+    .Status_icon__lockedExitCurrentActive_2f {
+        animation-duration: .75s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(.6, .04, .98, .34);
+        animation-delay: .25s;
+        animation-iteration-count: 1;
+    }
+.Status_icon__lockedExitActive_c4 {
+        animation-name: Status_fadeDown_65;
+    }
+.Status_icon__lockedExitCurrentActive_2f {
+        animation-name: Status_zoomOut_b3;
+    }
+.Status_icon__lockedExitDone_5d {
+        opacity: 0;
+    }
+.Status_icon__completedEnter_e2 {
+        opacity: 0;
+    }
+.Status_icon__completedEnterActive_d1 {
+        animation-name: Status_fadeUp_a4;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+        animation-iteration-count: 1;
+    }
+.Status_icon__completedEnterDone_9e {
+        opacity: 1;
+    }
+.Status_glowWrapper_67 {
+    width: 240rem;
+    height: 240rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.Status_glow_89 {
+    width: 240rem;
+    height: 240rem;
+    background: url('swf://gui/flash/animations/battlePass/sparks.swf') no-repeat center / contain;
+    opacity: 0;
+    mix-blend-mode: additive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.Status_glow__active_7f {
+        animation-name: Status_highlightScale_62;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(.39, .57, .56, 1);
+        animation-delay: .8s;
+        animation-iteration-count: 1;
+    }
+.Status_dust_b2 {
+    width: 240rem;
+    height: 240rem;
+    background-image: url('R.images.gui.maps.icons.battlePass2020.progression.unlockDust');
+    opacity: 0;
+    mix-blend-mode: additive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+.Status_dust__active_14 {
+        animation-name: Status_highlightScale_62;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+        animation-delay: .8s;
+        animation-iteration-count: 1;
+    }
+.Status_title_8a {
+    line-height: 1;
+}
+.Status_title__basic_db {
+        color: #e9e2bf;
+        font-size: 18rem;
+        font-weight: 700;
+    }
+.Status_title__premium_b1 {
+        color: #fd9;
+        font-size: 14rem;
+        text-shadow: 1rem 0 16px #f00;
+    }
+.Status_title__exit_3d {
+        opacity: 1;
+    }
+.Status_title__exitActive_50 {
+        animation-name: Status_fadeDown_65;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(.6, .04, .98, .33);
+        animation-delay: .65s;
+        animation-iteration-count: 1;
+    }
+.Status_title__exitDone_c5 {
+        opacity: 0;
+    }
+.Status_trophyTokenLabel_b9 {
+    color: #fd9;
+    font-size: 14rem;
+    line-height: 1;
+    text-align: center;
+    text-shadow: 1rem 0 16px #f00;
+}
+@keyframes Status_zoomOut_b3 {
+    0% {
+        opacity: .6;
+        transform: translateY(0) scale(1);
+    }
+
+    65% {
+        opacity: 1;
+        transform: translateY(0) scale(.7);
+    }
+
+    66% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20rem) scale(1);
+    }
+}
+@keyframes Status_fadeDown_65 {
+    0% {
+        opacity: .6;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+}
+@keyframes Status_fadeUp_a4 {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes Status_highlightScale_62 {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2.5);
+    }
+}
+@keyframes Status_highlightZoom_7a {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.CButton_base_40 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0 0 0 1rem rgba(0,0,0, .6);
+    position: relative;
+    cursor: pointer;
+}
+
+    /* type*/
+
+    .CButton_base__main_42,
+    .CButton_base__primary_7f,
+    .CButton_base__primaryGreen_6f,
+    .CButton_base__primaryRed_ec,
+    .CButton_base__secondary_50 {
+        background-size: 100% 100%;
+    }
+
+    .CButton_base__main_42 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+
+    .CButton_base__primary_7f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+
+    .CButton_base__primaryGreen_6f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+
+    .CButton_base__primaryRed_ec {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+
+    .CButton_base__secondary_50 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+
+    .CButton_base__ghost_ed {
+        border-radius: 3rem;
+        box-shadow: 0 0 0 1rem rgba(0,0,0, .3),
+            0 0 0 1rem rgba(255,255,255, .15) inset;
+        background-image: linear-gradient(0deg, rgba(13, 11, 3, 0) 0%, rgba(13, 11, 3, .04) 27%, rgba(13, 11, 3, 0) 100%);
+    }
+
+    /* size*/
+
+    .CButton_base__extraSmall_27 {
+        min-height: 17rem;
+        padding: 0 16rem;
+    }
+
+    .CButton_base__small_df,
+    .CButton_base__medium_74 {
+        padding: 0 20rem;
+    }
+
+    .CButton_base__small_df {
+        min-height: 20rem;
+    }
+
+    .CButton_base__medium_74 {
+        min-height: 31rem;
+    }
+
+    /*state*/
+
+    .CButton_base__disabled_d9 {
+        cursor: default;
+    }
+/* Element .back and background-image in element .base need for fix bug in GF https://jira.wargaming.net/browse/WOTD-158525
+The bug is that under certain conditions, when using border-image, stripes appear. Strip is a single-pixel gap
+between 'border-image-width' and 'fill'.
+This bug is reproduced in Google Chrome 81.0.4044.113
+*/
+.CButton_back_e5 {
+    border-image-slice: 4 fill;
+    border-image-width: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_base__main_42 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+.CButton_base__primary_7f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+.CButton_base__primaryGreen_6f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+.CButton_base__primaryRed_ec .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+.CButton_base__secondary_50 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+.CButton_texture_fe {
+    background: url('R.images.gui.maps.icons.components.button.standard_texture_file');
+    background-size: 155rem 31rem;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_state_11 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: box-shadow .16s ease-in-out;
+}
+.CButton_base__focus_83 .CButton_state_11 {
+        border-radius: 2rem;
+        box-shadow: inset 0 0 2rem 1rem rgba(255,85,0, .2);
+    }
+.CButton_stateHighlightHover_ff,
+.CButton_stateHighlightActive_35,
+.CButton_stateDisabled_54 {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity .16s ease-in-out;
+}
+.CButton_stateHighlightHover_ff {
+    background-image: linear-gradient(180deg, rgba(252,248,235, .25) 0%, rgba(252,248,235, .1) 50%, rgba(255,255,255, 0) 100%);
+}
+.CButton_base_40:hover .CButton_stateHighlightHover_ff {
+        opacity: 1;
+    }
+.CButton_base_40:active .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__disabled_d9:hover .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__ghost_ed .CButton_stateHighlightHover_ff {
+        box-shadow: 0 15rem 12rem 0 rgba(242, 242, 230, .11) inset;
+        background-color: rgba(8, 6, 0, .18);
+        background-image: none;
+    }
+.CButton_stateHighlightActive_35 {
+    background-image: linear-gradient(180deg, rgba(0,0,0, .3) 0%, rgba(0,0,0, .15) 100%);
+}
+.CButton_base_40:active .CButton_stateHighlightActive_35 {
+        opacity: 1;
+    }
+.CButton_base__disabled_d9:active .CButton_stateHighlightActive_35 {
+        opacity: 0;
+    }
+.CButton_stateDisabled_54 {
+    background-color: rgba(0, 0, 0, .25);
+    background-image: url('R.images.gui.maps.icons.components.button.texture_disable');
+    background-size: 15rem;
+}
+.CButton_base__disabled_d9 .CButton_stateDisabled_54 {
+        opacity: 1;
+    }
+.CButton_content_cc {
+    display: flex;
+    align-items: center;
+    color: #f2f2e6;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 -1rem 1rem #000;
+    letter-spacing: .03em;
+    transform: translateY(-5%);
+}
+.CButton_content_cc[lang=ja],
+    .CButton_content_cc[lang=ko],
+    .CButton_content_cc[lang=zh_tw],
+    .CButton_content_cc[lang=zh_sg],
+    .CButton_content_cc[lang=zh_ch],
+    .CButton_content_cc[lang=th] {
+        font-weight: 400;
+    }
+/* type*/
+.CButton_base__main_42 .CButton_content_cc,
+    .CButton_base__primaryRed_ec .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #600;
+    }
+.CButton_base__secondary_50 .CButton_content_cc {
+        color: rgba(254,254,236, .75);
+    }
+.CButton_base__primaryGreen_6f .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #1c2502;
+    }
+/* size*/
+.CButton_base__extraSmall_27 .CButton_content_cc {
+        font-size: 12rem;
+    }
+.CButton_base__small_df .CButton_content_cc {
+        font-size: 14rem;
+    }
+.CButton_base__medium_74 .CButton_content_cc {
+        font-size: 15rem;
+    }
+/*state*/
+.CButton_base__disabled_d9 .CButton_content_cc {
+        opacity: .6;
+    }
+
+.Warning_base_e8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-top: -55rem;
+    position: absolute;
+}
+
+.Warning_alertContainer_c1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Warning_light_ca {
+    display: flex;
+    width: 220rem;
+    height: 300rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.cap_lighting') no-repeat center / contain;
+    mix-blend-mode: additive;
+    position: absolute;
+    top: -75rem;
+    pointer-events: none;
+}
+
+.Warning_alert_f8 {
+    display: flex;
+    width: 32rem;
+    height: 32rem;
+    background: url('R.images.gui.maps.icons.library.icon_alert_32x32') no-repeat center / contain;
+    pointer-events: none;
+}
+
+.Warning_label_65 {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    color: #f5f0e5;
+    font-size: 14rem;
+    font-weight: 700;
+}
+
+/* vertical offset for positioning progression's progressbar at the center of screen */
+.CardContent_base_aa {
+    position: relative;
+}
+.CardContent_base__small_06 {
+        padding-top: 8rem;
+        padding-bottom: 30rem;
+    }
+.CardContent_base__medium_52 {
+        padding-top: 15rem;
+        padding-bottom: 25rem;
+    }
+.CardContent_base__large_6a {
+        padding-top: 25rem;
+        padding-bottom: 40rem;
+    }
+.CardContent_content_ed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.CardContent_base__small_06 .CardContent_content_ed {
+        height: 112rem;
+    }
+.CardContent_base__medium_52 .CardContent_content_ed {
+        height: 170rem;
+    }
+.CardContent_base__large_6a .CardContent_content_ed {
+        height: 170rem;
+    }
+.CardContent_content__notStarted_30,
+    .CardContent_content__premiumWithoutBP_2f {
+        opacity: .6;
+    }
+.CardContent_content__enter_10 {
+        opacity: .6;
+    }
+.CardContent_content__enterActive_80 {
+        opacity: 1;
+        transition: opacity linear .5s;
+    }
+.CardContent_content__enterDone_1b {
+        opacity: 1;
+    }
+.CardContent_status_6f {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.Background_base_f7 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.Background_default_c1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, transparent, #000);
+}
+
+.Background_default__premium_d5 {
+    transform: rotate(180deg);
+        opacity: .6;
+    }
+
+.Background_default__normal_15 {
+        opacity: .6;
+    }
+
+.Background_default__rare_4a {
+        opacity: .8;
+    }
+
+.Background_normalCompleted_e0 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, transparent, #005813);
+}
+
+.Background_normalCompleted__premium_a4 {
+    transform: rotate(180deg);
+    }
+
+.Background_normalCompleted__enabled_ac {
+        opacity: .3;
+    }
+
+.Background_normalCompleted__disabled_52 {
+        opacity: .2;
+    }
+
+.Background_rare_b6 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.Background_rare__premium_2e {
+    transform: rotate(180deg);
+    }
+
+.Background_rare__completed_85 {
+        background-image: linear-gradient(to bottom, transparent, #fb9f00);
+    }
+
+.Background_rare__completedEnabled_b0 {
+        opacity: .4;
+    }
+
+.Background_rare__completedDisabled_a6 {
+        opacity: .25;
+    }
+
+.Background_rare__notStarted_3f {
+        background-image: linear-gradient(to bottom, transparent, rgba(255,255,255, .1));
+    }
+
+.Background_rare__notStartedEnabled_62 {
+        opacity: .8;
+    }
+
+.Background_rare__notStartedDisabled_7f {
+        opacity: .6;
+    }
+
+.Background_rarePattern_03 {
+    width: 59rem;
+    background: no-repeat 0 100% / 100% 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.Background_rarePattern__left_8b {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.pattern_rare_left');
+    }
+
+.Background_rarePattern__leftIndent_e2 {
+        left: 1rem;
+    }
+
+.Background_rarePattern__leftNoIndent_ac {
+        left: 0;
+    }
+
+.Background_rarePattern__right_c2 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.pattern_rare_right');
+    }
+
+.Background_rarePattern__rightNoIndent_f1 {
+        right: 0;
+    }
+
+.Background_rarePattern__rightIndent_f7 {
+        right: 1rem;
+    }
+
+.Background_disabled_ba {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('R.images.gui.maps.icons.battlePass2020.progression.pattern_disable');
+    opacity: .12;
+    mask-image: linear-gradient(to bottom, transparent, #000 40%, #000);
+    mask-repeat: repeat;
+}
+
+/* remove after GF update*/
+
+.Background_disabled__premium_6d {
+    transform: rotate(180deg);
+    }
+
+.Background_inProgress_68 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, .3));
+}
+
+.Background_inProgress__premium_8e {
+    transform: rotate(180deg);
+    }
+
+.Background_inProgress__disable_00 {
+        background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, .1));
+    }
+
+.Background_inProgressInner_0d {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: no-repeat center bottom / contain;
+}
+
+.Background_inProgressInner__small_0e {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.bg_current_small');
+    }
+
+.Background_inProgressInner__medium_19 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.bg_current_medium');
+    }
+
+.Background_inProgressInner__large_e1 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.bg_current_large');
+    }
+
+.Background_inProgressPart_68 {
+    width: 62rem;
+    background: no-repeat center / 100% 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.Background_inProgressPart__left_76 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.bg_light_current_left');
+        left: 0;
+    }
+
+.Background_inProgressPart__right_5b {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.bg_light_current_right');
+        right: 0;
+    }
+
+.Background_inProgressPart__disable_06 {
+        opacity: .1;
+    }
+
+/* vertical offset for positioning progression's progressbar at the center of screen */
+.Card_base_5f {
+    position: relative;
+}
+.Card_base__mainProgressionSmall_5e {
+        width: 120rem;
+    }
+.Card_base__mainProgressionMedium_89,
+    .Card_base__mainProgressionLarge_78 {
+        width: 180rem;
+    }
+.Card_base__postProgressionSmall_0f {
+        width: 170rem;
+    }
+.Card_base__postProgressionMedium_67,
+    .Card_base__postProgressionLarge_1c {
+        width: 280rem;
+    }
+.Card_base__inProgressSmall_84 {
+        width: 224rem;
+    }
+.Card_base__inProgressMedium_9b,
+    .Card_base__inProgressLarge_57 {
+        width: 340rem;
+    }
+.Card_base__inProgressBasicSmall_21 {
+        padding-top: 60rem;
+    }
+.Card_base__inProgressBasicMedium_bf {
+        padding-top: 65rem;
+    }
+.Card_base__inProgressBasicLarge_97 {
+        padding-top: 90rem;
+    }
+.Card_totalPoints_51 {
+    color: rgba(255,255,255, .4);
+    font-size: 12rem;
+    line-height: 1;
+    position: absolute;
+    top: 5rem;
+}
+.Card_totalPoints__default_db {
+        left: 5rem;
+    }
+.Card_totalPoints__final_ee {
+        right: 5rem;
+    }
+.Card_progressShadow_ca {
+    height: 16rem;
+    background-color: rgba(0,0,0, .5);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* vertical offset for positioning progression's progressbar at the center of screen */
+/* colors*/
+@keyframes Progression_fadeOut_7c {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes Progression_fadeIn_1d {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes Progression_fadeInWithScale_74 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes Progression_slideUp_a2 {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes Progression_scale_a8 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+.Progression_base_52 {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 0 50rem 9rem;
+    position: relative;
+}
+.Progression_base__small_48 {
+        height: 517rem;
+        margin-top: -110rem;
+    }
+.Progression_base__medium_e2 {
+        height: 642rem;
+        margin-top: -110rem;
+    }
+.Progression_base__large_3d {
+        height: 782rem;
+        margin-top: -175rem;
+    }
+.Progression_scrollWrapper_3a {
+    flex: 1;
+    cursor: grab;
+}
+.Progression_wrapper_0f {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-bottom: 22rem;
+}
+.Progression_base__small_48 .Progression_wrapper_0f {
+        padding-top: 110rem;
+    }
+.Progression_base__medium_e2 .Progression_wrapper_0f {
+        padding-top: 110rem;
+    }
+.Progression_base__large_3d .Progression_wrapper_0f {
+        padding-top: 175rem;
+    }
+.Progression_section__postProgression_90 {
+        padding-bottom: 30rem;
+        overflow: hidden;
+    }
+.Progression_section__postProgressionSmall_b9 {
+            padding-top: 70rem;
+        }
+.Progression_section__postProgressionMedium_f5 {
+            padding-top: 110rem;
+        }
+.Progression_section__postProgressionLarge_e2 {
+            padding-top: 120rem;
+        }
+.Progression_section__last_4d {
+        margin-bottom: 0;
+    }
+.Progression_divider_4e {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130rem;
+    height: 100%;
+}
+.Progression_dividerContent_82 {
+    transform: rotate(-90deg);
+}
+.Progression_dividerText_8c {
+    color: #8c8c7e;
+    font-size: 14rem;
+}
+.Progression_progressWrapper_2c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 16rem;
+    background-color: #000;
+    position: relative;
+    z-index: 2;
+}
+.Progression_progress_c8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100rem;
+    overflow: hidden;
+    pointer-events: none;
+}
+.Progression_medalContainer_91 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    margin-left: -2rem;
+    z-index: 3;
+}
+.Progression_medalBackground_ee {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 67rem;
+    height: 248rem;
+    margin-top: 60rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.medal_bg_small') right center / contain no-repeat;
+}
+.Progression_base__medium_e2 .Progression_medalBackground_ee {
+        width: 90rem;
+        height: 340rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.medal_bg');
+    }
+.Progression_base__large_3d .Progression_medalBackground_ee {
+        width: 90rem;
+        height: 340rem;
+        margin-top: 90rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.medal_bg');
+    }
+.Progression_medal__isDiseble_6b {
+        filter: brightness(60%);
+    }
+.Progression_row_2c {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+}
+.Progression_row__basicSmall_0e {
+        height: 210rem;
+    }
+.Progression_row__basicMedium_ce {
+        height: 275rem;
+    }
+.Progression_row__basicLarge_1a {
+        height: 325rem;
+    }
+.Progression_row__premiumSmall_c0 {
+        height: 150rem;
+    }
+.Progression_row__premiumMedium_39 {
+        height: 210rem;
+    }
+.Progression_row__premiumLarge_87 {
+        height: 235rem;
+    }
+.Progression_row__empty_01 {
+        align-items: flex-start;
+    }
+.Progression_bookmark_78 {
+    height: 100%;
+    position: relative;
+}
+.Progression_bookmark__start_e7 {
+        width: 50rem;
+        padding-bottom: 22rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+.Progression_bookmark__startSmall_a0 {
+            padding-top: 110rem;
+        }
+.Progression_bookmark__startMedium_c2 {
+            padding-top: 110rem;
+        }
+.Progression_bookmark__startLarge_d9 {
+            padding-top: 175rem;
+        }
+.Progression_bookmark__middle_1b {
+        width: 130rem;
+        margin-left: -20rem;
+    }
+.Progression_bookmark__middleSmall_e9 {
+            margin-left: -30rem;
+            padding-top: 47rem;
+        }
+.Progression_bookmark__middleMedium_d3 {
+            padding-top: 62rem;
+        }
+.Progression_bookmark__middleLarge_8e {
+            padding-top: 84.5rem;
+        }
+.Progression_scrollToButton_38 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    transform: translateY(50%);
+    transition: opacity linear .2s,
+    visibility linear .2s;
+}
+.Progression_scrollToButton__hidden_b1 {
+        opacity: 0;
+        visibility: hidden;
+    }
+.Progression_scrollToButton__back_3f {
+        left: 60rem;
+    }
+.Progression_scrollToButton__forward_18 {
+        right: 60rem;
+    }
+.Progression_base__small_48 .Progression_scrollToButton_38 {
+        bottom: 189rem;
+    }
+.Progression_base__medium_e2 .Progression_scrollToButton_38 {
+        bottom: 249rem;
+    }
+.Progression_base__large_3d .Progression_scrollToButton_38 {
+        bottom: 274rem;
+    }
+.Progression_progressionToButton_3b {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    transform: translateY(50%);
+    transition: opacity linear .2s,
+    visibility linear .2s;
+    pointer-events: none;
+}
+.Progression_progressionToButton__hidden_29 {
+        display: none;
+    }
+.Progression_progressionToButton__back_a8 {
+        left: 50rem;
+    }
+.Progression_progressionToButton__forward_ce {
+        right: 50rem;
+    }
+.Progression_base__small_48 .Progression_progressionToButton_3b {
+        bottom: 189rem;
+    }
+.Progression_base__medium_e2 .Progression_progressionToButton_3b {
+        bottom: 249rem;
+    }
+.Progression_base__large_3d .Progression_progressionToButton_3b {
+        bottom: 274rem;
+    }
+.Progression_shadow_4a {
+    width: 162rem;
+    height: 460rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.shadow_main_small') right center / contain no-repeat;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+.Progression_shadow__left_e1 {
+        left: -54rem;
+    }
+.Progression_shadow__leftMedium_94 {
+        left: -77rem;
+    }
+.Progression_shadow__leftLarge_94 {
+        left: -90rem;
+    }
+.Progression_shadow__right_f8 {
+        right: -54rem;
+        transform: rotate(180deg);
+    }
+.Progression_shadow__rightMedium_89 {
+        right: -77rem;
+    }
+.Progression_shadow__rightLarge_2a {
+        right: -90rem;
+    }
+.Progression_shadow__leftMedium_94,
+    .Progression_shadow__rightMedium_89 {
+        width: 199rem;
+        height: 564rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.shadow_main_medium');
+    }
+.Progression_shadow__leftLarge_94,
+    .Progression_shadow__rightLarge_2a {
+        width: 220rem;
+        height: 624rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.shadow_main');
+    }
+.Progression_additionalShadow_69 {
+    width: 103rem;
+    height: 440rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.shadow_additional_small') right center / contain no-repeat;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: -45rem;
+    bottom: 0;
+    transition: .3s ease-in-out opacity;
+    pointer-events: none;
+}
+.Progression_additionalShadow__active_80 {
+        opacity: 1;
+    }
+.Progression_base__medium_e2 .Progression_additionalShadow_69 {
+        width: 126rem;
+        height: 540rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.shadow_additional_medium');
+        right: -54rem;
+    }
+.Progression_base__large_3d .Progression_additionalShadow_69 {
+        width: 139rem;
+        height: 598rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.shadow_additional');
+        right: -58rem;
+    }
+.ps__rail-x {
+        margin-left: 25rem;
+        margin-right: 25rem;
+    }
+
+.RedArrowButton_base_7a {
+    display: flex;
+    align-items: center;
+    width: 175rem;
+    height: 400rem;
+    position: relative;
+    pointer-events: none;
+}
+
+.RedArrowButton_hit_11 {
+    width: 125rem;
+    height: 225rem;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.RedArrowButton_hit__back_83 {
+        left: 0;
+    }
+
+.RedArrowButton_hit__forward_e3 {
+        right: 0;
+    }
+
+.RedArrowButton_icon_58 {
+    width: 175rem;
+    height: 400rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.icon_red_arrow_button') no-repeat center / contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+}
+
+.RedArrowButton_icon__back_15 {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+.RedArrowButton_icon__forward_bc {
+        transform: translate(-50%, -50%);
+    }
+
+.RedArrowButton_hover_a2 {
+    width: 175rem;
+    height: 400rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.icon_red_arrow_button_hover') no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: opacity linear .2s;
+    pointer-events: none;
+}
+
+.RedArrowButton_hover__back_a6 {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+.RedArrowButton_hover__forward_65 {
+        transform: translate(-50%, -50%);
+    }
+
+.RedArrowButton_base_7a:hover .RedArrowButton_hover_a2 {
+        opacity: 1;
+    }
+
+.RedArrowButton_base_7a:active .RedArrowButton_hover_a2 {
+        opacity: 0;
+    }
+
+.RedArrowButton_label_2d {
+    color: #fd9;
+    font-size: 14rem;
+    text-shadow: 0 0 7px rgba(250, 0, 0, 1), 0 0 7px rgba(250, 0, 0, 1);
+    white-space: pre;
+    position: absolute;
+}
+
+.RedArrowButton_label__back_3d {
+        text-align: left;
+        left: 40rem;
+    }
+
+.RedArrowButton_label__forward_f9 {
+        text-align: right;
+        right: 40rem;
+    }
+
+.FormatText_base_d0 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* vertical offset for positioning progression's progressbar at the center of screen */
+.Footer_base_96 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 86rem;
+}
+.Footer_base__medium_7a {
+        height: 70rem;
+    }
+.Footer_base__large_87 {
+        height: 90rem;
+    }
+.Footer_container_56 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    position: relative;
+}
+.Footer_buttonContainer_f1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.Footer_light_53 {
+    display: flex;
+    width: 769rem;
+    height: 452rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.button_light') no-repeat center / contain;
+    mix-blend-mode: additive;
+    position: absolute;
+    pointer-events: none;
+}
+.Footer_button_2a {
+    overflow: hidden;
+}
+.Footer_blink_5d {
+    display: flex;
+    width: 110rem;
+    height: 107rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.refl') no-repeat center / contain;
+    opacity: .5;
+    mix-blend-mode: additive;
+    position: absolute;
+    top: -37rem;
+    left: -220rem;
+    animation: Footer_move_54 3s ease-out infinite;
+    animation-delay: 2s;
+}
+@keyframes Footer_move_54 {
+    0% {
+        opacity: .3;
+        left: -220rem;
+    }
+
+    40% {
+        opacity: .3;
+        left: -220rem;
+    }
+
+    75% {
+        opacity: .7;
+        left: 310rem;
+    }
+
+    100% {
+        opacity: .8;
+        left: 310rem;
+    }
+}
+.Footer_counter_59 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(40%) translateY(-50%);
+}
+.Footer_label_61 {
+    margin-top: -10rem;
+    margin-bottom: 10rem;
+    color: #cbac77;
+    font-size: 14rem;
+}
+.Footer_days_3d {
+    color: #ffe0b6;
+    font-size: 14rem;
+}
+.Footer_alert_7c {
+    width: 16rem;
+    height: 16rem;
+    margin-top: 3rem;
+    margin-right: 6rem;
+    background: url('R.images.gui.maps.icons.library.alertIcon') no-repeat;
+}
+
+/* vertical offset for positioning progression's progressbar at the center of screen */
+.BattlePassProgressionsViewContent_base_67 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.bg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: relative;
+    z-index: 0;
+}
+.BattlePassProgressionsViewContent_base__small_8d {
+        padding-bottom: 12rem;
+    }
+.BattlePassProgressionsViewContent_base__medium_76 {
+        padding-bottom: 12rem;
+    }
+.BattlePassProgressionsViewContent_base__large_cd {
+        padding-bottom: 36rem;
+    }
+.BattlePassProgressionsViewContent_base__high_8e {
+        padding-top: 42rem;
+        padding-bottom: 34rem;
+    }
+.BattlePassProgressionsViewContent_base__extraHigh_f9 {
+        padding-top: 13rem;
+        padding-bottom: 20rem;
+    }
+.BattlePassProgressionsViewContent_base__small_8d .BattlePassProgressionsViewContent_footer_13 {
+        height: 86rem;
+    }
+.BattlePassProgressionsViewContent_base__medium_76 .BattlePassProgressionsViewContent_footer_13 {
+        height: 70rem;
+    }
+.BattlePassProgressionsViewContent_base__large_cd .BattlePassProgressionsViewContent_footer_13 {
+        height: 90rem;
+    }
+
+.DescriptionBlock_base_e4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 270rem;
+}
+
+    .DescriptionBlock_base__large_1a {
+        width: 360rem;
+    }
+
+.DescriptionBlock_title_18 {
+    margin-top: 14rem;
+    color: #f2f2e7;
+    font-size: 24rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.DescriptionBlock_title__large_5f {
+        color: #f2f2f7;
+        font-size: 28rem;
+    }
+
+.DescriptionBlock_description_1d {
+    margin-top: 14rem;
+    color: #8c8c7e;
+    font-size: 14rem;
+    text-align: center;
+}
+
+.DescriptionBlock_description__large_7e {
+        font-size: 16rem;
+    }
+
+/* colors*/
+
+@keyframes BattlePassIntroViewContent_fadeOut_c8 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes BattlePassIntroViewContent_fadeIn_be {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes BattlePassIntroViewContent_fadeInWithScale_05 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes BattlePassIntroViewContent_slideUp_72 {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes BattlePassIntroViewContent_scale_a5 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.BattlePassIntroViewContent_base_2a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.bg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+}
+
+.BattlePassIntroViewContent_base__out_bd {
+    opacity: 1;
+    animation-name: BattlePassIntroViewContent_fadeOut_c8;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: .1s;
+    animation-iteration-count: 1;
+    }
+
+.BattlePassIntroViewContent_title_3d {
+    margin-top: 40rem;
+    color: #f2f2f7;
+    font-size: 36rem;
+    font-weight: 700;
+}
+
+.BattlePassIntroViewContent_base__large_fc .BattlePassIntroViewContent_title_3d {
+        margin-top: 70rem;
+        font-size: 56rem;
+    }
+
+.BattlePassIntroViewContent_videoContainer_eb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72rem;
+    height: 46rem;
+    margin: 15rem 0;
+    cursor: pointer;
+}
+
+.BattlePassIntroViewContent_videoContainer_eb:hover .BattlePassIntroViewContent_video_87 {
+        filter: brightness(1.2);
+    }
+
+.BattlePassIntroViewContent_base__large_fc .BattlePassIntroViewContent_videoContainer_eb {
+        width: 102rem;
+        height: 66rem;
+        margin: 20rem 0;
+    }
+
+.BattlePassIntroViewContent_base__large_fc .BattlePassIntroViewContent_videoContainer_eb:hover .BattlePassIntroViewContent_video_87 {
+            filter: brightness(1.2);
+        }
+
+.BattlePassIntroViewContent_video_87 {
+    width: 100rem;
+    height: 76rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.intro.youtube_button_small') no-repeat center / contain;
+    pointer-events: none;
+}
+
+.BattlePassIntroViewContent_base__large_fc .BattlePassIntroViewContent_video_87 {
+        width: 150rem;
+        height: 110rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.intro.youtube_button');
+    }
+
+.BattlePassIntroViewContent_bottomContainer_0d {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.BattlePassIntroViewContent_content_b8 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20rem;
+}
+
+.BattlePassIntroViewContent_base__medium_dd .BattlePassIntroViewContent_content_b8 {
+        margin-bottom: 40rem;
+    }
+
+.BattlePassIntroViewContent_base__large_fc .BattlePassIntroViewContent_content_b8 {
+        margin-bottom: 65rem;
+    }
+
+.BattlePassIntroViewContent_close_68 {
+    width: 157rem;
+    margin-bottom: 30rem;
+}
+
+.BattlePassIntroViewContent_base__medium_dd .BattlePassIntroViewContent_close_68 {
+        margin-bottom: 40rem;
+    }
+
+.BattlePassIntroViewContent_base__large_fc .BattlePassIntroViewContent_close_68 {
+        margin-bottom: 80rem;
+    }
+
+.BattlePassIntroViewContent_close__extraLarge_ca {
+        margin-bottom: 100rem;
+    }
+
+.BattlePassIntroViewContent_divider_b9 {
+    width: 1rem;
+    height: 304rem;
+    margin-left: 30rem;
+    margin-right: 30rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.intro.divider');
+}
+
+.BattlePassIntroViewContent_base__small_33 .BattlePassIntroViewContent_divider_b9 {
+        margin-left: 40rem;
+        margin-right: 40rem;
+    }
+
+.BattlePassIntroViewContent_base__medium_dd .BattlePassIntroViewContent_divider_b9 {
+        margin-left: 70rem;
+        margin-right: 70rem;
+    }
+
+.BattlePassIntroViewContent_base__large_fc .BattlePassIntroViewContent_divider_b9 {
+        margin-left: 70rem;
+        margin-right: 70rem;
+    }
+
+.BattlePassIntroViewContent_battlePassIcon_6f {
+    width: 170rem;
+    height: 133rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.intro.pic_1_small') no-repeat center / contain;
+}
+
+.BattlePassIntroViewContent_base__large_fc .BattlePassIntroViewContent_battlePassIcon_6f {
+        width: 230rem;
+        height: 180rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.intro.pic_1');
+    }
+
+.BattlePassIntroViewContent_rewardsIcon_0d {
+    width: 170rem;
+    height: 133rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.intro.pic_2_small') no-repeat center / contain;
+}
+
+.BattlePassIntroViewContent_base__large_fc .BattlePassIntroViewContent_rewardsIcon_0d {
+        width: 230rem;
+        height: 180rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.intro.pic_2');
+    }
+
+.BattlePassIntroViewContent_postprogressIcon_38 {
+    width: 170rem;
+    height: 133rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.intro.pic_3_small') no-repeat center / contain;
+}
+
+.BattlePassIntroViewContent_base__large_fc .BattlePassIntroViewContent_postprogressIcon_38 {
+        width: 230rem;
+        height: 180rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.intro.pic_3');
+    }
+
+.SeasonEmblem_base_de {
+    display: flex;
+}
+
+.SeasonEmblem_emblem_82 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 350rem;
+    height: 350rem;
+    padding-bottom: 68rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.off_season.c_350_1') no-repeat center center / contain;
+}
+
+.SeasonEmblem_emblem__hasBP_55 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.off_season.c_350_2');
+    }
+
+.SeasonEmblem_emblem__isPost_a8 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.off_season.c_350_3');
+    }
+
+.SeasonEmblem_emblem__isPostCompleted_ba {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.off_season.c_350_4');
+    }
+
+.SeasonStatistics_base_e1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 35rem;
+    margin-bottom: 35rem;
+    position: relative;
+}
+
+.SeasonStatistics_shineWrapper_36 {
+    width: 807rem;
+    height: 807rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: SeasonStatistics_light-appearance_c6 .5s linear forwards 1.5s;
+}
+
+.SeasonStatistics_imgShine_22 {
+    width: 100%;
+    height: 100%;
+    background: url('R.images.gui.maps.icons.battlePass2020.buy.light') no-repeat center center / contain;
+    mix-blend-mode: additive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: SeasonStatistics_light-rotation_d1 40s linear infinite;
+}
+
+.SeasonStatistics_imgShine__large_e5 {
+        width: 675rem;
+        height: 674rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.off_season.Lines');
+    }
+
+.SeasonStatistics_imgLines_8d {
+    width: 447rem;
+    height: 446rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.off_season.Lines_smal') no-repeat center center / contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.SeasonStatistics_imgLines__large_a5 {
+        width: 675rem;
+        height: 674rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.off_season.Lines');
+    }
+
+.SeasonStatistics_emblem_53 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.SeasonStatistics_emblem__disabled_12 {
+        filter: brightness(60%);
+    }
+
+.SeasonStatistics_stats_11 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 618rem;
+    height: 149rem;
+    position: relative;
+}
+
+.SeasonStatistics_stats__left_0c {
+        align-items: flex-end;
+        padding-right: 139rem;
+    }
+
+.SeasonStatistics_stats__right_06 {
+        align-items: flex-start;
+        padding-left: 139rem;
+    }
+
+.SeasonStatistics_statsBg_aa {
+    width: 100%;
+    height: 100%;
+    background: url('R.images.gui.maps.icons.battlePass2020.off_season.statsBg') no-repeat center center / contain;
+    position: absolute;
+}
+
+.SeasonStatistics_statsBg__right_00 {
+        transform: scaleX(-1);
+    }
+
+.SeasonStatistics_statsLabel_2d {
+    color: #e9e2bf;
+    font-size: 18rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.SeasonStatistics_statsContainer_d0 {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.SeasonStatistics_statsValue_07 {
+    color: #f2f2f7;
+    font-size: 36rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.SeasonStatistics_alertIcon_15 {
+    align-self: center;
+    width: 24rem;
+    height: 24rem;
+    background: url('R.images.gui.maps.icons.library.alertBigIcon') no-repeat center center / contain;
+    position: relative;
+    transform: translate(0%, 25%);
+}
+
+@keyframes SeasonStatistics_light-rotation_d1 {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes SeasonStatistics_light-appearance_c6 {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.BattlePassOffSeasonViewContent_base_a5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0b08;
+}
+
+.BattlePassOffSeasonViewContent_content_17 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BattlePassOffSeasonViewContent_background_5f {
+    height: 150%;
+    padding: 0 100%;
+    background: url('R.images.gui.maps.icons.battlePass2020.off_season.bg') no-repeat center center / contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+}
+
+.BattlePassOffSeasonViewContent_backgroundFade_3d {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+}
+
+.BattlePassOffSeasonViewContent_header_66 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25rem;
+    padding-bottom: 13rem;
+    position: relative;
+}
+
+.BattlePassOffSeasonViewContent_base__medium_de .BattlePassOffSeasonViewContent_header_66,
+    .BattlePassOffSeasonViewContent_base__large_09 .BattlePassOffSeasonViewContent_header_66 {
+        padding-top: 76rem;
+    }
+
+.BattlePassOffSeasonViewContent_title_e9 {
+    margin-bottom: 6rem;
+    color: #f2f2f7;
+    font-size: 36rem;
+    font-weight: 700;
+}
+
+.BattlePassOffSeasonViewContent_base__large_09 .BattlePassOffSeasonViewContent_title_e9 {
+        font-size: 56rem;
+    }
+
+.BattlePassOffSeasonViewContent_date_7c {
+    color: #f2f2f7;
+    font-size: 15rem;
+    font-weight: 700;
+    line-height: 18rem;
+    opacity: .5;
+}
+
+.BattlePassOffSeasonViewContent_base__large_09 .BattlePassOffSeasonViewContent_date_7c {
+        font-size: 18rem;
+        line-height: 21rem;
+    }
+
+.BattlePassOffSeasonViewContent_stats_c1 {
+    display: flex;
+    padding-top: 48rem;
+    position: relative;
+}
+
+.BattlePassOffSeasonViewContent_base__large_09 .BattlePassOffSeasonViewContent_stats_c1 {
+        padding-top: 63rem;
+    }
+
+.BattlePassOffSeasonViewContent_subTitle_19 {
+    margin-bottom: 31rem;
+    color: #f2f2f7;
+    font-size: 24rem;
+    font-weight: 700;
+    line-height: 28rem;
+    position: relative;
+}
+
+.BattlePassOffSeasonViewContent_levelLabel_0a {
+    width: 450rem;
+    margin-top: 11rem;
+    margin-bottom: 26rem;
+    color: #f2f2f7;
+    font-size: 18rem;
+    font-weight: 700;
+    text-align: center;
+    white-space: pre;
+    position: relative;
+}
+
+.BattlePassOffSeasonViewContent_base__large_09 .BattlePassOffSeasonViewContent_levelLabel_0a {
+        margin-bottom: 79rem;
+    }
+
+.BattlePassOffSeasonViewContent_levelLabel__disabled_8f {
+        opacity: .5;
+    }
+
+.BattlePassOffSeasonViewContent_footerLabel_e8 {
+    display: flex;
+    padding-bottom: 114rem;
+    color: #8c8c7e;
+    font-size: 14rem;
+    line-height: 18rem;
+    text-align: center;
+    white-space: pre;
+    position: relative;
+}
+
+.BattlePassOffSeasonViewContent_base__large_09 .BattlePassOffSeasonViewContent_footerLabel_e8 {
+        font-size: 16rem;
+        line-height: 20rem;
+    }
+
+html {
+    height: 100%;
+    position: relative;
+}
+
+/* stylelint-disable */
+
+[lang=ja],
+[lang=ko],
+[lang=zh_tw],
+[lang=zh_sg],
+[lang=zh_ch],
+[lang=th] {
+    overflow-wrap: break-word;
+}
+
+/* stylelint-enable */
+
+body {
+    margin: 0;
+    line-height: normal;
+    overflow: hidden;
+}
+

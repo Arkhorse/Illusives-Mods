@@ -1,0 +1,301 @@
+(def layout CrewBooksView() entrance=true
+    (macro CrewBooksViewModel)
+    (macro CrewBooksTooltips)
+    (macro CrewBookScreenBreackPoints)
+    (scope
+        (const SCROLL_MAX_HEIGHT:number = 357px)
+        (const SCROLL_MIN_HEIGHT:number = 290px)
+
+        (const SCROLL_ON_MAX_WIDTH:number = 1484px)
+        (const SCROLL_OF_MAX_WIDTH:number = 1184px)
+        (const SCROLL_MIN_WIDTH:number = 944px)
+        
+        (const MIN_BOOK_COUNT:number = 4)
+
+        (const BOOKS_BOTTOM_MARGIN:number = 15px)
+
+        (event evSetUseBtnFocus)
+
+        (var isBigFlag:bool = "viewSize.width >= BORDER_SCREEN_WIDHT && viewSize.height >= BORDER_SCREEN_HEIGHT"
+            (event "viewResized")
+        )
+        (var scrollAreaWidth:number = "isBigFlag ? crewBookItemList.length > MIN_BOOK_COUNT ? SCROLL_ON_MAX_WIDTH : SCROLL_OF_MAX_WIDTH : SCROLL_MIN_WIDTH")
+        (var scrollAreaHeight:number = "isBigFlag ? SCROLL_MAX_HEIGHT + BOOKS_BOTTOM_MARGIN : SCROLL_MIN_HEIGHT + BOOKS_BOTTOM_MARGIN")
+    )
+
+    (style
+        (bind width "viewSize.width"
+            (event "viewResized")
+        )
+        (bind height "viewSize.height"
+            (event "viewResized")
+        )
+        (align = "center")
+    )
+    (image
+        (style
+            (width = 100%)
+            (height = 100%)
+            (position = "absolute")
+        )
+        (source = "R.images.gui.maps.icons.crewBooks.screen_bg()")
+    )
+    (image
+        (name = 'flag')
+        (style
+            (top = 33px)
+            (hcenter = 0px)
+            (position = "absolute")
+        )
+        (bind source "flagIcon")
+    )
+
+    (text_button 'closeBtn'
+        (macro ButtonCloseStyle)
+        (style
+            (right = 40px)
+            (top = 40px)
+            (position = "absolute")
+        )
+        (label = "R.strings.crew_books.screen.button.close.label()")
+        (dispatch onCloseBtnClick on='clicked')
+    )
+    (dispatch onCloseBtnClick on='escPressed')
+
+    (block
+        (name = 'Main centered block')
+        (style
+            (width = 100%)
+            (height = 100%)
+            (top = -25px)
+            (position = "absolute")
+            (align = "center|middle")
+        )
+        (block
+            (name = 'screenTitle')
+            (style
+                (width = 100%)
+                (height = 100%)
+                (bind top "isBigFlag ? -363px : -278px")
+                (position = "absolute")
+                (align = "center|middle")
+            )
+            (tf
+                (bind class "isBigFlag ? 'HeroTitleTextStyle' : 'GrandTitleTextStyle'")
+                (text = "R.strings.crew_books.screen.header()")
+            ) 
+            (tf
+                (bind class "isBigFlag ? 'PromoTitleTextStyle' : 'HighTitleTextStyle'")
+                (style
+                    (bind marginTop "isBigFlag ? 0px : -7px")
+                )
+                (bind text "screenDesc")
+            )
+        )
+        (scrollArea
+            (style
+                (bind width "scrollAreaWidth")
+                (bind height "scrollAreaHeight")
+                (position = "absolute")
+                (bind vcenter "isBigFlag ? -80px : -55px")
+                (hcenter = 0)
+            )
+            (horizontalSlider
+                (scroll_bar
+                    (value = 100)
+                    (orientation = "Flow.HORIZONTAL")
+                    (btn_decr = 'SBLeftBtn')
+                    (track = 'SBHTrack')
+                    (thumb = 'SBHThumb')
+                    (btn_incr = 'SBRightBtn')
+                )
+            )
+            (content
+                (style
+                    (height = 100%)
+                    (width = 100%)
+                )
+                (hblock
+                    (style
+                        (height = 100%)
+                        (align = "bottom")
+                        (paddingBottom = "BOOKS_BOTTOM_MARGIN")
+                    )
+                    (name = 'crewBookItemList')
+                    (controller $Repeat renderer='CrewBookItemView' layout=true	
+                        (bind count "crewBookItemList.length")
+                        (exprs
+                            (style
+                                (bind marginLeft "isBigFlag ? 12px : 9px")
+                                (bind marginRight "isBigFlag ? 12px : 9px")
+                            )
+                            (scope
+                                (bind bookIcon "crewBookItemList[$index].bookIcon")
+                                (bind amount "crewBookItemList[$index].amount")
+                                (bind isSelected "crewBookItemList[$index].isSelected")
+                                (bind isDisabled "crewBookItemList[$index].isDisabled")
+                                (bind compactDesc "crewBookItemList[$index].compactDesc")
+                                (bind title "crewBookItemList[$index].title")
+                                (bind description "crewBookItemList[$index].description")
+                                (bind descriptionFmtArgs "crewBookItemList[$index].descriptionFmtArgs")
+                                (bind overlayDescription "crewBookItemList[$index].overlayDescription")
+                                (bind overlayDescriptionFmtArgs "crewBookItemList[$index].overlayDescriptionFmtArgs")
+                                (bind isInShop "crewBookItemList[$index].isInShop")
+                            )
+                        )
+                    )
+                )
+            )
+        )
+        (block
+            (name = 'crewBookTankmenList')
+            (style
+                (width = 100%)
+                (height = 100%)
+                (bind top "isBigFlag ? 213px : 153px")
+                (position = "absolute") 
+                (align = "center|middle")
+            )
+            (group name = 'crewBookTankmenList'
+                (style
+                    (width = "100%")
+                    (height = "100%")
+                )
+                (renderer  = 'CrewBookTankmanView')
+                (container
+                    (style
+                        (flow = "Flow.HORIZONTAL")
+                        (width = "100%") 
+                        (height = "100%")
+                        (align = "center|middle")
+                        (bind gap "isBigFlag ? 0px : 30px")
+                    )
+                )
+            )
+            (image
+                (style
+                    (position = "absolute") 
+                    (vcenter = 28px)
+                    (hcenter = 0px)
+                )
+                (source = "R.images.gui.maps.icons.crewBooks.break_line()")
+            )
+        )
+
+        (block
+            (name = 'footer')
+            (style
+                (width = 100%)
+                (height = 100%)
+                (bind top "isBigFlag ? 400px : 311px")
+                (position = "absolute") 
+                (align = "center|middle")
+            )
+            (hblock
+                (style
+                    (width = 870px)
+                    (height = 120px)
+                    (left = 8px)
+                )
+                (hblock
+                    (style
+                        (width = 706px)
+                    )
+                    (block
+                        (style
+                            (width = 16px)
+                            (height = 16px)
+                            (align = "center|middle")
+                            (marginTop = 9)
+                        )
+                        (image
+                            (bind source "footerIcon")
+                        )
+                    )
+                    (tf
+                        (name = 'footerTitle')
+                        (bind class "isFooterAlert ? 'TitleAlertTextStyle' : 'MainBigTextStyle'")
+                        (style
+                            (width = 570px)
+                            (marginTop = 4px)
+                            (marginLeft= 4px)
+                        )
+                        (bind text "formatString(footerTitle, footerTitleFmtArgs, true)"
+                            (enabled = "footerTitleFmtArgs.length > 0 && footerTitle != ''")
+                        )
+                        (bind text "footerTitle"
+                            (enabled = "footerTitleFmtArgs.length == 0")
+                        )
+                    )
+                    (controller $ToolTip
+                        (bindcall args 
+                            tooltipId = "TOOLTIP_CREW_BOOK_RESTRICTED"
+                            body = "tooltipBody" 
+                            init=true
+                        )
+                        (bind content "isSimpleInvalidTooltip ? 
+                            R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId : 
+                            R.views.common.tooltip_window.backport_tooltip_content.BackportTooltipContent.resId"
+                        )
+                        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+                        (bind enabled "isInvalidTooltipEnable")
+                    )
+                )
+
+                (button
+                    (macro ButtonStylePrimary "BUTTON_SIZE_MEDIUM")
+                    (bind enabled "isBookUseEnable")
+                    (style 
+                        (minWidth = 164px)
+                        (minHeight = 33px)
+                    )
+                    (dispatch onBookUse on='clicked')
+                    (bindcall setFocus (event "evSetUseBtnFocus") (enabled = "isBookUseEnable")) 
+                    (bindcall setFocus (bind trigger "!isDialogOpen && isBookUseEnable"))
+                    (label = "R.strings.crew_books.screen.button.apply.label()")
+                    (mc 'Btn_Blink'
+                        (bind visible "isBookUseEnable")
+                        (style
+                            (macro AbsPositionFullSize)
+                        )
+                    )
+                    (controller $ToolTip
+                        (bindcall args 
+                            tooltipId = "TOOLTIP_CREW_BOOK_RESTRICTED"
+                            body="tooltipBody" 
+                            init=true
+                        )
+                        (bind content "isSimpleInvalidTooltip ? 
+                            R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId : 
+                            R.views.common.tooltip_window.backport_tooltip_content.BackportTooltipContent.resId"
+                        )
+                        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+                        (bind enabled "isInvalidTooltipEnable")
+                    )
+                ) 
+            )
+        )
+    )
+    (image
+        (bind visible "isDialogOpen")
+        (style
+            (width = 100%)
+            (height = 100%)
+            (position = "absolute")
+        )
+        (source = "R.images.gui.maps.icons.crewBooks.screen_bg()")
+    )
+)
+
+(def css TitleAlertTextStyle()
+    (fontFamily = $FieldFont)
+    (fontSize = 16)
+    (textColor = 0xEE7000)
+)
+
+(def macro CrewBookScreenBreackPoints()
+    (scope
+        (const BORDER_SCREEN_WIDHT:number = 1480px)
+        (const BORDER_SCREEN_HEIGHT:number = 960px)
+    )
+)

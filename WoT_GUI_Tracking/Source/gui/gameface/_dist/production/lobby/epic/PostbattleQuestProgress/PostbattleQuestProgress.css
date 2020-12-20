@@ -1,0 +1,538 @@
+.SmallButton_button_ea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    height: 24rem;
+    padding: 0 16rem;
+    border-radius: 8rem;
+    border-image-source: url('R.atlases.components.back_primary');
+    border-image-slice: 4 fill;
+    border-image-width: 4rem;
+    color: #fefeec;
+    font-size: 14rem;
+    font-weight: 700;
+    text-shadow: -1rem -1rem 0 #000;
+    overflow: hidden;
+    position: relative;
+    transition: border-image linear .16s;
+    cursor: pointer;
+}
+
+    /* height is +2rem because of transparent margins in png files */
+
+    .SmallButton_button__small_3b {
+        height: 16rem;
+        font-size: 12rem;
+    }
+
+    .SmallButton_button__large_fc {
+        height: 32rem;
+        font-size: 15rem;
+    }
+
+    .SmallButton_button__extraLarge_95 {
+        height: 66rem;
+        font-size: 24rem;
+    }
+
+    .SmallButton_button__main_0f {
+        border-image-source: url('R.atlases.components.back_main');
+        text-shadow: -1rem -1rem 0 #600;
+    }
+
+    .SmallButton_button__primaryRed_2b {
+        border-image-source: url('R.atlases.components.back_primary_red');
+    }
+
+    .SmallButton_button__primaryGreen_b9 {
+        border-image-source: url('R.atlases.components.back_primary_green');
+        text-shadow: -1rem -1rem 0 #1c2502;
+    }
+
+    .SmallButton_button__primaryGold_22 {
+        border-image-source: url('R.atlases.components.back_primary_gold');
+    }
+
+    .SmallButton_button__secondary_a7 {
+        border-image-source: url('R.atlases.components.back_secondary');
+        color: #b3b3a9;
+    }
+
+    .SmallButton_button__ghost_d7 {
+        border-image-source: url('R.atlases.components.back_ghost');
+        text-shadow: none;
+    }
+
+    .SmallButton_button__disabled_ea {
+        cursor: default;
+    }
+
+.SmallButton_button_toggle__on_de .SmallButton_toggle_indicator_26 {
+    border-image-source: url('R.atlases.components.indicator_toggle');
+}
+
+.SmallButton_toggle_icon_96 {
+    width: 48rem;
+    height: 48rem;
+    margin-left: -24rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -23rem;
+    left: 50%;
+}
+
+.SmallButton_button_toggle__on_de .SmallButton_toggle_icon_96 {
+        background-image: url('R.atlases.components.icon_selected_on');
+        bottom: -24rem;
+    }
+
+.SmallButton_button_toggle__off_30 .SmallButton_toggle_icon_96 {
+        background-image: url('R.atlases.components.icon_selected_off');
+    }
+
+.SmallButton_indicator_75,
+.SmallButton_toggle_indicator_26,
+.SmallButton_stroke_b5,
+.SmallButton_hover_indicator_03 {
+    border-image-slice: 4 fill;
+    border-image-width: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.SmallButton_indicator_75 {
+    transition: border-image linear .16s;
+
+    /* .button_focus & {*/
+    /*     border-image-source: url('R.atlases.components.indicator_focus');*/
+    /* }*/
+}
+
+.SmallButton_button_click_4c .SmallButton_indicator_75 {
+        border-image-source: url('R.atlases.components.indicator_down');
+    }
+
+.SmallButton_button_alert_1c .SmallButton_indicator_75 {
+        border-image-source: url('R.atlases.components.indicator_alert');
+        animation-name: SmallButton_blink_d8;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+.SmallButton_button_error_fb .SmallButton_indicator_75 {
+        border-image-source: url('R.atlases.components.indicator_error');
+    }
+
+.SmallButton_button__disabled_ea .SmallButton_indicator_75 {
+        border-image-source: none;
+    }
+
+.SmallButton_hover_indicator_03 {
+    border-image-source: url('R.atlases.components.indicator_over');
+    opacity: 0;
+    mix-blend-mode: additive;
+    transition: opacity .16s;
+}
+
+.SmallButton_button_hover_95 .SmallButton_hover_indicator_03 {
+        opacity: 1;
+    }
+
+.SmallButton_button__disabled_ea .SmallButton_hover_indicator_03 {
+        border-image-source: none;
+    }
+
+@keyframes SmallButton_blink_d8 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.SmallButton_stroke_b5 {
+    border-image-source: url('R.atlases.components.stroke');
+    opacity: .5;
+}
+
+.SmallButton_button_toggle__on_de .SmallButton_stroke_b5 {
+        display: none;
+    }
+
+.SmallButton_content_81 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding-bottom: 3rem;
+    line-height: 1.25;
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.SmallButton_button__disabled_ea .SmallButton_content_81 {
+        opacity: .4;
+    }
+
+.SmallButton_texture_f5 {
+    background-image: url('R.images.gui.maps.icons.components.button.standard_texture');
+    background-size: 128rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.SmallButton_button__disabled_ea .SmallButton_texture_f5 {
+        background-image: url('R.images.gui.maps.icons.components.button.texture_disable');
+        background-size: 15rem;
+    }
+
+.QuestProgress_base_89 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 327rem;
+    padding: 10rem 0 0;
+    border-left: 1rem solid #21201b;
+    border-right: 1rem solid #21201b;
+}
+
+    .QuestProgress_base__done_0d {
+        justify-content: space-between;
+    }
+
+.QuestProgress_header_f7 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 14rem;
+}
+
+.QuestProgress_title_9a {
+    display: flex;
+    color: #e9e2bf;
+    font-size: 15rem;
+    font-weight: 700;
+}
+
+.QuestProgress_desc_8e {
+    max-height: 40rem;
+    color: #8c8c7e;
+    font-size: 14rem;
+}
+
+.QuestProgress_button_19 {
+    padding: 5rem 0 0 10rem;
+}
+
+.QuestProgress_progress_01 {
+    padding: 0 14rem;
+}
+
+.QuestProgress_value_f9 {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5rem;
+    color: #8c8c7e;
+    font-size: 14rem;
+    position: relative;
+}
+
+.QuestProgress_delta_1d {
+    color: #baa787;
+    font-size: 14rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.QuestProgress_check_54 {
+    width: 16rem;
+    height: 16rem;
+    background-image: url('R.images.gui.maps.icons.library.ConfirmIcon_1');
+    position: absolute;
+    top: 0;
+    left: -16rem;
+}
+
+.QuestProgress_complete_99 {
+    color: #76cd49;
+    font-size: 12rem;
+    position: relative;
+}
+
+.QuestProgress_reward_da {
+    display: flex;
+    width: 100%;
+    height: 65%;
+    padding: 5rem 14rem 0;
+    background: url('R.images.gui.maps.icons.epicBattles.quests.background') 0 0 / cover no-repeat;
+    color: #8c8c7e;
+    font-size: 14rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.QuestProgress_format_fa {
+    align-content: flex-start;
+    margin: 0 0 0 10rem;
+    color: #95907f;
+    font-size: 14rem;
+}
+
+.QuestProgress_rewardText_01 {
+    flex: 1;
+}
+
+.QuestProgress_crystalIco_91 {
+    width: 16rem;
+    height: 16rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.FormatText_base_d0 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.ProgressBarBlink_base_24 {
+    width: 60rem;
+    height: 100rem;
+    background-image: var(--progress-glow);
+    background-size: contain;
+    mix-blend-mode: lighten;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    pointer-events: none;
+}
+
+    .ProgressBarBlink_base__small_0f {
+        width: 44rem;
+        height: 43rem;
+        background-image: var(--progress-glow-small);
+    }
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressLineImpose_base_80 {
+    max-width: 8001px;
+    height: 100%;
+    background-color: var(--progress-line-base);
+    position: relative;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-property: width;
+}
+.ProgressLineImpose_base__disabled_cc {
+        background-color: var(--progress-line-disabled);
+    }
+.ProgressLineImpose_base__finished_d4 {
+        background-color: var(--progress-line-finished);
+    }
+.ProgressLineImpose_base__withoutBounce_56 {
+        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+    }
+.ProgressLineImpose_pattern_1c {
+    max-width: 8001px;
+    background-image: linear-gradient(90deg, var(--progress-pattern-base) 60%, transparent 40%);
+    background-repeat: repeat;
+    background-position: 0 50%;
+    background-size: 3rem 10rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+}
+.ProgressLineImpose_base__small_55 .ProgressLineImpose_pattern_1c {
+        top: 0;
+        bottom: 0;
+    }
+.ProgressLineImpose_base__disabled_cc .ProgressLineImpose_pattern_1c {
+    background-image: linear-gradient(90deg, var(--progress-pattern-disabled) 60%, transparent 40%);
+    }
+.ProgressLineImpose_base__finished_d4 .ProgressLineImpose_pattern_1c {
+    background-image: linear-gradient(90deg, var(--progress-pattern-finished) 60%, transparent 40%);
+    }
+.ProgressLineImpose_gradient_35 {
+    max-width: 8001px;
+    background-image: linear-gradient(90deg, rgba(0,0,0, .5), rgba(255,255,255, .75));
+    mix-blend-mode: overlay;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    bottom: 1rem;
+    left: 0;
+}
+.ProgressLineImpose_base__small_55 .ProgressLineImpose_gradient_35 {
+        top: 0;
+        bottom: 0;
+    }
+.ProgressLineImpose_base__disabled_cc .ProgressLineImpose_gradient_35 {
+        display: none;
+    }
+.ProgressLineImpose_base__finished_d4 .ProgressLineImpose_gradient_35 {
+        background-image: linear-gradient(90deg, rgba(0,0,0, .5), rgba(255,255,255, .75), rgba(0,0,0, .5));
+    }
+.ProgressLineImpose_glow_a5 {
+    width: 60rem;
+    max-width: 8001px;
+    height: 100rem;
+    background-image: var(--progress-glow);
+    background-size: contain;
+    mix-blend-mode: lighten;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.ProgressLineImpose_glow__left_d8 {
+        left: 1rem;
+    }
+.ProgressLineImpose_base__disabled_cc .ProgressLineImpose_glow_a5,
+    .ProgressLineImpose_base__finished_d4 .ProgressLineImpose_glow_a5 {
+        display: none;
+    }
+.ProgressLineImpose_base__small_55 .ProgressLineImpose_glow_a5 {
+        width: 44rem;
+        height: 43rem;
+        background-image: var(--progress-glow-small);
+    }
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressBarDeltaSimple_base_6c {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.ProgressBarDeltaSimple_delta_99 {
+    width: 0;
+    max-width: 8001px;
+    height: 100%;
+    box-shadow: var(--progress-delta-shadow);
+    background-color: var(--progress-delta-color);
+    position: absolute;
+    bottom: 0;
+    transform-origin: right center;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39), cubic-bezier(.21, .61, .35, 1);
+    transition-property: width, transform;
+}
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressBarDeltaGrow_base_7e {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-property: width;
+}
+.ProgressBarDeltaGrow_base__withoutBounce_b5 {
+        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+    }
+.ProgressBarDeltaGrow_glow_68 {
+    width: 0;
+    max-width: 8001px;
+    height: 100%;
+    box-shadow: var(--progress-delta-shadow);
+    background-color: var(--progress-delta-color);
+    position: absolute;
+    bottom: 0;
+    transform-origin: right center;
+    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-property: width;
+}
+.ProgressBarDeltaGrow_base__withoutBounce_b5 .ProgressBarDeltaGrow_glow_68 {
+        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+    }
+
+/*
+    Gameface can't calculate gradient biggest than 8128px
+    in JS 8000 reserved like anchor for start optimization
+*/
+/* stylelint-disable-line */
+.ProgressBar_base_45 {
+    width: 100%;
+    height: 12rem;
+    position: relative;
+}
+.ProgressBar_base__small_df {
+        height: 2rem;
+    }
+.ProgressBar_background_51 {
+    background-image: linear-gradient(90deg, var(--progress-base) 60%, transparent 40%);
+    width: 100%;
+    max-width: 8001px;
+    height: 100%;
+    background-repeat: repeat;
+    background-position: 0 50%;
+    background-size: 3rem 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.ProgressBar_background__small_46 {
+        height: 2rem;
+    }
+.ProgressBar_lineWrapper_6a {
+    display: flex;
+    flex: 1;
+}
+
+.MultilineTextOverflow_base_e8 {
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.QuestProgressList_list_0e {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 1rem solid #21201b;
+    background-color: #0c0b07;
+    overflow: hidden;
+}
+
+.QuestProgressList_text_4d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #615e56;
+    font-size: 14rem;
+}
+

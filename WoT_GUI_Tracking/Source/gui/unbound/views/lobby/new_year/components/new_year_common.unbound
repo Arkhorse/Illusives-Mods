@@ -1,0 +1,250 @@
+(def layout CollectionItemBottomContent() entrance=true
+    (macro CurrencyItemModel)
+    (style
+        (width = 100%)
+        (height = 100%)
+        (align = "center|middle")
+        (flow = "Flow.HORIZONTAL")
+    )
+    (tf
+        (style
+            (marginTop = 6px)
+        )
+        (class MainTextStyle)
+        (text = "R.strings.ny.dialogs.buyCollectionItem.price()")
+    )
+    (tf
+        (bind class "isEnough ? 'ExpTextBigStyle' : 'ErrCurrencyTextBigStyle'")
+        (bind text "value")
+        (antiAliasType = 'normal')
+    )
+    (image
+        (style
+            (width = 30px)
+            (height = 30px)
+            (marginLeft = 2px)
+        )
+        (source = "R.images.gui.maps.icons.lootboxes.fragments()")
+    )
+)
+
+(def layout CollectionItemBalanceContent() entrance=true
+    (macro CurrencyItemModel)
+    (style
+        (align = "middle")
+        (flow = "Flow.HORIZONTAL")
+        (paddingRight = 30px)
+    )
+    (tf
+        (class MainTextStyle)
+        (text = "R.strings.ny.dialogs.buyCollectionItem.balance()")
+    )
+    (tf
+        (bind class "isEnough ? 'ExpTextBigStyle' : 'ErrCurrencyTextBigStyle'")
+        (bind text "value")
+    )
+    (image
+        (style
+            (width = 30px)
+            (height = 30px)
+            (marginLeft = 2px)
+        )
+        (source = "R.images.gui.maps.icons.lootboxes.fragments()")
+    )
+)
+
+(def layout NewYearHitArea(name:str = 'hit', w:number = 100px, h:number = 100px)
+    (name = "name")
+    (style
+        (position = "absolute")
+        (bind width "w")
+        (bind height "h")
+        (backgroundColor = 0x00ff0000)
+    )
+)
+
+(def constant NY_TOP_OFFSET 90)
+(def constant NY_WIDGET_LVL_UP_CHANGE_LEVEL 4.2)
+(def constant NY_LVL_UP_START_ANIM 2)
+
+(def element TankSlotBonus(name:str, expIcon:expression, bonusText:expression)
+    (name = "name")
+    (scope
+        (var value:number = 0)
+    )
+    (style
+        (marginBottom = 15px)
+        (gap = 5px)
+        (flow = "Flow.HORIZONTAL")
+    )
+    (image
+        (source = "expIcon")
+    )
+    (tf
+        (class HighlightTextStyle)
+        (style
+            (textColor = 0xccebf5)
+            (fontSize = 16px)
+        )
+        (bind text "'+' + value + '%'")
+    )
+    (tf
+        (class NYTankBonusTextTooltipStyle)
+        (style
+            (maxWidth = 240px)
+            (multiline=true)
+        )
+        (class MainBigTextStyle)
+        (text = "bonusText")
+    )
+)
+
+(def css NYTankBonusTextTooltipStyle()
+    (textColor = 0x777671)
+    (fontSize = 16px)
+    (fontFamily = $FieldFont)
+)
+
+(def constant NY_QUEST_BUTTON_SIZE_LARGE {height : 45px, fontSize : 14px, iconPadding : -160px, labelTopOffset : -1px, minWidth: 235px})
+(def constant NY_QUEST_BUTTON_SIZE_SMALL {height : 30px, fontSize : 12px, iconPadding : -140px, labelTopOffset : 0px, minWidth: 195px})
+
+(def macro NYQuestsButtonsBlock()
+    (hblock
+        (name = 'NYQuestsButtons')
+        (style
+            (bind gap "isSmallButtons ? 16 : 24")
+        )
+        (bind visible "showQuestsButtons")
+        (button
+            (name = 'celebrityBtnSmall')
+            (macro NYQuestButtonStylePrimary "NY_QUEST_BUTTON_SIZE_SMALL")
+            (label = "R.strings.ny.breakDecorations.dummy.openCelebrityBtn()")
+            (icon = "R.images.gui.maps.icons.new_year.icons.btn_challenge_small()")
+            (dispatch onCelebrityBtnClick on='clicked')
+            (bind visible "isSmallButtons")
+        )
+
+        (button
+            (name = 'celebrityBtnLarge')
+            (macro NYQuestButtonStylePrimary "NY_QUEST_BUTTON_SIZE_LARGE")
+            (label = "R.strings.ny.breakDecorations.dummy.openCelebrityBtn()")
+            (icon = "R.images.gui.maps.icons.new_year.icons.btn_challenge()")
+            (dispatch onCelebrityBtnClick on='clicked')
+            (bind visible "!isSmallButtons")
+        )
+
+        (button
+            (name = 'questsBtnSmall')
+            (macro NYQuestButtonStylePrimary "NY_QUEST_BUTTON_SIZE_SMALL")
+            (label = "R.strings.ny.breakDecorations.dummy.openQuestsBtn()")
+            (icon = "R.images.gui.maps.icons.new_year.icons.btn_daily_small()")
+            (dispatch onQuestsBtnClick on='clicked')
+            (bind visible "isSmallButtons")
+        )
+
+        (button
+            (name = 'questsBtnLarge')
+            (macro NYQuestButtonStylePrimary "NY_QUEST_BUTTON_SIZE_LARGE")
+            (label = "R.strings.ny.breakDecorations.dummy.openQuestsBtn()")
+            (icon = "R.images.gui.maps.icons.new_year.icons.btn_daily()")
+            (dispatch onQuestsBtnClick on='clicked')
+            (bind visible "!isSmallButtons")
+        )
+    )
+)
+
+(def macro NYQuestButtonStylePrimary(size:expression)
+    (label
+        (class NYQuestZuricStylePrimary)
+    )
+    (macro NYQuestButtonSimpleStyles "size" "R.images.gui.maps.icons.new_year.break_decorations_view.quest_button.quests_blue_button()")
+    (macro NYQuestButtonIconTextStyles "size")
+)
+
+(def css NYQuestZuricStylePrimary()
+    (fontFamily = $FieldFont)
+    (textColor = 0xccffff)
+    (filters
+        (dropShadow
+            (angle = 270)
+            (blurX = 1)
+            (blurY = 1)
+            (strength =1)
+            (distance = 1)
+            (color = 0x000000)
+            (quality = 0)
+        )
+    )
+)
+
+(def macro NYQuestButtonSimpleStyles(size:expression, background:expression)
+    (style
+        (height = "size['height']")
+        (minWidth = "size['minWidth']")
+    )
+
+    # background texture (usually sharpness)
+    (backgroundTexture = 'bitmap:BtnTextureStandard')
+
+    # texture tiled over button at disabled state
+    (disableOverlay source='bitmap:BtnDisableTexture' padding=1px)
+
+    # textture shown at hover state on the top layer
+    (hover source="background" scale9grid="BUTTON_BACKGROUND_RECT" blend='add' offsets=null)
+
+    # main background button texture
+    (background source="background" scale9grid="BUTTON_BACKGROUND_RECT" offsets=null)
+
+    (down source="R.atlases.components.indicator_down()" scale9grid="BUTTON_BACKGROUND_RECT" offsets=null)
+
+    # set focus image
+    (setFocusImage source="R.atlases.components.indicator_focus()" scale9grid="Rect(15, 7, 135, 5)" offsets=null)
+
+    (soundDown = "R.sounds.play()")       # sound for 'down' state
+    (soundOver = "R.sounds.highlight()")  # sound fo 'hover' state
+)
+
+(def macro NYQuestButtonIconTextStyles(size:expression)
+    (style
+        (align = "left | middle")
+    )
+    (label
+        (style
+            (fontSize = "size['fontSize']")
+            (marginRight = 22px)
+            (marginTop = "size['labelTopOffset']")
+        )
+    )
+
+    # id of a simple tooltip
+    (tooltipContent = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+    (tooltipDecorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+
+    (padding = 1px)            # side paddings (px/%)
+    (iconAlign = "left")       # icon align ("left"|"right")
+    (iconPadding = "size['iconPadding']")     # gap between icon and text (in pixels)
+    (truncateText = false)     # use to allow text truncation (if true you need to specify button width style)
+)
+
+(def element NYToyTooltipIcon()
+    (name = 'toyIcon')
+    (scope
+        (var source:str = '')
+    )
+    (style
+        (width = 100%)
+        (align = "center")
+    )
+    (image
+        (class AbsPositionCenterStyle)
+        (source = "R.images.gui.maps.icons.new_year.tooltips.toy_tooltip.toy_bg()")
+    )
+    (image
+        (style
+            (width = 180px)
+            (height = 180px)
+        )
+        (bind source "source")
+    )
+    (bind visible "source != ''")
+)

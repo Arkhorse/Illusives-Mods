@@ -1,0 +1,20 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro DashboardPremiumCardModel()
+    (scope
+        (event onClick)
+
+        (var isBasePremiumActive:bool = false)
+        (var isTankPremiumActive:bool = false)
+        (var isNotPremium:bool = true)
+        (var basePremTimeLeft:number = -1)
+        (var tankPremTimeLeft:number = -1)
+        (var experienceBonus:number = 0)
+        (var creditsBonus:number = 0)
+        (var squadBonus:number = 0)
+
+        # The following submodels are used in this model:
+        # withoutPremium:ui_kit.list_model
+        # withPremium:ui_kit.list_model
+    )
+)

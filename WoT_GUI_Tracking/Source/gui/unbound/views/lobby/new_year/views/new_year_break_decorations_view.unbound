@@ -1,0 +1,434 @@
+(def layout NewYearBreakDecorationsView() entrance=true
+    (macro NewYearBreakDecorationsViewModel)
+    # fix for WOTD-172151
+    (setFocus)
+    (style
+        (macro ViewResizeBindedSize "0" "-NY_TOP_OFFSET")
+
+        (backgroundColor = 0xFF000000)
+        (align = "center")
+        (paddingRight = 10px)
+        (paddingBottom = 40px)
+        (paddingTop = 110px)
+    )
+
+    (macro BreakAnimationLogic)
+    (scope
+        (bind decorationSelectedAll "$event.selected" init=false
+            (event "onSelectedAllChanged")
+        )
+
+        (const SIZE_SLOT:number = 80)
+        (const GAP_LIST:number = 10)
+        (const MARGIN_LIST:number = 10)
+        (const CUSTOM_BREAKPOINT_WIDTH_DOWN : number = 1124)
+        (const CUSTOM_BREAKPOINT_WIDTH_UP : number = 1480)
+
+        (var showQuestsButtons:bool = true)
+
+        (var heightAvailable:number = "viewSize.height - 340 + GAP_LIST - 2 * MARGIN_LIST"
+            (event "viewResized")
+        )
+        (var maxCountRenderers:number = "floor(heightAvailable / (SIZE_SLOT + GAP_LIST))")
+        (var heightList:number = "maxCountRenderers * SIZE_SLOT + (maxCountRenderers - 1) * GAP_LIST + 2 * MARGIN_LIST")
+
+        (const LIST_WIDHT:number = 890)
+        (var listMarginLeft:number = "(viewSize.width - LIST_WIDHT) * 0.5"
+            (event "viewResized")
+        )
+
+        (var heightSize:str = "viewSize.height >= BASE_HEIGHT_1080 ? 'big' : (viewSize.height >= BASE_HEIGHT_900 ? 'normal' : 'small')"
+            (event "viewResized")
+        )
+        (var isSmallButtons:bool = "heightSize == 'small'")
+
+        (var isMedium:bool = "viewSize.height < BASE_HEIGHT_1080"
+            (event "viewResized")
+        )
+        (var isSmall:bool = "viewSize.width <= BASE_WIDTH_1366 || viewSize.height <= BASE_HEIGHT_768"
+            (event "viewResized")
+        )
+
+        (var isBackLabelHided:bool = "viewSize.width < CUSTOM_BREAKPOINT_WIDTH_DOWN || (viewSize.width > BASE_WIDTH_1366 && viewSize.width < CUSTOM_BREAKPOINT_WIDTH_UP)"
+            (event "viewResized")
+        )
+
+        (var scale:number = "isMedium ? 0.75 : 1")
+
+        (var BACKGROUND_OFFSETS:dict = "{
+            'big': -40px,
+            'normal': -30px,
+            'small': -80px
+        }")
+
+        (dispatch onViewResized dir=1
+            (event "viewResized")
+        )
+    )
+
+    (image
+        (name = 'background')
+        (style
+            (macro CraftScalePositionStyle)
+            (bind vcenter "BACKGROUND_OFFSETS[heightSize]")
+        )
+        (source = "R.images.gui.maps.icons.new_year.craftMachine.background()")
+    )
+
+    (text_button 'backBtn'
+        (name = 'backBtn')
+        (macro ButtonBackStyle)
+        (style
+            (position = "absolute")
+            (bind top "isSmall ? 22 : 43")
+            (left = 10px)
+        )
+        (bind label "!isBackLabelHided ? R.strings.ny.backButton.label() : ''")
+        (dispatch onBackBtnClick on='clicked')
+
+        (controller $ToolTip
+            (delay = "0.4")
+            (bindcall args header='' body="R.strings.ny.backButton.capitalizedLabel()" init=true)
+            (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+            (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+            (bind enabled "isBackLabelHided")
+        )
+        (bind visible "showBackBtn")
+    )
+
+    (hblock
+        (name = 'filterBlock')
+        (style
+            (width = "LIST_WIDHT")
+        )
+
+        (hblock
+            (name = 'shardsLeft')
+            (style
+                (align = "middle")
+            )
+
+            (tf
+                (name = 'availableTF')
+                (class PromoTitleTextStyle)
+                (text = "R.strings.ny.breakDecorations.parts.available()")
+            )
+
+            (image
+                (name = 'icon')
+                (style
+                    (marginLeft = -3px)
+                )
+                (source = "R.images.gui.maps.icons.new_year.icons.parts_24x24()")
+            )
+                
+            (element NewYearPartsCounterElement
+                (name = 'counter')
+                (style
+                    (marginTop = -3px)
+                )
+                (scope
+                    (bind shardsCount "shardsCount" init=false)
+                    (bind animationCounterEnabled "shardsCount >= 0" init=false)
+                    (countStyle = 'PromoTitleTextStyle')
+                )
+                (controller $ToolTip
+                    (delay = "0.4")
+                    (content = "R.views.lobby.new_year.tooltips.new_year_parts_tooltip_content.NewYearPartsTooltipContent.resId")
+                    (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+                )
+            )
+        )
+        
+        (element FilterCounterElement name='filterCounter'
+            (scope
+                (resultLabel = "R.strings.ny.breakDecorations.filter.result()")
+                (buttonTooltipHeader = "R.strings.ny.breakDecorations.filterCounter.tooltip.header()")
+                (buttonTooltipBody = "R.strings.ny.breakDecorations.filterCounter.tooltip.body()")
+                (resetButtonTooltipHeader = "R.strings.ny.breakDecorations.filterCounter.reset.tooltip.header()")
+                (resetButtonTooltipBody = "R.strings.ny.breakDecorations.filterCounter.reset.tooltip.body()")
+                (popoverId = "R.views.lobby.new_year.views.new_year_break_filter_popover.NewYearBreakFilterPopover.resId")
+                (bind buttonEnabled "!animationInProgress")
+            )
+            (style
+                (position = "absolute")
+                (top = 4px)
+                (left = 720px)
+            )
+        )
+    )
+
+    (block
+        (name = 'slotsBlock')
+        (style
+            (marginTop = 11px)
+            (width = 100%)
+            (bind height "heightList")
+        )
+        (tabEnabled = false)
+        (tabChildren = false)
+        (list name='slotsList'
+            (style
+                (height = 100%)
+                (width = 100%)
+                (paddingRight = 100px)
+            )
+            (renderer = 'NewYearBreakDecorationSlot')
+            (allowDeselect = true)
+            (isMultiselect = true)
+
+            (emptyRenderer = 'NewYearDecorationEmptySlot')
+            (useEmptyRenderer = true)
+            
+            (container
+                (style
+                    (flow = "Flow.TILE_HORIZONTAL")
+                    (width = "LIST_WIDHT")
+                    (gap = "GAP_LIST")
+                    (bind marginLeft "listMarginLeft")
+                    (marginTop = 10px)
+                    (marginBottom = 10px)
+                )
+            )
+            
+            (vscrollPolicy = 'auto')
+            (hscrollPolicy = 'off')
+            (verticalSlider
+                (macro ScrollBarV)
+            )
+
+            (bind mouseEnabled "!animationInProgress")
+            (bind mouseChildren "!animationInProgress")
+            (bind visible "!showDummy && !showNotFoundPage")
+        )
+        
+        # separators
+        (block
+            (name = 'separatorTop')
+            (mouseEnabled = false)
+            (style
+                (position = "absolute")
+                (hcenter = 0px)
+                (top = -85px)
+            )
+            (image
+                (style
+                    (width = "LIST_WIDHT + 60px")
+                )
+                (source = "R.images.gui.maps.icons.new_year.break_decorations_view.shadowSeparatorTop()")
+            )
+            (macro EmptyHitAreaMacro)
+        )
+
+        (block
+            (name = 'separatorBottom')
+            (mouseEnabled = false)
+            (style
+                (position = "absolute")
+                (hcenter = 0px)
+                (bottom = -85px)
+            )
+            (image
+                (style
+                    (width = "LIST_WIDHT + 60px")
+                )
+                (source = "R.images.gui.maps.icons.new_year.break_decorations_view.shadowSeparatorBottom()")
+            )
+            (macro EmptyHitAreaMacro)
+        )
+
+        (block
+            (name = 'dummyView')
+            (class AbsPositionCenterStyle)
+            (style
+                (align = "center")
+                (gap = 20px)
+            )
+
+            (bind visible "showDummy && !showNotFoundPage")
+
+            (tf
+                (name = 'title')
+                (class HighlightTextStyle)
+                (text = "R.strings.ny.breakDecorations.dummy.title()")
+            )
+
+            (block
+                (name = 'howTo')
+                (style
+                    (gap = 10px)
+                )
+                (controller $Repeat layout=true count=3
+                    (exprs
+                        (style
+                            (flow = "Flow.HORIZONTAL")
+                            (gap = 10px)
+                        )
+                        (name = "'part_' + $index")
+
+                        (image
+                            (name = 'dotIcon')
+                            (style
+                                (marginTop = 8px)
+                            )
+                            (source = "R.images.gui.maps.icons.new_year.main_view.pop_over.dot()")
+                        )
+
+                        (tf
+                            (name = 'text')
+                            (class MainBigTextStyle)
+                            (style
+                                (autoSize = true)
+                                (multiline = true)
+                                (wordWrap = true)
+                            )
+                            (bind text "R.strings.ny.breakDecorations.dummy.description['part_' + ($index + 1)]()")
+                        )
+                    )
+                )
+            )
+
+            (block
+                (name = 'separatorTop')
+                (mouseEnabled = false)
+                (style
+                    (marginTop = -70px)
+                    (marginBottom = -65px)
+                )
+                (image
+                    (style
+                        (width = "700px")
+                    )
+                    (source = "R.images.gui.maps.icons.new_year.break_decorations_view.shadowSeparatorTop()")
+                )
+                (macro EmptyHitAreaMacro)
+            )
+
+            (macro NYQuestsButtonsBlock)
+        )
+
+        (element NewYearFilterElement
+            (name = 'notFoundView')
+            (class AbsPositionCenterStyle)
+            (bind visible "showNotFoundPage")
+        )
+    )
+
+    (hblock
+        (name = 'footer')
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (width = "LIST_WIDHT")
+            (bottom = 30px)
+        )
+
+        (element NewYearPartsTipElement name='shardsTip'
+            (style
+                (width = 270px)
+            )
+        )
+
+        (hblock
+            (name = 'controls')
+            (style
+                (width = 100%)
+                (height = 100%)
+                (hgap = 20px)
+                (align = "right|middle")
+            )
+            (block
+                (name = 'checkboxBlock')
+                (image
+                    (name = 'shadow')
+                    (style
+                        (position = "absolute")
+                        (hcenter = 0px)
+                        (vcenter = 0px)
+                    )
+                    (source = "R.images.gui.maps.icons.new_year.break_decorations_view.shadow()")
+                )
+
+                (check_box
+                    (name = 'checkboxSelectedAll')
+                    (macro CheckBoxStyleMain "CHECK_BOX_SIZE_EXTRA_LARGE")
+                    (label = "R.strings.ny.breakDecorations.selectedAll()")
+                    (setFontColors colorUp=0xccccb8 colorOver=0xccccb8 colorSelectedUp=0xdcab6d colorSelectedOver=0xdcab6d colorDisabled=0x37362e)
+                    (background source="R.atlases.components.back_checkbox()" scale9grid="Rect(4, 4, 24, 24)" offsets=null)
+                    (bind enabled "decorationSelectedAllEnable && !animationInProgress")
+                    (bind selected "decorationSelectedAll && decorationSelectedAllEnable")
+                    (dispatch onSelectedAllChanged on='selectedChanged')
+                )
+            )
+
+            (button
+                (name = 'breakDecorationsBtn')
+                (macro ButtonStylePrimary "BUTTON_SIZE_LARGE") 
+                (style
+                    (width = 160px)
+                )
+                (bind label "selectedDecorationsCount !=0 ? 
+                        TextFormat(R.strings.ny.breakDecorations.breakBtn.count(), {count: formatSeparator(expectedShardsCount)}) :
+                        R.strings.ny.breakDecorations.breakBtn.label()"
+                )
+                (bind icon "selectedDecorationsCount !=0 ? R.images.gui.maps.icons.new_year.main_view.pop_over.plus() : null")
+                (icon
+                    (style
+                        (bind width "selectedDecorationsCount !=0 ? 58 : 0") # workaround to hide icon
+                        (bind margin "selectedDecorationsCount !=0 ? -18px : 0")
+                    )
+                )
+                (dispatch onBreakDecorationsBtnClick on='clicked')
+                (bind enabled "selectedDecorationsCount != 0 && !animationInProgress")
+                
+                (controller $ToolTip
+                    (delay = "0.4")
+                    (bindcall args body="selectedDecorationsCount == 0  && !(showDummy || showNotFoundPage)?
+                        R.strings.ny.breakDecorations.breakBtn.notSelected.tooltip.body.resId:
+                        R.strings.ny.breakDecorations.breakBtn.notAvailable.tooltip.body.resId" init=true)
+                    (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+                    (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+                    (bind enabled "selectedDecorationsCount == 0")
+                )
+            )
+        )
+    )
+)
+
+(def layout NewYearFilterElement()
+    (style
+        (width = 400px)
+        (align = "center")
+        (gap = 15px)
+    )
+
+    (scope
+        (event onFilterResetBtnClick)
+    )
+
+    (tf
+        (name = 'title')
+        (class StatusWarningTextStyle)
+        (text = "R.strings.ny.breakDecorations.filter.notFound.title()")
+    )
+
+    (tf
+        (class MainTextStyle)
+        (style
+            (width = 100%)
+            (textAlign = "center")
+        )
+        (text = "R.strings.ny.breakDecorations.filter.notFound.description()")
+    )
+
+    (button
+        (name = 'resetBtn')
+        (macro ButtonStylePrimary "BUTTON_SIZE_LARGE") 
+        (label = "R.strings.ny.breakDecorations.filter.resetBtn()")
+        (dispatch onFilterResetBtnClick on='clicked' dir=1)
+        (style
+            (width = 160px)
+            (marginTop = 5px)
+        )
+    )
+)

@@ -1,0 +1,10 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NyCraftMegaDeviceModel()
+    (scope
+        (event onToggleChanged)
+
+        (var collectedToys:number = 0)
+        (var enabled:bool = false)
+    )
+)

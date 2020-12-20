@@ -1,0 +1,169 @@
+(def layout NyMegaDecorationsPopover() entrance=true
+    (macro NyMegaDecorationsPopoverModel)
+
+    (scope
+        (event onArrowAnim)
+
+        (var arrowPosition:number = -10)
+        (var arrowAlpha:number = 1)
+
+        (controller $Animation
+            (bindcall playSeq "[
+                    {duration:1.4, from:{arrowAlpha: 1, arrowPosition: -10.0}, to:{arrowAlpha: 0, arrowPosition: -30.0}, easing:Easing.cubic_out},
+                    {duration:1, from:{arrowAlpha: 0, arrowPosition: 20.0}, to:{arrowAlpha: 1, arrowPosition: -10.0}, easing:Easing.cubic_out}
+                ]"
+                repeatCount=1
+                init=false
+                (event "onArrowAnim")
+            )
+        )
+    )
+
+    (style
+        (width = 455px)
+        (paddingBottom = 5px)
+    )
+
+    (hblock
+        (name = 'titleBlock')
+        (style
+            (marginTop = -15px)
+            (marginLeft = 10px)
+            (height = 75px)
+            (align = "middle")
+        )
+
+        (image
+            (name = 'decorationTypeIcon')
+            (bind source "decorationTypeIcon")
+        )
+
+        (tf
+            (name = 'decorationName')
+            (class NyMegaPopoverTitleStyle)
+            (style
+                (marginLeft = 10px)
+            )
+            (bind text "decorationName")
+        )
+        (macro EmptyHitAreaMacro)
+    )
+
+    (block
+        (name = 'slotBlock')
+        (style
+            (align = "center")
+            (width = 100%)
+        )
+
+        (element NewYearMegaDecorationSlot name='slot'
+            (scope
+                (bind partsCurrent "partsCurrent")
+                (bind partsTotal "partsTotal")
+            )
+        )
+
+        (block
+            (name = 'status')
+            (style
+                (marginTop = 17px)
+            )
+            (image
+                (name = 'arrow')
+                (style
+                    (position = "absolute")
+                    (hcenter = 0px)
+                    (bind vcenter "arrowPosition")
+                )
+                (bind source "R.images.gui.maps.icons.new_year.main_view.mega_decorations_pop_over[hasDecoration ? 'orange_arrow' : 'blue_arrow']()")
+                (bind alpha "arrowAlpha")
+                (bind visible "!selected")
+            )
+            (tf
+                (name = 'statusText')
+                (class NyMegaPopoverStatusTextStyle)
+                (style
+                    (bind textColor "hasDecoration ? selected ? 0xFFC363 : 0xEE7000 : 0x09E2FF")
+                )
+
+                (bind text "TextFormat(R.strings.ny.megaDecorationsPopover.status[selected ? 'selected' : 'notSelected'](), 
+                            {bonus: objectBonus * 100})"
+                    (bind enabled "hasDecoration")
+                )
+
+                (bind text "R.strings.ny.megaDecorationsPopover.status[partsCurrent >= partsTotal ? 'enough' : 'notEnough']()"
+                    (bind enabled "!hasDecoration")
+                )
+            )
+            (macro EmptyHitAreaMacro)
+        )
+        (image
+            (style
+                (marginTop = 12px)
+                (marginBottom = 14px)
+            )
+            (source = "R.images.gui.maps.icons.new_year.main_view.mega_decorations_pop_over.line()")
+        )
+        (tf
+            (name = 'description')
+            (class NyMegaPopoverDescriptionTextStyle)
+            (style
+                (width = 100%)
+                (textAlign = "center")
+            )
+            (bind text "TextFormat(R.strings.ny.megaDecorationsPopover.description.hasDecoration(),
+                            {totalBonus: totalBonus * 100})"
+                (bind enabled "hasDecoration")
+            )
+            (bind htmlText "formatString(
+                                htmlTextStyle(R.strings.ny.megaDecorationsPopover.description.hasNotDecoration(), 'NyMegaPopoverDescriptionTextStyle', 'center', -1),
+                                [{
+                                    name: 'bonus',
+                                    value: TextFormat(
+                                        R.strings.ny.megaDecorationsPopover.description.bonus(),
+                                        {value: objectBonus * 100}),
+                                    style: 'NyMegaPopoverBonusTextStyle'
+                                }], true)"
+                (bind enabled "!hasDecoration")
+            )
+        )
+        (tf
+            (name = 'extraInfo')
+            (class NyMegaPopoverExtraInfoTextStyle)
+            (style
+                (marginTop = 5px)
+            )
+            (text = "R.strings.ny.megaDecorationsPopover.extraInfo()")
+        )
+    )
+)
+
+(def css NyMegaPopoverTitleStyle()
+    (fontFamily = $FieldFont)
+    (fontSize = 16)
+    (textColor = 0xcddde7)
+)
+
+(def css NyMegaPopoverStatusTextStyle()
+    (fontFamily = $FieldFont)
+    (fontSize = 18)
+    (textColor = 0xa4b2ba)
+)
+
+(def css NyMegaPopoverDescriptionTextStyle()
+    (fontFamily = $FieldFont)
+    (fontSize = 16)
+    (textColor = 0xCED9D9)
+)
+
+(def css NyMegaPopoverBonusTextStyle()
+    (fontFamily = $FieldFont)
+    (fontSize = 16)
+    (textColor = 0x09E2FF)
+)
+
+(def css NyMegaPopoverExtraInfoTextStyle()
+    (fontFamily = $FieldFont)
+    (fontSize = 14)
+    (textColor = 0x616D7D)
+)

@@ -1,0 +1,1469 @@
+.TextButton_base_b6 {
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    font-size: 12rem;
+    position: relative;
+    cursor: pointer;
+}
+
+    .TextButton_base__right_39 {
+        flex-direction: row-reverse;
+    }
+.TextButton_icon_17 {
+    width: 32rem;
+    height: 32rem;
+    background: no-repeat center / contain;
+    position: relative;
+}
+.TextButton_icon__back_43,
+    .TextButton_icon__forward_59 {
+        margin: -1rem -5rem;
+        background-image: url('R.images.gui.maps.icons.components.text_button.back');
+        transform: translateY(1rem);
+    }
+.TextButton_icon__forward_59 {
+        transform: rotate(180deg) translateY(1rem);
+    }
+.TextButton_icon__close_53 {
+        margin: -1rem 0;
+        background-image: url('R.images.gui.maps.icons.components.text_button.close');
+    }
+.TextButton_icon__info_33 {
+        margin: -1rem -5rem;
+        background-image: url('R.images.gui.maps.icons.components.text_button.info');
+    }
+.TextButton_glow_a4 {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .16s;
+}
+.TextButton_icon__back_43 .TextButton_glow_a4,
+    .TextButton_icon__forward_59 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.back_hover');
+    }
+.TextButton_icon__close_53 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.close_hover');
+    }
+.TextButton_icon__info_33 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.info_hover');
+    }
+.TextButton_base_b6:hover .TextButton_glow_a4 {
+        opacity: 1;
+    }
+.TextButton_base_b6:active .TextButton_glow_a4 {
+        opacity: 0;
+    }
+.TextButton_caption_82 {
+    position: relative;
+    transition: color .16s;
+}
+.TextButton_caption__back_b9,
+    .TextButton_caption__forward_4e,
+    .TextButton_caption__close_36 {
+        color: #FFDD99;
+        text-shadow: 0 0 10rem rgba(255,42,0, 1),
+            0 0 10rem rgba(255,42,0, .4),
+            0 0 10rem rgba(255,42,0, .4),
+            0 0 2rem rgba(255,42,0, .4),
+            0 0 1rem rgba(255,42,0, .4),
+            0 0 2rem rgba(255,42,0, .4),
+            0 0 1rem rgba(255,42,0, .4);
+    }
+.TextButton_base_b6:hover .TextButton_caption__back_b9, .TextButton_base_b6:hover .TextButton_caption__forward_4e, .TextButton_base_b6:hover .TextButton_caption__close_36 {
+            color: #fffa9f;
+        }
+.TextButton_base_b6:active .TextButton_caption__back_b9, .TextButton_base_b6:active .TextButton_caption__forward_4e, .TextButton_base_b6:active .TextButton_caption__close_36 {
+            color: #FFDD99;
+        }
+.TextButton_caption__info_23 {
+        padding: 0 5rem;
+        color: #CCFFFF;
+        text-shadow: 0 0 12rem rgba(31,68,255, .8),
+            0 0 8rem #00eaff;
+    }
+.TextButton_base_b6:hover .TextButton_caption__info_23 {
+            color: #e3ffff;
+            text-shadow: 0 0 12rem rgba(31,68,255, .8),
+                0 0 12rem rgba(0,234,255, 1),
+                0 0 8rem #00eaff;
+        }
+.TextButton_base_b6:active .TextButton_caption__info_23 {
+            color: #CCFFFF;
+            text-shadow: 0 0 12rem rgba(31,68,255, .6),
+                0 0 8rem #00eaff;
+        }
+.TextButton_goto_e7 {
+    color: #7c7c6c;
+}
+.TextButton_base__left_ff .TextButton_goto_e7 {
+        margin-left: 8rem;
+    }
+.TextButton_base__right_39 .TextButton_goto_e7 {
+        margin-right: 8rem;
+    }
+.TextButton_shine_e2 {
+    width: 90rem;
+    height: 40rem;
+    background: url('R.images.gui.maps.icons.components.text_button.shine') no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: -4rem;
+    transition: opacity .16s;
+    pointer-events: none;
+}
+.TextButton_base__left_ff .TextButton_shine_e2 {
+        left: -4rem;
+    }
+.TextButton_base__right_39 .TextButton_shine_e2 {
+        right: -4rem;
+        transform: rotate(180deg);
+    }
+.TextButton_base_b6:hover .TextButton_shine_e2 {
+        opacity: 1;
+    }
+.TextButton_base_b6:active .TextButton_shine_e2 {
+        opacity: 0;
+    }
+
+/* colors*/
+
+@keyframes BattlePassVotingResultViewResult_fadeOut_d6 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes BattlePassVotingResultViewResult_fadeIn_ac {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes BattlePassVotingResultViewResult_fadeInWithScale_c6 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes BattlePassVotingResultViewResult_slideUp_b9 {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes BattlePassVotingResultViewResult_scale_b9 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.BattlePassVotingResultViewResult_base_05 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 40%;
+    padding: 0 20rem;
+}
+
+.BattlePassVotingResultViewResult_base__reversed_c0 {
+        flex-direction: row-reverse;
+        position: relative;
+    }
+
+.BattlePassVotingResultViewResult_divider_ff {
+    display: none;
+    width: 1rem;
+    height: 55rem;
+    background-image: linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, .2), rgba(255,255,255, 0));
+    position: absolute;
+    top: -10rem;
+    left: 0;
+}
+
+.BattlePassVotingResultViewResult_base__reversed_c0 .BattlePassVotingResultViewResult_divider_ff {
+        display: block;
+    }
+
+.BattlePassVotingResultViewResult_title_5b {
+    color: #e9e2bf;
+    font-size: 14rem;
+    line-height: 16rem;
+}
+
+.BattlePassVotingResultViewResult_base__big_a7 .BattlePassVotingResultViewResult_title_5b {
+        font-size: 16rem;
+        line-height: 18rem;
+    }
+
+.BattlePassVotingResultViewResult_count_34 {
+    margin: 0 6rem -2rem;
+    color: #fefeec;
+    font-size: 24rem;
+    line-height: 28rem;
+}
+
+.CButton_base_40 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0 0 0 1rem rgba(0,0,0, .6);
+    position: relative;
+    cursor: pointer;
+}
+
+    /* type*/
+
+    .CButton_base__main_42,
+    .CButton_base__primary_7f,
+    .CButton_base__primaryGreen_6f,
+    .CButton_base__primaryRed_ec,
+    .CButton_base__secondary_50 {
+        background-size: 100% 100%;
+    }
+
+    .CButton_base__main_42 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+
+    .CButton_base__primary_7f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+
+    .CButton_base__primaryGreen_6f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+
+    .CButton_base__primaryRed_ec {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+
+    .CButton_base__secondary_50 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+
+    .CButton_base__ghost_ed {
+        border-radius: 3rem;
+        box-shadow: 0 0 0 1rem rgba(0,0,0, .3),
+            0 0 0 1rem rgba(255,255,255, .15) inset;
+        background-image: linear-gradient(0deg, rgba(13, 11, 3, 0) 0%, rgba(13, 11, 3, .04) 27%, rgba(13, 11, 3, 0) 100%);
+    }
+
+    /* size*/
+
+    .CButton_base__extraSmall_27 {
+        min-height: 17rem;
+        padding: 0 16rem;
+    }
+
+    .CButton_base__small_df,
+    .CButton_base__medium_74 {
+        padding: 0 20rem;
+    }
+
+    .CButton_base__small_df {
+        min-height: 20rem;
+    }
+
+    .CButton_base__medium_74 {
+        min-height: 31rem;
+    }
+
+    /*state*/
+
+    .CButton_base__disabled_d9 {
+        cursor: default;
+    }
+/* Element .back and background-image in element .base need for fix bug in GF https://jira.wargaming.net/browse/WOTD-158525
+The bug is that under certain conditions, when using border-image, stripes appear. Strip is a single-pixel gap
+between 'border-image-width' and 'fill'.
+This bug is reproduced in Google Chrome 81.0.4044.113
+*/
+.CButton_back_e5 {
+    border-image-slice: 4 fill;
+    border-image-width: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_base__main_42 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+.CButton_base__primary_7f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+.CButton_base__primaryGreen_6f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+.CButton_base__primaryRed_ec .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+.CButton_base__secondary_50 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+.CButton_texture_fe {
+    background: url('R.images.gui.maps.icons.components.button.standard_texture_file');
+    background-size: 155rem 31rem;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_state_11 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: box-shadow .16s ease-in-out;
+}
+.CButton_base__focus_83 .CButton_state_11 {
+        border-radius: 2rem;
+        box-shadow: inset 0 0 2rem 1rem rgba(255,85,0, .2);
+    }
+.CButton_stateHighlightHover_ff,
+.CButton_stateHighlightActive_35,
+.CButton_stateDisabled_54 {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity .16s ease-in-out;
+}
+.CButton_stateHighlightHover_ff {
+    background-image: linear-gradient(180deg, rgba(252,248,235, .25) 0%, rgba(252,248,235, .1) 50%, rgba(255,255,255, 0) 100%);
+}
+.CButton_base_40:hover .CButton_stateHighlightHover_ff {
+        opacity: 1;
+    }
+.CButton_base_40:active .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__disabled_d9:hover .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__ghost_ed .CButton_stateHighlightHover_ff {
+        box-shadow: 0 15rem 12rem 0 rgba(242, 242, 230, .11) inset;
+        background-color: rgba(8, 6, 0, .18);
+        background-image: none;
+    }
+.CButton_stateHighlightActive_35 {
+    background-image: linear-gradient(180deg, rgba(0,0,0, .3) 0%, rgba(0,0,0, .15) 100%);
+}
+.CButton_base_40:active .CButton_stateHighlightActive_35 {
+        opacity: 1;
+    }
+.CButton_base__disabled_d9:active .CButton_stateHighlightActive_35 {
+        opacity: 0;
+    }
+.CButton_stateDisabled_54 {
+    background-color: rgba(0, 0, 0, .25);
+    background-image: url('R.images.gui.maps.icons.components.button.texture_disable');
+    background-size: 15rem;
+}
+.CButton_base__disabled_d9 .CButton_stateDisabled_54 {
+        opacity: 1;
+    }
+.CButton_content_cc {
+    display: flex;
+    align-items: center;
+    color: #f2f2e6;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 -1rem 1rem #000;
+    letter-spacing: .03em;
+    transform: translateY(-5%);
+}
+.CButton_content_cc[lang=ja],
+    .CButton_content_cc[lang=ko],
+    .CButton_content_cc[lang=zh_tw],
+    .CButton_content_cc[lang=zh_sg],
+    .CButton_content_cc[lang=zh_ch],
+    .CButton_content_cc[lang=th] {
+        font-weight: 400;
+    }
+/* type*/
+.CButton_base__main_42 .CButton_content_cc,
+    .CButton_base__primaryRed_ec .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #600;
+    }
+.CButton_base__secondary_50 .CButton_content_cc {
+        color: rgba(254,254,236, .75);
+    }
+.CButton_base__primaryGreen_6f .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #1c2502;
+    }
+/* size*/
+.CButton_base__extraSmall_27 .CButton_content_cc {
+        font-size: 12rem;
+    }
+.CButton_base__small_df .CButton_content_cc {
+        font-size: 14rem;
+    }
+.CButton_base__medium_74 .CButton_content_cc {
+        font-size: 15rem;
+    }
+/*state*/
+.CButton_base__disabled_d9 .CButton_content_cc {
+        opacity: .6;
+    }
+
+/* colors*/
+
+@keyframes BattlePassVotingResultViewOption_fadeOut_e7 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes BattlePassVotingResultViewOption_fadeIn_08 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes BattlePassVotingResultViewOption_fadeInWithScale_1a {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes BattlePassVotingResultViewOption_slideUp_94 {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes BattlePassVotingResultViewOption_scale_49 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.BattlePassVotingResultViewOption_base_e8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 250rem;
+    min-height: 128rem;
+    position: relative;
+}
+
+.BattlePassVotingResultViewOption_base__medium_e2 {
+        width: 270rem;
+    }
+
+.BattlePassVotingResultViewOption_base__big_f3 {
+        width: 270rem;
+        min-height: 142rem;
+    }
+
+.BattlePassVotingResultViewOption_base__rightAligned_e7 {
+        align-items: flex-end;
+    }
+
+.BattlePassVotingResultViewOption_base__centered_02 {
+        justify-content: center;
+        align-items: center;
+        width: 300rem;
+        min-height: 96rem;
+    }
+
+.BattlePassVotingResultViewOption_base__centeredMedium_94 {
+        width: 300rem;
+    }
+
+.BattlePassVotingResultViewOption_base__centeredBig_76 {
+        width: 340rem;
+        min-height: initial;
+    }
+
+.BattlePassVotingResultViewOption_name_c4 {
+    margin: 0 0 4rem;
+    color: #e9e2bf;
+    font-size: 18rem;
+    font-weight: 700;
+    line-height: 21rem;
+    white-space: pre;
+    position: relative;
+    z-index: 2;
+}
+
+.BattlePassVotingResultViewOption_base__big_f3 .BattlePassVotingResultViewOption_name_c4 {
+        color: #fefeec;
+        font-size: 24rem;
+        font-weight: 400;
+        line-height: 28rem;
+    }
+
+.BattlePassVotingResultViewOption_base__rightAligned_e7 .BattlePassVotingResultViewOption_name_c4 {
+        text-align: right;
+    }
+
+.BattlePassVotingResultViewOption_base__centered_02 .BattlePassVotingResultViewOption_name_c4 {
+        color: #f2f2e7;
+        font-size: 24rem;
+        line-height: 28rem;
+        text-align: center;
+    }
+
+.BattlePassVotingResultViewOption_base__centeredBig_76 .BattlePassVotingResultViewOption_name_c4 {
+        color: #f2f2f7;
+        font-size: 28rem;
+        font-weight: 700;
+        line-height: 33rem;
+    }
+
+.BattlePassVotingResultViewOption_description_22 {
+    width: 293rem;
+    margin: 0 0 20rem;
+    color: #8c8c7e;
+    font-size: 14rem;
+    line-height: 16rem;
+    position: relative;
+    z-index: 2;
+}
+
+.BattlePassVotingResultViewOption_description__big_72 {
+        color: #8c8c7e;
+        font-size: 16rem;
+        line-height: 20rem;
+    }
+
+.BattlePassVotingResultViewOption_base__rightAligned_e7 .BattlePassVotingResultViewOption_description_22 {
+        text-align: right;
+    }
+
+.BattlePassVotingResultViewOption_base__centered_02 .BattlePassVotingResultViewOption_description_22 {
+        color: #cbac77;
+        text-align: center;
+    }
+
+.BattlePassVotingResultViewOption_base__centeredBig_76 .BattlePassVotingResultViewOption_description_22 {
+        color: #e9e2bf;
+        font-size: 16rem;
+    }
+
+.BattlePassVotingResultViewOption_buttonWrapper_93 {
+    width: 160rem;
+    position: relative;
+    z-index: 2;
+}
+
+.BattlePassVotingResultViewOption_gradient_f9 {
+    width: 513rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -21rem;
+    bottom: -20rem;
+    z-index: 1;
+}
+
+.BattlePassVotingResultViewOption_gradient__leftAligned_93 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.voting.gradient_right');
+        background-position: left center;
+        right: -60rem;
+    }
+
+.BattlePassVotingResultViewOption_gradient__rightAligned_dc {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.voting.gradient_left');
+        background-position: right center;
+        left: -60rem;
+    }
+
+.BattlePassVotingResultViewOption_gradient__small_6c {
+        background-repeat: repeat-y;
+        top: -17rem;
+        bottom: -17rem;
+    }
+
+.BattlePassVotingResultViewOption_preview_63 {
+    width: 100rem;
+    height: 100rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.voting.loop') no-repeat center center / contain;
+    filter: brightness(1) saturate(1);
+    position: absolute;
+    top: -68rem;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    transition: .2s linear filter;
+    cursor: pointer;
+}
+
+.BattlePassVotingResultViewOption_preview_63:hover {
+        filter: brightness(1.1) saturate(1.1);
+    }
+
+.BattlePassVotingResultViewOption_styleButton_8c {
+    width: 200rem;
+}
+
+.BattlePassVotingResultViewOption_checked_a1 {
+    width: 400rem;
+    height: 259rem;
+    margin-top: 12rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.voting.selected') no-repeat center center / contain;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    animation-name: BattlePassVotingResultViewOption_checkedFadeIn_35;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes BattlePassVotingResultViewOption_checkedFadeIn_35 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* colors*/
+
+@keyframes BattlePassVotingResultViewBonus_fadeOut_1c {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes BattlePassVotingResultViewBonus_fadeIn_70 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes BattlePassVotingResultViewBonus_fadeInWithScale_27 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes BattlePassVotingResultViewBonus_slideUp_af {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes BattlePassVotingResultViewBonus_scale_03 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.BattlePassVotingResultViewBonus_base_0b {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 250rem;
+    min-height: 128rem;
+    position: relative;
+}
+
+.BattlePassVotingResultViewBonus_base__medium_cf {
+        width: 270rem;
+    }
+
+.BattlePassVotingResultViewBonus_base__big_3e {
+        width: 270rem;
+        min-height: 142rem;
+    }
+
+.BattlePassVotingResultViewBonus_base__rightAligned_20 {
+        align-items: flex-end;
+    }
+
+.BattlePassVotingResultViewBonus_base__centered_67 {
+        justify-content: center;
+        align-items: center;
+        width: 300rem;
+        min-height: 96rem;
+    }
+
+.BattlePassVotingResultViewBonus_base__centeredMedium_70 {
+        width: 300rem;
+    }
+
+.BattlePassVotingResultViewBonus_base__centeredBig_e2 {
+        width: 340rem;
+        min-height: initial;
+    }
+
+.BattlePassVotingResultViewBonus_name_d6 {
+    margin: 0 0 4rem;
+    color: #e9e2bf;
+    font-size: 18rem;
+    font-weight: 700;
+    line-height: 21rem;
+    white-space: pre;
+    position: relative;
+    z-index: 2;
+}
+
+.BattlePassVotingResultViewBonus_base__big_3e .BattlePassVotingResultViewBonus_name_d6 {
+        color: #fefeec;
+        font-size: 24rem;
+        font-weight: 400;
+        line-height: 28rem;
+    }
+
+.BattlePassVotingResultViewBonus_base__rightAligned_20 .BattlePassVotingResultViewBonus_name_d6 {
+        text-align: right;
+    }
+
+.BattlePassVotingResultViewBonus_base__centered_67 .BattlePassVotingResultViewBonus_name_d6 {
+        color: #f2f2e7;
+        font-size: 24rem;
+        line-height: 28rem;
+        text-align: center;
+    }
+
+.BattlePassVotingResultViewBonus_base__centeredBig_e2 .BattlePassVotingResultViewBonus_name_d6 {
+        color: #f2f2f7;
+        font-size: 28rem;
+        font-weight: 700;
+        line-height: 33rem;
+    }
+
+.BattlePassVotingResultViewBonus_description_09 {
+    width: 293rem;
+    margin: 0 0 20rem;
+    color: #8c8c7e;
+    font-size: 14rem;
+    line-height: 16rem;
+    position: relative;
+    z-index: 2;
+}
+
+.BattlePassVotingResultViewBonus_description__big_16 {
+        color: #8c8c7e;
+        font-size: 16rem;
+        line-height: 20rem;
+    }
+
+.BattlePassVotingResultViewBonus_base__rightAligned_20 .BattlePassVotingResultViewBonus_description_09 {
+        text-align: right;
+    }
+
+.BattlePassVotingResultViewBonus_base__centered_67 .BattlePassVotingResultViewBonus_description_09 {
+        color: #cbac77;
+        text-align: center;
+    }
+
+.BattlePassVotingResultViewBonus_base__centeredBig_e2 .BattlePassVotingResultViewBonus_description_09 {
+        color: #e9e2bf;
+        font-size: 16rem;
+    }
+
+.BattlePassVotingResultViewBonus_buttonWrapper_a5 {
+    width: 160rem;
+    position: relative;
+    z-index: 2;
+}
+
+.BattlePassVotingResultViewBonus_gradient_60 {
+    width: 513rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -21rem;
+    bottom: -20rem;
+    z-index: 1;
+}
+
+.BattlePassVotingResultViewBonus_gradient__leftAligned_d7 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.voting.gradient_right');
+        background-position: left center;
+        right: -60rem;
+    }
+
+.BattlePassVotingResultViewBonus_gradient__rightAligned_34 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.voting.gradient_left');
+        background-position: right center;
+        left: -60rem;
+    }
+
+.BattlePassVotingResultViewBonus_gradient__small_db {
+        background-repeat: repeat-y;
+        top: -17rem;
+        bottom: -17rem;
+    }
+
+.BattlePassVotingResultViewBonus_preview_5d {
+    width: 100rem;
+    height: 100rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.voting.loop') no-repeat center center / contain;
+    filter: brightness(1) saturate(1);
+    position: absolute;
+    top: -68rem;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    transition: .2s linear filter;
+    cursor: pointer;
+}
+
+.BattlePassVotingResultViewBonus_preview_5d:hover {
+        filter: brightness(1.1) saturate(1.1);
+    }
+
+.BattlePassVotingResultViewBonus_styleButton_f1 {
+    width: 200rem;
+}
+
+.BattlePassVotingResultViewBonus_checked_f4 {
+    width: 400rem;
+    height: 259rem;
+    margin-top: 12rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.voting.selected') no-repeat center center / contain;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    animation-name: BattlePassVotingResultViewBonus_checkedFadeIn_cc;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes BattlePassVotingResultViewBonus_checkedFadeIn_cc {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.BattlePassVotingResultViewBonus_base_0b {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 320rem;
+    margin: 0 -40rem;
+    position: relative;
+    z-index: 2;
+}
+
+.BattlePassVotingResultViewBonus_base__medium_cf {
+        margin: 15rem 45rem 0;
+    }
+
+.BattlePassVotingResultViewBonus_base__big_3e {
+        margin: 30rem 50rem 0;
+    }
+
+.BattlePassVotingResultViewBonus_icon_aa {
+    width: 220rem;
+    height: 220rem;
+    margin: 65rem auto 5rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.voting.battle_pass') no-repeat center center / contain;
+}
+
+.BattlePassVotingResultViewBonus_base__medium_cf .BattlePassVotingResultViewBonus_icon_aa {
+        width: 250rem;
+        height: 250rem;
+    }
+
+.BattlePassVotingResultViewBonus_base__big_3e .BattlePassVotingResultViewBonus_icon_aa {
+        width: 275rem;
+        height: 275rem;
+    }
+
+.BattlePassVotingResultViewBonus_description_09 {
+    max-width: 340rem;
+    color: #e9e2bf;
+    font-size: 15rem;
+    font-weight: 700;
+    line-height: 18rem;
+    text-align: center;
+}
+
+.BattlePassVotingResultViewBonus_description__big_16 {
+        width: 530rem;
+        font-size: 18rem;
+        line-height: 21rem;
+    }
+
+.BattlePassVotingResultViewBonus_description__withBattlePass_7c {
+        opacity: 0;
+    }
+
+/* colors*/
+
+@keyframes BattlePassVotingResultViewVoting_fadeOut_64 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes BattlePassVotingResultViewVoting_fadeIn_ee {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes BattlePassVotingResultViewVoting_fadeInWithScale_54 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes BattlePassVotingResultViewVoting_slideUp_fe {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes BattlePassVotingResultViewVoting_scale_47 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.BattlePassVotingResultViewVoting_base_64 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex: 1;
+    margin-top: 30rem;
+    margin-bottom: 30rem;
+}
+
+.BattlePassVotingResultViewVoting_base__medium_ce {
+        margin-bottom: 40rem;
+    }
+
+.BattlePassVotingResultViewVoting_base__large_a2 {
+        margin-bottom: 95rem;
+    }
+
+.BattlePassVotingResultViewVoting_content_4f {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* colors*/
+
+@keyframes BattlePassVotingResultViewInfo_fadeOut_81 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes BattlePassVotingResultViewInfo_fadeIn_41 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes BattlePassVotingResultViewInfo_fadeInWithScale_06 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes BattlePassVotingResultViewInfo_slideUp_81 {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes BattlePassVotingResultViewInfo_scale_90 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.BattlePassVotingResultViewInfo_base_26 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300rem;
+    min-height: 180rem;
+    margin: 0 75rem;
+    position: relative;
+}
+
+.BattlePassVotingResultViewInfo_base__big_99 {
+        margin: 0 100rem;
+    }
+
+.BattlePassVotingResultViewInfo_background_71 {
+    width: 247rem;
+    height: 294rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.voting.lock') no-repeat center center / contain;
+    position: absolute;
+    top: -108rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.BattlePassVotingResultViewInfo_title_46 {
+    margin: 16rem 0 22rem;
+    color: #e9e2bf;
+    font-size: 15rem;
+    font-weight: 700;
+    line-height: 18rem;
+    text-align: center;
+    position: relative;
+}
+
+.BattlePassVotingResultViewInfo_base__big_99 .BattlePassVotingResultViewInfo_title_46 {
+        margin-top: 0;
+        margin-bottom: 16rem;
+        font-size: 18rem;
+        line-height: 21rem;
+    }
+
+.BattlePassVotingResultViewInfo_prize_5f {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5rem 0 0;
+    border-top: 1rem solid rgba(255,255,255, .1);
+}
+
+.BattlePassVotingResultViewInfo_icon_39 {
+    width: 38rem;
+    height: 38rem;
+    margin: 0 10rem 0 0;
+    background: url('R.images.gui.maps.icons.battlePass2020.voting.reward') no-repeat center center / contain;
+}
+
+.BattlePassVotingResultViewInfo_description_1e {
+    color: #8c8c7e;
+    font-size: 14rem;
+    line-height: 16rem;
+}
+
+.BattlePassVotingResultViewInfo_base__big_99 .BattlePassVotingResultViewInfo_description_1e {
+        font-size: 16rem;
+        line-height: 19rem;
+    }
+
+/* colors*/
+
+@keyframes BattlePassVotingResultViewDisabledVoting_fadeOut_89 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes BattlePassVotingResultViewDisabledVoting_fadeIn_12 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes BattlePassVotingResultViewDisabledVoting_fadeInWithScale_b0 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes BattlePassVotingResultViewDisabledVoting_slideUp_c7 {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes BattlePassVotingResultViewDisabledVoting_scale_ae {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.BattlePassVotingResultViewDisabledVoting_base_d8 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 160rem;
+    margin-bottom: 54rem;
+    position: relative;
+}
+
+.BattlePassVotingResultViewDisabledVoting_base__medium_76 {
+        margin-bottom: 75rem;
+    }
+
+.BattlePassVotingResultViewDisabledVoting_base__large_36 {
+        min-height: 200rem;
+        margin-bottom: 180rem;
+    }
+
+.BattlePassVotingResultViewDisabledVoting_gradient_77 {
+    width: 980rem;
+    height: 180rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.voting.gradient') repeat-y center center / 100% 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.BattlePassVotingResultViewDisabledVoting_gradient__small_3e {
+        width: 1280rem;
+    }
+
+.BattlePassVotingResultViewDisabledVoting_gradient__large_69 {
+        width: 1280rem;
+        height: 210rem;
+    }
+
+/* colors*/
+
+@keyframes BattlePassVotingResultViewContent_fadeOut_81 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes BattlePassVotingResultViewContent_fadeIn_a5 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes BattlePassVotingResultViewContent_fadeInWithScale_95 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes BattlePassVotingResultViewContent_slideUp_3c {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes BattlePassVotingResultViewContent_scale_4a {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.BattlePassVotingResultViewContent_base_08 {
+    opacity: 0;
+    animation-name: BattlePassVotingResultViewContent_fadeInWithScale_95;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 60rem 0 38rem;
+    background-color: #0a0b08;
+    isolation: isolate; /* TODO text-alignment bugfix. Remove after GF update*/
+}
+
+.BattlePassVotingResultViewContent_background_da {
+    height: 150%;
+    padding: 0 100%;
+    background: url('R.images.gui.maps.icons.battlePass2020.voting.bg') no-repeat center center / contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+}
+
+.BattlePassVotingResultViewContent_base__big_4c .BattlePassVotingResultViewContent_background_da {
+        height: 160%;
+    }
+
+.BattlePassVotingResultViewContent_background__haveBattlePass_6e {
+        background: url('R.images.gui.maps.icons.battlePass2020.voting.bgWithPB') no-repeat center center / contain;
+    }
+
+.BattlePassVotingResultViewContent_title_32 {
+    opacity: 0;
+    animation-name: BattlePassVotingResultViewContent_slideUp_3c;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: .2s;
+    animation-iteration-count: 1;
+    color: #f2f2f7;
+    font-size: 36rem;
+    font-weight: 700;
+    line-height: 42rem;
+}
+
+.BattlePassVotingResultViewContent_title__large_4a {
+        font-size: 56rem;
+        line-height: 66rem;
+    }
+
+.BattlePassVotingResultViewContent_failAlertIcon_9d {
+    align-self: center;
+    min-height: 24rem;
+    position: absolute;
+    top: -12rem;
+    z-index: 1;
+}
+
+.BattlePassVotingResultViewContent_alertIcon_73 {
+    width: 24rem;
+    height: 24rem;
+    background: url('R.images.gui.maps.icons.library.alertBigIcon') no-repeat center / cover;
+}
+
+.BattlePassVotingResultViewContent_content_20 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.BattlePassVotingResultViewContent_results_7b {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 86rem;
+    padding: 30rem 0;
+    background: url('R.images.gui.maps.icons.battlePass2020.voting.footer_bg') no-repeat center top / contain;
+    position: relative;
+}
+
+.BattlePassVotingResultViewContent_back_b6,
+.BattlePassVotingResultViewContent_close_aa {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+}
+
+.BattlePassVotingResultViewContent_back_b6 {
+    position: absolute;
+    top: 68rem;
+    left: 42rem;
+}
+
+.BattlePassVotingResultViewContent_close_aa {
+    top: 42rem;
+    right: 42rem;
+}
+
+body {
+    margin: 0;
+    line-height: normal;
+    overflow: hidden;
+}
+
+/* stylelint-disable */
+
+[lang=ja],
+[lang=ko],
+[lang=zh_tw],
+[lang=zh_sg],
+[lang=zh_ch],
+[lang=th] {
+    overflow-wrap: break-word;
+}
+
+/* stylelint-enable */
+

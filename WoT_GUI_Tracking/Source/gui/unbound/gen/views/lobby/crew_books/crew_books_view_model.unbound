@@ -1,0 +1,29 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro CrewBooksViewModel()
+    (scope
+        (event onCloseBtnClick)
+        (event onTankmanClick)
+        (event onCrewBookClick)
+        (event onBookUse)
+        (event onBuyBtnClick)
+
+        (var flagIcon:str = '')
+        (var footerIcon:str = '')
+        (var screenDesc:str = '')
+        (var footerTitle:str = '')
+        (var isFooterAlert:bool = false)
+        (var isInvalidTooltipEnable:bool = false)
+        (var isSimpleInvalidTooltip:bool = false)
+        (var tooltipBody:str = '')
+        (var footerTitleFmtArgs:array = [])
+        (var isFooterDescriptionVisible:bool = true)
+        (var isBookUseEnable:bool = false)
+        (var isDialogOpen:bool = false)
+        (var isBookUseSucces:bool = false)
+        (var crewBookItemList:array = [])
+
+        # The following submodels are used in this model:
+        # crewBookTankmenList:ui_kit.list_model
+    )
+)

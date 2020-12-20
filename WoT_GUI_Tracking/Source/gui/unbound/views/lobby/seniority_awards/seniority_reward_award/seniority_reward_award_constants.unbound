@@ -1,0 +1,141 @@
+(def constant SALootBoxStates {
+        'small': {
+            'width': 700px,
+            'height': 240px,
+            'contentPadding': [0, 0, 0, 0],
+            'multStyle': 'HeroTitleYellowTextStyle',
+            'multPadding' : [-35px, 0, 0, -14px],
+            'descrTopStyle': 'SuperPromoTitleTextStyleEm',
+            'descrBottomStyle': 'ExpTextStyle',
+            'descrTopMargin': [0, -8px, 0, -39px],
+            'counterScale': 3,
+            'descrBlockHeight': 110px,
+            'counterMargin': [-13px, 0, -13px, -40px],
+            'textBlockMarginTop': 0,
+            'imagesPadding': [0, 0, 124px, 42px],
+            'shiningPadding': [-232px, 24px, 232px, -24px],
+            'icon': "R.images.gui.maps.icons.seniorityAwards.rewards.small_with_shine()",
+            'confetti': "R.images.gui.maps.icons.seniorityAwards.confetti_small()",
+            'confettiXY': [144px, -22px],
+            'titleLeading': -6
+        },
+        'medium': {
+            'width': 1200px,
+            'height': 400px,
+            'contentPadding': [0, 110px, 0, 0],
+            'multStyle': 'EpicTitleYellowTextStyle',
+            'multPadding' : [-43px, 0, 0, -18px],
+            'descrTopStyle': 'GrandTitleYellowTextStyle',
+            'descrBottomStyle': 'HighlightTextStyle',
+            'descrTopMargin': [0, 20px, 0, -12px],
+            'counterScale': 6,
+            'counterMargin': [-24px, 0, -24px, -81px],
+            'textBlockMarginTop': 170px,
+            'descrBlockHeight': 248px,
+            'imagesPadding': [0, 0, 204px, 8px],
+            'shiningPadding': [-232px, 24px, 232px, -24px],
+            'icon': "R.images.gui.maps.icons.seniorityAwards.rewards.big_with_shine()",
+            'confetti': "R.images.gui.maps.icons.seniorityAwards.confetti()",
+            'confettiXY': [180px, -55px],
+            'titleLeading': -10
+        },
+        'big': {
+            'width': 1200px,
+            'height': 400px,
+            'contentPadding': [0, 110px, 0, 0],
+            'multStyle': 'EpicTitleYellowTextStyle',
+            'multPadding' : [-43px, 0, 0, -18px],
+            'descrTopStyle': 'HeroTitleYellowTextStyle',
+            'descrBottomStyle': 'HighlightTextStyle',
+            'descrTopMargin': [0, 14px, 0, 46px],
+            'counterScale': 6,
+            'counterMargin': [-5px, 0, -24px, -81px],
+            'textBlockMarginTop': 170px,
+            'descrBlockHeight': 248px,
+            'imagesPadding': [0, 0, 204px, 8px],
+            'shiningPadding': [-232px, 24px, 232px, -24px],
+            'icon': "R.images.gui.maps.icons.seniorityAwards.rewards.big_with_shine()",
+            'confetti': "R.images.gui.maps.icons.seniorityAwards.confetti()",
+            'confettiXY': [180px, -55px],
+            'titleLeading': -18
+        }
+    }
+)
+
+(def constant SA_SCREEN_STATES [
+    {
+        'headerHeight': 124px,
+        'titleScale': 1,
+        'subTitle': 'BonusLocalTextStyle',
+        'titleTopMargin': 15px,
+        'titleBottomMargin': -6px,
+        'mainRewardHeight': 215px,
+        'ribbon': "R.images.gui.maps.icons.seniorityAwards.award_ribbon_small()",
+        'bottomLootBoxTopMargin': 0,
+        'bottomMargin': 30px,
+        'ribbonGap': 30px
+    },
+    {
+        'headerHeight': 190px,
+        'titleScale': 2,
+        'subTitle': 'PromoSubTitleTextStyle',
+        'titleTopMargin': 22px,
+        'titleBottomMargin': -10px,
+        'mainRewardHeight': 247px,
+        'ribbon': "R.images.gui.maps.icons.seniorityAwards.award_ribbon()",
+        'bottomLootBoxTopMargin': 10px,
+        'bottomMargin': 0,
+        'ribbonGap': 50px
+    },
+    {
+        'headerHeight': 214px,
+        'titleScale': 2,
+        'subTitle': 'PromoSubTitleTextStyle',
+        'titleTopMargin': 22px,
+        'titleBottomMargin': -10px,
+        'mainRewardHeight': 270px,
+        'ribbon': "R.images.gui.maps.icons.seniorityAwards.award_ribbon()",
+        'bottomLootBoxTopMargin': 40px,
+        'bottomMargin': 134px,
+        'ribbonGap': 50px
+    }
+])
+
+(def constant SA_SCREEN_STATES_WITHOUT_VEHICLES [
+    {
+        'headerHeight': 124px,
+        'titleScale': 1,
+        'subTitle': 'BonusLocalTextStyle',
+        'titleTopMargin': 15px,
+        'titleBottomMargin': -6px,
+        'mainRewardHeight': 336px,
+        'ribbon': "R.images.gui.maps.icons.seniorityAwards.award_ribbon_small()",
+        'bottomLootBoxTopMargin': 0,
+        'bottomMargin': 66px,
+        'ribbonGap': 30px
+    },
+    {
+        'headerHeight': 190px,
+        'titleScale': 2,
+        'subTitle': 'PromoSubTitleTextStyle',
+        'titleTopMargin': 22px,
+        'titleBottomMargin': -10px,
+        'mainRewardHeight': 400px,
+        'ribbon': "R.images.gui.maps.icons.seniorityAwards.award_ribbon()",
+        'bottomLootBoxTopMargin': 10px,
+        'bottomMargin': 0,
+        'ribbonGap': 50px
+    },
+    {
+        'headerHeight': 214px,
+        'titleScale': 2,
+        'subTitle': 'PromoSubTitleTextStyle',
+        'titleTopMargin': 22px,
+        'titleBottomMargin': -10px,
+        'mainRewardHeight': 400px,
+        'ribbon': "R.images.gui.maps.icons.seniorityAwards.award_ribbon()",
+        'bottomLootBoxTopMargin': 40px,
+        'bottomMargin': 134px,
+        'ribbonGap': 50px
+    }
+])

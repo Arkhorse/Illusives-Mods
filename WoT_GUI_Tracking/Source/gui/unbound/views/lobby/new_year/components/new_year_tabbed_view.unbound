@@ -1,0 +1,102 @@
+(def macro NewYearTabbedViewAnimationData()
+    (scope
+        (event evPreSwitchContent)
+        (event evEndSwitchContent)
+        
+        (var globalAnimAlpha:number = 0)
+        (var menuAlpha:number = 0)
+        (var blackBlurAlpha:number = 0)
+        (var isFirstOpen:bool = true)
+
+        (bind globalAnimAlpha 1
+            (event "evPreSwitchContent")
+        )
+        (bind menuAlpha 1 init=false
+            (event "evPreSwitchContent")
+        )
+        
+        (var preCurrentView:str = '')
+        (bind preCurrentView "$event.view" init=false watch=false
+            (event "evPreSwitchContent")
+        )
+        (dispatch onSwitchContent args="{view: preCurrentView}" dir=1
+            (event "evEndSwitchContent")
+        )
+
+        (controller $Animation
+            (play duration=0.6 from={globalAnimAlpha:0} to={globalAnimAlpha:1} easing="Easing.cubic_in")
+            (play delay=0.5 duration=1 from={menuAlpha:0} to={menuAlpha:1} easing="Easing.cubic_out")
+
+            (bindcall stop
+                (event "evPreSwitchContent")
+            )
+            (bindcall playSeq "[
+                    {duration:0.3, from:{blackBlurAlpha:0.0}, to:{blackBlurAlpha:1.0}, callbacks:{onComplete:evEndSwitchContent}, easing:Easing.cubic_in},
+                    {duration:0.2, delay:0.3, to:{blackBlurAlpha:0.0}, easing:Easing.cubic_out}
+                ]"
+                (event "evPreSwitchContent")
+            )
+        )
+    )
+)
+
+(def macro NewYearTabbedViewAnimationLogic(viewholderName:expression)
+    (view_holder
+        (name = "viewholderName")
+        (style
+            (macro FullSize)
+        )
+        (bind alpha "globalAnimAlpha")
+    )
+
+    (block
+        (name = 'blackBlur')
+        (style
+            (position = "absolute")
+            (macro ViewResizeBindedSize)
+            (backgroundColor = 0xFF000000)
+        )
+        (macro EmptyHitAreaMacro)
+        (bind alpha "blackBlurAlpha")
+        (bind visible "blackBlurAlpha > 0")
+    )
+)
+
+(def macro NYSideTabBatPositionStyle()
+    (style
+        (position = "absolute")
+        (bind left "isSmall ? 32px : 42px")
+    )
+)
+
+(def layout NYTabBarBgImage()
+    (scope
+        (var isSmall:bool = false)
+        (var tabCount:number = 0)
+        (var tabHeight:number = "isSmall ? 82px : 104px")
+        (var tabWidth:number = "isSmall ? 75px : 122px")
+        (var heightOffset:number = 0px)
+        (var topPadding:number = 0px)
+    )
+    (image
+        (name = 'backLightImg')
+        (style
+            (bind width "tabWidth")
+            (bind height "tabCount * tabHeight + heightOffset")
+            (scale9grid = "Rect(5,4,112,337)")
+            (bind paddingTop "topPadding")
+        )
+        (source = "R.images.gui.maps.icons.new_year.leftTabBar.back_light()")
+    )
+    (image
+        (name = 'leftMenuBackImg')
+        (style
+            (position = "absolute")
+            (bind width "tabWidth")
+            (bind height "tabCount * tabHeight + heightOffset")
+            (scale9grid = "Rect(35,60,52,217)")
+            (bind paddingTop "topPadding")
+        )
+        (source = "R.images.gui.maps.icons.new_year.leftTabBar.leftMenuBack()")
+    )
+)

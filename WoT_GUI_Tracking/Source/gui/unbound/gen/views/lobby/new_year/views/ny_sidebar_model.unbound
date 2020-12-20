@@ -1,0 +1,15 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NySidebarModel()
+    (scope
+        (event onSideBarBtnClick)
+
+        (var itemsTabBar:array = [])
+        (var startIndex:number = 0)
+        (var viewName:str = '')
+
+        (const VIEW_NAME_GLADE:str = 'glade')
+        (const VIEW_NAME_REWARDS:str = 'rewards')
+        (const VIEW_NAME_COLLECTIONS:str = 'collections')
+    )
+)

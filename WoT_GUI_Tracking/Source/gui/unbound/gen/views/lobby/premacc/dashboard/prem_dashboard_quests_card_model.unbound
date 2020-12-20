@@ -1,0 +1,17 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro PremDashboardQuestsCardModel()
+    (scope
+        (event onGoToQuestsView)
+
+        (var isAvailable:bool = false)
+        (var isTankPremiumActive:bool = false)
+
+        (const DISABLED:str = 'disabled')
+        (const IN_PROGRESS:str = 'inprogress')
+        (const COMPLETED:str = 'complete')
+
+        # The following submodels are used in this model:
+        # premiumQuests:ui_kit.list_model
+    )
+)

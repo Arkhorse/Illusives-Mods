@@ -1,0 +1,827 @@
+.TextButton_base_b6 {
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    font-size: 12rem;
+    position: relative;
+    cursor: pointer;
+}
+
+    .TextButton_base__right_39 {
+        flex-direction: row-reverse;
+    }
+.TextButton_icon_17 {
+    width: 32rem;
+    height: 32rem;
+    background: no-repeat center / contain;
+    position: relative;
+}
+.TextButton_icon__back_43,
+    .TextButton_icon__forward_59 {
+        margin: -1rem -5rem;
+        background-image: url('R.images.gui.maps.icons.components.text_button.back');
+        transform: translateY(1rem);
+    }
+.TextButton_icon__forward_59 {
+        transform: rotate(180deg) translateY(1rem);
+    }
+.TextButton_icon__close_53 {
+        margin: -1rem 0;
+        background-image: url('R.images.gui.maps.icons.components.text_button.close');
+    }
+.TextButton_icon__info_33 {
+        margin: -1rem -5rem;
+        background-image: url('R.images.gui.maps.icons.components.text_button.info');
+    }
+.TextButton_glow_a4 {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .16s;
+}
+.TextButton_icon__back_43 .TextButton_glow_a4,
+    .TextButton_icon__forward_59 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.back_hover');
+    }
+.TextButton_icon__close_53 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.close_hover');
+    }
+.TextButton_icon__info_33 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.info_hover');
+    }
+.TextButton_base_b6:hover .TextButton_glow_a4 {
+        opacity: 1;
+    }
+.TextButton_base_b6:active .TextButton_glow_a4 {
+        opacity: 0;
+    }
+.TextButton_caption_82 {
+    position: relative;
+    transition: color .16s;
+}
+.TextButton_caption__back_b9,
+    .TextButton_caption__forward_4e,
+    .TextButton_caption__close_36 {
+        color: #FFDD99;
+        text-shadow: 0 0 10rem rgba(255,42,0, 1),
+            0 0 10rem rgba(255,42,0, .4),
+            0 0 10rem rgba(255,42,0, .4),
+            0 0 2rem rgba(255,42,0, .4),
+            0 0 1rem rgba(255,42,0, .4),
+            0 0 2rem rgba(255,42,0, .4),
+            0 0 1rem rgba(255,42,0, .4);
+    }
+.TextButton_base_b6:hover .TextButton_caption__back_b9, .TextButton_base_b6:hover .TextButton_caption__forward_4e, .TextButton_base_b6:hover .TextButton_caption__close_36 {
+            color: #fffa9f;
+        }
+.TextButton_base_b6:active .TextButton_caption__back_b9, .TextButton_base_b6:active .TextButton_caption__forward_4e, .TextButton_base_b6:active .TextButton_caption__close_36 {
+            color: #FFDD99;
+        }
+.TextButton_caption__info_23 {
+        padding: 0 5rem;
+        color: #CCFFFF;
+        text-shadow: 0 0 12rem rgba(31,68,255, .8),
+            0 0 8rem #00eaff;
+    }
+.TextButton_base_b6:hover .TextButton_caption__info_23 {
+            color: #e3ffff;
+            text-shadow: 0 0 12rem rgba(31,68,255, .8),
+                0 0 12rem rgba(0,234,255, 1),
+                0 0 8rem #00eaff;
+        }
+.TextButton_base_b6:active .TextButton_caption__info_23 {
+            color: #CCFFFF;
+            text-shadow: 0 0 12rem rgba(31,68,255, .6),
+                0 0 8rem #00eaff;
+        }
+.TextButton_goto_e7 {
+    color: #7c7c6c;
+}
+.TextButton_base__left_ff .TextButton_goto_e7 {
+        margin-left: 8rem;
+    }
+.TextButton_base__right_39 .TextButton_goto_e7 {
+        margin-right: 8rem;
+    }
+.TextButton_shine_e2 {
+    width: 90rem;
+    height: 40rem;
+    background: url('R.images.gui.maps.icons.components.text_button.shine') no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: -4rem;
+    transition: opacity .16s;
+    pointer-events: none;
+}
+.TextButton_base__left_ff .TextButton_shine_e2 {
+        left: -4rem;
+    }
+.TextButton_base__right_39 .TextButton_shine_e2 {
+        right: -4rem;
+        transform: rotate(180deg);
+    }
+.TextButton_base_b6:hover .TextButton_shine_e2 {
+        opacity: 1;
+    }
+.TextButton_base_b6:active .TextButton_shine_e2 {
+        opacity: 0;
+    }
+
+@keyframes EntryAnimationRenderer_bounceInFadeIn_6a {
+    0%,
+    30% {
+        filter: brightness(1.5) sepia(.2);
+        opacity: 0;
+        transform: scale(.9);
+    }
+
+    70% {
+        filter: brightness(1.5) sepia(.2);
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    100% {
+        filter: brightness(1) sepia(0);
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes EntryAnimationRenderer_fadeZoomIn_30 {
+    0% {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes EntryAnimationRenderer_fadeInRotateZoomShifted_27 {
+    0% {
+        opacity: 0;
+        transform: translateY(0) rotate(0) scale(2.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(-50rem) rotate(4deg) scale(1);
+    }
+}
+
+@keyframes EntryAnimationRenderer_fadeInRotateZoom_cd {
+    0% {
+        opacity: 0;
+        transform: rotate(0) scale(2.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(3deg) scale(1);
+    }
+}
+
+@keyframes EntryAnimationRenderer_fadeOut_37 {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes EntryAnimationRenderer_delayedFadeOut_ad {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes EntryAnimationRenderer_fadeIn_14 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes EntryAnimationRenderer_fadeInBlinkIn_23 {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(3);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes EntryAnimationRenderer_blinkOut_e8 {
+    0% {
+        filter: brightness(1) drop-shadow(0 0 7px #201100);
+        opacity: 1;
+    }
+
+    99% {
+        filter: brightness(2);
+        opacity: .7;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes EntryAnimationRenderer_blinkInZoomIn_62 {
+    0% {
+        filter: brightness(2);
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    100% {
+        filter: brightness(1) drop-shadow(0 0 7px #201100);
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.EntryAnimationRenderer_base_fe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.EntryAnimationRenderer_wrapper_07,
+.EntryAnimationRenderer_twin_9c,
+.EntryAnimationRenderer_animContainer_e0,
+.EntryAnimationRenderer_starItem_16 {
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    top: -25%;
+    left: -25%;
+}
+
+.EntryAnimationRenderer_animContainer_e0 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.EntryAnimationRenderer_wrapper_07 {
+    position: absolute;
+    pointer-events: none;
+}
+
+.EntryAnimationRenderer_wrapper__top_26 {
+        z-index: 4;
+    }
+
+.EntryAnimationRenderer_wrapper__bottom_7d {
+        z-index: 2;
+    }
+
+.EntryAnimationRenderer_godrays_7d,
+.EntryAnimationRenderer_starItem_16 {
+    background: center / contain no-repeat;
+    position: absolute;
+    pointer-events: none;
+}
+
+.EntryAnimationRenderer_starItem_16 {
+    width: 250%;
+    height: 250%;
+    top: -75%;
+    left: -75%;
+}
+
+.EntryAnimationRenderer_base__ready_16 .EntryAnimationRenderer_starItem_16 {
+        animation: EntryAnimationRenderer_bounceInFadeIn_6a .65s cubic-bezier(0, .55, .45, 1) forwards;
+    }
+
+.EntryAnimationRenderer_godrays_7d {
+    width: 250%;
+    height: 250%;
+    top: -75%;
+    left: -75%;
+    z-index: -1;
+}
+
+.EntryAnimationRenderer_reward_13 {
+    color: #16100c;
+    opacity: 0;
+    position: relative;
+    z-index: 3;
+}
+
+.EntryAnimationRenderer_base__ready_16 .EntryAnimationRenderer_reward_13 {
+        animation: EntryAnimationRenderer_bounceInFadeIn_6a .65s cubic-bezier(0, .55, .45, 1) forwards;
+    }
+
+.RewardRenderer_base_2e {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.RewardRenderer_icon_c6 {
+    width: 150rem;
+    height: 150rem;
+    margin-bottom: 20rem;
+    background: no-repeat center / contain;
+    filter: drop-shadow(0 0 7px rgba(0, 0, 0, .8));
+}
+
+.RewardRenderer_icon__medium_da,
+    .RewardRenderer_icon__large_9a,
+    .RewardRenderer_icon__extraLarge_74 {
+        width: 200rem;
+        height: 200rem;
+    }
+
+.RewardRenderer_label_70 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300rem;
+    color: #fffee6;
+    font-size: 20rem;
+    text-align: center;
+    text-shadow: 0 0 6px #000;
+    position: relative;
+}
+
+.RewardRenderer_label__medium_e4,
+    .RewardRenderer_label__large_de,
+    .RewardRenderer_label__extraLarge_8c {
+        font-size: 22rem;
+    }
+
+.RewardRenderer_labelShadow_fc {
+    width: 200%;
+    height: 120rem;
+    background: url('R.images.gui.maps.icons.lootboxes.captionShadow') center / contain no-repeat;
+    position: absolute;
+    top: -130%;
+    left: -50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.Rewards_base_dc {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    position: relative;
+}
+
+    .Rewards_base__medium_90,
+    .Rewards_base__large_18,
+    .Rewards_base__extraLarge_8f {
+        width: 65%;
+    }
+
+.Rewards_reward_d2 {
+    width: 150rem;
+    height: 150rem;
+    margin-right: 25%;
+    position: relative;
+    transform: translate(-50%, -50%);
+}
+
+.Rewards_reward__small_46 {
+        margin-right: 35%;
+    }
+
+.Rewards_reward__medium_4f,
+    .Rewards_reward__large_d4,
+    .Rewards_reward__extraLarge_46 {
+        width: 200rem;
+        height: 200rem;
+        margin-right: 35%;
+    }
+
+.CButton_base_40 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0 0 0 1rem rgba(0,0,0, .6);
+    position: relative;
+    cursor: pointer;
+}
+
+    /* type*/
+
+    .CButton_base__main_42,
+    .CButton_base__primary_7f,
+    .CButton_base__primaryGreen_6f,
+    .CButton_base__primaryRed_ec,
+    .CButton_base__secondary_50 {
+        background-size: 100% 100%;
+    }
+
+    .CButton_base__main_42 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+
+    .CButton_base__primary_7f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+
+    .CButton_base__primaryGreen_6f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+
+    .CButton_base__primaryRed_ec {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+
+    .CButton_base__secondary_50 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+
+    .CButton_base__ghost_ed {
+        border-radius: 3rem;
+        box-shadow: 0 0 0 1rem rgba(0,0,0, .3),
+            0 0 0 1rem rgba(255,255,255, .15) inset;
+        background-image: linear-gradient(0deg, rgba(13, 11, 3, 0) 0%, rgba(13, 11, 3, .04) 27%, rgba(13, 11, 3, 0) 100%);
+    }
+
+    /* size*/
+
+    .CButton_base__extraSmall_27 {
+        min-height: 17rem;
+        padding: 0 16rem;
+    }
+
+    .CButton_base__small_df,
+    .CButton_base__medium_74 {
+        padding: 0 20rem;
+    }
+
+    .CButton_base__small_df {
+        min-height: 20rem;
+    }
+
+    .CButton_base__medium_74 {
+        min-height: 31rem;
+    }
+
+    /*state*/
+
+    .CButton_base__disabled_d9 {
+        cursor: default;
+    }
+/* Element .back and background-image in element .base need for fix bug in GF https://jira.wargaming.net/browse/WOTD-158525
+The bug is that under certain conditions, when using border-image, stripes appear. Strip is a single-pixel gap
+between 'border-image-width' and 'fill'.
+This bug is reproduced in Google Chrome 81.0.4044.113
+*/
+.CButton_back_e5 {
+    border-image-slice: 4 fill;
+    border-image-width: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_base__main_42 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+.CButton_base__primary_7f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+.CButton_base__primaryGreen_6f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+.CButton_base__primaryRed_ec .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+.CButton_base__secondary_50 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+.CButton_texture_fe {
+    background: url('R.images.gui.maps.icons.components.button.standard_texture_file');
+    background-size: 155rem 31rem;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_state_11 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: box-shadow .16s ease-in-out;
+}
+.CButton_base__focus_83 .CButton_state_11 {
+        border-radius: 2rem;
+        box-shadow: inset 0 0 2rem 1rem rgba(255,85,0, .2);
+    }
+.CButton_stateHighlightHover_ff,
+.CButton_stateHighlightActive_35,
+.CButton_stateDisabled_54 {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity .16s ease-in-out;
+}
+.CButton_stateHighlightHover_ff {
+    background-image: linear-gradient(180deg, rgba(252,248,235, .25) 0%, rgba(252,248,235, .1) 50%, rgba(255,255,255, 0) 100%);
+}
+.CButton_base_40:hover .CButton_stateHighlightHover_ff {
+        opacity: 1;
+    }
+.CButton_base_40:active .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__disabled_d9:hover .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__ghost_ed .CButton_stateHighlightHover_ff {
+        box-shadow: 0 15rem 12rem 0 rgba(242, 242, 230, .11) inset;
+        background-color: rgba(8, 6, 0, .18);
+        background-image: none;
+    }
+.CButton_stateHighlightActive_35 {
+    background-image: linear-gradient(180deg, rgba(0,0,0, .3) 0%, rgba(0,0,0, .15) 100%);
+}
+.CButton_base_40:active .CButton_stateHighlightActive_35 {
+        opacity: 1;
+    }
+.CButton_base__disabled_d9:active .CButton_stateHighlightActive_35 {
+        opacity: 0;
+    }
+.CButton_stateDisabled_54 {
+    background-color: rgba(0, 0, 0, .25);
+    background-image: url('R.images.gui.maps.icons.components.button.texture_disable');
+    background-size: 15rem;
+}
+.CButton_base__disabled_d9 .CButton_stateDisabled_54 {
+        opacity: 1;
+    }
+.CButton_content_cc {
+    display: flex;
+    align-items: center;
+    color: #f2f2e6;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 -1rem 1rem #000;
+    letter-spacing: .03em;
+    transform: translateY(-5%);
+}
+.CButton_content_cc[lang=ja],
+    .CButton_content_cc[lang=ko],
+    .CButton_content_cc[lang=zh_tw],
+    .CButton_content_cc[lang=zh_sg],
+    .CButton_content_cc[lang=zh_ch],
+    .CButton_content_cc[lang=th] {
+        font-weight: 400;
+    }
+/* type*/
+.CButton_base__main_42 .CButton_content_cc,
+    .CButton_base__primaryRed_ec .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #600;
+    }
+.CButton_base__secondary_50 .CButton_content_cc {
+        color: rgba(254,254,236, .75);
+    }
+.CButton_base__primaryGreen_6f .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #1c2502;
+    }
+/* size*/
+.CButton_base__extraSmall_27 .CButton_content_cc {
+        font-size: 12rem;
+    }
+.CButton_base__small_df .CButton_content_cc {
+        font-size: 14rem;
+    }
+.CButton_base__medium_74 .CButton_content_cc {
+        font-size: 15rem;
+    }
+/*state*/
+.CButton_base__disabled_d9 .CButton_content_cc {
+        opacity: .6;
+    }
+
+.Header_base_05 {
+    color: #ced1cc;
+    font-size: 28rem;
+    font-weight: 700;
+}
+
+    .Header_base__medium_8f,
+    .Header_base__large_66,
+    .Header_base__extraLarge_a6 {
+        font-size: 36rem;
+    }
+
+.Timer_base_f3 {
+    display: flex;
+    align-items: center;
+}
+
+.Timer_icon_b0 {
+    width: 80rem;
+    height: 80rem;
+    margin: 0 -15rem -5rem -27rem;
+    background: no-repeat center / contain;
+}
+
+.Timer_icon__medium_8d,
+    .Timer_icon__large_96,
+    .Timer_icon__extraLarge_47 {
+        width: 110rem;
+        height: 110rem;
+        margin: 0 -20rem -5rem -36rem;
+    }
+
+.Timer_label_31 {
+    color: #ffe78f;
+    font-size: 28rem;
+    font-weight: 700;
+}
+
+.Timer_label__medium_23,
+    .Timer_label__large_6f,
+    .Timer_label__extraLarge_ee {
+        font-size: 36rem;
+    }
+
+.Description_base_b2 {
+    display: flex;
+    flex-wrap: wrap;
+    color: #ced1cc;
+}
+
+    .Description_base_b2 span {
+        margin-right: 5rem;
+        color: #e3aa79;
+    }
+
+.ConfirmRibbon_base_12 {
+    display: flex;
+    justify-content: center;
+    padding: 40rem 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, .4) 15%,
+        rgba(0, 0, 0, .4) 80%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+
+    .ConfirmRibbon_base__big_7b {
+        padding: 50rem 0;
+    }
+
+.ConfirmRibbon_content_a9 {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.ConfirmRibbon_content__big_55 {
+        width: 65%;
+    }
+
+.ConfirmRibbon_timer_e5 {
+    margin: -30rem 0 -20rem;
+}
+
+.ConfirmRibbon_timer__big_7c {
+        margin: -40rem 0 -25rem;
+    }
+
+.ConfirmRibbon_description_66 {
+    padding-top: 5rem;
+    color: #e9e2bf;
+    font-size: 18rem;
+    font-weight: 400;
+}
+
+.ConfirmRibbon_description__big_a4 {
+        font-size: 20rem;
+    }
+
+.ConfirmRibbon_controls_c5 {
+    display: flex;
+    padding-top: 30rem;
+}
+
+.ConfirmRibbon_controls__gap_0c {
+        margin-right: 20rem;
+    }
+
+.ConfirmRibbon_button_e0 {
+    min-width: 165rem;
+}
+
+body {
+    line-height: normal;
+}
+
+.App_base_01 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.App_closeBtn_50 {
+    position: absolute;
+    top: 30rem;
+    right: 20rem;
+    z-index: 1;
+}
+
+.App_content_29 {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    position: relative;
+}
+
+.App_rewards_a8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40rem;
+    margin-bottom: 100rem;
+}
+
+.App_rewards__medium_f1,
+    .App_rewards__large_42,
+    .App_rewards__extraLarge_9e {
+        margin-top: 100rem;
+        margin-bottom: 150rem;
+    }
+
+.App_visible_09 {
+    animation: App_delayedFadeIn_91 .3s ease-out forwards;
+    pointer-events: auto;
+}
+
+.App_visible__off_1d {
+        animation: App_delayedFadeOut_46 .3s ease-in forwards;
+        pointer-events: none;
+    }
+
+@keyframes App_delayedFadeIn_91 {
+    from {
+        opacity: 0;
+        transform: translateX(-20rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes App_delayedFadeOut_46 {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(20rem);
+    }
+}
+

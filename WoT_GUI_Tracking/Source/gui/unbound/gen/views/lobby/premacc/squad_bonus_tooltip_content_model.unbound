@@ -1,0 +1,9 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro SquadBonusTooltipContentModel()
+    (scope
+        (var creditsBonusWithPremium:number = 0)
+        (var creditsBonusWithoutPremium:number = 0)
+        (var experienceBonus:number = 0)
+    )
+)

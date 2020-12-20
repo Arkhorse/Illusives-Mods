@@ -1,0 +1,21 @@
+.RewardBox_base__large_2e {
+        width: 650rem;
+        height: 460rem;
+        background: url('R.images.gui.maps.icons.seniorityAwards.rewardBox.large') no-repeat center center / cover;
+    }
+    .RewardBox_base__medium_bf {
+        width: 490rem;
+        height: 350rem;
+        background: url('R.images.gui.maps.icons.seniorityAwards.rewardBox.medium') no-repeat center center / cover;
+    }
+    .RewardBox_base__mediumWide_db {
+        width: 700rem;
+        height: 290rem;
+        background: url('R.images.gui.maps.icons.seniorityAwards.rewardBox.medium_wide') no-repeat center center / cover;
+    }
+    .RewardBox_base__smallWide_fa {
+        width: 700rem;
+        height: 210rem;
+        background: url('R.images.gui.maps.icons.seniorityAwards.rewardBox.small_wide') no-repeat center center / cover;
+    }
+

@@ -1,0 +1,1209 @@
+(def constant MAP_ICON_BY_BONUS "{
+        'freeXPFactor': 'icon_free_exp_main_screen',
+        'xpFactor': 'icon_battle_exp_main',
+        'tankmenXPFactor': 'icon_crew_exp_main'
+    }"    
+)
+(def constant NY_VEHICLE_STYLE_IMAGE_OPEN_TAG '<img src="img://gui/maps/icons/new_year/vehicles_view/info_style.png" width="20" height="20" vspace="-6"/>')
+(def layout NewYearVehiclesView() entrance=true
+    (name = 'NewYearVehiclesView')
+    (macro NewYearVehiclesViewModel)
+    (scope
+        (event evIntroClosBtnClick)
+        (event evCloseBtnClick)
+        (event evReadyToShow)
+        (var isSmall:bool = "viewSize.width < BASE_WIDTH_1920 || viewSize.height < BASE_HEIGHT_1027"
+            (event "viewResized")
+        )
+        (bind isInProgressIntro false
+            (event "evIntroClosBtnClick")
+        )
+        
+        (dispatch onCloseBtnClick
+            (enabled = "!isInProgressIntro")
+            (event "evCloseBtnClick")
+        )
+        (dispatch evIntroClosBtnClick
+            (enabled = "isInProgressIntro")
+            (event "evCloseBtnClick")
+        )
+        (dispatch onReadyToShow
+            (event "evReadyToShow")
+        )
+    )
+
+    (dispatch evCloseBtnClick on='escPressed')
+    (controller $Tutorial viewTutorialId='NewYearVehicles')
+    (style
+        (width = 100%)
+        (height = 100%)
+        (alpha = 0)
+    )
+
+    (controller $Animation
+        (bindcall play duration=0.90 to={alpha:1} easing="Easing.cubic_out"
+            (event "evReadyToShow")
+        )
+    )
+
+    (element BackgroundElement fullHeight=true
+        (scope
+            (bgSource="R.images.gui.maps.icons.new_year.vehicles_view.tree_back()")
+        )
+    )
+
+    (block
+        (name = 'mainBlock')
+        (style
+            (width = 100%)
+            (height = 100%)
+            (align = "center")
+            (gap = 20px)
+        )
+        (block
+            (name = 'titleBlock')
+            (style
+                (align = "center")
+                (paddingTop = 56px)
+                (gap = 8px)
+            )
+            (hblock
+                (name = 'titleBlock')
+                (style
+                    (align = "middle")
+                )
+                (tf
+                    (name = 'title')
+                    (style
+                        (fontSize = 36)
+                        (textColor = 0xFFFFFF)
+                    )
+                    (class SuperPromoTitleTextStyle)
+                    (text = "R.strings.ny.vehiclesView.title()")
+                )
+                (button
+                    (name = 'infoBtn')
+                    (macro ButtonStylePrimaryGhost "BUTTON_SIZE_MEDIUM")
+                    (style
+                        (marginLeft = 8px)
+                        (marginTop = 8px)
+                        (width = 36px)
+                        (height = 20px)
+                        (backgroundColor = 0x5F03a5d8)
+                    )
+                    (scope
+                        (dispatch onSetIntroInProgress on='clicked')
+                    )
+                    (icon = "R.images.gui.maps.icons.new_year.vehicles_view.info()")
+                )
+            )
+            (tf
+                (name = 'subTitle')
+                (style
+                    (bind width "isSmall ? BASE_WIDTH_1024 : 1080")
+                )
+                # bug with multiline
+                (bind htmlText "htmlTextStyle(
+                    isPostEventIntro ? R.strings.ny.vehiclesView.post_ny.subtitle() : R.strings.ny.vehiclesView.subtitle(), isSmall ? 'NyVehicleDescSmallTextStyle' : 'NyVehicleDescTextStyle', 'center')"
+                )
+            )
+            (hblock
+                (name = 'styleBlock')
+                (style
+                    (align = "middle")
+                    (paddingTop = -10px)
+                )
+                (tf
+                    (name = 'label')
+                    (bind htmlText "htmlTextStyle(
+                        formatString(R.strings.ny.vehiclesView.newYearStyle(),
+                        [
+                            {name: 'icon', value: NY_VEHICLE_STYLE_IMAGE_OPEN_TAG},
+                            {name: 'style', value: htmlTextStyle(R.strings.ny.vehiclesView.newYearStyleName(), (isSmall ? 'NyVehicleStyleNameSmallTextStyle' : 'NyVehicleStyleNameTextStyle'))}
+                        ],
+                        true),
+                        (isSmall ? 'NyVehicleDescSmallTextStyle' : 'NyVehicleDescTextStyle')
+                    )")
+                    (antiAliasType = 'normal')
+                )
+
+                (controller $ToolTip
+                    (delay = "0.4")
+                    (content = "R.views.lobby.new_year.tooltips.new_year_vehicle_bonus.NewYearVehiclesBonus.resId")
+                    (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+                )
+            )
+        )
+
+        (hblock
+            (name = 'extraSlotsBlock')
+            (style
+                (width = 100%)
+                (height = 92%)
+                (align = "center|middle")
+                (bind gap "isSmall ? 20px: 40px")
+            )
+            (block
+                (group 'extraSlots'
+                    (renderer = 'NYVehicleSlot')
+                    (container
+                        (style
+                            (bind marginLeft "isSmall ? 0px : 15px")
+                            (bind width "isSmall ? 270px : 412px")
+                        )
+                    )
+                )
+            )
+            (block
+                (name = 'vehicles')
+                (style
+                    (align = "center|middle")
+                )
+
+                (group 'vehicleSlots'
+                    (renderer = 'NYVehicleSlot')
+                    (container
+                        (style
+                            (bind width "isSmall ? 650px : 972px")
+                            (align = "center")
+                            (bind hgap "isSmall ? 15px : 30px")
+                            (bind vgap "isSmall ? 25px : 38px")
+                            (flow = "Flow.TILE_HORIZONTAL")
+                        )
+                    )
+                )
+            )
+        )
+        (block
+            (name = 'bonusesBlock')
+            (style
+                (width = 100%)
+                (align = "center|top")
+            )
+            (tf
+                (name = 'label')
+                (style
+                    (marginBottom = 40px)
+                )
+                (bind class "isSmall ? 'NyVehicleDescSmallTextStyle' : 'NyVehicleDescTextStyle'")
+                (text = "R.strings.ny.vehiclesView.bonuses.description()")
+            )
+            (image
+                (name = 'bgImg')
+                (style
+                    (bind vcenter "isSmall ? 14px : 24px")
+                    (hcenter = 0px)
+                    (position = "absolute")
+                )
+                (bind source "isSmall ? 
+                    R.images.gui.maps.icons.new_year.vehicles_view.bonus_background_small(): 
+                    R.images.gui.maps.icons.new_year.vehicles_view.bonus_background()"
+                )
+            )
+            (group 'bonuses'
+                (renderer = 'NYVehicleBonus')
+                (container
+                    (style
+                        (paddingTop = -20px)
+                        (bind width "isSmall ? 754px : 972px")
+                        (align = "center")
+                        (bind hgap "isSmall ? 30px : 30px")
+                        (flow = "Flow.HORIZONTAL")
+                    )
+                )
+            )
+        )
+        (controller $Animation
+            (bindcall play duration=0.8  from={alpha:0} to={alpha:1}
+                (bind enabled "!isInProgressIntro")
+            )
+        )
+        (bind visible "!isInProgressIntro")
+    )
+
+    (element NYVehiclesIntro
+        (name = 'introBlock')
+        (scope
+            (bind isSmall "isSmall")
+            (bind isPostEventIntro "isPostEventIntro")
+            (bind introRegularCooldown "introRegularCooldown")
+            (bind isRomanNumbersAllowed "isRomanNumbersAllowed")
+        )
+        (bind visible "isInProgressIntro")
+    )
+
+    (text_button 'closeBtn'
+        (name = 'closeBtn')
+        (macro ButtonCloseStyle)
+        (style
+            (position = "absolute")
+            (right = 23px)
+            (top = 43px)
+        )
+        (label = "R.strings.menu.viewHeader.closeBtn.label()")
+        (dispatch evCloseBtnClick on='clicked')
+    )
+)
+
+
+(def layout NYVehicleBonus()
+    (name = 'vehicleBonusInfo')
+    (macro NewYearBonusHeaderModel)
+    (scope
+        (var isSmall:bool = "viewSize.width < BASE_WIDTH_1920 || viewSize.height < BASE_HEIGHT_1027"
+            (event "viewResized")
+        )
+    )
+    (style
+        (bind width "isSmall ? 230px : 300px")
+        (align = "center")
+    )
+
+    (hblock
+        (name = 'valueBlock')
+        (style
+            (align = "middle")
+            (height = 45px)
+        )
+        (image
+            (name = 'icon')
+            (bind source "R.images.gui.maps.icons.new_year.vehicles_view.icons[MAP_ICON_BY_BONUS[bonusType]]()")
+        )
+        (block
+            (class NewYearBonusValueTextFilters)
+            (tf
+                (name = 'value')
+                (class NewYearBonusValueTextStyle)
+                (bind text "TextFormat(R.strings.ny.totalBonusWidget.pbBonus(), {bonus: bonusValue})")
+            )
+        )
+    )
+    (tf
+        (name = 'text')
+        (style
+            (marginTop = -8px)
+            (width = 270px)
+            (multiline = true)
+        )
+        (bind htmlText "htmlTextStyle(description, isSmall ? 'NyVehicleDescSmallTextStyle': 'NyVehicleDescTextStyle', 'center')" init=false)
+    )
+)
+
+(def layout NYVehicleSlot()
+    (name = 'vehicleSlot')
+    (macro NewYearVehicleSlotViewModel)
+    
+    (scope
+        (event evMouseOver)
+        (event evMouseOut)
+
+        (var isLocked:bool = "slotState != CHANGE_AVAILABLE && slotState != SET_AVAILABLE && !(isPostEvent && slotState == CHANGE_TIME_OUT)")
+        (var disabled:bool = "slotState == SLOT_DISABLED")
+        (var setAvailable:bool = "slotState == SET_AVAILABLE || (isPostEvent && slotState == SET_COOLDOWN)")
+        (var setCooldown:bool = "slotState == SET_COOLDOWN && !isPostEvent")
+        (var changeInBattle:bool = "slotState == CHANGE_IN_BATTLE")
+        (var changeInSquad:bool = "slotState == CHANGE_IN_SQUAD")
+        (var changeAvailable:bool = "isPostEvent ? slotState == CHANGE_TIME_OUT || slotState == CHANGE_AVAILABLE || slotState == SET_COOLDOWN: slotState == CHANGE_AVAILABLE")
+        (var goToChallengeQuestsAvailable:bool = "isExtraSlot && disabled")
+        (var hoverEnabled:bool = "changeAvailable || goToChallengeQuestsAvailable")
+
+        (var hasVehicle:bool = false)
+        (bind hasVehicle "!(disabled || setAvailable || setCooldown) && vehicleIcon != ''" init=false)
+
+        (event onEnabledTutorialChange)
+        (var _tutorialWasSet:bool = false)
+
+        (bind _tutorialWasSet true init=false 
+            (event "onEnabledTutorialChange")
+        )
+        (dispatch onEnabledTutorialChange init=false
+            (enabled = "!_tutorialWasSet")
+            (bind enabled "hasVehicle && !setCooldown && isExtraSlot")
+        )
+
+        (var isSmall:bool = "viewSize.width < BASE_WIDTH_1920 || viewSize.height < BASE_HEIGHT_1027"
+            (event "viewResized")
+        )
+    )
+
+    (style
+        (bind width "isSmall ? (isExtraSlot ? 271px : 206px) : (isExtraSlot ? 412px : 294px)")
+        (bind height "isSmall ? (isExtraSlot ? 247px : 170px) : (isExtraSlot ? 380px : 270px)")
+    )
+    (button
+        (name = 'slot')
+        (hover source="R.images.gui.maps.icons.new_year.vehicles_view.hover_slot()" blend='normal' scale9grid="Rect(40,40,223,199)" offsets=null)
+        (bindcall background 
+            source="R.images.gui.maps.icons.new_year.vehicles_view[setAvailable ? 'add_slot' : 'normal_slot']()" 
+            scale9grid="Rect(40,40,223,199)" 
+            offsets="setAvailable ? [-8px, -8px, -8px, -8px] : [0px, 0px, 0px, 0px]" init=true)
+        (down source="R.atlases.components.indicator_down()" scale9grid="BUTTON_BACKGROUND_RECT" offsets=null)
+        (setFocusImage source="R.atlases.components.indicator_focus()" scale9grid="Rect(15, 7, 135, 5)" offsets=null)
+
+        (soundDown = "R.sounds.play()")
+        (soundOver = "R.sounds.highlight()")
+
+        (style
+            (width = 100%)
+            (height = 100%)
+        )
+        (content
+            (style
+                (width = 100%)
+                (height = 100%)
+            )
+            (block
+                (macro EmptyHitAreaMacro)
+                (class AbsPositionCenterStyle)
+                (image
+                    (class AbsPositionCenterStyle)
+                    (name = 'extra_slot_freeze')
+                    (bind source "isSmall ?
+                        R.images.gui.maps.icons.new_year.vehicles_view.moroz_small() :
+                        R.images.gui.maps.icons.new_year.vehicles_view.moroz_medium()"
+                    )
+                    (bind visible "isExtraSlot")
+                )
+            )
+            (image
+                (name = 'flagImage')
+                (style
+                    (position = "absolute")
+                    (bind scaleX "isSmall ? 0.5 : 0.65")
+                    (bind scaleY "isSmall ? 0.5 : 0.65")
+                )
+                (bind source "!hasVehicle ? null : nationIcon")
+            )
+
+            (image
+                (name = 'vehicleIcon')
+                (style
+                    (position = "absolute")
+                    (center = 0px)
+                    (bind middle "isSmall ? -10px : -20px")
+                    (bind scaleX "isSmall ? (isExtraSlot ? 0.6 : 0.45) : (isExtraSlot ? 0.85 : 0.7)")
+                    (bind scaleY "isSmall ? (isExtraSlot ? 0.6 : 0.45) :(isExtraSlot ? 0.85 : 0.7)")
+                    (pivotX = 50%)
+                    (pivotY = 50%)
+                )
+                (bind source "!hasVehicle ? null : vehicleIcon")
+            )
+
+            (hblock
+                (name = 'vehicleInfoBlock')
+                (style
+                    (position = "absolute")
+                    (align = "middle")
+                    (top = 5px)
+                    (bind left "isExtraSlot && isSmall ? 10px : 16px")
+                )
+                (image
+                    (name = 'vehicleType')
+                    (style
+                        (alpha = 0.6)
+                    )
+                    (bind source "vehicleTypeIcon")
+                )
+
+                (image
+                    (name = 'vehicleLevel')
+                    (style
+                        (bind marginLeft "isExtraSlot ? -6px : -1px")
+                    )
+                    (bind source "levelIcon")
+                )
+                (bind visible "hasVehicle")
+            )
+
+            (block
+                (name = 'bottomInfoBlock')
+                (style
+                    (position = "absolute")
+                    (left = 20px)
+                    (right = 20px)
+                    (bind bottom "isExtraSlot ? (isSmall ? 45px : 55px) : 25px")
+                )
+                (controller $Animation
+                    (bindcall stop (event "evMouseOver"))
+                    (bindcall stop (event "evMouseOut"))
+                    (bindcall stop (bind trigger "isExtraSlot"))
+                    (bindcall play duration=0.15 to={bottom: 50} easing="Easing.cubic_in" 
+                        (event "evMouseOver")
+                        (enabled="!isExtraSlot")
+                    )
+                    (bindcall play duration=0.15 to="{bottom: isSmall ? 80 : 90}" easing="Easing.cubic_in" 
+                        (event "evMouseOver")
+                        (enabled="isExtraSlot")
+                    )
+                    (bindcall play duration=0.3 to={bottom: 25} easing="Easing.cubic_out"
+                        (event "evMouseOut")
+                        (enabled="!isExtraSlot")
+                    )
+                    (bindcall play duration=0.3 to="{bottom: isSmall ? 45 : 55}" easing="Easing.cubic_out"
+                        (event "evMouseOut")
+                        (enabled="isExtraSlot")
+                    )
+                )
+                (block
+                    (style
+                        (width = 100%)
+                    )
+                    (bind class "slotState == CHANGE_TIME_OUT ? 
+                        'VehicleChangeTimeoutLabelFilters' : 
+                            slotState == CHANGE_IN_BATTLE || slotState == CHANGE_IN_SQUAD ? 'VehicleChangeInBattleLabelFilters' :
+                                'VehicleNameLabelFilters'")
+                    (tf
+                        (name = 'text')
+                        (class NewYearSubTitleStyle)
+                        (style
+                            (textAlign = "center")
+                            (width = 100%)
+                            (multiline = true)
+                            (wordWrap = true)
+                        )
+                        (bind text "
+                            slotState == CHANGE_TIME_OUT ? 
+                                TextFormat(R.strings.ny.vehiclesView.vehicleSlot[isPostEvent ? 'changeTimeOutForFree' : 'changeTimeOut' ](), {vehicle: vehicleName, 
+                                    time: hardSpace(timeLeft(
+                                        cooldown, 
+                                        R.strings.menu.timeLeft.short.day(),
+                                        R.strings.menu.timeLeft.short.hour(),
+                                        R.strings.menu.timeLeft.short.min(),
+                                        R.strings.menu.timeLeft.short.lessMin(),
+                                        true
+                                    ))}) : 
+                                    slotState == CHANGE_IN_BATTLE ? 
+                                        TextFormat(R.strings.ny.vehiclesView.vehicleSlot.changeDisabled(), {vehicle: vehicleName}) :
+                                        slotState == CHANGE_IN_SQUAD ?
+                                            TextFormat(R.strings.ny.vehiclesView.vehicleSlot.changeDisabledDueToSquad(), {vehicle: vehicleName}) :
+                                            vehicleName")
+                    )
+                )
+
+                (bind visible "!disabled && !setAvailable && !setCooldown")
+            )
+
+            (block
+                (name = 'slotChange')
+                (style
+                    (position = "absolute")
+                    (center = 0px)
+                    (bind bottom "isExtraSlot && !isSmall ? 25px : 15px")
+                    (width = 171px)
+                    (bind height "isExtraSlot ? 65px : 35px")
+                    (align = "center")
+                    (paddingTop = 6px)
+                    (alpha = 0)
+                    (backgroundImage = "R.images.gui.maps.icons.new_year.vehicles_view.button()")
+                )
+                (tf
+                    (bind htmlText "htmlTextStyle(changePriceString, 'NewYearBonusTextStyle')" init=false
+                        (bind enabled "changePriceString != ''")
+                    )
+                )
+                (controller $Animation
+                    (bindcall stop (event "evMouseOver"))
+                    (bindcall stop (event "evMouseOut"))
+                    (bindcall play duration=0.2 to={alpha:1} from={alpha:0} easing="Easing.cubic_in" init=false
+                        (event "evMouseOver")
+                    )
+                    (bindcall play duration=0.2 to={alpha:0} from={alpha:1} easing="Easing.cubic_out" init=false
+                        (event "evMouseOut")
+                    )
+                )
+
+                (bind visible "changeAvailable")
+            )
+            (image
+                (class AbsPositionCenterStyle)
+                (name = 'extra_slot_dots')
+                (bind visible "isExtraSlot")
+                (bind source "isSmall ?
+                    R.images.gui.maps.icons.new_year.vehicles_view.extraslot_dots_small() :
+                    R.images.gui.maps.icons.new_year.vehicles_view.extraslot_dots_medium()"
+                )
+            )
+            (image
+                (class AbsPositionCenterStyle)
+                (name = 'extra_slot_seleb')
+                (bind visible "isExtraSlot && disabled && !setAvailable")
+                (bind source "isSmall ?
+                    R.images.gui.maps.icons.new_year.vehicles_view.seleb_exstraslot_small() :
+                    R.images.gui.maps.icons.new_year.vehicles_view.seleb_exstraslot_medium()"
+                )
+            )
+            (block
+                (name = 'disabledBlock')
+                (style
+                    (macro FullSize)
+                    (align = "center|middle")
+                    (bind gap "isSmall ? 0px : 8px") 
+                )
+                (tf
+                    (name = 'levelTf')
+                    (class NewYearVehicleSlotLevelTextStyle)
+                    (bind text "levelStr")
+                )
+                (tf
+                    (name = 'labelTf')
+                    (class NewYearVehicleSlotLabelTextStyle)
+                    (style
+                        (width = 100%)
+                        (wordWrap = true)
+                        (multiline = true)
+                        (textAlign = "center")
+                    )
+                    (bind text "setCooldown ? 
+                        TextFormat(R.strings.ny.vehiclesView.vehicleSlot.setCooldown(), {time: timeLeft(
+                                cooldown, 
+                                R.strings.menu.timeLeft.short.day(),
+                                R.strings.menu.timeLeft.short.hour(),
+                                R.strings.menu.timeLeft.short.min(),
+                                R.strings.menu.timeLeft.short.lessMin(),
+                                true
+                            )}) :
+                        TextFormat(R.strings.ny.vehiclesView.vehicleSlot.disabled(), {level: levelStr})")
+                )
+                (bind visible "(disabled && !setAvailable && !isExtraSlot) || setCooldown")
+            )
+            (block
+                (name = 'extraSlotDisabledBlock')
+                (class FullSizeStyle)
+                (block
+                    (style
+                        (macro FullSize)
+                        (align = "center|bottom")
+                        (bind gap "isSmall ? 0px : 2px") 
+                        (bind paddingBottom "isSmall ? 24px : 34px")
+                    )
+                    (tf
+                        (name = 'titleTf')
+                        (class NewYearExtraSlotDisabledTitleTextStyle)
+                        (style
+                            (bind fontSize "isSmall ? 18px : 24px")
+                        )
+                        (text = "R.strings.ny.vehiclesView.extraSlot.disabled.header()")
+                    )
+                    (tf
+                        (name = 'bodyTf')
+                        (style
+                            (width = 80%)
+                            (wordWrap = true)
+                            (multiline = true)
+                        )
+                        (bind htmlText "formatString(htmlTextStyle(R.strings.ny.vehiclesView.extraSlot.disabled.body(),
+                                isSmall ? 'NewYearVehicleSlotLabelSmallTextStyle' : 'NewYearVehicleSlotLabelTextStyle', 'center', leading=-1),
+                            [{name:'levels', value:R.strings.ny.vehiclesView.extraSlot.disabled.levels(), 
+                                style:isSmall ? 'NewYearExtraSlotLevelsSmallTextStyle' : 'NewYearExtraSlotLevelsTextStyle'}],
+                            true)"
+                        )
+                    )
+                    (controller $Animation
+                        (bindcall play duration=0.2 to="{paddingBottom:80}" easing="Easing.cubic_in" init=false
+                            (event "evMouseOver")
+                        )
+                        (bindcall play duration=0.2 to="{paddingBottom: isSmall ? 18 : 24}" easing="Easing.cubic_out" init=false
+                            (event "evMouseOut")
+                        )
+                    )
+                )
+                (button
+                    (macro ButtonStylePrimaryGhost "BUTTON_SIZE_MEDIUM") 
+                    (scope
+                        (var buttonAlpha:number = 0)
+                        (controller $Animation
+                            (bindcall play duration=0.2 to={buttonAlpha:1} easing="Easing.cubic_in" init=false
+                                (event "evMouseOver")
+                            )
+                            (bindcall play duration=0.2 to={buttonAlpha:0} easing="Easing.cubic_out" init=false
+                                (event "evMouseOut")
+                            )
+                        )
+                    )
+                    (style
+                        (position = "absolute")
+                        (hcenter = 0px)
+                        (bottom = 27px)
+                        (bind alpha "buttonAlpha")
+                        (minWidth = 110px)
+                        (height = 32px)
+                    )
+                    (label
+                        (class NyVehicleGoToChallengeQuestsBtnTextStyle)
+                        (text = "R.strings.ny.vehiclesView.extraSlot.disabled.goToChallengeQuests()")
+                    )
+                )
+                (bind visible "disabled && !setAvailable && isExtraSlot")
+            )
+
+            (block
+                (style
+                    (width = 100%)
+                    (align = "center")
+                )
+                (block
+                    (style
+                        (bind width "isPostEvent && slotState == SET_COOLDOWN ? 85% : 60%")
+                    )
+                    (class AddVehicleLabelFilters)
+                    (tf
+                        (name = 'tfAddVehicle')
+                        (style
+                            (width = 100%)
+                            (wordWrap = true)
+                            (multiline = true)
+                            (textAlign = "center")
+                        )
+                        (class NewYearSubTitleStyle)
+                        (bind text "!(isPostEvent && slotState == SET_COOLDOWN) ?
+                            TextFormat(R.strings.ny.vehiclesView.vehicleSlot.addVehicle(), {level: levelStr}) :
+                            TextFormat(R.strings.ny.vehiclesView.vehicleSlot.addVehicleFor(), {time: timeLeft(
+                                    cooldown, 
+                                    R.strings.menu.timeLeft.short.day(),
+                                    R.strings.menu.timeLeft.short.hour(),
+                                    R.strings.menu.timeLeft.short.min(),
+                                    R.strings.menu.timeLeft.short.lessMin(),
+                                    true),
+                                    level: levelStr})")
+                    )
+                )
+                (tf
+                    (bind visible "isExtraSlot && !isPostEvent && slotState != SET_COOLDOWN")
+                    (style
+                        (marginTop = 10px)
+                        (bind width "isSmall ? 240px : 300px")
+                        (textAlign = "center")
+                    )
+                    (bind class "isSmall ? 'NewYearVehicleExtraSlotSmallDescr' : 'NewYearVehicleExtraSlotDescr'")
+                    (text = "R.strings.ny.vehiclesView.extraSlot.descr()")
+                )
+                (bind visible "setAvailable")
+            )
+        )
+
+        (block
+            (name = 'lock/plus')
+            (style
+                (position = "absolute")
+                (center = 0px)
+                (bottom = 2px)
+                (pivotY = 50%)
+            )
+            (macro EmptyHitAreaMacro)
+            (image
+                (bind source "R.images.gui.maps.icons.new_year.vehicles_view[setAvailable ? 'plus' : 'tree_lock']()")
+            )
+            (bind visible "isLocked || setAvailable")
+        )
+
+        (element PopoverTargetObj 'popoverPositionObj' 0 0 230 190
+            (style
+                (bind width "isSmall ? 230px : 300px")
+                (bind height "isSmall ? 190px : 280px")
+            )
+        )
+
+        (element HitArea)
+        (hitArea = "$target.hitElement")
+
+        (controller $Popover id = 'NYSelectVehiclePopover'
+            (args "{slotID:slotID}" "$target.popoverPositionObj")
+            (bind autoact "setAvailable || changeAvailable")
+        )
+
+        (dispatch evMouseOver on='rollOver' 
+            (bind enabled "hoverEnabled")
+        )
+        (dispatch evMouseOut on='rollOut' 
+            (bind enabled "hoverEnabled")
+        )
+        (dispatch onGoToChallengeQuests dir=1 args="{slotID:slotID}" on='clicked'
+            (enabled = "goToChallengeQuestsAvailable")
+        )
+
+        (bind enabled "!isLocked || hoverEnabled")
+        (bind visible "!isPostEvent || !disabled")
+    )
+
+    (image
+        (name = 'notAvailable')
+        (style
+            (width = 100%)
+            (height = 100%)
+        )
+        (bind source "R.images.gui.maps.icons.new_year.vehicles_view.slot_not_avaible()")
+        (bind visible "isPostEvent && disabled")
+    )
+    (hblock
+        (name = 'extraSlotInfo')
+        (style
+            (position = "absolute")
+            (bottom = 0px)
+            (bind paddingBottom "isSmall ? 10px : 20px")
+            (width = 100%)
+            (align = "center")
+        )
+        (mouseEnabled = false)
+        (block
+            (mouseEnabled = true)
+            (image
+                (style
+                    (bind marginTop "isSmall ? 2px : 4px")
+                )
+                (source = "R.images.gui.maps.icons.new_year.vehicles_view.info_extra_slot()")
+            )        
+            (macro SetSimpleToolTip
+                body="R.strings.ny.vehiclesView.extraSlot.descr.resId"
+            )
+        )
+        (tf
+            (mouseEnabled = false)
+            (bind visible "isExtraSlot")
+            (style
+                (bind maxWidth "isSmall ? 220px : 350px")
+            )
+            (bind htmlText "htmlTextStyle(formatString(R.strings.ny.vehiclesView.extraSlot.about(),
+                [{name:'level', value:levelStr}],
+                true), isSmall ? 'NewYearVehicleExtraSlotSmallDescr' : 'NewYearVehicleExtraSlotDescr', 'center')"
+                init=false
+            )
+        )
+
+        (bind visible "isExtraSlot && hasVehicle && (setAvailable || changeAvailable)")
+    )
+    (element CloseBtnSlim
+        (name = 'btnClear')
+        (style
+            (position = "absolute")
+            (right = 5px)
+            (top = 5px)
+        )
+        (scope
+            (dispatch onClearBtnClick dir=1 args="{slotID:slotID}" on='evBtnUpEvent')
+        )
+        (bind visible "!disabled && !setAvailable && !setCooldown && !changeInBattle && !changeInSquad")
+
+        (macro SetSimpleToolTip
+            body="R.strings.ny.vehiclesView.vehicleSlot.clear.resId"
+        )
+    )
+    (block
+        (name = 'dropdownBlock')
+        (style
+            (align = "middle")
+            (position = "absolute")
+            (top = -25px)
+            (center = 0px)
+        )
+        (block
+            (class AbsPositionCenterStyle)
+            (macro EmptyHitAreaMacro)
+            (image
+
+                (name = 'bg_moroz')
+                (bind source "isSmall ?
+                    R.images.gui.maps.icons.new_year.vehicles_view.bg_moroz_small() :
+                    R.images.gui.maps.icons.new_year.vehicles_view.bg_moroz_medium()"
+                )
+            )
+        )
+        (element NyVehicleViewDropDown 'choiceBonusesDropDown' 'drop_down'
+            (style
+                (width = 160px)
+            )
+            (scope
+                (bind slotID "slotID")
+                (bind tutorialEnabled "hasVehicle && !setCooldown && isExtraSlot")
+                (bind isEnabled "!changeInBattle && !changeInSquad")
+            )
+            (controller $Tutorial viewTutorialId='NewYearVehicles' controlID='extraSlotBonusDD' enabled=false
+                (bind enabled "_tutorialWasSet" init=false)
+            )
+        )
+        (bind visible "hasVehicle && !setCooldown && isExtraSlot")
+    )
+
+    (element NewYearVehicleSlotBonusInfo 'bonus'
+        (bind visible "hasVehicle && !setCooldown && !isExtraSlot")
+        (mouseEnabled = false)
+        (mouseChildren = false)
+    )
+)
+
+(def element NewYearVehicleSlotBonusInfo(name:str='NewYearVehicleSlotBonusInfo')
+    (name = "name")
+    (macro NewYearBonusInfoModel)
+
+    (style
+        (align = "middle")
+        (position = "absolute")
+        (top = 1px)
+        (center = 0px)
+        (flow = "Flow.HORIZONTAL")
+        (pivotY = 50%)
+    )
+    
+    (image
+        (name = 'bg')
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (vcenter = 0px)
+        )
+        (source = "R.images.gui.maps.icons.new_year.vehicles_view.slot_top_shadow()")
+    )
+    (image
+        (name = 'icon')
+        (bind source "R.images.gui.maps.icons.new_year.vehicles_view.icons[MAP_ICON_BY_BONUS[bonusType]]()")
+    )
+    (block
+        (class NewYearBonusValueTextFilters)
+        (tf
+            (name = 'value')
+            (style
+                (fontSize = 18px)
+            )
+            (class NewYearVehicleSlotBonusValueTextStyle)
+            (bind text "TextFormat(R.strings.ny.totalBonusWidget.pbBonus(), {bonus: bonusValue})")
+        )
+    )
+)
+
+(def layout NyVehicleViewDropDown(name:str, 
+        binder:str='drop_down',
+        buttonRenderer:str='NyVehiclesDropDownButton'
+    )
+    (name = "name")
+
+    (scope
+        (event onSelectionChanged)
+        (var isEnabled:bool = true)
+        (event onSetFocus)
+        (var slotID:number = 0)
+        (var tutorialEnabled:bool = false)
+        (var isMouseEnabled:number = 1)
+        (dispatch onSwitchExtraSlotBonus dir=1 args="{slotID:slotID, bonusID: $event.id}"
+            (event "onSelectionChanged")
+        )
+        (controller $Animation
+            (bindcall play duration=0.6 from="{isMouseEnabled:0}" to="{isMouseEnabled:1}" 
+                (event "onSelectionChanged")
+            )
+        )
+    )
+    (bind mouseChildren "isMouseEnabled == 1")
+    (style
+        (minWidth = 100px)
+    )
+
+    (drop_down
+        (style
+            (width = 100%)
+        )
+        (bind contentResId "R.views.lobby.new_year.views.new_year_vehicles_view.NyVehiclesDropDownMenuContent.resId")
+        (bind decoratorResId "R.views.lobby.new_year.views.new_year_vehicles_view.NyVehiclesDropDownMenuWindow.resId")
+        (bind isEnabled "isEnabled")
+        (button
+            (style
+                (width = 100%)
+            )
+            (controller $Instance renderer="buttonRenderer"
+                (exprs
+                    (scope 
+                        (bind _isEnabled "isEnabled")
+                        (bind tutorialEnabled "tutorialEnabled")
+                        (bind itemData "$event" init=false
+                            (event "onSelectionChanged")
+                        )
+                    )
+                    (bindcall setFocus init=false
+                        (event "onSetFocus")
+                    )
+                )
+            )
+        )
+    )
+)
+
+(def layout NyVehiclesDropDownMenuContent() entrance=true
+    (macro DropDownMenuContentModel)
+
+    (style
+        (width = 100%) 
+    )
+
+    (element List 'dropDownList' 'none'
+        vscroll_policy='auto' hscroll_policy='off' list_height="auto"
+        (scope
+            (listRendererName = 'NyVehiclesDropDownMenuItem')
+            (listVirtualLayout = false)
+            (containerWidth = 100%)
+            (containerMaxHeight = "DROP_DOWN_LIST_MAX_HEIGHT")
+        )
+    )
+)
+
+(def layout NyVehiclesDropDownMenuWindow() entrance=true
+    (macro DropDownMenuWindowModel)
+
+    (scope
+        # Animate drop down menu appearence
+        (var groupHeight:number = 0)
+        (var content:object = null)
+        (controller $Animation
+            (play delay=0.1 duration=0.3 easing="Easing.cubic_out" from={groupHeight:0} to={groupHeight:100})
+        )
+        (event onVDirectionChanged)
+    )
+
+    (name = 'DropDownMenuWindow')
+
+    # Mask and hit area
+    (element HitArea
+        (style
+            (bind height "1% * groupHeight")
+            (position = "absolute")
+            (bind bottom "$event ? auto : 0px" init=false
+                (event "onVDirectionChanged")
+            )
+        )
+    )
+    (mask = "$target.hitElement")
+    (hitArea = "$target.hitElement")
+
+    (block
+        # Stretched window background
+        (mouseEnabled = false)
+        (style
+            (backgroundColor = 0xE1111111)
+        )
+        # View holder for drop down list
+        (view_holder
+            (style
+                (bind width "targetWidth")
+            )
+            (name = 'viewHolder')
+            (bind content "content" init=false)
+        )
+    )
+
+    # Adjust position of drop down menu
+    (controller $AdjustPosition
+        (bind original_x "x + 1")
+        (bind original_y "y - 19")
+        (bind y_offset_for_up "-targetHeight + 1")
+    )
+
+    (controller $Animation
+        (bindcall play duration=0.3 delay=0.1 easing="Easing.cubic_out" to={alpha:1} from={alpha:0} init=true)
+    )
+)
+
+(def layout NyVehiclesDropDownMenuItem()
+    (macro LootBoxDropDownMenuItemModel)
+    (macro ComponentStateBaseLogic "DROP_DOWN_MENU_ITEM")
+    (scope
+        (var multiplier:number = 0.5)
+        (var hoverColor:number = 0x44ffffff)
+
+        (controller $Animation
+            (bindcall stop (event "evBtnOutEvent"))
+            (bindcall stop (event "evBtnFocusChange"))
+            (bindcall play duration=0.1 to={multiplier: 0.5} easing="Easing.cubic_in" (event "evBtnOutEvent"))
+            (bindcall play duration=0.1 to={multiplier: 1} easing="Easing.cubic_out" (event "evBtnOverEvent"))
+            (bindcall play duration=0.1 to={multiplier: 0.5} easing="Easing.cubic_in" (event "evBtnDownEvent"))
+            (bindcall play duration=0.1 to={multiplier: 0.5} easing="Easing.cubic_in" (event "evBtnUpEvent"))
+            (bindcall play duration=0.1 to={multiplier: 0.5} easing="Easing.cubic_out" (event "evBtnFocusChange"))
+        )
+
+        (selectable = true)
+        (event onSelectChange)
+        (hoverColor = 0x5F03a5d8)
+        (bind _isEnabled "isEnabled")
+        (bind selected "$event" init=false 
+            (event "onSelectChange")
+        )
+    )
+    
+    (style
+        (width = 100%)
+        (height = 46px)
+        (align = "center|middle")
+        (flow = "Flow.HORIZONTAL")
+        (paddingLeft = -30px)
+    )
+
+    (buttonMode = true)
+    (mouseChildren = false)
+    (bind visible "!selected")
+    
+    (block
+        (style
+            (position = "absolute")
+            (bind backgroundColor "hoverColor")
+            (width = 100%)
+            (height = 100%)
+        )
+        (bind colorTransform "{
+            redMultiplier:multiplier, greenMultiplier:multiplier, blueMultiplier:multiplier, alphaMultiplier:0.7,
+            redOffset:-80, greenOffset:-80, blueOffset:-80, alphaOffset:0}"
+        )
+    )
+    
+    (block
+        (style
+            (width = 60px)
+            (align = "center|middle")
+        )
+        (image
+            (name = 'icon')
+            (bind source "icon")
+        )
+    )
+
+    (block
+        (class NewYearBonusValueTextFilters)
+        (style
+            (marginTop = 0px)
+        )
+        (tf
+            (name = 'value')
+            (class NewYearVehicleSlotBonusValueTextStyle)
+            (bind text "labelStr")
+        )
+    )
+)
+
+(def layout NyVehiclesDropDownButton()
+    (macro AbstractComponent "DROP_DOWN_BTN")
+    (macro InputBaseScope)
+    (scope
+        # Animate color transform for arrow button
+        (var multiplier:number = 1.0)
+        (var offset:number = 1.0)
+        # Item data of a currently seletcted item (is updated from a drop down)
+        (var itemData:dict = {})
+        (var tutorialEnabled:bool = false)
+        (var componentHeight:number = "NUMERIC_STEPPER_BTN_HEIGHT_BREAK_POINT")
+        (controller $Animation
+            (bindcall stop 
+                (event "evBtnOutEvent")
+            )
+            (bindcall play duration=0.2 to={multiplier:1, offset:0} easing="Easing.cubic_in" 
+                (event "evBtnOutEvent")
+            )
+            (bindcall play duration=0.3 to={multiplier:1, offset:20} easing="Easing.cubic_out"
+                (event "evBtnOverEvent")
+            )
+            (bindcall play duration=0.2 to={multiplier:1, offset:-15} easing="Easing.cubic_in"
+                (event "evBtnDownEvent")
+            )
+            (bindcall play duration=0.2 to={multiplier:1, offset:0} easing="Easing.cubic_in"
+                (event "evBtnUpEvent")
+            )
+            (bindcall play duration=0.2 to="{multiplier: $event.value ? 1 : 0.5}" easing="Easing.cubic_in"
+                (event "evBtnEnabledEvent")
+            )
+        )
+
+        (var hoverAlpha:number = 0)
+        (controller $Animation
+            (bindcall stop
+                (event "evBtnOutEvent")
+            )
+            (bindcall play duration=0.2 to={hoverAlpha:0} easing="Easing.cubic_in"
+                (event "evBtnOutEvent")
+            )
+            (bindcall play duration=0.3 to={hoverAlpha:0.5} easing="Easing.cubic_out"
+                (event "evBtnOverEvent")
+            )
+            (bindcall play duration=0.2 to={hoverAlpha:0} easing="Easing.cubic_in"
+                (event "evBtnDownEvent")
+            )
+            (bindcall play duration=0.2 to={hoverAlpha:0} easing="Easing.cubic_in"
+                (event "evBtnFocusChange")
+            )
+        ) 
+    )
+    (style
+        # height of the button
+        (width = 100%)
+        (height = 46px)
+    )
+    (buttonMode = true)
+    (mouseChildren = false)
+
+    (image
+        (style
+            (position = "absolute")
+        )
+        (source = "R.images.gui.maps.icons.new_year.vehicles_view.drop_down_btn()")
+    )
+    (block
+        (class BtnAbstractDisabledOverlayStyle)
+        (style
+            (position = "absolute")
+            (width = 162px)
+            (height = 48px)
+        )
+        (bind visible "!_isEnabled")
+    )
+    (block
+        (name = 'contentTop')
+        (style
+            (position = "absolute")
+            (flow = "Flow.HORIZONTAL")
+            (width = 100%)
+            (paddingLeft = 10px)
+            (paddingRight = 0px)
+            (bind alpha "_isEnabled ? 1 : 0.5")
+        )
+        (image
+            (name = 'hover')
+            (style
+                (position = "absolute")
+                (bind alpha "hoverAlpha")
+            )
+            (source = "R.images.gui.maps.icons.new_year.vehicles_view.drop_down_btn_hover()")
+        )
+
+        (hblock
+            (style
+                (width = 100%)
+                (height = 46px)
+                (align = "middle")
+            )
+            (block
+                (style
+                    (width = 60px)
+                    (align = "center|middle")
+                )
+                (image
+                    (name = 'icon')
+                    (bind source "itemData.icon" init=false)
+                )
+            )
+
+            (block
+                (class NewYearBonusValueTextFilters)
+                (style
+                    (marginTop = 0px)
+                )
+                (tf
+                    (name = 'value')
+                    (class NewYearVehicleSlotBonusValueTextStyle)
+                    (bind text "itemData.labelStr" init=false)
+                )
+            )
+            (image
+                (name = 'icon')
+                (style
+                    (position = "absolute")
+                    (right = 16px)
+                    (vcenter = 0px)
+                )
+                (source = "R.images.gui.maps.icons.new_year.vehicles_view.arrow()")
+            )
+        )
+    )
+)

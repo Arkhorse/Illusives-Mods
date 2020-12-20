@@ -1,0 +1,26 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NewYearCollectionsRewardViewModel()
+    (scope
+        (event onGetStyleButton)
+        (event onGoToCollectionButton)
+        (event onPreviewStyleButton)
+        (event onCollectionNameChanged)
+
+        (var cost:number = 0)
+        (var currentCollectionName:str = 'NewYear')
+        (var year:str = 'ny21')
+        (var currentYear:str = '')
+        (var levels:str = '')
+        (var isEnough:bool = true)
+        (var isPremium:bool = true)
+        (var isAllNations:bool = true)
+        (var isAllLevels:bool = true)
+        (var isMaxLvl:bool = false)
+
+        # The following submodels are used in this model:
+        # styleAdditionals:gui.impl.wrappers.user_list_model.UserListModel
+        # styleTabs:gui.impl.wrappers.user_list_model.UserListModel
+        # compatibleNations:gui.impl.wrappers.user_list_model.UserListModel
+    )
+)

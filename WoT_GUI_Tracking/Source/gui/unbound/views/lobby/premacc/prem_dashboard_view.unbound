@@ -1,0 +1,134 @@
+(def layout PremDashboardView() entrance=true isReadyTracked=true loadOrder="LoadOrder.NOT_WAITING_FIRST"
+    (macro PremDashboardViewModel)
+    (macro PremDashboardAdaptiveSize)
+
+    (style
+        (width = 100%)
+        (height = 100%)
+        (align = "center|middle")
+        (paddingTop = 30px)
+    )
+
+    (dispatch onCloseAction on='escPressed')
+
+    # Hide waiting
+    (dispatch onInitialized
+        (event "$evReadyChanged")
+    )
+    
+    (element BackgroundElement
+        (scope
+            (bgSource="R.images.gui.maps.icons.premacc.backgrounds.dashboard()")
+        )
+    )
+    (controller $Tutorial viewTutorialId='PremDashboardView')
+
+    (block
+        (name = 'mainBlock')
+        (view_holder
+            (name = "R.dynamic_ids.prem_dashboard.header()")
+            (style
+                (width = 100%)
+            )
+        )
+        (block
+            (name = 'middle_cards')
+            (style
+                (flow = "Flow.HORIZONTAL")
+                (bind gap "isNormalSize ? 20px : 10px")
+                (bind paddingTop 
+                    "isNormalSize ? (viewSize.width == 1600 ? 63px : 70px) : (viewSize.width <= 1500 && viewSize.height <= 870 ? 40px : 65px)"
+                    (event "viewResized")
+                )
+            )
+            (view_holder
+                (name = "R.dynamic_ids.prem_dashboard.premium_card()")
+                (style
+                    (bind width "isNormalSize ? 520px : 366px")
+                    (bind height "isNormalSize ? 400px : 340px")
+                )
+            )
+            (view_holder
+                (name = "R.dynamic_ids.prem_dashboard.double_xp_card()")
+                (style
+                    (bind width "isNormalSize ? 360px : 250px")
+                    (bind height "isNormalSize ? 400px : 340px")
+                )
+            )
+            (view_holder
+                (name = "R.dynamic_ids.prem_dashboard.piggy_bank_card()")
+                (style
+                    (bind width "isNormalSize ? 360px : 250px")
+                    (bind height "isNormalSize ? 400px : 340px")
+                )
+            )
+        )
+        (block
+            (name = 'bottom_cards')
+            (style
+                (bind paddingTop "isNormalSize ? 20px : 10px")
+                (flow = "Flow.HORIZONTAL")
+                (bind gap "isNormalSize ? 20px : 10px")
+            )
+			
+			(block
+				(name = 'dog_tag_card_block')
+				(controller $Tutorial viewTutorialId='PremDashboardView' controlID='dogTagCard')
+				(view_holder
+					(name = "R.dynamic_ids.prem_dashboard.dog_tags_card()")
+					(style
+						(bind width "isNormalSize ? 520px : 366px")
+						(bind height "isNormalSize ? 140px : 130px")
+
+					)
+				)
+			)
+
+            (view_holder
+                (name = "R.dynamic_ids.prem_dashboard.premium_quests_card()")
+                (style
+                    (bind width "isNormalSize ? 360px : 250px")
+                    (bind height "isNormalSize ? 140px : 130px")
+                )
+            )
+
+            (view_holder
+                (name = "R.dynamic_ids.prem_dashboard.maps_black_list_card()")
+                (style
+                    (bind width "isNormalSize ? 360px : 250px")
+                    (bind height "isNormalSize ? 140px : 130px")
+                )
+            )
+            
+        )
+    )
+    
+    (text_button
+        (name = 'closeBtnFull')
+        (macro ButtonCloseStyle)
+        (style
+            (position = "absolute")
+            (right = 50px)
+            (top = 50px)
+        )
+        (label = "R.strings.menu.viewHeader.closeBtn.label()")
+        (dispatch onCloseAction on='clicked')
+        (bind visible "viewSize.width > 1150 || viewSize.height > 800" 
+            (event "viewResized")
+        )
+    )
+    (text_button
+        (name = 'closeBtnShort')
+        (style
+            (position = "absolute")
+            (right = 20px)
+            (top = 20px)
+        )
+        (hover source="null" scale9grid=null blend='add' offsets="[]")
+        (icon="R.atlases.components.closeBtnIcon()")
+        (dispatch onCloseAction on='clicked')
+        (bind visible "viewSize.width <= 1150 && viewSize.height < 800" 
+            (event "viewResized")
+        )
+    )
+)

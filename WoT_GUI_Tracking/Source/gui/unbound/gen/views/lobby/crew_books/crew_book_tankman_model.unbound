@@ -1,0 +1,25 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro CrewBookTankmanModel()
+    (scope
+        (var idx:number = 0)
+        (var roleIcon:str = '')
+        (var tankmanIcon:str = '')
+        (var isLowRoleLevel:bool = false)
+        (var isWrongVehicle:bool = false)
+        (var isLearnDisable:bool = false)
+        (var isEmpty:bool = false)
+        (var isClickEnable:bool = false)
+        (var isTankamanSelected:bool = false)
+        (var isArrowAnimPlay:bool = false)
+        (var isSkillsEmpty:bool = false)
+        (var tankmanGainExp:str = '')
+        (var roleLevel:str = '')
+        (var nativeVehicle:str = '')
+        (var invID:number = 0)
+        (var isTooltipEnable:bool = true)
+
+        # The following submodels are used in this model:
+        # tankmanSkillList:ui_kit.list_model
+    )
+)

@@ -1,0 +1,27 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NewYearRewardsRendererModel()
+    (macro NyWithRomanNumbersModel)
+    (scope
+        (var idx:number = 0)
+        (var levelText:str = '')
+        (var isLevelAchieved:bool = false)
+        (var isCurrentLevel:bool = false)
+        (var isLastLevel:bool = false)
+        (var isNextAfterCurrentLevel:bool = false)
+        (var showTalisman:bool = false)
+        (var showTankwoman:bool = false)
+        (var isTankwomanApplied:bool = false)
+        (var isTankwomanLocked:bool = false)
+        (var isTalismanApplied:bool = false)
+        (var isTalismanLocked:bool = false)
+        (var isNewYearEnabled:bool = true)
+        (var isMaxReachedLevel:bool = false)
+        (var showTank:bool = false)
+        (var tankLevel:number = 0)
+        (var talismanImg:str = '')
+
+        # The following submodels are used in this model:
+        # rewardsGroup:gui.impl.wrappers.user_list_model.UserListModel
+    )
+)

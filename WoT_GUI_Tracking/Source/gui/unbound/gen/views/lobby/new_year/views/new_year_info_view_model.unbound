@@ -1,0 +1,28 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NewYearInfoViewModel()
+    (scope
+        (event onVideoClicked)
+        (event onButtonClick)
+
+        (var realm:str = '')
+        (var language:str = '')
+        (var maxBonus:number = 0.0)
+        (var usualMaxBonus:number = 0.0)
+        (var singleMegaBonus:number = 0.0)
+        (var maxMegaBonus:number = 0.0)
+        (var regularSlotCooldownValue:number = 0)
+        (var extraSlotCooldownValue:number = 0)
+        (var questsToGetExtraSlot:number = 0)
+        (var isExternalBuyBox:bool = false)
+        (var isLootBoxEnabled:bool = false)
+
+        (const LEVELS:str = 'levels')
+        (const STYLES:str = 'styles')
+        (const SMALLBOXES:str = 'smallBoxes')
+        (const CELEBRITY:str = 'celebrity')
+        (const BIGBOXES:str = 'bigBoxes')
+        (const GUARANTEED_REWARDS:str = 'guaranteedRewards')
+        (const STREAM_BOX:str = 'streamBox')
+    )
+)

@@ -1,0 +1,154 @@
+.Layout_base_81 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 990rem;
+    height: 100%;
+}
+
+    .Layout_base__small_cb,
+    .Layout_base__medium_df {
+        width: 1310rem;
+    }
+
+    .Layout_base__large_f6,
+    .Layout_base__huge_d2 {
+        width: 1560rem;
+    }
+.Layout_header_46 {
+    display: flex;
+    width: 100%;
+    height: 115rem;
+    padding-bottom: 20rem;
+    position: relative;
+}
+.Layout_base__compare_56 .Layout_header_46 {
+        flex-direction: column;
+        align-items: center;
+    }
+.Layout_content_79 {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+}
+.Layout_base__compare_56 .Layout_content_79 {
+        justify-content: center;
+        padding-top: 20rem;
+        padding-bottom: 10rem;
+    }
+.Layout_main_df {
+    width: 596rem;
+    border-top: 1rem solid rgba(255,255,255, .1);
+    border-bottom: 1rem solid rgba(255,255,255, .1);
+}
+.Layout_base__compare_56 .Layout_main_df {
+        width: 902rem;
+    }
+.Layout_base__small_cb .Layout_main_df,
+    .Layout_base__medium_df .Layout_main_df {
+        width: 902rem;
+    }
+.Layout_base__large_f6 .Layout_main_df,
+    .Layout_base__huge_d2 .Layout_main_df {
+        width: 1102rem;
+    }
+.Layout_inner_3e {
+    margin: 0 -16rem;
+}
+.Layout_base__large_f6 .Layout_inner_3e,
+    .Layout_base__huge_d2 .Layout_inner_3e {
+        margin: 0 -20rem;
+    }
+.Layout_aside_a1 {
+    width: 325rem;
+}
+.Layout_footer_f4 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 166rem;
+    padding-top: 20rem;
+}
+
+.Specialization_base_ec {
+    width: 22rem;
+    height: 22rem;
+    opacity: .8;
+    position: relative;
+}
+
+    .Specialization_base__tiny_fe,
+    .Specialization_base__small_a3,
+    .Specialization_base__medium_85 {
+        width: 38rem;
+        height: 38rem;
+    }
+
+    .Specialization_base__large_07,
+    .Specialization_base__huge_33 {
+        width: 54rem;
+        height: 54rem;
+    }
+
+    .Specialization_base__setup_5e {
+        opacity: .5;
+    }
+
+    .Specialization_base__correct_4c {
+        opacity: 1;
+    }
+.Specialization_glow_f0 {
+    width: 210rem;
+    height: 210rem;
+    background: url('R.images.gui.maps.icons.tanksetup.specialization.glow') no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.Specialization_base__correct_4c .Specialization_glow_f0 {
+        animation: Specialization_glow_f0 1s;
+    }
+.Specialization_icon_3a {
+    width: 48rem;
+    height: 48rem;
+    background: no-repeat center / contain;
+    position: absolute;
+    top: -13rem;
+    left: -13rem;
+    pointer-events: none;
+}
+.Specialization_icon__tiny_05,
+    .Specialization_icon__small_cf,
+    .Specialization_icon__medium_ed {
+        width: 64rem;
+        height: 64rem;
+    }
+.Specialization_icon__large_98,
+    .Specialization_icon__huge_f7 {
+        width: 80rem;
+        height: 80rem;
+    }
+@keyframes Specialization_glow_f0 {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.Specializations_base_ab {
+    display: flex;
+    position: relative;
+}
+

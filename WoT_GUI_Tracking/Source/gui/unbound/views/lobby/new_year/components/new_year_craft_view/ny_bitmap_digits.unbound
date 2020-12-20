@@ -1,0 +1,77 @@
+(def layout NyBitmapDigits(renderer:str)
+    (name = 'digits')
+    (scope
+        (var text:str = '')
+        (var maxDigits:number = 1)
+    )
+
+    (style
+        (flow = "Flow.HORIZONTAL")
+    )
+
+    (hblock
+        (name = 'zeros')
+        (controller $Repeat renderer="renderer"
+            (bind count "maxDigits - text.length")
+            (exprs
+                (scope
+                    (digit = 0)
+                )
+                (style
+                    (alpha = 0.5)
+                )
+            )
+        )
+    )
+
+    (hblock
+        (name = 'number')
+        (controller $Repeat renderer="renderer"
+            (bind count "text.length")
+            (exprs
+                (bind name "'digit_' + $index")
+                (scope
+                    (bind digit "text[$index]")
+                    (showGlow = true)
+                )
+            )
+        )
+    )
+)
+
+(def layout NyDigit()
+    (scope
+        (var digit:number = 0)
+        (var showGlow:bool = false)
+    )
+
+    (image
+        (name = 'digit')
+        (bind source "R.images.gui.maps.icons.new_year.craftMachine.digits['digit_' + digit]()" )
+    )
+
+    (image
+        (name = 'glow')
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (vcenter = 1px)
+            (blendMode = 'add')
+        )
+        (source = "R.images.gui.maps.icons.new_year.craftMachine.digit_glow()")
+    )
+
+    (controller $Animation
+        (bindcall stop
+            (bind enabled "!showGlow")
+        )
+        (bindcall playSeq
+            "[
+                {duration:randFloat(0.06, 0.07), to:{alpha:0.9}},
+                {duration:randFloat(0.03, 0.04), to:{alpha:1}}
+            ]"
+            repeatCount=-1
+            (bind enabled "showGlow")
+        )
+    )
+)

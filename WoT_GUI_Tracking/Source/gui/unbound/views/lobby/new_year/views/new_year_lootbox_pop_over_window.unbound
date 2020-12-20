@@ -1,0 +1,131 @@
+(def constant NY_POP_OVER_CONTENT_PADDING 15px)
+
+(def layout NewYearLootBoxPopOverWindow() entrance=true
+    (name = 'NewYearLootBoxPopOverWindow')
+    (macro PopOverWindowModel)
+    (scope
+        (var content:object = null)
+    )
+
+    (element HitArea)
+    (hitArea = "$target.hitElement")
+    
+    (block
+        (name = 'content')
+        (style
+            (paddingLeft = "NY_POP_OVER_CONTENT_PADDING")
+            (paddingTop = "NY_POP_OVER_CONTENT_PADDING")
+            (paddingBottom = "NY_POP_OVER_CONTENT_PADDING")
+            (paddingRight = "NY_POP_OVER_CONTENT_PADDING")
+            (filters
+                (dropShadow
+                    (blurX = 6)
+                    (blurY = 6)
+                    (strength = 1.5)
+                    (distance = -4)
+                    (color = 0x081323)
+                    (quality = 2)
+                    (angle = 0)
+                )
+            )
+        )
+
+        (image
+            (name = 'bg')
+            (class AbsPositionFullSizeStyle)
+            (style
+                (scale9grid = "Rect(2, 2, 485, 130)")
+            )
+            (source = "R.images.gui.maps.icons.new_year.main_view.lootbox_pop_over.background()")
+        )
+
+        (image
+            (name = 'particles')
+            (style
+                (position = "absolute")
+                (blendMode = 'add')
+                (width = 100%)
+                (height = 100%)
+            )
+            (source = "R.images.gui.maps.icons.new_year.main_view.lootbox_pop_over.particles()")
+        )
+
+        (mouseEnabled = false)
+
+        # Close btn
+        (block
+            (name = 'closeBtnBlock')
+            (style
+                (width = 100%)
+            )
+            (element CloseBtnSlim
+                (style
+                    (position = "absolute")
+                    (right = -10px)
+                    (top = -10px)
+                )
+                (bind visible "isCloseBtnVisible")
+                (scope
+                    (dispatch onClosed args="{}" on='evBtnUpEvent')
+                )
+            )
+        )
+
+        # Place PopOver content here
+        (view_holder
+            (name = 'viewHolderContent')
+            (bind content "content" init=false)
+        )
+    )
+
+    # Adjust PopOver and arrow positions according to flow type
+    (controller $AdjustPopOverPosition
+        (arrows up='NewYearLootboxPopOverBtnUp' down='NewYearLootboxPopOverBtnDown' left='NewYearLootboxPopOverBtnLeft' right='NewYearLootboxPopOverBtnRight')
+        (bindcall bounds x="boundX" y="boundY" width="boundWidth" height="boundHeight" init=false)
+        (bind direction "directionType")
+        (arrowDepthOffset = 25)
+        (arrowHalfWidth = 30)
+        (minSideOffset = 20)
+    )
+
+    # PopOver fade out animation on show
+    (controller $Animation
+        (bindcall play duration=0.1 delay=0.1 to={alpha:1} from={alpha:0} init=true)
+    )
+)
+
+(def macro NewYearLootboxPopOverArrowBtn(source:expression, pivotX:number, pivotY:number)
+    (name = 'arrowBtn')
+    (style
+        (position = "absolute")
+        (pivotX = "pivotX")
+        (pivotY = "pivotY")
+    )
+    (image
+        (source = "source")
+    )
+    (mouseEnabled = false)
+    (mouseChildren = false)
+)
+
+(def layout NewYearLootboxPopOverBtnUp()
+    (macro NewYearLootboxPopOverArrowBtn "R.images.gui.maps.icons.new_year.main_view.pop_over.arrow_top()" 50% 20px)
+)
+
+(def layout NewYearLootboxPopOverBtnDown()
+    (style
+        (bottom = 0)
+    )
+    (macro NewYearLootboxPopOverArrowBtn "R.images.gui.maps.icons.new_year.main_view.pop_over.arrow_bottom()" 50% 15px)
+)
+
+(def layout NewYearLootboxPopOverBtnLeft()
+    (macro NewYearLootboxPopOverArrowBtn "R.images.gui.maps.icons.new_year.main_view.pop_over.arrow_left()" 22px 50%)
+)
+
+(def layout NewYearLootboxPopOverBtnRight()
+    (style
+        (right = 0)
+    )
+    (macro NewYearLootboxPopOverArrowBtn "R.images.gui.maps.icons.new_year.main_view.pop_over.arrow_right()" 14px 50%)
+)

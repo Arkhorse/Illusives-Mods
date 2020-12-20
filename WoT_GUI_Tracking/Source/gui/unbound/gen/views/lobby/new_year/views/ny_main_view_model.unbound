@@ -1,0 +1,10 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NyMainViewModel()
+    (scope
+        (event onClose)
+
+        (var currentViewResId:number = 0)
+        (var nextViewResId:number = 0)
+    )
+)

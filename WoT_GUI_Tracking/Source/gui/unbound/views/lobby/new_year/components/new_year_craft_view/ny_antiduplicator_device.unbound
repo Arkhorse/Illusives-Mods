@@ -1,0 +1,361 @@
+(def layout NyAntiduplicatorDevice(name:str='')
+    (name = "name")
+    (macro NyCraftAntiduplicatorModel)
+
+    (scope
+        (event evHidingUsingFillerStart)
+        (event onButtonStateChanged)
+        (var isButtonOver:bool = false)
+        (bind isButtonOver "$event.state == 'over' || $event.state == 'overSelected'" init=false
+            (event "onButtonStateChanged")
+        )
+
+        (event onAnimationFillerStart)
+        (event onAnimationFillerComplete)
+
+        (var animationInProgress:bool = false)
+        (bind animationInProgress true init=false
+            (event "onAnimationFillerStart")
+        )
+        (bind animationInProgress false init=false
+            (event "onAnimationFillerComplete")
+        )
+
+        (var craftState:number = -1)
+        (var isCrafting:bool = false)
+    )
+
+    (style
+        (width = 240px)
+        (height = 280px)
+        (align = "center")
+        (paddingTop = 5px)
+    )
+
+    (tf
+        (name = 'title')
+        (class AntiduplicatorTitleStyle)
+        (text = "R.strings.ny.craftView.antiduplicator.title()")
+    )
+
+    (element NyAntidublicatorScreen
+        (name = 'screen')
+        (style
+            (marginLeft= -1px)
+            (marginTop = 28px)
+        )
+        (scope
+            (bind state "fillerState")
+            (bind craftState "craftState")
+            (bind enabled "enabled")
+            (bind tumblerTurnOn "tumblerTurnOn")
+            (bind countFillers "countFillers")
+            (bind isCrafting "isCrafting")
+        )
+    )
+
+    (block
+        (name = 'controls')
+        (style
+            (zindex = "ZIndex.BACKGROUND")
+        )
+
+        (hblock
+            (name = 'tumblerBlock')
+            (style
+                (align = "middle")
+                (position = "absolute")
+                (left = -88px)
+                (top = 21px)
+            )
+
+            (button
+                (name = 'tumbler')
+                (style
+                    (width = 47px)
+                    (height = 100px)
+                    (backgroundColor = 0x01ff0000)
+                )
+                
+                (toggle = true)
+                (mouseChildren = false)
+                (toggleIndicator source="null"
+                    scale9grid="null" 
+                    offsets=null
+                )
+                (toggleIcon
+                    sourceToggleOn="R.images.gui.maps.icons.new_year.craftMachine.tumbler.on()"
+                    sourceToggleOff="R.images.gui.maps.icons.new_year.craftMachine.tumbler.off()"
+                    scale9grid=null
+                    offsets=null
+                )
+                
+                (bind selected "tumblerTurnOn")
+                (bind mouseEnabled "enabled && !animationInProgress && !isCrafting") 
+                (bind buttonMode "enabled && !animationInProgress && !isCrafting") 
+
+                (dispatch onTumblerToggleChanged on='selectedChanged')
+                (dispatch onHidingUsingFillerStart
+                    (event "evHidingUsingFillerStart")
+                )
+
+                (dispatch onButtonStateChanged on='stateChanged')
+                (bind class "isButtonOver ? 'NYTumblerOverStyle': 'OffFilterStyle'" )
+
+                (content
+                    (style
+                        (width = 47px)
+                        (height = 100%)
+                        (hcenter = 0px)
+                        (backgroundColor = 0x00ff0000)
+                    )
+                )
+            )
+
+            (block
+                (name = 'labelsBlock')
+                (style
+                    (gap = 20px)
+                    (marginLeft = 4px)
+                )
+
+                (tf
+                    (name = 'onLabel')
+                    (class AntiduplicatorTitleStyle)
+                    (style
+                        (marginTop = -5px)
+                    )
+                    (text = "R.strings.ny.craftView.antiduplicator.switch.on()")
+                    (mouseEnabled = false)
+                )
+
+                (element NyMegaBulb
+                    (name = 'bulbOn')
+                    (style
+                        (marginLeft = 1px)
+                        (marginRight = 8px)
+                        (marginTop = -12px)
+                        (zindex = "ZIndex.BACKGROUND")
+                    )
+                    (scope
+                        (bind isStartAnimation "enabled && tumblerTurnOn")
+                        (bind state "enabled && tumblerTurnOn && !isCrafting ? NyMegaBulbStates.RED : NyMegaBulbStates.OFF")
+                    )
+
+                    (mc 'NYConfigButtonFlashMc'
+                        (name = 'selectedAnim')
+                        (style
+                            (position = "absolute")
+                            (top = 50%)
+                            (left = 50%)
+                        )
+                        (bindcall gotoAndPlay 1
+                            (bind enabled "enabled && tumblerTurnOn")
+                        )
+                        (mouseChildren = false)
+                        (macro EmptyHitAreaMacro)
+                        (bind visible "enabled && tumblerTurnOn")
+                    )
+                )
+
+                (tf
+                    (name = 'offLabel')
+                    (class AntiduplicatorTitleStyle)
+                    (text = "R.strings.ny.craftView.antiduplicator.switch.off()")
+                )
+            )
+        )
+
+        (block
+            (name = 'count')
+            (style
+                (position = "absolute")
+                (width = 120px)
+                (height = 56px)
+                (align = "center|middle")
+                (left = 0px)
+                (top = 8px)
+            )
+
+            (tf
+                (name = 'title')
+                (class AntiduplicatorTitleStyle)
+                (style
+                    (textAlign = "center")
+                    (width = 120px)
+                    (multiline = true)
+                    (autoSize = true)
+                    (wordWrap = true)
+                )
+                (text = "R.strings.ny.craftView.antiduplicator.fillersLeft()")
+            )
+        )
+
+        (block
+            (name = 'countContainer')
+            (style
+                (position = "absolute")
+                (width = 40px)
+                (height = 32px)
+                (left = 40px)
+                (top = 73px)
+            )
+            (element NyBitmapDigits renderer='NyDigit'
+                (name = 'value')
+                (style
+                    (width = 100%)
+                    (height = 100%)
+                )   
+                (scope
+                    (maxDigits = 2)
+                    (bind text "countFillers")
+                )
+
+                (bind visible "enabled")
+            )
+        )
+    )
+)
+
+(def layout NyAntidublicatorScreen()
+    (macro NewYearCraftStates)
+    (scope
+        (var state:number = -1)
+        (var craftState:number = -1)
+        (var enabled:bool = false)
+        (var tumblerTurnOn:bool = false)
+        (var countFillers:number = 0)
+        (var isCrafting: bool = false)
+
+        (event onAnimationFillerStart)
+        (event onAnimationFillerComplete)
+        (event onUsingFillerComplete)
+        (event onStartSmoke)
+        (event evHidingUsingFillerStart)
+
+        (const EMPTY:number = 0)
+        (const INSERTED:number = 1)
+    )
+
+    (style
+        (width = 193px)
+        (height = 85px)
+    )
+
+    (mc 'NYFillerStatesMc'
+        (name = 'NYFillerStatesMc')
+        (style
+            (position = "absolute")
+            (top = 39px)
+            (left = 96px)
+        )
+
+        (mouseChildren = false)
+        (mouseEnabled = false)
+
+        (.chargeOn
+            (.lifeCharge
+                (.life1
+                    (bindcall gotoAndPlay "craftState == CRAFT_REGULAR_WITH_FILLER ? 'active': 'idle'")
+                )
+            )
+        )
+
+        (bindcall gotoAndPlay 'onHide'
+            (bind enabled "state == EMPTY && craftState != CRAFT_REGULAR_WITH_FILLER && countFillers > 0"
+                (enabled = "!isCrafting")
+            )
+            (enabled = "tumblerTurnOn")
+        )
+
+        (bindcall gotoAndPlay 'onRise'
+            (bind enabled "state == INSERTED && craftState != CRAFT_REGULAR_WITH_FILLER")
+        )
+
+        (bindcall gotoAndPlay 'spent'
+            (bind enabled "craftState == CRAFT_REGULAR_WITH_FILLER")
+        )
+
+        (dispatch onAnimationFillerStart on='animationStart' dir=1)
+        (dispatch onAnimationFillerComplete on='animationComplete' dir=1)
+        (dispatch onUsingFillerComplete on='usingFillerComplete' dir=1)
+        (dispatch onStartSmoke on='startSmoke' dir=1)
+
+        (bind visible "(enabled || tumblerTurnOn) && (enabled || !tumblerTurnOn)")
+
+        (dispatch evHidingUsingFillerStart on='hidingUsingFillerStart' dir=1
+            (enabled = "tumblerTurnOn")
+        )
+
+        (exec "playSound(R.sounds.hangar_newyear_antidupl_charges_hide())" on='hidingUsingFillerStart')
+    )
+
+    (image
+        (name = 'screen')
+        (style
+            (position = "absolute")
+            (alpha = 0.2)
+            (top = -3px)
+            (left = -1px)
+            (blendMode = 'screen')
+        )
+        (source = "R.images.gui.maps.icons.new_year.craftMachine.charge.screen()")
+        (bind visible "!enabled && !tumblerTurnOn && countFillers == 0")
+    )
+
+    (image
+        (name = 'disabled')
+        (style
+            (position = "absolute")
+            (alpha = 0.2)
+            (top = 5px)
+            (left = 17px)
+            (blendMode = 'screen')
+        )
+        (source = "R.images.gui.maps.icons.new_year.craftMachine.charge.disabled()")
+        (bind visible "!enabled && tumblerTurnOn && countFillers > 0")
+    )
+
+    (exec "playSound(R.sounds.hangar_newyear_antidupl_on_charges_available())"
+        (bind enabled "tumblerTurnOn && countFillers > 0")
+    )
+
+    (exec "playSound(R.sounds.hangar_newyear_antidupl_on_charges_unavailable())"
+        (bind enabled "tumblerTurnOn && countFillers == 0")
+    )
+
+    (exec "playSound(R.sounds.hangar_newyear_antidupl_off())"
+        (bind enabled "!tumblerTurnOn")
+    )
+
+    (exec "playSound(R.sounds.hangar_newyear_antidupl_charges_hide())"
+        (bind enabled "state == EMPTY")
+    )
+
+    (exec "playSound(R.sounds.hangar_newyear_antidupl_charges_emerge())"
+        (enabled="state == INSERTED && craftState != CRAFT_REGULAR_WITH_FILLER")
+        (event "onAnimationFillerComplete")
+    )
+
+    (macro EmptyHitAreaMacro)
+)
+
+(def css AntiduplicatorTitleStyle()
+    (fontFamily = $FieldFont)
+    (fontSize = 14)
+    (textColor = 0x8C8C7E)
+)
+
+(def css NYTumblerOverStyle()
+    (filters
+        (colorMatrix
+            (matrix = [
+                    1.18, 0, 0, 0, 0.3699,
+                    0, 1.18, 0, 0, 0.3699,
+                    0, 0, 1.18, 0, 0.3699,
+                    0, 0, 0, 1, 0
+                ]
+            )
+        )
+    )
+)

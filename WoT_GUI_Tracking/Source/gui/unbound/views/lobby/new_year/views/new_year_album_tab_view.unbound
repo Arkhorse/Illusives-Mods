@@ -1,0 +1,52 @@
+(def element NewYearAlbumTabView() layout=true hideBeforeResolve=true entrance=true
+    (macro NewYearAlbumModel)
+    (macro ExtendedComponentEvents)
+
+    (scope
+        (const CUSTOM_BREAKPOINT_WIDTH_DOWN : number = 1124)
+        (const CUSTOM_BREAKPOINT_WIDTH_UP : number = 1480)
+        (var isSmall:bool = "viewSize.width <= BASE_WIDTH_1366 || viewSize.height <= BASE_HEIGHT_768"
+            (event "viewResized")
+        )
+        (var isBackLabelHided:bool = "viewSize.width < CUSTOM_BREAKPOINT_WIDTH_DOWN || (viewSize.width > BASE_WIDTH_1366 && viewSize.width < CUSTOM_BREAKPOINT_WIDTH_UP)"
+            (event "viewResized")
+        )
+        (var backBtnHover:str = "isSmall ? null : R.atlases.components.button_back_shine_flipped()")
+        (var backBtnOffset:array = "isSmall ? [] : [auto, auto, -10px, auto, auto, 0px]")
+    )
+
+    (style
+        (macro ViewResizeBindedSize)
+    )
+
+    (dispatch onBackBtnClick on='escPressed' 
+        (enabled = "backViewName !=''")
+    )
+
+    (view_holder
+        (style
+            (position = "absolute")
+            (width = 100%)
+            (height = 100%)
+            
+        )
+        (name = "R.dynamic_ids.newYearAlbumView()")
+    )
+
+    (text_button 'backBtn'
+        (macro ButtonBackStyle)
+        (bindcall hover source="backBtnHover" scale9grid=null blend='add' offsets="backBtnOffset" wath=true init=true)
+        (style
+            (position = "absolute")
+            (left = 23px)
+            (bind top "isSmall ? 19px : 43px")
+        )
+        (bind visible "backViewName !=''")
+        (bind label "isBackLabelHided ? '' : R.strings.ny.backButton.label()")
+        (bind labelAdditional "isBackLabelHided ? '' : backViewName")
+
+        (dispatch onBackBtnClick on='clicked'
+            (enabled = "backViewName !=''")
+        )
+    )
+)

@@ -1,0 +1,174 @@
+(def layout NewYearSettingLevels(typeName:str, pageName:str)
+    (macro ExtendedComponentEvents)
+    (scope
+        (var settingBack:str = "R.images.gui.maps.icons.new_year.album[pageName].AccorionViewBg_S()")
+        (var defaultSettingIconBack:str = "R.images.gui.maps.icons.new_year.album[pageName][typeName].AccorionTabBg_S()")
+        (var currentType:str = '')
+        (var currentRank:number = 0)
+        (var isMega:bool = false)
+        (var isSelected:bool = false)
+        (var settingBackHeight:number = 0)
+        (bind isSelected "currentType == typeName")
+        (var hideBack:number = 0)
+        (var isRomanNumbersAllowed:bool = true)
+
+        (controller $Animation
+            (bindcall play duration=0.3 to={hideBack:1, settingBackHeight:183}
+                (bind enabled "isSelected && currentType != 'Mega'")
+                (event "evBtnLeftClickEvent")
+            )
+            (bindcall play duration=0.3 to={settingBackHeight:0, hideBack:0}
+                (bind enabled "!isSelected")
+                (event "evBtnLeftClickEvent")
+            )
+        )
+    )
+
+    (image
+        (bind source "defaultSettingIconBack")
+    )
+    (block
+        (style
+            (position = "absolute")
+            (right = -3px)
+            (top = -12px)
+            (bind alpha "!isSelected? 0.7 : 1")
+        )
+        (image
+            (bind source "R.images.gui.maps.icons.new_year.album[pageName][typeName][isSelected ? 'active_icon': 'small_icon']()")
+            (controller $Animation
+                (bindcall play duration=0.1 to={alpha:1}
+                    (bind enabled "!isSelected")
+                    (event "evBtnOverEvent")
+                )
+                (bindcall play duration=0.1 to={alpha:0.8}
+                    (bind enabled "!isSelected")
+                    (event "evBtnOutEvent")
+                )
+            )
+        )
+        (buttonMode = true)
+        (controller $ToolTip
+            (delay = "0.4")
+            (bindcall args 
+                header="R.strings.ny.settings[typeName].resId"
+                body="TextFormat(R.strings.ny.album.settingToolTip(), {settingName:R.strings.ny.settingsWithCollection[typeName]()})"
+                init=true
+            )
+            (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+            (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+        )
+    )
+    (dispatch onPreChangeTypeName args="{typeName:typeName}" on='click' dir=1
+        (enabled = "typeName != currentType && $event.buttonIdx == MOUSE.LEFT")
+    )
+    
+    (block
+        (name = 'settingBack')
+        (style
+            (bind height "settingBackHeight")
+        )    
+        (image
+            (style
+                (position = "absolute")
+                (marginTop = -5px)
+            )
+            (bind source "settingBack")
+        )
+        (bind visible "hideBack")
+    )
+    (block
+        (name = 'NewYearTiers')
+        (style
+            (position = "absolute")
+            (top = 54px)
+        )
+        (controller $Repeat renderer = 'NewYearTier'
+            (args "pageName")
+            (exprs
+                (style
+                    (gap = 15px)
+                )
+                (scope
+                    (bind rank "currentRank")
+                    (bind indx "$index")
+                    (bind isRomanNumbersAllowed "isRomanNumbersAllowed")
+                )
+                (dispatch onPreChangeRank args="{rank:$index + 1}" on='click' dir=1
+                    (enabled = "$index + 1 != currentRank && $event.buttonIdx == MOUSE.LEFT")
+                )
+            )
+            (count = 5)
+        )
+    )
+    
+    (block
+        (name = 'tabBarMask')
+        (style
+            (position = "absolute")
+            (width = 50px)
+            (bind height "settingBackHeight + 58")
+            (top = -5px)
+            (backgroundColor = 0x66ff0000)
+        )
+    )
+    (mask = "$target.tabBarMask")
+)
+
+(def layout NewYearTier(_pageName:str = "NY_ALBUM_18")
+    (macro ExtendedComponentEvents)
+    (scope
+        (var rank:number = 3)
+        (var indx:number = 0)
+        (var isRomanNumbersAllowed:bool = true)
+    )
+    (style
+        (gap = 10px)
+    )
+    (image
+        (style
+            (position = "absolute")
+            (blendMode = 'add')
+            (alpha = 0)
+        )
+        (source = "R.images.gui.maps.icons.new_year.album[_pageName].back_tier()")
+        (controller $Animation
+            (bindcall play id='overId' duration=0.2 to={alpha:1} 
+                (event "evBtnOverEvent")
+            )
+            (bindcall play duration=0.2 to={alpha:0} 
+                (event "evBtnOutEvent")
+            )
+            (bindcall stop id='overId'
+                (event "evBtnOutEvent")
+            )
+        )
+    )
+
+    (image
+        (style
+            (blendMode = 'add')
+            (bind alpha "rank == indx + 1 ? 0.6 : 0")
+        )
+        (source = "R.images.gui.maps.icons.new_year.album[_pageName].back_tier()")
+    )
+    (image
+        (style
+            (position = "absolute")
+            (left = 10px)
+            (top = 12px)
+        )
+        (bind source "R.images.gui.maps.icons.new_year.album[_pageName]['tier_' + (indx + 1) + (isRomanNumbersAllowed ? '' : '_alt')]()")
+    )
+    (controller $ToolTip
+        (delay = "0.4")
+        (bindcall args 
+            header="TextFormat(R.strings.ny.album.tierToolTip.level(), {tier:R.strings.ny.album.tierToolTip['level' + (indx + 1)]()})" 
+            body="R.strings.ny.album.tierToolTip.body.resId" 
+            init=true
+        )
+        (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+    )
+    (buttonMode = true)
+)

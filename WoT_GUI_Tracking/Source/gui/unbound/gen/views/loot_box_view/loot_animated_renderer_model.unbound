@@ -1,0 +1,13 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro LootAnimatedRendererModel()
+    (macro LootDefRendererModel)
+    (scope
+        (var animationType:number = 0)
+        (var animation:str = '')
+        (var animationSound:str = '')
+
+        (const SWF_ANIMATION:number = 0)
+        (const MC_ANIMATION:number = 1)
+    )
+)

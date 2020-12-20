@@ -1,0 +1,17 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro ValuePrice()
+    (scope
+        (var value:str = '0')
+        (var type:str = 'custom')
+        (var icon:str = '')
+        (var notEnough:bool = false)
+
+        (const CUSTOM:str = 'custom')
+        (const CREDITS:str = 'credits')
+        (const GOLD:str = 'gold')
+        (const EXP:str = 'exp')
+        (const FREE_XP:str = 'freeXP')
+        (const CRYSTAL:str = 'crystal')
+    )
+)

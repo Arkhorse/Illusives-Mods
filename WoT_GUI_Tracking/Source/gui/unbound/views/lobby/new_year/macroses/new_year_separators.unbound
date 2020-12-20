@@ -1,0 +1,34 @@
+(def layout NewYearPopoverSeparatorTop()
+    (name = 'separatorTop')
+    (mouseEnabled = false)
+    (style
+        (position = "absolute")
+        (hcenter = 0px)
+    )
+    (image
+        (style
+            (marginTop = -2px)
+            (marginBottom = -20px)
+        )
+        (source = "R.images.gui.maps.icons.new_year.shadowSeparatorTop()")
+    )
+    (macro EmptyHitAreaMacro)
+)
+
+(def layout NewYearPopoverSeparatorBottom()
+    (name = 'separatorBottom')
+    (mouseEnabled = false)
+    (style
+        (position = "absolute")
+        (hcenter = 0px)
+        (bottom = 0px)
+    )
+    (image
+        (style
+            (marginTop = -20px)
+            (marginBottom = -2px)
+        )
+        (source = "R.images.gui.maps.icons.new_year.shadowSeparatorBottom()")
+    )
+    (macro EmptyHitAreaMacro)
+)

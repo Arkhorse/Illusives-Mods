@@ -1,0 +1,15 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro NyTalismanConsts()
+    (scope
+        (const TALISMAN_DISABLED:str = 'disabled')
+        (const TALISMAN_SELECT_FIRST:str = 'selectFirst')
+        (const TALISMAN_SELECT_NEW:str = 'selectNew')
+        (const TALISMAN_GIFT_WAIT:str = 'giftWait')
+        (const TALISMAN_GIFT_READY:str = 'giftReady')
+        (const TALISMAN_FINISHED:str = 'finished')
+        (const TAB_TOY_TYPE:number = 1)
+        (const TAB_MASCOT_TYPE:number = 2)
+        (const TAB_CELEBRITY_TYPE:number = 3)
+    )
+)

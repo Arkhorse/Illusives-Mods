@@ -1,0 +1,277 @@
+(def layout CrewBooksBuyDialog() entrance=true
+    (macro CrewBooksBuyDialogModel)
+    (scope
+        (var fadeInAlpha:number = 0)
+        (var fadeOutAlpha:number = 1)
+
+        (event onAnimCompleteEvent)
+
+        (controller $Animation
+            (bindcall play
+                to="{fadeOutAlpha:0}"
+                duration=0.2
+                (bind enabled "buyComplete")
+            )
+            (bindcall play
+                to="{fadeInAlpha:1}"
+                delay=0.3
+                duration=1.5
+                (bind enabled "buyComplete")
+            )
+        )
+    )
+
+    (style
+        (bind width "viewSize.width"
+            (event "viewResized")
+        )
+        (bind height "viewSize.height"
+            (event "viewResized")
+        )
+        (backgroundColor = 0x20131210)
+        (align = "middle|center")
+    )
+
+    (dispatch onClosed on='escPressed')
+    (text_button 'closeBtn' 
+        (macro ButtonCloseStyle)
+        (style
+            (position = "absolute")
+            (top = 70px)
+            (right = 31px)
+        )
+        (label = "R.strings.menu.viewHeader.closeBtn.label()")
+        (dispatch onClosed on='clicked')
+    )
+     # Currency block
+    (view_holder
+        (name = "R.dynamic_ids.crew_books_buy_dialog.balance_content()")
+        (style
+            (position = "absolute")
+            (right = 0px)
+        )
+    )
+    (block
+        (style
+            (pivotX = 50%)
+            (pivotY = 50%)
+            (align = "center|middle")
+            (marginTop = 80px)
+        )
+        (block
+            (name = 'bookGlow')
+            (style
+                (position = absolute)
+                (vcenter = -50px)
+                (hcenter = 0px)
+                (alpha = 0)
+                (blendMode = 'add')
+            )
+            (image
+                (source = "R.images.gui.maps.icons.crewBooks.lightSmall_add()")
+            )
+            (controller $Animation
+                (bindcall play
+                    to="{alpha:0.8}"
+                    duration=1 
+                    (event "onAnimCompleteEvent")
+                )
+            )
+        )
+        (block
+            (name = 'bookIcon')
+            (style
+                (position = absolute)
+                (hcenter = 0)
+                (top = -160px)
+            )
+            (image
+                (bind source "bookIcon") 
+            )
+            (controller $Animation
+                (bindcall play
+                    to="{top:0}"
+                    duration=0.45
+                    easing="Easing.cubic_in"
+                    callbacks="{onComplete:onAnimCompleteEvent}"
+                    (bind enabled "buyComplete")
+                )
+                (bindcall play
+                    to="{right:0}"
+                    duration=0.1 
+                    (event "onAnimCompleteEvent")
+                )
+            )
+        )
+        (tf
+            (name = 'title')
+            (class GrandTitleTextStyle)
+            (style
+                (marginTop = 35px)
+                (textAlign = "center")
+                (bind alpha "fadeOutAlpha")
+                
+            )
+            (bind text "dialogTitle")
+        )
+        (block
+            (style
+                (width = 100%)
+                (marginTop = 12px)
+            )
+            (tf
+                (name = 'description')
+                (style  
+                    (bind alpha "fadeOutAlpha")
+                    (width = 100%)
+                )
+                (bind htmlText "htmlTextStyle(
+                        formatString(bookDescription, bookDescriptionFmtArgs, true), 
+                        'MainBigTextStyle',
+                        'center'
+                    )" 
+                    init=false
+                    (enabled="bookDescriptionFmtArgs.length > 0 && bookDescription != ''")
+                )
+            )
+        )
+        (tf
+            (name = 'buyCompleteTitle')
+            (class HeroTitleTextStyle)
+            (style
+                (width = 100%)
+                (position = absolute)
+                (vcenter = -220px)
+                (textAlign = "center")
+                (bind alpha "fadeInAlpha")
+            )
+            (text = "R.strings.crew_books.buy.success.title()")
+        )
+        (tf
+            (name = 'buyCompleteDesc')
+            (class HighTitleTextStyle)
+            (style
+                (width = 100%)
+                (position = absolute)
+                (vcenter = -162px)
+                (textAlign = "center")
+                (bind alpha "fadeInAlpha")
+            )
+            (bind text "bookTitle")
+        )
+        (block
+            (name = 'divider')
+            (style
+                (width = 720px)
+                (backgroundColor = 0x19FFFFFF)
+                (height = 1px)
+                (marginTop = 24px)
+                (bind alpha "fadeOutAlpha")
+            )
+        )
+
+        (hblock
+            (name = 'priceBlock')
+            (style
+                (bind alpha "fadeOutAlpha")
+                (width = 100%)
+                (height = 33px)
+                (marginTop = 24px)
+            )
+            (element NumericStepper 'numericStepper' width = 96px height = 33px
+                (style
+                    (position = absolute)
+                    (hcenter = -67)
+                )
+                (bind visible "fadeOutAlpha")
+                (scope
+                    (value = 1)
+                    (minimum = 1)
+                    (dispatch onStepperChanged args="{count: $target.value}" init=false on='evValueChanged')
+                    (bind isEnabled "!buyComplete")
+                )
+            )
+            (group name = 'bookPrice'
+                (style
+                    (position = absolute)
+                    (left = 350px)
+                    (hcenter = 0)
+                )
+                (renderer = 'ActionPriceTotalCost')
+                (container
+                    (style
+                        (flow = "Flow.HORIZONTAL")
+                    ) 
+                )
+            )
+        )
+        (hblock
+            (name = 'buttonBlock')
+            (style
+                (bind alpha "fadeOutAlpha")
+                (width = 100%)
+                (align = "center|middle")
+                (marginTop = 34px)
+                (hgap = 18px)
+            )
+            (button
+                (macro ButtonStylePrimary "BUTTON_SIZE_MEDIUM")
+                (bind enabled "isBuyEnable && !buyComplete")
+                (style
+                    (minWidth = 164px)
+                    (minHeight = 33px)
+                    (marginRight = -7px)
+                )
+                (scope
+                    (dispatch onBuyBtnClick on='clicked')
+                )
+                
+                (bindcall setFocus (bind enabled "isBuyEnable"))
+                (label = "R.strings.dialogs.buyConfirmation.submit()")
+                (controller $ToolTip
+                    (args 
+                        body="R.strings.tooltips.crewBooks.screen.invalidPrice.title()" 
+                    )
+                    (bind content " R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+                    (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+                    (bind enabled "!isBuyEnable && !buyComplete")
+                )
+            )
+            (exec "playSound(R.sounds.yes1())"
+                (event "onBuyBtnClick")
+            )
+            (button
+                (macro ButtonStyleSecondary "BUTTON_SIZE_MEDIUM") 
+                (bind enabled "!buyComplete")
+                (style 
+                    (minWidth = 163px)
+                    (minHeight = 33px)
+                )
+                (scope
+                    (dispatch onClosed on='clicked')
+                )
+                (label = "R.strings.dialogs.buyConfirmation.cancel()")
+            )
+        )
+        (controller $Animation
+            (play delay=0.2 duration=0.3 from={alpha:0, scaleX:1.1, scaleY:1.1} to={alpha:1,  scaleX:1, scaleY:1} easing="Easing.cubic_out")
+        )
+    )
+
+    (button
+        (macro ButtonStylePrimary "BUTTON_SIZE_MEDIUM")
+        (bind visible "buyComplete")
+        (style 
+            (minWidth = 164px)
+            (minHeight = 33px)
+            (bind alpha "fadeInAlpha")
+            (position = absolute)
+            (vcenter = 125px)
+            (hcenter = 0px)
+        )
+        (scope
+            (dispatch onClosed on='clicked')
+        )
+        (label = "R.strings.crew_books.screen.button.confirm.label()")
+    )
+)

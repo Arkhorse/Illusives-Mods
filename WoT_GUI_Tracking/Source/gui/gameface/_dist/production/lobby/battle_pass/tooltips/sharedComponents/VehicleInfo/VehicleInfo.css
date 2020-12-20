@@ -1,0 +1,86 @@
+.VehicleInfo_base_a9 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    color: #c9c9b6;
+    font-size: 15rem;
+}
+
+.VehicleInfo_vehicleName_02 {
+    color: #ffa759;
+    font-size: 15rem;
+    text-shadow: 0 0 12rem rgba(255,48,0, .7);
+}
+
+.VehicleInfo_vehicleType_2e {
+    width: 27rem;
+    height: 17rem;
+    margin: 4rem -2rem 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.VehicleInfo_vehicleType__elite_0e {
+        width: 24rem;
+        height: 24rem;
+        margin: 2rem 0 0 -2rem;
+    }
+
+.VehicleInfo_levels_c7 {
+    height: 16rem;
+    margin-top: 3rem;
+    background: center center / contain no-repeat;
+}
+
+.VehicleInfo_levels__1_03 {
+        width: 9rem;
+        background-image: url('R.images.gui.maps.icons.levels.tank_level_1');
+    }
+
+.VehicleInfo_levels__2_e8 {
+        width: 12rem;
+        background-image: url('R.images.gui.maps.icons.levels.tank_level_2');
+    }
+
+.VehicleInfo_levels__3_ab {
+        width: 15rem;
+        background-image: url('R.images.gui.maps.icons.levels.tank_level_3');
+    }
+
+.VehicleInfo_levels__4_d1 {
+        width: 16rem;
+        background-image: url('R.images.gui.maps.icons.levels.tank_level_4');
+    }
+
+.VehicleInfo_levels__5_53 {
+        width: 14rem;
+        background-image: url('R.images.gui.maps.icons.levels.tank_level_5');
+    }
+
+.VehicleInfo_levels__6_db {
+        width: 17rem;
+        background-image: url('R.images.gui.maps.icons.levels.tank_level_6');
+    }
+
+.VehicleInfo_levels__7_22 {
+        width: 20rem;
+        background-image: url('R.images.gui.maps.icons.levels.tank_level_7');
+    }
+
+.VehicleInfo_levels__8_5f {
+        width: 23rem;
+        background-image: url('R.images.gui.maps.icons.levels.tank_level_8');
+    }
+
+.VehicleInfo_levels__9_ad {
+        width: 17rem;
+        background-image: url('R.images.gui.maps.icons.levels.tank_level_9');
+    }
+
+.VehicleInfo_levels__10_9b {
+        width: 15rem;
+        background-image: url('R.images.gui.maps.icons.levels.tank_level_10');
+    }
+

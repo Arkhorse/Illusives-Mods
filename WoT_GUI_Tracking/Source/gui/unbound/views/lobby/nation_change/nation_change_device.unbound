@@ -1,0 +1,57 @@
+(def layout NationChangeDevice()
+    (macro NationChangeDeviceModel)
+    (macro NationChangeTooltips)
+    (style
+        (width = 45px)
+        (height = 45px)
+    )
+
+    (block
+        (style
+            (position="absolute")
+            (width = 100%) 
+            (height = 100%)
+            (align = "center|middle")
+        )
+        (image
+            (style
+                (width = 100%)
+                (height = 100%)
+            )
+            (bind source "image")
+        )
+    )
+    (block 
+        (bind visible "isImproved")
+        (style
+            (position = "absolute")
+            (marginTop = -10px)
+            (marginLeft = -10px)
+        )
+        (image
+            (source = "R.images.gui.maps.icons.artefact.equipmentPlus_overlay()") 
+        )
+    )
+    (block
+        (bind visible "isTrophyBasic")
+        (style
+            (position = "absolute")
+            (marginTop = -9px)
+            (marginLeft = -9px)
+        )
+        (image
+            (source = "R.images.gui.maps.icons.artefact.equipmentTrophyBasic_overlay()")
+        )
+    )
+    (block
+        (bind visible "isTrophyUpgraded")
+        (style
+            (position = "absolute")
+            (marginTop = -9px)
+            (marginLeft = -9px)
+        )
+        (image
+            (source = "R.images.gui.maps.icons.artefact.equipmentTrophyUpgraded_overlay()")
+        )
+    )
+)

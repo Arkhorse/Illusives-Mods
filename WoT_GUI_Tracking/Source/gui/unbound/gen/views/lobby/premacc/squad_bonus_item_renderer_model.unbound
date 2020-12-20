@@ -1,0 +1,10 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro SquadBonusItemRendererModel()
+    (scope
+        (var level:str = '')
+        (var defeatValue:number = 0)
+        (var winValue:number = 0)
+        (var isCurrentLevel:bool = false)
+    )
+)

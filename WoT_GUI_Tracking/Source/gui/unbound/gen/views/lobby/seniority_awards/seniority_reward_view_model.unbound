@@ -1,0 +1,15 @@
+# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
+# Please, don't edit this file manually.
+(def macro SeniorityRewardViewModel()
+    (scope
+        (event onCloseAction)
+        (event onDestroyEvent)
+        (event onOpenBtnClick)
+
+        (var hardReset:bool = false)
+        (var fadeOut:bool = false)
+        (var countAwards:number = 0)
+        (var buyBtnOpenCount:number = 0)
+        (var autoOpenDate:str = '')
+    )
+)

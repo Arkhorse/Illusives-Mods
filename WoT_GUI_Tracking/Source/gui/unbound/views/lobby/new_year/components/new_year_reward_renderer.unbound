@@ -1,0 +1,313 @@
+(def layout NewYearRewardRenderer()
+    (macro NewYearRewardsRendererModel)
+    (macro AdaptiveSize)
+    (macro NyLevelsScopeConsts)
+    (macro NyTankwomanRewardRendererSubtype)
+
+    (scope
+        (const ANIM_DURATION:number = 0.2)
+        (const BG_TOP_OFFSET:number = -11)
+
+        (event onIndexChanged)
+        (event onLoadedEvent)
+        (var index:number = "$event.newValue" init=false
+            (event "onIndexChanged")
+        )
+
+        (var isSmall:bool = "viewSize.width < BASE_WIDTH_1920"
+            (event "viewResized")
+        )
+
+        # Presets for components
+        (const WIDTH_PRESETS:dict = {
+                'big': 130px,
+                'normal': 106px,
+                'small': 84px
+            }
+        )
+
+        (const WIDTH_DOTS_PRESETS:dict = {
+                'big': 70px,
+                'normal': 46px,
+                'small': 24px
+            }
+        )
+
+        (const GAP_PRESETS:dict = {
+                'big': 5px,
+                'normal': 5px,
+                'small': 5px
+            }
+        )
+    )
+
+    (style
+        (bind width "WIDTH_PRESETS[widthSize]")
+    )
+
+    (block
+        (name = 'headerBlock')
+        (style
+            (width = 100%)
+            (align = "center")
+            (bind marginBottom "isSmall ? 7px : 13px")
+            (zindex = "ZIndex.FOREGROUND")
+        )
+
+        (block
+            (name = 'level')
+            (image
+                (name = 'levelIcon')
+                (bind source "R.images.gui.maps.icons.new_year.levels_rewards.circles['circle_' + (isSmall ? 'small' : 'big')]()")
+            )
+            (image
+                (name = 'levelHighlight')
+                (class AbsPositionCenterStyle)
+                (source = "R.images.gui.maps.icons.new_year.levels_rewards.circles.highlight()")
+                (bind visible "isMaxReachedLevel")
+            )
+            (image
+                (name = 'particles')
+                (class AbsPositionCenterStyle)
+                (source = "R.images.gui.maps.icons.new_year.levels_rewards.particles()")
+                (bind visible "isMaxReachedLevel")
+            )
+            (tf
+                (name = 'levelTF')
+                (style
+                    (position = absolute)
+                    (hcenter = 0px)
+                    (vcenter = 0px)
+                    (fontFamily = $FieldFont)
+                    (textColor = 0xfefefe)
+                    (bind fontSize "isSmall ? 18 : 26")
+                    (bind alpha "isLevelAchieved ? 1 : 0.5")
+                )
+                (bind text "levelText")
+            )
+
+            (macro EmptyHitAreaMacro)
+        )
+
+        (block
+            (style
+                (position = "absolute")
+                (bind right "-WIDTH_DOTS_PRESETS[widthSize] / 2")
+                (bind width "WIDTH_DOTS_PRESETS[widthSize]")
+                (vcenter = 0px)
+                (align = "center|middle")
+            )
+
+            (image
+                (style
+                    (vcenter = 0px)
+                    (hcenter = 0px)
+                    (position = "absolute")
+                )
+                (name = 'lineImg')
+                (source = "R.images.gui.maps.icons.new_year.levels_rewards.line()")
+            )
+            
+            (block
+                (name = 'lockBlock')
+                (style
+                    (vcenter = -1px)
+                    (hcenter = 0px)
+                    (position = "absolute")
+                )
+                (image
+                    (name = 'lockImg')
+                    (source = "R.images.gui.maps.icons.new_year.levels_rewards.lock()")
+                )
+                (controller $ToolTip
+                    (delay = "0.4")
+                    (args
+                        header="R.strings.ny.levelsRewards.lock.tooltip.header.resId"
+                        body="R.strings.ny.levelsRewards.lock.tooltip.description.resId"
+                    )
+                    (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+                    (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+                )
+
+                (bind visible "!isLevelAchieved || isMaxReachedLevel")
+            )
+
+            (bind visible "!isLastLevel")
+        )
+    )
+
+    (block
+        (name = 'contentBlock')
+        (style
+            (width = 100%)
+            (bind height "REWARDS_HEIGHT_PRESETS[heightSize]")
+            (bind gap "GAP_PRESETS[heightSize]")
+            (align = "center")
+        )
+
+        (image
+            (name = 'background')
+            (class AbsPositionFullSizeStyle)
+            (style
+                (top = "BG_TOP_OFFSET")
+                (blendMode = 'screen')
+            )
+            (dispatch evReadyToShow on='complete' dir=1)
+            (bind source "R.images.gui.maps.icons.new_year.levels_rewards.levels['bg' + (isCurrentLevel ? '_active' : '')]()")
+        )
+
+        (block
+            (block
+                (controller $Instance renderer='NewYearTankRewardRenderer'
+                    (exprs
+                        (name = 'tankRewardRenderer')
+                        (bind visible "showTank")
+                        (scope
+                            (bind idx "idx")
+                            (bind isAchieved "isLevelAchieved")
+                            (bind level "tankLevel")
+                            (bind isRomanNumbersAllowed "isRomanNumbersAllowed")
+                        )
+                    )
+                    (bind enabled "showTank")
+                )
+            )
+
+            (controller $Instance layout=true
+                (exprs
+                    (element NewYearTankwomanRewardRenderer
+                        (name = 'talismanRewardRenderer')
+                        (scope
+                            (bind idx "idx")
+                            (bind isAchieved "isLevelAchieved")
+                            (subType = "SUBTYPE_TALISMAN")
+                            (bind isLocked "isTalismanLocked")
+                            (bind isApplied "isTalismanApplied")
+                            (bind rewardImg "talismanImg")
+                        )
+                    )
+                )
+                (bind enabled "showTalisman")
+            )
+            (controller $Instance layout=true
+                (exprs
+                    (element NewYearTankwomanRewardRenderer
+                        (name = 'tankwomanRewardRenderer')
+                        (scope
+                            (bind idx "idx")
+                            (bind isAchieved "isLevelAchieved")
+                            (subType = "SUBTYPE_TANKWOMAN")
+                            (bind isLocked "isTankwomanLocked")
+                            (bind isApplied "isTankwomanApplied")
+                        )
+                    )
+                )
+                (bind enabled "showTankwoman")
+            )
+        )
+
+        (group name='rewardsGroup'
+            (style
+                (width = 100%)
+                (bind alpha "isLevelAchieved ? 1 : 0.4")
+            )
+            (renderer = 'NewYearSecondaryReward')
+            (container
+                (style
+                    (flow = "Flow.VERTICAL")
+                    (width = 100%)
+                    (align = "center")
+                    (bind gap "GAP_PRESETS[heightSize]")
+                )
+            )
+        )
+
+        (controller $Instance renderer='NewYearAlbumRenderer'
+            (exprs
+                (style
+                    (marginTop = 14px)
+                )
+                (scope
+                    (bind eventsEnabled "isLevelAchieved")
+                )
+                (bind visible "isNewYearEnabled")
+                (bind buttonMode "isLevelAchieved")
+            )
+            (bind enabled "isLastLevel")
+        )
+
+        (block
+            (style
+                (position = "absolute")
+                (width = 100%)
+                (vcenter = "BG_TOP_OFFSET")
+            )
+            (macro EmptyHitAreaMacro)
+
+            (image
+                (name = 'disalbed')
+                (style
+                    (position = "absolute")
+                    (width = 100%)
+                    (vcenter = 0)
+                )
+                (bind visible "!isLevelAchieved")
+                (source = "R.images.gui.maps.icons.new_year.levels_rewards.levels.disabled()")
+            )
+        )
+    )
+)
+
+(def layout NewYearAlbumRenderer()
+    (name = 'newYearAlbumRenderer')
+    (macro ExtendedComponentEvents)
+    (style
+        (width = 100%)
+        (align = "center")
+        (bind alpha "eventsEnabled ? 1 : 0.4")
+    )
+
+    (mouseChildren = false)
+
+    (image
+        (name = 'bgLightImage')
+        (class AbsPositionCenterStyle)
+
+        (bind source "R.images.gui.maps.icons.new_year.levels_rewards.award_light_small()"
+            (event "evBtnOverEvent")
+        )
+        (bind source "null"
+            (event "evBtnOutEvent")
+        )
+    )
+    (image
+        (name = 'rewardImage')
+        (source = "R.images.gui.maps.icons.new_year.levels_rewards.album_small()")
+    )
+
+    (dispatch onAlbumClick dir=1 on='click'
+        (event "evBtnLeftClickEvent")
+    )
+
+    (element NewYearHitArea
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (vcenter = 0px)
+
+            (width = 48px)
+            (height = 38px)
+        )
+    )
+    (hitArea = "$target.hit")
+
+    (controller $ToolTip
+        (delay = "0.4")
+        (args
+            header="R.strings.ny.levelsRewards.album.tooltip.header()"
+            body="R.strings.ny.levelsRewards.album.tooltip.body()"
+        )
+        (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
+        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+    )
+)

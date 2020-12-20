@@ -1,0 +1,188 @@
+(def layout NewYearCraftDecorationSlot()
+    (macro NewYearCraftDecorationSlotModel)
+    (macro ExtendedComponentEvents)
+    
+    (scope
+        (event evShowAnimationComplete)
+        (event evShowAnimationStart)
+        (event evHideAnimationComplete)
+
+        (const DURATION_SHOW_ALPHA:number = 0.1)
+        (const DURATION_COLOR_TRANSFORM:number = 0.5)
+		(const DURATION_WIDTH:number = 0.5)
+
+        (var animationAlpha:number = 0)
+        (var animationWidth:number = 0)
+        (var animationOffset:number = 0)
+        (var animationScale:number = 1)
+
+        # show
+        (controller $Animation
+            (playSeq "[
+                    {duration:DURATION_SHOW_ALPHA, to:{animationAlpha:1, animationOffset:100, animationScale:1.2}, easing:Easing.cubic_out, callbacks:{onStart:evShowAnimationStart}},
+                    {duration:DURATION_COLOR_TRANSFORM, to:{animationOffset:0, animationWidth:80,  animationScale:1}, easing:Easing.cubic_out}
+                ]"
+                callbacks="{onComplete:evShowAnimationComplete}" init=false
+            )
+        )
+        (exec "playSound(R.sounds.hangar_newyear_make_toys_down())"
+            (event "evShowAnimationStart")
+        )
+        # hide
+        (controller $Animation
+            (bindcall play duration="DURATION_SHOW_ALPHA + DURATION_COLOR_TRANSFORM" 
+                      to="{animationAlpha:0, animationWidth:0}"
+                      easing="Easing.cubic_out"
+                      callbacks="{onComplete:evHideAnimationComplete}"
+                    (bind enabled "hideSlot")
+            )
+        )
+
+        # Animation shine
+        (var shineAlpha:number = 0)
+        (var shineSize:number = 200)
+        (controller $Animation
+            (playSeq "[
+                    {duration:DURATION_SHOW_ALPHA, to:{shineAlpha:1, shineSize:300}, easing:Easing.cubic_out},
+                    {duration:DURATION_WIDTH, to:{shineAlpha:0, shineSize:200}, easing:Easing.cubic_out}
+                ]"
+            )
+        )
+    )
+
+    (style
+        (height = 80px)
+        (bind marginRight "hideSlot ? 0 : 10")
+        (bind width "animationWidth")
+    )
+
+    (block
+        (name = 'content')
+        (style
+            (position = "absolute")
+            (pivotX = 50%)
+            (pivotY = 50%)
+            (hcenter = 0px)
+            (vcenter = 0px)
+            (bind alpha "animationAlpha")
+            (bind scaleX "animationScale")
+            (bind scaleY "animationScale")
+        )
+
+        (bind colorTransform "{redOffset:animationOffset, greenOffset:animationOffset, blueOffset:animationOffset}")
+
+        (block
+            (style
+                (position = "absolute")
+                (left = 1px)
+                (top = 1px)
+                (bottom = 1px)
+                (right = 1px)
+                (backgroundColor = 0x44000000)
+            )
+        )
+        (image
+            (name = 'background')
+            (source = "R.images.gui.maps.icons.new_year.slots.c_80x80.slot_bg()")
+        )
+
+        (image
+            (name = 'backgroundStroke')
+            (style
+                (position = "absolute")
+                (alpha = 0.2)
+            )
+            (source = "R.images.gui.maps.icons.new_year.slots.c_80x80.slot_bg_craft()")
+        )
+
+        (image
+            (name = 'decorationImage')
+            (style
+                (position = "absolute")
+            )
+            (bind source "decorationImage")
+        )
+
+        (image
+            (name = 'rankImage')
+            (style
+                (position = "absolute")
+            )
+            (bind source "rankImage")
+        )
+
+        (block
+            (style
+                (position = "absolute")
+                (left = 5px)
+                (bottom = 6px)
+                (filters
+                    (dropShadow
+                        (angle = 0)
+                        (blurX = 6)
+                        (blurY = 6)
+                        (strength = 1.5)
+                        (distance = 4)
+                        (color = 0x000000)
+                        (quality = 2)
+                    )
+                )
+            )
+            (image
+                (name = 'iconType')
+                (bind source "R.images.gui.maps.icons.new_year.album.page20.toyTooltipSetting[type]()" init=false)
+            )
+        )
+    )
+
+    # shine animation
+    (block
+        (name = 'shine')
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (vcenter = 0px)
+        )
+        (mouseEnabled = false)
+        (mouseChildren = false)
+        (image
+            (style
+                (bind width "shineSize")
+                (bind height "shineSize")
+                (bind alpha "shineAlpha")
+                (blendMode = 'add')
+            )
+            (source = "R.images.gui.maps.icons.new_year.craftMachine.shine()")
+        )
+    )
+
+    (mc 'NYSlotParticlesMc'
+        (name = 'particles')
+        (style
+            (position = "absolute")
+            (top = 50%)
+            (left = 50%)
+        )
+        (mouseEnabled = false)
+        (mouseChildren = false)
+    )
+
+    (controller $ToolTip
+        (delay = "0.4")
+        (args toyID = "toyID")
+        (content = "R.views.lobby.new_year.tooltips.ny_regular_toy_tooltip_content.NyRegularToyTooltipContent.resId")
+        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+        (bind enabled "!isMega")
+    )
+
+    (controller $ToolTip
+        (delay = "0.4")
+        (args toyID="toyID")
+        (content = "R.views.lobby.new_year.tooltips.ny_mega_toy_tooltip_content.NyMegaToyTooltipContent.resId")
+        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
+        (bind enabled "isMega")
+    )
+
+    (element HitArea)
+    (hitArea = "$target.hitElement")
+)

@@ -1,0 +1,74 @@
+(def element NewYearAlbum19View() layout=true hideBeforeResolve=true entrance=true
+    (macro NewYearAlbumCoverViewModel)
+    (macro ExtendedComponentEvents)
+    (macro AlbumScaleAndPosition)
+
+    (block
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (vcenter = 0px)
+        )
+        (bind class "isNeedToShowCover ? 'NewYearBlurStyle' : 'OffFilterStyle'")
+
+        (macro AlbumBackAndVingette "R.images.gui.maps.icons.new_year.album.back2019()" "R.images.gui.maps.icons.new_year.album.vig()")
+
+        (element NewYearAlbumSettingBtn 'nyFiveSetting' 0 -10
+            (scope
+                (pictureHover = "R.images.gui.maps.icons.new_year.album.five()")
+            )
+            (style
+                (position = "absolute")
+                (vcenter = -102px)
+                (hcenter = -84px)
+            )
+            (dispatch onPictureBtnClick args="{typeName: typesList[0]}" on='click'
+                (enabled="$event.buttonIdx == 0")
+            )
+        )
+
+        (element NewYearAlbumSettingBtn 'nySevenSetting' 20 0
+            (scope
+                (pictureHover = "R.images.gui.maps.icons.new_year.album.seven()")
+            )
+            (style
+                (position = "absolute")
+                (vcenter = -151px)
+                (hcenter = 216px)
+            )
+            (dispatch onPictureBtnClick args="{typeName: typesList[1]}" on='click'
+                (enabled="$event.buttonIdx == 0")
+            )
+        )
+
+        (element NewYearAlbumSettingBtn 'nySixSetting' 10 10
+            (scope
+                (pictureHover = "R.images.gui.maps.icons.new_year.album.six()")
+            )
+            (style
+                (position = "absolute")
+                (vcenter = 142px)
+                (hcenter = -99px)
+            )
+            (dispatch onPictureBtnClick args="{typeName: typesList[2]}" on='click'
+                (enabled="$event.buttonIdx == 0")
+            )
+        )
+
+        (element NewYearAlbumSettingBtn 'nyEightSetting' 5 0
+            (scope
+                (pictureHover = "R.images.gui.maps.icons.new_year.album.eight()")
+            )
+            (style
+                (position = "absolute")
+                (vcenter = 100px)
+                (hcenter = 238px)
+            )
+            (dispatch onPictureBtnClick args="{typeName: typesList[3]}" on='click'
+                (enabled="$event.buttonIdx == 0")
+            )
+        )
+    )
+
+    (macro AlbumNotAvailable)
+)

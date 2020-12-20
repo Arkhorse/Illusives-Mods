@@ -1,0 +1,81 @@
+(def layout NYTankExtraSlotTooltipContent() entrance=true
+    (macro NyTankExtraSlotTooltipModel)
+
+    (style
+        (width = 370px)
+        (marginLeft = -20px)
+        (marginTop = -40px)
+        (marginRight = -15px)
+        (marginBottom = -10px)
+
+        (align = "center")
+    )
+
+    (image
+        (name = 'slotIcon')
+        (style
+            (position = "absolute")
+            (zindex = 2)
+            (hcenter = 0px)
+            (top = 20px)
+        )
+        (source = "R.images.gui.maps.icons.new_year.tank_slot.glow()")
+    )
+    (tf
+        (name = 'headerTF')
+        (style
+            (marginTop = 40px)
+            (width = 323px)
+        )
+        (class HighTitleTextStyle)
+        (text = "R.strings.ny.tankExtraSlot.tooltip.header()")
+    )
+    (image
+        (name = 'slotIcon')
+        (style
+            (zindex = 3)
+            (marginTop = 20px)
+            (marginRight = 2px)
+        )
+        (source = "R.images.gui.maps.icons.new_year.tank_slot.slots.big.slot_extra()")
+    )
+    (block
+        (style
+            (marginTop = 20px)
+            (marginBottom = 20px)
+            (marginLeft = 24px)
+            (marginRight = 24px)
+            (zindex = 1)
+        )
+
+        (tf
+            (class NYTankBonusTextTooltipStyle)
+            (style
+                (maxWidth = 320px)
+            )
+            (text = "R.strings.ny.tankExtraSlot.tooltip.description()")
+        )
+
+        (block
+            (style
+                (marginTop = 20px)
+            )
+            (element TankSlotBonus 'battleExpBonusBlock' "R.images.gui.maps.icons.new_year.tank_slot.icon_battle_exp_small()" "R.strings.ny.tankExtraSlot.tooltip.xpFactor()"
+                (scope
+                    (bind value "xpFactor") 
+                )
+            )
+            (element TankSlotBonus 'battleFreeExpBonusBlock' "R.images.gui.maps.icons.new_year.tank_slot.icon_free_exp_small()" "R.strings.ny.tankExtraSlot.tooltip.freeXPFactor()"
+                (scope
+                    (bind value "freeXPFactor") 
+                )
+            )
+            (element TankSlotBonus 'battleTankmanExpBonusBlock' "R.images.gui.maps.icons.new_year.tank_slot.icon_crew_exp_small()" "R.strings.ny.tankExtraSlot.tooltip.tankmenXPFactor()"
+                (scope
+                    (bind value "tankmenXPFactor") 
+                )
+            )
+        )
+    )
+)
+

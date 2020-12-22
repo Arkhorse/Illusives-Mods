@@ -4,9 +4,10 @@
 
 @set "pack=7z a -tzip -mx0"
 @set "Copi=xcopy /v /y /s"
+@set "gameVersion=1.11.0.0"
+@set "deployDate=2020-12-22"
 
-RD /s /q %nation%
-MD %nation%\res\gui\maps\vehicles\decals\insignia\
+if exist %nation% (RD /s /q %nation%) else (MD %nation%\res\gui\maps\vehicles\decals\insignia\)
 
 %Copi% "%filesLocation%\gun_%nation%_*.dds" "%nation%\res\gui\maps\vehicles\decals\insignia\"
 
@@ -59,5 +60,17 @@ cd %nation%
 %pack% %FileName% "res"
 cd ..
 %Copi% %nation%\%FileName%
+
+if exist "%nation%\mods" (RD /s /q "%nation%\mods") else (MD "%nation%\mods\versiondir\")
+
+xcopy /q /v %nation%\%FileName% "%nation%\mods\versiondir\"
+cd %nation%
+if exist *.zip (del /q *.zip)
+
+if %nation%==wh (set "nation=KV-2R") else (set "nation=%~1")
+if %nation%==chuck (set "nation=ChuckNorris") else (set "nation=%~1")
+
+if exist "mods\versiondir\%FileName%" (%pack% "TankSkinsMisc_MarkOfExcellence_Nations_%nation%_%gameVersion%_%deployDate%.zip" "mods") else (echo "Failed"&&pause)
+
 endlocal
-quit
+exit

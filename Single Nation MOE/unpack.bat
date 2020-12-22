@@ -2,12 +2,6 @@
 
 @Echo off
 @set "filesLocation=Source\GUI\gui\maps\vehicles\decals\insignia"
-@set "FileName=TheIllusion.SingleNationMOE.%nation%.wotmod"
-@set "Deploydate=2020-12-17"
-@set "WorkingDIR=Source"
-@set "pack=7z a -tzip -mx0"
-rem %Copi%
-@set "Copi=xcopy /v /y /s"
 
 start cmd /k CALL Builder.bat china, TheIllusion.SingleNationMOE.China.wotmod, Source\GUI\gui\maps\vehicles\decals\insignia
 start cmd /k CALL Builder.bat chuck, TheIllusion.SingleNationMOE.Chuck.wotmod, Source\GUI\gui\maps\vehicles\decals\insignia\custom

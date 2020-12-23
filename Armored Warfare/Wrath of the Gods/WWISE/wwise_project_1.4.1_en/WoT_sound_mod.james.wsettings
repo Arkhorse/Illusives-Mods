@@ -3,6 +3,13 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{3BF775F1-6E17-4979-83AE-636F868958C3}">
 			<PropertyList>
+				<Property Name="Event Action List\{2CF34E44-E937-4234-B906-F7B4F1F8C0F7}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{366FE8CB-4DDF-4F35-B9EB-DFE85C23AA1F}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{5517230D-232A-46DE-B0E5-7305DEC6743A}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{81539F8A-C35A-444A-B57D-9F168A43EBD7}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{A0F658F0-7858-41DE-BAD2-EA7E3FE1E322}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{CA4EF258-E160-4FA3-A3DC-1EE47006DCBA}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{E272C7DB-B434-4436-BB52-30EB80931222}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
@@ -34,7 +41,7 @@
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
 				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{2388DAEA-9775-46C6-A2ED-C5222A397756}"/>
-				<Property Name="ProjectExplorer\FirstVisible_3_1" Type="string" Value="{A69BF0FC-D84A-487C-ABDD-56F71CB2A126}"/>
+				<Property Name="ProjectExplorer\FirstVisible_3_1" Type="string" Value="{B8424251-D94B-4427-BF66-A85D3ACABAE7}"/>
 				<Property Name="ProjectExplorer\FirstVisible_4_1" Type="string" Value="{CB6175F1-6080-4A23-92EF-0807E304D0C1}"/>
 				<Property Name="ProjectExplorer\FirstVisible_6_1" Type="string" Value="{C98E673F-A24C-48A8-960F-10565FFE70A0}"/>
 				<Property Name="ProjectExplorer\FirstVisible_8_1" Type="string" Value="{41093F77-829F-4D88-8601-E8B25F3D4781}"/>
@@ -52,7 +59,7 @@
 				<Property Name="ProjectExplorer\x64_Expanded_20_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value=""/>
+				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="PQIR6DCJZkKCgztG6vzwaw=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value=""/>

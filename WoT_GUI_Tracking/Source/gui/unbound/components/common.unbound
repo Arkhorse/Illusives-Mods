@@ -17,13 +17,6 @@
 	)
 )
 
-(def element Horizontal1pxWidthLine(color:number, lineAlpha:number = 1, lineSize:number = 1)
-    (.graphics
-        (beginFill "color" "lineAlpha")
-        (drawRect 0 0 1 "lineSize")
-    )
-)
-
 (def macro EmptyHitAreaMacro()
     # using HitArea from common.unbound
     (element HitArea
@@ -189,16 +182,13 @@
 
 (def layout VignetteBlock()
     (name = 'vignette')
-    (scope
-        (var vigAlpha:number = 0.8)
-    )
     (style
         (position = "absolute")
         (width = 100%)
         (height = 100%)
         (backgroundImage = "R.images.gui.maps.icons.library.vignette()")
         (backgroundSize = "fill")
-        (bind alpha "vigAlpha")
+        (alpha = 0.8)
     )
     (macro EmptyHitAreaMacro)
 )
@@ -233,16 +223,6 @@
     )
     (hitArea = "$target.hit")
 
-)
-
-(def layout TooltipSeparator()
-    (mouseChildren = false)
-    (mouseEnabled = false)
-    (image
-        (name = 'separator')
-        (source = "R.images.gui.maps.icons.library.separator()")
-    )
-    (macro EmptyHitAreaMacro)
 )
 
 (def macro BgAspectRatioHelper(evBgLoadedTrigger:expression, deltaW:number=0, deltaH:number=0)
@@ -319,13 +299,8 @@
         (style
             (position = "absolute")
             (backgroundColor = 0xFF000000)
-            (bind width "viewSize.width + 1"
-                (event "viewResized")
-            )
-            (bind height "viewSize.height"
-                (event "viewResized")
-            )
-            (left = -1)
+            (bind width "viewSize.width")
+            (bind height "viewSize.height")
             (alpha = 0)
         )
         (tabEnabled = true)

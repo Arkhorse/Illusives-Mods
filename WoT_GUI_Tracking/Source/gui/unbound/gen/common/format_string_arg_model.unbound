@@ -11,8 +11,5 @@
         (const ALIGN_LEFT:str = 'left')
         (const ALIGN_RIGHT:str = 'right')
         (const ALIGN_CENTER:str = 'center')
-        (const ALIGN_TOP:str = 'top')
-        (const ALIGN_MIDDLE:str = 'middle')
-        (const ALIGN_BOTTOM:str = 'bottom')
     )
 )

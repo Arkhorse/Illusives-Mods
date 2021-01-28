@@ -361,6 +361,26 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     flex-wrap: wrap;
 }
 
+.RentInfo_base_21 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 5rem;
+}
+
+.RentInfo_icon_b0 {
+    width: 19rem;
+    height: 19rem;
+    background: url('R.images.gui.maps.icons.library.rent_ico_big') no-repeat 50% 50% / contain;
+    transform: translate(-3rem, 2rem);
+}
+
+.RentInfo_text_65 {
+    color: #fd9;
+    font-size: 14rem;
+    text-shadow: 0 0 12rem #f00;
+}
+
 .Alert_base_c1 {
     display: flex;
     flex-direction: row;
@@ -426,6 +446,20 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 .InfoBlock_inventoryInHangar_b5 {
     margin-left: -6rem;
 }
+
+.ShortenedText_base_fe {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: 18rem;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity ease .2s;
+}
+
+    .ShortenedText_base__shown_af {
+        opacity: 1;
+    }
 
 .TaggedText_paragraph_7f {
     display: flex;
@@ -637,9 +671,9 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     }
 
 .Gift_titleStatic_aa {
-    flex: 0;
     color: #e9e2bf;
     font-size: 16rem;
+    flex: 0;
     padding-right: 8rem;
     opacity: 1;
     transition: opacity .3s 0s;
@@ -659,9 +693,8 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     font-size: 14rem;
     height: 1rem;
     margin: 8rem 0 -8rem;
-    line-height: 17rem;
+    line-height: 18rem;
     opacity: 0;
-    overflow-y: hidden;
     transition: height .3s 0s, opacity .3s 0s;
 }
 
@@ -779,26 +812,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         opacity: .1;
         transition: opacity .3s .3s;
     }
-
-.RentInfo_base_21 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    margin-top: 5rem;
-}
-
-.RentInfo_icon_b0 {
-    width: 19rem;
-    height: 19rem;
-    background: url('R.images.gui.maps.icons.library.rent_ico_big') no-repeat 50% 50% / contain;
-    transform: translate(-3rem, 2rem);
-}
-
-.RentInfo_text_65 {
-    color: #fd9;
-    font-size: 14rem;
-    text-shadow: 0 0 12rem #f00;
-}
 
 .Gifts_base_3f {
     display: flex;

@@ -1810,64 +1810,6 @@ body {
     transform: translate(-50%);
 }
 
-.ToggleNYStyleSlot_base_dc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 54rem;
-    height: 54rem;
-    position: relative;
-    background: url('R.images.gui.maps.icons.tanksetup.panel.ny_empty_slot') no-repeat center / contain;
-    cursor: pointer;
-}
-
-    .ToggleNYStyleSlot_base__grabbing_a0 {
-        pointer-events: none;
-    }
-.ToggleNYStyleSlot_light_f0 {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transition: opacity .5s;
-}
-.ToggleNYStyleSlot_base_dc:hover .ToggleNYStyleSlot_light_f0 {
-        background-color: #37e2fa;
-        opacity: .15;
-    }
-.ToggleNYStyleSlot_image_7f {
-    background: url('R.images.gui.maps.icons.tanksetup.panel.ny_style_slot') no-repeat center / contain;
-    position: absolute;
-    top: 6rem;
-    right: 3rem;
-    bottom: 5rem;
-    left: 4rem;
-}
-.ToggleNYStyleSlot_base__locked_4d .ToggleNYStyleSlot_image_7f {
-        opacity: .7;
-    }
-.ToggleNYStyleSlot_check_80 {
-    height: 26rem;
-    background: url('R.images.gui.maps.icons.tanksetup.panel.ny_check_slot') no-repeat center / contain;
-    position: absolute;
-    right: 0;
-    bottom: -13rem;
-    left: 0;
-}
-.ToggleNYStyleSlot_base__locked_4d .ToggleNYStyleSlot_check_80 {
-        opacity: .8;
-    }
-.ToggleNYStyleSlot_shadow_88 {
-    background: url('R.images.gui.maps.icons.tanksetup.panel.ny_snippet_disabled_slot')  center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
 .Slots_base_27 {
     display: flex;
     flex-direction: row;

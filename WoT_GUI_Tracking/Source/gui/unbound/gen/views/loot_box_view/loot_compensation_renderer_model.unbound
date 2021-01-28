@@ -9,6 +9,7 @@
         (var iconAfter:str = '')
         (var labelBefore:str = '')
         (var labelAfter:str = '')
+        (var bonusName:str = '')
         (var countBefore:number = 1)
         (var labelAlignAfter:str = 'center')
     )

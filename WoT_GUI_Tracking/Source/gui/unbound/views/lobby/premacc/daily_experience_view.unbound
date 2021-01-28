@@ -17,16 +17,13 @@
     )
 
     (style
-        (macro FullSize)
+        (width = 100%)
+        (height = 100%)
     )
 
     (dispatch onBackBtnClicked on='escPressed')
 
-    (element BackgroundElement
-        (scope
-            (bgSource="R.images.gui.maps.icons.premacc.backgrounds.dashboard()")
-        )
-    )
+    (element PremDashboarBg)
 
     (text_button 'backBtn'
         (style

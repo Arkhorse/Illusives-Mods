@@ -1,9 +1,0 @@
-# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
-# Please, don't edit this file manually.
-(def macro NewYearCraftStates()
-    (scope
-        (const CRAFT_REGULAR:number = 0)
-        (const CRAFT_MEGA:number = 1)
-        (const CRAFT_REGULAR_WITH_FILLER:number = 2)
-    )
-)

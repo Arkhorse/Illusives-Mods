@@ -291,6 +291,7 @@
         <blocked>&lt;img src='img://gui/maps/icons/library/critical_damage/hit_blocked.png'width='36' height='36' vspace='-15' /&gt;&lt;font color="#FFFFFF"&gt;_(#tooltips:showDamageIcon/blocked)&lt;/font&gt;</blocked>
       </settings_show_damage_icon>
       <settings_minimap_circles>
+        <min_spotting_range_title>&lt;font face='$FieldFont' size='14' color="#44a8ae"&gt;%s&lt;/font&gt;</min_spotting_range_title>
         <max_view_range_title>&lt;font face='$FieldFont' size='14' color="#ffffff"&gt;%s&lt;/font&gt;</max_view_range_title>
         <draw_range_title>&lt;font face='$FieldFont' size='14' color="#ffff00"&gt;%s&lt;/font&gt;</draw_range_title>
       </settings_minimap_circles>
@@ -490,6 +491,7 @@
         <STRONGHOLD>_(#invites:invites/text/STRONGHOLD) %(sender)s</STRONGHOLD>
         <EPIC>_(#invites:invites/text/EPIC) %(sender)s</EPIC>
         <BATTLE_ROYALE>_(#invites:invites/text/BATTLE_ROYALE) %(sender)s</BATTLE_ROYALE>
+        <BOB>_(#invites:invites/text/BOB) %(sender)s</BOB>
       </inviteTitle>
       <inviteTitleCreatorName>
         <context>
@@ -751,6 +753,7 @@ _(#invites:invites/text/fort/defence) &lt;font color="#c9c9b6"&gt;%(clanAbbrev)s
         <universalBlueprints>_(#quests:bonusName/blueprints/universal) &lt;font color='#CED9D9'&gt;%(value)s&lt;/font&gt;</universalBlueprints>
         <rankedDailyBattles>&lt;font color='#95907F'&gt;%(value)s&lt;/font&gt;&lt;img src='img://gui/maps/icons/library/rankedDailyBattles.png' width='16' height='16' vspace='-4' /&gt;</rankedDailyBattles>
         <rankedBonusBattles>&lt;font color='#95907F'&gt;%(value)s&lt;/font&gt;&lt;img src='img://gui/maps/icons/library/rankedBonusBattles.png' width='16' height='16' vspace='-4' /&gt;</rankedBonusBattles>
+        <bobTokens>&lt;font color='#95907F'&gt;%(value)s &lt;/font&gt;&lt;img src='img://gui/maps/icons/quests/bonuses/small/bob_points.png' width='16' height='16' vSpace='-10' /&gt;</bobTokens>
       </bonuses>
       <carouselBonuses>
         <credits>&lt;font face='$FieldFont' size='22' color='#CED9D9'&gt;&lt;b&gt;%(value)s &lt;/b&gt;&lt;/font&gt;&lt;img src='img://gui/maps/icons/library/CreditsIcon-1.png' width='16' height='16' /&gt;</credits>
@@ -1100,7 +1103,6 @@ _(#invites:invites/text/fort/defence) &lt;font color="#c9c9b6"&gt;%(clanAbbrev)s
       <counterLabelText>&lt;font face='$FieldFont' size='11' color='#FFF5E2'&gt;%(message)s&lt;/font&gt;</counterLabelText>
       <titleFont>&lt;font face='$TitleFont'&gt;%(message)s&lt;/font&gt;</titleFont>
       <tutorialText>&lt;font face='$FieldFont' size='14' color='#ffdd99'&gt;%(message)s&lt;/font&gt;</tutorialText>
-      <tutorialTextBig>&lt;font face='$FieldFont' size='16' color='#ffdd99'&gt;%(message)s&lt;/font&gt;</tutorialTextBig>
       <alignText>&lt;p align='%(align)s'&gt;%(message)s&lt;/p&gt;</alignText>
       <leadingText>&lt;textformat leading='%(leading)s'&gt;%(message)s&lt;/textformat&gt;</leadingText>
       <bonusLocalText>&lt;font face='$FieldFont' size='20' color='#FEFEEC'&gt;%(message)s&lt;/font&gt;</bonusLocalText>
@@ -1116,13 +1118,6 @@ _(#invites:invites/text/fort/defence) &lt;font color="#c9c9b6"&gt;%(clanAbbrev)s
       <missionStatusUnavailable>&lt;font face='$TitleFont' size='18' color='#ff2717'&gt;%(message)s&lt;/font&gt;</missionStatusUnavailable>
       <missionStatusAvailable>&lt;font face='$TitleFont' size='18' color='#7ab300'&gt;%(message)s&lt;/font&gt;</missionStatusAvailable>
       <failedStatusText>&lt;font face='$FieldFont' size='14' color='#B70000'&gt;%(message)s&lt;/font&gt;</failedStatusText>
-      <vehicleNameNY>&lt;font face='$FieldFont' size='14' color='#B3EAFE'&gt;%(message)s&lt;/font&gt;</vehicleNameNY>
-      <nyVehicleMain>&lt;font face='$FieldFont' size='14' color='#668497'&gt;%(message)s&lt;/font&gt;</nyVehicleMain>
-      <nyVehicleSmallMain>&lt;font face='$FieldFont' size='12' color='#668497'&gt;%(message)s&lt;/font&gt;</nyVehicleSmallMain>
-      <nyVehicleTitle>&lt;font face='$FieldFont' size='16' color='#B3EAFE'&gt;%(message)s&lt;/font&gt;</nyVehicleTitle>
-      <nyVehicleSmallTitle>&lt;font face='$FieldFont' size='12' color='#B3EAFE'&gt;%(message)s&lt;/font&gt;</nyVehicleSmallTitle>
-      <nyNotEnoughShardsDialogCostBlock>&lt;font face='$TitleFont' size='22' color='#ff2717'&gt;%(message)s&lt;/font&gt;</nyNotEnoughShardsDialogCostBlock>
-      <nyNotEnoughShardsDialogLevel>&lt;font face='$TitleFont' size='36' color='#ffdd99'&gt;%(message)s&lt;/font&gt;</nyNotEnoughShardsDialogLevel>
     </textStyle>
     <profileStatistics>
       <marksOfMasteryText>%(marksOfMastery)s&lt;font size='14' color='#939188'&gt;/%(totalVehicles)s&lt;/font&gt;</marksOfMasteryText>
@@ -1288,18 +1283,4 @@ _(#invites:invites/text/fort/defence) &lt;font color="#c9c9b6"&gt;%(clanAbbrev)s
     <testMessage>&lt;font color="#FFFFFF"&gt;_(#event:battleHints/testMessage)&lt;/font&gt;</testMessage>
     <testMessageWithParams>&lt;font color="#FFFFFF"&gt;_(#event:battleHints/testMessageWithParams)&lt;/font&gt;</testMessageWithParams>
   </battleHints>
-  <newYear>
-    <dialogs>
-      <confirmVehDiscount>
-        <context>
-          <discount_tag_open>&lt;font color="#FFF0B6"&gt;</discount_tag_open>
-          <vehicle_tag_open>&lt;font color="#CED9D9"&gt;</vehicle_tag_open>
-          <tag_close>&lt;/font&gt;</tag_close>
-          <veh_type_tag_open>&lt;img src='img://gui/maps/icons/vehicleTypes/</veh_type_tag_open>
-          <veh_type_tag_close>.png' width='18' height='18' vspace='-4' /&gt;</veh_type_tag_close>
-        </context>
-        <text>_(#dialogs:confirmApplyVehicleDiscount/message)</text>
-      </confirmVehDiscount>
-    </dialogs>
-  </newYear>
 </html_templates.xml>

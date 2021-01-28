@@ -93,6 +93,19 @@
         </colors>
       </item>
       <item>
+        <name>squad_message</name>
+        <colors>
+          <color>
+            <name>online</name>
+            <rgb>151 149 137</rgb>
+          </color>
+          <color>
+            <name>offline</name>
+            <rgb>151 149 137</rgb>
+          </color>
+        </colors>
+      </item>
+      <item>
         <name>friend</name>
         <colors>
           <color>
@@ -299,6 +312,15 @@
           <color>
             <name>colorBlind</name>
             <rgb>255 255 0</rgb>
+          </color>
+        </colors>
+      </item>
+      <item>
+        <name>alert</name>
+        <colors>
+          <color>
+            <name>default</name>
+            <rgb>238 112 0</rgb>
           </color>
         </colors>
       </item>
@@ -544,13 +566,12 @@ _(#messenger:battle/toolTips/mutePlayer){/BODY}</value>
     <battleQuestsPremium>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/battleResults/quests/premium): &lt;font color='#D6D7D4'&gt;%(days)s&lt;/font&gt;&lt;/font&gt;</battleQuestsPremium>
     <battleQuestsPremiumPlus>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/battleResults/quests/premium_plus): &lt;font color='#D6D7D4'&gt;%(days)s&lt;/font&gt;&lt;/font&gt;</battleQuestsPremiumPlus>
     <battleQuestsItems>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/battleResults/quests/items): &lt;font color='#D6D7D4'&gt;%(names)s&lt;/font&gt;&lt;/font&gt;</battleQuestsItems>
-    <battleQuestsNYBoxes>&lt;font color='#8C8C7E'&gt;%(text)s&lt;/font&gt;</battleQuestsNYBoxes>
     <completionTokens>&lt;font color='#8C8C7E'&gt;_(#messenger:personalMissions/completionTokenGain): &lt;font color='#D6D7D4'&gt;%(completionToken)s&lt;/font&gt;&lt;/font&gt;</completionTokens>
     <vehiclesAccruedQuestsReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/vehiclesAccrued): &lt;font color='#D6D7D4'&gt;%(vehicles)s&lt;/font&gt;&lt;/font&gt;</vehiclesAccruedQuestsReceived>
     <vehiclesDebitedQuestsReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/vehiclesDebited): &lt;font color='#D6D7D4'&gt;%(vehicles)s&lt;/font&gt;&lt;/font&gt;</vehiclesDebitedQuestsReceived>
     <vehiclesRentedQuestsReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/vehiclesRented): &lt;font color='#8C8C7E'&gt;&lt;b&gt;%(vehicles)s&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;</vehiclesRentedQuestsReceived>
     <compensationForQuestsReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/compensation) %(items)s %(compensation)s&lt;/font&gt;</compensationForQuestsReceived>
-    <goldCompensationQuestsReceived>&lt;br/&gt;_(#messenger:serviceChannelMessages/invoiceReceived/compensation/gold) &lt;font color='#FFC363'&gt;%(amount)s&lt;/font&gt;</goldCompensationQuestsReceived>
+    <goldCompensationQuestsReceived>&lt;br/&gt;_(#messenger:serviceChannelMessages/invoiceReceived/compensation/gold) &lt;font color='#D6D7D4'&gt;%(amount)s&lt;/font&gt;</goldCompensationQuestsReceived>
     <creditsCompensationQuestsReceived>&lt;br/&gt;_(#messenger:serviceChannelMessages/invoiceReceived/compensation/credits) &lt;font color='#D6D7D4'&gt;%(amount)s&lt;/font&gt;</creditsCompensationQuestsReceived>
     <battleResultClubRatingUp>&lt;br/&gt;&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/battleResults/club/rating/up): &lt;font color='#D6D7D4'&gt;%(rating)s&lt;/font&gt;&lt;/font&gt;</battleResultClubRatingUp>
     <battleResultClubRatingDown>&lt;br/&gt;&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/battleResults/club/rating/down): &lt;font color='#D6D7D4'&gt;%(rating)s&lt;/font&gt;&lt;/font&gt;</battleResultClubRatingDown>
@@ -601,8 +622,6 @@ _(#messenger:battle/toolTips/mutePlayer){/BODY}</value>
     <tankmenFreeXpDebitedInvoiceReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/tankmenFreeXpDebited): &lt;font color='#8C8C7E'&gt;&lt;b&gt;%(tankmenFreeXp)s&lt;/b&gt;&lt;/font&gt;%(spec)s&lt;/font&gt;</tankmenFreeXpDebitedInvoiceReceived>
     <awardListAccruedInvoiceReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/freeAwardListsAccrued): &lt;font color='#8C8C7E'&gt;&lt;b&gt;%(count)s&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;</awardListAccruedInvoiceReceived>
     <awardListDebitedInvoiceReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/freeAwardListsDebited): &lt;font color='#8C8C7E'&gt;&lt;b&gt;%(count)s&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;</awardListDebitedInvoiceReceived>
-    <nyToysAccruedInvoiceReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/nyToysAccruedInvoiceReceived)&lt;font color='#8C8C7E'&gt;&lt;b&gt;%(toysList)s&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;</nyToysAccruedInvoiceReceived>
-    <nyToysDebitedInvoiceReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/nyToysDebitedInvoiceReceived)&lt;font color='#8C8C7E'&gt;&lt;b&gt;%(toysList)s&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;</nyToysDebitedInvoiceReceived>
     <intelligenceBlueprintsAccruedInvoiceReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/intelligenceBlueprintsAccrued): &lt;font color='#8C8C7E'&gt;&lt;b&gt;%(amount)s&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;</intelligenceBlueprintsAccruedInvoiceReceived>
     <intelligenceBlueprintsDebitedInvoiceReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/intelligenceBlueprintsDebited): &lt;font color='#8C8C7E'&gt;&lt;b&gt;%(amount)s&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;</intelligenceBlueprintsDebitedInvoiceReceived>
     <vehicleBlueprintsAccruedInvoiceReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/vehicleBlueprintsAccrued): &lt;font color='#8C8C7E'&gt;&lt;b&gt;%(amount)s&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;</vehicleBlueprintsAccruedInvoiceReceived>
@@ -615,10 +634,6 @@ _(#messenger:battle/toolTips/mutePlayer){/BODY}</value>
     <entitlementsDebitedInvoiceReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/entitlementsDebited): &lt;font color='#8C8C7E'&gt;%(entitlements)s&lt;/font&gt;</entitlementsDebitedInvoiceReceived>
     <rankedBonusBattlesAccruedInvoiceReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/rankedBonusBattlesAccrued): &lt;font color='#8C8C7E'&gt;%(bonusBattles)s&lt;/font&gt;</rankedBonusBattlesAccruedInvoiceReceived>
     <rankedBonusBattlesDebitedInvoiceReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/rankedBonusBattlesDebited): &lt;font color='#8C8C7E'&gt;%(bonusBattles)s&lt;/font&gt;</rankedBonusBattlesDebitedInvoiceReceived>
-    <nyFillersAccruedInvoiceReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/nyFillersAccrued)&lt;font color='#8C8C7E'&gt;&lt;b&gt;%(amount)s&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;</nyFillersAccruedInvoiceReceived>
-    <nyFillersDebitedInvoiceReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/nyFillersDebited)&lt;font color='#8C8C7E'&gt;&lt;b&gt;%(amount)s&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;</nyFillersDebitedInvoiceReceived>
-    <nyFragmentsAccruedInvoiceReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/nyFragmentsAccrued)&lt;font color='#8C8C7E'&gt;&lt;b&gt;%(amount)s&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;</nyFragmentsAccruedInvoiceReceived>
-    <nyFragmentsDebitedInvoiceReceived>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/nyFragmentsDebited)&lt;font color='#8C8C7E'&gt;&lt;b&gt;%(amount)s&lt;/b&gt;&lt;/font&gt;&lt;/font&gt;</nyFragmentsDebitedInvoiceReceived>
     <prebattleOpponents>&lt;br/&gt;&lt;font color='#8C8C7E'&gt;&lt;font color='#8C8C7E'&gt;%(first)s&lt;/font&gt; vs. &lt;font color='#8C8C7E'&gt;%(second)s&lt;/font&gt;&lt;/font&gt;</prebattleOpponents>
     <prebattleSubtotal>&lt;br/&gt;&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/prebattle/subtotal): &lt;font color='#8C8C7E'&gt;%(first)d:%(second)d&lt;/font&gt;&lt;/font&gt;</prebattleSubtotal>
     <prebattleTotal>&lt;br/&gt;&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/prebattle/total): &lt;font color='#8C8C7E'&gt;%(result)s (%(first)d:%(second)d)&lt;/font&gt;&lt;/font&gt;</prebattleTotal>
@@ -634,7 +649,6 @@ _(#messenger:battle/toolTips/mutePlayer){/BODY}</value>
     <postBattleSharingLink>&lt;font color="#CBAC77"&gt;_(#messenger:chat/postBattleSharing/label): %(arena)s, %(vehicle)s, %(xp)s&lt;/font&gt;&lt;a href="event:%(linkCode)s"&gt; %(arrowButton)s &lt;/a&gt; &lt;font color="#CBAC77"&gt;</postBattleSharingLink>
     <badgeAchievement>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/badgeAchievement): &lt;font color='#D6D7D4'&gt;%(badges)s&lt;/font&gt;&lt;/font&gt;</badgeAchievement>
     <removedBadgeAchievement>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/removedBadgeAchievement): &lt;font color='#D6D7D4'&gt;%(badges)s&lt;/font&gt;&lt;/font&gt;</removedBadgeAchievement>
-    <tankwoman>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/battleResults/tankwoman): %(count)s&lt;/font&gt;</tankwoman>
     <rankedFinalYearCompensation>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/rankedFinaleAwardsNotification/compensation)&lt;/font&gt;</rankedFinalYearCompensation>
     <rankedFinalYearPoints>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/rankedFinaleAwardsNotification/text)&lt;/font&gt;</rankedFinalYearPoints>
     <battlePassGold>&lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/battlePassReward/buy/gold) &lt;font color='#FFC363'&gt;%(gold)s&lt;/font&gt;&lt;/font&gt;</battlePassGold>
@@ -1074,22 +1088,6 @@ _(#messenger:battle/toolTips/mutePlayer){/BODY}</value>
       </filters>
       <message>&lt;font color='#8C8C7E'&gt;%(text)s&lt;/font&gt;</message>
     </InformationSysMessage>
-    <InformationHeaderSysMessage>
-      <priority>low</priority>
-      <type>	grey	</type>
-      <icon>InformationIcon</icon>
-      <filters>
-        <filter>
-          <name>	glow	</name>
-          <color>EA5200</color>
-        </filter>
-        <filter>
-          <name>dropshadow</name>
-          <color>000000</color>
-        </filter>
-      </filters>
-      <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"&gt;%(header)s&lt;/font&gt;&lt;br/&gt;&lt;font color='#8C8C7E'&gt;%(text)s&lt;/font&gt;</message>
-    </InformationHeaderSysMessage>
     <GameGreetingSysMessage>
       <type>lightGrey</type>
       <icon>MessageIcon</icon>
@@ -1234,6 +1232,12 @@ _(#messenger:battle/toolTips/mutePlayer){/BODY}</value>
       <icon>ClockIcon</icon>
       <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"'&gt;_(#messenger:serviceChannelMessages/sysMsg/titles/rankedBattlesNotSet)&lt;/font&gt;&lt;br/&gt;&lt;font color='#8C8C7E'&gt;%(text)s&lt;/font&gt;</message>
     </RankedBattlesNotSetSysMessage>
+    <BobBattlesAvailableSysMessage>
+      <priority>	high	</priority>
+      <type>yellow</type>
+      <icon>ClockIcon</icon>
+      <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"'&gt;_(#messenger:serviceChannelMessages/sysMsg/titles/bobBattlesAvailable)&lt;/font&gt;&lt;br/&gt;&lt;font color='#8C8C7E'&gt;%(text)s&lt;/font&gt;</message>
+    </BobBattlesAvailableSysMessage>
     <PaymentMethodLinkSysMessage>
       <type>	grey	</type>
       <icon>ConfirmIcon</icon>
@@ -1845,34 +1849,6 @@ _(#messenger:battle/toolTips/mutePlayer){/BODY}</value>
         </button>
       </buttonsLayout>
     </LootBoxesSysMessage>
-    <TalismanFreeSysMessage>
-      <priority>medium</priority>
-      <type>	grey	</type>
-      <icon>InformationIcon</icon>
-      <message>&lt;font color='#8C8C7E'&gt;%(text)s&lt;/font&gt;</message>
-      <buttonsLayout>
-        <button>
-          <type>submit</type>
-          <label>_(#messenger:serviceChannelMessages/newYearTalisman/button)</label>
-          <action>	openFreeTalisman	</action>
-          <width>	170	</width>
-        </button>
-      </buttonsLayout>
-    </TalismanFreeSysMessage>
-    <TalismanGiftSysMessage>
-      <priority>medium</priority>
-      <type>	grey	</type>
-      <icon>InformationIcon</icon>
-      <message>&lt;font color='#8C8C7E'&gt;%(text)s&lt;/font&gt;</message>
-      <buttonsLayout>
-        <button>
-          <type>submit</type>
-          <label>_(#messenger:serviceChannelMessages/newYearTalisman/button)</label>
-          <action>	openGiftTalisman	</action>
-          <width>	170	</width>
-        </button>
-      </buttonsLayout>
-    </TalismanGiftSysMessage>
     <LootBoxesAutoOpenMessage>
       <type>	grey	</type>
       <icon>MessageIcon</icon>
@@ -2002,121 +1978,6 @@ _(#messenger:battle/toolTips/mutePlayer){/BODY}</value>
 &lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/flExchange/quests/points): %(points)s&lt;/font&gt;
 &lt;font color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/flExchange/quests/reward): &lt;font color='#FFC363'&gt;%(gold)s&lt;/font&gt;, &lt;font color='#C9C9B6'&gt;%(crystal)s&lt;/font&gt;&lt;/font&gt;</message>
     </FlExchangeMessage>
-    <LootBoxesSysMessage>
-      <type>	grey	</type>
-      <icon>MessageIcon</icon>
-      <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"&gt;_(#messenger:serviceChannelMessages/lootBoxes/header)&lt;/font&gt;&lt;br/&gt;&lt;font face="$FieldFont" size="14" color='#8C8C7E'&gt;%(text)s&lt;br/&gt;&lt;br/&gt;_(#messenger:serviceChannelMessages/lootBoxes/footer)&lt;/font&gt;</message>
-      <buttonsLayout>
-        <button>
-          <type>submit</type>
-          <label>_(#messenger:serviceChannelMessages/lootBoxes/button)</label>
-          <action>openLootBoxes</action>
-          <width>	120	</width>
-        </button>
-      </buttonsLayout>
-    </LootBoxesSysMessage>
-    <LootBoxesGiftSysMessage>
-      <type>	grey	</type>
-      <icon>MessageIcon</icon>
-      <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"&gt;_(#messenger:serviceChannelMessages/lootBoxesGift/header)&lt;/font&gt;&lt;br/&gt;&lt;font face="$FieldFont" size="14" color='#8C8C7E'&gt;%(text)s&lt;/font&gt;</message>
-      <buttonsLayout>
-        <button>
-          <type>submit</type>
-          <label>_(#messenger:serviceChannelMessages/lootBoxesGift/button)</label>
-          <action>lootBoxesGift</action>
-          <width>	120	</width>
-        </button>
-      </buttonsLayout>
-    </LootBoxesGiftSysMessage>
-    <LootBoxesAutoOpenMessage>
-      <type>	grey	</type>
-      <icon>InformationIcon</icon>
-      <priority>	high	</priority>
-      <groupID>offer</groupID>
-      <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"&gt;_(#messenger:serviceChannelMessages/lootBoxesAutoOpen/header)&lt;/font&gt;&lt;br/&gt;&lt;font face="$FieldFont" size="14" color='#8C8C7E'&gt;_(#messenger:serviceChannelMessages/lootBoxesAutoOpen/text)&lt;/font&gt; &lt;font face="$FieldFont" size="14" color="#E9E2BF"&gt;_(#messenger:serviceChannelMessages/lootBoxesAutoOpen/counter)&lt;/font&gt;</message>
-      <buttonsLayout>
-        <button>
-          <type>submit</type>
-          <label>_(#messenger:serviceChannelMessages/lootBoxesAutoOpen/button)</label>
-          <action>lootBoxesAutoOpen</action>
-          <width>	120	</width>
-        </button>
-      </buttonsLayout>
-    </LootBoxesAutoOpenMessage>
-    <NewYearEventStartedSysMessage>
-      <priority>low</priority>
-      <type>	grey	</type>
-      <icon>InformationIcon</icon>
-      <message>&lt;font color='#8C8C7E'&gt;%(text)s&lt;/font&gt;</message>
-      <buttonsLayout>
-        <button>
-          <type>submit</type>
-          <label>_(#ny:notification/start/button)</label>
-          <action>openRewardsScreen</action>
-          <width>	120	</width>
-        </button>
-      </buttonsLayout>
-    </NewYearEventStartedSysMessage>
-    <newYearCollectionComplete>
-      <type>	grey	</type>
-      <icon>InformationIcon</icon>
-      <priority>	high	</priority>
-      <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"&gt;_(#ny:notification/collectionComplete/header)&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;%(text)s</message>
-    </newYearCollectionComplete>
-    <nyLevelUpRewardsReceived>
-      <type>	grey	</type>
-      <priority>low</priority>
-      <icon>InformationIcon</icon>
-      <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"&gt;_(#ny:notification/levelUp/rewards/header)&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;_(#ny:notification/levelUp/rewards)&lt;br/&gt;%(text)s</message>
-    </nyLevelUpRewardsReceived>
-    <nyCelebrityReward>
-      <type>	grey	</type>
-      <priority>medium</priority>
-      <icon>InformationIcon</icon>
-      <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"&gt;_(#system_messages:newYear/celebrityChallenge/congratulations)&lt;/font&gt;&lt;br/&gt;%(text)s&lt;br/&gt;%(rewards)s</message>
-    </nyCelebrityReward>
-    <nyCelebrityRewardWithButton>
-      <type>	grey	</type>
-      <priority>medium</priority>
-      <icon>InformationIcon</icon>
-      <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"&gt;_(#system_messages:newYear/celebrityChallenge/congratulations)&lt;/font&gt;&lt;br/&gt;%(text)s&lt;br/&gt;%(rewards)s</message>
-      <buttonsLayout>
-        <button>
-          <type>submit</type>
-          <label>_(#ny:notification/celebrityReward/toExtraSlot/button)</label>
-          <action>openNewYearVehiclesView</action>
-          <width>	130	</width>
-        </button>
-      </buttonsLayout>
-      <buttonsAlign>center</buttonsAlign>
-    </nyCelebrityRewardWithButton>
-    <LootBoxRewardsSysMessage>
-      <type>	grey	</type>
-      <priority>low</priority>
-      <icon>InformationIcon</icon>
-      <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"&gt;_(#lootboxes:notification/header)&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;%(text)s</message>
-    </LootBoxRewardsSysMessage>
-    <NewYearVehicleBranchSetVehicleSysMessage>
-      <type>	gray	</type>
-      <icon>InformationIcon</icon>
-      <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/invoice)&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;font color='#8C8C7E'&gt;%(text)s&lt;/font&gt;</message>
-    </NewYearVehicleBranchSetVehicleSysMessage>
-    <NewYearVehicleBranchCreditsSysMessage>
-      <type>yellow</type>
-      <icon>CreditsIcon</icon>
-      <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/invoice)&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;font color='#8C8C7E'&gt;%(text)s&lt;/font&gt;</message>
-    </NewYearVehicleBranchCreditsSysMessage>
-    <NewYearVehicleBranchGoldSysMessage>
-      <type>yellow</type>
-      <icon>	GoldIcon	</icon>
-      <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"'&gt;_(#messenger:serviceChannelMessages/invoiceReceived/invoice)&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;font color='#8C8C7E'&gt;%(text)s&lt;/font&gt;</message>
-    </NewYearVehicleBranchGoldSysMessage>
-    <NewYearVehicleBranchBonusSysMessage>
-      <type>	grey	</type>
-      <priority>low</priority>
-      <icon>InformationIcon</icon>
-      <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"&gt;_(#ny:notification/vehicleBranchBonus)&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;%(text)s</message>
-    </NewYearVehicleBranchBonusSysMessage>
     <EnhancementRemovedMessage>
       <type>	grey	</type>
       <priority>medium</priority>
@@ -2153,20 +2014,6 @@ _(#messenger:battle/toolTips/mutePlayer){/BODY}</value>
       <icon>	TechTreeDiscount	</icon>
       <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"&gt;%(header)s&lt;/font&gt;&lt;br/&gt;&lt;font color='#8C8C7E'&gt;%(text)s&lt;/font&gt;&lt;font color='#FFC363'&gt;%(timeLeft)s&lt;/font&gt;</message>
     </TechTreeActionDiscountMessage>
-    <NewNYLootBoxesMessage>
-      <type>nyBoxes</type>
-      <priority>	high	</priority>
-      <icon>nyLB_usual</icon>
-      <message>&lt;textformat leading="-1"&gt;&lt;p align="center"&gt;&lt;font face="$TitleFont" size="15" color="#FFFFFF"&gt;%(header)s&lt;/font&gt;&lt;p align="center"&gt;&lt;font size="6" color="#BDBDBD"&gt;&lt;/font&gt;&lt;/p&gt;&lt;font size="14" color="#BDBDBD"&gt;_(#ny:notification/lootBox/body)&lt;/font&gt;&lt;/p&gt;&lt;/textformat&gt;</message>
-      <buttonsLayout>
-        <button>
-          <type>submit</type>
-          <label>_(#ingame_gui:rewardWindow/lootbox/btnLabel)</label>
-          <action>openLootBoxesView</action>
-        </button>
-      </buttonsLayout>
-      <buttonsAlign>center</buttonsAlign>
-    </NewNYLootBoxesMessage>
     <ProgressiveItemUpdatedMessage>
       <type>	grey	</type>
       <icon>InformationIcon</icon>
@@ -2212,5 +2059,12 @@ _(#messenger:battle/toolTips/mutePlayer){/BODY}</value>
         </button>
       </buttonsLayout>
     </NotSelectedDevicesReminder>
+    <bobRewardMessage>
+      <priority>low</priority>
+      <type>	grey	</type>
+      <icon>InformationIcon</icon>
+      <message>&lt;font face="$TitleFont" size="15" color="#E9E2BF"&gt;_(#messenger:serviceChannelMessages/invoiceReceived/invoice)&lt;/font&gt;
+			&lt;br/&gt;&lt;font face="$FieldFont" size="14" color="#8C8C7E"&gt;_(#messenger:serviceChannelMessages/lootBoxesAutoOpen/header):&lt;/font&gt;&lt;br/&gt;%(achieves)s</message>
+    </bobRewardMessage>
   </htmlTemplates>
 </messenger.xml>

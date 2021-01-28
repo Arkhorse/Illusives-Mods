@@ -12,8 +12,6 @@
         (const RIBBON_MAKE_VISIBLE_DUR0:number = 0.1)
         (const RIBBON_MAKE_VISIBLE_DUR1:number = 0.2)
         (const RIBBON_MAKE_VISIBLE_DUR2:number = 0.8)
-
-        (const RIBBON_MAKE_VISIBLE_DUR_NY:number = 0.5)
         # 4. Animate rewards on ribbon
         (const REWARDS_DELAY:number = 1.5)
         # 5 (optional if congratsModel exist). Animate initialCongrats subtitle fadeout
@@ -27,8 +25,6 @@
         # 10 (optional if congratsModel exist). Animate congrats shine fadein
         (const SHINE_FADE_IN_TIME:number = 1)
         (const SHINE_FADE_IN_DELAY:number = 0.7)
-        (const RIBBON_RED_BG_DEFAULT_WIDTH : number = 1601)
-        (var ribbonWidth : number = -1)
 
         (var boxType:str = '')
         (var boxCategory:str = '')
@@ -42,34 +38,13 @@
         (var blurValue:number = 0)
         (var rendererCongrats:str = '')
         (var congratsModel:dict = null)
-        (var rewardsAlign:number = "center")
         (var shineAnimStyle:str = null)
         (var congratsStyle:str = null)
         (var skipLootAnimation:bool = false)
         (var ribbonSoundEnabled:bool = true)
 
-        # ny21 custom
-        (var customRibbonImg:str = null)
-        (var customRibbonTopOffset:number = -90%)
-        (var isNYRibbonAnimation:bool = false)
-        (var additionalRewards:array = [])
-        (var showAdditionalRewards:bool = false)
-        (var rewardsOffset:number = "additionalRewards != null && additionalRewards.length > 0 ? additionalRewards.length * 95 - 15 : 0")
-        (var additionalRewardsWidth:number = 0)
-        (var additionalRewardsPlusWidth:number = 0)
-        (controller $Animation
-            (bindcall play duration="0.4" to="{additionalRewardsWidth:rewardsOffset, additionalRewardsPlusWidth:89}"
-                easing="Easing.expo_in_out"
-                (bind enabled "showAdditionalRewards")
-            )
-        )
-
         (var isEpicRibbon:bool = false)
-        (var ribbonBlockTopAnimationOffset:number = "isNYRibbonAnimation ? 20px : 0")
-        (var ribbonInnerBlockTopDefault:number = "(isEpicRibbon ? -65% : 50%) + ribbonBlockTopAnimationOffset")
-        (var ribbonInnerBlockTopAnimationEnd:number = "ribbonInnerBlockTopDefault - ribbonBlockTopAnimationOffset")
-        (var ribbonInnerBlockTop:number = "ribbonInnerBlockTopDefault")
-
+        
         (event onReadyToRestart)
         (dispatch onReadyToRestart
             (bind trigger "isReadyForRestart")
@@ -79,49 +54,8 @@
         (var ribbonShowSoundTrigger:number = 0.0)
         (event evRibbonShowSoundTrigger)
         (controller $Animation
-            (bindcall play duration="RIBBON_MAKE_VISIBLE_DELAY" to="{ribbonShowSoundTrigger:RIBBON_MAKE_VISIBLE_DELAY}" 
-                callbacks="{onComplete:evRibbonShowSoundTrigger}"
+            (bindcall play duration="RIBBON_MAKE_VISIBLE_DELAY" to="{ribbonShowSoundTrigger:RIBBON_MAKE_VISIBLE_DELAY}" callbacks="{onComplete:evRibbonShowSoundTrigger}"
                 (bind enabled "isOpenBoxAnimPlayed && isFadeIn")
-            )
-        )
-        
-        (var ribbonAlpha:number = 0)
-        (bind ribbonAlpha "0" init=false
-            (event "onReadyToRestart")
-        )
-        (var ribbonScaleX:number = 1)
-        (var ribbonScaleY:number = 1)
-        (controller $Animation
-            (bindcall playSeq
-                "[
-                    {
-                        delay:RIBBON_MAKE_VISIBLE_DELAY, 
-                        duration:RIBBON_MAKE_VISIBLE_DUR0, 
-                        from:{ribbonAlpha:0, ribbonScaleY:0.1, ribbonScaleX:0.1}, 
-                        to:{ribbonAlpha:1, ribbonScaleY:0.1, ribbonScaleX:0.9}, 
-                        easing:Easing.cubic_in
-                    },
-                    {duration:RIBBON_MAKE_VISIBLE_DUR1, to:{ribbonScaleY:1, ribbonScaleX:0.95}},
-                    {duration:RIBBON_MAKE_VISIBLE_DUR2, to:{ribbonScaleX:1}, easing:Easing.cubic_out}
-                ]"
-                callbacks="{onStart:evOnRibbonAnimStarted, onComplete: evOnAnimComplete}"
-                (bind enabled "!isNYRibbonAnimation && isOpenBoxAnimPlayed && isFadeIn")
-            )
-        )
-        
-        (controller $Animation
-            (bindcall playSeq
-                "[
-                    {
-                        delay:RIBBON_MAKE_VISIBLE_DELAY, 
-                        duration:RIBBON_MAKE_VISIBLE_DUR_NY, 
-                        from:{ribbonAlpha:0, ribbonInnerBlockTop:ribbonInnerBlockTopDefault}, 
-                        to:{ribbonAlpha:1, ribbonInnerBlockTop:ribbonInnerBlockTopAnimationEnd}, 
-                        easing:Easing.cubic_out
-                    }
-                ]"
-                callbacks="{onStart:evOnRibbonAnimStarted, onComplete: evOnAnimComplete}"
-                (bind enabled "isNYRibbonAnimation && isOpenBoxAnimPlayed && isFadeIn")
             )
         )
 
@@ -146,7 +80,7 @@
             (event "evNeedChangeCongratRenderer")
         )
         (event evCongratRendererChanged)
-        (dispatch evCongratRendererChanged dir=1 init=false
+        (dispatch evCongratRendererChanged args="{'congratsModel': $event.congratsModel}" dir=1 init=false
             (event "evNeedChangeCongratRenderer")
         )
         
@@ -155,7 +89,6 @@
 
         # end of rewards animation
         (event evOnRewardsAnimationComplete)
-        (event evAdditionalRewardsAnimationComplete)
         
         # rewards ribbon animation started
         (event evOnRibbonAnimStarted)
@@ -201,15 +134,9 @@
                     (bottom = 0px)
                 )
                 (scope
-                    (bind currentCongrantsName "rendererCongrats != '' ? rendererCongrats : (initialCongratsModel != null ? initialCongratsModel.congratsType : '')")
-                    (bind congratsModel "initialCongratsModel" init=false)
+                    (bind currentCongrantsName "rendererCongrats != '' ? rendererCongrats : initialCongratsModel.congratsType") 
+                    (bind congratsModel "initialCongratsModel")
                     (canFadeIn = true)
-                    (bind showTitle "showCongratsTitle" init=false watch=false
-                        (event "evOnRewardsAnimationComplete")
-                    )
-                    (bind showTitle false watch=false
-                        (event "onReadyToRestart")
-                    )
                     (bind blurValue "blurValue")
                 )
             )
@@ -235,6 +162,7 @@
             (height = 150px)
             (align = "center")
 
+            (backgroundColor = 0xFF0000FF)
         )
         (mouseEnabled = false)
 
@@ -254,7 +182,7 @@
                     )
 
                     # BlueShineAnimUI or ShineAnimUI
-                    (mc "congratsModel.shineSwfAlias"
+                    (mc "congratsModel != null ? congratsModel.shineSwfAlias : 'ShineAnimUI'"
                         (name = 'shineAnimation')
                         (bind class "isEpicRibbon ? 'EpicShineAmimStyle' : 'ShineAmimStyle'")
                         (bind alpha "0" init=false
@@ -282,33 +210,28 @@
             (name = 'ribbonInnerBlock')
             (style
                 (position = "absolute")
-                (bind top "ribbonInnerBlockTop")
+                (bind top "isEpicRibbon ? -65% : 50%")
                 (bind pivotY "isEpicRibbon ? 50% : 0%")
                 (left = 50%)
                 (width = 100%)
                 (height = 100%)
                 (alpha = 0)
-                (bind scaleX "ribbonScaleX")
-                (bind scaleY "ribbonScaleY")
             )
             
             (bind alpha "0" init=false
                 (event "onReadyToRestart")
-            )
-            (bind alpha "ribbonAlpha" init=false
-                (bind enabled "isOpenBoxAnimPlayed && isFadeIn")
             )
 
             (image
                 (name = 'ribbonImg')
                 (style
                     (position = "absolute")
-                    (bind width "ribbonWidth > -1 ? ribbonWidth : RIBBON_RED_BG_DEFAULT_WIDTH")
-                    (bind top "customRibbonImg != null ? customRibbonTopOffset : -50%")
-                    (bind left "- (ribbonWidth > -1 ? ribbonWidth : RIBBON_RED_BG_DEFAULT_WIDTH) / 2")
+                    (width = 1601px)
+                    (top = -50%)
+                    (left = -800px)
                 )
 
-                (bind source "customRibbonImg != null ? customRibbonImg : R.images.gui.maps.icons.library[isEpicRibbon ? 'epic_ribbon' : 'ribbon']()")
+                (bind source "R.images.gui.maps.icons.library[isEpicRibbon ? 'epic_ribbon' : 'ribbon']()")
 
                 (bind colorTransform "{
                     redMultiplier:1, greenMultiplier:1, blueMultiplier:1, alphaMultiplier:1,
@@ -316,6 +239,24 @@
                 )
             )
             (macro EmptyHitAreaMacro)
+
+            (controller $Animation
+                (bindcall playSeq
+                    "[
+                        {
+                            delay:RIBBON_MAKE_VISIBLE_DELAY, 
+                            duration:RIBBON_MAKE_VISIBLE_DUR0, 
+                            from:{alpha:0, scaleY:0.1, scaleX:0.1}, 
+                            to:{alpha:1, scaleY:0.1, scaleX:0.9}, 
+                            easing:Easing.cubic_in
+                        },
+                        {duration:RIBBON_MAKE_VISIBLE_DUR1, to:{scaleY:1, scaleX:0.95}},
+                        {duration:RIBBON_MAKE_VISIBLE_DUR2, to:{scaleX:1}, easing:Easing.cubic_out}
+                    ]"
+                    callbacks="{onStart:evOnRibbonAnimStarted, onComplete: evOnAnimComplete}"
+                    (bind enabled "isOpenBoxAnimPlayed && isFadeIn")
+                )
+            )
 
             (dispatch evOnCongratsLootBoxStartFadeIn init=false
                 (enabled = "isEpicRibbon")
@@ -349,7 +290,7 @@
                 )
                 (name = 'advancedShine')
                 (bind source "R.images.gui.maps.icons.library[congratsModel.advancedShineName]()" init=false
-                    (bind enabled "congratsModel != null && congratsModel.advancedShineName != ''")
+                    (bind enabled "congratsModel != null")
                 )
             )
             (macro EmptyHitAreaMacro)
@@ -359,89 +300,31 @@
                     (event "evOnCongratsLootBoxStartFadeIn")
                 )
             )
-            (bind visible "congratsModel != null && congratsModel.advancedShineName != ''")
+            (bind visible "congratsModel != null")
         )
 
-        (hblock
-            (name = 'allRewardsBlock')
-            (style
-                (width = 100%)
-                (bind align "rewardsAlign")
-            )
-            (block
-                (name = 'rewardsBlock')
-                (style
-                    (bind align "rewardsAlign")
-                )
-                (controller $Instance layout=true
-                    (exprs
-                        (element LootAnimation 'LootRenderer' "REWARDS_DELAY"
-                            (scope
-                                (bind skipAnimation "skipLootAnimation")
-                                (bind renderer_array "rewards")
-                                (dispatch evOnRewardsAnimationComplete dir=1 init=false on='evOnEndAnimation')
-                            )
+        (block
+            (name = 'rewardsBlock')
+            (controller $Instance layout=true
+                (exprs
+                    (element LootAnimation 'LootRenderer' "REWARDS_DELAY"
+                        (scope
+                            (bind skipAnimation "skipLootAnimation")
+                            (bind renderer_array "rewards")
+                            (dispatch evOnRewardsAnimationComplete dir=1 init=false on='evOnEndAnimation')
                         )
                     )
-                    (bind enabled "isOpenBoxAnimPlayed && isFadeIn")
                 )
+                (bind enabled "isOpenBoxAnimPlayed && isFadeIn")
             )
-            (image
-                (name = 'additionalRewardsPlusImage')
-                (style
-                    (alpha = 0)
-                    (marginTop = 27px)
-                    (width = 0px)
-                    (height = 89px)
-                    (bind width "additionalRewardsPlusWidth" init=false
-                         (bind enabled "showAdditionalRewards")
-                    )
-                )
-                (visible = false)
-                (bind visible true init=false
-                    (bind enabled "showAdditionalRewards")
-                )
-
-                (controller $Animation
-                    (bindcall play delay=0.3 duration=0.3 to={alpha:1} easing="Easing.cubic_out" init=false
-                        (bind trigger "showAdditionalRewards")
-                    )
-                )
-
-                (source = "R.images.gui.maps.icons.new_year.collections_reward.plus()")
-            )
-            (block
-                (name = 'additionalRewards')
-                (style
-                    (bind width "additionalRewardsWidth" init=false
-                        (bind enabled "showAdditionalRewards")
-                    )
-                )
-                (controller $Instance layout=true
-                    (exprs
-                        (element LootAnimation 'LootRenderer' "0.5"
-                            (scope
-                                (bind skipAnimation "skipLootAnimation")
-                                (bind renderer_array "additionalRewards")
-                                (dispatch evAdditionalRewardsAnimationComplete dir=1 init=false on='evOnEndAnimation')
-                            )
-                        )
-                    )
-                    (bind enabled "showAdditionalRewards")
-                )
-            )
-            
         )
-        
     )
 
     (block
         (name = 'rewardCongrats')
         # reward congrats renderer
         (controller $Instance
-            (bind renderer "rendererCongrats" init=false
-                (bind enabled "congratsModel != null && rendererCongrats != ''")
-            )
+            (bind renderer "rendererCongrats" init=false)
             (exprs
                 (style
                     (position = "absolute")
@@ -480,9 +363,7 @@
 )
 
 (def macro CongratsMacro(congratsName:expression)
-    (bind name "congratsName")
     (scope
-        (const WIDTH_CHANGE_POINT:number = 1360)
         (var currentCongrantsName:str = '')
         (var congratsModel:dict = null)
         (var canFadeIn:bool = false)
@@ -604,6 +485,7 @@
     (scope
         (var boxTypeName:str = '')
         (var boxCategory:str = '')
+        (var showImg:bool = true)
     )
 
     (style
@@ -640,6 +522,7 @@
             (bind source "R.images.gui.maps.icons.lootboxes.category.big[boxTypeName][boxCategory]()" init=false
                 (bind enabled "boxCategory != ''")
             )
+            (bind visible "showImg")
         )
         (macro EmptyHitAreaMacro)
     )
@@ -648,6 +531,7 @@
 (def layout CrewBookCongrats()
     (macro CongratsMacro "'CrewBookCongrats'") 
     (scope
+        (var showImg:bool = true)
         (event evOnVehicleStartFadeIn)
         (dispatch evOnVehicleStartFadeIn
             (event "evOnStartFadeIn")
@@ -689,6 +573,7 @@
         )
         (image
             (source = "R.images.gui.maps.icons.crewBooks.randomReward.congratsIcon()")
+            (bind visible "showImg")
         )
         (macro EmptyHitAreaMacro)
     )
@@ -836,260 +721,6 @@
     )
 )
 
-(def layout LootBoxCongrats()
-    (macro CongratsMacro "'LootBoxCongrats'")
-
-    (scope
-        (var titleVisible:bool = "showTitle && congratsModel != null && congratsModel.showTitle")
-        (var titleAlpha:number = "titleVisible ? 0.0 : 1.0")
-        (controller $Animation
-            (bindcall play duration=0.3 to="{titleAlpha:1.0}" id='showTitle'
-                (bind enabled "titleVisible")
-            )
-            (bindcall stop id='showTitle'
-                (bind enabled "!titleVisible")
-            )
-            (bindcall play duration=0.15 to="{titleAlpha:0.0}" id='hideTitle'
-                (bind enabled "!titleVisible")
-            )
-            (bindcall stop id='hideTitle'
-                (bind enabled "titleVisible")
-            )
-        )
-    )
-
-    (style
-        (align = "center")
-        (marginBottom = -177px)
-    )
-    (tf
-        (name = 'headerTF')
-        (bind alpha "titleAlpha")
-        (bind class "viewSize.width >= WIDTH_CHANGE_POINT ? 'EpicTitleTextStyle': 'HeroTitleTextStyle'"
-            (event "viewResized")
-        )
-        (bind text "congratsModel != null ? R.strings.progressive_reward.awardView.congratsLabel[congratsModel.congratsType]() : ''")
-        (bind visible "titleVisible")
-        (antiAliasType = 'normal')
-    )
-    (block
-        (name = 'imgBlock')
-        (style
-            (height = 400px)
-            (bind paddingTop "congratsModel != null && congratsModel.boxTypeName != '' 
-                            ? 
-                                (congratsModel.boxCategory == '') 
-                                ? 20
-                                : 0
-                            : 0"
-                (bind enabled "congratsModel != null && congratsModel.showImg")
-            )
-        )
-        (image
-            (bind source "congratsModel != null && congratsModel.boxTypeName != ''
-                            ? 
-                                (congratsModel.boxCategory == '') 
-                                ? R.images.gui.maps.icons.lootboxes.types.big[congratsModel.boxTypeName]() 
-                                : R.images.gui.maps.icons.lootboxes.category.big[congratsModel.boxTypeName][congratsModel.boxCategory]()
-                            : ''"
-                (bind enabled "congratsModel != null && congratsModel.showImg")
-            )
-            (bind visible "congratsModel != null && congratsModel.showImg")
-        )
-        (macro EmptyHitAreaMacro)
-    )
-)
-
-
-(def layout StyleLootBoxCongrats()
-    (macro CongratsMacro "'StyleLootBoxCongrats'")
-    (macro LootCongratsTypes)
-    (scope 
-        (event evOnVehicleStartFadeIn)
-        (dispatch evOnVehicleStartFadeIn 
-            (event "evOnStartFadeIn")
-        )
-        (var vehStylesTopPos:dict = {
-            'A67_T57_58': 60,
-            'F18_Bat_Chatillon25t': 45,
-            'G121_Grille_15_L63': 45,
-            'R45_IS_7': 55
-        })
-        (var vehStylesHCenterPos:dict = {
-            'A67_T57_58': -40,
-            'F18_Bat_Chatillon25t': 0,
-            'G121_Grille_15_L63': -20,
-            'R45_IS_7': -25
-        })
-        (var vCongratsTopPos:number = 45)
-        (bind vCongratsTopPos "vehStylesTopPos[congratsModel.vehicleImage] ? vehStylesTopPos[congratsModel.vehicleImage] : 45"
-            (bind enabled "congratsModel != null")
-        )
-        (var vCongratsHcenterPos:number = 0)
-        (bind vCongratsHcenterPos "vehStylesHCenterPos[congratsModel.vehicleImage] ? vehStylesHCenterPos[congratsModel.vehicleImage] : 0"
-            (bind enabled "congratsModel != null")
-        )
-    )
-
-    (block
-        (name = 'titleBlock')
-        (style
-            (align = "center")
-            (width = 100%)
-        )
-        (tf
-            (name = 'headerTF')
-            (bind class "viewSize.width >= WIDTH_CHANGE_POINT ? 'EpicTitleTextStyle': 'HeroTitleTextStyle'"
-                (event "viewResized")
-            )
-            (bind text "R.strings.progressive_reward.awardView.congratsLabel[congratsModel.congratsType]()"
-                (bind enabled "congratsModel != null")
-            )
-            (antiAliasType = 'normal')
-        )
-    )
-    (block
-        (name = 'vehicleBlock')
-        (style
-            (align = "center")
-            (height = 400px)
-        )
-
-        (block
-            (name = 'vehicleImgBlock')
-            (style
-                (position = "absolute")
-                (hcenter = 0)
-                (bind top "vCongratsTopPos")
-                (bind hcenter "vCongratsHcenterPos")
-                (align = "center")
-                (width = 360px)
-                (height = 270px)
-            )
-            (mouseChildren = false)
-            (mouseEnabled = false)
-
-            (macro EmptyHitAreaMacro)
-
-            (image
-                (visible = false)
-                (bind visible true init=false on='complete')
-                (bind source "R.images.gui.maps.icons.customization.lootboxes_styles[congratsModel.vehicleImage]()"
-                    (bind enabled "congratsModel != null")
-                )
-            )
-        )
-
-        (block
-            (name = 'labelsBlock')
-            (style
-                (align = "center|middle")
-                (height = 50px)
-            )
-            (element VehicleNameBlock
-                (scope
-                    (bind name "congratsModel.vehicleName"
-                        (bind enabled "congratsModel != null")
-                    )
-                    (bind level "congratsModel.vehicleLvl"
-                        (bind enabled "congratsModel != null")
-                    )
-                    (bind type "congratsModel.vehicleType"
-                        (bind enabled "congratsModel != null")
-                    )
-                    (bind isElite "congratsModel.vehicleIsElite"
-                        (bind enabled "congratsModel != null")
-                    )
-                    (bind cssClass "'PromoSubTitleTextStyle'")
-                    (bind letterSpacing "0")
-                )
-                (style
-                    (position = "absolute")
-                    (hcenter = 0px)
-                    (top = -20px)
-                )
-            )
-        )
-    )
-)
-
-(def layout TankmanLootBoxCongrats()
-    (macro CongratsMacro "'TankmanLootBoxCongrats'")
-    (macro LootCongratsTypes)
-    (scope 
-        (event evOnVehicleStartFadeIn)
-        (dispatch evOnVehicleStartFadeIn 
-            (event "evOnStartFadeIn")
-        )
-    )
-
-    (exec "playSound(R.sounds.gui_lootbox_reward_secret_member())"
-        (event "evOnStartFadeIn")
-    )
-
-    (block
-        (name = 'titleBlock')
-        (style
-            (align = "center")
-            (width = 100%)
-        )
-        (tf
-            (name = 'headerTF')
-            (bind class "viewSize.width >= WIDTH_CHANGE_POINT ? 'EpicTitleTextStyle': 'HeroTitleTextStyle'"
-                (event "viewResized")
-            )
-            (bind text "congratsModel.vehicleName"
-                (bind enabled "congratsModel != null")
-            )
-            (antiAliasType = 'normal')
-        )
-    )
-    (block
-        (name = 'vehicleBlock')
-        (style
-            (align = "center")
-            (height = 510px)
-        )
-
-        (block
-            (name = 'vehicleImgBlock')
-            (style
-                (position = "absolute")
-                (hcenter = 0px)
-                (top = 62px)
-                (align = "center")
-                (width = 444px)
-                (height = 300px)
-            )
-            (mouseChildren = false)
-            (mouseEnabled = false)
-
-            (macro EmptyHitAreaMacro)
-
-            (image
-                (visible = false)
-                (bind visible true init=false on='complete')
-                (bind source "congratsModel.vehicleImage"
-                    (bind enabled "congratsModel != null")
-                )
-            )
-        )
-
-        (tf
-            (name = 'title')
-            (style
-                (position = "absolute")
-                (hcenter = 0px)
-                (top = -4px)
-            )
-            (class PromoSubTitleTextStyle)
-            (bind text "R.strings.progressive_reward.awardView.congratsLabel[congratsModel.congratsType]()"
-                (bind enabled "congratsModel != null")
-            )
-        )
-    )
-)
-
 (def macro PartFadeAnim(fadeInEnabled:expression, fadeOutEnabled:expression, fadeInDur:number=0.5, fadeInDelay:number=1.2, fadeOutDur:number=0.5)
     (style
         (alpha = 0)
@@ -1120,7 +751,9 @@
         (var LOOT_RENDERER_MARGIN_TOP:number = "lootModel.isEpic ? -150 : lootModel.isSmall ? 47 : 30")
         (var LOOT_RENDERER_OVERLAY_TOP:number = "lootModel.isSmall ? 22 : 5")
         (var LOOT_RENDERER_HIGHLIGHT_TOP:number = "lootModel.isSmall ? 27 : 10")
-        (macro LootIconScopeParams)
+        (var LOOT_ICON_WIDTH:number = "lootModel.isEpic ? 300 : lootModel.isSmall ? 48 : 80")
+        (var LOOT_ICON_HEIGHT_PLUS_TOP_MARGIN:number = "lootModel.isSmall ? 95 : 110")
+        (var LOOT_ICON_HALF_HEIGHT_PLUS_TOP_MARGIN:number =  "lootModel.isSmall ? 71 : 70")
 
         (var textAlignMap:dict = {
             'left': "left",
@@ -1137,7 +770,7 @@
         (var evShowIconStartEnabled:bool = true)
         (var evShowCompleteEnabled:bool = true)
         (var labelVisible:bool = true)
-        (var tfZIndex:number = "ZIndex.FOREGROUND")
+        (var tfZIndex:number = 0)
         (event evShowStart)
         (dispatch evShowStart init=false
             (bind enabled "isShowStarted")
@@ -1186,7 +819,7 @@
             (hcenter = 0px)
             (bind marginTop "lootModel.isEpic ? -50px : -10px")
             (bind width "lootModel.isEpic ? LOOT_ICON_WIDTH : 58px")
-            (bind zindex "tfZIndex")
+            (bind zindex "2")
             (align = "center")
             (bind align "textAlignMap[lootModel.labelAlign]")
             (bind align "textAlignMap[lootModel.labelAlignAfter != '' ? lootModel.labelAlignAfter : lootModel.labelAlign]" init=false
@@ -1238,7 +871,7 @@
         (style
             (position = "absolute")
             (width = "LOOT_ICON_WIDTH")
-            (height = "LOOT_ICON_HEIGHT")
+            (height = "LOOT_ICON_WIDTH")
             (top = "LOOT_RENDERER_MARGIN_TOP")
             (align = "center|middle")
         )
@@ -1275,28 +908,6 @@
     )
 )
 
-(def macro LootVideoRendererMacro()
-    (dispatch evNeedStartCongratsVideo
-        args="{
-            congratsType: lootModel.congratsViewModel.congratsType,
-            vehicleName: lootModel.congratsViewModel.vehicleName,
-            vehicleLvl: lootModel.congratsViewModel.vehicleLvl,
-            vehicleIsElite: lootModel.congratsViewModel.vehicleIsElite,
-            vehicleType: lootModel.congratsViewModel.vehicleType,
-            sourceName: lootModel.videoSrc,
-            congratsSourceId: lootModel.congratsViewModel.congratsSourceId
-        }"
-        
-        init=false dir=1
-        (event "evShowIconComplete")
-    )
-)
-
-(def layout LootVideoRenderer(lootModel:dict)
-    (macro LootDefRendererMacro)
-    (macro LootVideoRendererMacro)
-)
-
 (def layout LootDefRenderer(lootModel:dict)
     (macro LootDefRendererMacro)
 )
@@ -1320,12 +931,6 @@
 
 (def layout LootVehicleRenderer(lootModel:dict)
     (macro LootDefRendererMacro)
-    (macro LootVehicleMacro)
-)
-
-(def layout LootVehicleVideoRenderer(lootModel:dict)
-    (macro LootDefRendererMacro)
-    (macro LootVideoRendererMacro)
     (macro LootVehicleMacro)
 )
 
@@ -1504,24 +1109,21 @@
                 }"
             )
         )
-        (image
-            (style
-                (position = "absolute")
-                (bind vcenter "COMPENS_ICON_VCENTER")
-                (bind hcenter "COMPENS_ICON_HCENTER")
-            )
-            (name = 'changeTankImg')
-            (bind source "lootModel.isSmall ? compensationIconSmall : compensationIconBig")
-            (visible = false)
-            (bind visible true init=false
-                (event "evOnFirstAnmComplete")
-            )
-        )
         (controller $Animation
             (bindcall play duration=1.0 from={scaleX:1.2, scaleY:1.2} to={scaleX:1.0, scaleY:1.0} easing="Easing.quint_out" callbacks="{onComplete:evOnAnmComplete}"
                 (event "evOnFirstAnmComplete")
             )
         )
+    )
+    (image
+        (style
+            (position = "absolute")
+            (hcenter = 0px)
+            (bind vcenter "LOOT_ICON_HALF_HEIGHT_PLUS_TOP_MARGIN + COMPENS_ICON_VCENTER")
+            (bind hcenter "COMPENS_ICON_HCENTER")
+        )
+        (name = 'changeTankImg')
+        (bind source "lootModel.isSmall ? compensationIconSmall : compensationIconBig")
     )
     (scope
         (tfZIndex = "ZIndex.FOREGROUND")
@@ -1555,9 +1157,6 @@
 (def layout VehicleCompensationRenderer(lootModel:dict)
     (macro LootCompensationBase compensationIconSmall="R.images.gui.maps.icons.library.changeTank16()"
                                 compensationIconBig = "R.images.gui.maps.icons.library.changeTank()")
-    (scope
-        (bind COMPENS_ICON_VCENTER "lootModel.isSmall ? -20 : -30")
-    )
 
     (controller $ToolTip
         (delay = "0.4")
@@ -1571,7 +1170,6 @@
             vehicleLvl = "lootModel.vehicleLvl"
             vehicleName = "lootModel.vehicleName"
             bonusName = "lootModel.bonusName"
-            tooltipId = "lootModel.tooltipId"
         )
         (content = "R.views.common.tooltip_window.loot_box_compensation_tooltip.LootBoxVehicleCompensationTooltipContent.resId")
         (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
@@ -1584,10 +1182,12 @@
     (scope
         (var isShowStarted:bool = true)
         (event evShowComplete)
-        (var COMPENS_ICON_VCENTER:number = "lootModel.isSmall ? -20 : -30")
+        (var COMPENS_ICON_VCENTER:number = "lootModel.isSmall ? -20 : -35")
         (var COMPENS_ICON_HCENTER:number = "lootModel.isSmall ? 20 : 33")
 
-        (macro LootIconScopeParams)
+        (var LOOT_ICON_WIDTH:number = "lootModel.isSmall ? 48 : 80")
+        (var LOOT_ICON_HEIGHT_PLUS_TOP_MARGIN:number = "lootModel.isSmall ? 95 : 110")
+        (var LOOT_ICON_HALF_HEIGHT_PLUS_TOP_MARGIN:number = "lootModel.isSmall ? 71 : 70")
 
         (var textAlignMap:dict = {
             'left': "left",
@@ -1680,8 +1280,6 @@
         (var mainIndex:number = 0)
         (var leftElements:number = 0)
         (var nothingLeft:bool = false)
-        (var useCustomGap:bool = false)
-        (var customGap:number = 0)
         (var renderer_array:array = []
             (dispatch evArrayChanged on='evChanged')
         )
@@ -1709,7 +1307,7 @@
     )
     (style
         (flow = "Flow.HORIZONTAL")
-        (bind gap "!useCustomGap ? (renderer_array.length > 6 ? 7px : 15px) : customGap")
+        (bind gap "renderer_array.length > 6 ? 7px : 15px")
     )
 
     (dispatch evOnEndAnimation dir=2  init=false
@@ -1807,7 +1405,7 @@
                 (vcenter = 0px)
             )
             (name = 'iconTo')
-            (source = "R.images.gui.maps.icons.blueprints.fragment.big.vehicle_complete()")
+            (bind source "R.images.gui.maps.icons.blueprints.fragment.big.vehicle_complete()")
             (bind visible "icnToVisible")
             (bind colorTransform "{redOffset:colorAdd, greenOffset:colorAdd, blueOffset:colorAdd}"
                 (bind enabled "icnToVisible")
@@ -1829,188 +1427,4 @@
             (event "evOnAnimationDelay")
         )
     )
-)
-
-(def layout LootNewYearFragmentsRenderer(lootModel:dict, evShowIconStartTrigger:expression = "evShowStart")
-    (macro LootNewYearToyRendererModel)
-    (macro LootBaseRendererMacro "evShowIconStartTrigger" isBackportTooltip=false)
-    (block
-        (style
-            (position = "absolute")
-            (top = "LOOT_RENDERER_MARGIN_TOP")
-            (bind width "lootModel.isSmall ? 44px : 76px")
-            (bind height "lootModel.isSmall ? 44px : 76px")
-            (align = "center|middle")
-        )
-        (image
-            (style
-
-                (bind width "lootModel.isSmall ? 44px : 68px")
-                (bind height "lootModel.isSmall ? 44px : 68px")
-            )
-            (name = 'icon')
-            (bind source "lootModel.icon"
-                (bind enabled "lootModel.icon != ''")
-            )
-        )
-    )
-
-    (controller $ToolTip
-        (delay = "0.4")
-        (content = "R.views.lobby.new_year.tooltips.new_year_parts_tooltip_content.NewYearPartsTooltipContent.resId")
-        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
-    )
-)
-
-(def layout LootNewYearFragmentsCompensationRenderer(lootModel:dict, evShowIconStartTrigger:expression = "evShowStart")
-    (macro LootNewYearToyRendererModel)
-    (macro LootBaseRendererMacro "evShowIconStartTrigger" isBackportTooltip=false)
-    (block
-        (style
-            (position = "absolute")
-            (top = "LOOT_RENDERER_MARGIN_TOP")
-            (bind width "lootModel.isSmall ? 44px : 76px")
-            (bind height "lootModel.isSmall ? 44px : 76px")
-            (align = "center|middle")
-        )
-        (image
-            (style
-
-                (bind width "lootModel.isSmall ? 44px : 68px")
-                (bind height "lootModel.isSmall ? 44px : 68px")
-            )
-            (name = 'icon')
-            (bind source "lootModel.icon"
-                (bind enabled "lootModel.icon != ''")
-            )
-        )
-    )
-
-    (controller $ToolTip
-        (delay = "0.4")
-        (bindcall args body="TextFormat(R.strings.ny.fragments.tooltip(), {count: lootModel.count})" init=true)
-        (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
-        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
-    )
-)
-
-(def layout LootNewYearAlbumRenderer(lootModel:dict, evShowIconStartTrigger:expression = "evShowStart")
-    (macro LootNewYearAlbumRendererModel)
-    (macro LootBaseRendererMacro "evShowIconStartTrigger" isBackportTooltip=false)
-    (block
-        (style
-            (position = "absolute")
-            (top = "LOOT_RENDERER_MARGIN_TOP")
-            (bind width "lootModel.isSmall ? 44px : 76px")
-            (bind height "lootModel.isSmall ? 44px : 76px")
-            (align = "center|middle")
-        )
-        (image
-            (style
-
-                (bind width "lootModel.isSmall ? 44px : 68px")
-                (bind height "lootModel.isSmall ? 44px : 68px")
-            )
-            (name = 'icon')
-            (source = "R.images.gui.maps.icons.new_year.levels_rewards.album_small()")
-        )
-    )
-
-    (controller $ToolTip
-        (delay = "0.4")
-        (args
-            header="R.strings.ny.levelsRewards.album.tooltip.header()"
-            body="R.strings.ny.levelsRewards.album.tooltip.reward()"
-        )
-        (content = "R.views.common.tooltip_window.simple_tooltip_content.SimpleTooltipContent.resId")
-        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
-    )
-)
-
-(def layout LootNewYearToyRenderer(lootModel:dict, evShowIconStartTrigger:expression = "evShowStart")
-    (macro LootBaseRendererMacro "evShowIconStartTrigger" isBackportTooltip=false)
-    (scope
-        (labelVisible = true)
-        (tfZIndex = "ZIndex.FOREGROUND")
-        (var boxSize:number = "lootModel.isSmall ? 48 : 80")
-    )
-    (block
-        (style
-            (bind top "lootModel.isSmall ? LOOT_RENDERER_MARGIN_TOP: LOOT_RENDERER_MARGIN_TOP + 4px")
-            (position = "absolute")
-
-        )
-        (image
-            (style
-                (position = "absolute")
-                (bind width "boxSize")
-                (bind height "boxSize")
-            )
-            (source = "R.images.gui.maps.icons.new_year.slots.c_80x80.slot_bg()")
-        )
-        (image
-            (name = 'decorationImage')
-            (style
-                (position = "absolute")
-                (bind width "boxSize")
-                (bind height "boxSize")
-            )
-            (bind source "lootModel.decorationImage")
-        )
-        (image
-            (name = 'rankImage')
-            (style
-                (position = "absolute")
-                (bind width "lootModel.isSmall ? 40px : 47px")
-                (bind height "lootModel.isSmall ? 40px : 47px")
-            )
-            (bind source "lootModel.rankImage")
-        )
-        (block
-             (bind visible "lootModel.isMega")
-             (style
-                  (position = "absolute")
-                  (left = 5px)
-                  (bind top "boxSize - 16px - 6px")
-                  (filters
-                       (dropShadow
-                            (angle = 0)
-                            (blurX = 6)
-                            (blurY = 6)
-                            (strength = 1)
-                            (distance = 4)
-                            (color = 0x000000)
-                            (quality = 2)
-                       )
-                  )
-             )
-             (image
-                  (name = 'icon')
-                  (source = "R.images.gui.maps.icons.new_year.album.page20.toyTooltipSetting.mega()")
-             )
-        )
-    )
-
-    (controller $ToolTip
-        (delay = "0.4")
-        (args toyID = "lootModel.toyID")
-        (content = "R.views.lobby.new_year.tooltips.ny_regular_toy_tooltip_content.NyRegularToyTooltipContent.resId")
-        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
-        (bind enabled "!lootModel.isMega")
-    )
-
-    (controller $ToolTip
-        (delay = "0.4")
-        (args toyID = "lootModel.toyID")
-        (content = "R.views.lobby.new_year.tooltips.ny_mega_toy_tooltip_content.NyMegaToyTooltipContent.resId")
-        (decorator = "R.views.common.tooltip_window.tooltip_window.TooltipWindow.resId")
-        (bind enabled "lootModel.isMega")
-    )
-)
-
-(def macro LootIconScopeParams()
-    (var LOOT_ICON_WIDTH:number = "lootModel.isSmall ? 48 : (lootModel.isEpic ? 360 : 80)")
-    (var LOOT_ICON_HEIGHT:number = "lootModel.isSmall ? 48 : (lootModel.isEpic ? 270 : 80)")
-    (var LOOT_ICON_HEIGHT_PLUS_TOP_MARGIN:number = "lootModel.isSmall ? 95 : 110")
-    (var LOOT_ICON_HALF_HEIGHT_PLUS_TOP_MARGIN:number =  "lootModel.isSmall ? 71 : 70")
 )

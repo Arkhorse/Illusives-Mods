@@ -1,9 +1,0 @@
-# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
-# Please, don't edit this file manually.
-(def macro NewYearAlbumToyOldRendererModel()
-    (macro NewYearAlbumToyRendererModel)
-    (scope
-        (var shards:number = 0)
-        (var isCanCraft:bool = false)
-    )
-)

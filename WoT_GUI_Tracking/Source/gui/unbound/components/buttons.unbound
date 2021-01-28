@@ -39,7 +39,7 @@
     (scope
         (event rootWidthChanged)
         (event onSelectedChange)
-        (var paddingSize:number = 32)
+        (const paddingSize:number = 32)
         (const textfieldFixSize:number = 4)
         (var background:str = '')
         (var texture:str = 'bitmap:BtnTextureStandard')
@@ -152,7 +152,7 @@
                 (name = 'indicator select block')
                 (style
                     (macro AbsPositionFullSize)
-                    (padding = [-10, -10, -10, -10])
+                    (padding = [-10,-10,-11,-11])
                 )
                 (image
                     (name = 'indicatorSelect image')

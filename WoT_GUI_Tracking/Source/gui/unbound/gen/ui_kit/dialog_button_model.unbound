@@ -14,7 +14,6 @@
         (var soundDown:str = '')
         (var tooltipHeader:str = '')
         (var tooltipBody:str = '')
-        (var isVisible:bool = true)
 
         (const BTN_SUBMIT:str = 'submit')
         (const BTN_CANCEL:str = 'cancel')

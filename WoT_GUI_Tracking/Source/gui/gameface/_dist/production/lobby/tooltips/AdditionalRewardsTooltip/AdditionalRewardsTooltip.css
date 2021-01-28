@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+}
+
+.TooltipDecorator_base_c9 {
+    display: flex;
+    position: absolute;
+}
+
+.TooltipDecorator_decorator_3d {
+    padding: 4rem 6rem 8rem; /* border offset*/
+    border-image-source: url('R.atlases.components.tooltip_background');
+    border-image-slice: 24 fill;
+    border-image-width: 24rem;
+    position: relative;
+}
+
+.TooltipDecorator_decoratorContent_de {
+    background-color: #000;
+}
+
+.AdditionalRewardItem_base_da {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.AdditionalRewardItem_label_6b {
+    color: #8C8C7E;
+    font-size: 14rem;
+    font-weight: 400;
+    line-height: 1.3;
+    flex: 1 1 auto;
+    margin-left: 10rem;
+}
+
+.Reward_base_ea {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    height: 80rem;
+    position: relative;
+}
+
+    .Reward_base_ea.Reward_small_e3 {
+        width: 48rem;
+        height: 48rem;
+    }
+
+    .Reward_base_ea .Reward_image_89 {
+        position: relative;
+    }
+
+    .Reward_base_ea .Reward_image_89 .Reward_icon_df {
+            width: 80rem;
+            height: 80rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            z-index: 1;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_icon_df.Reward_small_e3 {
+                width: 48rem;
+                height: 48rem;
+            }
+
+    .Reward_base_ea .Reward_image_89 .Reward_overlay_68 {
+            width: 128rem;
+            height: 128rem;
+            background: no-repeat center / 100%;
+            position: absolute;
+            top: -32rem;
+            left: -32rem;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_overlay_68.Reward_small_e3 {
+                width: 96rem;
+                height: 96rem;
+                background-size: 100%;
+                overflow: visible;
+                top: -24rem;
+                left: -24rem;
+            }
+
+    .Reward_base_ea .Reward_image_89 .Reward_highlight_36 {
+            width: 80rem;
+            height: 80rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 80rem 80rem;
+            position: absolute;
+            z-index: 0;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_highlight_36.Reward_small_e3 {
+                width: 48rem;
+                height: 48rem;
+                background-size: 50rem 50rem;
+            }
+
+    .Reward_base_ea .Reward_info_72 {
+        margin-top: -13rem;
+        color: #e9e2bf;
+        font-size: 14rem;
+        line-height: 18rem;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .Reward_base_ea .Reward_info_72.Reward_multi_64 {
+            margin-right: 2rem;
+            text-align: right;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_multi_64.Reward_small_e3 {
+                margin-right: 0;
+            }
+
+    .Reward_base_ea .Reward_info_72.Reward_small_e3 {
+            margin: -10rem -10rem 0;
+            font-size: 14rem;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_credits_3f {
+            color: #ced9d9;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_gold_e3 {
+            color: #ffc363;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_crystal_69 {
+            color: #c9c9b6;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_premiumTank_29 {
+            color: #fd9;
+        }
+
+.AdditionalRewardsTooltipContent_base_c5 {
+    width: 305rem;
+    border: 1rem solid rgba(242, 242, 230, .1);
+    border-radius: 2rem;
+    background-color: #12110b;
+    position: relative;
+}
+.AdditionalRewardsTooltipContent_backgroundOverlay_f5 {
+    /* this overlays background over the base border according to design and the round corners look a bit better */
+    margin: -1rem;
+
+    /* bottom padding is already part of the tooltip wrapper */
+    padding: 19rem 15rem 25rem 25rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 7rem #000, 0 5rem 7rem rgba(0, 0, 0, .15), inset 0 0 7rem rgba(242, 242, 230, .1);
+    background: linear-gradient(180deg, rgba(51,51,41, .3) 0%, rgba(51,51,41, 0) 15.62%, rgba(51,51,41, 0) 88.02%, rgba(51,51,41, .1) 100%);
+}
+.AdditionalRewardsTooltipContent_title_cd {
+    color: #E9E2BF;
+    font-size: 15rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 8rem;
+}
+.AdditionalRewardsTooltipContent_overflow_48 {
+    color: #8C8C7E;
+    font-size: 14rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+.AdditionalRewardsTooltipContent_item_45 {
+    margin: 10rem 0 0;
+}
+
+.FormatText_base_d0 {
+    display: flex;
+    flex-wrap: wrap;
+}
+

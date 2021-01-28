@@ -1,0 +1,475 @@
+@keyframes ProgressionView_slideUp_e8 {
+    0% {
+        transform: translateY(8rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes ProgressionView_slideDown_4a {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(8rem);
+    }
+}
+@keyframes ProgressionView_fadeIn_0f {
+    0% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes ProgressionView_fadeOut_c8 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .5;
+    }
+}
+.ProgressionView_base_9a {
+    animation: ProgressionView_slideUp_e8 .2s linear forwards;
+    display: flex;
+    justify-content: center;
+    width: 210rem;
+    height: 208rem;
+    position: relative;
+    cursor: pointer;
+    pointer-events: none;
+}
+.ProgressionView_base_9a:hover {
+    animation: ProgressionView_slideDown_4a .2s linear forwards;
+    }
+.ProgressionView_wrapper_89 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 210rem;
+    height: 208rem;
+    clip-path: polygon(
+                    0 -40rem
+                    210rem -40rem
+                    210rem 162rem
+                    105rem 208rem
+                    0 162rem
+                    0 -40rem
+    );
+    position: relative;
+}
+.ProgressionView_base__broken_07 .ProgressionView_wrapper_89 {
+        filter: grayscale(90%);
+    }
+.ProgressionView_bg_68 {
+    width: 170rem;
+    height: 208rem;
+    position: absolute;
+    top: 0;
+    pointer-events: auto;
+}
+.ProgressionView_base__team1_b6 .ProgressionView_bg_68 {
+    background-image: radial-gradient(
+                    135.05% 74.04% at 50% 74.04%,
+                    #4708af 64.58%,
+                    rgba(71,8,175, .46) 85.94%,
+                    rgba(71,8,175, 0) 100%
+    );
+    }
+.ProgressionView_base__team2_42 .ProgressionView_bg_68 {
+    background-image: radial-gradient(
+                    135.05% 74.04% at 50% 74.04%,
+                    #91020f 64.58%,
+                    rgba(145,2,15, .46) 85.94%,
+                    rgba(145,2,15, 0) 100%
+    );
+    }
+.ProgressionView_base__team3_21 .ProgressionView_bg_68 {
+    background-image: radial-gradient(
+                    135.05% 74.04% at 50% 74.04%,
+                    #e9a31b 64.58%,
+                    rgba(233,163,27, .46) 85.94%,
+                    rgba(233,163,27, 0) 100%
+    );
+    }
+.ProgressionView_base__team4_f1 .ProgressionView_bg_68 {
+    background-image: radial-gradient(
+                    135.05% 74.04% at 50% 74.04%,
+                    #083e96 64.58%,
+                    rgba(8,62,150, .46) 85.94%,
+                    rgba(8,62,150, 0) 100%
+    );
+    }
+.ProgressionView_base__team5_c0 .ProgressionView_bg_68 {
+    background-image: radial-gradient(
+                    135.05% 74.04% at 50% 74.04%,
+                    #00597e 64.58%,
+                    rgba(0,89,126, .46) 85.94%,
+                    rgba(0,89,126, 0) 100%
+    );
+    }
+.ProgressionView_base__team6_f3 .ProgressionView_bg_68 {
+    background-image: radial-gradient(
+                    135.05% 74.04% at 50% 74.04%,
+                    #7b0366 64.58%,
+                    rgba(123,3,102, .46) 85.94%,
+                    rgba(123,3,102, 0) 100%
+    );
+    }
+.ProgressionView_base__team7_97 .ProgressionView_bg_68 {
+    background-image: radial-gradient(
+                    135.05% 74.04% at 50% 74.04%,
+                    #02704a 64.58%,
+                    rgba(2,112,74, .46) 85.94%,
+                    rgba(2,112,74, 0) 100%
+    );
+    }
+.ProgressionView_base__team8_cb .ProgressionView_bg_68 {
+    background-image: radial-gradient(
+                    135.05% 74.04% at 50% 74.04%,
+                    #9e0b12 64.58%,
+                    rgba(158,11,18, .46) 85.94%,
+                    rgba(158,11,18, 0) 100%
+    );
+    }
+.ProgressionView_base__team9_b6 .ProgressionView_bg_68 {
+    background-image: radial-gradient(
+                    135.05% 74.04% at 50% 74.04%,
+                    #4708af 64.58%,
+                    rgba(71,8,175, .46) 85.94%,
+                    rgba(71,8,175, 0) 100%
+    );
+    }
+.ProgressionView_base__team10_50 .ProgressionView_bg_68 {
+    background-image: radial-gradient(
+                    135.05% 74.04% at 50% 74.04%,
+                    #02704a 64.58%,
+                    rgba(2,112,74, .46) 85.94%,
+                    rgba(2,112,74, 0) 100%
+    );
+    }
+.ProgressionView_base__team11_40 .ProgressionView_bg_68 {
+    background-image: radial-gradient(
+                    135.05% 74.04% at 50% 74.04%,
+                    #830330 64.58%,
+                    rgba(131,3,48, .46) 85.94%,
+                    rgba(131,3,48, 0) 100%
+    );
+    }
+.ProgressionView_base__team12_47 .ProgressionView_bg_68 {
+    background-image: radial-gradient(
+                    135.05% 74.04% at 50% 74.04%,
+                    #8f0007 64.58%,
+                    rgba(143,0,7, .46) 85.94%,
+                    rgba(143,0,7, 0) 100%
+    );
+    }
+.ProgressionView_base__team13_e1 .ProgressionView_bg_68 {
+    background-image: radial-gradient(
+                    135.05% 74.04% at 50% 74.04%,
+                    #4708af 64.58%,
+                    rgba(71,8,175, .46) 85.94%,
+                    rgba(71,8,175, 0) 100%
+    );
+    }
+.ProgressionView_base__team14_69 .ProgressionView_bg_68 {
+    background-image: radial-gradient(
+                    135.05% 74.04% at 50% 74.04%,
+                    #00625f 64.58%,
+                    rgba(0,98,95, .46) 85.94%,
+                    rgba(0,98,95, 0) 100%
+    );
+    }
+.ProgressionView_frontFx_f6 {
+    animation: ProgressionView_fadeOut_c8 .2s linear forwards;
+    width: 170rem;
+    height: 208rem;
+    background: no-repeat -87rem -82rem;
+    background-size: 334rem 371rem;
+    position: absolute;
+    top: 0;
+}
+.ProgressionView_base_9a:hover .ProgressionView_frontFx_f6 {
+    animation: ProgressionView_fadeIn_0f .2s linear forwards;
+    }
+.ProgressionView_backFx_ba {
+    width: 170rem;
+    height: 208rem;
+    background: no-repeat -92rem -82rem;
+    background-size: 334rem 371rem;
+    position: absolute;
+    top: 0;
+}
+.ProgressionView_icon_a4 {
+    width: 180rem;
+    height: 335rem;
+    background: no-repeat center / cover;
+    position: absolute;
+    top: 5rem;
+    pointer-events: none;
+}
+.ProgressionView_separator_17 {
+    width: 160rem;
+    height: 120rem;
+    background: no-repeat center / cover;
+    position: absolute;
+    bottom: -15rem;
+    pointer-events: none;
+}
+.ProgressionView_border_5a {
+    width: 170rem;
+    height: 38rem;
+    background: url('R.images.gui.maps.icons.bob.hangar.widget.angle_border')  no-repeat center / cover;
+    opacity: .6;
+    position: absolute;
+    bottom: 0;
+}
+.ProgressionView_teamName_d8 {
+    color: #F2F2F7;
+    font-size: 18rem;
+    font-weight: 700;
+    line-height: 1.1;
+    width: 100%;
+    text-align: center;
+    white-space: pre-wrap;
+    position: absolute;
+    top: 141rem;
+}
+.ProgressionView_rank_cf {
+    width: 100%;
+    color: #F2F2F7;
+    font-size: 110rem;
+    font-weight: 700;
+    line-height: 110rem;
+    text-align: center;
+    mask-image: linear-gradient(
+                    180deg,
+                    #fff 0%,
+                    #fff 65.82%,
+                    rgba(255, 255, 255, .13) 78.47%,
+                    rgba(255, 255, 255, 0) 86.44%
+    );
+    position: absolute;
+    bottom: 35rem;
+}
+.ProgressionView_base__hidden_a1 .ProgressionView_rank_cf,
+    .ProgressionView_base__broken_07 .ProgressionView_rank_cf {
+        visibility: hidden;
+    }
+.ProgressionView_base__team1_b6 .ProgressionView_rank_cf {
+        text-shadow: 0 0 5rem rgba(250, 0, 255, .5), 0 0 12rem rgba(148, 34, 238, .5), 0 0 12rem rgba(159, 101, 255, .5);
+    }
+.ProgressionView_base__team2_42 .ProgressionView_rank_cf {
+        text-shadow: 0 0 5rem rgba(255, 0, 0, .5), 0 0 12rem rgba(238, 34, 34, .5), 0 0 12rem rgba(255, 101, 101, .5);
+    }
+.ProgressionView_base__team3_21 .ProgressionView_rank_cf {
+        text-shadow: 0 0 5rem rgba(255, 184, 0, .5), 0 0 12rem rgba(238, 193, 34, .5), 0 0 12rem rgba(255, 193, 101, .5);
+    }
+.ProgressionView_base__team4_f1 .ProgressionView_rank_cf {
+        text-shadow: 0 0 5rem rgba(0, 117, 255, .5), 0 0 12rem rgba(34, 103, 238, .5), 0 0 12rem rgba(101, 200, 255, .5);
+    }
+.ProgressionView_base__team5_c0 .ProgressionView_rank_cf {
+        text-shadow: 0 0 5rem rgba(0, 209, 255, .5), 0 0 12rem rgba(34, 152, 238, .5), 0 0 12rem rgba(101, 181, 255, .5);
+    }
+.ProgressionView_base__team6_f3 .ProgressionView_rank_cf {
+        text-shadow: 0 0 5rem rgba(255, 0, 199, .5), 0 0 12rem rgba(222, 34, 238, .5), 0 0 12rem rgba(255, 101, 230, .5);
+    }
+.ProgressionView_base__team7_97 .ProgressionView_rank_cf {
+        text-shadow: 0 0 5rem rgba(0, 255, 148, .5), 0 0 12rem rgba(34, 238, 116, .5), 0 0 12rem rgba(101, 255, 209, .5);
+    }
+.ProgressionView_base__team8_cb .ProgressionView_rank_cf {
+        text-shadow: 0 0 5rem rgba(255, 0, 0, .5), 0 0 12rem rgba(238, 34, 34, .5), 0 0 12rem rgba(255, 101, 101, .5);
+    }
+.ProgressionView_base__team9_b6 .ProgressionView_rank_cf {
+        text-shadow: 0 0 5rem rgba(250, 0, 255, .5), 0 0 12rem rgba(148, 34, 238, .5), 0 0 12rem rgba(159, 101, 255, .5);
+    }
+.ProgressionView_base__team10_50 .ProgressionView_rank_cf {
+        text-shadow: 0 0 5rem rgba(0, 255, 148, .5), 0 0 12rem rgba(34, 238, 116, .5), 0 0 12rem rgba(101, 255, 209, .5);
+    }
+.ProgressionView_base__team11_40 .ProgressionView_rank_cf {
+        text-shadow: 0 0 5rem rgba(255, 0, 107, .5), 0 0 12rem rgba(238, 34, 107, .5), 0 0 12rem rgba(255, 101, 138, .5);
+    }
+.ProgressionView_base__team12_47 .ProgressionView_rank_cf {
+        text-shadow: 0 0 5rem rgba(255, 0, 0, .5), 0 0 12rem rgba(238, 34, 34, .5), 0 0 12rem rgba(255, 101, 101, .5);
+    }
+.ProgressionView_base__team13_e1 .ProgressionView_rank_cf {
+        text-shadow: 0 0 5rem rgba(250, 0, 255, .5), 0 0 12rem rgba(148, 34, 238, .5), 0 0 12rem rgba(159, 101, 255, .5);
+    }
+.ProgressionView_base__team14_69 .ProgressionView_rank_cf {
+        text-shadow: 0 0 5rem rgba(0, 255, 209, .5), 0 0 12rem rgba(34, 238, 201, .5), 0 0 12rem rgba(101, 255, 218, .5);
+    }
+.ProgressionView_alertIcon_ba {
+    width: 32rem;
+    height: 32rem;
+    background: url('R.images.gui.maps.icons.bob.hangar.widget.icon_alert') no-repeat center / cover;
+    visibility: hidden;
+    position: absolute;
+    bottom: 65rem;
+}
+.ProgressionView_base__broken_07 .ProgressionView_alertIcon_ba {
+        visibility: visible;
+    }
+
+@keyframes SkillsView_slideUp_64 {
+    0% {
+        transform: translateY(8rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes SkillsView_slideDown_e6 {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(8rem);
+    }
+}
+@keyframes SkillsView_fadeIn_52 {
+    0% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes SkillsView_fadeOut_16 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .5;
+    }
+}
+.SkillsView_base_b6 {
+    animation: SkillsView_slideUp_64 .2s linear forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 124rem;
+    height: 156rem;
+    position: relative;
+    cursor: pointer;
+    pointer-events: none;
+}
+.SkillsView_base_b6:hover {
+    animation: SkillsView_slideDown_e6 .2s linear forwards;
+    }
+.SkillsView_wrapper_49 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90rem;
+    height: 100%;
+    padding-top: 10rem;
+    background: url('R.images.gui.maps.icons.bob.hangar.widget.skill_bg_active') no-repeat center / cover;
+    pointer-events: auto;
+}
+.SkillsView_base__inactive_e4 .SkillsView_wrapper_49 {
+        padding-top: 20rem;
+        background-image: url('R.images.gui.maps.icons.bob.hangar.widget.skill_bg_inactive');
+    }
+.SkillsView_icon_69 {
+    width: 72rem;
+    height: 72rem;
+    margin-bottom: -18rem;
+    background: no-repeat center center / cover;
+}
+.SkillsView_base__inactive_e4 .SkillsView_icon_69 {
+        width: 40rem;
+        height: 48rem;
+        margin: 8rem 0 -4rem;
+    }
+.SkillsView_label_62 {
+    width: 124rem;
+    padding-top: 10rem;
+    color: #F2F2F7;
+    font-size: 14rem;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+}
+.SkillsView_base__inactive_e4 .SkillsView_label_62 {
+        width: 90rem;
+        padding: 10rem 4rem;
+        color: #8C8C7E;
+        text-shadow: 0 1rem 4rem #000000;
+    }
+.SkillsView_time_db {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -6rem;
+    color: #FFC363;
+    font-size: 14rem;
+    position: relative;
+}
+.SkillsView_base__inactive_e4 .SkillsView_time_db {
+        visibility: hidden;
+    }
+.SkillsView_timerIcon_d4 {
+    width: 37rem;
+    height: 37rem;
+    margin: 0 -8rem 0 -12rem;
+    background: url('R.images.gui.maps.icons.bob.hangar.entrypoint.timer') no-repeat center / contain;
+}
+.SkillsView_count_df {
+    display: flex;
+    align-items: center;
+    width: 34rem;
+    height: 34rem;
+    padding-left: 3rem;
+    background: url('R.images.gui.maps.icons.bob.hangar.widget.count_bg') no-repeat center / cover;
+    color: #FFC363;
+    font-size: 14rem;
+    position: absolute;
+    top: 10rem;
+    right: 1rem;
+}
+.SkillsView_base__inactive_e4 .SkillsView_count_df {
+        visibility: hidden;
+    }
+.SkillsView_countIcon_7d {
+    width: 17rem;
+    height: 19rem;
+    background: url('R.images.gui.maps.icons.bob.hangar.widget.count_icon') no-repeat center / contain;
+}
+
+.App_base_ba {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+.App_progression_59 {
+    margin-right: -10rem;
+}
+
+.App_skills_d4 {
+    margin-left: -10rem;
+}
+
+body {
+    margin: 1rem;
+    overflow: hidden;
+}
+
+html {
+    overflow: hidden;
+}
+

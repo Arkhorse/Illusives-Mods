@@ -1,6 +1,5 @@
 (def element DialogWindow() layout=true entrance=true
     (macro DialogWindowModel)
-    (macro BaseFormatConstants)
     (scope
         (var content:object = null)
     )
@@ -9,19 +8,6 @@
     (scope
         (var bgWidth:number = 1)
         (var bgHeight:number = 1)
-
-        (var _titleTextStyle : str = "dialogTitleTextStyle != '' ? dialogTitleTextStyle : 'GrandTitleTextStyle'")
-        (var _adaptiveEnabled:bool = "adaptiveSettings != null && adaptiveSettings.length > 0")
-        (var _adaptiveSetting:dict = "_adaptiveEnabled ? adaptiveSettings[0] : null")
-        (var isSmall:bool = "_adaptiveEnabled ? viewSize.width <= _adaptiveSetting['horizontalChangeBreakpointSM'] : false" init=true
-            (event "viewResized")
-        )
-        (var isLarge:bool = "_adaptiveEnabled ? viewSize.width >= _adaptiveSetting['horizontalChangeBreakpointML'] : false" init=true
-            (event "viewResized")
-        )
-        (var isExtraLarge:bool = "_adaptiveEnabled ? viewSize.width >= _adaptiveSetting['horizontalChangeBreakpointEL'] : false" init=true
-            (event "viewResized")
-        )
 
         (event evBackgroundLoaded)
         (bind bgWidth "$event.width" init=false
@@ -36,13 +22,13 @@
             (play duration=0.8 from={animationAlpha:0} to={animationAlpha:1} easing="Easing.cubic_out")
         )
 
-        (var contentAlpha:number = 0)
-        (var contentScaleX:number = 1.1)
-        (var contentScaleY:number = 1.1)
-        (controller $Animation
-            (play delay=0.2 duration=0.2 from={contentAlpha:0, contentScaleX:1.1, contentScaleY:1.1} 
-            to={contentAlpha:1, contentScaleX:1, contentScaleY:1} fixTextJitter=true easing="Easing.cubic_out")
-        )
+		(var contentAlpha:number = 0)
+		(var contentScaleX:number = 1.1)
+		(var contentScaleY:number = 1.1)
+		(controller $Animation
+			(play delay=0.2 duration=0.2 from={contentAlpha:0, contentScaleX:1.1, contentScaleY:1.1} 
+			to={contentAlpha:1, contentScaleX:1, contentScaleY:1} fixTextJitter=true easing="Easing.cubic_out")
+		)
 
         (var currentPreset:dict = "DIALOG_PRESETS[preset] != null ? DIALOG_PRESETS[preset] : DEFAULT_DIALOG_PRESET")
         (trace "'WARNING: preset [' + preset + '] wasnt found. Default is using'" init=false watch=false
@@ -59,33 +45,6 @@
 
         (var _isTitleFmtArgsNamed:bool = "currentPreset.isTitleFmtArgsNamed")
         (bind _isTitleFmtArgsNamed "isTitleFmtArgsNamed" init=false)
-
-        (var _adaptiveWidth:number = "_adaptiveEnabled ? 
-            _adaptiveSetting[
-                isSmall ? 
-                'contentWidthSmall' : 
-                (isExtraLarge ? 'contentWidthExtraLarge' : (isLarge ? 'contentWidthLarge' : 'contentWidthMedium'))] : 
-            0")
-        (var _contentMinWidth:number = "_adaptiveEnabled && _adaptiveWidth > 0 ? _adaptiveWidth : currentPreset.contentWidth")
-        (var _currentHorizontalOffset:number = "_adaptiveEnabled ? 
-            _adaptiveSetting[
-                isSmall ? 
-                'contentHorizontalOffsetSmall' : 
-                (isExtraLarge ? 'contentHorizontalOffsetExtraLarge' : (isLarge? 'contentHorizontalOffsetLarge' : 'contentHorizontalOffsetMedium'))] : 
-            0")
-        (var _buttonsAlign:number = "_adaptiveEnabled ? _adaptiveSetting['buttonsHorizontalAlign'] : center")
-        (var _contentAlign:number = "_adaptiveEnabled ? _adaptiveSetting['contentHorizontalAlign'] : center")
-
-        (event evInitAnimationComplete)
-        (var _dialogContentHCenter:number = "(!_adaptiveEnabled || _adaptiveSetting['contentHorizontalAlign'] == ALIGN_CENTER ? 
-            0 : 
-            (_adaptiveSetting['contentHorizontalAlign'] == ALIGN_LEFT ? -1 : 1)) * ((viewSize.width - _contentMinWidth) / 2 - _currentHorizontalOffset)"
-            (event "viewResized")
-        )
-        (var initContentAnimComplete:bool = false)
-        (bind initContentAnimComplete true init=false
-            (event "evInitAnimationComplete")
-        )
     )
 
     (dispatch onClosed on='escPressed')
@@ -130,21 +89,21 @@
         (dispatch evBackgroundLoaded init=false on='complete')
         (bind source "backgroundImage != '' ? backgroundImage : currentPreset.backgroundImage" init=false)
     )
-
     (block
         (name = 'dialogContent')
         (style
             (position = "absolute")
-            (bind width "_contentMinWidth")
-            (bind hcenter "_dialogContentHCenter")
+            (bind width "currentPreset.contentWidth")
+            (hcenter = 0px)
             (vcenter = 0px)
             (pivotX = 50%)
             (pivotY = 50%)
             (align = "middle|center")
+            (alpha = 0)
             (gap = 12px)
-            (bind alpha "contentAlpha")
-            (bind scaleX "contentScaleX")
-            (bind scaleY "contentScaleY")
+			(bind alpha "contentAlpha")
+			(bind scaleX "contentScaleX")
+			(bind scaleY "contentScaleY")
         )
         (block
             (style
@@ -188,7 +147,7 @@
             )
             (tf
                 (name = 'title')
-                (bind class "_titleTextStyle")
+                (class GrandTitleTextStyle)
                 (style
                     (width = 100%)
                     (marginTop = -20px)
@@ -197,7 +156,7 @@
 
                 (bind htmlText "htmlTextStyle(
                         formatString(_title, _titleFmtArgs, _isTitleFmtArgsNamed),
-                        _titleTextStyle,
+                        'GrandTitleTextStyle',
                         'center'
                     )"
                     (enabled="_titleFmtArgs.length > 0 && _title != ''")
@@ -229,16 +188,15 @@
 
         # Devider
         (block
-            (name = 'divider')
+            (name = 'devider')
             (style
                 (width = 100%)
-                (bind minWidth "_contentMinWidth")
+                (bind minWidth "currentPreset.contentWidth")
                 (backgroundColor = 0x19FFFFFF)
                 (height = 1px)
                 (marginTop = 16px)
                 (marginBottom = 24px)
             )
-            (bind visible "isDividerVisible")
         )
 
         # Bottom content block
@@ -251,42 +209,14 @@
             (bind visible "hasBottomContent != null")
         )
 
-        (block
-            (name = 'buttons')
-            (style
-                (bind width "_contentMinWidth")
-                (bind align "_buttonsAlign")
-            )
-            (group name='buttons'
-                (renderer = 'DialogButton')
-                (container
-                    (style
-                        (flow = "Flow.HORIZONTAL")
-                        (gap = 12px)
-                    )
+        (group name='buttons'
+            (renderer = 'DialogButton')
+            (container
+                (style
+                    (flow = "Flow.HORIZONTAL")
+                    (gap = 12px)
                 )
             )
-        )
-
-        (controller $Animation
-            (playSeq
-                    "[
-                        {
-                            duration:0.001,
-                            to:{alpha:0}
-                        },
-                        {
-                            delay:0.2,
-                            duration:0.2,
-                            from:{alpha:0, scaleX:1.1, scaleY:1.1},
-                            to:{alpha:1, scaleX:1, scaleY:1}
-
-                        }
-                    ]"
-                    fixTextJitter=true easing="Easing.cubic_out"
-                    callbacks="{onComplete:evInitAnimationComplete}"
-                    (enabled = "!initContentAnimComplete")
-                )
         )
     )
 
@@ -346,7 +276,6 @@
     (button
         (style
             (minWidth = 160px)
-            (bind alpha "isVisible ? 1 : 0")
         )
         (macro ButtonSimpleStyles "BUTTON_SIZE_LARGE" "null")
         (macro ButtonIconTextStyles "BUTTON_SIZE_LARGE")
@@ -358,7 +287,7 @@
 
         (bind label "label")
         (bind label "rawLabel")
-        (bind enabled "isEnabled && isVisible")
+        (bind enabled "isEnabled")
         (bind icon "icon")
         (bind iconAlign "iconAfterText ? right : left")
         (bind soundDown "soundDown" (bind enabled "soundDown != ''"))

@@ -1,5 +1,5 @@
 (def constant TOOLTIP_MAX_WIDTH 310px)
-(def constant TOOLTIP_MIN_WIDTH 20px)
+(def constant TOOLTIP_MIN_WIDTH 40px)
 
 # Block with text field. Allows to specify Text style and top margin
 (def macro TooltipTextBlock(text:expression, class:str, marginTop:number, maxWidth:number = "TOOLTIP_MAX_WIDTH", marginBottom:number = 0, useHtml:expression = false)

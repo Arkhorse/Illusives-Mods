@@ -185,11 +185,8 @@
                (paddingBottom = 2px)
                (paddingRight = 2px)
             )
-            (button 
-                (name = 'ArrowBtn')
-                # TODO: change
-                # (macro NumericStepperBtn)
-                (macro ButtonStylePrimary "BUTTON_SIZE_MEDIUM")
+            (element Button 'ArrowBtn'
+                (macro NumericStepperBtn)
                 (style
                     (width = "NUMERIC_STEPPER_BTN_HEIGHT_BREAK_POINT")
                 )
@@ -197,7 +194,9 @@
                     redMultiplier:multiplier, greenMultiplier:multiplier, blueMultiplier:multiplier, alphaMultiplier:multiplier,
                     redOffset:offset, greenOffset:offset, blueOffset:offset, alphaOffset:0}"
                 )
-                (bind enabled "_isEnabled")
+                (scope
+                    (bind _isEnabled "_isEnabled")
+                )
             )
         )
     )

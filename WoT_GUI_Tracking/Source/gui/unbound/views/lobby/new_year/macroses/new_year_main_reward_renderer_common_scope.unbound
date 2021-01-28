@@ -1,6 +1,0 @@
-(def macro NewYearMainRewardRendererCommonScope()
-    (scope
-        (var idx:number = -1)
-        (var isAchieved:bool = false)
-    )
-)

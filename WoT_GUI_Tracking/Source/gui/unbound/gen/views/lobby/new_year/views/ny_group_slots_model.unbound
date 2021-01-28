@@ -1,8 +1,0 @@
-# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
-# Please, don't edit this file manually.
-(def macro NyGroupSlotsModel()
-    (scope
-        # The following submodels are used in this model:
-        # slots:gui.impl.wrappers.user_list_model.UserListModel
-    )
-)

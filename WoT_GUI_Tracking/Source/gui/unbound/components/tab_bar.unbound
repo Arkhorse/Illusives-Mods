@@ -15,16 +15,9 @@
         (bind selectedIndex "$event.index" init=false (event "__evSelectedIndexChanged"))
         (bind selectedIndex "$event.index > $event.count - 1 ? $event.count - 1 : $event.index" init=false (event "evRendererCountChanged"))
 
-        (dispatch evTabBarIndexChanged args="{index:selectedIndex}"
-            (event "evRendererCountChanged")
-        )
-
         (var isEnabled:bool = true
             (dispatch evTabBarDisabledEvent on='evChanged' (bind enabled "!isEnabled"))
         )
-
-        (var scopeData:array = [])
-        (bind rendererCount "scopeData.length" init=false)
     )
 
     (controller $Repeat renderer="rendererName"
@@ -33,13 +26,8 @@
             (name = "'tabRenderer_' + $index")
             (scope
                 (dispatch __evSelectedIndexChanged args="{index:$index}" on='evBtnLeftClickEvent')
-                (bind selected "$index == selectedIndex")
-                (bind isEnabled "isEnabled"
-                    (event "evTabBarDisabledEvent")
-                )
-                (bind data "scopeData[$index]"
-                    (bind enabled "$index < scopeData.length")
-                )
+                (bind selected "$index == selectedIndex" init=false)
+                (bind isEnabled "isEnabled" (event "evTabBarDisabledEvent"))
             )
         )
     )

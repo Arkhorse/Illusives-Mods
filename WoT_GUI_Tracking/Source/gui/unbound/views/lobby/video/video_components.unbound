@@ -80,7 +80,7 @@
         (volume = 1)
         (autoPlay = 1)
         (seek = 0)
-		# (openTimeout = 5)
+		(openTimeout = 5)
         (bind source "videoName")
 
         (bindcall pause init=false

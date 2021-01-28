@@ -766,12 +766,11 @@
       <item>Utilizes Vivox, Â© 2018 Vivox, Inc. All rights reserved. See www.vivox.com for details.\n<name>default</name><type>string</type></item>
     </value>
   </setting>
-  <setting>https://na.wargaming.net/id/signin/token/?account_id=$DB_ID&amp;token=$WGNI_TOKEN&amp;continue_on_failure=1&amp;next=$TARGET_URL(https://na.wargaming.net/shop/gifts)<name>lootBoxGiftURL</name><type>url</type></setting>
   <setting>
-    <name>newYearInfo</name>
+    <name>	bobEvent	</name>
     <type>	dict	</type>
     <value>
-      <item>https://webbrg.worldoftanks.com/$LANGUAGE_CODE/promocontent/HO2020Video/<name>baseURL</name><type>url</type></item>
+      <item>$PARAMS(skills/)<name>skillsUrl</name><type>url</type></item>
     </value>
   </setting>
 </gui_settings.xml>

@@ -10,7 +10,6 @@
         (const INIT_CONGRAT_TYPE_USUAL:str = 'UsualCongrats')
         (const INIT_CONGRAT_TYPE_PROGRESSIVE_REWARDS:str = 'ProgressiveRewardCongrats')
         (const INIT_CONGRAT_TYPE_CREW_BOOKS:str = 'CrewBookCongrats')
-        (const INIT_CONGRAT_TYPE_LOOTBOX:str = 'LootBoxCongrats')
         (const INIT_CONGRAT_TYPE_EPIC_REWARDS:str = 'EpicRewardCongrats')
         (const INIT_CONGRAT_TYPE_BATTLE_PASS:str = 'BattlePassCongrats')
     )

@@ -420,5 +420,8 @@
     <clans_winner_reward_exit>clans_winner_reward_exit</clans_winner_reward_exit>
     <clans_winner_reward_make_bet>clans_winner_reward_make_bet</clans_winner_reward_make_bet>
     <clans_winner_reward_complete>clans_winner_reward_complete</clans_winner_reward_complete>
+    <gui_bb_bloggers_highlight>gui_bb_bloggers_highlight</gui_bb_bloggers_highlight>
+    <gui_bb_bloggers_buttons_play>gui_bb_bloggers_buttons_play</gui_bb_bloggers_buttons_play>
+    <gui_bb_bloggers_skills_up>gui_bb_bloggers_skills_up</gui_bb_bloggers_skills_up>
   </effects>
 </gui_sounds.xml>

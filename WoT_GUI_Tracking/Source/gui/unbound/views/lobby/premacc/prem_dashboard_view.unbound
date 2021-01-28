@@ -16,11 +16,7 @@
         (event "$evReadyChanged")
     )
     
-    (element BackgroundElement
-        (scope
-            (bgSource="R.images.gui.maps.icons.premacc.backgrounds.dashboard()")
-        )
-    )
+    (element PremDashboarBg)
     (controller $Tutorial viewTutorialId='PremDashboardView')
 
     (block
@@ -127,7 +123,7 @@
         (hover source="null" scale9grid=null blend='add' offsets="[]")
         (icon="R.atlases.components.closeBtnIcon()")
         (dispatch onCloseAction on='clicked')
-        (bind visible "viewSize.width <= 1150 && viewSize.height < 800" 
+        (bind visible "viewSize.width <= 1150 && viewSize.height <= 800" 
             (event "viewResized")
         )
     )

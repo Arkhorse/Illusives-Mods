@@ -21,24 +21,6 @@
     }
 )
 
-(def constant TRANSPARENT_DEFAULT_DIALOG_PRESET "{
-        yOffset: DEFAULT_DIALOG_PRESET.yOffset, 
-        backgroundColor: 0x00000000,
-        contentWidth: DEFAULT_DIALOG_PRESET.contentWidth,
-        iconHighlight: DEFAULT_DIALOG_PRESET.iconHighlight,
-        animationHighlight: DEFAULT_DIALOG_PRESET.animationHighlight,
-        icon: DEFAULT_DIALOG_PRESET.icon,
-        title: DEFAULT_DIALOG_PRESET.title,
-        titleArgs: DEFAULT_DIALOG_PRESET.titleArgs,
-        titleFmtArgs: DEFAULT_DIALOG_PRESET.titleFmtArgs,
-        isTitleFmtArgsNamed: DEFAULT_DIALOG_PRESET.isTitleFmtArgsNamed,
-        hasCloseButton: DEFAULT_DIALOG_PRESET.hasCloseButton,
-        backgroundImage: DEFAULT_DIALOG_PRESET.backgroundImage,
-        backgroundImageScale: DEFAULT_DIALOG_PRESET.backgroundImageScale,
-        showSoundId: DEFAULT_DIALOG_PRESET.showSoundId
-    }"
-)
-
 (def properties INFO_DIALOG_PRESET {
         backgroundColor: 0x7F000000
     }
@@ -115,7 +97,6 @@
         error: ERROR_DIALOG_PRESET,
         blueprintsConversion: BLUEPRINTS_CONVERSION_DIALOG_PRESET,
         mapsBlacklist: MAPS_BLACKLIST_DIALOG_PRESET,
-        transparentDefault: TRANSPARENT_DEFAULT_DIALOG_PRESET,
         buyBattlePass: BUY_BATTLE_PASS_DIALOG_PRESET,
         trophyDeviceUpgrade: TROPHY_DEVICE_UPGRADE_PRESET,
         customizationInstallBound: CUSTOMIZATION_INSTALL_BOUND_DIALOG_PRESET,

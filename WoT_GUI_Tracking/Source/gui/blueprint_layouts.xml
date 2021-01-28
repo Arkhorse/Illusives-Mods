@@ -243,7 +243,11 @@
     <lodIdx>	2	</lodIdx>
   </layout>
   <layout>
-    <vehicles>poland:Pl05_50TP_Tyszkiewicza</vehicles>
+    <vehicles>poland:Pl05_50TP_Tyszkiewicza
+			italy:It16_Carro_d_assalto_P88
+			italy:It17_Progetto_CC55_mod_54
+			italy:It19_Progetto_C50_mod_66
+			italy:It15_Rinoceronte</vehicles>
     <front>200 120 0.4 1.0</front>
     <left>500 120 0.4 1.0</left>
     <top>200 320 0.4 1.0</top>

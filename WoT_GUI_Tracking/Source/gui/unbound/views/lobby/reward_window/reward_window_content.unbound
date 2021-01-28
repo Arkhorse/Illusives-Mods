@@ -100,9 +100,7 @@
         (tf
             (name = 'subHeaderTF')
             (class VehicleStatusSimpleTextStyle)
-            (bind text "R.strings.ingame_gui.rewardWindow[eventName].subHeaderText.exists() 
-                                ? R.strings.ingame_gui.rewardWindow[eventName].subHeaderText()  
-                                : ''"  init=false)
+            (bind text "R.strings.ingame_gui.rewardWindow[eventName].subHeaderText()"  init=false)
         )
         (tf
             (name = 'headerTF')

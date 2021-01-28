@@ -8,7 +8,6 @@
         (const INFO:str = 'info')
         (const BLUEPRINTS_CONVERSION:str = 'blueprintsConversion')
         (const MAPS_BLACKLIST:str = 'mapsBlacklist')
-        (const TRANSPARENT_DEFAULT:str = 'transparentDefault')
         (const TROPHY_DEVICE_UPGRADE:str = 'trophyDeviceUpgrade')
         (const BUY_BATTLE_PASS:str = 'buyBattlePass')
         (const CUSTOMIZATION_INSTALL_BOUND:str = 'customizationInstallBound')

@@ -1,7 +1,7 @@
 (def macro LootBoxCompensationTooltipBase()
     (macro TooltipDefaultConstraints)
     (macro LootBoxCompensationTooltipTypes)
-
+    
     (scope
         (const WIDTH:number = 340)
     )
@@ -53,8 +53,7 @@
                     (hcenter = 0px)
                 )
                 (class MainTextStyle)
-                (bind text "countBefore == 1 ? R.strings.lootboxes.compensationTooltip.before.header.single() :
-                    TextFormat(R.strings.lootboxes.compensationTooltip.before.header.multiple(), {count:countBefore})")
+                (bind text "TextFormat(R.strings.lootboxes.compensationTooltip.before.header(), {count:countBefore})")
             )
 
             (block
@@ -184,8 +183,8 @@
     (view_holder_content 'iconBeforeBlock'
         (image
             (style
-               (width = 120px)
-               (height = 80px)
+                (maxWidth = 120px)
+                (maxHeight = 80px)
             )
             (bind source "iconBefore")
         )
@@ -195,7 +194,7 @@
         (hblock
             (name = 'vehicleNameBlock')
             (style
-                (align = "middle")
+                (align="middle")
             )
             (tf
                 (name = 'tankLevelTF')
@@ -204,7 +203,7 @@
             )
             (image
                 (name = 'vehicleTypeImg')
-               (bind source "vehicleType != '' ? R.images.gui.maps.icons.filters.tanks[vehicleType]() : ''" init=false)
+                (bind source "vehicleType != '' ? R.atlases.components['small_'+vehicleType]() : ''" init=false)
             )
             (tf
                 (name = 'tankNameTF')
@@ -235,7 +234,7 @@
                 )
                 (source = "R.images.gui.maps.icons.library.changeTank()")
             )
-            (macro TooltipTextBlock "R.strings.lootboxes.compensationTooltip.vehicle.bottomText()" MainTextStyle 0px 340px)
+            (macro TooltipTextBlock "R.strings.lootboxes.compensationTooltip.bottomText()" MainTextStyle 0px 340px)
         )
     )
 )

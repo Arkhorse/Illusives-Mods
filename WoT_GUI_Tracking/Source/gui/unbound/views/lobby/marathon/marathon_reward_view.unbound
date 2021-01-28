@@ -43,11 +43,12 @@
             (scope
                 (canEscape = true)
                 (canClick = false)
+                (isVideoPlaying = false)
                 (seekToEnd = true)
-                (bind playVideo true init=false
+                (bind isVideoPlaying "true" init=false
                     (event "evDelayComplete")
                 )                              
-                (bind sourceName "R.videos.VehicleLootBoxCongrats[videoSource]()" init=false)
+                (bind sourceName "R.videos.vehicle[videoSource]()" init=false)
                 (dispatch onVideoStarted on='evOnPlaybackStarted')
                 (dispatch onVideoStopped on='evOnPlaybackStopped')
             )           
@@ -129,21 +130,19 @@
                     (gap = 20px)
                 )
 
-                (button 
-                    (name = 'goToVehicleBtn')
-                    (macro ButtonStylePrimary "BUTTON_SIZE_MEDIUM")
-                    (label = "R.strings.marathon.reward.goToVehicleBtn()")
+                (element Button name='goToVehicleBtn'
+                    (macro Primary)
                     (scope
-                        (bind enabled "isGoToVehicleBtnEnabled")
+                        (label = "R.strings.marathon.reward.goToVehicleBtn()")
+                        (bind isEnabled "isGoToVehicleBtnEnabled")
                         (dispatch onGoToVehicleBtnClick on='evBtnLeftClickEvent')
                     )
                     (tabIndex = 2)
                 )
-                (button 
-                    (name = 'viewRewardsBtn')
-                    (macro ButtonStyleSecondary "BUTTON_SIZE_MEDIUM")
-                    (label = "R.strings.marathon.reward.viewRewardsBtn()")
+                (element Button name='viewRewardsBtn'
+                    (macro Secondary)
                     (scope
+                        (label = "R.strings.marathon.reward.viewRewardsBtn()")
                         (dispatch onViewRewardsBtnClick on='evBtnLeftClickEvent')
                     )
                     (tabIndex = 1)

@@ -1,8 +1,0 @@
-# This file was generated using wgpygen from the configs/templates/view_model.unbound.jinja2 template.
-# Please, don't edit this file manually.
-(def macro NyTalismanTooltipModel()
-    (scope
-        (var talismanImage:str = '')
-        (var isAvailable:bool = false)
-    )
-)

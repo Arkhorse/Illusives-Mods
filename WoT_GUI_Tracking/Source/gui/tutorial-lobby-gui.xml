@@ -674,6 +674,36 @@
       </value>
     </item>
     <item>
+      <name>CreatePlatoonButton</name>
+      <type>	dict	</type>
+      <value>
+        <item>
+          <name>	view	</name>
+          <value>lobby</value>
+        </item>
+        <item>
+          <name>	path	</name>
+          <value>header.headerButtonBar:HeaderButton_UI?id=squad</value>
+        </item>
+        <item>
+          <name>padding</name>
+          <type>	dict	</type>
+          <value>
+            <item>
+              <name>top</name>
+              <type>float</type>
+              <value>	3	</value>
+            </item>
+            <item>
+              <name>bottom</name>
+              <type>float</type>
+              <value>	1	</value>
+            </item>
+          </value>
+        </item>
+      </value>
+    </item>
+    <item>
       <name>CrystalsButton</name>
       <type>	dict	</type>
       <value>
@@ -4363,46 +4393,6 @@
               <name>bottom</name>
               <type>float</type>
               <value>	0	</value>
-            </item>
-          </value>
-        </item>
-      </value>
-    </item>
-    <item>
-      <name>NyVehiclesExtraSlotBonusDD</name>
-      <type>	dict	</type>
-      <value>
-        <item>
-          <name>	view	</name>
-          <value>NewYearVehicles</value>
-        </item>
-        <item>
-          <name>	path	</name>
-          <value>	extraSlotBonusDD	</value>
-        </item>
-        <item>
-          <name>padding</name>
-          <type>	dict	</type>
-          <value>
-            <item>
-              <name>	left	</name>
-              <type>float</type>
-              <value>	0	</value>
-            </item>
-            <item>
-              <name>top</name>
-              <type>float</type>
-              <value>	0	</value>
-            </item>
-            <item>
-              <name>right</name>
-              <type>float</type>
-              <value>	0	</value>
-            </item>
-            <item>
-              <name>bottom</name>
-              <type>float</type>
-              <value>	20	</value>
             </item>
           </value>
         </item>

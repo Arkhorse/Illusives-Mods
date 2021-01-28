@@ -18,9 +18,6 @@
         (var preset:str = 'default')
         (var hasBalance:bool = false)
         (var hasBottomContent:bool = false)
-        (var isDividerVisible:bool = true)
-        (var dialogTitleTextStyle:str = '')
-        (var adaptiveSettings:array = [])
 
         # The following submodels are used in this model:
         # buttons:gui.impl.wrappers.user_list_model.UserListModel

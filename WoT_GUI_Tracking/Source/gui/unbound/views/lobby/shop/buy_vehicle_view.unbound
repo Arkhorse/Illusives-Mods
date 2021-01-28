@@ -40,17 +40,6 @@
         (bind source "bgSource")
         (dispatch onImageBgLoaded on='complete')
     )
-    (text_button 'closeBtn'
-        (tabIndex = -1)
-        (macro ButtonCloseStyle)
-        (style
-            (position = "absolute")
-            (right = 40px)
-            (top = 37px)
-        )
-        (label = "R.strings.menu.viewHeader.closeBtn.label()")
-        (dispatch onCloseBtnClick on='clicked')
-    )
     (block
         (name = 'contentBox')
         (style
@@ -225,6 +214,19 @@
             )
         )
     )
+
+    (text_button 'closeBtn'
+        (tabIndex = -1)
+        (macro ButtonCloseStyle)
+        (style
+            (position = "absolute")
+            (right = 40px)
+            (top = 37px)
+        )
+        (label = "R.strings.menu.viewHeader.closeBtn.label()")
+        (dispatch onCloseBtnClick on='clicked')
+    )
+
     (element CongratulationAnim 'congratulationAnim'
         (scope
             (bind isContentHidden "isContentHidden")

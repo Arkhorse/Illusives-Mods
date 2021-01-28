@@ -1056,4 +1056,105 @@
       <rgba>131 121 254 255</rgba>
     </color_blind>
   </areaBorder>
+  <playersListBloggerName>
+    <rgba>254 254 236 255</rgba>
+  </playersListBloggerName>
+  <blogger_1>
+    <rgba>135 41 194 255</rgba>
+    <transform>
+      <mult>0 0 0 1</mult>
+      <offset>135 41 194 0</offset>
+    </transform>
+  </blogger_1>
+  <blogger_2>
+    <rgba>205 8 25 255</rgba>
+    <transform>
+      <mult>0 0 0 1</mult>
+      <offset>205 8 25 0</offset>
+    </transform>
+  </blogger_2>
+  <blogger_3>
+    <rgba>207 182 23 255</rgba>
+    <transform>
+      <mult>0 0 0 1</mult>
+      <offset>207 182 23 0</offset>
+    </transform>
+  </blogger_3>
+  <blogger_4>
+    <rgba>23 86 190 255</rgba>
+    <transform>
+      <mult>0 0 0 1</mult>
+      <offset>23 86 190 0</offset>
+    </transform>
+  </blogger_4>
+  <blogger_5>
+    <rgba>0 151 201 255</rgba>
+    <transform>
+      <mult>0 0 0 1</mult>
+      <offset>0 151 201 0</offset>
+    </transform>
+  </blogger_5>
+  <blogger_6>
+    <rgba>194 22 164 255</rgba>
+    <transform>
+      <mult>0 0 0 1</mult>
+      <offset>194 22 164 0</offset>
+    </transform>
+  </blogger_6>
+  <blogger_7>
+    <rgba>16 163 112 255</rgba>
+    <transform>
+      <mult>0 0 0 1</mult>
+      <offset>16 163 112 0</offset>
+    </transform>
+  </blogger_7>
+  <blogger_8>
+    <rgba>224 69 77 255</rgba>
+    <transform>
+      <mult>0 0 0 1</mult>
+      <offset>224 69 77 0</offset>
+    </transform>
+  </blogger_8>
+  <blogger_9>
+    <rgba>136 41 194 255</rgba>
+    <transform>
+      <mult>0 0 0 1</mult>
+      <offset>136 41 194 0</offset>
+    </transform>
+  </blogger_9>
+  <blogger_10>
+    <rgba>16 163 112 255</rgba>
+    <transform>
+      <mult>0 0 0 1</mult>
+      <offset>16 163 112 0</offset>
+    </transform>
+  </blogger_10>
+  <blogger_11>
+    <rgba>227 55 116 255</rgba>
+    <transform>
+      <mult>0 0 0 1</mult>
+      <offset>227 55 116 0</offset>
+    </transform>
+  </blogger_11>
+  <blogger_12>
+    <rgba>224 69 77 255</rgba>
+    <transform>
+      <mult>0 0 0 1</mult>
+      <offset>224 69 77 0</offset>
+    </transform>
+  </blogger_12>
+  <blogger_13>
+    <rgba>136 41 194 255</rgba>
+    <transform>
+      <mult>0 0 0 1</mult>
+      <offset>136 41 194 0</offset>
+    </transform>
+  </blogger_13>
+  <blogger_14>
+    <rgba>42 173 169 255</rgba>
+    <transform>
+      <mult>0 0 0 1</mult>
+      <offset>42 173 169 0</offset>
+    </transform>
+  </blogger_14>
 </gui_colors.xml>

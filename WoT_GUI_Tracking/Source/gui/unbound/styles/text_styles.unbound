@@ -339,11 +339,6 @@
     (textColor = 0xE9E2BF)
 )
 
-(def css StatsTextStyleResetFilter()  #13 with resetting filter
-    (extends StatsTextStyle)
-    (filters)
-)
-
 # 14 There is no name for this style in the doc. There is no underline in a style
 
 (def css PlayerOnlineTextStyle()  #15
@@ -564,22 +559,4 @@
     (fontFamily = $TitleFont)
     (fontSize = 144)
     (textColor = 0xffffff)
-)
-
-(def css LootboxesDownMenuStyle()
-    (fontFamily = $FieldFont)
-    (fontSize = 14)
-    (textColor = 0x8c8c7e)
-)
-
-(def css LootboxesDownSelectedMenuStyle()
-    (fontFamily = $FieldFont)
-    (fontSize = 14)
-    (textColor = 0xCBAC77)
-)
-
-(def css LootboxesDownDisabledMenuStyle()
-    (fontFamily = $FieldFont)
-    (fontSize = 14)
-    (textColor = 0x37362e)
 )

@@ -1277,6 +1277,7 @@ _(#invites:invites/text/fort/defence) &lt;font color="#c9c9b6"&gt;%(clanAbbrev)s
     <message>
       <yellow>&lt;font color="#E9E2BF" size="15" face="$TitleFont"&gt;%(text)s&lt;/font&gt;</yellow>
       <gray>&lt;font color="#807F71" size="15" face="$TitleFont"&gt;%(text)s&lt;/font&gt;</gray>
+      <green>&lt;font color="#80D43A" size="15" face="$TitleFont"&gt;%(text)s&lt;/font&gt;</green>
     </message>
   </bootcamp>
   <battleRoyale>

@@ -35,24 +35,12 @@
     }
 
     .Badge_base__x48_e4 {
-            width: 48rem;
-            height: 48rem;
-        }
-
-    .Badge_base__x80_43 {
-            width: 80rem;
-            height: 80rem;
-        }
-
-    .Badge_base__x220_83 {
-            width: 220rem;
-            height: 220rem;
-        }
+        width: 48rem;
+        height: 48rem;
+    }
 
 .Badge_level_ec {
     display: flex;
-    justify-content: center;
-    width: 100%;
     padding-left: 2rem;
 }
 
@@ -62,14 +50,6 @@
 
 .Badge_base__x48_e4 .Badge_level_ec {
         margin-top: 13rem;
-    }
-
-.Badge_base__x80_43 .Badge_level_ec {
-        margin-top: 22rem;
-    }
-
-.Badge_base__x220_83 .Badge_level_ec {
-        margin-top: 72rem;
     }
 
 .Badge_digit_be {
@@ -87,26 +67,30 @@
         margin-left: -3rem;
     }
 
-.Badge_base__x80_43 .Badge_digit_be {
-        width: 16rem;
-        height: 20rem;
-        margin-left: -6rem;
-        margin-right: -2rem;
-    }
-
-.Badge_base__x220_83 .Badge_digit_be {
-        width: 35rem;
-        height: 47rem;
-        margin-left: -8rem;
-        margin-right: -4rem;
-    }
-
 .PlayerNickname_base_32 {
     display: flex;
     align-items: center;
     position: relative;
     z-index: 0;
 }
+
+.PlayerNickname_userName_cc {
+    flex: 0 1 auto; /* the only value for correct work */
+}
+
+.PlayerNickname_igrIcon_34 {
+    background: url('R.images.gui.maps.icons.library.premium_igr_big.png') no-repeat center / contain;
+}
+
+.PlayerNickname_base__default_8d .PlayerNickname_igrIcon_34 {
+        width: 32rem;
+        height: 14rem;
+    }
+
+.PlayerNickname_base__x48_84 .PlayerNickname_igrIcon_34 {
+        width: 64rem;
+        height: 28rem;
+    }
 
 .PlayerNickname_suffixBadgeWrapper_cc {
     display: flex;
@@ -123,15 +107,25 @@
 .PlayerNickname_base__default_8d .PlayerNickname_suffixBadgeStripe_8a {
         width: 64rem;
         height: 24rem;
-        top: 0;
         right: 12rem;
+    }
+
+.PlayerNickname_base__default_8d.PlayerNickname_base__inverted_34 .PlayerNickname_suffixBadgeStripe_8a {
+        right: auto;
+        left: 12rem;
+        transform: rotateY(180deg);
     }
 
 .PlayerNickname_base__x48_84 .PlayerNickname_suffixBadgeStripe_8a {
         width: 68rem;
         height: 28rem;
-        top: 2rem;
         right: 16rem;
+    }
+
+.PlayerNickname_base__x48_84.PlayerNickname_base__inverted_34 .PlayerNickname_suffixBadgeStripe_8a {
+        right: auto;
+        left: 16rem;
+        transform: rotateY(180deg);
     }
 
 .PlayerNickname_suffixBadge_bd {
@@ -148,10 +142,6 @@
         height: 32rem;
     }
 
-.PlayerNickname_userName_cc {
-    flex: 0 1 auto; /* the only value for correct work */
-}
-
 .PlayerNickname_anonymizedIcon_80 {
     background: no-repeat center / contain;
 }
@@ -166,20 +156,6 @@
         width: 48rem;
         height: 48rem;
         background-image: url('R.images.gui.maps.icons.library.eye_48x48.png');
-    }
-
-.PlayerNickname_igrIcon_34 {
-    background: url('R.images.gui.maps.icons.library.premium_igr_big.png') no-repeat center / contain;
-}
-
-.PlayerNickname_base__default_8d .PlayerNickname_igrIcon_34 {
-        width: 32rem;
-        height: 14rem;
-    }
-
-.PlayerNickname_base__x48_84 .PlayerNickname_igrIcon_34 {
-        width: 64rem;
-        height: 28rem;
     }
 
 /*////////////*/

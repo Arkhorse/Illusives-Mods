@@ -3,6 +3,7 @@
 (def macro PremDashboardHeaderModel()
     (scope
         (event onShowBadges)
+        (event onEmailButtonClicked)
 
         (var prefixBadgeId:str = '')
         (var suffixBadgeId:str = '')
@@ -10,6 +11,9 @@
         (var isDynamicBadge:bool = false)
         (var isInClan:bool = false)
         (var hasClanReserves:bool = false)
+        (var isWarningIconVisible:bool = false)
+        (var emailButtonLabel:str = '')
+        (var showEmailActionTooltip:bool = false)
 
         # The following submodels are used in this model:
         # userName:common.user_name_model

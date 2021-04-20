@@ -1169,11 +1169,11 @@
       <value>
         <item>
           <name>	view	</name>
-          <value>hangar</value>
+          <value>R.views.lobby.tanksetup.AmmunitionPanel</value>
         </item>
         <item>
           <name>	path	</name>
-          <value>	BootcampPanelOptDeviceMC	</value>
+          <value>div[id=panel-optDevices-section]</value>
         </item>
         <item>
           <name>padding</name>
@@ -2735,56 +2735,16 @@
       </value>
     </item>
     <item>
-      <name>	HangarPanelOptDevice	</name>
-      <type>	dict	</type>
-      <value>
-        <item>
-          <name>	view	</name>
-          <value>hangar</value>
-        </item>
-        <item>
-          <name>	path	</name>
-          <value>HangarPanelOptDeviceMC</value>
-        </item>
-        <item>
-          <name>padding</name>
-          <type>	dict	</type>
-          <value>
-            <item>
-              <name>	left	</name>
-              <type>float</type>
-              <value>	0	</value>
-            </item>
-            <item>
-              <name>top</name>
-              <type>float</type>
-              <value>	0	</value>
-            </item>
-            <item>
-              <name>right</name>
-              <type>float</type>
-              <value>	0	</value>
-            </item>
-            <item>
-              <name>bottom</name>
-              <type>float</type>
-              <value>	0	</value>
-            </item>
-          </value>
-        </item>
-      </value>
-    </item>
-    <item>
       <name>HangarPanelShells</name>
       <type>	dict	</type>
       <value>
         <item>
           <name>	view	</name>
-          <value>hangar</value>
+          <value>R.views.lobby.tanksetup.AmmunitionPanel</value>
         </item>
         <item>
           <name>	path	</name>
-          <value>HangarPanelShellsMC</value>
+          <value>div[id=panel-shells-section]</value>
         </item>
         <item>
           <name>padding</name>
@@ -3462,11 +3422,11 @@
       <value>
         <item>
           <name>	view	</name>
-          <value>hangar</value>
+          <value>R.views.lobby.tanksetup.AmmunitionPanel</value>
         </item>
         <item>
           <name>	path	</name>
-          <value>	BootcampPanelEquipmentMC	</value>
+          <value>div[id=panel-consumables-section]</value>
         </item>
         <item>
           <name>	bootcampHint	</name>
@@ -3513,11 +3473,11 @@
       <value>
         <item>
           <name>	view	</name>
-          <value>ammunitionSetupView</value>
+          <value>R.views.lobby.tanksetup.HangarAmmunitionSetup</value>
         </item>
         <item>
           <name>	path	</name>
-          <value>SetupViewCardsEquipmentMC</value>
+          <value>div[class^=Cards_base][id=consumables]</value>
         </item>
         <item>
           <name>	bootcampHint	</name>
@@ -3559,16 +3519,16 @@
       </value>
     </item>
     <item>
-      <name>	AmmunitionSetupEquipmentApplyBtn	</name>
+      <name>AmmunitionSetupApplyBtn</name>
       <type>	dict	</type>
       <value>
         <item>
           <name>	view	</name>
-          <value>ammunitionSetupView</value>
+          <value>R.views.lobby.tanksetup.HangarAmmunitionSetup</value>
         </item>
         <item>
           <name>	path	</name>
-          <value>ApplyHangarEquipmentMC</value>
+          <value>div[id=deal-panel-confirm]</value>
         </item>
         <item>
           <name>	bootcampHint	</name>
@@ -3615,62 +3575,11 @@
       <value>
         <item>
           <name>	view	</name>
-          <value>ammunitionSetupView</value>
+          <value>R.views.lobby.tanksetup.HangarAmmunitionSetup</value>
         </item>
         <item>
           <name>	path	</name>
-          <value>SetupViewCardsOptDeviceMC</value>
-        </item>
-        <item>
-          <name>	bootcampHint	</name>
-          <type>	dict	</type>
-          <value>
-            <item>
-              <name>hideBorder</name>
-              <type>	bool	</type>
-              <value>False</value>
-            </item>
-            <item>
-              <name>padding</name>
-              <type>	dict	</type>
-              <value>
-                <item>
-                  <name>	left	</name>
-                  <type>float</type>
-                  <value>	0	</value>
-                </item>
-                <item>
-                  <name>top</name>
-                  <type>float</type>
-                  <value>	0	</value>
-                </item>
-                <item>
-                  <name>right</name>
-                  <type>float</type>
-                  <value>	0	</value>
-                </item>
-                <item>
-                  <name>bottom</name>
-                  <type>float</type>
-                  <value>	0	</value>
-                </item>
-              </value>
-            </item>
-          </value>
-        </item>
-      </value>
-    </item>
-    <item>
-      <name>AmmunitionSetupOptionalDeviceApplyBtn</name>
-      <type>	dict	</type>
-      <value>
-        <item>
-          <name>	view	</name>
-          <value>ammunitionSetupView</value>
-        </item>
-        <item>
-          <name>	path	</name>
-          <value>ApplyHangarOptDeviceMC</value>
+          <value>div[class^=Cards_base][id=optDevices]</value>
         </item>
         <item>
           <name>	bootcampHint	</name>
@@ -3717,11 +3626,11 @@
       <value>
         <item>
           <name>	view	</name>
-          <value>ammunitionSetupView</value>
+          <value>R.views.lobby.tanksetup.HangarAmmunitionSetup</value>
         </item>
         <item>
           <name>	path	</name>
-          <value>SetupViewSlotsOptDeviceMC</value>
+          <value>div[id=panel-optDevices-section]</value>
         </item>
         <item>
           <name>	bootcampHint	</name>
@@ -4444,11 +4353,11 @@
       <value>
         <item>
           <name>	view	</name>
-          <value>hangar</value>
+          <value>R.views.lobby.tanksetup.AmmunitionPanel</value>
         </item>
         <item>
           <name>	path	</name>
-          <value>ammunitionPanelHintMC</value>
+          <value>div[class^=OptDeviceSlot][class*=specializationsSlot]</value>
         </item>
         <item>
           <name>padding</name>
@@ -4484,11 +4393,11 @@
       <value>
         <item>
           <name>	view	</name>
-          <value>ammunitionSetupView</value>
+          <value>R.views.lobby.tanksetup.HangarAmmunitionSetup</value>
         </item>
         <item>
           <name>	path	</name>
-          <value>	filterHintMC	</value>
+          <value>div[class*=filter-survivability]</value>
         </item>
         <item>
           <name>padding</name>
@@ -4524,11 +4433,11 @@
       <value>
         <item>
           <name>	view	</name>
-          <value>ammunitionSetupView</value>
+          <value>R.views.lobby.tanksetup.HangarAmmunitionSetup</value>
         </item>
         <item>
           <name>	path	</name>
-          <value>optDevDragAndDropMC</value>
+          <value>div[id=panel-optDevices-section][class*=sectionSelected][class*=multiSlot][class*=existFilledSlots]</value>
         </item>
         <item>
           <name>padding</name>

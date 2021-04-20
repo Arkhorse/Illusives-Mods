@@ -1428,3 +1428,53 @@
         )
     )
 )
+
+(def layout ACEmailConfirmation()
+    (macro CongratsMacro "'ACEmailConfirmation'")
+    (scope
+        (event evOnVehicleStartFadeIn)
+        (dispatch evOnVehicleStartFadeIn
+            (event "evOnStartFadeIn")
+        )
+    )
+    (style
+        (align = "center")
+    )
+    (block
+        (name = 'titleBlock')
+        (style
+            (align = "center")
+        )
+        (tf
+            (name = 'headerTF')
+            (bind class "viewSize.height >= BASE_HEIGHT_1200 ? 'EpicTitleTextStyle': 'HeroTitleTextStyle'"
+                (event "viewResized")
+            )
+            (text = "R.strings.personal_missions.awardsScreen.headerExtra()")
+            (antiAliasType = 'normal')
+        )
+        (tf
+            (name = 'descriptionTF')
+            (class PromoSubTitleTextStyle)
+            (style
+                (textAlign = "center")
+                (autoSize = true)
+                (wordWrap = true)
+                (marginTop = -3px)
+            )
+            (text = "R.strings.personal_missions.awardsScreen.description.emailConfirmation()")
+            (antiAliasType = 'normal')
+        )
+    )
+    (block
+        (name = 'imgBlock')
+        (style
+            (height = 230px)
+            (marginTop = 42px)
+        )
+        (image
+            (source = "R.images.gui.maps.icons.account_completion.rewardsImage()")
+        )
+        (macro EmptyHitAreaMacro)
+    )
+)

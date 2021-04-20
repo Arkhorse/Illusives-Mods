@@ -670,15 +670,15 @@
       <item>$PARAMS(/premium)<name>buyPremiumUrl</name><type>url</type></item>
       <item>$PARAMS(/service/personal_reserves)<name>buyBoosters</name><type>url</type></item>
       <item>$PARAMS(/service/prebattle_instructions)<name>	buyCreditsBattleBoosters	</name><type>url</type></item>
-      <item>$PARAMS(/bons/prebattle_instructions)<name>	buyBonBattleBoosters	</name><type>url</type></item>
+      <item>$PARAMS(/bons/prebattle_instructions4bons)<name>	buyBonBattleBoosters	</name><type>url</type></item>
       <item>$PARAMS(/service/equipment)<name>	buyEquipment	</name><type>url</type></item>
       <item>$PARAMS(/service/optional_devices)<name>buyOptionalDevices</name><type>url</type></item>
       <item>$PARAMS(/vehicles)<name>buyVehiclesUrl</name><type>url</type></item>
       <item>$PARAMS(/purchase-product)<name>buyVehicle</name><type>url</type></item>
       <item>$PARAMS(/bons)<name>bonsUrl</name><type>url</type></item>
-      <item>$PARAMS(/bons/optional_devices)<name>bonsDevicesUrl</name><type>url</type></item>
-      <item>$PARAMS(/bons/vehicles)<name>bonsVehiclesUrl</name><type>url</type></item>
-      <item>$PARAMS(/bons/prebattle_instructions)<name>bonsInstructionsUrl</name><type>url</type></item>
+      <item>$PARAMS(/bons/optional_devices4bons)<name>bonsDevicesUrl</name><type>url</type></item>
+      <item>$PARAMS(/bons/vehicles4bons)<name>bonsVehiclesUrl</name><type>url</type></item>
+      <item>$PARAMS(/bons/prebattle_instructions4bons)<name>bonsInstructionsUrl</name><type>url</type></item>
       <item>$PARAMS(/trade_in)<name>tradeIn</name><type>url</type></item>
       <item>$PARAMS(/trade_in_personal)<name>trade_in_personal</name><type>url</type></item>
       <item>$PARAMS(/trade-off-overlay)<name>tradeOffOverlay</name><type>url</type></item>
@@ -686,9 +686,9 @@
       <item>$PARAMS(/vehicles/vehicles)<name>premiumVehicles</name><type>url</type></item>
       <item>$PARAMS(/collection_vehicles/collection_vehicles)<name>buyCollectibleVehicle</name><type>url</type></item>
       <item>$PARAMS(/blueprint-exchange)<name>blueprintsExchange</name><type>url</type></item>
-      <item>$PARAMS(/bm2021)<name>blackMarket</name><type>url</type></item>
       <item>$PARAMS(/featured)<name>buyBattlePass</name><type>url</type></item>
       <item>$PARAMS(/battlepass/battlepass)<name>bpcoinProducts</name><type>url</type></item>
+      <item>$PARAMS(/open)<name>	splitUrl	</name><type>url</type></item>
     </value>
   </setting>
   <setting>
@@ -813,6 +813,30 @@
         <type>string</type>
       </item>
       <item>Utilizes Vivox, Â© 2018 Vivox, Inc. All rights reserved. See www.vivox.com for details.\n<name>default</name><type>string</type></item>
+    </value>
+  </setting>
+  <setting>
+    <name>uiLogging</name>
+    <type>macros</type>
+    <macros>MACROS_DICT</macros>
+    <value>
+      <item>
+        <name>clientLog</name>
+        <type>	bool	</type>
+        <value>False</value>
+      </item>
+      <item>
+        <name>logsQueueLimit</name>
+        <type>int</type>
+        <value>	250	</value>
+      </item>
+      <item>
+        <name>settingsTtl</name>
+        <type>int</type>
+        <value>	60	</value>
+      </item>
+      <item>https://api-wotuilog-na.wargaming.net/api/features/<name>settingsUrl</name><type>url</type></item>
+      <item>https://wotuilog-na.wargaming.net/ui/log/<name>logUrl</name><type>url</type></item>
     </value>
   </setting>
 </gui_settings.xml>

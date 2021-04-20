@@ -21,8 +21,6 @@
     cursor: pointer;
 }
 
-    /* type*/
-
     .CButton_base__main_42,
     .CButton_base__primary_7f,
     .CButton_base__primaryGreen_6f,
@@ -55,10 +53,8 @@
         border-radius: 3rem;
         box-shadow: 0 0 0 1rem rgba(0,0,0, .3),
             0 0 0 1rem rgba(255,255,255, .15) inset;
-        background-image: linear-gradient(0deg, rgba(13, 11, 3, 0) 0%, rgba(13, 11, 3, .04) 27%, rgba(13, 11, 3, 0) 100%);
+        background-color: rgba(0,0,0, .15);
     }
-
-    /* size*/
 
     .CButton_base__extraSmall_27 {
         min-height: 17rem;
@@ -71,14 +67,12 @@
     }
 
     .CButton_base__small_df {
-        min-height: 20rem;
+        min-height: 18rem;
     }
 
     .CButton_base__medium_74 {
-        min-height: 31rem;
+        min-height: 32rem;
     }
-
-    /*state*/
 
     .CButton_base__disabled_d9 {
         cursor: default;
@@ -158,8 +152,8 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         opacity: 0;
     }
 .CButton_base__ghost_ed .CButton_stateHighlightHover_ff {
-        box-shadow: 0 15rem 12rem 0 rgba(242, 242, 230, .11) inset;
-        background-color: rgba(8, 6, 0, .18);
+        box-shadow: 0 15rem 12rem 0 rgba(242,242,230, .11) inset;
+        background-color: rgba(8,6,0, .18);
         background-image: none;
     }
 .CButton_stateHighlightActive_35 {
@@ -172,7 +166,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         opacity: 0;
     }
 .CButton_stateDisabled_54 {
-    background-color: rgba(0, 0, 0, .25);
+    background-color: rgba(0,0,0, .25);
     background-image: url('R.images.gui.maps.icons.components.button.texture_disable');
     background-size: 15rem;
 }
@@ -197,7 +191,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     .CButton_content_cc[lang=th] {
         font-weight: 400;
     }
-/* type*/
 .CButton_base__main_42 .CButton_content_cc,
     .CButton_base__primaryRed_ec .CButton_content_cc {
         text-shadow: 0 -1rem 1rem #600;
@@ -208,7 +201,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 .CButton_base__primaryGreen_6f .CButton_content_cc {
         text-shadow: 0 -1rem 1rem #1c2502;
     }
-/* size*/
 .CButton_base__extraSmall_27 .CButton_content_cc {
         font-size: 12rem;
     }
@@ -218,7 +210,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 .CButton_base__medium_74 .CButton_content_cc {
         font-size: 15rem;
     }
-/*state*/
 .CButton_base__disabled_d9 .CButton_content_cc {
         opacity: .6;
     }
@@ -386,12 +377,12 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 
     .Button_base__minimize_f7:hover {
             background-image: url('R.images.gui.maps.icons.windows.controls.minimize_over'),
-            url('R.images.gui.maps.icons.windows.controls.Window_MinimizeButton_UpBitmap');
+            url('R.images.gui.maps.icons.windows.controls.minimize_up');
         }
 
     .Button_base__minimize_f7:active {
             background-image: url('R.images.gui.maps.icons.windows.controls.minimize_press'),
-            url('R.images.gui.maps.icons.windows.controls.Window_MinimizeButton_UpBitmap');
+            url('R.images.gui.maps.icons.windows.controls.minimize_up');
         }
 
 .Info_base_7b {
@@ -410,7 +401,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     font-size: 18rem;
     font-weight: 700;
     text-shadow: #000000 0 -1rem;
-    cursor: grab;
 }
 
 .Header_base_ff {
@@ -610,24 +600,12 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     }
 
     .Badge_base__x48_e4 {
-            width: 48rem;
-            height: 48rem;
-        }
-
-    .Badge_base__x80_43 {
-            width: 80rem;
-            height: 80rem;
-        }
-
-    .Badge_base__x220_83 {
-            width: 220rem;
-            height: 220rem;
-        }
+        width: 48rem;
+        height: 48rem;
+    }
 
 .Badge_level_ec {
     display: flex;
-    justify-content: center;
-    width: 100%;
     padding-left: 2rem;
 }
 
@@ -637,14 +615,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 
 .Badge_base__x48_e4 .Badge_level_ec {
         margin-top: 13rem;
-    }
-
-.Badge_base__x80_43 .Badge_level_ec {
-        margin-top: 22rem;
-    }
-
-.Badge_base__x220_83 .Badge_level_ec {
-        margin-top: 72rem;
     }
 
 .Badge_digit_be {
@@ -662,26 +632,30 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         margin-left: -3rem;
     }
 
-.Badge_base__x80_43 .Badge_digit_be {
-        width: 16rem;
-        height: 20rem;
-        margin-left: -6rem;
-        margin-right: -2rem;
-    }
-
-.Badge_base__x220_83 .Badge_digit_be {
-        width: 35rem;
-        height: 47rem;
-        margin-left: -8rem;
-        margin-right: -4rem;
-    }
-
 .PlayerNickname_base_32 {
     display: flex;
     align-items: center;
     position: relative;
     z-index: 0;
 }
+
+.PlayerNickname_userName_cc {
+    flex: 0 1 auto; /* the only value for correct work */
+}
+
+.PlayerNickname_igrIcon_34 {
+    background: url('R.images.gui.maps.icons.library.premium_igr_big.png') no-repeat center / contain;
+}
+
+.PlayerNickname_base__default_8d .PlayerNickname_igrIcon_34 {
+        width: 32rem;
+        height: 14rem;
+    }
+
+.PlayerNickname_base__x48_84 .PlayerNickname_igrIcon_34 {
+        width: 64rem;
+        height: 28rem;
+    }
 
 .PlayerNickname_suffixBadgeWrapper_cc {
     display: flex;
@@ -698,15 +672,25 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 .PlayerNickname_base__default_8d .PlayerNickname_suffixBadgeStripe_8a {
         width: 64rem;
         height: 24rem;
-        top: 0;
         right: 12rem;
+    }
+
+.PlayerNickname_base__default_8d.PlayerNickname_base__inverted_34 .PlayerNickname_suffixBadgeStripe_8a {
+        right: auto;
+        left: 12rem;
+        transform: rotateY(180deg);
     }
 
 .PlayerNickname_base__x48_84 .PlayerNickname_suffixBadgeStripe_8a {
         width: 68rem;
         height: 28rem;
-        top: 2rem;
         right: 16rem;
+    }
+
+.PlayerNickname_base__x48_84.PlayerNickname_base__inverted_34 .PlayerNickname_suffixBadgeStripe_8a {
+        right: auto;
+        left: 16rem;
+        transform: rotateY(180deg);
     }
 
 .PlayerNickname_suffixBadge_bd {
@@ -723,10 +707,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         height: 32rem;
     }
 
-.PlayerNickname_userName_cc {
-    flex: 0 1 auto; /* the only value for correct work */
-}
-
 .PlayerNickname_anonymizedIcon_80 {
     background: no-repeat center / contain;
 }
@@ -741,20 +721,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         width: 48rem;
         height: 48rem;
         background-image: url('R.images.gui.maps.icons.library.eye_48x48.png');
-    }
-
-.PlayerNickname_igrIcon_34 {
-    background: url('R.images.gui.maps.icons.library.premium_igr_big.png') no-repeat center / contain;
-}
-
-.PlayerNickname_base__default_8d .PlayerNickname_igrIcon_34 {
-        width: 32rem;
-        height: 14rem;
-    }
-
-.PlayerNickname_base__x48_84 .PlayerNickname_igrIcon_34 {
-        width: 64rem;
-        height: 28rem;
     }
 
 /*////////////*/
@@ -1053,14 +1019,19 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 
 /* Colors: https://confluence.wargaming.net/pages/viewpage.action?pageId=1111407054*/
 
+.NoBonus_textContainer_ef {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 3 auto;
+    width: 100%;
+    height: 36rem;
+    margin: -10rem 2rem 0 10rem;
+}
+
 .NoBonus_textMix_ff {
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
-    align-content: center;
-    flex: 0 1 auto;
-    margin: -3rem 2rem 0 10rem;
     color: #8c8c7e;
 }
 
@@ -1109,6 +1080,9 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 
 .Bonuses_base_6f {
     display: flex;
+    justify-content: flex-end;
+    flex: 0 3 auto;
+    width: 100%;
     margin: -6rem -3rem 0 0;
 }
 
@@ -1130,11 +1104,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     height: 18rem;
     margin: 1rem -10rem 0;
     background: url('R.images.gui.maps.icons.platoon.members_window.mute_button') center / contain no-repeat;
-}
-
-.Header_filler_34 {
-    flex: 0 3 auto;
-    width: 100%;
 }
 
 /*////////////*/

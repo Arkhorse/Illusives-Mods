@@ -103,10 +103,10 @@
     animation-timing-function: cubic-bezier(.07, .82, .17, 1);
     animation-delay: .8s;
     animation-iteration-count: 1;
-    margin-top: -10rem;
     color: #F2F2F7;
     font-size: 42rem;
     font-weight: 700;
+    line-height: 1;
     text-align: center;
 }
 

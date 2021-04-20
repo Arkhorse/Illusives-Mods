@@ -713,6 +713,486 @@
       </transform>
     </color_blind>
   </vm_dead_squadman_name>
+  <vm_team1>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.85 0.51 0 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team1>
+  <vm_dead_team1>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.28 0.17 0 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team1>
+  <vm_stun_team1_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team1_schema>
+  <vm_team2>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.53 0.18 0.41 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team2>
+  <vm_dead_team2>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.18 0.06 0.14 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team2>
+  <vm_stun_team2_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team2_schema>
+  <vm_team3>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.16 0.74 0.39 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team3>
+  <vm_dead_team3>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.05 0.25 0.13 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team3>
+  <vm_stun_team3_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team3_schema>
+  <vm_team4>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.83 0.43 0.38 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team4>
+  <vm_dead_team4>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.28 0.14 0.13 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team4>
+  <vm_stun_team4_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team4_schema>
+  <vm_team5>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.64	0.11 0 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team5>
+  <vm_dead_team5>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.21	0.04 0 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team5>
+  <vm_stun_team5_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team5_schema>
+  <vm_team6>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.58 0.74 0.16 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team6>
+  <vm_dead_team6>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.19 0.25 0.05 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team6>
+  <vm_stun_team6_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team6_schema>
+  <vm_team7>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0 0.72 0.78 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team7>
+  <vm_dead_team7>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0 0.24 0.26 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team7>
+  <vm_stun_team7_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team7_schema>
+  <vm_team8>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.8 0.69 0 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team8>
+  <vm_dead_team8>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.27 0.23 0 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team8>
+  <vm_stun_team8_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team8_schema>
+  <vm_team9>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.1 0.46 0.75 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team9>
+  <vm_dead_team9>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.03 0.15 0.25 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team9>
+  <vm_stun_team9_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team9_schema>
+  <vm_team10>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.75 0.28 0 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team10>
+  <vm_dead_team10>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.25	0.09 0 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team10>
+  <vm_stun_team10_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team10_schema>
+  <vm_team11>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.4 0.17 0.78 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team11>
+  <vm_dead_team11>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.13 0.06 0.26 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team11>
+  <vm_stun_team11_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team11_schema>
+  <vm_team12>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.87 0.09 0 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team12>
+  <vm_dead_team12>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.29 0.03 0 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team12>
+  <vm_stun_team12_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team12_schema>
+  <vm_team13>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.52 0.21 0.11 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team13>
+  <vm_dead_team13>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.17 0.07 0.04 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team13>
+  <vm_stun_team13_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team13_schema>
+  <vm_team14>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.31 0.09 0.78 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team14>
+  <vm_dead_team14>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.1 0.03 0.26 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team14>
+  <vm_stun_team14_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team14_schema>
+  <vm_team15>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.86 0.22 0.64 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team15>
+  <vm_dead_team15>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.29 0.07 0.21 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team15>
+  <vm_stun_team15_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team15_schema>
+  <vm_team16>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.92 0.42 0.2 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team16>
+  <vm_dead_team16>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.31 0.14 0.07 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team16>
+  <vm_stun_team16_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team16_schema>
+  <vm_team17>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.57 0.4 0.85 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team17>
+  <vm_dead_team17>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.19 0.13 0.28 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team17>
+  <vm_stun_team17_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team17_schema>
+  <vm_team18>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0 0.79 0.08 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team18>
+  <vm_dead_team18>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0 0.26 0.03 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team18>
+  <vm_stun_team18_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team18_schema>
+  <vm_team19>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.92 0.64 0.1 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team19>
+  <vm_dead_team19>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.31 0.21 0.03 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team19>
+  <vm_stun_team19_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team19_schema>
+  <vm_team20>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 255 255 255</rgba>
+      <transform>
+        <mult>0.1 0.2 0.75 1</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_team20>
+  <vm_dead_team20>
+    <default>
+      <alias_color>white</alias_color>
+      <rgba>255 39 23 255</rgba>
+      <transform>
+        <mult>0.03 0.07 0.25 0.8</mult>
+        <offset>0 0 0 0</offset>
+      </transform>
+    </default>
+  </vm_dead_team20>
+  <vm_stun_team20_schema>
+    <alias_color>green</alias_color>
+    <rgba>221 255 153 255</rgba>
+  </vm_stun_team20_schema>
   <vm_teamKiller>
     <schemeGroup>blueColor</schemeGroup>
     <transform>

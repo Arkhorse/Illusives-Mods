@@ -1755,4 +1755,16 @@
       <playRules>	0	</playRules>
     </fx>
   </br_ability>
+  <hulllock_on>
+    <fx>
+      <wwsound>ev_hullock_on</wwsound>
+      <playRules>	0	</playRules>
+    </fx>
+  </hulllock_on>
+  <hulllock_off>
+    <fx>
+      <wwsound>ev_hullock_off</wwsound>
+      <playRules>	0	</playRules>
+    </fx>
+  </hulllock_off>
 </sound_notifications.xml>

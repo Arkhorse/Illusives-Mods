@@ -1249,10 +1249,12 @@ body {
         border-radius: 7rem;
     }
 .Counter_value_3e {
+    display: flex;
     padding: 0 4rem;
     color: #fefeec;
     font-size: 11rem;
     line-height: 13rem;
+    white-space: nowrap;
 }
 .Counter_base__big_19 .Counter_value_3e {
         padding: 0 7rem;
@@ -1275,6 +1277,10 @@ body {
 .Counter_base__pattern_71 .Counter_value_3e {
         display: none;
     }
+.Counter_plus_15 {
+    position: relative;
+    top: -1rem;
+}
 .Counter_pattern_83 {
     display: none;
 }

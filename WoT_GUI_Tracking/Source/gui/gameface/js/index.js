@@ -17,6 +17,7 @@ const documentCssRules = [
 ];
 
 window.__feature = '<%= __feature %>';
+window.__featureId = Number('<%= __featureId %>' || 0);
 
 if (document.styleSheets.length === 0) {
     document.head.appendChild(document.createElement('style'));
@@ -24,3 +25,4 @@ if (document.styleSheets.length === 0) {
 
 const documentStyle = document.styleSheets[0];
 documentCssRules.forEach((cssRule) => documentStyle.insertRule(cssRule));
+window.isInitialJSExecuted = true;

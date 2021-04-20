@@ -49,6 +49,10 @@
         (flow = "Flow.TILE_HORIZONTAL")
     )
 
+    (exec "playSound(R.sounds.play())"
+        (event "onGoToConversionScreen")
+    )
+
     (controller $Repeat renderer='BlueprintScreenInteractiveItem'
         (bind count "items.length > 0 ? itemsCount : 0" init=false)
         (exprs

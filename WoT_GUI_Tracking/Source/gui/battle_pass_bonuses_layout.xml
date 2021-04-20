@@ -128,8 +128,16 @@
       </trophy_gift>
     </battlePassSelectToken>
     <styleProgressToken>
-      <priority>	100	</priority>
+      <priority>	102	</priority>
       <bigIcon>	Standard	</bigIcon>
+      <override>
+        <level>	3	</level>
+        <priority>	101	</priority>
+      </override>
+      <override>
+        <level>	4	</level>
+        <priority>	100	</priority>
+      </override>
     </styleProgressToken>
   </bonuses>
 </battle_pass_bonuses_layout.xml>

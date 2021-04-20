@@ -1,1 +1,5 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link href="../../../../../styles/default.css" rel="stylesheet"><link href="../../../lobby/dog_tags/ThreeMonthsTooltip/ThreeMonthsTooltip.css" rel="stylesheet"></head><body><div id="root"></div><script src="../../../lib/vendors.js"></script><script src="../../../lobby/dog_tags/ThreeMonthsTooltip/ThreeMonthsTooltip.js"></script></body></html>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link href="../../../../../styles/default.css" rel="stylesheet"><script>// Workaround for fixing react-devtools crash
+        // Remove after upgrade to GF 1.12.2.1
+        for (const method in console) {
+            console[method] = console[method].bind(console);
+        }</script><link href="../../../lobby/dog_tags/ThreeMonthsTooltip/ThreeMonthsTooltip.css" rel="stylesheet"></head><body><div id="root"></div><script src="../../../lib/vendors.js"></script><script src="../../../lobby/dog_tags/ThreeMonthsTooltip/ThreeMonthsTooltip.js"></script></body></html>

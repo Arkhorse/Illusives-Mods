@@ -140,8 +140,6 @@
     cursor: pointer;
 }
 
-    /* type*/
-
     .CButton_base__main_42,
     .CButton_base__primary_7f,
     .CButton_base__primaryGreen_6f,
@@ -174,10 +172,8 @@
         border-radius: 3rem;
         box-shadow: 0 0 0 1rem rgba(0,0,0, .3),
             0 0 0 1rem rgba(255,255,255, .15) inset;
-        background-image: linear-gradient(0deg, rgba(13, 11, 3, 0) 0%, rgba(13, 11, 3, .04) 27%, rgba(13, 11, 3, 0) 100%);
+        background-color: rgba(0,0,0, .15);
     }
-
-    /* size*/
 
     .CButton_base__extraSmall_27 {
         min-height: 17rem;
@@ -190,14 +186,12 @@
     }
 
     .CButton_base__small_df {
-        min-height: 20rem;
+        min-height: 18rem;
     }
 
     .CButton_base__medium_74 {
-        min-height: 31rem;
+        min-height: 32rem;
     }
-
-    /*state*/
 
     .CButton_base__disabled_d9 {
         cursor: default;
@@ -277,8 +271,8 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         opacity: 0;
     }
 .CButton_base__ghost_ed .CButton_stateHighlightHover_ff {
-        box-shadow: 0 15rem 12rem 0 rgba(242, 242, 230, .11) inset;
-        background-color: rgba(8, 6, 0, .18);
+        box-shadow: 0 15rem 12rem 0 rgba(242,242,230, .11) inset;
+        background-color: rgba(8,6,0, .18);
         background-image: none;
     }
 .CButton_stateHighlightActive_35 {
@@ -291,7 +285,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         opacity: 0;
     }
 .CButton_stateDisabled_54 {
-    background-color: rgba(0, 0, 0, .25);
+    background-color: rgba(0,0,0, .25);
     background-image: url('R.images.gui.maps.icons.components.button.texture_disable');
     background-size: 15rem;
 }
@@ -316,7 +310,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     .CButton_content_cc[lang=th] {
         font-weight: 400;
     }
-/* type*/
 .CButton_base__main_42 .CButton_content_cc,
     .CButton_base__primaryRed_ec .CButton_content_cc {
         text-shadow: 0 -1rem 1rem #600;
@@ -327,7 +320,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 .CButton_base__primaryGreen_6f .CButton_content_cc {
         text-shadow: 0 -1rem 1rem #1c2502;
     }
-/* size*/
 .CButton_base__extraSmall_27 .CButton_content_cc {
         font-size: 12rem;
     }
@@ -337,7 +329,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 .CButton_base__medium_74 .CButton_content_cc {
         font-size: 15rem;
     }
-/*state*/
 .CButton_base__disabled_d9 .CButton_content_cc {
         opacity: .6;
     }
@@ -556,8 +547,16 @@ body {
 .Currency_icon__xp-big_97 {
         width: 23rem;
         height: 22rem;
+        margin-left: -5rem;
         background-image: url('R.images.gui.maps.icons.library.xpIcon_23x22');
-        transform: translateY(2rem);
+        transform: translateY(1rem);
+    }
+.Currency_icon__xp-large_6b {
+        width: 48rem;
+        height: 48rem;
+        margin: 0 -5rem;
+        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.exp');
+        transform: translateY(8rem);
     }
 .Currency_icon__freeXp-small_63 {
         background-image: url('R.images.gui.maps.icons.library.freeXPIcon16x16');
@@ -566,8 +565,16 @@ body {
 .Currency_icon__freeXp-big_5f {
         width: 24rem;
         height: 24rem;
+        margin-left: -5rem;
         background-image: url('R.images.gui.maps.icons.library.freeXPIconBig24x24');
         transform: translateY(3rem);
+    }
+.Currency_icon__freeXp-large_3d {
+        width: 48rem;
+        height: 48rem;
+        margin: 0 -5rem;
+        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.freeExp');
+        transform: translateY(8rem);
     }
 .Currency_value_e1 {
     position: relative;
@@ -578,7 +585,7 @@ body {
     }
 .Currency_value__big_d4 {
         padding-right: 5rem;
-        font-size: 22rem;
+        font-size: 24rem;
         font-weight: 700;
     }
 .Currency_value__large_85 {
@@ -619,6 +626,9 @@ body {
 .Currency_stock__sizeBig_b5 {
         transform: translateY(-1rem);
     }
+.Currency_stock__sizeLarge_0c {
+        transform: translateY(-2rem);
+    }
 .Currency_stock__interactive_93 {
         pointer-events: auto;
     }
@@ -629,7 +639,7 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    top: 50%;
+    top: 6rem;
     right: -27rem;
     z-index: -1;
     transform: translateY(-47%);
@@ -690,7 +700,7 @@ body {
     height: 100%;
     background-color: var(--progress-line-base);
     position: relative;
-    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-timing-function: cubic-bezier(1, 0, .92, 1);
     transition-property: width;
 }
 .ProgressLineImpose_base__disabled_cc {
@@ -700,7 +710,7 @@ body {
         background-color: var(--progress-line-finished);
     }
 .ProgressLineImpose_base__withoutBounce_56 {
-        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+        transition-timing-function: cubic-bezier(1, 0, .75, .75);
     }
 .ProgressLineImpose_pattern_1c {
     max-width: 8001px;
@@ -790,7 +800,7 @@ body {
     position: absolute;
     bottom: 0;
     transform-origin: right center;
-    transition-timing-function: cubic-bezier(1, 0, .92, 1.39), cubic-bezier(.21, .61, .35, 1);
+    transition-timing-function: cubic-bezier(1, 0, .92, 1), cubic-bezier(.21, .61, .35, 1);
     transition-property: width, transform;
 }
 
@@ -804,11 +814,11 @@ body {
     height: 100%;
     position: absolute;
     top: 0;
-    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-timing-function: cubic-bezier(1, 0, .92, 1);
     transition-property: width;
 }
 .ProgressBarDeltaGrow_base__withoutBounce_b5 {
-        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+        transition-timing-function: cubic-bezier(1, 0, .75, .75);
     }
 .ProgressBarDeltaGrow_glow_68 {
     width: 0;
@@ -819,11 +829,11 @@ body {
     position: absolute;
     bottom: 0;
     transform-origin: right center;
-    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-timing-function: cubic-bezier(1, 0, .92, 1);
     transition-property: width;
 }
 .ProgressBarDeltaGrow_base__withoutBounce_b5 .ProgressBarDeltaGrow_glow_68 {
-        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+        transition-timing-function: cubic-bezier(1, 0, .75, .75);
     }
 
 /*
@@ -1234,18 +1244,18 @@ body {
 }
 
     .NumericStepper_base__small_11 {
-        width: 75rem;
-        height: 24rem;
+        width: 73rem;
+        height: 23rem;
     }
 
     .NumericStepper_base__medium_9d {
-        width: 92rem;
-        height: 32rem;
+        width: 90rem;
+        height: 31rem;
     }
 
     .NumericStepper_base__large_dc {
-        width: 180rem;
-        height: 50rem;
+        width: 178rem;
+        height: 49rem;
     }
 
     .NumericStepper_base__isFocus_49 {
@@ -1267,17 +1277,25 @@ body {
     color: #8c8c7e;
 }
 .NumericStepper_base__small_11 .NumericStepper_input_55 {
-        padding: 0 5rem;
-        font-size: 13.5rem;
+        padding: 0 4rem 2rem 6rem;
+        font-size: 14rem;
     }
 .NumericStepper_base__medium_9d .NumericStepper_input_55 {
-        padding: 0 10rem 2rem;
-        font-size: 24rem;
-        line-height: 28rem;
+        padding: 0 8rem 1rem 9rem;
+        font-size: 20rem;
     }
 .NumericStepper_base__large_dc .NumericStepper_input_55 {
-        padding: 0 3rem 3rem 20rem;
+        padding: 0 12rem 3rem 17rem;
         font-size: 24rem;
+    }
+.NumericStepper_base__withCurrency-small_de .NumericStepper_input_55 {
+        padding-right: 2rem;
+    }
+.NumericStepper_base__withCurrency-medium_69 .NumericStepper_input_55 {
+        padding-right: 3rem;
+    }
+.NumericStepper_base__withCurrency-large_a1 .NumericStepper_input_55 {
+        padding-right: 4rem;
     }
 .NumericStepper_input__disabled_d8 {
         color: transparent;
@@ -1297,30 +1315,34 @@ body {
         color: transparent;
         text-shadow: 0 0 0 rgba(255,195,99, .3);
     }
-.NumericStepper_input__crystal_2e {
+.NumericStepper_input__xp_c4,
+    .NumericStepper_input__freeXp_da,
+    .NumericStepper_input__crystal_2e {
         color: #c9c9b6;
     }
-.NumericStepper_input__crystal-disabled_f8 {
+.NumericStepper_input__xp-disabled_33,
+    .NumericStepper_input__freeXp-disabled_91,
+    .NumericStepper_input__crystal-disabled_f8 {
         color: transparent;
         text-shadow: 0 0 0 rgba(201,201,182, .3);
     }
-.NumericStepper_base__small_11 .NumericStepper_input__with-сurrency_c1 {
-            padding-right: 26rem;
-        }
-.NumericStepper_base__medium_9d .NumericStepper_input__with-сurrency_c1 {
-            padding-right: 36rem;
-        }
-.NumericStepper_base__large_dc .NumericStepper_input__with-сurrency_c1 {
+.NumericStepper_input__withCurrency_3b {
+        font-weight: 700;
+    }
+.NumericStepper_base__small_11 .NumericStepper_input__withCurrency_3b {
             padding-right: 22rem;
         }
-.NumericStepper_base__small_11 .NumericStepper_input__crystal-medium_56, .NumericStepper_base__small_11 .NumericStepper_input__crystal-large_4e {
-            padding-right: 33rem;
+.NumericStepper_base__medium_9d .NumericStepper_input__withCurrency_3b {
+            padding-right: 27rem;
         }
-.NumericStepper_base__medium_9d .NumericStepper_input__crystal-medium_56, .NumericStepper_base__medium_9d .NumericStepper_input__crystal-large_4e {
-            padding-right: 43rem;
+.NumericStepper_base__large_dc .NumericStepper_input__withCurrency_3b {
+            padding-right: 32rem;
         }
-.NumericStepper_base__large_dc .NumericStepper_input__crystal-medium_56, .NumericStepper_base__large_dc .NumericStepper_input__crystal-large_4e {
-            padding-right: 29rem;
+.NumericStepper_base__medium_9d .NumericStepper_input__xp-medium_db, .NumericStepper_base__medium_9d .NumericStepper_input__xp-large_73, .NumericStepper_base__medium_9d .NumericStepper_input__freeXp-medium_ef, .NumericStepper_base__medium_9d .NumericStepper_input__freeXp-large_37, .NumericStepper_base__medium_9d .NumericStepper_input__crystal-medium_56, .NumericStepper_base__medium_9d .NumericStepper_input__crystal-large_4e {
+            padding-right: 34rem;
+        }
+.NumericStepper_base__large_dc .NumericStepper_input__xp-medium_db, .NumericStepper_base__large_dc .NumericStepper_input__xp-large_73, .NumericStepper_base__large_dc .NumericStepper_input__freeXp-medium_ef, .NumericStepper_base__large_dc .NumericStepper_input__freeXp-large_37, .NumericStepper_base__large_dc .NumericStepper_input__crystal-medium_56, .NumericStepper_base__large_dc .NumericStepper_input__crystal-large_4e {
+            padding-right: 39rem;
         }
 .NumericStepper_input_55::selection {
         background-color: #8c8c7e;
@@ -1330,73 +1352,103 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 100%;
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
     z-index: -1;
-    transform: translateY(-50%);
 }
 .NumericStepper_base__small_11 .NumericStepper_currency_38 {
-        padding-right: 21rem;
+        padding-right: 20rem;
     }
 .NumericStepper_base__medium_9d .NumericStepper_currency_38 {
-        padding-right: 26rem;
+        padding-right: 24rem;
     }
 .NumericStepper_base__large_dc .NumericStepper_currency_38 {
-        padding-right: 22rem;
+        padding-right: 28rem;
     }
-.NumericStepper_base__small_11 .NumericStepper_currency__crystal-medium_55, .NumericStepper_base__small_11 .NumericStepper_currency__crystal-large_a4 {
-            padding-right: 28rem;
+.NumericStepper_base__medium_9d .NumericStepper_currency__xp-medium_66, .NumericStepper_base__medium_9d .NumericStepper_currency__xp-large_66, .NumericStepper_base__medium_9d .NumericStepper_currency__freeXp-medium_97, .NumericStepper_base__medium_9d .NumericStepper_currency__freeXp-large_cd, .NumericStepper_base__medium_9d .NumericStepper_currency__crystal-medium_55, .NumericStepper_base__medium_9d .NumericStepper_currency__crystal-large_a4 {
+            padding-right: 31rem;
         }
-.NumericStepper_base__medium_9d .NumericStepper_currency__crystal-medium_55, .NumericStepper_base__medium_9d .NumericStepper_currency__crystal-large_a4 {
-            padding-right: 33rem;
-        }
-.NumericStepper_base__large_dc .NumericStepper_currency__crystal-medium_55, .NumericStepper_base__large_dc .NumericStepper_currency__crystal-large_a4 {
-            padding-right: 22rem;
+.NumericStepper_base__large_dc .NumericStepper_currency__xp-medium_66, .NumericStepper_base__large_dc .NumericStepper_currency__xp-large_66, .NumericStepper_base__large_dc .NumericStepper_currency__freeXp-medium_97, .NumericStepper_base__large_dc .NumericStepper_currency__freeXp-large_cd, .NumericStepper_base__large_dc .NumericStepper_currency__crystal-medium_55, .NumericStepper_base__large_dc .NumericStepper_currency__crystal-large_a4 {
+            padding-right: 35rem;
         }
 .NumericStepper_currencyIcon_8e {
     width: 16rem;
     height: 16rem;
-    background: center / contain no-repeat;
+    background: 50% / contain no-repeat;
 }
 .NumericStepper_currencyIcon__credits-small_99 {
         background-image: url('R.images.gui.maps.icons.library.CreditsIcon_2');
-        transform: translateY(2rem);
+        transform: translateY(4rem);
     }
 .NumericStepper_currencyIcon__credits-medium_1a {
         background-image: url('R.images.gui.maps.icons.library.CreditsIcon_1');
-        transform: translateY(7rem);
+        transform: translateY(8rem);
     }
 .NumericStepper_currencyIcon__credits-large_bc {
         background-image: url('R.images.gui.maps.icons.library.CreditsIcon_1');
-        transform: translate(5rem, 6rem);
+        transform: translateY(18rem);
     }
 .NumericStepper_currencyIcon__gold-small_2a {
         background-image: url('R.images.gui.maps.icons.library.GoldIcon_2');
-        transform: translateY(1rem);
+        transform: translateY(3rem);
     }
 .NumericStepper_currencyIcon__gold-medium_f6 {
         background-image: url('R.images.gui.maps.icons.library.GoldIcon_1');
-        transform: translateY(8rem);
+        transform: translateY(9rem);
     }
 .NumericStepper_currencyIcon__gold-large_d6 {
         background-image: url('R.images.gui.maps.icons.library.GoldIcon_1');
-        transform: translate(5rem, 7rem);
+        transform: translateY(19rem);
     }
 .NumericStepper_currencyIcon__crystal-small_b5 {
         background-image: url('R.images.gui.maps.icons.library.CrystalIcon_2');
+        transform: translateY(3rem);
     }
 .NumericStepper_currencyIcon__crystal-medium_ac {
         width: 23rem;
         height: 22rem;
         background-image: url('R.images.gui.maps.icons.library.crystal_23x22');
-        transform: translateY(5rem);
+        transform: translateY(6rem);
     }
 .NumericStepper_currencyIcon__crystal-large_2b {
         width: 23rem;
         height: 22rem;
         background-image: url('R.images.gui.maps.icons.library.crystal_23x22');
-        transform: translate(5rem, 4rem);
+        transform: translate(-1rem, 16rem);
+    }
+.NumericStepper_currencyIcon__freeXp-small_30 {
+        background-image: url('R.images.gui.maps.icons.library.freeXPIcon16x16');
+        transform: translateY(3rem);
+    }
+.NumericStepper_currencyIcon__freeXp-medium_09 {
+        width: 23rem;
+        height: 22rem;
+        background-image: url('R.images.gui.maps.icons.library.freeXpIcon_23x22');
+        transform: translateY(4rem);
+    }
+.NumericStepper_currencyIcon__freeXp-large_1e {
+        width: 23rem;
+        height: 22rem;
+        background-image: url('R.images.gui.maps.icons.library.freeXpIcon_23x22');
+        transform: translate(-2rem, 14rem);
+    }
+.NumericStepper_currencyIcon__xp-small_73 {
+        background-image: url('R.images.gui.maps.icons.library.XpIcon_1');
+        transform: translateY(3rem);
+    }
+.NumericStepper_currencyIcon__xp-medium_ef {
+        width: 23rem;
+        height: 22rem;
+        background-image: url('R.images.gui.maps.icons.library.xpIcon_23x22');
+        transform: translateY(4rem);
+    }
+.NumericStepper_currencyIcon__xp-large_3e {
+        width: 23rem;
+        height: 22rem;
+        background-image: url('R.images.gui.maps.icons.library.xpIcon_23x22');
+        transform: translate(-2rem, 14rem);
     }
 .NumericStepper_base__isDisabled_ac .NumericStepper_currencyIcon_8e {
         filter: brightness(.3);
@@ -1408,17 +1460,25 @@ body {
     overflow: hidden;
 }
 .NumericStepper_base__small_11 .NumericStepper_dummyValue_0c {
-        padding: 0 5rem;
-        font-size: 13.5rem;
+        padding: 0 4rem 2rem 6rem;
+        font-size: 14rem;
     }
 .NumericStepper_base__medium_9d .NumericStepper_dummyValue_0c {
-        padding: 0 10rem 2rem;
-        font-size: 24rem;
-        line-height: 28rem;
+        padding: 0 8rem 1rem 9rem;
+        font-size: 20rem;
     }
 .NumericStepper_base__large_dc .NumericStepper_dummyValue_0c {
-        padding: 0 3rem 3rem 20rem;
+        padding: 0 12rem 3rem 17rem;
         font-size: 24rem;
+    }
+.NumericStepper_base__withCurrency-small_de .NumericStepper_dummyValue_0c {
+        padding-right: 2rem;
+    }
+.NumericStepper_base__withCurrency-medium_69 .NumericStepper_dummyValue_0c {
+        padding-right: 3rem;
+    }
+.NumericStepper_base__withCurrency-large_a1 .NumericStepper_dummyValue_0c {
+        padding-right: 4rem;
     }
 .NumericStepper_control_ab {
     display: flex;
@@ -1479,6 +1539,7 @@ body {
         background-position: 0 100%;
     }
 .NumericStepper_buttonDecrement_c8 {
+    margin-top: -1rem;
     background-position: 100% 0;
 }
 .NumericStepper_buttonDecrement__small_36:hover {

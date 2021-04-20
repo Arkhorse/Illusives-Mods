@@ -17,7 +17,7 @@
         hasCloseButton: true,
         backgroundImage: '',
         backgroundImageScale: "NO_SCALE",
-        showSoundId: "R.sounds.cancelcloseno()"
+        showSoundId: ''
     }
 )
 

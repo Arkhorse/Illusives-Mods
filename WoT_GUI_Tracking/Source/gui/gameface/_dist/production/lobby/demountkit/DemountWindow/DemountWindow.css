@@ -68,8 +68,16 @@
 .Currency_icon__xp-big_97 {
         width: 23rem;
         height: 22rem;
+        margin-left: -5rem;
         background-image: url('R.images.gui.maps.icons.library.xpIcon_23x22');
-        transform: translateY(2rem);
+        transform: translateY(1rem);
+    }
+.Currency_icon__xp-large_6b {
+        width: 48rem;
+        height: 48rem;
+        margin: 0 -5rem;
+        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.exp');
+        transform: translateY(8rem);
     }
 .Currency_icon__freeXp-small_63 {
         background-image: url('R.images.gui.maps.icons.library.freeXPIcon16x16');
@@ -78,8 +86,16 @@
 .Currency_icon__freeXp-big_5f {
         width: 24rem;
         height: 24rem;
+        margin-left: -5rem;
         background-image: url('R.images.gui.maps.icons.library.freeXPIconBig24x24');
         transform: translateY(3rem);
+    }
+.Currency_icon__freeXp-large_3d {
+        width: 48rem;
+        height: 48rem;
+        margin: 0 -5rem;
+        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.freeExp');
+        transform: translateY(8rem);
     }
 .Currency_value_e1 {
     position: relative;
@@ -90,7 +106,7 @@
     }
 .Currency_value__big_d4 {
         padding-right: 5rem;
-        font-size: 22rem;
+        font-size: 24rem;
         font-weight: 700;
     }
 .Currency_value__large_85 {
@@ -131,6 +147,9 @@
 .Currency_stock__sizeBig_b5 {
         transform: translateY(-1rem);
     }
+.Currency_stock__sizeLarge_0c {
+        transform: translateY(-2rem);
+    }
 .Currency_stock__interactive_93 {
         pointer-events: auto;
     }
@@ -141,7 +160,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    top: 50%;
+    top: 6rem;
     right: -27rem;
     z-index: -1;
     transform: translateY(-47%);
@@ -306,6 +325,7 @@
     display: flex;
     justify-content: center;
     margin: 0;
+    white-space: pre;
 }
 
 .DemountSelector_box_63 {
@@ -463,8 +483,6 @@
     cursor: pointer;
 }
 
-    /* type*/
-
     .CButton_base__main_42,
     .CButton_base__primary_7f,
     .CButton_base__primaryGreen_6f,
@@ -497,10 +515,8 @@
         border-radius: 3rem;
         box-shadow: 0 0 0 1rem rgba(0,0,0, .3),
             0 0 0 1rem rgba(255,255,255, .15) inset;
-        background-image: linear-gradient(0deg, rgba(13, 11, 3, 0) 0%, rgba(13, 11, 3, .04) 27%, rgba(13, 11, 3, 0) 100%);
+        background-color: rgba(0,0,0, .15);
     }
-
-    /* size*/
 
     .CButton_base__extraSmall_27 {
         min-height: 17rem;
@@ -513,14 +529,12 @@
     }
 
     .CButton_base__small_df {
-        min-height: 20rem;
+        min-height: 18rem;
     }
 
     .CButton_base__medium_74 {
-        min-height: 31rem;
+        min-height: 32rem;
     }
-
-    /*state*/
 
     .CButton_base__disabled_d9 {
         cursor: default;
@@ -600,8 +614,8 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         opacity: 0;
     }
 .CButton_base__ghost_ed .CButton_stateHighlightHover_ff {
-        box-shadow: 0 15rem 12rem 0 rgba(242, 242, 230, .11) inset;
-        background-color: rgba(8, 6, 0, .18);
+        box-shadow: 0 15rem 12rem 0 rgba(242,242,230, .11) inset;
+        background-color: rgba(8,6,0, .18);
         background-image: none;
     }
 .CButton_stateHighlightActive_35 {
@@ -614,7 +628,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         opacity: 0;
     }
 .CButton_stateDisabled_54 {
-    background-color: rgba(0, 0, 0, .25);
+    background-color: rgba(0,0,0, .25);
     background-image: url('R.images.gui.maps.icons.components.button.texture_disable');
     background-size: 15rem;
 }
@@ -639,7 +653,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     .CButton_content_cc[lang=th] {
         font-weight: 400;
     }
-/* type*/
 .CButton_base__main_42 .CButton_content_cc,
     .CButton_base__primaryRed_ec .CButton_content_cc {
         text-shadow: 0 -1rem 1rem #600;
@@ -650,7 +663,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 .CButton_base__primaryGreen_6f .CButton_content_cc {
         text-shadow: 0 -1rem 1rem #1c2502;
     }
-/* size*/
 .CButton_base__extraSmall_27 .CButton_content_cc {
         font-size: 12rem;
     }
@@ -660,7 +672,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 .CButton_base__medium_74 .CButton_content_cc {
         font-size: 15rem;
     }
-/*state*/
 .CButton_base__disabled_d9 .CButton_content_cc {
         opacity: .6;
     }

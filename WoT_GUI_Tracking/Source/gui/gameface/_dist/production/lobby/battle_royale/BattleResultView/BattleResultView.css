@@ -182,10 +182,12 @@
         border-radius: 7rem;
     }
 .Counter_value_3e {
+    display: flex;
     padding: 0 4rem;
     color: #fefeec;
     font-size: 11rem;
     line-height: 13rem;
+    white-space: nowrap;
 }
 .Counter_base__big_19 .Counter_value_3e {
         padding: 0 7rem;
@@ -208,6 +210,10 @@
 .Counter_base__pattern_71 .Counter_value_3e {
         display: none;
     }
+.Counter_plus_15 {
+    position: relative;
+    top: -1rem;
+}
 .Counter_pattern_83 {
     display: none;
 }
@@ -1005,8 +1011,6 @@
     cursor: pointer;
 }
 
-    /* type*/
-
     .CButton_base__main_42,
     .CButton_base__primary_7f,
     .CButton_base__primaryGreen_6f,
@@ -1039,10 +1043,8 @@
         border-radius: 3rem;
         box-shadow: 0 0 0 1rem rgba(0,0,0, .3),
             0 0 0 1rem rgba(255,255,255, .15) inset;
-        background-image: linear-gradient(0deg, rgba(13, 11, 3, 0) 0%, rgba(13, 11, 3, .04) 27%, rgba(13, 11, 3, 0) 100%);
+        background-color: rgba(0,0,0, .15);
     }
-
-    /* size*/
 
     .CButton_base__extraSmall_27 {
         min-height: 17rem;
@@ -1055,14 +1057,12 @@
     }
 
     .CButton_base__small_df {
-        min-height: 20rem;
+        min-height: 18rem;
     }
 
     .CButton_base__medium_74 {
-        min-height: 31rem;
+        min-height: 32rem;
     }
-
-    /*state*/
 
     .CButton_base__disabled_d9 {
         cursor: default;
@@ -1142,8 +1142,8 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         opacity: 0;
     }
 .CButton_base__ghost_ed .CButton_stateHighlightHover_ff {
-        box-shadow: 0 15rem 12rem 0 rgba(242, 242, 230, .11) inset;
-        background-color: rgba(8, 6, 0, .18);
+        box-shadow: 0 15rem 12rem 0 rgba(242,242,230, .11) inset;
+        background-color: rgba(8,6,0, .18);
         background-image: none;
     }
 .CButton_stateHighlightActive_35 {
@@ -1156,7 +1156,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         opacity: 0;
     }
 .CButton_stateDisabled_54 {
-    background-color: rgba(0, 0, 0, .25);
+    background-color: rgba(0,0,0, .25);
     background-image: url('R.images.gui.maps.icons.components.button.texture_disable');
     background-size: 15rem;
 }
@@ -1181,7 +1181,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     .CButton_content_cc[lang=th] {
         font-weight: 400;
     }
-/* type*/
 .CButton_base__main_42 .CButton_content_cc,
     .CButton_base__primaryRed_ec .CButton_content_cc {
         text-shadow: 0 -1rem 1rem #600;
@@ -1192,7 +1191,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 .CButton_base__primaryGreen_6f .CButton_content_cc {
         text-shadow: 0 -1rem 1rem #1c2502;
     }
-/* size*/
 .CButton_base__extraSmall_27 .CButton_content_cc {
         font-size: 12rem;
     }
@@ -1202,7 +1200,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 .CButton_base__medium_74 .CButton_content_cc {
         font-size: 15rem;
     }
-/*state*/
 .CButton_base__disabled_d9 .CButton_content_cc {
         opacity: .6;
     }
@@ -1237,7 +1234,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     height: 100%;
     background-color: var(--progress-line-base);
     position: relative;
-    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-timing-function: cubic-bezier(1, 0, .92, 1);
     transition-property: width;
 }
 .ProgressLineImpose_base__disabled_cc {
@@ -1247,7 +1244,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         background-color: var(--progress-line-finished);
     }
 .ProgressLineImpose_base__withoutBounce_56 {
-        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+        transition-timing-function: cubic-bezier(1, 0, .75, .75);
     }
 .ProgressLineImpose_pattern_1c {
     max-width: 8001px;
@@ -1337,7 +1334,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     position: absolute;
     bottom: 0;
     transform-origin: right center;
-    transition-timing-function: cubic-bezier(1, 0, .92, 1.39), cubic-bezier(.21, .61, .35, 1);
+    transition-timing-function: cubic-bezier(1, 0, .92, 1), cubic-bezier(.21, .61, .35, 1);
     transition-property: width, transform;
 }
 
@@ -1351,11 +1348,11 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     height: 100%;
     position: absolute;
     top: 0;
-    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-timing-function: cubic-bezier(1, 0, .92, 1);
     transition-property: width;
 }
 .ProgressBarDeltaGrow_base__withoutBounce_b5 {
-        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+        transition-timing-function: cubic-bezier(1, 0, .75, .75);
     }
 .ProgressBarDeltaGrow_glow_68 {
     width: 0;
@@ -1366,11 +1363,11 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     position: absolute;
     bottom: 0;
     transform-origin: right center;
-    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-timing-function: cubic-bezier(1, 0, .92, 1);
     transition-property: width;
 }
 .ProgressBarDeltaGrow_base__withoutBounce_b5 .ProgressBarDeltaGrow_glow_68 {
-        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+        transition-timing-function: cubic-bezier(1, 0, .75, .75);
     }
 
 /*

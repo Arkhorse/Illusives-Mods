@@ -247,7 +247,12 @@
 
 .Content_base_47 {
     background: url('R.images.gui.maps.icons.vehPreview.progressionStyles.buyingPanelBg') 0 0 / contain no-repeat;
+    opacity: 0;
 }
+
+    .Content_base__shown_3f {
+        opacity: 1;
+    }
 
 .Content_content_54 {
     display: flex;

@@ -399,6 +399,8 @@
     <main_unit_exit>main_unit_exit</main_unit_exit>
     <fa_enter>fa_enter</fa_enter>
     <fa_exit>fa_exit</fa_exit>
+    <ads_enter>ads_enter</ads_enter>
+    <ads_exit>ads_exit</ads_exit>
     <clans_quests_enter>clans_quests_enter</clans_quests_enter>
     <clans_quests_exit>clans_quests_exit</clans_quests_exit>
     <craft_machine_assembly_soft>craft_machine_assembly_soft</craft_machine_assembly_soft>
@@ -418,6 +420,5 @@
     <clans_winner_reward_exit>clans_winner_reward_exit</clans_winner_reward_exit>
     <clans_winner_reward_make_bet>clans_winner_reward_make_bet</clans_winner_reward_make_bet>
     <clans_winner_reward_complete>clans_winner_reward_complete</clans_winner_reward_complete>
-    <no>no</no>
   </effects>
 </gui_sounds.xml>

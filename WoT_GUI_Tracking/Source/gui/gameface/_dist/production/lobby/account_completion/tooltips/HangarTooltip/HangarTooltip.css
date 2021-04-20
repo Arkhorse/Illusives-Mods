@@ -1,0 +1,278 @@
+.TooltipDecorator_base_c9 {
+    display: flex;
+    position: absolute;
+}
+
+.TooltipDecorator_decorator_3d {
+    padding: 4rem 6rem 8rem; /* border offset*/
+    border-image-source: url('R.atlases.components.tooltip_background');
+    border-image-slice: 24 fill;
+    border-image-width: 24rem;
+    position: relative;
+}
+
+.TooltipDecorator_decoratorContent_de {
+    background-color: #000;
+}
+
+.FormatText_base_d0 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Reward_base_ea {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    height: 80rem;
+    position: relative;
+}
+
+    .Reward_base_ea.Reward_small_e3 {
+        width: 48rem;
+        height: 48rem;
+    }
+
+    .Reward_base_ea .Reward_image_89 {
+        position: relative;
+    }
+
+    .Reward_base_ea .Reward_image_89 .Reward_icon_df {
+            width: 80rem;
+            height: 80rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            z-index: 1;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_icon_df.Reward_small_e3 {
+                width: 48rem;
+                height: 48rem;
+            }
+
+    .Reward_base_ea .Reward_image_89 .Reward_overlay_68 {
+            width: 128rem;
+            height: 128rem;
+            background: no-repeat center / 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_overlay_68.Reward_small_e3 {
+                width: 96rem;
+                height: 96rem;
+                background-size: 100%;
+                overflow: visible;
+            }
+
+    .Reward_base_ea .Reward_image_89 .Reward_highlight_36 {
+            width: 80rem;
+            height: 80rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 80rem 80rem;
+            position: absolute;
+            z-index: 0;
+        }
+
+    .Reward_base_ea .Reward_image_89 .Reward_highlight_36.Reward_small_e3 {
+                width: 48rem;
+                height: 48rem;
+                background-size: 50rem 50rem;
+            }
+
+    .Reward_base_ea .Reward_info_72 {
+        margin-top: -13rem;
+        color: #e9e2bf;
+        font-size: 14rem;
+        line-height: 18rem;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .Reward_base_ea .Reward_info_72.Reward_multi_64 {
+            margin-right: 2rem;
+            text-align: right;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_multi_64.Reward_small_e3 {
+                margin-right: 0;
+            }
+
+    .Reward_base_ea .Reward_info_72.Reward_small_e3 {
+            margin: -10rem -10rem 0;
+            font-size: 14rem;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_credits_3f {
+            color: #ced9d9;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_gold_e3 {
+            color: #ffc363;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_crystal_69 {
+            color: #c9c9b6;
+        }
+
+    .Reward_base_ea .Reward_info_72.Reward_premiumTank_29 {
+            color: #fd9;
+        }
+
+@keyframes RewardList_showIn_5c {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes RewardList_showOut_91 {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes RewardList_fadeIn_8d {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes RewardList_fadeOut_27 {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes RewardList_windowIn_3f {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.RewardList_base_79 {
+    position: relative;
+}
+
+.RewardList_base__divider_32 {
+        height: 160rem;
+    }
+
+.RewardList_title_2a {
+    color: #E9E2BF;
+    font-size: 18rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 17rem 0 25rem;
+    text-align: center;
+}
+
+.RewardList_base__small_ca .RewardList_title_2a,
+    .RewardList_base__extraSmall_95 .RewardList_title_2a {
+        margin: 15rem 0 20rem;
+    }
+
+.RewardList_divider_7d {
+    width: 580rem;
+    height: 160rem;
+    background: url('R.images.gui.maps.icons.account_completion.rewards_back') no-repeat 50% / contain;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-356rem);
+}
+
+.RewardList_content_fb {
+    display: flex;
+    justify-content: space-around;
+}
+
+.RewardList_reward_40 {
+    margin: 0 20rem;
+}
+
+.RewardList_base__small_ca .RewardList_reward_40,
+    .RewardList_base__extraSmall_95 .RewardList_reward_40 {
+        margin: 0 15rem;
+    }
+
+.HangarApp_base_3b {
+    width: 372rem;
+    padding: 12rem 20rem;
+}
+
+    .HangarApp_base__large_db {
+        padding-bottom: 32rem;
+    }
+.HangarApp_title_75 {
+    color: #E9E2BF;
+    font-size: 15rem;
+    font-weight: 700;
+    line-height: 1.15;
+}
+.HangarApp_title__large_24 {
+        color: #E9E2BF;
+        font-size: 18rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 4rem;
+    }
+.HangarApp_separator_70 {
+    width: 100%;
+    height: 1rem;
+    margin: 17rem 0 10rem;
+    background: url('R.images.gui.maps.icons.account_completion.separator_dashed') no-repeat 50% / contain;
+}
+.HangarApp_text_e0 {
+    color: #8C8C7E;
+    font-size: 14rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-top: 4rem;
+}
+.HangarApp_text__indent_14 {
+        margin-bottom: 12rem;
+    }
+.HangarApp_textName_8f {
+    color: #FEFEEC;
+}
+.HangarApp_textInner_59 {
+    color: #E9E2BF;
+}
+.HangarApp_rewards_91 {
+    margin: 9rem 1rem 0;
+}
+.HangarApp_rewards__indent_d5 {
+        margin-top: 24rem;
+    }
+.HangarApp_rewardsItem_d5 {
+    margin: 0 9rem;
+}
+

@@ -160,7 +160,7 @@
     height: 100%;
     background-color: var(--progress-line-base);
     position: relative;
-    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-timing-function: cubic-bezier(1, 0, .92, 1);
     transition-property: width;
 }
 .ProgressLineImpose_base__disabled_cc {
@@ -170,7 +170,7 @@
         background-color: var(--progress-line-finished);
     }
 .ProgressLineImpose_base__withoutBounce_56 {
-        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+        transition-timing-function: cubic-bezier(1, 0, .75, .75);
     }
 .ProgressLineImpose_pattern_1c {
     max-width: 8001px;
@@ -260,7 +260,7 @@
     position: absolute;
     bottom: 0;
     transform-origin: right center;
-    transition-timing-function: cubic-bezier(1, 0, .92, 1.39), cubic-bezier(.21, .61, .35, 1);
+    transition-timing-function: cubic-bezier(1, 0, .92, 1), cubic-bezier(.21, .61, .35, 1);
     transition-property: width, transform;
 }
 
@@ -274,11 +274,11 @@
     height: 100%;
     position: absolute;
     top: 0;
-    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-timing-function: cubic-bezier(1, 0, .92, 1);
     transition-property: width;
 }
 .ProgressBarDeltaGrow_base__withoutBounce_b5 {
-        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+        transition-timing-function: cubic-bezier(1, 0, .75, .75);
     }
 .ProgressBarDeltaGrow_glow_68 {
     width: 0;
@@ -289,11 +289,11 @@
     position: absolute;
     bottom: 0;
     transform-origin: right center;
-    transition-timing-function: cubic-bezier(1, 0, .92, 1.39);
+    transition-timing-function: cubic-bezier(1, 0, .92, 1);
     transition-property: width;
 }
 .ProgressBarDeltaGrow_base__withoutBounce_b5 .ProgressBarDeltaGrow_glow_68 {
-        transition-timing-function: cubic-bezier(1, 0, .92, 1);
+        transition-timing-function: cubic-bezier(1, 0, .75, .75);
     }
 
 /*
@@ -1048,10 +1048,12 @@
         border-radius: 7rem;
     }
 .Counter_value_3e {
+    display: flex;
     padding: 0 4rem;
     color: #fefeec;
     font-size: 11rem;
     line-height: 13rem;
+    white-space: nowrap;
 }
 .Counter_base__big_19 .Counter_value_3e {
         padding: 0 7rem;
@@ -1074,6 +1076,10 @@
 .Counter_base__pattern_71 .Counter_value_3e {
         display: none;
     }
+.Counter_plus_15 {
+    position: relative;
+    top: -1rem;
+}
 .Counter_pattern_83 {
     display: none;
 }
@@ -1191,7 +1197,7 @@
     height: 100%;
     border: 1rem solid #fd9;
     border-radius: 2rem;
-    filter: drop-shadow(0 0 7rem #ff2a00);
+    filter: drop-shadow(0 0 7px #ff2a00);
     position: absolute;
     top: 0;
     left: 0;
@@ -2025,8 +2031,6 @@
     cursor: pointer;
 }
 
-    /* type*/
-
     .CButton_base__main_42,
     .CButton_base__primary_7f,
     .CButton_base__primaryGreen_6f,
@@ -2059,10 +2063,8 @@
         border-radius: 3rem;
         box-shadow: 0 0 0 1rem rgba(0,0,0, .3),
             0 0 0 1rem rgba(255,255,255, .15) inset;
-        background-image: linear-gradient(0deg, rgba(13, 11, 3, 0) 0%, rgba(13, 11, 3, .04) 27%, rgba(13, 11, 3, 0) 100%);
+        background-color: rgba(0,0,0, .15);
     }
-
-    /* size*/
 
     .CButton_base__extraSmall_27 {
         min-height: 17rem;
@@ -2075,14 +2077,12 @@
     }
 
     .CButton_base__small_df {
-        min-height: 20rem;
+        min-height: 18rem;
     }
 
     .CButton_base__medium_74 {
-        min-height: 31rem;
+        min-height: 32rem;
     }
-
-    /*state*/
 
     .CButton_base__disabled_d9 {
         cursor: default;
@@ -2162,8 +2162,8 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         opacity: 0;
     }
 .CButton_base__ghost_ed .CButton_stateHighlightHover_ff {
-        box-shadow: 0 15rem 12rem 0 rgba(242, 242, 230, .11) inset;
-        background-color: rgba(8, 6, 0, .18);
+        box-shadow: 0 15rem 12rem 0 rgba(242,242,230, .11) inset;
+        background-color: rgba(8,6,0, .18);
         background-image: none;
     }
 .CButton_stateHighlightActive_35 {
@@ -2176,7 +2176,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         opacity: 0;
     }
 .CButton_stateDisabled_54 {
-    background-color: rgba(0, 0, 0, .25);
+    background-color: rgba(0,0,0, .25);
     background-image: url('R.images.gui.maps.icons.components.button.texture_disable');
     background-size: 15rem;
 }
@@ -2201,7 +2201,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     .CButton_content_cc[lang=th] {
         font-weight: 400;
     }
-/* type*/
 .CButton_base__main_42 .CButton_content_cc,
     .CButton_base__primaryRed_ec .CButton_content_cc {
         text-shadow: 0 -1rem 1rem #600;
@@ -2212,7 +2211,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 .CButton_base__primaryGreen_6f .CButton_content_cc {
         text-shadow: 0 -1rem 1rem #1c2502;
     }
-/* size*/
 .CButton_base__extraSmall_27 .CButton_content_cc {
         font-size: 12rem;
     }
@@ -2222,7 +2220,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 .CButton_base__medium_74 .CButton_content_cc {
         font-size: 15rem;
     }
-/*state*/
 .CButton_base__disabled_d9 .CButton_content_cc {
         opacity: .6;
     }
@@ -3767,23 +3764,24 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         transform: scale(1);
     }
 }
+/* Need for responsive scrolling at the ends of the progression */
 .CrewReward_base_60 {
     display: flex;
     align-items: flex-end;
-    width: 380rem;
+    width: 530rem;
     height: 535rem;
     position: relative;
     left: -100rem;
 }
 .CrewReward_base__chapter3_50 {
-        width: 340rem;
+    width: 490rem;
     }
 .CrewReward_base__sizeMedium_db {
-        width: 280rem;
+    width: 430rem;
         height: 440rem;
     }
 .CrewReward_base__sizeSmall_f0 {
-        width: 210rem;
+    width: 360rem;
         height: 330rem;
         left: -60rem;
     }
@@ -4317,7 +4315,8 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     position: absolute;
     z-index: 3;
     pointer-events: none;
-    transition: opacity .3s linear;
+    transition: opacity .2s linear;
+    pointer-events: none;
 }
 .BattlePassProgressionsViewContent_fakeBackground__in_c6 {
         opacity: 1;
@@ -4478,6 +4477,10 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         transition-property: none;
     }
 
+.Slider_base__withoutPointer_01 .Slider_track_4c {
+        pointer-events: none;
+    }
+
 .Slider_slide_8b {
     display: flex;
     flex-direction: column;
@@ -4521,7 +4524,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 /* becouse of 4k performance */
 
 .Slider_slide__beforeActive_35 {
-        transform: scale(.66) translateX(150rem);
+        transform: scale(.66) translateX(150px);
     }
 
 /* stylelint-disable */
@@ -4531,7 +4534,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     }
 
 .Slider_slide__afterActive_1f {
-        transform: scale(.66) translateX(-150rem);
+        transform: scale(.66) translateX(-150px);
     }
 
 .Slider_slide__afterActiveLarge_cb {
@@ -4539,7 +4542,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     }
 
 .Slider_slide__leftEdge_d8 {
-        transform: scale(.66) translateX(300rem);
+        transform: scale(.66) translateX(300px);
     }
 
 .Slider_slide__leftEdgeLarge_9f {
@@ -4547,7 +4550,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     }
 
 .Slider_slide__rightEdge_43 {
-        transform: scale(.66) translateX(-300rem);
+        transform: scale(.66) translateX(-300px);
     }
 
 .Slider_slide__rightEdgeLarge_71 {

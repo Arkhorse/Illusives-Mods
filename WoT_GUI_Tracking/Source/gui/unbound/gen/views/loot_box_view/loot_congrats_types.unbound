@@ -12,5 +12,6 @@
         (const INIT_CONGRAT_TYPE_CREW_BOOKS:str = 'CrewBookCongrats')
         (const INIT_CONGRAT_TYPE_EPIC_REWARDS:str = 'EpicRewardCongrats')
         (const INIT_CONGRAT_TYPE_BATTLE_PASS:str = 'BattlePassCongrats')
+        (const INIT_CONGRAT_TYPE_AC_EMAIL_CONFIRMATION:str = 'ACEmailConfirmation')
     )
 )

@@ -6,6 +6,8 @@
         (var hasSuffixBadge:bool = "suffixBadgeId != ''")
         (var badgeIcnId:str = "hasPreffixBadge ? prefixBadgeId : 'empty'")
         (var badgeIcnFld:str = "isNormalSize ? 'c_80x80' : 'c_48x48'")
+        (var showEmailButton:bool = false)
+        (bind showEmailButton "emailButtonLabel != ''")
     )
     (style
         (align = "bottom|center")
@@ -69,7 +71,7 @@
             (style
                 (align = "middle")
                 (gap = -4px)
-                (marginTop = -8px)
+                (bind marginTop "showEmailButton ? -18px: -8px")
             )
             (hblock
                 (style
@@ -78,6 +80,7 @@
                 (element UserName 'userName'
                     (style
                         (zindex = "ZIndex.FOREGROUND")
+                        (bind marginBottom "isNormalSize ? 4px : 2px")
                     )
                     (scope
                         (bind nameMaxWidth "isNormalSize ? 530px : 420px")
@@ -115,15 +118,39 @@
                     )
                     (bind visible "hasSuffixBadge")
                 )
-            )
-            (element PremDashboardHeaderClanInfo 'clanInfo'
-                (scope
-                    (bind txtStyle "isNormalSize ? 'MainBigTextStyle' : 'MainTextStyle'")
-                    (bind isInClan "isInClan")
+                (image
+                    (style
+                        (bind marginTop "isNormalSize ? -46px : -32px")
+                    )
+                    (bind source "R.images.gui.maps.icons.library.alertIcon()")
+                    (bind visible "isWarningIconVisible")
                 )
-                (bind visible "isInClan")
+                (controller $ToolTip
+                    (content = "R.views.lobby.account_completion.tooltips.HangarTooltip.resId")
+                    (bind enabled "showEmailActionTooltip")
+                )
             )
-
+            (hblock
+                (button
+                    (style
+                        (marginRight = 8px)
+                    )
+                    (macro ButtonStyleMain "BUTTON_SIZE_MEDIUM")
+                    (bind label "emailButtonLabel")
+                    (dispatch onEmailButtonClicked on='clicked')
+                    (bind visible "showEmailButton")
+                )
+                (element PremDashboardHeaderClanInfo 'clanInfo'
+                    (style
+                        (bind marginTop "isNormalSize ? 0px : 2px")
+                    )
+                    (scope
+                        (bind txtStyle "isNormalSize ? 'MainBigTextStyle' : 'MainTextStyle'")
+                        (bind isInClan "isInClan")
+                    )
+                    (bind visible "isInClan")
+                )
+            )
         )
     )
     (hblock

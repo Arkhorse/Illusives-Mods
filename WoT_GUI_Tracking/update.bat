@@ -1,7 +1,7 @@
 @echo off
 
 @set "Region=NA"
-@set "gameInstallLocation=C:\Games\World_of_Tanks_%Region%\res\packages\"
+@set "gameInstallLocation=G:\Wargaming.net\World_of_Tanks_%Region%\res\packages\"
 rem Name of the package within the \World_of_Tanks_%Region%\res\packages\ folder
 @set "packageName0=gui-part1.pkg"
 @set "packageName1=gui-part2.pkg"

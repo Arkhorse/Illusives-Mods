@@ -1,0 +1,82 @@
+.TaggedText_paragraph_7f {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+    .TaggedText_paragraph__left_6f {
+        justify-content: flex-start;
+    }
+
+    .TaggedText_paragraph__right_01 {
+        justify-content: flex-end;
+    }
+
+    .TaggedText_paragraph__center_ab {
+        justify-content: center;
+    }
+
+.TaggedText_neutral_f3 {
+    color: #cbac77;
+}
+
+.TaggedText_expTag_81 {
+    color: #e9e2bf;
+}
+
+.TaggedText_stats_f2 {
+    color: #e9e2bf;
+}
+
+.TaggedText_colorTag_4a {
+    color: #80d43a;
+}
+
+@keyframes BlackMarketLinkButton_wrapperHover_72 {
+    from {
+        filter: brightness(100%);
+    }
+
+    to {
+        filter: brightness(135%);
+    }
+}
+
+.BlackMarketLinkButton_base_b9 {
+    display: flex;
+    align-items: center;
+    width: 245rem;
+    height: 66rem;
+    padding-left: 16rem;
+    border: 1rem solid rgba(255, 255, 255, .1);
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, .15);
+    overflow: hidden;
+    transition: border-color .3s ease-out,
+        background-color .3s ease-out;
+    cursor: pointer;
+}
+
+.BlackMarketLinkButton_base_b9:hover {
+        border-color: rgba(255, 255, 255, .15);
+        background-color: rgba(0, 0, 0, .2);
+    }
+
+.BlackMarketLinkButton_image_f5 {
+    width: 62rem;
+    height: 62rem;
+    background: no-repeat center / cover;
+}
+
+.BlackMarketLinkButton_base_b9:hover .BlackMarketLinkButton_image_f5 {
+        animation: BlackMarketLinkButton_wrapperHover_72 .2s ease forwards;
+    }
+
+.BlackMarketLinkButton_title_d4 {
+    color: #E9E2BF;
+    font-size: 15rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-left: 10rem;
+}
+

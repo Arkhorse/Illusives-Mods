@@ -27,7 +27,7 @@
         (name = 'bg')
         (style
             (position = "absolute")
-            (scale9grid = "Rect(24, 24, 186, 166)")
+            (scale9grid = "Rect(24, 18, 184, 170)")
             (width=100%)
             (height=100%)
         )

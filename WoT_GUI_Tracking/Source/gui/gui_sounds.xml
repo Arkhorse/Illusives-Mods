@@ -78,7 +78,7 @@
 					rankedBattleHeaderProgressRenderer
 					womanListPopover
 					sheetsPopover
-					paginationNumItemRenderer</groups>
+					paginatorArrowButton</groups>
       </positiveCtl>
       <customization>
         <sounds>
@@ -152,7 +152,8 @@
 					accordion
 					arrow
 					contextmenu
-					scrollBtn</groups>
+					scrollBtn
+					paginationNumItemRenderer</groups>
       </tabCtl>
       <numericStepper>
         <sounds>
@@ -392,11 +393,6 @@
     <black_market_enter>black_market_enter</black_market_enter>
     <black_market_exit>black_market_exit</black_market_exit>
     <black_market_make_bet>black_market_make_bet</black_market_make_bet>
-    <event_progression_enter>event_progression_enter</event_progression_enter>
-    <event_progression_exit>event_progression_exit</event_progression_exit>
-    <event_progression_switch_calendar>event_progression_switch_calendar</event_progression_switch_calendar>
-    <eb_ambient_progress_page_enter>eb_ambient_progress_page_enter</eb_ambient_progress_page_enter>
-    <eb_ambient_progress_page_exit>eb_ambient_progress_page_exit</eb_ambient_progress_page_exit>
     <clans_enter>clans_enter</clans_enter>
     <gui_clans_joining_award>gui_clans_joining_award</gui_clans_joining_award>
     <main_unit_enter>main_unit_enter</main_unit_enter>
@@ -416,12 +412,12 @@
     <gui_rb_rank_box_02>gui_rb_rank_box_02</gui_rb_rank_box_02>
     <gui_rb_top_award_start>gui_rb_top_award_start</gui_rb_top_award_start>
     <gui_rb_top_award_end>gui_rb_top_award_end</gui_rb_top_award_end>
+    <clans_battles_global_map_enter>clans_battles_global_map_enter</clans_battles_global_map_enter>
+    <clans_battles_global_map_exit>clans_battles_global_map_exit</clans_battles_global_map_exit>
     <clans_winner_reward_enter>clans_winner_reward_enter</clans_winner_reward_enter>
     <clans_winner_reward_exit>clans_winner_reward_exit</clans_winner_reward_exit>
     <clans_winner_reward_make_bet>clans_winner_reward_make_bet</clans_winner_reward_make_bet>
     <clans_winner_reward_complete>clans_winner_reward_complete</clans_winner_reward_complete>
-    <gui_bb_bloggers_highlight>gui_bb_bloggers_highlight</gui_bb_bloggers_highlight>
-    <gui_bb_bloggers_buttons_play>gui_bb_bloggers_buttons_play</gui_bb_bloggers_buttons_play>
-    <gui_bb_bloggers_skills_up>gui_bb_bloggers_skills_up</gui_bb_bloggers_skills_up>
+    <no>no</no>
   </effects>
 </gui_sounds.xml>

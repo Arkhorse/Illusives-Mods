@@ -1,0 +1,900 @@
+.Header_base_1e {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Header_title_5d {
+    color: #F2F2F7;
+    font-size: 36rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 10rem;
+}
+
+.Header_description_8b {
+    color: #8C8C7E;
+    font-size: 16rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.CButton_base_40 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0 0 0 1rem rgba(0,0,0, .6);
+    position: relative;
+    cursor: pointer;
+}
+
+    /* type*/
+
+    .CButton_base__main_42,
+    .CButton_base__primary_7f,
+    .CButton_base__primaryGreen_6f,
+    .CButton_base__primaryRed_ec,
+    .CButton_base__secondary_50 {
+        background-size: 100% 100%;
+    }
+
+    .CButton_base__main_42 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+
+    .CButton_base__primary_7f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+
+    .CButton_base__primaryGreen_6f {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+
+    .CButton_base__primaryRed_ec {
+        background-image: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+
+    .CButton_base__secondary_50 {
+        background-image: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+
+    .CButton_base__ghost_ed {
+        border-radius: 3rem;
+        box-shadow: 0 0 0 1rem rgba(0,0,0, .3),
+            0 0 0 1rem rgba(255,255,255, .15) inset;
+        background-image: linear-gradient(0deg, rgba(13, 11, 3, 0) 0%, rgba(13, 11, 3, .04) 27%, rgba(13, 11, 3, 0) 100%);
+    }
+
+    /* size*/
+
+    .CButton_base__extraSmall_27 {
+        min-height: 17rem;
+        padding: 0 16rem;
+    }
+
+    .CButton_base__small_df,
+    .CButton_base__medium_74 {
+        padding: 0 20rem;
+    }
+
+    .CButton_base__small_df {
+        min-height: 20rem;
+    }
+
+    .CButton_base__medium_74 {
+        min-height: 31rem;
+    }
+
+    /*state*/
+
+    .CButton_base__disabled_d9 {
+        cursor: default;
+    }
+/* Element .back and background-image in element .base need for fix bug in GF https://jira.wargaming.net/browse/WOTD-158525
+The bug is that under certain conditions, when using border-image, stripes appear. Strip is a single-pixel gap
+between 'border-image-width' and 'fill'.
+This bug is reproduced in Google Chrome 81.0.4044.113
+*/
+.CButton_back_e5 {
+    border-image-slice: 4 fill;
+    border-image-width: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_base__main_42 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_main');
+    }
+.CButton_base__primary_7f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary');
+    }
+.CButton_base__primaryGreen_6f .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_green');
+    }
+.CButton_base__primaryRed_ec .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_primary_red');
+    }
+.CButton_base__secondary_50 .CButton_back_e5 {
+        border-image-source: url('R.images.gui.maps.icons.components.button.back_secondary');
+    }
+.CButton_texture_fe {
+    background: url('R.images.gui.maps.icons.components.button.standard_texture_file');
+    background-size: 155rem 31rem;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.CButton_state_11 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: box-shadow .16s ease-in-out;
+}
+.CButton_base__focus_83 .CButton_state_11 {
+        border-radius: 2rem;
+        box-shadow: inset 0 0 2rem 1rem rgba(255,85,0, .2);
+    }
+.CButton_stateHighlightHover_ff,
+.CButton_stateHighlightActive_35,
+.CButton_stateDisabled_54 {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity .16s ease-in-out;
+}
+.CButton_stateHighlightHover_ff {
+    background-image: linear-gradient(180deg, rgba(252,248,235, .25) 0%, rgba(252,248,235, .1) 50%, rgba(255,255,255, 0) 100%);
+}
+.CButton_base_40:hover .CButton_stateHighlightHover_ff {
+        opacity: 1;
+    }
+.CButton_base_40:active .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__disabled_d9:hover .CButton_stateHighlightHover_ff {
+        opacity: 0;
+    }
+.CButton_base__ghost_ed .CButton_stateHighlightHover_ff {
+        box-shadow: 0 15rem 12rem 0 rgba(242, 242, 230, .11) inset;
+        background-color: rgba(8, 6, 0, .18);
+        background-image: none;
+    }
+.CButton_stateHighlightActive_35 {
+    background-image: linear-gradient(180deg, rgba(0,0,0, .3) 0%, rgba(0,0,0, .15) 100%);
+}
+.CButton_base_40:active .CButton_stateHighlightActive_35 {
+        opacity: 1;
+    }
+.CButton_base__disabled_d9:active .CButton_stateHighlightActive_35 {
+        opacity: 0;
+    }
+.CButton_stateDisabled_54 {
+    background-color: rgba(0, 0, 0, .25);
+    background-image: url('R.images.gui.maps.icons.components.button.texture_disable');
+    background-size: 15rem;
+}
+.CButton_base__disabled_d9 .CButton_stateDisabled_54 {
+        opacity: 1;
+    }
+.CButton_content_cc {
+    display: flex;
+    align-items: center;
+    color: #f2f2e6;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 0 -1rem 1rem #000;
+    letter-spacing: .03em;
+    transform: translateY(-1rem);
+}
+.CButton_content_cc[lang=ja],
+    .CButton_content_cc[lang=ko],
+    .CButton_content_cc[lang=zh_tw],
+    .CButton_content_cc[lang=zh_sg],
+    .CButton_content_cc[lang=zh_ch],
+    .CButton_content_cc[lang=th] {
+        font-weight: 400;
+    }
+/* type*/
+.CButton_base__main_42 .CButton_content_cc,
+    .CButton_base__primaryRed_ec .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #600;
+    }
+.CButton_base__secondary_50 .CButton_content_cc {
+        color: rgba(254,254,236, .75);
+    }
+.CButton_base__primaryGreen_6f .CButton_content_cc {
+        text-shadow: 0 -1rem 1rem #1c2502;
+    }
+/* size*/
+.CButton_base__extraSmall_27 .CButton_content_cc {
+        font-size: 12rem;
+    }
+.CButton_base__small_df .CButton_content_cc {
+        font-size: 14rem;
+    }
+.CButton_base__medium_74 .CButton_content_cc {
+        font-size: 15rem;
+    }
+/*state*/
+.CButton_base__disabled_d9 .CButton_content_cc {
+        opacity: .6;
+    }
+
+.Footer_button_0a {
+    min-width: 160rem;
+}
+
+.ScrollArea_base_47 {
+    width: 100%;
+    min-width: 1rem;
+    min-height: 1rem;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+    .ScrollArea_base__scrollIndent_1d.ps--active-y {
+        padding-right: 13rem;
+    }
+
+    .ScrollArea_base__scrollIndent_1d.ps--active-х {
+        padding-bottom: 13rem;
+    }
+
+    .ScrollArea_base__verticalScrollbarMargin_50 .ps__rail-y {
+                margin: 20rem 0;
+                right: 5rem;
+            }
+
+    .ScrollArea_base__multiple_44 .ps__rail-y {
+                margin-bottom: 30rem;
+            }
+
+    .ScrollArea_base__hidden_ec {
+        visibility: hidden;
+    }
+.ps--scrolling-dragging {
+        cursor: move;
+    }
+.ps__rail-x, .ps__thumb-x {
+        height: 13rem;
+        position: absolute;
+    }
+.ps__rail-y, .ps__thumb-y {
+        width: 13rem;
+        position: absolute;
+    }
+.ps__thumb-x, .ps__button-start-x, .ps__button-end-x, .ps__thumb-y, .ps__button-start-y, .ps__button-end-y {
+        border: 1rem solid #7e7b68;
+        box-shadow: inset 0 0 1rem rgba(255,255,190, .3);
+        opacity: .7;
+    }
+.ps__thumb-x:hover, .ps__button-start-x:hover, .ps__button-end-x:hover, .ps__thumb-y:hover, .ps__button-start-y:hover, .ps__button-end-y:hover {
+            opacity: 1;
+        }
+.ps__thumb-x, .ps__button-start-x, .ps__button-end-x {
+        bottom: -6rem;
+    }
+.ps__thumb-y, .ps__button-start-y, .ps__button-end-y {
+        right: -6rem;
+    }
+.ps__rail-x {
+        display: none;
+        margin: 0 15rem;
+        border-top: 6rem solid transparent;
+        border-bottom: 6rem solid transparent;
+        bottom: 0;
+        cursor: pointer;
+    }
+.ps__rail-y {
+        display: none;
+        margin: 15rem 0;
+        border-left: 6rem solid transparent;
+        border-right: 6rem solid transparent;
+        right: 0;
+        cursor: pointer;
+    }
+.ps__track_x, .ps__track_y {
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.background');
+        background-size: 1rem;
+        position: relative;
+    }
+.ps__track_x:hover, .ps__track_y:hover {
+            opacity: .7;
+        }
+.ps__track_x {
+        width: 100%;
+        height: 1rem;
+        background-repeat: repeat-x;
+        background-position: 50% 0;
+    }
+.ps__track_y {
+        width: 1rem;
+        height: 100%;
+        background-repeat: repeat-y;
+        background-position: 0 50%;
+    }
+.ps--active-x > .ps__rail-x, .ps--active-y > .ps__rail-y {
+        display: block;
+    }
+.ps__thumb-x, .ps__thumb-y {
+        background: #26241b 50% 50% no-repeat;
+        transition: opacity linear .13s;
+    }
+.ps__thumb-x:active, .ps__thumb-y:active {
+            opacity: .7;
+        }
+.ps__thumb-x {
+        min-width: 10rem;
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.thumb_horizontal');
+        background-size: 8rem 7rem;
+    }
+.ps__thumb-y {
+        min-height: 10rem;
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.thumb');
+        background-size: 7rem 8rem;
+    }
+.ps__button-start-x, .ps__button-end-x, .ps__button-start-y, .ps__button-end-y {
+        width: 13rem;
+        height: 13rem;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 7rem 5rem;
+        position: absolute;
+    }
+.ps__button-start-x.disabled, .ps__button-end-x.disabled, .ps__button-start-y.disabled, .ps__button-end-y.disabled {
+            opacity: .3;
+            cursor: default;
+            pointer-events: none;
+        }
+.ps__button-start-x, .ps__button-start-y {
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.arrow_top');
+    }
+.ps__button-end-x, .ps__button-end-y {
+        background-image: url('R.images.gui.maps.icons.components.scroll_area.arrow_down');
+    }
+.ps__button-start-x, .ps__button-end-x {
+        transform: rotate(-90deg);
+    }
+.ps__button-start-x {
+        left: -14rem;
+    }
+.ps__button-end-x {
+        right: -14rem;
+    }
+.ps__button-start-y {
+        top: -14rem;
+    }
+.ps__button-end-y {
+        bottom: -14rem;
+    }
+
+.TextOverflow_base_3b {
+    width: 100%;
+    line-height: 1.3;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.ListItem_base_a7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20rem;
+    border: 1rem solid rgba(242,242,247, .15);
+    background-color: rgba(0,0,0, .1);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+    .ListItem_base__small_82 {
+        padding: 22rem 14rem 0;
+    }
+
+    .ListItem_base__extraSmall_70 {
+        padding: 16rem 10rem 0;
+    }
+
+    .ListItem_base__isFromStorage_e0 {
+        cursor: default;
+    }
+
+.ListItem_vehicleImage_8f {
+    width: 180rem;
+    height: 135rem;
+    background: no-repeat center / contain;
+}
+
+.ListItem_flagImage_75 {
+    background: no-repeat left top / contain;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.ListItem_title_ea {
+    color: #E9E2BF;
+    font-size: 16rem;
+    font-weight: 400;
+    line-height: 1.25;
+    display: flex;
+    margin-bottom: 14rem;
+}
+
+.ListItem_name_33 {
+    display: flex;
+    flex: 1 3 50%;
+}
+
+.ListItem_description_d5 {
+    color: #8C8C7E;
+    font-size: 14rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.ListItem_hoverWrap_7d {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+    position: absolute;
+    bottom: 42rem;
+    left: 20rem;
+    z-index: 10;
+    transition: height .15s ease;
+}
+
+.ListItem_base_a7:hover .ListItem_hoverWrap_7d {
+        height: 100rem;
+    }
+
+.ListItem_base__isFromStorage_e0:hover .ListItem_hoverWrap_7d {
+        height: 20rem;
+    }
+
+.ListItem_blur_f2 {
+    background-color: #1e1c18;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    transition: opacity .2s ease;
+}
+
+.ListItem_base_a7:hover .ListItem_blur_f2 {
+        opacity: .75;
+    }
+
+.ListItem_base__isFromStorage_e0:hover .ListItem_blur_f2 {
+        opacity: 0;
+    }
+
+.ListItem_titleLevel_ab {
+    margin: 0 4rem;
+    color: #CBAC77;
+}
+
+.ListItem_vehicleExists_e3 {
+    display: flex;
+    width: 136rem;
+    height: 100rem;
+    background: url('R.images.gui.maps.icons.bm2021.shared.light_card') no-repeat center / contain;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.ListItem_vehicleExistsTextIcon_9f {
+    width: 30rem;
+    height: 26rem;
+    margin-right: 6rem;
+    background: url('R.images.gui.maps.icons.bm2021.shared.green_garage') no-repeat center / contain;
+}
+
+.ListItem_vehicleExistsText_42 {
+    display: flex;
+    align-items: center;
+    color: #7AB300;
+    font-size: 13rem;
+    position: absolute;
+    bottom: 14rem;
+    left: 14rem;
+}
+
+.ListItem_vehicleExistsTextIconText_f3 {
+    display: flex;
+    align-items: flex-end;
+    height: 20rem;
+}
+
+.LipDivider_base_ef {
+    position: relative;
+}
+
+.LipDivider_texture_7b {
+    width: 100%;
+    height: 144rem;
+    background: url('R.images.gui.maps.icons.bm2021.shared.lip_divider') no-repeat left center;
+    position: absolute;
+    top: 50%;
+}
+
+.LipDivider_base__top_5d .LipDivider_texture_7b {
+        transform: translateY(-50%);
+    }
+
+.LipDivider_base__bottom_22 .LipDivider_texture_7b {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+.LipDivider_line_1f {
+    width: 100%;
+    height: 2rem;
+    background: linear-gradient(90deg, transparent 0%, #252525 10%, #1f1f1f 50%, #252525 90%, transparent 100%);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.Warning_base_9b {
+    display: flex;
+    align-items: center;
+    color: #EE7000;
+}
+
+.Warning_icon_52 {
+    width: 24rem;
+    height: 24rem;
+    margin-right: 9rem;
+    background: no-repeat center / contain;
+}
+
+.Warning_icon__triangle_7f {
+        background-image: url('R.images.gui.maps.icons.bm2021.dialog.warningIcon');
+    }
+
+.Warning_icon__circle_a6 {
+        width: 16rem;
+        height: 15rem;
+        margin-right: 8rem;
+        background-image: url('R.images.gui.maps.icons.bm2021.dialog.circleWarningIcon');
+    }
+
+.Warning_text__replaced_26 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+.Warning_text__shining_9b {
+        color: #FFDD99;
+        text-shadow: 0 0 10rem rgba(255,42,0, 1),
+        0 0 10rem rgba(255,42,0, .3),
+        0 0 10rem rgba(255,42,0, .3),
+        0 0 2rem rgba(255,42,0, .3),
+        0 0 1rem rgba(255,42,0, .3),
+        0 0 2rem rgba(255,42,0, .3),
+        0 0 1rem rgba(255,42,0, .3);
+    }
+
+.List_base_a9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    padding-top: 37rem;
+    padding-right: 10rem;
+    position: relative;
+}
+
+    .List_base__small_0c,
+    .List_base__extraSmall_b2 {
+        padding-top: 25rem;
+    }
+
+.List_scrollArea_08 {
+    display: flex;
+    justify-content: center;
+}
+
+.List_listWrap_2f {
+    display: flex;
+    flex-direction: column;
+    width: 1074rem;
+}
+
+.List_base__extraSmall_b2 .List_listWrap_2f {
+        width: 840rem;
+    }
+
+.List_list_73 {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    width: 100%;
+}
+
+.List_itemWrap_c0 {
+    width: 338rem;
+    height: 222rem;
+    margin: 10rem;
+}
+
+.List_base__extraSmall_b2 .List_itemWrap_c0 {
+        width: 260rem;
+        height: 170rem;
+    }
+
+.List_listWrapText_c8 {
+    color: #8C8C7E;
+    font-size: 16rem;
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 30rem 10rem 6rem;
+}
+
+.List_warningWrap_b1 {
+    margin: 12rem 10rem 5rem;
+}
+
+.List_botLipWrap_74,
+.List_topLipWrap_e2 {
+    position: absolute;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+}
+
+.List_topLipWrap_e2 {
+    top: 35rem;
+}
+
+.List_base__small_0c .List_topLipWrap_e2,
+    .List_base__extraSmall_b2 .List_topLipWrap_e2 {
+        top: 25rem;
+    }
+
+.List_botLipWrap_74 {
+    bottom: 0;
+}
+
+.List_vehicleCount_5f {
+    margin: 0 4rem;
+    color: #fefeec;
+}
+
+.TextButton_base_b6 {
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    font-size: 12rem;
+    position: relative;
+    cursor: pointer;
+}
+
+    .TextButton_base__right_39 {
+        flex-direction: row-reverse;
+    }
+.TextButton_icon_17 {
+    width: 32rem;
+    height: 32rem;
+    background: no-repeat center / contain;
+    position: relative;
+}
+.TextButton_icon__back_43,
+    .TextButton_icon__forward_59 {
+        margin: -1rem -5rem;
+        background-image: url('R.images.gui.maps.icons.components.text_button.back');
+        transform: translateY(1rem);
+    }
+.TextButton_icon__forward_59 {
+        transform: rotate(180deg) translateY(1rem);
+    }
+.TextButton_icon__close_53 {
+        margin: -1rem 0;
+        background-image: url('R.images.gui.maps.icons.components.text_button.close');
+    }
+.TextButton_icon__info_33 {
+        margin: -1rem -5rem;
+        background-image: url('R.images.gui.maps.icons.components.text_button.info');
+    }
+.TextButton_glow_a4 {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity .16s;
+}
+.TextButton_icon__back_43 .TextButton_glow_a4,
+    .TextButton_icon__forward_59 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.back_hover');
+    }
+.TextButton_icon__close_53 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.close_hover');
+    }
+.TextButton_icon__info_33 .TextButton_glow_a4 {
+        background-image: url('R.images.gui.maps.icons.components.text_button.info_hover');
+    }
+.TextButton_base_b6:hover .TextButton_glow_a4 {
+        opacity: 1;
+    }
+.TextButton_base_b6:active .TextButton_glow_a4 {
+        opacity: 0;
+    }
+.TextButton_caption_82 {
+    position: relative;
+    transition: color .16s;
+}
+.TextButton_caption__back_b9,
+    .TextButton_caption__forward_4e,
+    .TextButton_caption__close_36 {
+        color: #FFDD99;
+        text-shadow: 0 0 10rem rgba(255,42,0, 1),
+            0 0 10rem rgba(255,42,0, .4),
+            0 0 10rem rgba(255,42,0, .4),
+            0 0 2rem rgba(255,42,0, .4),
+            0 0 1rem rgba(255,42,0, .4),
+            0 0 2rem rgba(255,42,0, .4),
+            0 0 1rem rgba(255,42,0, .4);
+    }
+.TextButton_base_b6:hover .TextButton_caption__back_b9, .TextButton_base_b6:hover .TextButton_caption__forward_4e, .TextButton_base_b6:hover .TextButton_caption__close_36 {
+            color: #fffa9f;
+        }
+.TextButton_base_b6:active .TextButton_caption__back_b9, .TextButton_base_b6:active .TextButton_caption__forward_4e, .TextButton_base_b6:active .TextButton_caption__close_36 {
+            color: #FFDD99;
+        }
+.TextButton_caption__info_23 {
+        padding: 0 5rem;
+        color: #CCFFFF;
+        text-shadow: 0 0 12rem rgba(31,68,255, .8),
+            0 0 8rem #00eaff;
+    }
+.TextButton_base_b6:hover .TextButton_caption__info_23 {
+            color: #e3ffff;
+            text-shadow: 0 0 12rem rgba(31,68,255, .8),
+                0 0 12rem rgba(0,234,255, 1),
+                0 0 8rem #00eaff;
+        }
+.TextButton_base_b6:active .TextButton_caption__info_23 {
+            color: #CCFFFF;
+            text-shadow: 0 0 12rem rgba(31,68,255, .6),
+                0 0 8rem #00eaff;
+        }
+.TextButton_goto_e7 {
+    color: #7c7c6c;
+}
+.TextButton_base__left_ff .TextButton_goto_e7 {
+        margin-left: 8rem;
+    }
+.TextButton_base__right_39 .TextButton_goto_e7 {
+        margin-right: 8rem;
+    }
+.TextButton_shine_e2 {
+    width: 90rem;
+    height: 40rem;
+    background: url('R.images.gui.maps.icons.components.text_button.shine') no-repeat center / contain;
+    opacity: 0;
+    position: absolute;
+    top: -4rem;
+    transition: opacity .16s;
+    pointer-events: none;
+}
+.TextButton_base__left_ff .TextButton_shine_e2 {
+        left: -4rem;
+    }
+.TextButton_base__right_39 .TextButton_shine_e2 {
+        right: -4rem;
+        transform: rotate(180deg);
+    }
+.TextButton_base_b6:hover .TextButton_shine_e2 {
+        opacity: 1;
+    }
+.TextButton_base_b6:active .TextButton_shine_e2 {
+        opacity: 0;
+    }
+
+.App_base_40 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgb(18, 18, 18);
+    overflow: hidden;
+    position: relative;
+}
+
+.App_closeBtnWrap_e0,
+.App_backBtnWrap_5b {
+    position: absolute;
+    top: 40rem;
+}
+
+.App_closeBtnWrap__small_63,
+    .App_closeBtnWrap__extraSmall_e4,
+    .App_backBtnWrap__small_c6,
+    .App_backBtnWrap__extraSmall_2c {
+        top: 20rem;
+    }
+
+.App_backBtnWrap_5b {
+    left: 40rem;
+}
+
+.App_backBtnWrap__small_c6,
+    .App_backBtnWrap__extraSmall_2c {
+        left: 20rem;
+    }
+
+.App_closeBtnWrap_e0 {
+    right: 40rem;
+}
+
+.App_closeBtnWrap__small_63,
+    .App_closeBtnWrap__extraSmall_e4 {
+        right: 20rem;
+    }
+
+.App_content_7d {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 128rem 0 96rem;
+}
+
+.App_content__medium_18 {
+        padding: 60rem 0;
+    }
+
+.App_content__small_3b,
+    .App_content__extraSmall_d9 {
+        padding: 40rem 0;
+    }
+
+.App_footerWrap_60 {
+    margin-top: 56rem;
+    padding: 0 40rem;
+    z-index: 15;
+}
+
+.App_footerWrap__small_ac,
+    .App_footerWrap__extraSmall_9a {
+        margin-top: 24rem;
+    }
+
+.App_footerWrap__medium_f5 {
+        margin-top: 34rem;
+    }
+

@@ -166,10 +166,17 @@
   <ally_killed_by_enemy>
     <fx>
       <wwsound>expl_ally_NPC</wwsound>
-      <playRules>	2	</playRules>
+      <playRules>	0	</playRules>
       <shouldBindToPlayer>	True	</shouldBindToPlayer>
     </fx>
   </ally_killed_by_enemy>
+  <enemy_killed_by_ally>
+    <fx>
+      <wwsound>expl_enemy_NPC</wwsound>
+      <playRules>	0	</playRules>
+      <shouldBindToPlayer>	True	</shouldBindToPlayer>
+    </fx>
+  </enemy_killed_by_ally>
   <vehicle_destroyed>
     <voice>
       <wwsound>vo_vehicle_destroyed</wwsound>

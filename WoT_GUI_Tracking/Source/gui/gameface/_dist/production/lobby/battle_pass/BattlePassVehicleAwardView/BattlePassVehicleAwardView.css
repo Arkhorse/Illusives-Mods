@@ -306,7 +306,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     line-height: 1.2;
     text-shadow: 0 -1rem 1rem #000;
     letter-spacing: .03em;
-    transform: translateY(-5%);
+    transform: translateY(-1rem);
 }
 .CButton_content_cc[lang=ja],
     .CButton_content_cc[lang=ko],
@@ -429,7 +429,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     animation-timing-function: cubic-bezier(.07, .82, .17, 1);
     animation-delay: .8s;
     animation-iteration-count: 1;
-    color: #f2f2f7;
+    color: #F2F2F7;
     font-size: 56rem;
     font-weight: 700;
     text-align: center;
@@ -437,6 +437,25 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 
 .Header_base__big_4e .Header_status_74 {
         font-size: 73rem;
+    }
+
+.Header_subtitle_3a {
+    opacity: 0;
+    animation-name: Header_slideUp_83;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: .8s;
+    animation-iteration-count: 1;
+    margin-top: -10rem;
+    color: #F2F2F7;
+    font-size: 42rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.Header_base__big_4e .Header_subtitle_3a {
+        font-size: 56rem;
     }
 
 /* colors*/
@@ -645,6 +664,8 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     }
 
 .VehicleAward_levelIcon_49 {
+    width: 83rem;
+    height: 74rem;
     margin: 4rem -10rem 0;
 }
 
@@ -982,7 +1003,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     align-items: center;
     height: 100%;
     padding: 50rem 0;
-    background: url('R.images.gui.maps.icons.battlePass2020.progression.bg') no-repeat center center / cover;
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.background.chapter1') no-repeat center / cover;
     position: relative;
 }
 
@@ -992,6 +1013,14 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         padding-top: 100rem;
         padding-bottom: 80rem
 }
+    }
+
+.App_base__chapter2_93 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.background.chapter2');
+    }
+
+.App_base__chapter3_c6 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.background.chapter3');
     }
 
 .App_close_86 {

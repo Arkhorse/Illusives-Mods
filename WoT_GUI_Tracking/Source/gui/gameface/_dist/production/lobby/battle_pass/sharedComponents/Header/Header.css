@@ -85,7 +85,7 @@
     animation-timing-function: cubic-bezier(.07, .82, .17, 1);
     animation-delay: .8s;
     animation-iteration-count: 1;
-    color: #f2f2f7;
+    color: #F2F2F7;
     font-size: 56rem;
     font-weight: 700;
     text-align: center;
@@ -93,5 +93,24 @@
 
 .Header_base__big_4e .Header_status_74 {
         font-size: 73rem;
+    }
+
+.Header_subtitle_3a {
+    opacity: 0;
+    animation-name: Header_slideUp_83;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: .8s;
+    animation-iteration-count: 1;
+    margin-top: -10rem;
+    color: #F2F2F7;
+    font-size: 42rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.Header_base__big_4e .Header_subtitle_3a {
+        font-size: 56rem;
     }
 

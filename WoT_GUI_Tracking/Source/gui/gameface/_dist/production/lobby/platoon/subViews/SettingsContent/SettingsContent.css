@@ -181,7 +181,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     line-height: 1.2;
     text-shadow: 0 -1rem 1rem #000;
     letter-spacing: .03em;
-    transform: translateY(-5%);
+    transform: translateY(-1rem);
 }
 .CButton_content_cc[lang=ja],
     .CButton_content_cc[lang=ko],
@@ -379,11 +379,6 @@ base {
 
 /* Colors: https://confluence.wargaming.net/pages/viewpage.action?pageId=1111407054*/
 
-.TiersSettings_base_16 {
-    height: 90rem;
-    margin-bottom: 10rem;
-}
-
 .TiersSettings_filterText_db {
     margin-left: 1rem;
     color: #8c8c7e;
@@ -394,8 +389,11 @@ base {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 7rem 0 6rem;
 }
+
+.TiersSettings_tiers__firstLine_07 {
+        margin: 7rem 0 13rem;
+    }
 
 .Checkbox_base_36 {
     display: flex;
@@ -576,7 +574,7 @@ base {
     }
 
 .Checkbox_base__checked_a2.Checkbox_base__disabled_08 .Checkbox_checkmark_60 {
-        opacity: 0;
+        opacity: .5;
     }
 
 .Checkbox_base__small_18 .Checkbox_checkmark_60 {
@@ -682,18 +680,12 @@ base {
 
 /* Colors: https://confluence.wargaming.net/pages/viewpage.action?pageId=1111407054*/
 
-.VoiceSettings_soundControl_ed {
-    margin: -2rem 0 0 2rem;
-    color: #8c8c7e;
-    font-size: 14rem;
-}
-
-/*////////////*/
-
-/* Colors: https://confluence.wargaming.net/pages/viewpage.action?pageId=1111407054*/
-
 .SettingsContent_base_4d {
     width: 292rem;
     padding: 20rem;
+}
+
+.SettingsContent_notLast_f8 {
+    margin-bottom: 20rem;
 }
 

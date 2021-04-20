@@ -1,12 +1,55 @@
-.BlockCompleted_base_0a {
+.FinalLevel_level_49 {
+    color: #F2F2F7;
+    font-size: 73rem;
+    font-weight: 700;
+    line-height: 1.1;
+    width: 100%;
+    margin-bottom: 10rem;
+    text-align: center;
+}
+
+.FinalLevel_levelLabel_04 {
+    color: #C9C9B6;
+    font-size: 16rem;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.IconTextBlock_base_46 {
+    display: flex;
+}
+
+.IconTextBlock_icon_c9 {
+    width: 36rem;
+    height: 36rem;
+    background: center no-repeat;
+}
+
+.IconTextBlock_text_89 {
+    width: 90%;
+    margin-left: 10rem;
+}
+
+/* stylelint-disable */
+[lang=ja],
+[lang=ko],
+[lang=zh_tw],
+[lang=zh_sg],
+[lang=zh_ch],
+[lang=th] {
+    overflow-wrap: break-word;
+}
+/* stylelint-enable */
+.ClaimRewards_base_51 {
     line-height: normal;
 }
-.BlockCompleted_separator_c8 {
+.ClaimRewards_separator_45 {
     width: 283rem;
     height: 1rem;
     background: url('R.images.gui.maps.icons.battlePass2020.tooltips.Devider_points') 50% / contain no-repeat;
 }
-.BlockCompleted_rewards_d5 {
+.ClaimRewards_rewards_2d {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,57 +60,50 @@
     color: #c9c9b6;
     font-size: 14rem;
 }
-.BlockCompleted_whiteBg_52 {
+.ClaimRewards_base_51 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 403rem;
-    height: 64rem;
-    background: url('R.images.gui.maps.icons.battlePass2020.tooltips.Gradient_devider') center / cover repeat-y;
-    position: relative;
+    width: 100%;
 }
-.BlockCompleted_whiteBgLine_94 {
+.ClaimRewards_content_74 {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    color: #80d43a;
-    font-size: 14rem;
+    width: 100%;
+    margin: 0 -28rem;
+    padding: 17rem 28rem 23rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.tooltips.Gradient_devider') center top / cover repeat-y;
 }
-.BlockCompleted_whiteBgIcon_17 {
+.ClaimRewards_checkmark_65 {
     width: 12rem;
     height: 12rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-right: 4rem;
     background: url('R.images.gui.maps.icons.library.done') center / contain no-repeat;
 }
-.BlockCompleted_description_a4 {
-    width: 100%;
-    padding: 20rem 20rem 0;
-    color: #cbac77;
-    font-size: 14rem;
-    line-height: 1.2;
-    text-align: center;
-}
-
-.FinalLevel_level_49 {
-    width: 100%;
-    margin-top: 8rem;
-    margin-bottom: -12rem;
-    color: #f2f2f7;
-    font-size: 73rem;
-    font-weight: 700;
-    line-height: 102rem;
-    text-align: center;
-}
-
-.FinalLevel_levelLabel_04 {
-    margin-bottom: 35rem;
-    color: #e9e2bf;
+.ClaimRewards_text_75 {
+    color: #CBAC77;
     font-size: 16rem;
-    line-height: 20rem;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
 }
+.ClaimRewards_text__rewardsClaimed_0e {
+        color: #7AB300;
+    }
 
+/* stylelint-disable */
+[lang=ja],
+[lang=ko],
+[lang=zh_tw],
+[lang=zh_sg],
+[lang=zh_ch],
+[lang=th] {
+    overflow-wrap: break-word;
+}
+/* stylelint-enable */
 .Content_base_c5 {
     line-height: normal;
 }
@@ -99,21 +135,12 @@
         padding: 28rem 28rem 0;
     }
 .Content_title_e5 {
-    margin-top: 14rem;
-    color: #f2f2e7;
+    color: #F2F2F7;
     font-size: 24rem;
     font-weight: 700;
-}
-.Content_level_51 {
-    width: 100%;
-    margin-top: 8rem;
-    margin-bottom: -12rem;
-    color: #f2f2f7;
-    font-size: 73rem;
-    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 14rem;
     text-align: center;
-    position: relative;
-    z-index: -1;
 }
 .Content_footer_1a {
     display: flex;
@@ -130,17 +157,23 @@
     position: absolute;
     transform: translate(0, -273rem);
 }
-.Content_levelLabel_a5 {
-    margin-bottom: 40rem;
-    color: #e9e2bf;
-    font-size: 16rem;
+.Content_claimRewards_ca {
+    width: 440rem;
 }
 .Content_finalLevel_82 {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    position: relative;
+    margin-bottom: 20rem;
+}
+.Content_unlock_f4 {
+    color: #CBAC77;
+    font-size: 14rem;
+    font-weight: 400;
+    line-height: 1.3;
+    width: 100%;
+    margin-top: 20rem;
 }
 
 .TooltipDecorator_base_c9 {

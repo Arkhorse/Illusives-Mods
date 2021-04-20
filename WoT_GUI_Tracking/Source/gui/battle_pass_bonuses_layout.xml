@@ -8,112 +8,128 @@
     <battleToken>
       <isVisible>False</isVisible>
     </battleToken>
-    <undefined>
-      <priority>	110	</priority>
-    </undefined>
     <tmanToken>
-      <priority>	100	</priority>
+      <priority>	99	</priority>
+      <bigIcon>	Standard	</bigIcon>
     </tmanToken>
     <premium_plus>
-      <priority>	80	</priority>
+      <priority>	95	</priority>
       <bigIcon>	Standard	</bigIcon>
     </premium_plus>
-    <credits>
-      <priority>	70	</priority>
+    <bpcoin>
+      <priority>	96	</priority>
       <bigIcon>	Standard	</bigIcon>
+    </bpcoin>
+    <credits>
+      <priority>	82	</priority>
     </credits>
+    <crystal>
+      <priority>	89	</priority>
+    </crystal>
     <dossier>
-      <priority>	60	</priority>
+      <priority>	98	</priority>
+      <bigIcon>	Standard	</bigIcon>
     </dossier>
-    <crewSkins>
-      <priority>	50	</priority>
-    </crewSkins>
     <customizations>
-      <priority>	40	</priority>
       <style>
-        <priority>	59	</priority>
-        <override>
-          <id>89 115 294 312 358 356</id>
-          <priority>	110	</priority>
-        </override>
+        <priority>	94	</priority>
         <bigIcon>	Standard	</bigIcon>
       </style>
-      <camouflage>
-        <priority>	44	</priority>
-      </camouflage>
-      <decal>
-        <priority>	42	</priority>
-        <override>
-          <id>	25	</id>
-          <priority>	41	</priority>
-        </override>
-        <bigIcon>	Standard	</bigIcon>
-      </decal>
       <projection_decal>
-        <priority>	43	</priority>
+        <priority>	93	</priority>
         <bigIcon>	Standard	</bigIcon>
       </projection_decal>
     </customizations>
     <blueprints>
-      <priority>	30	</priority>
       <override>
         <id>	3	</id>
-        <priority>	31	</priority>
+        <priority>	84	</priority>
+      </override>
+      <override>
+        <id>65282 65298 65314 65330 65346 65362 65378 65394 65410 65426 65442</id>
+        <priority>	86	</priority>
+        <bigIcon>	Standard	</bigIcon>
       </override>
     </blueprints>
     <crewBooks>
-      <priority>	20	</priority>
-      <override>
-        <id>5422 6446 6942 5918</id>
-        <priority>	21	</priority>
-      </override>
       <override>
         <id>	15390	</id>
-        <priority>	75	</priority>
+        <priority>	82	</priority>
+      </override>
+      <override>
+        <id>286 542 798 1054 1310 1566 1822 2078 2334 2590 2846</id>
+        <priority>	81	</priority>
+        <bigIcon>	Standard	</bigIcon>
+      </override>
+      <override>
+        <id>5406 5662 5918 6174 6430 6686 6942 7198  7454 7710 7966</id>
+        <priority>	85	</priority>
         <bigIcon>	Standard	</bigIcon>
       </override>
     </crewBooks>
     <goodies>
-      <priority>	10	</priority>
-      <override>
-        <id>	5020	</id>
-        <priority>	9	</priority>
-      </override>
       <override>
         <id>	5062	</id>
-        <priority>	11	</priority>
+        <priority>	80	</priority>
+      </override>
+      <override>
+        <id>	9031	</id>
+        <priority>	78	</priority>
+      </override>
+      <override>
+        <id>	5028	</id>
+        <priority>	79	</priority>
       </override>
       <override>
         <id>	5042	</id>
-        <priority>	35	</priority>
-      </override>
-      <override>
-        <id>	12852	</id>
-        <priority>	12	</priority>
+        <priority>	87	</priority>
       </override>
     </goodies>
     <items>
-      <priority>	5	</priority>
-      <optionalDevice>
-        <priority>	90	</priority>
+      <equipment>
         <override>
-          <id>	15097	</id>
-          <priority>	91	</priority>
+          <id>26875 27643 27131</id>
+          <priority>	77	</priority>
         </override>
+      </equipment>
+      <optionalDevice>
+        <priority>	86	</priority>
         <bigIcon>	Standard	</bigIcon>
       </optionalDevice>
+      <trophyDevice>
+        <priority>	97	</priority>
+        <bigIcon>	Standard	</bigIcon>
+      </trophyDevice>
     </items>
-    <battlePassTrophyGiftToken>
-      <priority>	91	</priority>
-      <bigIcon>	Standard	</bigIcon>
-    </battlePassTrophyGiftToken>
-    <battlePassNewDeviceGiftToken>
+    <slots>
       <priority>	90	</priority>
       <bigIcon>	Standard	</bigIcon>
-    </battlePassNewDeviceGiftToken>
+    </slots>
+    <battlePassSelectToken>
+      <blueprint_gift>
+        <priority>	86	</priority>
+        <bigIcon>	Standard	</bigIcon>
+      </blueprint_gift>
+      <brochure_gift>
+        <priority>	81	</priority>
+        <bigIcon>	Standard	</bigIcon>
+      </brochure_gift>
+      <guide_gift>
+        <priority>	85	</priority>
+        <bigIcon>	Standard	</bigIcon>
+      </guide_gift>
+      <new_device_gift>
+        <priority>	86	</priority>
+        <bigIcon>	Standard	</bigIcon>
+      </new_device_gift>
+      <trophy_gift>
+        <priority>	97	</priority>
+        <bigIcon>	Standard	</bigIcon>
+      </trophy_gift>
+    </battlePassSelectToken>
+    <styleProgressToken>
+      <priority>	100	</priority>
+      <bigIcon>	Standard	</bigIcon>
+    </styleProgressToken>
   </bonuses>
-  <vehicles>
-    <left>usa:A69_T110E5 czech:Cz04_T50_51 ussr:R155_Object_277</left>
-    <right>ussr:R90_IS_4M usa:A120_M48A5 uk:GB91_Super_Conqueror</right>
-  </vehicles>
 </battle_pass_bonuses_layout.xml>

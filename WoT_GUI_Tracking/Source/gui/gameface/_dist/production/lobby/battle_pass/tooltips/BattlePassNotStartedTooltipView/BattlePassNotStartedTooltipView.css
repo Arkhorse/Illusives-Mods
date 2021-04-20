@@ -1,3 +1,13 @@
+/* stylelint-disable */
+[lang=ja],
+[lang=ko],
+[lang=zh_tw],
+[lang=zh_sg],
+[lang=zh_ch],
+[lang=th] {
+    overflow-wrap: break-word;
+}
+/* stylelint-enable */
 .Content_base_52 {
     line-height: normal;
 }
@@ -24,16 +34,6 @@
     width: 300rem;
     padding: 28rem;
 }
-/* stylelint-disable */
-[lang=ja],
-[lang=ko],
-[lang=zh_tw],
-[lang=zh_sg],
-[lang=zh_ch],
-[lang=th] {
-    overflow-wrap: break-word;
-}
-/* stylelint-enable */
 .Content_title_90 {
     color: #f2f2e7;
     font-size: 24rem;

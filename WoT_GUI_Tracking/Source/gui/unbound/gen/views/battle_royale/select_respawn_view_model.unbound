@@ -16,5 +16,6 @@
         (var selectedPointID:str = '')
         (var isTimeRunningOut:bool = false)
         (var isWaitingPlayers:bool = false)
+        (var isReplay:bool = false)
     )
 )

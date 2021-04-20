@@ -8,6 +8,57 @@
   <setting>https://worldoftanks.com/clanwars/strongholds/?utm_campaign=wot-client&amp;utm_medium=link&amp;utm_source=strongholds<name>fortDescription</name><type>url</type></setting>
   <setting>https://na.wargaming.net/id/signin/token/?account_id=$DB_ID&amp;token=$WGNI_TOKEN&amp;continue_on_failure=1&amp;next=$TARGET_URL(https://na.wargaming.net/clans/recruitstation/?utm_campaign=wot-client&amp;utm_medium=link&amp;utm_source=strongholds)<name>clanSearch</name><type>url</type></setting>
   <setting>https://na.wargaming.net/id/signin/token/?account_id=$DB_ID&amp;token=$WGNI_TOKEN&amp;continue_on_failure=1&amp;next=$TARGET_URL(https://na.wargaming.net/clans/create/?utm_campaign=wot-client&amp;utm_medium=link&amp;utm_source=strongholds)<name>clanCreate</name><type>url</type></setting>
+  <setting>
+    <name>	clanRulesURL	</name>
+    <type>macros</type>
+    <macros>AUTH_REALM</macros>
+    <value>
+      <item>https://legal.ru.wargaming.net/ru/clan-rules/<name>RU</name><type>url</type></item>
+      <item>
+        <name>EU</name>
+        <type>macros</type>
+        <macros>LANGUAGE_CODE</macros>
+        <value>
+          <item>https://legal.eu.wargaming.net/en/clan-rules/<name>en</name><type>url</type></item>
+          <item>https://legal.eu.wargaming.net/cs/pravidla-zalozeni-klanu/<name>cs</name><type>url</type></item>
+          <item>https://legal.eu.wargaming.net/fr/reglement-de-la-creation-de-clan/<name>fr</name><type>url</type></item>
+          <item>https://legal.eu.wargaming.net/de/clanerstellungsregeln/<name>de</name><type>url</type></item>
+          <item>https://legal.eu.wargaming.net/pl/zasady-tworzenia-klanow/<name>pl</name><type>url</type></item>
+          <item>https://legal.eu.wargaming.net/es/reglas-de-creacion-de-clanes/<name>es</name><type>url</type></item>
+          <item>https://legal.eu.wargaming.net/tr/klan-olusturma-kurallari/<name>tr</name><type>url</type></item>
+          <item>https://legal.eu.wargaming.net/it/regolamento-del-clan/<name>it</name><type>url</type></item>
+          <item>https://legal.eu.wargaming.net/en/clan-rules/<name>default</name><type>url</type></item>
+        </value>
+      </item>
+      <item>
+        <name>NA</name>
+        <type>macros</type>
+        <macros>LANGUAGE_CODE</macros>
+        <value>
+          <item>https://legal.na.wargaming.net/en/clan-rules/<name>en</name><type>url</type></item>
+          <item>https://legal.na.wargaming.net/es-ar/creacion-de-clanes/<name>es-ar</name><type>url</type></item>
+          <item>https://legal.na.wargaming.net/pt-br/regras-criacao-cla/<name>pt-br</name><type>url</type></item>
+          <item>https://legal.na.wargaming.net/en/clan-rules/<name>default</name><type>url</type></item>
+        </value>
+      </item>
+      <item>
+        <name>	ASIA	</name>
+        <type>macros</type>
+        <macros>LANGUAGE_CODE</macros>
+        <value>
+          <item>https://legal.asia.wargaming.net/en/clan-rules/<name>en</name><type>url</type></item>
+          <item>https://legal.asia.wargaming.net/ja/clan-rules-japanese/<name>ja</name><type>url</type></item>
+          <item>https://legal.asia.wargaming.net/th/clan-rules-thai/<name>th</name><type>url</type></item>
+          <item>https://legal.asia.wargaming.net/zh-tw/clan-rules-zh/<name>zh-tw</name><type>url</type></item>
+          <item>https://legal.asia.wargaming.net/ko/clan-rules-ko/<name>ko</name><type>url</type></item>
+          <item>https://legal.asia.wargaming.net/zh-sg/clan-rules<name>zh-sg</name><type>url</type></item>
+          <item>https://legal.asia.wargaming.net/en/clan-rules/<name>default</name><type>url</type></item>
+        </value>
+      </item>
+      <item>https://wgn.wggames.cn/clan-rules<name>CN</name><type>url</type></item>
+      <item>https://wgn.wggames.cn/clan-rules<name>default</name><type>url</type></item>
+    </value>
+  </setting>
   <setting>https://na.wargaming.net/id/signin/token/?account_id=$DB_ID&amp;token=$WGNI_TOKEN&amp;continue_on_failure=1&amp;next=$TARGET_URL(https://na.wargaming.net/league/team/edit/?language=$LANGUAGE_CODE&amp;game=wot)<name>	clubSettings	</name><type>url</type></setting>
   <setting>https://webbrg.worldoftanks.com/$LANGUAGE_CODE/cybersport/<name>	clubHelp	</name><type>url</type></setting>
   <setting>http://na.wargaming.net/media/team/%(emblemID)d/%(size)d.png<name>clubEmblems</name><type>url</type></setting>
@@ -29,6 +80,7 @@
       <item>https://na.wargaming.net/id/signin/token/?account_id=$DB_ID&amp;token=$WGNI_TOKEN&amp;continue_on_failure=1&amp;next=$TARGET_URL(https://na.wargaming.net/shop/wot/main/?utm_campaign=wot-client&amp;utm_medium=button&amp;utm_source=garage&amp;utm_content=premshop-main&amp;language=en)<name>default</name><type>url</type></item>
     </value>
   </setting>
+  <setting>https://na.wargaming.net/id/signin/token/?account_id=$DB_ID&amp;token=$WGNI_TOKEN&amp;continue_on_failure=1&amp;next=$TARGET_URL(https://na.wargaming.net/news/game-events/)<name>frontlineChangesURL</name><type>url</type></setting>
   <setting>
     <name>	tokenShopURL	</name>
     <type>macros</type>
@@ -633,6 +685,10 @@
       <item>$PARAMS(/trade-off-personal-overlay)<name>personalTradeOffOverlay</name><type>url</type></item>
       <item>$PARAMS(/vehicles/vehicles)<name>premiumVehicles</name><type>url</type></item>
       <item>$PARAMS(/collection_vehicles/collection_vehicles)<name>buyCollectibleVehicle</name><type>url</type></item>
+      <item>$PARAMS(/blueprint-exchange)<name>blueprintsExchange</name><type>url</type></item>
+      <item>$PARAMS(/bm2021)<name>blackMarket</name><type>url</type></item>
+      <item>$PARAMS(/featured)<name>buyBattlePass</name><type>url</type></item>
+      <item>$PARAMS(/battlepass/battlepass)<name>bpcoinProducts</name><type>url</type></item>
     </value>
   </setting>
   <setting>
@@ -680,15 +736,8 @@
     <name>battlePass</name>
     <type>	dict	</type>
     <value>
-      <item>https://webbrg.worldoftanks.com/$LANGUAGE_CODE/promocontent/3BPContentPage/<name>	infoPage	</name><type>url</type></item>
-      <item>https://webbrg.worldoftanks.com/$LANGUAGE_CODE/promocontent/3BPIntroVideo/<name>introVideo</name><type>url</type></item>
-      <item>
-        <name>extrasVideoPage</name>
-        <type>url</type>
-      </item>
-      <item>
-        <name>webApiUrl</name>
-      </item>
+      <item>https://webbrg.worldoftanks.com/$LANGUAGE_CODE/promocontent/4BPContentPage/<name>	infoPage	</name><type>url</type></item>
+      <item>https://webbrg.worldoftanks.com/$LANGUAGE_CODE/promocontent/4BPIntroVideo/<name>introVideo</name><type>url</type></item>
     </value>
   </setting>
   <setting>
@@ -764,13 +813,6 @@
         <type>string</type>
       </item>
       <item>Utilizes Vivox, Â© 2018 Vivox, Inc. All rights reserved. See www.vivox.com for details.\n<name>default</name><type>string</type></item>
-    </value>
-  </setting>
-  <setting>
-    <name>	bobEvent	</name>
-    <type>	dict	</type>
-    <value>
-      <item>$PARAMS(skills/)<name>skillsUrl</name><type>url</type></item>
     </value>
   </setting>
 </gui_settings.xml>

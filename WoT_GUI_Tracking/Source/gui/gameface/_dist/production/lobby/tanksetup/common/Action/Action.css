@@ -174,7 +174,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     line-height: 1.2;
     text-shadow: 0 -1rem 1rem #000;
     letter-spacing: .03em;
-    transform: translateY(-5%);
+    transform: translateY(-1rem);
 }
 .CButton_content_cc[lang=ja],
     .CButton_content_cc[lang=ko],

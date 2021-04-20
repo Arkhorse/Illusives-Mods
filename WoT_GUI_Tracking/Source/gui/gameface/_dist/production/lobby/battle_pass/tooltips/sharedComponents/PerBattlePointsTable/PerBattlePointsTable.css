@@ -1,36 +1,22 @@
-.Point_base_e9 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+/* stylelint-disable */
+[lang=ja],
+[lang=ko],
+[lang=zh_tw],
+[lang=zh_sg],
+[lang=zh_ch],
+[lang=th] {
+    overflow-wrap: break-word;
 }
-
-.Point_points_2a {
-    color: #e9e2bf;
-    font-size: 16rem;
-}
-
-.Point_points__special_c7 {
-        color: #80d43a;
-        font-size: 16rem;
-    }
-
-.Point_pointIcon_9e {
-    width: 16rem;
-    height: 16rem;
-    margin-left: 2rem;
-    margin-top: 4rem;
-    background: url('R.images.gui.maps.icons.battlePass2020.tooltips.points_24') center / contain no-repeat;
-}
-
-.Points_base_db {
+/* stylelint-enable */
+.styles_base_86 {
     line-height: normal;
 }
-.Points_separator_89 {
+.styles_separator_f8 {
     width: 283rem;
     height: 1rem;
     background: url('R.images.gui.maps.icons.battlePass2020.tooltips.Devider_points') 50% / contain no-repeat;
 }
-.Points_rewards_c4 {
+.styles_rewards_26 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,81 +27,16 @@
     color: #c9c9b6;
     font-size: 14rem;
 }
-.Points_tableHeader_e2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 40rem;
-    color: #8c8c7e;
-    font-size: 14rem;
-}
-.Points_label_1e {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 40rem;
-    font-size: 14rem;
-}
-.Points_label__table_3a {
-        justify-content: flex-start;
-        color: #8c8c7e;
-    }
-.Points_tableColumn_35 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 25rem;
-}
-
-.PerBattlePointsTable_base_b1 {
-    line-height: normal;
-}
-.PerBattlePointsTable_separator_ee {
-    width: 283rem;
-    height: 1rem;
-    background: url('R.images.gui.maps.icons.battlePass2020.tooltips.Devider_points') 50% / contain no-repeat;
-}
-.PerBattlePointsTable_rewards_2e {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 403rem;
-    height: 154rem;
-    background: url('R.images.gui.maps.icons.battlePass2020.tooltips.Ribbon_large') bottom / cover no-repeat;
-    color: #c9c9b6;
-    font-size: 14rem;
-}
-.PerBattlePointsTable_tableHeader_8a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 40rem;
-    color: #8c8c7e;
-    font-size: 14rem;
-}
-.PerBattlePointsTable_label_f7 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 40rem;
-    font-size: 14rem;
-}
-.PerBattlePointsTable_label__table_59 {
-        justify-content: flex-start;
-        color: #8c8c7e;
-    }
-.PerBattlePointsTable_base_b1 {
+.styles_base_86 {
     display: flex;
     flex-direction: row;
     width: 403rem;
     padding-left: 28rem;
+    padding-bottom: 10rem;
     background: url('R.images.gui.maps.icons.battlePass2020.tooltips.Gradient_devider') center top / 100% 40rem no-repeat;
     position: relative;
 }
-.PerBattlePointsTable_separators_ed {
+.styles_separators_5c {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -123,10 +44,36 @@
     position: absolute;
 }
 /* override*/
-.PerBattlePointsTable_separator_ee {
+.styles_separator_f8 {
     position: absolute;
     top: 80rem;
     left: 50%;
     transform: translateX(-50%);
+}
+.styles_tableHeader_a0 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40rem;
+    color: #8c8c7e;
+    font-size: 14rem;
+}
+.styles_label_d5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+    font-size: 14rem;
+}
+.styles_label__table_9e {
+        justify-content: flex-start;
+        color: #8c8c7e;
+    }
+.styles_pointsColumn_20 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 25rem;
 }
 

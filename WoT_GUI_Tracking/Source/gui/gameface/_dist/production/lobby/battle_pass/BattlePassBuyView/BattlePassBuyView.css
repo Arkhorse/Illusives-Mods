@@ -130,6 +130,155 @@
         opacity: 0;
     }
 
+.Currency_base_57 {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+    .Currency_base__insufficient_34 {
+        color: #ed2415;
+    }
+.Currency_icon_c5 {
+    width: 16rem;
+    height: 16rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+}
+.Currency_icon__credits-small_9b {
+        background-image: url('R.images.gui.maps.icons.library.CreditsIcon_2');
+        transform: translateY(3rem);
+    }
+.Currency_icon__credits-large_ac {
+        width: 48rem;
+        height: 48rem;
+        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.money_silver');
+        transform: translateY(8rem);
+    }
+.Currency_icon__credits-big_96 {
+        background-image: url('R.images.gui.maps.icons.library.CreditsIcon_1');
+        transform: translateY(-1rem);
+    }
+.Currency_icon__gold-small_86 {
+        background-image: url('R.images.gui.maps.icons.library.GoldIcon_2');
+        transform: translateY(2rem);
+    }
+.Currency_icon__gold-big_15 {
+        background-image: url('R.images.gui.maps.icons.library.GoldIcon_1');
+        transform: translateY(-1rem);
+    }
+.Currency_icon__gold-large_36 {
+        width: 48rem;
+        height: 48rem;
+        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.money_gold');
+        transform: translateY(8rem);
+    }
+.Currency_icon__crystal-small_27 {
+        background-image: url('R.images.gui.maps.icons.library.CrystalIcon_2');
+        transform: translateY(2rem);
+    }
+.Currency_icon__crystal-big_cd {
+        width: 23rem;
+        height: 22rem;
+        background-image: url('R.images.gui.maps.icons.library.crystal_23x22');
+        transform: translateY(2rem);
+    }
+.Currency_icon__crystal-large_d3 {
+        width: 48rem;
+        height: 48rem;
+        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.money_bonds');
+        transform: translateY(8rem);
+    }
+.Currency_icon__xp-small_a7 {
+        width: 16rem;
+        height: 16rem;
+        background-image: url('R.images.gui.maps.icons.library.NormalXpIcon');
+        transform: translateY(2rem);
+    }
+.Currency_icon__xp-big_97 {
+        width: 23rem;
+        height: 22rem;
+        background-image: url('R.images.gui.maps.icons.library.xpIcon_23x22');
+        transform: translateY(2rem);
+    }
+.Currency_icon__freeXp-small_63 {
+        background-image: url('R.images.gui.maps.icons.library.freeXPIcon16x16');
+        transform: translateY(2rem);
+    }
+.Currency_icon__freeXp-big_5f {
+        width: 24rem;
+        height: 24rem;
+        background-image: url('R.images.gui.maps.icons.library.freeXPIconBig24x24');
+        transform: translateY(3rem);
+    }
+.Currency_value_e1 {
+    position: relative;
+    z-index: 2;
+}
+.Currency_value__small_e9 {
+        padding-right: 2rem;
+    }
+.Currency_value__big_d4 {
+        padding-right: 5rem;
+        font-size: 22rem;
+        font-weight: 700;
+    }
+.Currency_value__large_85 {
+        font-size: 36rem;
+        font-weight: 700;
+    }
+.Currency_value__freeXp_e3 {
+        color: #F2F2F7;
+    }
+.Currency_value__xp_b0,
+    .Currency_value__credits_76 {
+        color: #CED9D9;
+    }
+.Currency_value__gold_dd {
+        color: #FFC363;
+    }
+.Currency_value__crystal_19 {
+        color: #C9C9B6;
+    }
+.Currency_value__notEnough_56.Currency_value__small_e9 {
+            color: #FF2717;
+        }
+.Currency_value__notEnough_56.Currency_value__big_d4 {
+            color: #B70000;
+        }
+.Currency_stock_87 {
+    height: 13rem;
+    color: #fd9;
+    font-size: 13rem;
+    line-height: 1;
+    position: relative;
+    z-index: 0;
+    pointer-events: none;
+}
+.Currency_stock__indent_a1 {
+        margin-left: 3rem;
+    }
+.Currency_stock__sizeBig_b5 {
+        transform: translateY(-1rem);
+    }
+.Currency_stock__interactive_93 {
+        pointer-events: auto;
+    }
+.Currency_stockBackground_82 {
+    width: 80rem;
+    height: 45rem;
+    background-image: url('R.images.gui.maps.icons.library.RedActionBG');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    right: -27rem;
+    z-index: -1;
+    transform: translateY(-47%);
+}
+
 /* colors*/
 
 @keyframes BattlePassBuyCard_fadeOut_f3 {
@@ -187,77 +336,43 @@
 }
 
 .BattlePassBuyCard_base_ab {
-    opacity: 0;
-    animation-name: BattlePassBuyCard_slideUp_39;
-    animation-duration: .3s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(.1, .1, .16, 1);
-    animation-delay: .4s;
-    animation-iteration-count: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex: 0 1;
-    width: 300rem;
-    height: 370rem;
-    margin: 0 10rem;
-    padding: 160rem 20rem 65rem;
-    border: 1rem solid #ffd67a;
-    border-radius: 4rem;
-    box-shadow: 0 0 1rem #000;
+    width: 220rem;
+    height: 470rem;
+    padding: 150rem 0 25rem;
+    border-radius: 2rem;
+    filter: drop-shadow(0 1rem 2rem rgba(0,0,0, .3)) drop-shadow(0 4rem 7px rgba(0,0,0, .3));
     position: relative;
-    cursor: pointer;
+    transform: translateY(0);
+    transition: filter .2s cubic-bezier(.37, 0, .63, 1), transform .2s cubic-bezier(.37, 0, .63, 1);
+    pointer-events: none;
 }
 
+.BattlePassBuyCard_base__medium_dd {
+        width: 270rem;
+        height: 580rem;
+        padding-top: 190rem;
+    }
+
 .BattlePassBuyCard_base__large_38 {
-        width: 400rem;
-        height: 460rem;
-        padding: 190rem 20rem 90rem;
+        width: 300rem;
+        height: 640rem;
+        padding-top: 250rem;
     }
 
-.BattlePassBuyCard_base__battlePassCard_b6 {
-        padding-bottom: 39rem;
+.BattlePassBuyCard_base__available_c8 {
+        cursor: pointer;
+        pointer-events: auto;
     }
 
-.BattlePassBuyCard_base__battlePassCardLarge_7e {
-        padding-bottom: 57rem;
-    }
-
-.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab {
-    opacity: 0;
-    animation-name: BattlePassBuyCard_slideUp_39;
-    animation-duration: .3s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(.1, .1, .16, 1);
-    animation-delay: .8s;
-    animation-iteration-count: 1;
-    }
-
-.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab {
-    opacity: 0;
-    animation-name: BattlePassBuyCard_slideUp_39;
-    animation-duration: .3s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(.1, .1, .16, 1);
-    animation-delay: 1.2s;
-    animation-iteration-count: 1;
-    }
-
-.BattlePassBuyCard_base__purchased_01,
-    .BattlePassBuyCard_base__timeLocked_17,
-    .BattlePassBuyCard_base__locked_3d {
-        border-color: rgba(255,255,255, .5);
-        cursor: default;
-    }
-
-.BattlePassBuyCard_base__timeLocked_17,
-    .BattlePassBuyCard_base__locked_3d {
-        border-color: rgba(255,255,255, .25);
-    }
+.BattlePassBuyCard_base__available_c8:hover {
+            filter: drop-shadow(0 1rem 2rem rgba(0,0,0, .3)) drop-shadow(0 14rem 7px rgba(0,0,0, .5));
+            transform: translateY(-10rem);
+        }
 
 .BattlePassBuyCard_background_8d {
-    background: rgba(0,0,0, .5);
+    border-radius: 2rem;
     position: absolute;
     top: 0;
     right: 0;
@@ -265,108 +380,118 @@
     left: 0;
 }
 
-.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_background_8d,
-    .BattlePassBuyCard_base__purchased_01:hover .BattlePassBuyCard_background_8d,
-    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_background_8d,
-    .BattlePassBuyCard_base__timeLocked_17:hover .BattlePassBuyCard_background_8d,
-    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_background_8d,
-    .BattlePassBuyCard_base__locked_3d:hover .BattlePassBuyCard_background_8d {
-        background-color: rgba(0,0,0, 0);
+.BattlePassBuyCard_shopOfferBorder_05 {
+    width: 276rem;
+    height: 526rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.buy.border.halftone_small') no-repeat center / cover;
+    mix-blend-mode: overlay;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.BattlePassBuyCard_base__medium_dd .BattlePassBuyCard_shopOfferBorder_05 {
+        width: 326rem;
+        height: 636rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.border.halftone_medium');
+    }
+
+.BattlePassBuyCard_base__large_38 .BattlePassBuyCard_shopOfferBorder_05 {
+        width: 356rem;
+        height: 696rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.border.halftone_large');
+    }
+
+.BattlePassBuyCard_illustrationWrapper_ef {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.BattlePassBuyCard_illustration_57 {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .5) url('R.images.gui.maps.icons.battlePass2020.buy.illustrations.shop_offer') no-repeat top / contain;
+    transform: scale(1);
+    transition: transform .2s cubic-bezier(.37, 0, .63, 1);
+}
+
+.BattlePassBuyCard_illustration__chapter1_a5 {
+            background-image: url('R.images.gui.maps.icons.battlePass2020.buy.illustrations.chapter1');
+        }
+
+.BattlePassBuyCard_illustration__chapter2_cd {
+            background-image: url('R.images.gui.maps.icons.battlePass2020.buy.illustrations.chapter2');
+        }
+
+.BattlePassBuyCard_illustration__chapter3_2e {
+            background-image: url('R.images.gui.maps.icons.battlePass2020.buy.illustrations.chapter3');
+        }
+
+.BattlePassBuyCard_base__available_c8:hover .BattlePassBuyCard_illustration_57 {
+        transform: scale(1.05);
+    }
+
+.BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_illustration_57 {
+        opacity: .5;
     }
 
 .BattlePassBuyCard_backgroundAsset_27 {
     width: 100%;
     height: 100%;
-    background: url('R.images.gui.maps.icons.battlePass2020.buy.bg_lines') no-repeat center bottom / contain;
+    background: url('R.images.gui.maps.icons.battlePass2020.buy.dots') no-repeat center bottom / contain;
+    opacity: .15;
     position: absolute;
     top: 0;
     left: 0;
 }
 
-.BattlePassBuyCard_base__small_d9 .BattlePassBuyCard_backgroundAsset_27 {
-        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.bg_lines_small');
-    }
-
-.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_backgroundAsset_27 {
-        opacity: .3;
-    }
-
-.BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundAsset_27,
-    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_backgroundAsset_27 {
-        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.bg_stripes');
-        background-repeat: repeat;
-        opacity: .3;
-    }
+.BattlePassBuyCard_disabled_11 {
+    width: 100%;
+    height: 100%;
+    background: url('R.images.gui.maps.icons.library.disabled_pattern') center / 14rem;
+    opacity: .2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 .BattlePassBuyCard_backgroundColor_c3 {
     width: 100%;
     height: 100%;
-    background-color: rgba(255,66,0, .25);
+    border: 1rem solid rgba(255,255,255, .2);
+    border-radius: 2rem;
     position: absolute;
     top: 0;
     left: 0;
-    transition: .2s ease-in-out background-color;
 }
 
-.BattlePassBuyCard_base_ab:hover .BattlePassBuyCard_backgroundColor_c3 {
-        background-color: rgba(255,66,0, .5);
+.BattlePassBuyCard_backgroundColor__shopOffer_32 {
+        border-color: rgba(255,180,0, .5);
     }
 
-.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_backgroundColor_c3,
-    .BattlePassBuyCard_base__purchased_01:hover .BattlePassBuyCard_backgroundColor_c3 {
-        background-color: rgba(0,0,0, .5);
-    }
-
-.BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundColor_c3,
-    .BattlePassBuyCard_base__timeLocked_17:hover .BattlePassBuyCard_backgroundColor_c3,
-    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_backgroundColor_c3,
-    .BattlePassBuyCard_base__locked_3d:hover .BattlePassBuyCard_backgroundColor_c3 {
-        background-color: rgba(0,0,0, 0);
-    }
-
-.BattlePassBuyCard_backgroundTop_66,
 .BattlePassBuyCard_backgroundBottom_56 {
     height: 130rem;
+    background: no-repeat center bottom / contain;
     opacity: 0;
     mix-blend-mode: additive;
     position: absolute;
-    right: 0;
-    left: 0;
-    animation: BattlePassBuyCard_fade-in_ca 250ms linear 1s forwards;
-}
-
-.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_backgroundTop_66, .BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_backgroundBottom_56 {
-        animation-delay: 1.3s;
-    }
-
-.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_backgroundTop_66, .BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_backgroundBottom_56 {
-        animation-delay: 1.6s;
-    }
-
-.BattlePassBuyCard_backgroundTop_66 {
-    background: url('R.images.gui.maps.icons.battlePass2020.buy.bg_top') no-repeat center top / contain;
-    top: 0;
-}
-
-.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_backgroundTop_66,
-    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundTop_66,
-    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_backgroundTop_66 {
-        display: none;
-    }
-
-.BattlePassBuyCard_backgroundBottom_56 {
-    background: url('R.images.gui.maps.icons.battlePass2020.buy.bg_bottom') no-repeat center bottom / contain;
     bottom: 0;
+    left: 50%;
+    animation: BattlePassBuyCard_fade-in_ca 250ms linear 1s forwards;
+    pointer-events: none;
 }
 
 .BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_backgroundBottom_56,
-    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundBottom_56,
     .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_backgroundBottom_56 {
         width: 400rem;
         height: 259rem;
-        margin-top: -1rem;
         mix-blend-mode: normal;
-        left: 50%;
+        bottom: 1rem;
         transform: translate(-50%, 49%);
     }
 
@@ -374,9 +499,15 @@
         background-image: url('R.images.gui.maps.icons.battlePass2020.buy.checked_bg');
     }
 
-.BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundBottom_56,
-    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_backgroundBottom_56 {
+.BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_backgroundBottom_56 {
         background-image: url('R.images.gui.maps.icons.battlePass2020.buy.lock_bg');
+    }
+
+.BattlePassBuyCard_backgroundBottom__shopOffer_ea {
+        width: 296rem;
+        height: 296rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.discount');
+        transform: translate(-50%, 35%);
     }
 
 .BattlePassBuyCard_backgroundIcon_d6 {
@@ -387,13 +518,11 @@
     transform: translate(-50%, -47%);
 }
 
-.BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundIcon_d6,
-    .BattlePassBuyCard_base__large_38 .BattlePassBuyCard_backgroundIcon_d6 {
+.BattlePassBuyCard_base__large_38 .BattlePassBuyCard_backgroundIcon_d6 {
         transform: translate(-50%, -50%);
     }
 
-.BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundIcon_d6,
-    .BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_backgroundIcon_d6,
+.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_backgroundIcon_d6,
     .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_backgroundIcon_d6 {
         width: 60rem;
         height: 60rem;
@@ -407,215 +536,189 @@
         background-image: url('R.images.gui.maps.icons.battlePass2020.buy.lock');
     }
 
-.BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_backgroundIcon_d6 {
-        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.clock');
-    }
-
-.BattlePassBuyCard_rays_d5 {
-    height: 400rem;
-    background: url('R.images.gui.maps.icons.battlePass2020.buy.rays_small') no-repeat center top / contain;
-    opacity: 0;
-    mix-blend-mode: additive;
+.BattlePassBuyCard_lightAppear_04 {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    animation: BattlePassBuyCard_fade-in_ca 250ms linear 1s forwards;
-}
-
-.BattlePassBuyCard_base__large_38 .BattlePassBuyCard_rays_d5 {
-        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.rays');
-    }
-
-.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_rays_d5,
-    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_rays_d5,
-    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_rays_d5 {
-        display: none;
-    }
-
-.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_rays_d5 {
-        animation-delay: 1.3s;
-    }
-
-.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_rays_d5 {
-        animation-delay: 1.6s;
-    }
-
-.BattlePassBuyCard_lightWrapper_9c {
     transform: scale(0);
-    animation: BattlePassBuyCard_light-appearance_48 1s linear .7s forwards;
+    animation: BattlePassBuyCard_light-appearance_48 1s linear forwards;
 }
-
-.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_lightWrapper_9c {
-        animation-delay: 1s;
-    }
-
-.BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab + .BattlePassBuyCard_base_ab .BattlePassBuyCard_lightWrapper_9c {
-        animation-delay: 1.4s;
-    }
 
 .BattlePassBuyCard_light_0e {
-    width: 564rem;
-    height: 564rem;
-    margin-top: 40rem;
-    background: url('R.images.gui.maps.icons.battlePass2020.buy.light_small') no-repeat center / contain;
+    width: 400rem;
+    height: 400rem;
+    background: url('swf://gui/flash/animations/battlePass/shine.swf') no-repeat center / contain;
     mix-blend-mode: additive;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
-    animation: BattlePassBuyCard_light-rotation_a4 20s linear infinite;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform .2s cubic-bezier(.37, 0, .63, 1);
     pointer-events: none;
 }
 
-.BattlePassBuyCard_base__large_38 .BattlePassBuyCard_light_0e {
-        width: 807rem;
-        height: 807rem;
-        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.light');
+.BattlePassBuyCard_base__small_d9 .BattlePassBuyCard_light_0e {
+        width: 300rem;
+        height: 300rem;
     }
 
-.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_light_0e,
-    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_light_0e,
-    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_light_0e {
-        display: none;
+.BattlePassBuyCard_base__available_c8:hover .BattlePassBuyCard_light_0e {
+        transform: translate(-50%, -50%) scale(1.2);
     }
 
 .BattlePassBuyCard_content_eb {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    flex: 1;
+    padding: 0 10rem 60rem;
+    border-radius: 2rem;
     position: relative;
 }
 
-.BattlePassBuyCard_contentTop_62 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.BattlePassBuyCard_logo_91 {
+    width: 218rem;
+    height: 164rem;
+    position: relative;
 }
 
-.BattlePassBuyCard_icon_8d {
-    width: 270rem;
-    height: 203rem;
-    margin-left: 20rem;
-    background: no-repeat center / contain;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -30%);
-}
-
-.BattlePassBuyCard_base__large_38 .BattlePassBuyCard_icon_8d {
-        width: 360rem;
-        height: 270rem;
-        transform: translate(-50%, -33%);
+.BattlePassBuyCard_base__small_d9 .BattlePassBuyCard_logo_91 {
+        width: 160rem;
+        height: 120rem;
     }
 
-.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_icon_8d,
-    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_icon_8d,
-    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_icon_8d {
-        filter: brightness(.5);
+.BattlePassBuyCard_logoIcon_5f {
+    width: 100%;
+    height: 100%;
+    background: url('R.images.gui.maps.icons.battlePass2020.buy.battle_pass') no-repeat center / contain;
+    position: relative;
+}
+
+.BattlePassBuyCard_base__small_d9 .BattlePassBuyCard_logoIcon_5f {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.battle_pass_small');
+    }
+
+.BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_logoIcon_5f {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.battle_pass_disabled');
+    }
+
+.BattlePassBuyCard_base__small_d9.BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_logoIcon_5f {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.buy.battle_pass_small_disabled');
     }
 
 .BattlePassBuyCard_title_93 {
-    margin: 0 0 2rem;
-    color: #f2f2e7;
-    font-size: 18rem;
+    color: #FFFFFF;
+    font-size: 36rem;
     font-weight: 700;
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+    margin: 10rem 0 0;
+    line-height: 1;
     text-align: center;
 }
 
-.BattlePassBuyCard_base__large_38 .BattlePassBuyCard_title_93 {
+.BattlePassBuyCard_base__small_d9 .BattlePassBuyCard_title_93 {
+        color: #FFFFFF;
         font-size: 24rem;
+        font-weight: 700;
+        line-height: 1.2;
     }
 
-.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_title_93,
-    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_title_93,
-    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_title_93 {
+.BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_title_93 {
         opacity: .5;
+    }
+
+.BattlePassBuyCard_title__shopOffer_4c,
+    .BattlePassBuyCard_base__small_d9 .BattlePassBuyCard_title__shopOffer_4c {
+        color: #FFDD99;
     }
 
 .BattlePassBuyCard_description_d4 {
-    margin: 0;
-    color: #cfc7a8;
-    font-size: 14rem;
+    color: #E9E2BF;
+    font-size: 16rem;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-top: 5rem;
     text-align: center;
 }
 
-.BattlePassBuyCard_base__large_38 .BattlePassBuyCard_description_d4 {
-        color: #e9e2bf;
-        font-size: 16rem;
+.BattlePassBuyCard_base__small_d9 .BattlePassBuyCard_description_d4 {
+        color: #E9E2BF;
+        font-size: 14rem;
+        font-weight: 400;
+        line-height: 1.3;
     }
 
-.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_description_d4,
-    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_description_d4,
-    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_description_d4 {
+.BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_description_d4 {
         opacity: .5;
+    }
+
+.BattlePassBuyCard_description__shopOffer_b0,
+    .BattlePassBuyCard_base__small_d9 .BattlePassBuyCard_description__shopOffer_b0 {
+        color: #FFDD99;
     }
 
 .BattlePassBuyCard_price_2c {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1.05;
+    position: absolute;
+    bottom: 35rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.BattlePassBuyCard_priceValue_b7 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffc363;
-    font-size: 22rem;
-    font-weight: 700;
-}
-
-.BattlePassBuyCard_base__purchased_01 .BattlePassBuyCard_priceValue_b7,
-    .BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_priceValue_b7,
-    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_priceValue_b7 {
+.BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_price_2c {
         opacity: .5;
     }
 
-.BattlePassBuyCard_priceIcon_2c {
-    width: 16rem;
-    height: 16rem;
-    margin: 2rem 0 0 5rem;
-    background: url('R.images.gui.maps.icons.library.goldIconBig') no-repeat center / contain;
-}
-
-.BattlePassBuyCard_priceTitle_26 {
-    margin: 2rem 0 -16rem;
-    color: rgba(207,199,168, .5);
+.BattlePassBuyCard_lockedText_65 {
+    color: #FFDD99;
     font-size: 14rem;
-}
-
-.BattlePassBuyCard_base__timeLocked_17 .BattlePassBuyCard_priceTitle_26,
-    .BattlePassBuyCard_base__locked_3d .BattlePassBuyCard_priceTitle_26 {
-        color: rgba(207,199,168, .35);
-    }
-
-.BattlePassBuyCard_timer_31 {
-    margin-top: 15rem;
-    color: #fd9;
-    font-size: 14rem;
+    font-weight: 400;
+    line-height: 1.3;
     text-align: center;
-    filter: drop-shadow(0 0 7px #f00);
-    opacity: .6;
+    text-shadow: 0 0 14px #f00;
+    opacity: .5;
     position: absolute;
-    top: 50%;
     right: 0;
+    bottom: -17rem;
     left: 0;
-    transform: translateY(4rem);
+    transform: translateY(100%);
 }
 
-@keyframes BattlePassBuyCard_light-rotation_a4 {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
+.BattlePassBuyCard_shopOfferWarning_d5 {
+    color: #595950;
+    font-size: 14rem;
+    font-weight: 400;
+    line-height: 1.3;
+    text-align: center;
+    position: absolute;
+    right: 10rem;
+    bottom: -7rem;
+    left: 10rem;
+    transform: translateY(100%);
+    transition: opacity .2s cubic-bezier(.37, 0, .63, 1), color .2s cubic-bezier(.37, 0, .63, 1);
+}
+
+.BattlePassBuyCard_shopOfferWarning__highlighted_af {
+        color: #EE7000;
     }
 
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
+.BattlePassBuyCard_base__available_c8:hover .BattlePassBuyCard_shopOfferWarning_d5 {
+        opacity: 0;
     }
+
+.BattlePassBuyCard_warningOverlay_5e {
+    background-color: rgba(0,0,0, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: background-color .2s cubic-bezier(.37, 0, .63, 1);
 }
+
+.BattlePassBuyCard_warningOverlay__highlighted_6b {
+        background-color: rgba(0,0,0, .8);
+    }
 
 @keyframes BattlePassBuyCard_light-appearance_48 {
     0% {
@@ -637,14 +740,212 @@
     }
 }
 
+/* colors*/
+
+@keyframes CardsDivider_fadeOut_4d {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes CardsDivider_fadeIn_f5 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes CardsDivider_fadeInWithScale_48 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes CardsDivider_slideUp_4a {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes CardsDivider_scale_6a {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.CardsDivider_base_b5 {
+    opacity: 0;
+    animation-name: CardsDivider_fadeIn_f5;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.07, .82, .17, 1);
+    animation-delay: .9s;
+    animation-iteration-count: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 107rem;
+    height: 100%;
+}
+
+.CardsDivider_base__small_1f {
+        width: 61rem;
+    }
+
+.CardsDivider_topLine_d8 {
+    flex: 1;
+    width: 1rem;
+    background: linear-gradient(180deg, rgba(255,255,255, .05), rgba(255,255,255, .5));
+}
+
+.CardsDivider_bottomLine_67 {
+    flex: 1;
+    width: 1rem;
+    background: linear-gradient(0deg, rgba(255,255,255, .05), rgba(255,255,255, .5));
+}
+
+.CardsDivider_text_46 {
+    color: #FFDD99;
+    font-size: 14rem;
+    font-weight: 400;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    height: 20rem;
+    margin: 22rem 0;
+    text-shadow: 0 0 14px #f00;
+}
+
+.CardsDivider_base__small_1f .CardsDivider_text_46 {
+        color: #FFDD99;
+        font-size: 10rem;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+
+/* colors*/
+
+@keyframes CardAppearTransition_fadeOut_47 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes CardAppearTransition_fadeIn_71 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes CardAppearTransition_fadeInWithScale_f5 {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes CardAppearTransition_slideUp_d3 {
+    0% {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes CardAppearTransition_scale_ca {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.CardAppearTransition_base_2e {
+    opacity: 0;
+    animation-name: CardAppearTransition_slideUp_d3;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.1, .1, .16, 1);
+    animation-delay: 0;
+    animation-iteration-count: 1;
+}
+
+.ChapterBackground_base_91 {
+    background: url('R.images.gui.maps.icons.battlePass2020.progression.background.chapter1') no-repeat center / cover;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    transition: opacity .2s step-end;
+}
+
+    .ChapterBackground_base__chapter2_07 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.background.chapter2');
+    }
+
+    .ChapterBackground_base__chapter3_a9 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.progression.background.chapter3');
+    }
+
+    .ChapterBackground_base__current_46 {
+        opacity: 1;
+        z-index: 1;
+        transition: opacity .2s cubic-bezier(.37, 0, .63, 1);
+    }
+
 .BattlePassBuyViewContent_base_85 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 30rem 0 75rem;
+    padding: 45rem 0 75rem;
     overflow: hidden;
     position: relative;
 }
@@ -652,6 +953,15 @@
     .BattlePassBuyViewContent_base__large_4d {
         padding-top: 60rem;
     }
+
+.BattlePassBuyViewContent_background_15 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
 
 .BattlePassBuyViewContent_back_d2 {
     position: absolute;
@@ -664,53 +974,69 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 0;
-    margin-bottom: 77rem;
+    margin-bottom: 45rem;
     text-align: center;
 }
 
-.BattlePassBuyViewContent_header__medium_48 {
-        margin-bottom: 106rem;
-    }
-
-.BattlePassBuyViewContent_header__large_e4 {
-        margin-bottom: 170rem;
+.BattlePassBuyViewContent_header__small_69 {
+        margin-bottom: 25rem;
     }
 
 .BattlePassBuyViewContent_title_8a {
-    margin-bottom: 4rem;
-    color: #fff;
+    color: #F2F2F7;
     font-size: 36rem;
     font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 10rem;
 }
 
 .BattlePassBuyViewContent_title__large_7f {
-        color: #f2f2f7;
+        color: #F2F2F7;
         font-size: 56rem;
+        font-weight: 700;
+        line-height: 1.1;
     }
 
 .BattlePassBuyViewContent_subtitle_72 {
-    width: 550rem;
-    color: #e9e2bf;
-    font-size: 18rem;
+    color: #E9E2BF;
+    font-size: 15rem;
     font-weight: 700;
-    line-height: 24rem;
+    line-height: 1.15;
+    width: 800rem;
 }
 
 .BattlePassBuyViewContent_subtitle__large_1d {
-        color: #fefeec;
-        font-size: 24rem;
-        font-weight: 400;
-        line-height: 30rem;
+        color: #E9E2BF;
+        font-size: 18rem;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+.BattlePassBuyViewContent_content_6e {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding-bottom: 8vh;
+}
+
+.BattlePassBuyViewContent_content__small_34 {
+        padding-bottom: 5vh;
     }
 
 .BattlePassBuyViewContent_cards_ed {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex: 0;
 }
+
+.BattlePassBuyViewContent_card_1d + .BattlePassBuyViewContent_card_1d {
+    margin-left: 50rem;
+}
+
+.BattlePassBuyViewContent_card_1d + .BattlePassBuyViewContent_card__shopOfferAvailable_3b {
+        margin-left: 20rem;
+    }
 
 .CButton_base_40 {
     display: flex;
@@ -888,7 +1214,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     line-height: 1.2;
     text-shadow: 0 -1rem 1rem #000;
     letter-spacing: .03em;
-    transform: translateY(-5%);
+    transform: translateY(-1rem);
 }
 .CButton_content_cc[lang=ja],
     .CButton_content_cc[lang=ko],
@@ -987,9 +1313,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     align-content: center;
     width: 100%;
     height: 100%;
-    background: url('R.images.gui.maps.icons.battlePass2020.progression.bg') no-repeat;
-    background-position: center center;
-    background-size: cover;
+    background-color: #000;
     font-size: 14rem;
     line-height: 1;
     position: relative;
@@ -1002,45 +1326,63 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     z-index: 1;
 }
 
+.ConfirmTemplate_background_be {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center / cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .ConfirmTemplate_view_e5 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     max-width: 920rem;
+    padding: 70rem 0 80rem;
     opacity: .5;
     animation-name: ConfirmTemplate_windowIn_22;
     animation-duration: .5s;
     animation-fill-mode: both;
 }
 
+.ConfirmTemplate_view__alignBottom_97 {
+        justify-content: flex-end;
+    }
+
+.ConfirmTemplate_view__warning_81 {
+        padding-bottom: 65rem;
+    }
+
 .ConfirmTemplate_title_3d {
-    margin: 0;
-    color: #f2f2f7;
+    color: #F2F2F7;
     font-size: 36rem;
     font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
     text-align: center;
 }
 
 .ConfirmTemplate_subTitle_e5 {
-    margin-top: 22rem;
-    color: #c9c9b6;
+    color: #C9C9B6;
     font-size: 16rem;
-    line-height: 1.1;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-top: 12rem;
     text-align: center;
 }
 
-.ConfirmTemplate_base__small_9d .ConfirmTemplate_subTitle_e5 {
-        margin-bottom: 75rem;
+.ConfirmTemplate_subTitle__alignBottom_95 {
+        color: #E9E2BF;
     }
 
-.ConfirmTemplate_base__medium_a8 .ConfirmTemplate_subTitle_e5 {
-        margin-bottom: 110rem;
-    }
-
-.ConfirmTemplate_base__large_61 .ConfirmTemplate_subTitle_e5 {
-        margin-bottom: 150rem;
-    }
+.ConfirmTemplate_bottomContent_0e {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .ConfirmTemplate_divider_2d {
     width: 720rem;
@@ -1049,34 +1391,33 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     opacity: .1;
 }
 
+.ConfirmTemplate_warning_35 {
+    color: #FEAB34;
+    font-size: 16rem;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-top: 16rem;
+}
+
 .ConfirmTemplate_buttons_bf {
     display: flex;
     justify-content: center;
-    margin: 16rem 0 0;
+    margin-top: 16rem;
 }
-
-.ConfirmTemplate_buttons__indent_5d {
-        margin-top: 24rem;
-    }
 
 .ConfirmTemplate_button_e4 {
-    width: 160rem;
-    margin: 16rem 0 0;
+    width: 180rem;
 }
 
-.ConfirmTemplate_button__indent_35 {
-        margin-top: 24rem;
+.ConfirmTemplate_button_e4 + .ConfirmTemplate_button_e4 {
+        margin-left: 30rem;
     }
 
 .ConfirmTemplate_rewardBtn_72 {
     width: 230rem;
     margin-top: 20rem;
-    margin-bottom: 55rem;
+    margin-bottom: 36rem;
 }
-
-.ConfirmTemplate_rewardBtn__indent_c9 {
-        margin-top: 20rem;
-    }
 
 @keyframes ConfirmTemplate_windowIn_22 {
     from {
@@ -1090,161 +1431,12 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     }
 }
 
-.Currency_base_57 {
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-}
-
-    .Currency_base__insufficient_34 {
-        color: #ed2415;
-    }
-.Currency_icon_c5 {
-    width: 16rem;
-    height: 16rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-    z-index: 1;
-}
-.Currency_icon__credits-small_9b {
-        background-image: url('R.images.gui.maps.icons.library.CreditsIcon_2');
-        transform: translateY(3rem);
-    }
-.Currency_icon__credits-large_ac {
-        width: 48rem;
-        height: 48rem;
-        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.money_silver');
-        transform: translateY(8rem);
-    }
-.Currency_icon__credits-big_96 {
-        background-image: url('R.images.gui.maps.icons.library.CreditsIcon_1');
-        transform: translateY(-1rem);
-    }
-.Currency_icon__gold-small_86 {
-        background-image: url('R.images.gui.maps.icons.library.GoldIcon_2');
-        transform: translateY(2rem);
-    }
-.Currency_icon__gold-big_15 {
-        background-image: url('R.images.gui.maps.icons.library.GoldIcon_1');
-        transform: translateY(-1rem);
-    }
-.Currency_icon__gold-large_36 {
-        width: 48rem;
-        height: 48rem;
-        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.money_gold');
-        transform: translateY(8rem);
-    }
-.Currency_icon__crystal-small_27 {
-        background-image: url('R.images.gui.maps.icons.library.CrystalIcon_2');
-        transform: translateY(2rem);
-    }
-.Currency_icon__crystal-big_cd {
-        width: 23rem;
-        height: 22rem;
-        background-image: url('R.images.gui.maps.icons.library.crystal_23x22');
-        transform: translateY(2rem);
-    }
-.Currency_icon__crystal-large_d3 {
-        width: 48rem;
-        height: 48rem;
-        background-image: url('R.images.gui.maps.shop.rewards.c_48x48.money_bonds');
-        transform: translateY(8rem);
-    }
-.Currency_icon__xp-small_a7 {
-        width: 16rem;
-        height: 16rem;
-        background-image: url('R.images.gui.maps.icons.library.NormalXpIcon');
-        transform: translateY(2rem);
-    }
-.Currency_icon__xp-big_97 {
-        width: 23rem;
-        height: 22rem;
-        background-image: url('R.images.gui.maps.icons.library.xpIcon_23x22');
-        transform: translateY(2rem);
-    }
-.Currency_icon__freeXp-small_63 {
-        background-image: url('R.images.gui.maps.icons.library.freeXPIcon16x16');
-        transform: translateY(2rem);
-    }
-.Currency_icon__freeXp-big_5f {
-        width: 24rem;
-        height: 24rem;
-        background-image: url('R.images.gui.maps.icons.library.freeXPIconBig24x24');
-        transform: translateY(3rem);
-    }
-.Currency_value_e1 {
-    position: relative;
-    z-index: 2;
-}
-.Currency_value__small_e9 {
-        padding-right: 2rem;
-    }
-.Currency_value__big_d4 {
-        padding-right: 5rem;
-        font-size: 22rem;
-        font-weight: 700;
-    }
-.Currency_value__large_85 {
-        font-size: 36rem;
-        font-weight: 700;
-    }
-.Currency_value__freeXp_e3 {
-        color: #F2F2F7;
-    }
-.Currency_value__xp_b0,
-    .Currency_value__credits_76 {
-        color: #CED9D9;
-    }
-.Currency_value__gold_dd {
-        color: #FFC363;
-    }
-.Currency_value__crystal_19 {
-        color: #C9C9B6;
-    }
-.Currency_value__notEnough_56.Currency_value__small_e9 {
-            color: #FF2717;
-        }
-.Currency_value__notEnough_56.Currency_value__big_d4 {
-            color: #B70000;
-        }
-.Currency_stock_87 {
-    height: 13rem;
-    color: #fd9;
-    font-size: 13rem;
-    line-height: 1;
-    position: relative;
-    z-index: 0;
-    pointer-events: none;
-}
-.Currency_stock__indent_a1 {
-        margin-left: 3rem;
-    }
-.Currency_stock__sizeBig_b5 {
-        transform: translateY(-1rem);
-    }
-.Currency_stock__interactive_93 {
-        pointer-events: auto;
-    }
-.Currency_stockBackground_82 {
-    width: 80rem;
-    height: 45rem;
-    background-image: url('R.images.gui.maps.icons.library.RedActionBG');
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    top: 50%;
-    right: -27rem;
-    z-index: -1;
-    transform: translateY(-47%);
-}
-
 .Footer_base_0e {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding-top: 32rem;
-    padding-bottom: 6rem;
+    padding-bottom: 14rem;
 }
 
 .Footer_levelsBlock_15 {
@@ -1655,15 +1847,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
         background-image: url('R.images.gui.maps.icons.battlePass2020.buy.confirm.Control_active');
     }
 
-.Rewards_rewards_1c {
-    display: flex;
-    flex-direction: row;
-}
-
-    .Rewards_rewards_1c.Rewards_column_cb {
-        flex-direction: column;
-    }
-
 .Reward_base_ea {
     display: flex;
     flex-direction: column;
@@ -1700,9 +1883,10 @@ This bug is reproduced in Google Chrome 81.0.4044.113
             height: 128rem;
             background: no-repeat center / 100%;
             position: absolute;
-            top: -32rem;
-            left: -32rem;
+            top: 50%;
+            left: 50%;
             z-index: 2;
+            transform: translate(-50%, -50%);
             pointer-events: none;
         }
 
@@ -1711,8 +1895,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
                 height: 96rem;
                 background-size: 100%;
                 overflow: visible;
-                top: -24rem;
-                left: -24rem;
             }
 
     .Reward_base_ea .Reward_image_89 .Reward_highlight_36 {
@@ -1772,73 +1954,80 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 
 /* colors*/
 
+.RewardsList_base_06 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 48rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    transition: .4s ease-out opacity;
+}
+
+.RewardsList_base__disappearing_58 {
+        opacity: 0;
+    }
+
+.RewardsList_base__large_3c .RewardsList_base_06 {
+        min-height: 80rem;
+        margin-top: 15rem;
+    }
+
+.RewardsList_reward_6a {
+    margin: 0 18rem;
+    position: relative;
+    transition: .3s ease-in opacity;
+}
+
+.RewardsList_reward__small_36 {
+        margin-left: 12rem;
+        margin-right: 12rem;
+    }
+
+.RewardsList_reward_6a.RewardsList_entering_97 {
+        opacity: 0;
+    }
+
+.RewardsList_reward_6a.RewardsList_entered_51 {
+        opacity: 1;
+    }
+
+/* colors*/
+
 .Content_base_09 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 35rem;
     position: relative;
 }
 
-.Content_levelSlider__notAllowSlide_56 {
-        margin-bottom: 30rem;
+.Content_button_32 {
+    opacity: 0;
+    transition: .4s ease-in opacity;
+    pointer-events: none;
+}
+
+.Content_button__active_37 {
+        opacity: 1;
+        pointer-events: auto;
     }
 
-.Content_rewardsList_de {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    transition-duration: .2s;
-    transition-property: opacity;
-}
-
-.Content_base__large_2f .Content_rewardsList_de {
-        margin-top: 15rem;
-    }
-
-.Content_dividerWrapper_b5 {
-    width: 100%;
-    position: relative;
-}
-
-.Content_divider_73 {
-    height: 1rem;
-    background-color: #fff;
-    opacity: .1;
-    position: absolute;
-    right: 0;
-    left: 0;
-}
-
-@media (min-width: 1360px) {
-
-.Content_divider_73 {
-        right: 24rem;
-        left: 24rem
-}
+.Content_button__disappearing_a4 {
+        opacity: 0;
+        transition-timing-function: ease-out;
     }
 
 .Content_rewardBtn_10 {
     width: 230rem;
     margin-top: 20rem;
-    margin-bottom: 20rem;
     transition-duration: .2s;
     transition-property: opacity;
 }
 
-.Content_base__small_69 .Content_rewardBtn_10 {
-        margin-bottom: 65rem;
-    }
-
-.Content_base__medium_b1 .Content_rewardBtn_10 {
-        margin-bottom: 100rem;
-    }
-
 .Content_base__large_2f .Content_rewardBtn_10 {
         margin-top: 35rem;
-        margin-bottom: 120rem;
     }
 
 .ScrollArea_base_47 {
@@ -2044,6 +2233,15 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     color: #e9e2bf;
 }
 
+.Rewards_rewards_1c {
+    display: flex;
+    flex-direction: row;
+}
+
+    .Rewards_rewards_1c.Rewards_column_cb {
+        flex-direction: column;
+    }
+
 .GroupRewards_base_1b {
     display: flex;
     flex-direction: row;
@@ -2062,23 +2260,24 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     align-items: center;
     width: 100%;
     height: 100%;
-    background: url('R.images.gui.maps.icons.battlePass2020.progression.bg') no-repeat;
-    background-position: center center;
-    background-size: cover;
     overflow: hidden;
     position: relative;
 }
 .RewardsViewContent_title_8b {
-    color: #f2f2f7;
+    color: #F2F2F7;
+    font-size: 36rem;
     font-weight: 700;
+    line-height: 1.1;
+    position: absolute;
+    top: 70rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .RewardsViewContent_title__small_1e {
-        margin-bottom: 20rem;
+        color: #F2F2F7;
         font-size: 28rem;
-    }
-.RewardsViewContent_title__large_7c {
-        margin-bottom: 30rem;
-        font-size: 36rem;
+        font-weight: 700;
+        line-height: 1.1;
     }
 .RewardsViewContent_mainSlots_55 {
     display: flex;
@@ -2087,6 +2286,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 .RewardsViewContent_base__extraSmall_20 .RewardsViewContent_mainSlots_55 {
         width: 960rem;
         max-height: 450rem;
+        margin-top: 30rem;
     }
 .RewardsViewContent_base__small_28 .RewardsViewContent_mainSlots_55 {
         width: 1040rem;
@@ -2095,6 +2295,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 .RewardsViewContent_base__medium_0c .RewardsViewContent_mainSlots_55 {
         width: 1250rem;
         max-height: 551rem;
+        margin-top: 30rem;
     }
 .RewardsViewContent_base__large_27 .RewardsViewContent_mainSlots_55 {
         width: 1300rem;
@@ -2139,6 +2340,10 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     width: 157rem;
     margin-top: 42rem;
 }
+.RewardsViewContent_base__extraSmall_20 .RewardsViewContent_footerButton_f4,
+    .RewardsViewContent_base__small_28 .RewardsViewContent_footerButton_f4 {
+        margin-top: 25rem;
+    }
 .RewardsViewContent_lip_80 {
     background: url('R.images.gui.maps.icons.battlePass2020.buy.lip') no-repeat;
     background-position: center center;
@@ -2183,74 +2388,37 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     left: 35rem;
     z-index: 1;
 }
-
-.ConfirmBuyViewContent_header_48 {
-    width: 360rem;
-    height: 385rem;
-    margin-top: -90rem;
-    position: relative;
-}
-
-    .ConfirmBuyViewContent_header__large_58 {
-        width: 540rem;
-        height: 580rem;
-        margin-top: -127rem;
-    }
-
-.ConfirmBuyViewContent_backIcon_da {
-    width: 360rem;
-    height: 360rem;
-    margin-top: 30rem;
-    background: url('R.images.gui.maps.icons.battlePass2020.buy.confirm.logo_bp_small') no-repeat center;
+.RewardsViewContent_background_89 {
     position: absolute;
-}
-
-.ConfirmBuyViewContent_backIcon__large_38 {
-        width: 540rem;
-        height: 540rem;
-        margin-top: 45rem;
-        background: url('R.images.gui.maps.icons.battlePass2020.buy.confirm.logo_bp') no-repeat center;
-    }
-
-.ConfirmBuyViewContent_rewardsIcon_5c {
-    width: 360rem;
-    height: 213rem;
-    background: url('R.images.gui.maps.icons.battlePass2020.buy.confirm.rewards_bp_small') no-repeat center;
-    position: absolute;
+    top: 0;
+    right: 0;
     bottom: 0;
+    left: 0;
+    z-index: -1;
 }
 
-.ConfirmBuyViewContent_rewardsIcon__large_62 {
-        width: 540rem;
-        height: 320rem;
-        background: url('R.images.gui.maps.icons.battlePass2020.buy.confirm.rewards_bp') no-repeat center;
-    }
-
-.ConfirmBuyViewContent_close_27 {
-    position: absolute;
-    top: 20rem;
-    right: 20rem;
-    z-index: 1;
+.Title_chapter_f8 {
+    color: #E9E2BF;
 }
 
 .ConfirmBuyViewContent_priceBlock_a3 {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    padding-left: 26rem;
 }
 
 .ConfirmBuyViewContent_footer_af {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     margin-top: 25rem;
 }
 
 .ConfirmBuyViewContent_footerLabel_40 {
-    padding-right: 9rem;
-    color: #8c8c7e;
+    color: #8C8C7E;
     font-size: 16rem;
+    font-weight: 400;
+    line-height: 1.25;
+    padding-right: 9rem;
 }
 
 /* colors*/
@@ -2311,21 +2479,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 
 body {
     margin: 0;
-    line-height: normal;
 }
-
-/* stylelint-disable */
-
-[lang=ja],
-[lang=ko],
-[lang=zh_tw],
-[lang=zh_sg],
-[lang=zh_ch],
-[lang=th] {
-    overflow-wrap: break-word;
-}
-
-/* stylelint-enable */
 
 .BattlePassBuyView_base_d6 {
     opacity: 0;
@@ -2341,7 +2495,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    background: url('R.images.gui.maps.icons.battlePass2020.buy.bg') no-repeat 50% 50% / cover;
+    background: #000;
     overflow: hidden;
     position: relative;
 }

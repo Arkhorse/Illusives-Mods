@@ -1,0 +1,264 @@
+.SwitcherBullet_base_3d {
+    display: flex;
+    align-items: center;
+    height: 77rem;
+    position: relative;
+}
+.SwitcherBullet_container_6e {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    height: 20rem;
+    position: relative;
+    transform: scale(.6);
+    transition: opacity .15s ease-in-out, transform .15s ease-in-out;
+}
+.SwitcherBullet_base__selected_70 .SwitcherBullet_container_6e {
+        transform: scale(1);
+    }
+.SwitcherBullet_base__selected_70 ~ .SwitcherBullet_base_3d .SwitcherBullet_container_6e {
+        opacity: .7;
+    }
+.SwitcherBullet_iconSmall_b7 {
+    width: 36rem;
+    height: 36rem;
+    background: 50% / contain no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: opacity .15s ease-in-out;
+    background-image: url('R.images.gui.maps.icons.components.switcher.bullet_small');
+}
+.SwitcherBullet_iconBig_dc {
+    width: 36rem;
+    height: 36rem;
+    background: 50% / contain no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: opacity .15s ease-in-out;
+    background-image: url('R.images.gui.maps.icons.components.switcher.bullet_big');
+    opacity: 0;
+}
+.SwitcherBullet_base__selected_70 .SwitcherBullet_iconBig_dc {
+        opacity: 1;
+    }
+.SwitcherBullet_border_f8 {
+    width: 51rem;
+    height: 51rem;
+    background: 50% / contain no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: opacity .15s ease-in-out;
+    border: 2rem solid #FFDD99;
+    box-shadow: 0 0 4rem rgba(255,127,0, .25), 0 0 8rem rgba(255,42,0, 1), 0 0 12rem rgba(238,85,34, 1),
+        inset 0 0 4rem rgba(255,127,0, .25),
+        inset 0 0 8rem rgba(255,42,0, 1),
+        inset 0 0 12rem rgba(238,85,34, 1);
+}
+.SwitcherBullet_base__selected_70 .SwitcherBullet_border_f8 {
+        opacity: 1;
+    }
+.SwitcherBullet_hover_3b {
+    width: 63rem;
+    height: 63rem;
+    background: 50% / contain no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: opacity .15s ease-in-out;
+    background-image: url('R.images.gui.maps.icons.components.switcher.hover');
+    opacity: 0;
+    pointer-events: none;
+}
+.SwitcherBullet_container_6e:hover .SwitcherBullet_hover_3b {
+        opacity: 1;
+    }
+.SwitcherBullet_base__selected_70 ~ .SwitcherBullet_base_3d .SwitcherBullet_container_6e:hover .SwitcherBullet_hover_3b {
+        opacity: .7;
+    }
+.SwitcherBullet_base__selected_70:hover .SwitcherBullet_hover_3b,
+    .SwitcherBullet_base__disabled_b9:hover .SwitcherBullet_hover_3b {
+        opacity: 0;
+    }
+.SwitcherBullet_clickArea_ed {
+    width: 51rem;
+    height: 51rem;
+    background: 50% / contain no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: opacity .15s ease-in-out;
+    cursor: pointer;
+}
+.SwitcherBullet_base__selected_70 .SwitcherBullet_clickArea_ed,
+    .SwitcherBullet_base__disabled_b9 .SwitcherBullet_clickArea_ed {
+        cursor: auto;
+        pointer-events: none;
+    }
+.SwitcherBullet_disabled_b5 {
+    width: 160rem;
+    height: 160rem;
+    background: 50% / contain no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: opacity .15s ease-in-out;
+    background-image: url('R.images.gui.maps.icons.components.switcher.bullet_disable');
+    opacity: 0;
+    pointer-events: none;
+}
+.SwitcherBullet_base__disabled_b9 .SwitcherBullet_disabled_b5 {
+        opacity: 1;
+    }
+.SwitcherBullet_blurRed_4a {
+    width: 75rem;
+    height: 75rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .15s ease-in-out;
+    pointer-events: none;
+    background-image: radial-gradient(closest-side, #984620, transparent);
+    opacity: .5;
+}
+.SwitcherBullet_base__selected_70 ~ .SwitcherBullet_base_3d .SwitcherBullet_blurRed_4a {
+        opacity: 0;
+    }
+.SwitcherBullet_blurBlack_2a {
+    width: 75rem;
+    height: 75rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .15s ease-in-out;
+    pointer-events: none;
+    background-image: radial-gradient(closest-side, #000, transparent);
+    opacity: 0;
+}
+.SwitcherBullet_base__selected_70 ~ .SwitcherBullet_base_3d .SwitcherBullet_blurBlack_2a {
+        opacity: .6;
+    }
+.SwitcherBullet_base__selected_70 ~ .SwitcherBullet_base_3d .SwitcherBullet_blurBlack__lightShadows_5b {
+            opacity: .2;
+        }
+.SwitcherBullet_selectedBulletDecoration_d5 {
+    width: 280rem;
+    height: 280rem;
+    background: 50% / contain no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: opacity .15s ease-in-out;
+    background-image: url('R.images.gui.maps.icons.components.switcher.decoration');
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.SwitcherBullet_base__selected_70 .SwitcherBullet_selectedBulletDecoration_d5 {
+        opacity: 1;
+    }
+.SwitcherBullet_number_b4 {
+    padding-bottom: 4rem;
+    color: #FFDD99;
+    font-size: 26rem;
+    line-height: .8;
+    text-shadow: 0 0 4rem rgba(255, 127, 0, .25), 0 0 8rem #ff2a00, 0 0 12rem #e52;
+    position: relative;
+}
+.SwitcherBullet_base__selected_70 .SwitcherBullet_number_b4 {
+        font-size: 24rem;
+    }
+.SwitcherBullet_currentText_f9 {
+    width: 90rem;
+    color: #FFDD99;
+    font-size: 12rem;
+    text-align: center;
+    text-shadow: 0 0 4rem rgba(255, 127, 0, .25), 0 0 8rem #ff2a00, 0 0 12rem #e52;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%) translateY(4rem);
+}
+
+.SwitcherSeparator_base_c1 {
+    width: 35rem;
+    height: 1rem;
+    margin: 0 2rem;
+    background-color: rgba(162,160,151, .5);
+    transition: background-color .15s ease-in-out,
+    box-shadow .15s ease-in-out,
+    transform .15s ease-in-out;
+}
+
+    .SwitcherSeparator_base__isBeforeSelectedBullet_e0 {
+        box-shadow: 0 0 4rem rgba(255,127,0, .25), 0 0 8rem rgba(255,42,0, 1), 0 0 12rem rgba(238,85,34, 1);
+        background-color: #FFDD99;
+    }
+
+    .SwitcherSeparator_base__scaled_57 {
+        transform: scaleX(.6);
+    }
+
+    .SwitcherSeparator_base__rightTransformOrigin_16 {
+        transform-origin: right;
+    }
+
+    .SwitcherSeparator_base__leftTransformOrigin_7f {
+        transform-origin: left;
+    }
+
+    .SwitcherSeparator_base__transitionTransformOrigin_b2 {
+        transition: background-color .15s ease-in-out,
+    box-shadow .15s ease-in-out,
+    transform .15s ease-in-out, transform-origin .15s ease-in-out;
+    }
+
+.Switcher_base_7a {
+    display: flex;
+    align-items: center;
+    padding: 0 14rem;
+    opacity: 0;
+}
+
+    .Switcher_base__hasCurrentText_6f {
+        padding-bottom: 38rem;
+    }
+
+    .Switcher_base__small_6a {
+        transform: scale(.8);
+    }
+
+    .Switcher_base__isVisible_43 {
+        opacity: 1;
+    }
+
+.App_base_c7 {
+    background: url('R.images.gui.maps.icons.customization.progression_styles.stage_switcher.bg') center / contain no-repeat;
+    overflow: hidden;
+}
+
+.App_content_8f {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 22rem;
+}
+
+body {
+    margin: 1rem;
+}
+

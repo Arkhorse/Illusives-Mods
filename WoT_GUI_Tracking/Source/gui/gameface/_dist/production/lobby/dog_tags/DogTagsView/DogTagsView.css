@@ -889,7 +889,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     line-height: 1.2;
     text-shadow: 0 -1rem 1rem #000;
     letter-spacing: .03em;
-    transform: translateY(-5%);
+    transform: translateY(-1rem);
 }
 .CButton_content_cc[lang=ja],
     .CButton_content_cc[lang=ko],
@@ -1257,7 +1257,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 
 .Router_scrollAreaWrapper_bottomMask_63 {
         mask-image: url('R.images.gui.maps.icons.dogtags.grid_mask_small');
-        mask-size: 508rem 100%;
+        mask-size: 100%;
         mask-position: top;
     /* stylelint-disable unit-blacklist */
 
@@ -1273,7 +1273,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 .Router_scrollAreaWrapper_bottomMask_63 {
         /* stylelint-enable unit-blacklist */
             mask-image: url('R.images.gui.maps.icons.dogtags.grid_mask');
-            mask-size: 658rem 100%
+            mask-size: 100%
     }
     }
 
@@ -2462,7 +2462,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     }
 
 .Checkbox_base__checked_a2.Checkbox_base__disabled_08 .Checkbox_checkmark_60 {
-        opacity: 0;
+        opacity: .5;
     }
 
 .Checkbox_base__small_18 .Checkbox_checkmark_60 {

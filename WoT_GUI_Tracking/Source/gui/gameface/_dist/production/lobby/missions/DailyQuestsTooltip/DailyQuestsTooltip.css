@@ -363,9 +363,10 @@
             height: 128rem;
             background: no-repeat center / 100%;
             position: absolute;
-            top: -32rem;
-            left: -32rem;
+            top: 50%;
+            left: 50%;
             z-index: 2;
+            transform: translate(-50%, -50%);
             pointer-events: none;
         }
 
@@ -374,8 +375,6 @@
                 height: 96rem;
                 background-size: 100%;
                 overflow: visible;
-                top: -24rem;
-                left: -24rem;
             }
 
     .Reward_base_ea .Reward_image_89 .Reward_highlight_36 {

@@ -441,7 +441,7 @@
     height: 100%;
     background-image: url('R.images.gui.maps.icons.battlePass2020.logo.font_texture');
     background-position: 50% 4rem;
-    background-size: cover;
+    background-size: 100% 100%;
     mix-blend-mode: multiply;
     position: absolute;
     transform: scale(.98);
@@ -467,7 +467,7 @@
     }
 .Label_text_67 {
     display: flex;
-    font-size: 40rem;
+    font-size: 42rem;
     font-weight: 700;
 }
 .Label_text__small_e0 {
@@ -825,14 +825,6 @@
     animation-delay: .6s;
     animation-iteration-count: 1;
     }
-.Emblem_progress__completePostProgression_65 {
-    animation-name: Emblem_hideProgress_b4;
-    animation-duration: .3s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    }
 .Emblem_progress__hidden_6d {
         display: none;
     }
@@ -843,7 +835,7 @@
     height: 130rem;
     padding-top: 25rem;
     padding-bottom: 78rem;
-    background: left top / cover no-repeat;
+    background: url('R.images.gui.maps.icons.battlePass2020.logo.emblem') left top / cover no-repeat;
     position: relative;
 }
 .Emblem_image__small_ce {
@@ -851,53 +843,26 @@
         height: 100rem;
         padding-top: 18rem;
         padding-bottom: 57rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.emblem_small');
     }
-.Emblem_image__noVehicles_54 {
-        filter: brightness(.7) saturate(.7);
+.Emblem_image__battlePass_ba {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.emblem_BP');
     }
-.Emblem_image__mainNoBattlePass_7a {
-        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Main_NoBP');
-    }
-.Emblem_image__mainNoBattlePassSmall_c2 {
-            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Main_NoBP_small');
-        }
-.Emblem_image__mainBattlePass_c6 {
-        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Main_BP');
-    }
-.Emblem_image__mainBattlePassSmall_0f {
-            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Main_BP_small');
-        }
-.Emblem_image__postBattlePass_b1 {
-        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Post_BP');
-    }
-.Emblem_image__postBattlePassSmall_55 {
-            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Post_BP_small');
+.Emblem_image__battlePassSmall_d5 {
+            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.emblem_BP_small');
         }
 .Emblem_image__seasonWaiting_96 {
         background-image: url('R.images.gui.maps.icons.battlePass2020.logo.seasonWaiting');
     }
 .Emblem_image__seasonWaitingSmall_c0 {
-            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.seasonWaiting_small');
+            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.seasonWaiting');
         }
-.Emblem_alert_33 {
-    height: 0;
-    position: relative;
-}
-.Emblem_alertIcon_f4 {
-    width: 32rem;
-    height: 26rem;
-    background: url('R.images.gui.maps.icons.battlePass2020.logo.alert_big') no-repeat center center / contain;
-    position: absolute;
-    bottom: 33rem;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.Emblem_alertIcon__small_a9 {
-        width: 28rem;
-        height: 22rem;
-        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.alert_small');
-        bottom: 24rem;
+.Emblem_image__completed_9c {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.emblem_completed');
     }
+.Emblem_image__completedSmall_29 {
+            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.emblem_completed_small');
+        }
 
 @keyframes StateNormal_fadeInWithScale_f8 {
     0% {
@@ -1063,7 +1028,6 @@
         opacity: 1;
     }
 }
-/* buy battle pass*/
 @keyframes StateNormal_flagBuyBPIn_d3 {
     0% {
         transform: scaleY(1);
@@ -1074,6 +1038,26 @@
     }
 
     76% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateNormal_flagSwitchChapter_2c {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    38% {
+        opacity: 0;
+        transform: scaleY(.9);
+    }
+
+    76% {
+        opacity: 1;
         transform: scaleY(1.1);
     }
 
@@ -1160,13 +1144,12 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     position: relative;
 }
 .StateNormal_flag_f8 {
     width: 142rem;
     height: 160rem;
-    background: url('R.images.gui.maps.icons.battlePass2020.logo.flag') left top / 100% 100% no-repeat;
+    background: url('R.images.gui.maps.icons.battlePass2020.logo.flag_chapter_1') left top / 100% 100% no-repeat;
     position: absolute;
     z-index: -1;
     transform-origin: top;
@@ -1174,12 +1157,62 @@
 .StateNormal_flag__small_41 {
         width: 100rem;
         height: 120rem;
-        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.flag_small');
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.flag_chapter_1_small');
     }
+.StateNormal_flag__chapter2_d4 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.flag_chapter_2');
+    }
+.StateNormal_flag__chapter2Small_fc {
+            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.flag_chapter_2_small');
+        }
+.StateNormal_flag__chapter3_63 {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.flag_chapter_3');
+    }
+.StateNormal_flag__chapter3Small_b4 {
+            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.flag_chapter_3_small');
+        }
 .StateNormal_emblem_0f {
     display: flex;
     margin-top: 9rem;
+    position: relative;
 }
+.StateNormal_counter_cd {
+    min-width: 14rem;
+    height: 14rem;
+    padding: 0 4rem;
+    border: 1rem solid #fe4e0f;
+    border-radius: 7rem;
+    box-shadow: 0 0 0 1rem rgba(0,0,0, .3),
+            0 0 6rem rgba(254,103,0, .2),
+            0 0 12rem 4rem rgba(249,0,0, .3);
+    background-image: url('R.images.gui.maps.icons.components.counter.pattern');
+    color: #FEFEEC;
+    font-size: 11rem;
+    line-height: 13rem;
+    position: absolute;
+    top: 14rem;
+    right: 13rem;
+}
+.StateNormal_counter__small_f1 {
+        top: 11rem;
+        right: 6rem;
+    }
+.StateNormal_styleIcon_cd {
+    width: 176rem;
+    height: 130rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.logo.chooseStyle') left top / cover no-repeat;
+    position: absolute;
+    top: -5rem;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+}
+.StateNormal_styleIcon__small_bc {
+        width: 134rem;
+        height: 98rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.chooseStyle_small');
+        top: 2rem;
+    }
 
 @keyframes StateShow_fadeInWithScale_ca {
     0% {
@@ -1345,7 +1378,6 @@
         opacity: 1;
     }
 }
-/* buy battle pass*/
 @keyframes StateShow_flagBuyBPIn_c8 {
     0% {
         transform: scaleY(1);
@@ -1356,6 +1388,26 @@
     }
 
     76% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateShow_flagSwitchChapter_6e {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    38% {
+        opacity: 0;
+        transform: scaleY(.9);
+    }
+
+    76% {
+        opacity: 1;
         transform: scaleY(1.1);
     }
 
@@ -1442,7 +1494,6 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     position: relative;
 }
 .StateShow_flag_31 {
@@ -1646,7 +1697,6 @@
         opacity: 1;
     }
 }
-/* buy battle pass*/
 @keyframes StateMouseOver_flagBuyBPIn_63 {
     0% {
         transform: scaleY(1);
@@ -1657,6 +1707,26 @@
     }
 
     76% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateMouseOver_flagSwitchChapter_c9 {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    38% {
+        opacity: 0;
+        transform: scaleY(.9);
+    }
+
+    76% {
+        opacity: 1;
         transform: scaleY(1.1);
     }
 
@@ -1932,7 +2002,6 @@
         opacity: 1;
     }
 }
-/* buy battle pass*/
 @keyframes StateMouseOut_flagBuyBPIn_26 {
     0% {
         transform: scaleY(1);
@@ -1943,6 +2012,26 @@
     }
 
     76% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateMouseOut_flagSwitchChapter_e0 {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    38% {
+        opacity: 0;
+        transform: scaleY(.9);
+    }
+
+    76% {
+        opacity: 1;
         transform: scaleY(1.1);
     }
 
@@ -2218,7 +2307,6 @@
         opacity: 1;
     }
 }
-/* buy battle pass*/
 @keyframes StateLevelUp_flagBuyBPIn_3b {
     0% {
         transform: scaleY(1);
@@ -2229,6 +2317,26 @@
     }
 
     76% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateLevelUp_flagSwitchChapter_61 {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    38% {
+        opacity: 0;
+        transform: scaleY(.9);
+    }
+
+    76% {
+        opacity: 1;
         transform: scaleY(1.1);
     }
 
@@ -2514,7 +2622,6 @@
         opacity: 1;
     }
 }
-/* buy battle pass*/
 @keyframes StateBuyBP_flagBuyBPIn_cc {
     0% {
         transform: scaleY(1);
@@ -2525,6 +2632,26 @@
     }
 
     76% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateBuyBP_flagSwitchChapter_c4 {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    38% {
+        opacity: 0;
+        transform: scaleY(.9);
+    }
+
+    76% {
+        opacity: 1;
         transform: scaleY(1.1);
     }
 
@@ -2665,7 +2792,7 @@
     z-index: 1;
 }
 
-@keyframes StateSwitchToPost_fadeInWithScale_e1 {
+@keyframes StateSwitchChapter_fadeInWithScale_2b {
     0% {
         opacity: 0;
         transform: scaleY(.75);
@@ -2681,7 +2808,7 @@
         transform: scaleY(1);
     }
 }
-@keyframes StateSwitchToPost_slideUp_3d {
+@keyframes StateSwitchChapter_slideUp_0d {
     0% {
         opacity: 0;
         transform: translateY(-10rem);
@@ -2697,7 +2824,7 @@
         transform: translateY(0);
     }
 }
-@keyframes StateSwitchToPost_wrapperHover_b8 {
+@keyframes StateSwitchChapter_wrapperHover_2c {
     from {
         filter: brightness(100%) contrast(100%);
     }
@@ -2706,7 +2833,7 @@
         filter: brightness(135%) contrast(75%);
     }
 }
-@keyframes StateSwitchToPost_wrapperOut_0d {
+@keyframes StateSwitchChapter_wrapperOut_e6 {
     from {
         filter: brightness(135%) contrast(75%);
     }
@@ -2715,7 +2842,7 @@
         filter: brightness(100%) contrast(100%);
     }
 }
-@keyframes StateSwitchToPost_flagHover_1d {
+@keyframes StateSwitchChapter_flagHover_69 {
     from {
         transform: scaleY(1);
     }
@@ -2724,7 +2851,7 @@
         transform: scaleY(1.05);
     }
 }
-@keyframes StateSwitchToPost_emblemHover_2a {
+@keyframes StateSwitchChapter_emblemHover_55 {
     from {
         margin-top: 9rem;
     }
@@ -2733,7 +2860,7 @@
         margin-top: 14rem;
     }
 }
-@keyframes StateSwitchToPost_flagOut_4a {
+@keyframes StateSwitchChapter_flagOut_13 {
     from {
         transform: scaleY(1.05);
     }
@@ -2742,7 +2869,7 @@
         transform: scaleY(1);
     }
 }
-@keyframes StateSwitchToPost_emblemOut_4e {
+@keyframes StateSwitchChapter_emblemOut_e8 {
     from {
         margin-top: 14rem;
     }
@@ -2751,7 +2878,7 @@
         margin-top: 9rem;
     }
 }
-@keyframes StateSwitchToPost_emblemLevelUp_8a {
+@keyframes StateSwitchChapter_emblemLevelUp_c5 {
     0% {
         filter: brightness(100%) contrast(100%);
         transform: translateY(0);
@@ -2770,7 +2897,7 @@
         transform: translateY(0);
     }
 }
-@keyframes StateSwitchToPost_emblemAttention_65 {
+@keyframes StateSwitchChapter_emblemAttention_9e {
     0% {
         filter: brightness(150%);
     }
@@ -2779,7 +2906,7 @@
         filter: brightness(100%);
     }
 }
-@keyframes StateSwitchToPost_emblemCopyAttention_45 {
+@keyframes StateSwitchChapter_emblemCopyAttention_4a {
     0% {
         opacity: 1;
         transform: scale(1, 1);
@@ -2790,7 +2917,7 @@
         transform: scale(1.3, 1.3);
     }
 }
-@keyframes StateSwitchToPost_flagLevelUp_d5 {
+@keyframes StateSwitchChapter_flagLevelUp_72 {
     0% {
         filter: brightness(100%) contrast(100%);
         transform: scaleY(1);
@@ -2806,7 +2933,7 @@
         transform: scaleY(1);
     }
 }
-@keyframes StateSwitchToPost_flagLevelUpPosOut_1f {
+@keyframes StateSwitchChapter_flagLevelUpPosOut_45 {
     from {
         transform: scaleY(1.05);
     }
@@ -2815,7 +2942,7 @@
         transform: scaleY(1);
     }
 }
-@keyframes StateSwitchToPost_flagLevelUpLightOut_84 {
+@keyframes StateSwitchChapter_flagLevelUpLightOut_b6 {
     from {
         filter: brightness(135%) contrast(75%);
     }
@@ -2824,13 +2951,12 @@
         filter: brightness(100%) contrast(100%);
     }
 }
-@keyframes StateSwitchToPost_flareLevelUp_29 {
+@keyframes StateSwitchChapter_flareLevelUp_50 {
     0% {
         opacity: 1;
     }
 }
-/* buy battle pass*/
-@keyframes StateSwitchToPost_flagBuyBPIn_fe {
+@keyframes StateSwitchChapter_flagBuyBPIn_75 {
     0% {
         transform: scaleY(1);
     }
@@ -2847,7 +2973,27 @@
         transform: scaleY(1);
     }
 }
-@keyframes StateSwitchToPost_emblemBuyBP_96 {
+@keyframes StateSwitchChapter_flagSwitchChapter_8a {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    38% {
+        opacity: 0;
+        transform: scaleY(.9);
+    }
+
+    76% {
+        opacity: 1;
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateSwitchChapter_emblemBuyBP_ba {
     0% {
         opacity: 1;
         transform: translateY(0);
@@ -2878,7 +3024,7 @@
         transform: translateY(0);
     }
 }
-@keyframes StateSwitchToPost_lightBuyBP_26 {
+@keyframes StateSwitchChapter_lightBuyBP_19 {
     0% {
         opacity: 0;
         transform: scale(.8);
@@ -2899,7 +3045,7 @@
         transform: scale(.8);
     }
 }
-@keyframes StateSwitchToPost_lightAttention_65 {
+@keyframes StateSwitchChapter_lightAttention_2a {
     0% {
         opacity: 0;
         transform: scale(.1);
@@ -2910,7 +3056,7 @@
         transform: scale(1.35);
     }
 }
-@keyframes StateSwitchToPost_lightAttentionSmall_00 {
+@keyframes StateSwitchChapter_lightAttentionSmall_24 {
     0% {
         opacity: 0;
         transform: scale(.1);
@@ -2921,7 +3067,7 @@
         transform: scale(1.1);
     }
 }
-.StateSwitchToPost_base_36 {
+.StateSwitchChapter_base_05 {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -2929,24 +3075,24 @@
     overflow: hidden;
     position: relative;
 }
-.StateSwitchToPost_flag_1d {
-    animation-name: StateSwitchToPost_flagBuyBPIn_fe;
+.StateSwitchChapter_flag_79 {
+    animation-name: StateSwitchChapter_flagSwitchChapter_8a;
     animation-duration: 1.3s;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(.07, .82, .16, 1);
     animation-delay: 0s;
     animation-iteration-count: 1;
 }
-.StateSwitchToPost_emblem_f6 {
-    animation-name: StateSwitchToPost_emblemBuyBP_96;
+.StateSwitchChapter_emblem_d5 {
+    animation-name: StateSwitchChapter_emblemBuyBP_ba;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(.44, .05, .55, .95);
     animation-delay: 0s;
     animation-iteration-count: 1;
 }
-.StateSwitchToPost_flare_8d {
-    animation-name: StateSwitchToPost_flareLevelUp_29;
+.StateSwitchChapter_flare_67 {
+    animation-name: StateSwitchChapter_flareLevelUp_50;
     animation-duration: 1.8s;
     animation-fill-mode: forwards;
     animation-delay: .2s;
@@ -2957,10 +3103,610 @@
     position: absolute;
     pointer-events: none;
 }
-.StateSwitchToPost_flare__small_61 {
+.StateSwitchChapter_flare__small_8f {
         width: 100rem;
         height: 120rem;
     }
+
+@keyframes StateNotTakenRewards_fadeInWithScale_a3 {
+    0% {
+        opacity: 0;
+        transform: scaleY(.75);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+@keyframes StateNotTakenRewards_slideUp_8a {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateY(5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes StateNotTakenRewards_wrapperHover_73 {
+    from {
+        filter: brightness(100%) contrast(100%);
+    }
+
+    to {
+        filter: brightness(135%) contrast(75%);
+    }
+}
+@keyframes StateNotTakenRewards_wrapperOut_6c {
+    from {
+        filter: brightness(135%) contrast(75%);
+    }
+
+    to {
+        filter: brightness(100%) contrast(100%);
+    }
+}
+@keyframes StateNotTakenRewards_flagHover_c7 {
+    from {
+        transform: scaleY(1);
+    }
+
+    to {
+        transform: scaleY(1.05);
+    }
+}
+@keyframes StateNotTakenRewards_emblemHover_68 {
+    from {
+        margin-top: 9rem;
+    }
+
+    to {
+        margin-top: 14rem;
+    }
+}
+@keyframes StateNotTakenRewards_flagOut_01 {
+    from {
+        transform: scaleY(1.05);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateNotTakenRewards_emblemOut_b0 {
+    from {
+        margin-top: 14rem;
+    }
+
+    to {
+        margin-top: 9rem;
+    }
+}
+@keyframes StateNotTakenRewards_emblemLevelUp_d0 {
+    0% {
+        filter: brightness(100%) contrast(100%);
+        transform: translateY(0);
+    }
+
+    16% {
+        transform: translateY(6rem);
+    }
+
+    30% {
+        filter: brightness(135%) contrast(75%);
+    }
+
+    100% {
+        filter: brightness(100%) contrast(100%);
+        transform: translateY(0);
+    }
+}
+@keyframes StateNotTakenRewards_emblemAttention_af {
+    0% {
+        filter: brightness(150%);
+    }
+
+    100% {
+        filter: brightness(100%);
+    }
+}
+@keyframes StateNotTakenRewards_emblemCopyAttention_57 {
+    0% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.3, 1.3);
+    }
+}
+@keyframes StateNotTakenRewards_flagLevelUp_24 {
+    0% {
+        filter: brightness(100%) contrast(100%);
+        transform: scaleY(1);
+    }
+
+    16% {
+        filter: brightness(135%) contrast(75%);
+        transform: scaleY(1.05);
+    }
+
+    100% {
+        filter: brightness(100%) contrast(100%);
+        transform: scaleY(1);
+    }
+}
+@keyframes StateNotTakenRewards_flagLevelUpPosOut_eb {
+    from {
+        transform: scaleY(1.05);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateNotTakenRewards_flagLevelUpLightOut_16 {
+    from {
+        filter: brightness(135%) contrast(75%);
+    }
+
+    to {
+        filter: brightness(100%) contrast(100%);
+    }
+}
+@keyframes StateNotTakenRewards_flareLevelUp_75 {
+    0% {
+        opacity: 1;
+    }
+}
+@keyframes StateNotTakenRewards_flagBuyBPIn_24 {
+    0% {
+        transform: scaleY(1);
+    }
+
+    38% {
+        transform: scaleY(.9);
+    }
+
+    76% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateNotTakenRewards_flagSwitchChapter_91 {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    38% {
+        opacity: 0;
+        transform: scaleY(.9);
+    }
+
+    76% {
+        opacity: 1;
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateNotTakenRewards_emblemBuyBP_c7 {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    3% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    33% {
+        opacity: 0;
+        transform: translateY(-30rem);
+    }
+
+    46% {
+        opacity: 0;
+        transform: translateY(-30rem);
+    }
+
+    66% {
+        opacity: 1;
+        transform: translateY(5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes StateNotTakenRewards_lightBuyBP_ae {
+    0% {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    16% {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    37% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(.8);
+    }
+}
+@keyframes StateNotTakenRewards_lightAttention_4b {
+    0% {
+        opacity: 0;
+        transform: scale(.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.35);
+    }
+}
+@keyframes StateNotTakenRewards_lightAttentionSmall_4c {
+    0% {
+        opacity: 0;
+        transform: scale(.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+.StateNotTakenRewards_base_21 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.StateNotTakenRewards_counter_dd {
+    animation-name: StateNotTakenRewards_fadeInWithScale_a3;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    opacity: 0;
+}
+
+@keyframes StateChoose3dStyle_fadeInWithScale_32 {
+    0% {
+        opacity: 0;
+        transform: scaleY(.75);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+@keyframes StateChoose3dStyle_slideUp_9e {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateY(5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes StateChoose3dStyle_wrapperHover_9b {
+    from {
+        filter: brightness(100%) contrast(100%);
+    }
+
+    to {
+        filter: brightness(135%) contrast(75%);
+    }
+}
+@keyframes StateChoose3dStyle_wrapperOut_7b {
+    from {
+        filter: brightness(135%) contrast(75%);
+    }
+
+    to {
+        filter: brightness(100%) contrast(100%);
+    }
+}
+@keyframes StateChoose3dStyle_flagHover_ce {
+    from {
+        transform: scaleY(1);
+    }
+
+    to {
+        transform: scaleY(1.05);
+    }
+}
+@keyframes StateChoose3dStyle_emblemHover_29 {
+    from {
+        margin-top: 9rem;
+    }
+
+    to {
+        margin-top: 14rem;
+    }
+}
+@keyframes StateChoose3dStyle_flagOut_5c {
+    from {
+        transform: scaleY(1.05);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateChoose3dStyle_emblemOut_02 {
+    from {
+        margin-top: 14rem;
+    }
+
+    to {
+        margin-top: 9rem;
+    }
+}
+@keyframes StateChoose3dStyle_emblemLevelUp_c9 {
+    0% {
+        filter: brightness(100%) contrast(100%);
+        transform: translateY(0);
+    }
+
+    16% {
+        transform: translateY(6rem);
+    }
+
+    30% {
+        filter: brightness(135%) contrast(75%);
+    }
+
+    100% {
+        filter: brightness(100%) contrast(100%);
+        transform: translateY(0);
+    }
+}
+@keyframes StateChoose3dStyle_emblemAttention_40 {
+    0% {
+        filter: brightness(150%);
+    }
+
+    100% {
+        filter: brightness(100%);
+    }
+}
+@keyframes StateChoose3dStyle_emblemCopyAttention_4f {
+    0% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.3, 1.3);
+    }
+}
+@keyframes StateChoose3dStyle_flagLevelUp_ca {
+    0% {
+        filter: brightness(100%) contrast(100%);
+        transform: scaleY(1);
+    }
+
+    16% {
+        filter: brightness(135%) contrast(75%);
+        transform: scaleY(1.05);
+    }
+
+    100% {
+        filter: brightness(100%) contrast(100%);
+        transform: scaleY(1);
+    }
+}
+@keyframes StateChoose3dStyle_flagLevelUpPosOut_31 {
+    from {
+        transform: scaleY(1.05);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateChoose3dStyle_flagLevelUpLightOut_a7 {
+    from {
+        filter: brightness(135%) contrast(75%);
+    }
+
+    to {
+        filter: brightness(100%) contrast(100%);
+    }
+}
+@keyframes StateChoose3dStyle_flareLevelUp_d7 {
+    0% {
+        opacity: 1;
+    }
+}
+@keyframes StateChoose3dStyle_flagBuyBPIn_d2 {
+    0% {
+        transform: scaleY(1);
+    }
+
+    38% {
+        transform: scaleY(.9);
+    }
+
+    76% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateChoose3dStyle_flagSwitchChapter_87 {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    38% {
+        opacity: 0;
+        transform: scaleY(.9);
+    }
+
+    76% {
+        opacity: 1;
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateChoose3dStyle_emblemBuyBP_98 {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    3% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    33% {
+        opacity: 0;
+        transform: translateY(-30rem);
+    }
+
+    46% {
+        opacity: 0;
+        transform: translateY(-30rem);
+    }
+
+    66% {
+        opacity: 1;
+        transform: translateY(5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes StateChoose3dStyle_lightBuyBP_1a {
+    0% {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    16% {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    37% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(.8);
+    }
+}
+@keyframes StateChoose3dStyle_lightAttention_63 {
+    0% {
+        opacity: 0;
+        transform: scale(.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.35);
+    }
+}
+@keyframes StateChoose3dStyle_lightAttentionSmall_9c {
+    0% {
+        opacity: 0;
+        transform: scale(.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+.StateChoose3dStyle_base_88 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.StateChoose3dStyle_styleIcon_97 {
+    animation-name: StateChoose3dStyle_styleIconAppearance_d9;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    opacity: 0;
+}
+@keyframes StateChoose3dStyle_styleIconAppearance_d9 {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
 
 @keyframes StateComplete_fadeInWithScale_31 {
     0% {
@@ -3126,7 +3872,6 @@
         opacity: 1;
     }
 }
-/* buy battle pass*/
 @keyframes StateComplete_flagBuyBPIn_2e {
     0% {
         transform: scaleY(1);
@@ -3137,6 +3882,26 @@
     }
 
     76% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateComplete_flagSwitchChapter_c3 {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    38% {
+        opacity: 0;
+        transform: scaleY(.9);
+    }
+
+    76% {
+        opacity: 1;
         transform: scaleY(1.1);
     }
 
@@ -3223,7 +3988,6 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     position: relative;
 }
 .StateComplete_flag_4a {
@@ -3441,7 +4205,6 @@
         opacity: 1;
     }
 }
-/* buy battle pass*/
 @keyframes StateAttention_flagBuyBPIn_0c {
     0% {
         transform: scaleY(1);
@@ -3452,6 +4215,26 @@
     }
 
     76% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes StateAttention_flagSwitchChapter_91 {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    38% {
+        opacity: 0;
+        transform: scaleY(.9);
+    }
+
+    76% {
+        opacity: 1;
         transform: scaleY(1.1);
     }
 
@@ -3757,7 +4540,6 @@
         opacity: 1;
     }
 }
-/* buy battle pass*/
 @keyframes Content_flagBuyBPIn_49 {
     0% {
         transform: scaleY(1);
@@ -3768,6 +4550,26 @@
     }
 
     76% {
+        transform: scaleY(1.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes Content_flagSwitchChapter_7d {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    38% {
+        opacity: 0;
+        transform: scaleY(.9);
+    }
+
+    76% {
+        opacity: 1;
         transform: scaleY(1.1);
     }
 
@@ -3868,6 +4670,16 @@ body {
 .Content_base__small_7b {
         width: 100rem;
         height: 135rem;
+    }
+.Content_base__disabled_76,
+    .Content_base__seasonWaiting_7c {
+        cursor: default;
+    }
+.Content_base__disabled_76 {
+        filter: saturate(.3) brightness(.7);
+    }
+.Content_base__seasonWaiting_7c {
+        filter: saturate(.7) brightness(.7);
     }
 .Content_effects_0d {
     display: flex;

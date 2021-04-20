@@ -933,13 +933,13 @@
     </tip>
     <tip>
       <id>tip187</id>
-      <status>battlePass</status>
+      <status>	battlePassReward	</status>
       <group>all</group>
       <filter>battlePass_on</filter>
     </tip>
     <tip>
       <id>tip188</id>
-      <status>trophyDevices</status>
+      <status>battlePassCoins</status>
       <group>all</group>
       <filter>battlePass_on</filter>
     </tip>
@@ -951,7 +951,7 @@
     </tip>
     <tip>
       <id>tip190</id>
-      <status>battlePassVehicles</status>
+      <status>battlePassProgressionStyle</status>
       <group>all</group>
       <filter>battlePass_on</filter>
     </tip>

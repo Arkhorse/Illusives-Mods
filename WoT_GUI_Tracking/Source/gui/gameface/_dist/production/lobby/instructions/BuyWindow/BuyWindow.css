@@ -344,7 +344,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     line-height: 1.2;
     text-shadow: 0 -1rem 1rem #000;
     letter-spacing: .03em;
-    transform: translateY(-5%);
+    transform: translateY(-1rem);
 }
 .CButton_content_cc[lang=ja],
     .CButton_content_cc[lang=ko],
@@ -1150,7 +1150,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     }
 
 .Checkbox_base__checked_a2.Checkbox_base__disabled_08 .Checkbox_checkmark_60 {
-        opacity: 0;
+        opacity: .5;
     }
 
 .Checkbox_base__small_18 .Checkbox_checkmark_60 {

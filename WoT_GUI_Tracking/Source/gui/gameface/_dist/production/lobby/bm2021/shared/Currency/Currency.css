@@ -1,0 +1,44 @@
+.CurrencyBalanceList_base_8d {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 345rem;
+    height: 40rem;
+    border-bottom: 1rem solid #242421;
+}
+
+.CurrencyBalanceList_currency_22 {
+    margin-left: 20rem;
+}
+
+.CurrencyBalanceItem_base_f8 {
+    height: 20rem;
+    padding-left: 20rem;
+    background-repeat: no-repeat;
+    background-size: 16rem 16rem;
+    color: #C9C9B6;
+    font-size: 14rem;
+}
+
+    .CurrencyBalanceItem_base__credit_bd {
+        background-image: url('R.images.gui.maps.icons.library.CreditsIcon_2');
+        background-position: 0 2rem;
+        color: #CED9D9;
+    }
+
+    .CurrencyBalanceItem_base__gold_2e {
+        background-image: url('R.images.gui.maps.icons.library.GoldIcon_2');
+        background-position: 0 1rem;
+        color: #FFC363;
+    }
+
+    .CurrencyBalanceItem_base__crystal_c7 {
+        background-image: url('R.images.gui.maps.icons.library.CrystalIcon_2');
+    }
+
+    .CurrencyBalanceItem_base__freexp_fa {
+        background-image: url('R.images.gui.maps.icons.library.FreeXpIcon_2');
+        background-position: 0 1rem;
+    }
+

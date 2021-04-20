@@ -1,0 +1,79 @@
+/* stylelint-disable */
+[lang=ja],
+[lang=ko],
+[lang=zh_tw],
+[lang=zh_sg],
+[lang=zh_ch],
+[lang=th] {
+    overflow-wrap: break-word;
+}
+/* stylelint-enable */
+.Content_base_3c {
+    line-height: normal;
+}
+.Content_separator_85 {
+    width: 283rem;
+    height: 1rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.tooltips.Devider_points') 50% / contain no-repeat;
+}
+.Content_rewards_28 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 403rem;
+    height: 154rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.tooltips.Ribbon_large') bottom / cover no-repeat;
+    color: #c9c9b6;
+    font-size: 14rem;
+}
+.Content_base_3c {
+    width: 460rem;
+    padding: 180rem 28rem 28rem;
+    line-height: normal;
+    position: relative;
+}
+.Content_image_bb {
+    width: 398rem;
+    height: 224rem;
+    background: url('R.images.gui.maps.icons.battlePass2020.tooltips.c_3d_style') 50% / contain no-repeat;
+    position: absolute;
+    top: 0;
+    left: 31rem;
+}
+.Content_textContainer_f0 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.Content_title_44 {
+    color: #F2F2F7;
+    font-size: 22rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15rem;
+}
+.Content_description_bb {
+    color: #8C8C7E;
+    font-size: 16rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.TooltipDecorator_base_c9 {
+    display: flex;
+    position: absolute;
+}
+
+.TooltipDecorator_decorator_3d {
+    padding: 4rem 6rem 8rem; /* border offset*/
+    border-image-source: url('R.atlases.components.tooltip_background');
+    border-image-slice: 24 fill;
+    border-image-width: 24rem;
+    position: relative;
+}
+
+.TooltipDecorator_decoratorContent_de {
+    background-color: #000;
+}
+

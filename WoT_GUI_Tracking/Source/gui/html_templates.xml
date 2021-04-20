@@ -153,6 +153,8 @@
       <crystal_small_inactive_label>&lt;font color="#4d3d21"&gt;%(value)s&lt;/font&gt; &lt;IMG SRC="img://gui/maps/icons/library/CrystalIconInactive-2.png" width="16" height="16" vspace="-3"/&gt;</crystal_small_inactive_label>
       <eventCoin_small_label>&lt;font color="#c9c9b6"&gt;%(value)s&lt;/font&gt; &lt;IMG SRC="img://gui/maps/icons/library/EventCoinIcon-2.png" width="16" height="16" vspace="-3"/&gt;</eventCoin_small_label>
       <eventCoin_small_inactive_label>&lt;font color="#4d3d21"&gt;%(value)s&lt;/font&gt; &lt;IMG SRC="img://gui/maps/icons/library/EventCoinIconInactive-2.png" width="16" height="16" vspace="-3"/&gt;</eventCoin_small_inactive_label>
+      <bpcoin_small_label>&lt;font color="#c9c9b6"&gt;%(value)s&lt;/font&gt; &lt;IMG SRC="img://gui/maps/icons/library/BpcoinIcon-1.png" width="16" height="16" vspace="-3"/&gt;</bpcoin_small_label>
+      <bpcoin_small_inactive_label>&lt;font color="#4d3d21"&gt;%(value)s&lt;/font&gt; &lt;IMG SRC="img://gui/maps/icons/library/BpcoinIcon-1.png" width="16" height="16" vspace="-3"/&gt;</bpcoin_small_inactive_label>
       <xp_small_label>%(value)s &lt;IMG SRC="img://gui/maps/icons/library/XpIcon-1.png" width="16" height="16" vspace="-2"/&gt;</xp_small_label>
       <xp_small_inactive_label>&lt;font color="#4c4b45"&gt;%(value)s&lt;/font&gt; &lt;IMG SRC="img://gui/maps/icons/library/XpIconInactive-1.png" width="16" height="16" vspace="-2"/&gt;</xp_small_inactive_label>
       <resource_small_label>&lt;font color="#A29B70"&gt;%(value)s&lt;/font&gt; &lt;IMG SRC="img://gui/maps/icons/library/fortification/nut.png" width="16" height="16" vspace="-3"/&gt;</resource_small_label>
@@ -491,7 +493,6 @@
         <STRONGHOLD>_(#invites:invites/text/STRONGHOLD) %(sender)s</STRONGHOLD>
         <EPIC>_(#invites:invites/text/EPIC) %(sender)s</EPIC>
         <BATTLE_ROYALE>_(#invites:invites/text/BATTLE_ROYALE) %(sender)s</BATTLE_ROYALE>
-        <BOB>_(#invites:invites/text/BOB) %(sender)s</BOB>
       </inviteTitle>
       <inviteTitleCreatorName>
         <context>
@@ -726,6 +727,7 @@ _(#invites:invites/text/fort/defence) &lt;font color="#c9c9b6"&gt;%(clanAbbrev)s
         <gold>&lt;font color='#FBC062'&gt;%(value)s &lt;/font&gt;&lt;img src='img://gui/maps/icons/library/GoldIcon-2.png' width='16' height='16' vspace='-3' /&gt;</gold>
         <crystal>&lt;font color='#95907F'&gt;%(value)s &lt;/font&gt;&lt;img src='img://gui/maps/icons/library/CrystalIcon-2.png' width='16' height='16' vspace='-3' /&gt;</crystal>
         <eventCoin>&lt;font color='#95907F'&gt;%(value)s &lt;/font&gt;&lt;img src='img://gui/maps/icons/library/EventCoinIcon-2.png' width='16' height='16' vspace='-3' /&gt;</eventCoin>
+        <bpcoin>&lt;font color='#95907F'&gt;%(value)s &lt;/font&gt;&lt;img src='img://gui/maps/icons/library/BpcoinIcon-1.png' width='16' height='16' vspace='-3' /&gt;</bpcoin>
         <xp>&lt;font color='#95907F'&gt;%(value)s &lt;/font&gt;&lt;img src='img://gui/maps/icons/library/XpIcon-1.png' width='16' height='15' vspace='-3' /&gt;</xp>
         <freeXP>&lt;font color='#95907F'&gt;%(value)s &lt;/font&gt;&lt;img src='img://gui/maps/icons/library/FreeXpIcon-1.png' width='16' height='16' vspace='-3' /&gt;</freeXP>
         <tankmenXP>_(#quests:bonuses/item/tankmenXP) &lt;font color='#95907F'&gt;%(value)s&lt;/font&gt;</tankmenXP>
@@ -753,7 +755,7 @@ _(#invites:invites/text/fort/defence) &lt;font color="#c9c9b6"&gt;%(clanAbbrev)s
         <universalBlueprints>_(#quests:bonusName/blueprints/universal) &lt;font color='#CED9D9'&gt;%(value)s&lt;/font&gt;</universalBlueprints>
         <rankedDailyBattles>&lt;font color='#95907F'&gt;%(value)s&lt;/font&gt;&lt;img src='img://gui/maps/icons/library/rankedDailyBattles.png' width='16' height='16' vspace='-4' /&gt;</rankedDailyBattles>
         <rankedBonusBattles>&lt;font color='#95907F'&gt;%(value)s&lt;/font&gt;&lt;img src='img://gui/maps/icons/library/rankedBonusBattles.png' width='16' height='16' vspace='-4' /&gt;</rankedBonusBattles>
-        <bobTokens>&lt;font color='#95907F'&gt;%(value)s &lt;/font&gt;&lt;img src='img://gui/maps/icons/quests/bonuses/small/bob_points.png' width='16' height='16' vSpace='-10' /&gt;</bobTokens>
+        <battlePassPoints>_(#quests:bonusName/battlePassPoints/preview) &lt;font color='#95907F'&gt;%(value)s &lt;/font&gt;&lt;img src='img://gui/maps/icons/library/battlePassPoints.png' width='16' height='16' vspace='-3' /&gt;</battlePassPoints>
       </bonuses>
       <carouselBonuses>
         <credits>&lt;font face='$FieldFont' size='22' color='#CED9D9'&gt;&lt;b&gt;%(value)s &lt;/b&gt;&lt;/font&gt;&lt;img src='img://gui/maps/icons/library/CreditsIcon-1.png' width='16' height='16' /&gt;</credits>
@@ -778,6 +780,7 @@ _(#invites:invites/text/fort/defence) &lt;font color="#c9c9b6"&gt;%(clanAbbrev)s
         <gold>&lt;font color='#fbc062'&gt;%(value)s&lt;/font&gt;&lt;img src='img://gui/maps/icons/library/GoldIcon-2.png' width='16' height='16' vspace='-3' /&gt;</gold>
         <crystal>&lt;font color='#C9C9B6'&gt;%(value)s&lt;/font&gt;&lt;img src='img://gui/maps/icons/library/CrystalIcon-2.png' width='16' height='16' vspace='-3' /&gt;</crystal>
         <eventCoin>&lt;font color='#C9C9B6'&gt;%(value)s&lt;/font&gt;&lt;img src='img://gui/maps/icons/library/EventCoinIcon-2.png' width='16' height='16' vspace='-3' /&gt;</eventCoin>
+        <bpcoin>&lt;font color='#C9C9B6'&gt;%(value)s&lt;/font&gt;&lt;img src='img://gui/maps/icons/library/BpcoinIcon-1.png' width='16' height='16' vspace='-3' /&gt;</bpcoin>
         <percent>&lt;font color='#cbac77'&gt;%(value)s%%&lt;/font&gt;</percent>
         <multiplier>&lt;font color='#cbac77'&gt;x%(value)s&lt;/font&gt;</multiplier>
         <xp>&lt;font color='#C9C9B6'&gt;%(value)s&lt;/font&gt;&lt;IMG SRC="img://gui/maps/icons/library/XpCostIcon.png" width="18" height="18" vspace="-4"/&gt;</xp>
@@ -786,6 +789,7 @@ _(#invites:invites/text/fort/defence) &lt;font color="#c9c9b6"&gt;%(clanAbbrev)s
         <goldError>&lt;font color='#ff2717'&gt;%(value)s&lt;/font&gt;&lt;img src='img://gui/maps/icons/library/GoldIcon-2.png' width='16' height='16' vspace='-3' /&gt;</goldError>
         <crystalError>&lt;font color='#ff2717'&gt;%(value)s&lt;/font&gt;&lt;img src='img://gui/maps/icons/library/CrystalIcon-2.png' width='16' height='16' vspace='-3' /&gt;</crystalError>
         <eventCoinError>&lt;font color='#ff2717'&gt;%(value)s&lt;/font&gt;&lt;img src='img://gui/maps/icons/library/EventCoinIcon-2.png' width='16' height='16' vspace='-3' /&gt;</eventCoinError>
+        <bpcoinError>&lt;font color='#ff2717'&gt;%(value)s&lt;/font&gt;&lt;img src='img://gui/maps/icons/library/BpcoinIcon-1.png' width='16' height='16' vspace='-3' /&gt;</bpcoinError>
         <xpError>&lt;font color='#ff2717'&gt;%(value)s&lt;/font&gt;&lt;IMG SRC="img://gui/maps/icons/library/XpIcon-1.png" width="16" height="16" vspace="-2"/&gt;</xpError>
         <freeXpError>&lt;font color='#ff2717'&gt;%(value)s&lt;/font&gt;&lt;IMG SRC="img://gui/maps/icons/library/FreeXpIcon-1.png" width="16" height="16" vspace="-2"/&gt;</freeXpError>
         <vehicleLevel>&lt;font color='#cbac77'&gt;%(value)s&lt;/font&gt;</vehicleLevel>
@@ -1013,6 +1017,8 @@ _(#invites:invites/text/fort/defence) &lt;font color="#c9c9b6"&gt;%(clanAbbrev)s
       <crystalBig>&lt;img src='img://gui/maps/icons/library/CrystalIcon-1.png' width='16' height='16' vspace='-3'/&gt;</crystalBig>
       <eventCoin>&lt;img src='img://gui/maps/icons/library/EventCoinIcon-2.png' width='16' height='16' vspace='-3'/&gt;</eventCoin>
       <eventCoinBig>&lt;img src='img://gui/maps/icons/library/EventCoinIcon-1.png' width='16' height='16' vspace='-3'/&gt;</eventCoinBig>
+      <bpcoin>&lt;img src='img://gui/maps/icons/library/BpcoinIcon-1.png' width='16' height='16' vspace='-3'/&gt;</bpcoin>
+      <bpcoinBig>&lt;img src='img://gui/maps/icons/library/BpcoinIcon-1.png' width='16' height='16' vspace='-3'/&gt;</bpcoinBig>
       <xpCost>&lt;img src='img://gui/maps/icons/library/XpCostIcon-2.png' width='18' height='18' vspace='-4'/&gt;</xpCost>
       <xpCostBig>&lt;img src='img://gui/maps/icons/library/XpCostIcon-1.png' width='16' height='16' vspace='-3'/&gt;</xpCostBig>
       <xp>&lt;img src='img://gui/maps/icons/library/XpIcon-1.png' width='16' height='15' vspace='-3'/&gt;</xp>
@@ -1093,6 +1099,7 @@ _(#invites:invites/text/fort/defence) &lt;font color="#c9c9b6"&gt;%(clanAbbrev)s
       <errCurrencyTextBig>&lt;font face='$TitleFont' size='22' color='#B70000'&gt;&lt;b&gt;%(message)s&lt;/b&gt;&lt;/font&gt;</errCurrencyTextBig>
       <crystalText>&lt;font face='$FieldFont' size='14' color='#C9C9B6'&gt;%(message)s&lt;/font&gt;</crystalText>
       <eventCoinText>&lt;font face='$FieldFont' size='14' color='#C9C9B6'&gt;%(message)s&lt;/font&gt;</eventCoinText>
+      <bpcoinText>&lt;font face='$FieldFont' size='14' color='#C9C9B6'&gt;%(message)s&lt;/font&gt;</bpcoinText>
       <textEpic>&lt;font face='$TitleFont' size='56' color='#E9E2BF'&gt;%(message)s&lt;/font&gt;</textEpic>
       <demountKitText>&lt;font face='$FieldFont' size='14' color='#C9C9B6'&gt;%(message)s&lt;/font&gt;</demountKitText>
       <statsText>&lt;font face='$FieldFont' size='14' color='#E9E2BF'&gt;%(message)s&lt;/font&gt;</statsText>

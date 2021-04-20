@@ -187,7 +187,7 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     line-height: 1.2;
     text-shadow: 0 -1rem 1rem #000;
     letter-spacing: .03em;
-    transform: translateY(-5%);
+    transform: translateY(-1rem);
 }
 .CButton_content_cc[lang=ja],
     .CButton_content_cc[lang=ko],
@@ -386,12 +386,12 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 
     .Button_base__minimize_f7:hover {
             background-image: url('R.images.gui.maps.icons.windows.controls.minimize_over'),
-            url('R.images.gui.maps.icons.windows.controls.minimize_up');
+            url('R.images.gui.maps.icons.windows.controls.Window_MinimizeButton_UpBitmap');
         }
 
     .Button_base__minimize_f7:active {
             background-image: url('R.images.gui.maps.icons.windows.controls.minimize_press'),
-            url('R.images.gui.maps.icons.windows.controls.minimize_up');
+            url('R.images.gui.maps.icons.windows.controls.Window_MinimizeButton_UpBitmap');
         }
 
 .Info_base_7b {
@@ -487,38 +487,42 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 /* Colors: https://confluence.wargaming.net/pages/viewpage.action?pageId=1111407054*/
 
 .NoPlayer_base_42 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 160rem;
+    height: 200rem;
     padding: 0 10rem;
-    background-size: contain;
+    background: url('R.images.gui.maps.icons.platoon.members_window.tall_slot.cards.empty') center / contain no-repeat;
     color: #595950;
     font-size: 14rem;
     text-align: center;
     position: relative;
 }
 
-.NoPlayer_disabledIcon_10 {
-    width: 36rem;
-    height: 36rem;
-    background: url('R.images.gui.maps.icons.platoon.members_window.tall_slot.disabled_slot_big') center / contain no-repeat;
+.NoPlayer_base__disabled_98 {
+        background-image: url('R.images.gui.maps.icons.platoon.members_window.tall_slot.cards.disable');
+    }
+
+.NoPlayer_central_8a {
+    position: absolute;
+    top: 65rem;
 }
 
-.NoPlayer_emptyIcon_cc {
+.NoPlayer_image_41 {
     width: 44rem;
     height: 44rem;
-    background: url('R.images.gui.maps.icons.platoon.members_window.tall_slot.empty_slot_big') center / contain no-repeat;
 }
 
-.NoPlayer_spinner_44 {
-    width: 36rem;
-    height: 36rem;
-    background: url('R.images.gui.maps.icons.platoon.members_window.tall_slot.loading_indicator_big') center / contain no-repeat;
-    animation: NoPlayer_spinner_44 1s linear infinite;
-}
+.NoPlayer_image__disabled_14 {
+        background: url('R.images.gui.maps.icons.platoon.members_window.tall_slot.disabled_slot_big') center / contain no-repeat;
+    }
+
+.NoPlayer_image__empty_b1 {
+        background: url('R.images.gui.maps.icons.platoon.members_window.tall_slot.empty_slot_big') center / contain no-repeat;
+    }
+
+.NoPlayer_image__spinner_bd {
+        background: url('R.images.gui.maps.icons.platoon.members_window.tall_slot.loading_indicator_big') center / contain no-repeat;
+        animation: NoPlayer_spinner_44 1s linear infinite;
+    }
 
 .NoPlayer_footer_68 {
     position: absolute;
@@ -791,8 +795,8 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-    width: 100%;
-    height: 100%;
+    width: 160rem;
+    height: 200rem;
     background: center / contain no-repeat;
     color: #595950;
     font-size: 14rem;
@@ -901,21 +905,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     background: top / contain no-repeat;
     position: absolute;
     top: 0;
-}
-
-/*////////////*/
-
-/* Colors: https://confluence.wargaming.net/pages/viewpage.action?pageId=1111407054*/
-
-.TallSlot_base_72 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    width: 160rem;
-    height: 200rem;
-    color: #f2f2f7;
-    font-size: 13rem;
 }
 
 /*////////////*/
@@ -1064,11 +1053,14 @@ This bug is reproduced in Google Chrome 81.0.4044.113
 
 /* Colors: https://confluence.wargaming.net/pages/viewpage.action?pageId=1111407054*/
 
-.NoBonus_text_24 {
+.NoBonus_textMix_ff {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: -3rem 2rem 0 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    flex: 0 1 auto;
+    margin: -3rem 2rem 0 10rem;
     color: #8c8c7e;
 }
 
@@ -1129,16 +1121,6 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     background: center / contain no-repeat;
 }
 
-.Header_bonusInfo_75 {
-    display: flex;
-    flex-direction: row;
-}
-
-.Header_buttons_82 {
-    display: flex;
-    flex-direction: row;
-}
-
 .Header_muteButtonContainer_7e {
     margin-left: 10rem;
 }
@@ -1148,6 +1130,11 @@ This bug is reproduced in Google Chrome 81.0.4044.113
     height: 18rem;
     margin: 1rem -10rem 0;
     background: url('R.images.gui.maps.icons.platoon.members_window.mute_button') center / contain no-repeat;
+}
+
+.Header_filler_34 {
+    flex: 0 3 auto;
+    width: 100%;
 }
 
 /*////////////*/

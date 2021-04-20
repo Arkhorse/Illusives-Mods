@@ -441,7 +441,7 @@
     height: 100%;
     background-image: url('R.images.gui.maps.icons.battlePass2020.logo.font_texture');
     background-position: 50% 4rem;
-    background-size: cover;
+    background-size: 100% 100%;
     mix-blend-mode: multiply;
     position: absolute;
     transform: scale(.98);
@@ -467,7 +467,7 @@
     }
 .Label_text_67 {
     display: flex;
-    font-size: 40rem;
+    font-size: 42rem;
     font-weight: 700;
 }
 .Label_text__small_e0 {
@@ -825,14 +825,6 @@
     animation-delay: .6s;
     animation-iteration-count: 1;
     }
-.Emblem_progress__completePostProgression_65 {
-    animation-name: Emblem_hideProgress_b4;
-    animation-duration: .3s;
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    }
 .Emblem_progress__hidden_6d {
         display: none;
     }
@@ -843,7 +835,7 @@
     height: 130rem;
     padding-top: 25rem;
     padding-bottom: 78rem;
-    background: left top / cover no-repeat;
+    background: url('R.images.gui.maps.icons.battlePass2020.logo.emblem') left top / cover no-repeat;
     position: relative;
 }
 .Emblem_image__small_ce {
@@ -851,51 +843,24 @@
         height: 100rem;
         padding-top: 18rem;
         padding-bottom: 57rem;
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.emblem_small');
     }
-.Emblem_image__noVehicles_54 {
-        filter: brightness(.7) saturate(.7);
+.Emblem_image__battlePass_ba {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.emblem_BP');
     }
-.Emblem_image__mainNoBattlePass_7a {
-        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Main_NoBP');
-    }
-.Emblem_image__mainNoBattlePassSmall_c2 {
-            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Main_NoBP_small');
-        }
-.Emblem_image__mainBattlePass_c6 {
-        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Main_BP');
-    }
-.Emblem_image__mainBattlePassSmall_0f {
-            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Main_BP_small');
-        }
-.Emblem_image__postBattlePass_b1 {
-        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Post_BP');
-    }
-.Emblem_image__postBattlePassSmall_55 {
-            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.Post_BP_small');
+.Emblem_image__battlePassSmall_d5 {
+            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.emblem_BP_small');
         }
 .Emblem_image__seasonWaiting_96 {
         background-image: url('R.images.gui.maps.icons.battlePass2020.logo.seasonWaiting');
     }
 .Emblem_image__seasonWaitingSmall_c0 {
-            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.seasonWaiting_small');
+            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.seasonWaiting');
         }
-.Emblem_alert_33 {
-    height: 0;
-    position: relative;
-}
-.Emblem_alertIcon_f4 {
-    width: 32rem;
-    height: 26rem;
-    background: url('R.images.gui.maps.icons.battlePass2020.logo.alert_big') no-repeat center center / contain;
-    position: absolute;
-    bottom: 33rem;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.Emblem_alertIcon__small_a9 {
-        width: 28rem;
-        height: 22rem;
-        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.alert_small');
-        bottom: 24rem;
+.Emblem_image__completed_9c {
+        background-image: url('R.images.gui.maps.icons.battlePass2020.logo.emblem_completed');
     }
+.Emblem_image__completedSmall_29 {
+            background-image: url('R.images.gui.maps.icons.battlePass2020.logo.emblem_completed_small');
+        }
 
